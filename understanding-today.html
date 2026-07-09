@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Understanding Today's University — the two digital layers of a modern campus, and the gap between them.">
+<title>Understanding Today's University — Project CAMPUS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-brand">Project <em>CAMPUS</em></span>
+  <button class="topbar-toggle" id="spineToggle" aria-label="Toggle chapters">☰</button>
+</div>
+<div class="spine-backdrop" id="spineBackdrop"></div>
+
+<div class="shell">
+
+  <nav class="spine" id="spine">
+    <div class="spine-head">
+      <a href="index.html" class="spine-brand">Project <em>CAMPUS</em></a>
+      <div class="spine-lockup">Living Document · v0.1</div>
+    </div>
+    <ol class="spine-list" id="spineList"><!-- rendered by js/main.js --></ol>
+  </nav>
+
+  <main class="content">
+    <div class="content-inner">
+      <article class="chapter">
+
+        <div class="lockup">
+          <span>Project CAMPUS</span><span class="x">×</span><span class="vsu">Visayas State University</span>
+        </div>
+
+        <div class="eyebrow">Chapter 03 · Written</div>
+        <h1>Understanding Today's University</h1>
+        <p class="subtitle">Two Digital Layers, One Gap</p>
+
+        <p>
+          Before proposing a new digital layer for university life, it is
+          worth describing the one that already exists — not as a single
+          system, but as two systems that rarely speak to each other.
+        </p>
+
+        <p>
+          The first is administrative. Over the past two decades, most
+          universities have adopted a Student Information System to manage
+          enrollment and academic records, alongside a Learning Management
+          System for coursework, and separate platforms for human resources,
+          finance, and other institutional operations. At Visayas State
+          University, this layer is represented by OrangeApps, which handles
+          enrollment and grading for the university's students. These
+          systems are official, centrally maintained, and mandatory to use
+          for the transactions they cover.
+        </p>
+
+        <p>
+          The second layer is informal, and it is where most of university
+          life actually takes place. Incoming students research housing
+          through Facebook groups and inherited advice from older
+          batchmates. Organizations run their own Facebook pages and
+          Messenger group chats, independent of any institutional directory.
+          Announcements move through whichever channel happens to reach a
+          given batch first: a class group chat, a bulletin board outside a
+          department office, a post shared and reshared until its origin is
+          no longer traceable. Questions that have already been answered
+          many times over get asked again, because there is no single place
+          where the answer persists.
+        </p>
+
+        <p>
+          These two layers do not compete with each other, and they were
+          never meant to. The administrative layer exists to process
+          transactions the university is operationally required to track:
+          enrollment, grades, tuition, employment records. The informal
+          layer exists because everything else about being a student — where
+          to live, what to eat, who to ask, what an upcoming deadline
+          actually means in practice — still needs somewhere to happen, and
+          no official system was built to hold it.
+        </p>
+
+        <p>
+          The result is an asymmetry worth naming directly: the parts of
+          university life that are easiest to digitize — because they are
+          structured, transactional, and few in number — have been
+          digitized. The parts that are hardest to digitize — because they
+          are social, informal, and constantly changing — have been left to
+          accumulate wherever is convenient, one Facebook group and one
+          group chat at a time.
+        </p>
+
+        <div class="field-card">
+          <span class="field-card-label">Engineering Observation — 003</span>
+          <p class="field-card-text">
+            The administrative layer of a university is intentionally built,
+            formally maintained, and narrow in scope. The informal layer is
+            organically formed, unmaintained by any single party, and broad
+            in scope — it is where housing, logistics, social life, and
+            institutional memory actually live, without belonging to anyone
+            in particular.
+          </p>
+        </div>
+
+        <p>
+          This distinction matters because it changes what “digitizing the
+          university” should actually mean. It is not a question of
+          replacing the administrative layer — that layer already works, for
+          what it is designed to do. It is a question of whether the
+          informal layer, which currently belongs to no one, can be given
+          the same structure, persistence, and trust that the administrative
+          layer already has, without losing the openness that makes it
+          useful in the first place.
+        </p>
+
+        <div class="field-card">
+          <span class="field-card-label">Design Principle — 003</span>
+          <p class="field-card-text">
+            <strong>Map before building.</strong> Before designing a new
+            digital service for a university, first identify which existing
+            layer — administrative or informal — actually owns the problem,
+            and why no one has structured it yet. A module built without
+            this understanding risks duplicating a system that already
+            exists, or formalizing something that only worked because it was
+            informal.
+          </p>
+        </div>
+
+        <p>
+          The next chapter examines this informal layer more closely — not
+          as a description, but as a set of specific, recurring points of
+          failure worth naming individually.
+        </p>
+
+        <div class="chapter-nav" id="chapterNav"><!-- rendered by js/main.js --></div>
+
+      </article>
+    </div>
+  </main>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

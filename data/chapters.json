@@ -1,0 +1,110 @@
+[
+  {
+    "number": 1,
+    "slug": "preface",
+    "title": "Preface",
+    "status": "written"
+  },
+  {
+    "number": 2,
+    "slug": "executive-summary",
+    "title": "Executive Summary",
+    "status": "written"
+  },
+  {
+    "number": 3,
+    "slug": "understanding-today",
+    "title": "Understanding Today's University",
+    "status": "written"
+  },
+  {
+    "number": 4,
+    "slug": null,
+    "title": "Problem Analysis",
+    "status": "not-started"
+  },
+  {
+    "number": 5,
+    "slug": null,
+    "title": "The Vision",
+    "status": "not-started"
+  },
+  {
+    "number": 6,
+    "slug": null,
+    "title": "Design Philosophy",
+    "status": "not-started"
+  },
+  {
+    "number": 7,
+    "slug": null,
+    "title": "Digital Campus Architecture",
+    "status": "not-started"
+  },
+  {
+    "number": 8,
+    "slug": null,
+    "title": "Platform Modules",
+    "status": "not-started"
+  },
+  {
+    "number": 9,
+    "slug": null,
+    "title": "Learning Infrastructure",
+    "status": "not-started"
+  },
+  {
+    "number": 10,
+    "slug": null,
+    "title": "Artificial Intelligence",
+    "status": "not-started"
+  },
+  {
+    "number": 11,
+    "slug": null,
+    "title": "Blockchain Integrity Layer",
+    "status": "not-started"
+  },
+  {
+    "number": 12,
+    "slug": null,
+    "title": "Research Framework",
+    "status": "not-started"
+  },
+  {
+    "number": 13,
+    "slug": null,
+    "title": "Technical Architecture",
+    "status": "not-started"
+  },
+  {
+    "number": 14,
+    "slug": null,
+    "title": "Governance",
+    "status": "not-started"
+  },
+  {
+    "number": 15,
+    "slug": null,
+    "title": "Implementation Roadmap",
+    "status": "not-started"
+  },
+  {
+    "number": 16,
+    "slug": null,
+    "title": "Long-Term Vision",
+    "status": "not-started"
+  },
+  {
+    "number": 17,
+    "slug": null,
+    "title": "References",
+    "status": "not-started"
+  },
+  {
+    "number": 18,
+    "slug": null,
+    "title": "Appendices",
+    "status": "not-started"
+  }
+]

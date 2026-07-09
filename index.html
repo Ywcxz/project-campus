@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Project CAMPUS — a connected academic matrix platform for universities and schools. Living vision document, piloted at Visayas State University.">
+<title>Project CAMPUS — Vision Document</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-brand">Project <em>CAMPUS</em></span>
+  <button class="topbar-toggle" id="spineToggle" aria-label="Toggle chapters">☰</button>
+</div>
+<div class="spine-backdrop" id="spineBackdrop"></div>
+
+<div class="shell">
+
+  <nav class="spine" id="spine">
+    <div class="spine-head">
+      <a href="index.html" class="spine-brand">Project <em>CAMPUS</em></a>
+      <div class="spine-lockup">Living Document · v0.1</div>
+    </div>
+    <ol class="spine-list" id="spineList"><!-- rendered by js/main.js --></ol>
+  </nav>
+
+  <main class="content">
+    <div class="content-inner wide">
+
+      <section class="hero">
+        <div class="lockup">
+          <span>Project CAMPUS</span><span class="x">×</span><span class="vsu">Visayas State University</span>
+        </div>
+
+        <h1>Project CAMPUS</h1>
+        <p class="subtitle">Connected Academic Matrix Platform for Universities and Schools</p>
+        <p class="lead">
+          A unified digital ecosystem for learning, community, and institutional
+          knowledge — under continuous research and development, piloted first
+          at Visayas State University.
+        </p>
+        <p class="hero-meta">
+          Prepared by Leo M. Subingsubing · Visayas State University Main Campus Alumnus ·
+          Pangasugan, Baybay City, Leyte · July 2026
+        </p>
+        <div class="hero-actions">
+          <a href="preface.html" class="btn">Read the Preface →</a>
+          <a href="https://vsuhousing.netlify.app" class="btn btn-sea" target="_blank" rel="noopener">See the VSU pilot ↗</a>
+        </div>
+      </section>
+
+      <section class="panel">
+        <span class="stamp">Flagship Implementation</span>
+        <h2 style="margin-top:14px">Visayas State University</h2>
+        <p>
+          Before this document existed, two pieces of it were already built and
+          deployed for real students. Project CAMPUS is written from what these
+          taught, not ahead of them.
+        </p>
+        <div class="live-row">
+          <div class="live-dot"></div>
+          <span class="live-name">Housing Marketplace</span>
+          <span class="live-tag">Live</span>
+          <a class="live-link" href="https://vsuhousing.netlify.app/housing.html" target="_blank" rel="noopener">Open ↗</a>
+        </div>
+        <div class="live-row">
+          <div class="live-dot"></div>
+          <span class="live-name">Campus Life Map</span>
+          <span class="live-tag">Live</span>
+          <a class="live-link" href="https://vsuhousing.netlify.app/campus-life.html" target="_blank" rel="noopener">Open ↗</a>
+        </div>
+      </section>
+
+      <section class="toc-section">
+        <div class="eyebrow">Table of Contents</div>
+        <p class="toc-note">
+          This is a living document — chapters are added as they're written,
+          not drafted ahead of what's actually been thought through. Written
+          chapters are linked; the rest are logged so the shape of the whole
+          isn't lost while individual parts are still being worked out.
+        </p>
+        <div class="toc-grid" id="tocGrid"><!-- rendered by js/main.js --></div>
+      </section>
+
+    </div>
+  </main>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
