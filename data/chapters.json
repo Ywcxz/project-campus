@@ -31,15 +31,15 @@
   },
   {
     "number": 6,
-    "slug": null,
+    "slug": "design-philosophy",
     "title": "Design Philosophy",
-    "status": "not-started"
+    "status": "written"
   },
   {
     "number": 7,
-    "slug": null,
+    "slug": "digital-campus-architecture",
     "title": "Digital Campus Architecture",
-    "status": "not-started"
+    "status": "written"
   },
   {
     "number": 8,

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Design Philosophy — the boundaries and constraints that keep Project CAMPUS's vision disciplined.">
+<title>Design Philosophy — Project CAMPUS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-brand">Project <em>CAMPUS</em></span>
+  <button class="topbar-toggle" id="spineToggle" aria-label="Toggle chapters">☰</button>
+</div>
+<div class="spine-backdrop" id="spineBackdrop"></div>
+
+<div class="shell">
+
+  <nav class="spine" id="spine">
+    <div class="spine-head">
+      <a href="index.html" class="spine-brand">Project <em>CAMPUS</em></a>
+      <div class="spine-lockup">Living Document · v0.1</div>
+    </div>
+    <ol class="spine-list" id="spineList"><!-- rendered by js/main.js --></ol>
+  </nav>
+
+  <main class="content">
+    <div class="content-inner">
+      <article class="chapter">
+
+        <div class="lockup">
+          <span>Project CAMPUS</span><span class="x">×</span><span class="vsu">Visayas State University</span>
+        </div>
+
+        <div class="eyebrow">Chapter 06 · Written</div>
+        <h1>Design Philosophy</h1>
+        <p class="subtitle">The Boundaries That Keep the Vision Honest</p>
+
+        <p>
+          A vision document can describe what a platform should become. It
+          cannot, on its own, prevent that platform from becoming something
+          else entirely. Ambitious educational technology projects rarely
+          fail because their authors run out of ideas. They fail because
+          good ideas keep arriving — each one plausible on its own terms,
+          each one slightly outside the original scope — until the sum of
+          everything accepted no longer resembles the project first
+          proposed.
+        </p>
+
+        <p>
+          Project CAMPUS has already met this pressure more than once. In
+          early planning, the recurring temptation was to imagine a platform
+          built for any university in the Philippines, sometimes for
+          universities everywhere. In later sessions, technologies with
+          their own momentum — blockchain, decentralized identity,
+          large-scale AI systems — arrived carrying an implicit suggestion
+          that the platform would be incomplete without them. Each
+          expansion, considered in isolation, made a kind of sense.
+          Considered together, they would have produced a platform that
+          tried to serve everyone and was, as a consequence, precisely
+          tuned to no one.
+        </p>
+
+        <p>
+          This chapter documents what has, in practice, already been
+          decided across that process: the boundaries within which every
+          subsequent chapter, module, and feature decision in this document
+          is made. These are not features to be built. They are refusals,
+          stated in advance, so that they do not have to be re-litigated
+          every time a promising new idea arrives.
+        </p>
+
+        <div class="field-card">
+          <span class="field-card-label">Engineering Observation — 006</span>
+          <p class="field-card-text">
+            Across independent planning sessions conducted over several
+            years, the most recurring point of drift in this project was a
+            proposal to generalize its scope — beyond one institution,
+            beyond one regulatory environment, beyond the problem
+            originally identified — usually justified by the larger reach
+            such generalization would unlock. In every instance, pursuing
+            that proposal would have required solving a harder problem,
+            cross-institutional trust and cultural fit, before the more
+            tractable and immediately valuable problem of serving one
+            institution well had been solved at all.
+          </p>
+        </div>
+
+        <h2>Verification Before Scale</h2>
+
+        <p>
+          The first and least negotiable constraint governing Project
+          CAMPUS is that no information enters the platform without some
+          accountable means of confirming it is true. Stated abstractly,
+          this sounds obvious, and it is routinely violated in practice —
+          not through carelessness, but through the ordinary pressure to
+          grow a listing base or a user count faster than verification can
+          keep pace with it.
+        </p>
+
+        <p>
+          The clearest illustration is not hypothetical. Early in the
+          development of the Housing Marketplace, an institutional data
+          source used to seed listings mislabeled beds and rooms — treating
+          a field meant to describe available bed capacity as though it
+          described the number of rooms in a building. The error was not
+          deliberate, and it was not unusual: it is the kind of small
+          structural mistake that accumulates silently inside institutional
+          records that were never designed for public consumption. It
+          surfaced only because a verification step existed to catch it.
+        </p>
+
+        <p>
+          That incident became a standing argument inside the project for a
+          simple rule: institutional data — however official its source —
+          is treated as a claim to be checked, not a fact to be published.
+          Every layer of CAMPUS that touches information a student might
+          act on, from housing to campus services to eventual academic
+          records, inherits this same discipline. Growth that outpaces
+          verification is not growth CAMPUS is interested in.
+        </p>
+
+        <h2>Hyperlocal Depth, Not National Breadth</h2>
+
+        <p>
+          Project CAMPUS is deliberately scoped to Visayas State
+          University. This is not a temporary limitation awaiting the
+          resources to expand — it is the core design decision the rest of
+          the platform depends on. A platform tuned precisely to one
+          institution's culture, policies, housing market, academic
+          calendar, and student population can address needs that a
+          generic platform, however well-funded, structurally cannot.
+        </p>
+
+        <p>
+          This constraint has been tested directly. On several occasions,
+          the more conventional path — building toward a large national
+          market from the outset — was considered and set aside, not
+          because the market did not exist, but because pursuing it first
+          would have required solving a harder problem before an easier and
+          more valuable one. Winning the trust of one university's
+          students, faculty, and administration is achievable through
+          direct, verifiable relationships. Winning that same trust
+          simultaneously across dozens of institutions, each with its own
+          culture and politics, is not — and attempting it early would have
+          diluted the very thing that makes CAMPUS useful anywhere at all.
+        </p>
+
+        <p>
+          This same discipline extends beyond CAMPUS itself. Related ideas
+          explored alongside this project — including proposals for
+          connecting educational institutions at a national scale, or
+          building shared infrastructure across entire education systems —
+          have been deliberately kept outside the CAMPUS project boundary.
+          They may be worth pursuing on their own terms, as separate
+          undertakings. They are not this project, because they do not
+          answer the question CAMPUS exists to answer: how one university's
+          digital life works well, for the people actually living it.
+        </p>
+
+        <div class="field-card">
+          <span class="field-card-label">Design Principle — 006</span>
+          <p class="field-card-text">
+            <strong>Depth before reach.</strong> A platform tuned precisely
+            to one university's culture, policies, and geography will
+            address needs that a generic platform, however well resourced,
+            cannot — for as long as it remains tuned to that one
+            university. Project CAMPUS treats this as a permanent design
+            constraint, not a stage to graduate out of once resources
+            allow.
+          </p>
+        </div>
+
+        <h2>Complement the Administrative Layer, Compete with Nothing</h2>
+
+        <p>
+          Chapter Three distinguished the university's administrative layer
+          — enrollment, grading, official records — from its informal
+          layer, where housing, logistics, and community life actually
+          happen without institutional ownership. Project CAMPUS occupies
+          that informal layer by design, and the principle established
+          there — map before building, understand which layer already
+          owns a problem before building for it — governs every module
+          described later in this document.
+        </p>
+
+        <p>
+          That principle has a second half, less often stated: within the
+          informal layer, CAMPUS does not attempt to out-compete
+          general-purpose platforms on their own terms. Facebook groups,
+          Messenger chats, and word-of-mouth are not incompetent at what
+          they do — they are simply not built for university-specific
+          problems, and do not need to be replaced wholesale to be improved
+          upon. CAMPUS wins, where it wins, by being the better tool for a
+          specific bounded task — verified housing, a trustworthy campus
+          marketplace, a searchable answer to a repeated question — not by
+          asking students to abandon the platforms where the rest of their
+          social life already happens.
+        </p>
+
+        <h2>Ship the Useful Thing Before the Impressive One</h2>
+
+        <p>
+          Every module described in this document could, in principle, be
+          built simultaneously. In practice, sequencing is itself a design
+          decision, and CAMPUS has followed a consistent rule: working
+          tools that solve a real, narrow problem are built and deployed
+          before speculative ones are designed in detail, regardless of how
+          compelling the speculative version sounds in conversation.
+        </p>
+
+        <p>
+          The Housing Marketplace and Campus Life Map exist today because
+          they answered concrete, immediate needs — where to live, what a
+          day actually costs — with data that could be verified within
+          weeks rather than years. The Community and Forum layer, by
+          contrast, remains a documented concept rather than a built
+          feature, not for lack of interest, but because it depends on
+          trust and moderation structures that have not yet been tested at
+          smaller scale. This is a deliberate ordering, not a gap to
+          apologize for. A platform that ships less, but ships only what it
+          can stand behind, earns the kind of institutional trust that
+          cannot be shortcut by ambition alone.
+        </p>
+
+        <h2>Technology Serves a Named Problem</h2>
+
+        <p>
+          Artificial intelligence and blockchain both appear later in this
+          document, in Chapters Ten and Eleven. Both are introduced only
+          after the narrower question — what specific problem does this
+          solve, that nothing simpler already solves — has been answered in
+          the negative for every simpler alternative.
+        </p>
+
+        <p>
+          Artificial intelligence, throughout CAMPUS, is scoped to
+          amplifying information that has already been verified by a
+          person or an office — surfacing a relevant answer faster,
+          connecting a student to the right resource sooner — rather than
+          generating new claims of its own. An AI-produced answer carries no
+          more authority inside CAMPUS than the verified source it is drawn
+          from, and where no such source exists, CAMPUS says so rather than
+          filling the gap with a plausible-sounding guess.
+        </p>
+
+        <p>
+          Blockchain is scoped even more narrowly. Across independent
+          explorations of the idea — for credentialing, for governance
+          records, for identity — the technology has repeatedly proven
+          useful for exactly one class of problem: producing a record that
+          cannot later be quietly altered. It has just as repeatedly proven
+          to be the wrong tool for ordinary social or transactional data,
+          where the ability to correct, moderate, or delete information
+          matters more than the inability to change it. CAMPUS reserves
+          blockchain for the former and uses conventional, correctable
+          systems for everything else, resisting the temptation to let a
+          single interesting technology define the shape of the whole
+          platform.
+        </p>
+
+        <p>
+          None of these constraints are permanent in the sense that they
+          can never be revisited — a living document, by definition, allows
+          for that. They are permanent in the sense that revisiting them
+          requires the same standard of evidence that established them in
+          the first place, not merely the appeal of a new idea. The chapter
+          that follows describes the architecture built inside these
+          boundaries: the layers, on which these boundaries, and not the
+          reverse, are drawn.
+        </p>
+
+        <div class="chapter-nav" id="chapterNav"><!-- rendered by js/main.js --></div>
+
+      </article>
+    </div>
+  </main>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
