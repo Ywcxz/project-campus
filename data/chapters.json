@@ -19,15 +19,15 @@
   },
   {
     "number": 4,
-    "slug": null,
+    "slug": "problem-analysis",
     "title": "Problem Analysis",
     "status": "not-started"
   },
   {
     "number": 5,
-    "slug": null,
+    "slug": "the-vision",
     "title": "The Vision",
-    "status": "not-started"
+    "status": "written"
   },
   {
     "number": 6,
