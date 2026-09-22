@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MVP Scope — the bounded prototype, scenarios, exclusions, and validation criteria for Project CAMPUS.">
+<title>MVP Scope — Project CAMPUS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-brand">Project <em>CAMPUS</em></span>
+  <button class="topbar-toggle" id="spineToggle" aria-label="Toggle chapters">☰</button>
+</div>
+<div class="spine-backdrop" id="spineBackdrop"></div>
+
+<div class="shell">
+
+  <nav class="spine" id="spine">
+    <div class="spine-head">
+      <a href="index.html" class="spine-brand">Project <em>CAMPUS</em></a>
+      <div class="spine-lockup">Living Document · v0.1</div>
+    </div>
+    <ol class="spine-list" id="spineList"><!-- rendered by js/main.js --></ol>
+  </nav>
+
+  <main class="content">
+    <div class="content-inner">
+      <article class="chapter">
+
+        <div class="lockup">
+          <span>Project CAMPUS</span><span class="x">×</span><span class="vsu">Prototype Boundary</span>
+        </div>
+
+        <div class="eyebrow">Chapter 08 · Available</div>
+        <h1>MVP Scope</h1>
+        <p class="subtitle">The smallest prototype that can test the architecture</p>
+
+        <p>
+          The CAMPUS MVP is a bounded functional vertical slice designed to
+          test the central hypothesis: can a relationship-oriented digital layer
+          make relevant university people, knowledge, places, resources,
+          services, and opportunities easier to discover, understand, and act
+          upon than disconnected information environments alone?
+        </p>
+
+        <p>
+          The MVP is a research instrument as well as a software prototype. It
+          should generate evidence about user value, relationship discovery,
+          context, technical feasibility, interoperability, identity,
+          permissions, provenance, institutional fit, and development effort.
+          It is not a complete CAMPUS deployment.
+        </p>
+
+        <div class="field-card">
+          <span class="field-card-label">MVP Design Principle</span>
+          <p class="field-card-text">
+            Small enough to build, large enough to demonstrate the architecture,
+            focused enough to evaluate, and extensible enough to learn from.
+            Prioritize depth of relationships over breadth of features.
+          </p>
+        </div>
+
+        <h2>What the MVP must prove</h2>
+
+        <p>
+          The prototype should investigate five propositions: relevant entities
+          and relationships can be represented coherently; users can discover
+          useful information through relationships; context and provenance help
+          users understand what they find; discovery can lead to an appropriate
+          next action; and the relational layer can coexist with existing
+          systems without becoming the system of record for every domain.
+        </p>
+
+        <h2>Primary MVP users</h2>
+
+        <p>
+          Students are the primary discovery-oriented users, looking for people,
+          organizations, courses, programs, facilities, services, activities,
+          and opportunities. Faculty and staff provide perspectives involving
+          expertise, courses, organizations, facilities, services, research,
+          activities, and institutional information.
+        </p>
+
+        <p>
+          University administrators test information authority, organizational
+          relationships, service discovery, governance, permissions, system
+          boundaries, and institutional context. Researchers, alumni, external
+          partners, and visitors may participate in later research or prototype
+          stages.
+        </p>
+
+        <h2>Core user scenarios</h2>
+
+        <p>
+          <strong>Discover a person through a relationship.</strong> A student
+          finds a person and navigates through their role, organization,
+          courses, research, activities, publications, and related
+          opportunities. This tests whether contextual relationships provide
+          more value than a simple directory profile.
+        </p>
+
+        <p>
+          <strong>Discover a resource through a need.</strong> A user searches
+          for a service, facility, organization, or resource and sees its
+          location, responsible unit, related services, people, and activities.
+          This tests movement from discovery to context and availability.
+        </p>
+
+        <p>
+          <strong>Explore an entity.</strong> A user begins with a course,
+          organization, facility, research topic, event, or service and follows
+          relevant relationships. This tests relationship-oriented exploration.
+        </p>
+
+        <p>
+          <strong>Discover an opportunity.</strong> A student reaches an
+          opportunity through a program, research area, project, or other
+          existing relationship. This tests whether the model enables useful
+          discovery beyond isolated information pages.
+        </p>
+
+        <p>
+          <strong>Navigate a physical resource.</strong> A user moves from a
+          service or facility to its responsible organization, building, campus,
+          or location. This tests the connection between digital information and
+          physical space.
+        </p>
+
+        <h2>Canonical MVP model</h2>
+
+        <p>
+          The initial prototype should use a deliberately limited vocabulary:
+          Person, Organization, Program, Course, Knowledge Resource, Research
+          Project, Facility, Place, Event or Activity, Service, and Opportunity.
+          The selected scenarios determine the minimum useful entity set.
+        </p>
+
+        <p>
+          Candidate relationships include membership, teaching, participation,
+          authorship, research involvement, program membership, location,
+          service provision, event location, opportunity association, facility
+          use, and knowledge relationships. The goal is an understandable model,
+          not a universal ontology.
+        </p>
+
+        <h2>Context, provenance, and permissions</h2>
+
+        <p>
+          Relationships should demonstrate more than a hyperlink. Where
+          practical, they should carry type, status, temporal validity, source,
+          provenance, visibility, responsible authority, and contextual
+          description.
+        </p>
+
+        <p>
+          The prototype should distinguish official, community, personal,
+          unverified, and scholarly knowledge. It should indicate source,
+          author, date, verification status, or responsible organization where
+          relevant, and must not present experimental or community content as
+          official institutional information.
+        </p>
+
+        <p>
+          Basic identity and role concepts should demonstrate that users have
+          distinct identities, information can have different visibility, and
+          contribution authority can vary by role. The MVP must not assume
+          universal access.
+        </p>
+
+        <h2>Search, profiles, and place</h2>
+
+        <p class="q">
+          Search → Entity → Context → Related Entity → New Context → Action
+        </p>
+
+        <p>
+          Search should support both direct discovery and relational discovery.
+          Selected entity profiles should function as relationship hubs rather
+          than static pages. The MVP should include a minimal spatial component
+          so a facility can connect to a building and campus, with a map or
+          location view where useful.
+        </p>
+
+        <h2>Integration and data strategy</h2>
+
+        <p>
+          The prototype should demonstrate integration principles without
+          requiring full institutional integration. Possible approaches include
+          mock data, controlled samples, public data, references to authoritative
+          sources, simulated APIs, or one authorized real integration.
+        </p>
+
+        <p>
+          Simulated integration must be clearly distinguished from actual VSU
+          integration. Data should progress from synthetic or sample data to
+          public non-sensitive data, controlled institutional data, and only
+          then authorized pilot data when permissions, governance, and security
+          controls exist.
+        </p>
+
+        <h2>Explicit exclusions</h2>
+
+        <ul class="not-list">
+          <li><span class="mark">01</span> Full curriculum-continuity or learning-record system.</li>
+          <li><span class="mark">02</span> Complete education-to-career pathway platform.</li>
+          <li><span class="mark">03</span> Full research collaboration environment.</li>
+          <li><span class="mark">04</span> Sophisticated digital twin or advanced GIS.</li>
+          <li><span class="mark">05</span> Large-scale institutional analytics.</li>
+          <li><span class="mark">06</span> Production AI.</li>
+          <li><span class="mark">07</span> Production-grade offline or local-first deployment.</li>
+          <li><span class="mark">08</span> Full integration with every institutional system.</li>
+          <li><span class="mark">09</span> Replacement of existing university systems.</li>
+        </ul>
+
+        <p>
+          The MVP should not become the ERP, LMS, student information system,
+          research repository, centralized public data store, unrestricted
+          social network, or a demonstration of every CAMPUS dimension. It must
+          not imply VSU adoption or optimize for feature count.
+        </p>
+
+        <h2>Validation tasks and criteria</h2>
+
+        <p>
+          Early validation can ask users to find a person associated with a
+          course, organization, or topic; find a related facility or service;
+          discover an unexpected useful relationship; determine whether
+          information is official, community-generated, scholarly, or
+          unverified; and identify the appropriate next action.
+        </p>
+
+        <p>
+          Measures may include discovery success, time, navigation steps,
+          confidence, relevance, effort, provenance comprehension, and action
+          completion. Evaluation should cover user value, technical feasibility,
+          institutional feasibility, and responsible operation. User enthusiasm
+          alone is not validation.
+        </p>
+
+        <div class="field-card">
+          <span class="field-card-label">Decision Gate</span>
+          <p class="field-card-text">
+            Strong evidence may justify expansion. Mixed evidence should lead to
+            revision. Weak evidence may require narrowing, research-only work,
+            stopping, or redirecting the project.
+          </p>
+        </div>
+
+        <h2>MVP boundary</h2>
+
+        <p>
+          The CAMPUS MVP is a small functional digital-campus prototype that
+          represents a limited set of people, organizations, knowledge, places,
+          activities, services, opportunities, and related entities; lets users
+          search and navigate their relationships; provides basic identity,
+          permissions, provenance, and context; and demonstrates coexistence
+          with external or institutional information sources.
+        </p>
+
+        <p class="q">
+          Build enough CAMPUS to learn whether CAMPUS itself is worth building further.
+        </p>
+
+        <div class="chapter-nav" id="chapterNav"><!-- rendered by js/main.js --></div>
+
+      </article>
+    </div>
+  </main>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

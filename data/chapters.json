@@ -1,110 +1,110 @@
 [
   {
     "number": 1,
-    "slug": "preface",
-    "title": "Preface",
-    "status": "written"
+    "slug": "campus-rd-blueprint",
+    "title": "CAMPUS R&D Blueprint",
+    "status": "available"
   },
   {
     "number": 2,
-    "slug": "executive-summary",
-    "title": "Executive Summary",
-    "status": "written"
+    "slug": "project-definition",
+    "title": "Project Definition",
+    "status": "available"
   },
   {
     "number": 3,
-    "slug": "understanding-today",
-    "title": "Understanding Today's University",
-    "status": "written"
+    "slug": "executive-summary",
+    "title": "Executive Summary",
+    "status": "available"
   },
   {
     "number": 4,
-    "slug": "problem-analysis",
-    "title": "Problem Analysis",
-    "status": "not-started"
+    "slug": "problem-statement",
+    "title": "Problem Statement",
+    "status": "available"
   },
   {
     "number": 5,
-    "slug": "the-vision",
-    "title": "The Vision",
-    "status": "written"
+    "slug": "research-questions",
+    "title": "Research Questions",
+    "status": "available"
   },
   {
     "number": 6,
-    "slug": "design-philosophy",
-    "title": "Design Philosophy",
-    "status": "written"
+    "slug": "conceptual-architecture",
+    "title": "CAMPUS Conceptual Architecture",
+    "status": "available"
   },
   {
     "number": 7,
-    "slug": "digital-campus-architecture",
-    "title": "Digital Campus Architecture",
-    "status": "written"
+    "slug": "major-dimensions",
+    "title": "Major Dimensions",
+    "status": "available"
   },
   {
     "number": 8,
-    "slug": null,
-    "title": "Platform Modules",
-    "status": "not-started"
+    "slug": "mvp-scope",
+    "title": "MVP Scope",
+    "status": "available"
   },
   {
     "number": 9,
-    "slug": null,
-    "title": "Learning Infrastructure",
-    "status": "not-started"
+    "slug": "technical-architecture",
+    "title": "Technical Architecture",
+    "status": "available"
   },
   {
     "number": 10,
-    "slug": null,
-    "title": "Artificial Intelligence",
-    "status": "not-started"
+    "slug": "institutional-alignment",
+    "title": "VSU / DIGITS Institutional Alignment",
+    "status": "available"
   },
   {
     "number": 11,
-    "slug": null,
-    "title": "Blockchain Integrity Layer",
-    "status": "not-started"
+    "slug": "research-validation-methodology",
+    "title": "Research & Validation Methodology",
+    "status": "available"
   },
   {
     "number": 12,
-    "slug": null,
-    "title": "Research Framework",
-    "status": "not-started"
+    "slug": "development-roadmap",
+    "title": "Development Roadmap",
+    "status": "available"
   },
   {
     "number": 13,
-    "slug": null,
-    "title": "Technical Architecture",
-    "status": "not-started"
+    "slug": "manpower-infrastructure-resources",
+    "title": "Manpower, Infrastructure & Resources",
+    "status": "available"
   },
   {
     "number": 14,
-    "slug": null,
-    "title": "Governance",
-    "status": "not-started"
+    "slug": "budget-framework",
+    "title": "Budget Framework",
+    "status": "available"
   },
   {
     "number": 15,
-    "slug": null,
-    "title": "Implementation Roadmap",
-    "status": "not-started"
+    "slug": "governance-privacy-security-ip",
+    "title": "Governance, Privacy, Security & Intellectual Property",
+    "status": "available"
   },
   {
     "number": 16,
-    "slug": null,
-    "title": "Long-Term Vision",
-    "status": "not-started"
+    "slug": "risks-and-limitations",
+    "title": "Risks and Limitations",
+    "status": "available"
   },
   {
     "number": 17,
-    "slug": null,
-    "title": "References",
-    "status": "not-started"
+    "slug": "expected-outputs-outcomes",
+    "title": "Expected Outputs & Outcomes",
+    "status": "available"
   },
   {
     "number": 18,
-    "slug": null,
-    "title": "Appendices",
-    "status": "not-started"
+    "slug": "open-questions-decision-register",
+    "title": "Open Questions & Decision Register",
+    "status": "available"
   }
 ]

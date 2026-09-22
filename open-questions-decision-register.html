@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Open Questions and Decision Register — the control layer for priorities, assumptions, evidence, decisions, gates, and change control in Project CAMPUS.">
+<title>Open Questions &amp; Decision Register — Project CAMPUS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-brand">Project <em>CAMPUS</em></span>
+  <button class="topbar-toggle" id="spineToggle" aria-label="Toggle chapters">☰</button>
+</div>
+<div class="spine-backdrop" id="spineBackdrop"></div>
+
+<div class="shell">
+
+  <nav class="spine" id="spine">
+    <div class="spine-head">
+      <a href="index.html" class="spine-brand">Project <em>CAMPUS</em></a>
+      <div class="spine-lockup">Living Document · v0.1</div>
+    </div>
+    <ol class="spine-list" id="spineList"><!-- rendered by js/main.js --></ol>
+  </nav>
+
+  <main class="content">
+    <div class="content-inner">
+      <article class="chapter">
+
+        <div class="lockup">
+          <span>Project CAMPUS</span><span class="x">×</span><span class="vsu">R&amp;D Control Layer</span>
+        </div>
+
+        <div class="eyebrow">Chapter 18 · Available</div>
+        <h1>Open Questions &amp; Decision Register</h1>
+        <p class="subtitle">The control layer for an evidence-driven project</p>
+
+        <p>
+          This chapter preserves the uncertainty that remains after the initial
+          conceptual consolidation. It distinguishes questions from decisions
+          and assumptions, identifies evidence gaps, prioritizes unresolved work,
+          records provisional ownership, and defines when decisions must be
+          revisited.
+        </p>
+
+        <p>
+          The registers are living project artifacts. Their purpose is to prevent
+          outdated assumptions from silently becoming requirements and to maintain
+          traceability between evidence, decisions, and implementation.
+        </p>
+
+        <div class="field-card">
+          <span class="field-card-label">Control Principle</span>
+          <p class="field-card-text">
+            Open questions should become research work, assumptions should remain
+            visible, decisions should record their basis, and meaningful changes
+            should preserve their history.
+          </p>
+        </div>
+
+        <h2>Status vocabulary</h2>
+
+        <ul class="not-list">
+          <li><span class="mark">Established</span> Supported by evidence, testing, authority, or an explicit decision.</li>
+          <li><span class="mark">Proposed</span> A hypothesis, direction, method, or development proposal under validation.</li>
+          <li><span class="mark">Unresolved</span> A question without sufficient evidence or authority.</li>
+          <li><span class="mark">Investigating</span> Actively researched or tested without a final decision.</li>
+          <li><span class="mark">Deferred</span> Intentionally postponed because it is not required for the current stage.</li>
+          <li><span class="mark">Rejected</span> Intentionally excluded based on evidence, scope, feasibility, governance, or strategy.</li>
+        </ul>
+
+        <p class="q">
+          Proposed is not established. Deferred is not rejected.
+        </p>
+
+        <h2>Priority model</h2>
+
+        <ul class="not-list">
+          <li><span class="mark">P0</span> Blocking or immediate: required for a credible MVP experiment.</li>
+          <li><span class="mark">P1</span> High: may materially affect architecture, compatibility, or MVP design.</li>
+          <li><span class="mark">P2</span> Important and parallel: investigate during MVP and validation.</li>
+          <li><span class="mark">P3</span> Pilot or later: active when institutional operation becomes relevant.</li>
+          <li><span class="mark">P4</span> Strategic or conditional: keep open until evidence justifies action.</li>
+        </ul>
+
+        <p>
+          Priority indicates when enough evidence is needed for a responsible
+          decision; it does not mean the question will be answered permanently.
+        </p>
+
+        <h2>Priority open-question register</h2>
+
+        <p>
+          The initial P0 register asks whether the problem is meaningful, who the
+          primary users are, which tasks the MVP should test, whether relational
+          discovery adds value, which relationships create that value, what the
+          minimum entity and relationship model is, what data can safely be
+          used, what counts as success or failure, and what would cause the MVP
+          to be revised, narrowed, or stopped.
+        </p>
+
+        <p>
+          P1 questions address relationship metadata and time, explicit versus
+          derived relationships, prototype identity, permissions, authority,
+          provenance, existing institutional systems, ownership, interfaces,
+          policies, DIGITS overlap, technical representation, storage, search,
+          deployment, and whether the MVP remains small enough to be a research
+          instrument.
+        </p>
+
+        <p>
+          P2 questions address user comprehension, cognitive load, relationship
+          overload, authority distinctions, relationship creation and
+          verification, disputes, history, threat modeling, sensitive
+          combinations, inference, local-first value, resource availability,
+          and a defensible MVP budget.
+        </p>
+
+        <h2>MVP blocking set</h2>
+
+        <p>
+          The MVP should initially be controlled by a small set of blocking
+          questions: problem, users, tasks, relational value, valuable
+          relationships, minimum model, safe data, authority, provenance,
+          identity, permissions, threat model, validation criteria, and
+          conditions for revision or stopping.
+        </p>
+
+        <p>
+          Production identity, university-wide integration, final enterprise
+          storage, production hosting, institution-wide governance, full
+          local-first operation, future dimensions, and commercialization can
+          remain open while a safely bounded prototype proceeds with synthetic,
+          public, project-created, controlled, or simulated data.
+        </p>
+
+        <h2>Questions that activate at pilot</h2>
+
+        <p>
+          When a legitimate pilot pathway emerges, deferred questions become
+          active: what institutional data may be used, who owns it, who sponsors
+          the pilot, what identity system is authorized, what integrations are
+          permitted, what reviews are required, what infrastructure and support
+          are needed, what governance applies, what the pilot budget is, and
+          what evidence determines continuation or termination.
+        </p>
+
+        <p>
+          The project should not engineer these requirements in full before a
+          legitimate pilot pathway exists.
+        </p>
+
+        <h2>Decision register</h2>
+
+        <p>
+          Current decisions include: CAMPUS is an independently initiated R&amp;D
+          concept; it is a digital-campus architecture rather than isolated
+          features; relationships are first-class; specialized systems retain
+          authority where appropriate; identity, authorization, provenance,
+          privacy, and security are foundational; search and discovery are core
+          MVP capabilities; basic place representation is within the current
+          direction; a full digital twin is outside MVP; future dimensions are
+          conditional; local-first is a research direction; AI is not
+          foundational; prototype data must be safely authorized; the prototype
+          is both software and research instrument; strategic alignment is not
+          endorsement; the CAMPUS/DIGITS relationship is unresolved; production
+          architecture remains open; and expansion requires evidence.
+        </p>
+
+        <p>
+          Each decision should record its status, evidence or rationale, and
+          trigger for revisiting it.
+        </p>
+
+        <h2>Assumption register</h2>
+
+        <p>
+          Working assumptions include that university resources can be
+          meaningfully represented as relationships, users may benefit from
+          relational discovery, context may reduce effort, relationships can
+          coexist with institutional records, provenance can be understood,
+          permissions can be implemented without disproportionate complexity,
+          temporal relationships may matter, a bounded model can support useful
+          scenarios, local-first may provide value in some contexts, and CAMPUS
+          can remain a layer rather than a competing system of record.
+        </p>
+
+        <p>
+          Assumptions should be validated, revised, retired, rejected, or
+          promoted to established decisions only when appropriate evidence exists.
+        </p>
+
+        <h2>Evidence register</h2>
+
+        <p>
+          For each significant claim or decision, record the claim or finding,
+          evidence type, source, date, confidence, interpretation, affected
+          decision, contradictory evidence, relevance, and responsible
+          researcher. Evidence classes include institutional documents,
+          interviews, observations, surveys, technical experiments, usability
+          tests, benchmarks, security and privacy analysis, scholarly literature,
+          system documentation, stakeholder consultation, and prototype
+          evidence.
+        </p>
+
+        <p>
+          Observation must remain distinct from interpretation. Evidence should
+          be capable of changing a preference rather than serving only to justify
+          an existing one.
+        </p>
+
+        <h2>Decision-making rules</h2>
+
+        <ul class="not-list">
+          <li><span class="mark">01</span> Evidence before expansion.</li>
+          <li><span class="mark">02</span> Problem before feature.</li>
+          <li><span class="mark">03</span> Relationship before accumulation.</li>
+          <li><span class="mark">04</span> Integration before duplication.</li>
+          <li><span class="mark">05</span> Permission before institutional data.</li>
+          <li><span class="mark">06</span> Provenance before trust claims.</li>
+          <li><span class="mark">07</span> Prototype before production commitment.</li>
+          <li><span class="mark">08</span> Reversibility where possible.</li>
+          <li><span class="mark">09</span> Negative evidence is valid evidence.</li>
+          <li><span class="mark">10</span> Institutional decisions remain institutional.</li>
+        </ul>
+
+        <h2>Decision gates</h2>
+
+        <p>
+          Gate 1 asks whether the problem is meaningful. Gate 2 asks whether
+          relationships add value beyond appropriate existing methods. Gate 3
+          asks whether the architecture is technically feasible. Gate 4 asks
+          whether CAMPUS can coexist with institutional systems and governance.
+          Gate 5 asks whether the tested capability provides sufficient user
+          value. Gate 6 asks whether evidence justifies another dimension.
+        </p>
+
+        <p>
+          Outcomes at each gate may include proceeding, revising, narrowing,
+          remaining research-only, deferring, rejecting, or stopping.
+        </p>
+
+        <h2>Immediate next actions</h2>
+
+        <ol class="not-list">
+          <li><span class="mark">01</span> Freeze the conceptual baseline and record new ideas as proposed changes.</li>
+          <li><span class="mark">02</span> Resolve the P0 question set.</li>
+          <li><span class="mark">03</span> Conduct institutional discovery in parallel.</li>
+          <li><span class="mark">04</span> Specify experiments for the highest-risk assumptions.</li>
+          <li><span class="mark">05</span> Build the smallest functional vertical slice.</li>
+          <li><span class="mark">06</span> Record evidence continuously.</li>
+          <li><span class="mark">07</span> Conduct the first validation gate before expansion.</li>
+        </ol>
+
+        <h2>Blueprint change control</h2>
+
+        <p>
+          Each meaningful revision should record version, date, change, reason,
+          evidence, affected sections, decision, unresolved consequences, and
+          owner. Changes may be clarifications, evidence updates, architectural
+          changes, scope changes, research findings, institutional discoveries,
+          or decision reversals.
+        </p>
+
+        <p>
+          Previous decisions should be preserved rather than silently
+          overwritten. This keeps the Blueprint a living research document with
+          a traceable history.
+        </p>
+
+        <div class="field-card">
+          <span class="field-card-label">Blueprint v0.1 Baseline</span>
+          <p class="field-card-text">
+            CAMPUS is an independently initiated R&amp;D concept for a persistent,
+            permission-aware, provenance-aware relational layer. It prioritizes
+            infrastructure, relationships, and evidence over feature count,
+            premature scale, and unvalidated complexity.
+          </p>
+        </div>
+
+        <h2>Maturity statement</h2>
+
+        <p>
+          Blueprint v0.1 is mature enough to support technical experiments,
+          bounded prototype development, user research, institutional discovery,
+          architecture evaluation, research proposals, early technical
+          discussions, and controlled presentations.
+        </p>
+
+        <p>
+          It is not sufficient to justify institution-wide deployment,
+          production integration, unrestricted institutional data, final
+          technology selection, full-scale implementation, adoption claims, or
+          commercialization claims.
+        </p>
+
+        <h2>Final decision principle</h2>
+
+        <p class="q">
+          The project should be allowed to become smaller, different, or even unnecessary if the evidence indicates that this is correct.
+        </p>
+
+        <p>
+          The purpose of the Blueprint is not to prove that the entire CAMPUS
+          vision should exist. It is to create a disciplined framework for
+          discovering what should exist, what should not, what should be
+          integrated, what should remain separate, what should be tested, and
+          what evidence is required before each decision.
+        </p>
+
+        <div class="closing-note">
+          <div class="eyebrow">Control Layer Conclusion</div>
+          <p>
+            The complete control structure is: Open Questions → Priorities →
+            Owners → Evidence → Assumptions → Decisions → Gates → Actions →
+            Change Control.
+          </p>
+          <p>
+            The next phase is evidence generation: Problem → Evidence → Prototype
+            → Test → Decision.
+          </p>
+        </div>
+
+        <div class="chapter-nav" id="chapterNav"><!-- rendered by js/main.js --></div>
+
+      </article>
+    </div>
+  </main>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

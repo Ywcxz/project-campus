@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Budget Framework — the staged cost model, scenarios, assumptions, and financial gates for Project CAMPUS.">
+<title>Budget Framework — Project CAMPUS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-brand">Project <em>CAMPUS</em></span>
+  <button class="topbar-toggle" id="spineToggle" aria-label="Toggle chapters">☰</button>
+</div>
+<div class="spine-backdrop" id="spineBackdrop"></div>
+
+<div class="shell">
+
+  <nav class="spine" id="spine">
+    <div class="spine-head">
+      <a href="index.html" class="spine-brand">Project <em>CAMPUS</em></a>
+      <div class="spine-lockup">Living Document · v0.1</div>
+    </div>
+    <ol class="spine-list" id="spineList"><!-- rendered by js/main.js --></ol>
+  </nav>
+
+  <main class="content">
+    <div class="content-inner">
+      <article class="chapter">
+
+        <div class="lockup">
+          <span>Project CAMPUS</span><span class="x">×</span><span class="vsu">Financial Planning</span>
+        </div>
+
+        <div class="eyebrow">Chapter 14 · Available</div>
+        <h1>Budget Framework</h1>
+        <p class="subtitle">Funding the evidence before funding the whole vision</p>
+
+        <p>
+          This chapter establishes the financial framework for CAMPUS
+          development. It does not present a final project cost because the
+          actual budget depends on validated scope, manpower, duration,
+          infrastructure, institutional requirements, data access, security,
+          pilot scale, and funding arrangements.
+        </p>
+
+        <p>
+          The budget should evolve with the evidence and development roadmap. It
+          distinguishes R&amp;D and prototype costs, institutional pilot costs,
+          production and operational costs, and future expansion costs.
+        </p>
+
+        <div class="field-card">
+          <span class="field-card-label">Budgeting Principle</span>
+          <p class="field-card-text">
+            Do not budget the complete vision before validating the foundational
+            hypothesis. First establish the cost of generating credible
+            evidence.
+          </p>
+        </div>
+
+        <h2>Budget structure</h2>
+
+        <p>
+          The main cost categories are personnel; research and validation;
+          software and development tools; infrastructure; security, privacy,
+          and governance; institutional integration; training and documentation;
+          operations and maintenance; and contingency.
+        </p>
+
+        <h2>Cost categories</h2>
+
+        <p>
+          Personnel is likely to be the largest R&amp;D cost and may include the
+          R&amp;D or product lead, engineers, architecture, UX, research, QA,
+          infrastructure, security, institutional liaison, and specialist
+          advisers. Costs depend on number of people, duration, compensation,
+          consultant rates, institutional contributions, and participation
+          models.
+        </p>
+
+        <p>
+          Research and validation may include recruitment, transportation,
+          communication, materials, surveys, interviews, usability testing,
+          workshops, documentation, data preparation, assistance, and
+          dissemination. Institutional facilities or personnel provided without
+          additional cash cost should still be recorded as in-kind resources.
+        </p>
+
+        <p>
+          Software and tooling may include source control, project management,
+          design, development and testing tools, databases, search, monitoring,
+          security, domains, certificates, AI services, and commercial APIs.
+          Open-source tools can reduce licensing costs but still carry hosting,
+          maintenance, support, integration, security, and developer costs.
+        </p>
+
+        <p>
+          Infrastructure can include development machines, servers, cloud or
+          virtual machines, local-first nodes, database and object storage,
+          backups, networking, monitoring, logging, recovery, and deployment.
+          A local prototype and a university-wide production system must not
+          share the same infrastructure assumption.
+        </p>
+
+        <p>
+          Security and privacy need explicit budget lines for threat modeling,
+          assessment, testing, scanning, review, identity, encryption, audit
+          logging, secure hosting, and compliance-related work. Institutional
+          integration may add system analysis, mapping, APIs, identity,
+          synchronization, migration, testing, security review, coordination,
+          and change management.
+        </p>
+
+        <p>
+          Training, documentation, support, hosting, storage, monitoring,
+          maintenance, subscriptions, data stewardship, and administration must
+          be separated into one-time and recurring costs. Contingency should
+          reflect the maturity and uncertainty of the project rather than being
+          fixed prematurely.
+        </p>
+
+        <h2>Cost by development stage</h2>
+
+        <ul class="not-list">
+          <li><span class="mark">01</span> Blueprint and discovery: research, coordination, and documentation.</li>
+          <li><span class="mark">02</span> Technical experiments: engineering and development infrastructure.</li>
+          <li><span class="mark">03</span> MVP: personnel, software, infrastructure, UX, and testing.</li>
+          <li><span class="mark">04</span> User validation: research, participants, and evaluation.</li>
+          <li><span class="mark">05</span> Institutional validation: integration, security, governance, and coordination.</li>
+          <li><span class="mark">06</span> Pilot: integration, infrastructure, support, training, and monitoring.</li>
+          <li><span class="mark">07</span> Production: operations, security, maintenance, support, and infrastructure.</li>
+          <li><span class="mark">08</span> Expansion: specialized engineering and domain capabilities.</li>
+        </ul>
+
+        <h2>Budget scenarios</h2>
+
+        <p>
+          <strong>Lean Independent R&amp;D</strong> is the smallest credible path:
+          a small team, synthetic or public data, existing hardware, low-cost
+          tooling, modest hosting, limited consulting, and no production
+          institutional integration. Its purpose is to generate evidence about
+          the core hypothesis.
+        </p>
+
+        <p>
+          <strong>Supported Prototype</strong> assumes additional institutional,
+          research, grant, or partner support for personnel, infrastructure, UX,
+          security, datasets, advisers, and controlled demonstrations.
+        </p>
+
+        <p>
+          <strong>Institutional Pilot</strong> adds identity and system
+          integration, security assessment, governance, infrastructure,
+          support, training, monitoring, administration, change management, and
+          evaluation. It should be estimated only after a use case and
+          participating units are defined.
+        </p>
+
+        <p>
+          <strong>Production Deployment</strong> would require dedicated
+          engineering and operations, security operations, support, governance,
+          monitoring, disaster recovery, integration maintenance, training, and
+          long-term development. It is a future model, not the current budget.
+        </p>
+
+        <h2>Estimation and confidence</h2>
+
+        <p>
+          Detailed costs should use quantity multiplied by unit cost multiplied
+          by duration. This can apply to personnel, hosting, hardware, research
+          activities, and integration. Each estimate should state its confidence
+          level: conceptual, preliminary, or detailed.
+        </p>
+
+        <p>
+          The current CAMPUS budget should remain conceptual or preliminary until
+          scope, manpower, infrastructure, staffing arrangements, quotations,
+          and institutional requirements are known.
+        </p>
+
+        <h2>Assumptions and uncertainty</h2>
+
+        <p>
+          Significant assumptions should be recorded rather than silently
+          converted into budget facts. Examples include a small initial team,
+          available development hardware, sufficient open-source tools,
+          adequate synthetic or public data, available APIs, university pilot
+          infrastructure, security assessment requirements, hosting, and
+          local-first hardware.
+        </p>
+
+        <p>
+          The largest uncertainties are likely to be personnel duration,
+          institutional integration, security, infrastructure, identity
+          integration, data preparation, institutional support, pilot scale,
+          local-first complexity, and long-term operations.
+        </p>
+
+        <h2>Budget gates</h2>
+
+        <p>
+          Before the MVP, budget primarily for research, architecture,
+          engineering, UX, experiments, and basic infrastructure. Before an
+          institutional pilot, re-estimate integration, infrastructure,
+          security, governance, support, and training. Before production,
+          conduct a separate total-cost-of-ownership, operating-cost, staffing,
+          and sustainability assessment.
+        </p>
+
+        <div class="field-card">
+          <span class="field-card-label">Cost Discipline</span>
+          <p class="field-card-text">
+            A prototype budget must never automatically become a production
+            budget. Each development stage must earn its next level of spending
+            through evidence.
+          </p>
+        </div>
+
+        <h2>Total cost and sustainability</h2>
+
+        <p>
+          A production evaluation must consider initial development,
+          infrastructure, integration, security, operations, maintenance,
+          support, data governance, and future development over a defined
+          planning period.
+        </p>
+
+        <p>
+          Financial sustainability also asks who pays for infrastructure,
+          employs developers, maintains integrations, manages data, handles
+          support, funds security, owns the software, and carries recurring
+          costs if project funding ends. Recurring expense must remain
+          proportionate to demonstrated value.
+        </p>
+
+        <h2>Funding and proposal readiness</h2>
+
+        <p>
+          Possible funding categories include independent R&amp;D, university
+          research, government programs, innovation grants, technology
+          development, institutional transformation, research partnerships,
+          external collaborators, and future commercialization where
+          appropriate.
+        </p>
+
+        <p>
+          Before a formal proposal, CAMPUS should have a defined problem,
+          research questions, methodology, bounded scope, technical
+          architecture, work plan, manpower requirements, measurable outputs,
+          budget assumptions, risks, governance, intellectual-property position,
+          and accurately stated institutional relationship.
+        </p>
+
+        <h2>Financial decision framework</h2>
+
+        <p>
+          For every major expenditure, ask what problem it addresses, whether it
+          is required now, what evidence supports it, whether a lower-cost
+          alternative exists, whether it creates lock-in, whether it is reusable,
+          what happens if the hypothesis is disproved, whether it creates
+          recurring costs, who maintains it, and whether it can wait for a later
+          decision gate.
+        </p>
+
+        <p>
+          Budget changes should be tracked with scope changes. The project should
+          not increase spending merely to preserve features that evidence no
+          longer supports.
+        </p>
+
+        <h2>Current budget status</h2>
+
+        <p>
+          Established positions include that no final production budget is yet
+          justified, resources must be staged, personnel will likely be a major
+          R&amp;D cost, integration and security can materially change later costs,
+          and one-time and recurring costs must be distinguished.
+        </p>
+
+        <p>
+          Proposed positions include four budget scenarios, explicit cost
+          categories, progressive refinement at gates, assumption and confidence
+          tracking, and total-cost-of-ownership analysis before production.
+          Actual personnel costs, funding, duration, hosting, integration,
+          security, pilot scale, and long-term operations remain unresolved.
+        </p>
+
+        <h2>MVP-to-pilot cost boundary</h2>
+
+        <p>
+          The MVP is a research environment. It begins when resources are
+          committed to the functional vertical slice and ends when enough
+          evidence exists to decide whether institutional experimentation is
+          justified.
+        </p>
+
+        <p>
+          MVP costs may cover prototype software, synthetic or public data,
+          prototype authentication and permissions, the relational model,
+          search, navigation, provenance, basic places, limited activities or
+          opportunities, development infrastructure, controlled demonstrations,
+          usability testing, and technical experiments.
+        </p>
+
+        <p>
+          The MVP does not require production university identity, unrestricted
+          institutional data, production integrations, institution-wide
+          deployment, guaranteed production availability, institutional support
+          obligations, enterprise security certification, complete disaster
+          recovery, university-wide training, or production service management.
+        </p>
+
+        <p>
+          The pilot begins when CAMPUS is authorized to operate with real
+          institutional users, systems, data, infrastructure, or workflows under
+          a defined institutional arrangement. It may require an approved use
+          case, participating unit, data authority, identity integration,
+          controlled infrastructure, security and privacy review, governance,
+          support, monitoring, recovery, training, duration, and success and
+          failure criteria.
+        </p>
+
+        <div class="field-card">
+          <span class="field-card-label">Boundary Test</span>
+          <p class="field-card-text">
+            If CAMPUS can be safely demonstrated with synthetic, public, or
+            project-created data without relying on institutional production
+            systems, it remains within the MVP/R&amp;D boundary. Real identity,
+            personal data, production integration, operational infrastructure,
+            institutional obligations, or formal user deployment move it into
+            pilot territory.
+          </p>
+        </div>
+
+        <h2>Cost boundary by environment</h2>
+
+        <ul class="not-list">
+          <li><span class="mark">MVP</span> Core prototype, non-sensitive data, prototype identity, controlled hosting, baseline security, mock or test interfaces, basic monitoring and backup, research support.</li>
+          <li><span class="mark">Pilot</span> Hardened prototype, authorized institutional data, institutional identity, controlled infrastructure, formal review, real integrations, operational support, recovery, training, and governance.</li>
+          <li><span class="mark">Production</span> Continuous engineering, operational identity, production infrastructure, maintained integrations, full observability, service support, institutional training, and long-term governance.</li>
+        </ul>
+
+        <h2>What should not be charged to the MVP</h2>
+
+        <p>
+          Unless a specific experiment requires them, university-wide identity,
+          ERP or LMS integration, production data migration, complete digital
+          twin infrastructure, campus-wide hardware, institution-wide training,
+          24/7 support, full disaster recovery, extensive enterprise security
+          certification, broad AI infrastructure, and complete CCLR, Pathways,
+          or research-management platforms should remain outside the MVP budget.
+        </p>
+
+        <h2>Pilot trigger conditions</h2>
+
+        <p>
+          A pilot should be considered only after a meaningful problem,
+          bounded use case, and prototype evidence of potential value are
+          established; the architecture, security controls, integration, and
+          infrastructure requirements are sufficiently understood; an
+          institutional owner, data authority, permission path, and pilot
+          responsibilities are identified; privacy, access, provenance,
+          correction, and dispute processes are defined; and pilot costs,
+          recurring costs, and funding responsibility can be estimated.
+        </p>
+
+        <p>
+          A functioning prototype alone should not trigger a pilot. Once MVP
+          validation is complete, the prototype budget should be discarded or
+          substantially revised rather than simply extended. The pilot needs
+          its own estimate based on validated scope, actual integration,
+          security and privacy requirements, infrastructure, staffing,
+          duration, and contingency.
+        </p>
+
+        <h2>Future budget-planning template</h2>
+
+        <p>
+          Future estimates should separate MVP/R&amp;D, pilot, and production
+          columns for product leadership, engineering, UX and research,
+          architecture, security and privacy, institutional coordination,
+          tools, hosting, storage, networking, search, hardware, integration,
+          identity, testing, training, operations, monitoring, governance, and
+          contingency. Blank values are intentional until the relevant phase
+          has enough information for a defensible estimate.
+        </p>
+
+        <p>
+          Every populated estimate should record its date, currency, duration,
+          staffing and rate assumptions, infrastructure and data assumptions,
+          institutional and in-kind contributions, one-time versus recurring
+          costs, contingency basis, quotation or source, and confidence level.
+        </p>
+
+        <h2>In-kind contributions</h2>
+
+        <p>
+          Developer and research time, ICT support, servers, workspace, data
+          access, testing participants, technical advice, and donated software
+          or services should be recorded separately from cash expenditure. This
+          distinguishes the cash requirement from the total resource
+          requirement without making non-cash support invisible.
+        </p>
+
+        <div class="field-card">
+          <span class="field-card-label">Financial Decision Rule</span>
+          <p class="field-card-text">
+            Prototype budget → evidence → pilot-specific budget → pilot evidence
+            → production business and resource case. Approval of one budget
+            never automatically approves the next stage.
+          </p>
+        </div>
+
+        <div class="closing-note">
+          <div class="eyebrow">Budget Conclusion</div>
+          <p>
+            MVP is investment in generating evidence. Pilot is investment in
+            testing the validated concept under controlled institutional
+            conditions. Production is investment in sustained institutional
+            operation. These are three different financial decisions, and a
+            low-cost prototype budget must never imply inexpensive deployment.
+          </p>
+        </div>
+
+        <div class="chapter-nav" id="chapterNav"><!-- rendered by js/main.js --></div>
+
+      </article>
+    </div>
+  </main>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

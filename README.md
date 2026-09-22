@@ -10,9 +10,11 @@ Netlify, otherwise the philosophy is identical.
 ```
 project-campus/
 ├── index.html                  ← cover page: hero, flagship panel, table of contents
-├── preface.html                ← Chapter 01, written
-├── executive-summary.html      ← Chapter 02, written
-├── understanding-today.html    ← Chapter 03, written
+├── campus-rd-blueprint.html    ← Chapter 01
+├── project-definition.html     ← Chapter 02
+├── executive-summary.html      ← Chapter 03
+├── problem-statement.html      ← Chapter 04
+├── research-questions.html     ← Chapter 05
 ├── css/
 │   └── style.css          ← design system (paper/ink/brass/sea tokens)
 ├── js/
@@ -28,12 +30,12 @@ project-campus/
 
 ## Adding a new chapter
 
-1. Write `chapterN.html` — copy any existing chapter page (e.g.
-   `understanding-today.html`) as a starting template: same head, topbar,
+1. Write a descriptive HTML filename such as `research-questions.html` — copy
+   the existing chapter page as a starting template: same head, topbar,
    spine, and shell markup, just swap out the contents of the chapter
    article itself.
 2. In `data/chapters.json`, set that chapter's `"slug"` to the filename
-   (without `.html`) and `"status"` to `"written"`.
+   (without `.html`) and `"status"` to `"available"`.
 3. That's it — the spine nav, the cover-page table of contents, and the
    prev/next footer links all update automatically because they're rendered
    from that one JSON file, not hardcoded per page.
@@ -76,7 +78,7 @@ the CampusOS site: edit, commit, push, done.
   typical SaaS-landing look, since this is a reference document, not a
   product pitch.
 - **The spine nav is the table of contents.** It's rendered from
-  `chapters.json` everywhere, so "written" vs. "not started" status can
+   `chapters.json` everywhere, so "available" vs. "not started" status can
   never drift out of sync between the cover page and the sidebar.
 - **Field-card callouts** (the dashed, slightly-rotated boxes) are used for
   the "Engineering Observation" / "Design Principle" numbered entries —

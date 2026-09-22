@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Research and Validation Methodology — how Project CAMPUS will investigate, test, revise, and potentially discontinue its R&D hypothesis.">
+<title>Research &amp; Validation Methodology — Project CAMPUS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-brand">Project <em>CAMPUS</em></span>
+  <button class="topbar-toggle" id="spineToggle" aria-label="Toggle chapters">☰</button>
+</div>
+<div class="spine-backdrop" id="spineBackdrop"></div>
+
+<div class="shell">
+
+  <nav class="spine" id="spine">
+    <div class="spine-head">
+      <a href="index.html" class="spine-brand">Project <em>CAMPUS</em></a>
+      <div class="spine-lockup">Living Document · v0.1</div>
+    </div>
+    <ol class="spine-list" id="spineList"><!-- rendered by js/main.js --></ol>
+  </nav>
+
+  <main class="content">
+    <div class="content-inner">
+      <article class="chapter">
+
+        <div class="lockup">
+          <span>Project CAMPUS</span><span class="x">×</span><span class="vsu">R&amp;D Methodology</span>
+        </div>
+
+        <div class="eyebrow">Chapter 11 · Available</div>
+        <h1>Research &amp; Validation Methodology</h1>
+        <p class="subtitle">Building to generate evidence</p>
+
+        <p>
+          This methodology defines how CAMPUS will be investigated, prototyped,
+          tested, evaluated, revised, and potentially discontinued. It treats
+          CAMPUS as an R&amp;D hypothesis rather than a predetermined product.
+        </p>
+
+        <p>
+          The objective is to determine whether the underlying problem exists in
+          meaningful form, which relationships users need, whether a relational
+          layer creates measurable value, whether the architecture is feasible,
+          whether it can coexist responsibly with existing systems, and what
+          conditions are required for further development.
+        </p>
+
+        <div class="field-card">
+          <span class="field-card-label">Methodological Principle</span>
+          <p class="field-card-text">
+            CAMPUS should be built to generate evidence, not evidence manufactured
+            to justify CAMPUS. The prototype is both a software artifact and a
+            research instrument.
+          </p>
+        </div>
+
+        <h2>Evidence-driven R&amp;D</h2>
+
+        <p class="q">
+          Problem → Evidence → Hypothesis → Prototype → Test → Evidence → Revision → Decision
+        </p>
+
+        <p>
+          The project must avoid both technology-first development and
+          confirmation-driven research. Findings should be able to strengthen
+          the architecture, narrow the scope, modify assumptions, replace
+          mechanisms, postpone dimensions, identify existing solutions, or
+          disprove parts of the hypothesis.
+        </p>
+
+        <h2>Evidence classification</h2>
+
+        <p>
+          Major findings should be classified as <strong>Established</strong>
+          when supported by reliable documents, observation, system behavior,
+          literature, experiments, user testing, or formal decisions;
+          <strong>Proposed</strong> when they are current hypotheses, designs,
+          assumptions, or directions; and <strong>Unresolved</strong> when they
+          require research, technical investigation, stakeholder input,
+          clarification, or testing.
+        </p>
+
+        <h2>Research streams</h2>
+
+        <ul class="not-list">
+          <li><span class="mark">A</span> Problem and user research.</li>
+          <li><span class="mark">B</span> Relational model research.</li>
+          <li><span class="mark">C</span> User experience research.</li>
+          <li><span class="mark">D</span> Institutional systems research.</li>
+          <li><span class="mark">E</span> Technical architecture research.</li>
+          <li><span class="mark">F</span> Governance, privacy, and security research.</li>
+          <li><span class="mark">G</span> Local-first and hybrid architecture research.</li>
+          <li><span class="mark">H</span> Future-dimension research.</li>
+        </ul>
+
+        <h2>Research phases</h2>
+
+        <p>
+          <strong>Discovery</strong> maps users, problems, workflows, systems,
+          institutional context, constraints, and relevant research.
+          <strong>Concept validation</strong> tests entities, relationships,
+          discovery patterns, provenance, and user value.
+          <strong>Technical feasibility</strong> tests representation, search,
+          traversal, authorization, provenance, integration, deployment, and
+          local-first mechanisms.
+        </p>
+
+        <p>
+          <strong>Functional prototyping</strong> builds a small vertical slice.
+          <strong>User validation</strong> tests representative tasks.
+          <strong>Institutional validation</strong> evaluates coexistence,
+          governance, data access, security, operations, and usefulness.
+          <strong>Decision</strong> determines whether directions expand,
+          continue as experiments, revise, narrow, remain research-only, or
+          stop.
+        </p>
+
+        <h2>User and workflow research</h2>
+
+        <p>
+          Research should investigate what users are trying to accomplish and
+          where relationships become difficult to discover or use. Potential
+          participants include students, faculty, researchers, staff, technical
+          personnel, leadership, alumni, and selected external stakeholders.
+        </p>
+
+        <p>
+          Interviews and observation may examine discovery, relationships,
+          continuity, existing systems, friction, and movement from information
+          to action. Activities should produce structured artifacts such as
+          interview notes, anonymized observations, workflow maps, journey maps,
+          task definitions, relationship maps, evidence records, and decisions.
+        </p>
+
+        <h2>Relational model validation</h2>
+
+        <p>
+          The model should be tested independently from the visual interface.
+          The key question is whether explicitly representing a relationship
+          provides information that would otherwise be difficult to discover.
+        </p>
+
+        <p>
+          Tests may cover direct discovery, relational discovery, contextual
+          discovery, unexpected discovery, and action discovery. Each candidate
+          relationship should be evaluated for user benefit, supported action,
+          stability, source, authority, validity period, privacy, duplication,
+          and actual use.
+        </p>
+
+        <h2>Comparative prototype testing</h2>
+
+        <p>
+          Where practical, users should complete equivalent tasks through an
+          existing or conventional workflow and through the CAMPUS prototype.
+          Measures may include task completion, time, navigation steps, errors,
+          comprehension, confidence, relationship recognition, and ability to
+          proceed to an action.
+        </p>
+
+        <p>
+          The objective is not to guarantee that CAMPUS performs better. A
+          result showing no meaningful improvement is an important finding.
+        </p>
+
+        <h2>Provenance, privacy, and trust</h2>
+
+        <p>
+          Users should be able to distinguish official institutional,
+          community-generated, personal, unverified, scholarly, and externally
+          sourced information. Testing should examine whether they understand
+          source, verification, authority, age, and responsible ownership.
+        </p>
+
+        <p class="q">
+          The ability to represent a relationship does not automatically justify representing it.
+        </p>
+
+        <p>
+          Privacy research must consider minimization, purpose limitation,
+          visibility, consent, role-based and relationship-level access,
+          retention, correction, deletion or de-identification, auditability,
+          and sensitive relationship inference. Governance research must also
+          distinguish technical permission from institutional authority.
+        </p>
+
+        <h2>Institutional and technical research</h2>
+
+        <p>
+          Institutional systems research should create an inventory covering
+          systems, functions, owners, operators, authority, users, data,
+          interfaces, identity, integration, security, privacy, lifecycle,
+          relevance, and evidence status.
+        </p>
+
+        <p>
+          Technical experiments should test relationship representation and
+          traversal, search, provenance, authorization, external integration,
+          temporal relationships, local-first operation, synchronization, and
+          extensibility. Local-first work must compare value gained against
+          complexity introduced rather than treating local operation as
+          inherently superior.
+        </p>
+
+        <h2>Ethics and participant protection</h2>
+
+        <p>
+          User research should use appropriate safeguards, including voluntary
+          participation, privacy protection, anonymization, secure research
+          records, minimized personal data, and clear separation between research
+          participation and institutional evaluation. Formal human-participant
+          research may require ethics review or another formal process.
+        </p>
+
+        <h2>Research log and decision records</h2>
+
+        <p>
+          Significant findings should record the date, activity, question,
+          participants or source, observation, evidence, interpretation,
+          confidence, affected assumption, resulting decision, and follow-up.
+          Decision records should capture the decision, context, options,
+          evidence, chosen direction, reason, trade-offs, consequences, status,
+          and revisit condition.
+        </p>
+
+        <h2>Validation gates</h2>
+
+        <ul class="not-list">
+          <li><span class="mark">01</span> Problem validation: is the underlying problem meaningful?</li>
+          <li><span class="mark">02</span> Relational value: do explicit relationships add value?</li>
+          <li><span class="mark">03</span> Technical feasibility: can the model work acceptably?</li>
+          <li><span class="mark">04</span> Institutional compatibility: can it coexist responsibly?</li>
+          <li><span class="mark">05</span> User value: does it improve meaningful tasks?</li>
+          <li><span class="mark">06</span> Expansion: is there evidence to move beyond the foundation?</li>
+        </ul>
+
+        <p>
+          Each gate can result in proceeding, revising, narrowing, restricting
+          work to research, or stopping a direction. An institutional pilot
+          should additionally require a defined problem and users, bounded use
+          case, prototype evidence, system boundaries, data authority, privacy,
+          security, governance, stakeholder support, and success and failure
+          criteria.
+        </p>
+
+        <h2>Research outputs</h2>
+
+        <p>
+          Expected outputs include stakeholder and problem maps, workflow and
+          architecture maps, a validated or revised entity and relationship
+          model, provenance and permissions models, technical experiments,
+          benchmarks, decision records, integration prototypes, local-first
+          experiments, threat models, prototype versions, usability findings,
+          institutional compatibility assessments, limitations, unresolved
+          questions, expansion criteria, and disconfirmation findings.
+        </p>
+
+        <div class="field-card">
+          <span class="field-card-label">Research-to-Architecture Loop</span>
+          <p class="field-card-text">
+            Research question → evidence collection → finding → architecture,
+            UX, or governance implication → prototype change → new test →
+            decision → blueprint update.
+          </p>
+        </div>
+
+        <h2>Research success</h2>
+
+        <p>
+          Research success is not defined as proving that CAMPUS should be
+          adopted. It is successful when it produces sufficiently reliable
+          evidence to answer important questions, including whether the full
+          architecture, a narrower capability, a different integration model,
+          a research-only direction, or no continuation is justified.
+        </p>
+
+        <div class="closing-note">
+          <div class="eyebrow">Methodology Conclusion</div>
+          <p>
+            CAMPUS should progress as an evidence-generating R&amp;D program:
+            understand the problem, map the institutional environment, identify
+            valuable relationships, test the model, build a small vertical
+            slice, evaluate users and technical assumptions, assess governance
+            and compatibility, and decide what deserves further investment.
+          </p>
+        </div>
+
+        <div class="chapter-nav" id="chapterNav"><!-- rendered by js/main.js --></div>
+
+      </article>
+    </div>
+  </main>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

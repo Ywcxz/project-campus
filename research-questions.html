@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Research Questions — the questions guiding the CAMPUS research and development program.">
+<title>Research Questions — Project CAMPUS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-brand">Project <em>CAMPUS</em></span>
+  <button class="topbar-toggle" id="spineToggle" aria-label="Toggle chapters">☰</button>
+</div>
+<div class="spine-backdrop" id="spineBackdrop"></div>
+
+<div class="shell">
+
+  <nav class="spine" id="spine">
+    <div class="spine-head">
+      <a href="index.html" class="spine-brand">Project <em>CAMPUS</em></a>
+      <div class="spine-lockup">Living Document · v0.1</div>
+    </div>
+    <ol class="spine-list" id="spineList"><!-- rendered by js/main.js --></ol>
+  </nav>
+
+  <main class="content">
+    <div class="content-inner">
+      <article class="chapter">
+
+        <div class="lockup">
+          <span>Project CAMPUS</span><span class="x">×</span><span class="vsu">Research Program</span>
+        </div>
+
+        <div class="eyebrow">Chapter 05 · Available</div>
+        <h1>Research Questions</h1>
+        <p class="subtitle">What the CAMPUS R&amp;D program must learn</p>
+
+        <p>
+          The research questions define what the CAMPUS R&amp;D program is
+          attempting to learn. They are not product requirements and should not
+          be interpreted as evidence that the proposed architecture is already
+          validated.
+        </p>
+
+        <p>
+          They guide institutional discovery, user research, architectural
+          design, technical experiments, prototype development, usability
+          evaluation, governance analysis, integration investigation, and
+          decisions about whether and how CAMPUS should proceed beyond the
+          experimental stage.
+        </p>
+
+        <div class="field-card">
+          <span class="field-card-label">Primary Research Question · Proposed</span>
+          <p class="field-card-text">
+            Can a persistent, permission-aware, and provenance-aware relational
+            digital layer improve the discovery, understanding, interaction,
+            and continuity of relationships among people, knowledge, education,
+            research, places, services, opportunities, and communities within a
+            university while interoperating appropriately with existing
+            institutional systems?
+          </p>
+        </div>
+
+        <h2>Problem and user need</h2>
+
+        <p>
+          What information, relationships, and university resources do
+          students, faculty, staff, researchers, administrators, alumni, and
+          other stakeholders currently have difficulty discovering or
+          navigating? How do they discover people, knowledge, services,
+          opportunities, facilities, organizations, research activities, and
+          other resources today?
+        </p>
+
+        <p>
+          Where does friction appear when information or relationships cross
+          organizational, technological, or physical boundaries? Which
+          relationships do users actually consider useful, and which groups
+          experience the strongest need for cross-system discovery?
+        </p>
+
+        <h2>The relational model</h2>
+
+        <p>
+          What entities and relationships are necessary to represent valuable
+          forms of university discovery and interaction? Which relationships
+          should persist, and which should remain temporary or contextual?
+        </p>
+
+        <p>
+          Candidate relationships include membership, authorship, teaching,
+          enrollment, collaboration, participation, location, ownership,
+          responsibility, prerequisite, association, recommendation,
+          availability, temporal connection, and institutional authority. These
+          are research categories, not a finalized vocabulary.
+        </p>
+
+        <p>
+          How should changes over time be represented without destroying useful
+          historical context or creating unnecessary retention? Can one common
+          relational model support multiple CAMPUS dimensions without becoming
+          unnecessarily complex?
+        </p>
+
+        <h2>Discovery and user experience</h2>
+
+        <p>
+          Does relationship-oriented navigation help users discover relevant
+          information, people, resources, or opportunities that they would not
+          otherwise find easily? Does relational context improve understanding,
+          and does it reduce the effort required to move from discovery to a
+          useful action?
+        </p>
+
+        <p>
+          Which interaction patterns are effective: search, linked entity
+          navigation, contextual recommendations, maps, timelines, graphs,
+          organizational views, profiles, activity feeds, or structured
+          pathways? When does exposing more relationships improve discovery,
+          and when does it create information overload?
+        </p>
+
+        <h2>Continuity</h2>
+
+        <p>
+          Can a relational architecture preserve useful continuity across
+          changes in people, courses, programs, projects, organizations,
+          facilities, and activities? Which relationships remain valuable after
+          an immediate activity or institutional transaction has ended?
+        </p>
+
+        <p>
+          What forms of continuity matter most: curriculum and learning
+          history, research participation, organizational participation,
+          mentorship, alumni relationships, education-to-career pathways,
+          institutional knowledge, or community relationships? What should
+          expire, become inaccessible, or lose visibility as relationships
+          change?
+        </p>
+
+        <h2>Knowledge and provenance</h2>
+
+        <p>
+          How should CAMPUS distinguish official institutional information,
+          community-generated knowledge, personal opinions, unverified
+          information, and scholarly knowledge? What provenance is necessary for
+          users to judge authority, context, and reliability?
+        </p>
+
+        <p>
+          Who should be authorized to create, modify, verify, endorse, or
+          retire different categories of information? How should conflicting or
+          outdated information be represented and resolved? Can a more
+          connected environment improve discovery without increasing
+          misinformation, misattribution, or unauthorized disclosure?
+        </p>
+
+        <h2>Institutional systems and interoperability</h2>
+
+        <p>
+          What existing university systems should CAMPUS connect to, reference,
+          index, synchronize with, or remain independent from? Which systems
+          should remain authoritative for particular information, and what
+          integration mechanisms are technically and institutionally feasible?
+        </p>
+
+        <p>
+          Candidate approaches include APIs, federated identity, metadata
+          exchange, event-based synchronization, controlled replication,
+          indexing, and links to authoritative systems. The research must also
+          determine how CAMPUS can avoid becoming an unnecessary duplicate
+          system of record.
+        </p>
+
+        <h2>Local-first and hybrid architecture</h2>
+
+        <p>
+          Under what conditions would local-first or hybrid operation provide
+          meaningful benefits? What are the requirements for resilience,
+          connectivity, infrastructure control, synchronization, conflict
+          resolution, security, maintenance, and governance?
+        </p>
+
+        <p>
+          Which capabilities genuinely need local operation, and which can
+          depend on external services when connectivity is available? This is an
+          architectural investigation, not an established deployment decision.
+        </p>
+
+        <h2>Security, privacy, and governance</h2>
+
+        <p>
+          What privacy, security, identity, authorization, consent, retention,
+          and data-stewardship mechanisms are required? Who can create,
+          validate, access, modify, connect, or remove information and
+          relationships?
+        </p>
+
+        <p>
+          How should the project handle conflicting authorities, disputes,
+          moderation, institutional accountability, user control, and the right
+          to limit visibility? What governance arrangements are appropriate for
+          a system that crosses institutional and community boundaries?
+        </p>
+
+        <h2>Technical feasibility and value</h2>
+
+        <p>
+          Can the proposed model represent and query useful relationships at
+          acceptable levels of performance, reliability, security, and
+          maintainability? What architecture, data model, interfaces, and
+          infrastructure are required?
+        </p>
+
+        <p>
+          Does the resulting experience produce measurable improvements in
+          discovery, understanding, interaction, continuity, or access to
+          resources that justify its technical and institutional complexity?
+          Which outcomes would count as evidence of value, and what findings
+          would cause the project to narrow, modify, or reject its assumptions?
+        </p>
+
+        <div class="field-card">
+          <span class="field-card-label">Initial R&amp;D Priority</span>
+          <p class="field-card-text">
+            Begin with institutional discovery, representative user workflows,
+            a small set of high-value relationships, and a bounded prototype.
+            The research should establish what problem exists before expanding
+            the architecture around what might be possible.
+          </p>
+        </div>
+
+        <div class="closing-note">
+          <div class="eyebrow">Scope of This Chapter</div>
+          <p>
+            The questions establish the research agenda for Blueprint v0.1.
+            Subsequent chapters should map each priority question to evidence,
+            methods, prototypes, decision points, and criteria for
+            disconfirmation.
+          </p>
+        </div>
+
+        <div class="chapter-nav" id="chapterNav"><!-- rendered by js/main.js --></div>
+
+      </article>
+    </div>
+  </main>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

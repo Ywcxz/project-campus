@@ -1,0 +1,436 @@
+PROJECT CAMPUS
+DOCUMENT BLUEPRINT
+
+Working document · v0.1
+Prepared for: Project CAMPUS
+Working example: Visayas State University
+
+============================================================
+1. PURPOSE OF THIS BLUEPRINT
+============================================================
+
+This file is the planning and documentation layer for the Project CAMPUS
+living vision document. It explains what the project is trying to establish,
+what each chapter must accomplish, what evidence is still needed, and which
+decisions remain open.
+
+This blueprint is intentionally plain text. It can later become:
+- a structured research brief;
+- a formal project proposal;
+- a product requirements document;
+- a technical architecture document;
+- a website content source;
+- or a combination of these.
+
+The implementation format is deliberately undecided. The priority is to make
+the project understandable, reviewable, and internally consistent first.
+
+============================================================
+2. PROJECT DEFINITION
+============================================================
+
+Project name:
+Project CAMPUS
+
+Working expansion:
+Connected Academic Matrix Platform for Universities and Schools
+
+One-sentence definition:
+Project CAMPUS is a proposed connected digital ecosystem for learning,
+community, institutional knowledge, and university services.
+
+Working institutional example:
+Visayas State University, with the Main Campus in Baybay City, Leyte.
+
+Current artifact:
+A static living R&D blueprint presented as a chapter-based website. The
+previous vision-document chapter set has been retired and is being rebuilt
+from instructions.txt.
+
+Current implementation:
+Plain HTML, CSS, and JavaScript. Chapter navigation and document status are
+data-driven through data/chapters.json. There is no framework or build step.
+
+Current version:
+v0.1
+
+Current status:
+Concept and vision documentation. The project is not yet a complete product
+specification, institutional implementation plan, or deployed platform.
+
+============================================================
+3. WHY THIS PROJECT EXISTS
+============================================================
+
+Universities contain many valuable systems, communities, records, services,
+and forms of knowledge, but these are often experienced as disconnected
+pieces. Project CAMPUS explores how they might be understood and connected as
+one coherent academic environment without reducing the university to a mere
+software dashboard.
+
+The project must therefore document both sides of the problem:
+
+1. The human and institutional reality of today's university.
+2. The digital architecture that could support a more connected campus.
+
+The document should remain grounded in actual university needs, constraints,
+people, policies, and workflows. It should distinguish observed facts from
+proposed ideas and future possibilities.
+
+============================================================
+4. DOCUMENT GOALS
+============================================================
+
+The completed document should allow a reader to:
+
+- understand the problem Project CAMPUS is responding to;
+- understand the proposed vision without needing prior context;
+- see how the major parts of the ecosystem relate to one another;
+- distinguish principles from features and features from implementation details;
+- understand the role of learning, research, community, and governance;
+- evaluate the proposal's feasibility, risks, and assumptions;
+- identify what could be piloted first;
+- locate supporting sources and unresolved questions;
+- and participate in improving the project.
+
+The document is not intended to:
+
+- claim that a full platform already exists;
+- replace institutional policy or consultation;
+- prescribe one vendor or technology before requirements are known;
+- use artificial intelligence or blockchain as decoration;
+- or present speculation as verified institutional fact.
+
+============================================================
+5. DOCUMENT AUDIENCES
+============================================================
+
+Primary readers:
+- students;
+- faculty and researchers;
+- university administrators and staff;
+- campus organizations and communities;
+- technical collaborators;
+- institutional decision-makers.
+
+Secondary readers:
+- potential pilot partners;
+- funders and grant reviewers;
+- policy and governance reviewers;
+- researchers studying digital education and institutions;
+- alumni and external stakeholders.
+
+A chapter should state when it is primarily written for a technical,
+institutional, academic, or general reader.
+
+============================================================
+6. DOCUMENT RULES
+============================================================
+
+Every substantive claim should be marked mentally, and eventually explicitly,
+as one of the following:
+
+[OBSERVED]   Directly observed or documented condition.
+[SUPPORTED]  Claim supported by a cited source or interview.
+[INFERRED]   Reasoned interpretation based on observations or sources.
+[PROPOSED]   Project idea, design choice, or recommendation.
+[OPEN]       Question that has not been resolved.
+
+Writing rules:
+
+- Explain the institutional problem before presenting the mechanism.
+- Use the VSU context as a working example, not as an unsupported universal.
+- Separate current reality, near-term pilot, and long-term possibility.
+- Name tradeoffs, risks, dependencies, and failure modes.
+- Prefer concrete workflows and user needs over feature lists.
+- Treat privacy, accessibility, security, governance, and ownership as core
+  design concerns rather than later additions.
+- Keep technology subordinate to the educational and institutional purpose.
+- Maintain a source trail for external facts and important assumptions.
+
+============================================================
+7. CHAPTER BLUEPRINT
+============================================================
+
+Each chapter should be documented using this minimum record before it is
+considered complete:
+
+Chapter number and title:
+
+Purpose:
+What job does this chapter perform in the overall argument?
+
+Reader outcome:
+What should the reader understand, question, or be able to decide after
+reading it?
+
+Core question:
+What single question is this chapter answering?
+
+Scope:
+What is included, and what is deliberately outside this chapter?
+
+Key claims:
+1.
+2.
+3.
+
+Evidence needed:
+- source, observation, interview, dataset, policy, or example;
+- source owner and date;
+- confidence or limitation.
+
+Proposals or decisions:
+- proposed direction;
+- rationale;
+- alternatives considered;
+- consequences and dependencies.
+
+Open questions:
+1.
+2.
+3.
+
+Risks and objections:
+- institutional;
+- technical;
+- ethical;
+- financial;
+- operational;
+- adoption-related.
+
+Completion criteria:
+- the chapter answers its core question;
+- claims are labeled or sourced;
+- boundaries with neighboring chapters are clear;
+- unresolved items are recorded rather than hidden;
+- the chapter supports the document's central argument.
+
+============================================================
+8. DOCUMENT MAP
+============================================================
+
+Reset note:
+The chapter entries below describe the original planning map and are retained
+as historical planning context. The active website content is currently
+Chapter 01, CAMPUS R&D Blueprint, derived from instructions.txt. As the new
+content is developed, this map should be replaced or restructured to match
+the authoritative R&D blueprint.
+
+01 PREFACE
+Status: WRITTEN
+Purpose: Establish the origin, intent, limits, and point of view of the
+project. Explain why this document exists and how it should be read.
+Core question: Why is Project CAMPUS being proposed and documented now?
+Next documentation need: Confirm authorial position, intended use, and limits
+of the VSU working example.
+
+02 EXECUTIVE SUMMARY
+Status: WRITTEN
+Purpose: Give a complete but compressed account of the problem, vision,
+principles, and proposed direction.
+Core question: What is Project CAMPUS, why does it matter, and what would it
+change?
+Next documentation need: Check that the summary remains accurate as later
+chapters become more specific.
+
+03 UNDERSTANDING TODAY'S UNIVERSITY
+Status: WRITTEN
+Purpose: Describe the current institutional, social, educational, and digital
+conditions that shape the problem.
+Core question: What is the university actually like today, beyond its software
+systems?
+Next documentation need: Add clearly labeled observations, sources, and VSU
+specifics where claims currently remain general.
+
+04 PROBLEM ANALYSIS
+Status: NOT STARTED
+Purpose: Turn the conditions described in Chapter 03 into a structured problem
+statement with causes, effects, affected groups, and evidence.
+Core question: Which problems are important enough, connected enough, and
+actionable enough for Project CAMPUS to address?
+Required outputs: problem tree, affected-user map, current-workflow examples,
+constraints, and non-goals.
+
+05 THE VISION
+Status: WRITTEN
+Purpose: Describe the desired future state and the experience Project CAMPUS
+is trying to make possible.
+Core question: What should a more connected academic ecosystem feel and work
+like?
+Next documentation need: Tie vision statements to measurable or observable
+outcomes.
+
+06 DESIGN PHILOSOPHY
+Status: WRITTEN
+Purpose: Establish the principles that guide decisions when goals conflict.
+Core question: What must remain true as the project is designed and built?
+Next documentation need: Turn principles into evaluation criteria and examples
+of decisions they would change.
+
+07 DIGITAL CAMPUS ARCHITECTURE
+Status: WRITTEN
+Purpose: Explain the conceptual structure of the connected campus and the
+relationships between its domains.
+Core question: How can the parts of the ecosystem relate without becoming one
+indistinguishable system?
+Next documentation need: Validate terminology, boundaries, data flows, and
+system ownership assumptions.
+
+08 PLATFORM MODULES
+Status: NOT STARTED
+Purpose: Define the major user-facing and institutional modules.
+Core question: What capabilities belong in the platform, and for whom?
+Required outputs: module inventory, users, jobs-to-be-done, dependencies,
+priority, and explicit non-features.
+
+09 LEARNING INFRASTRUCTURE
+Status: NOT STARTED
+Purpose: Describe how teaching, learning, assessment, advising, and academic
+resources could be supported.
+Core question: How does the platform improve learning without turning
+education into surveillance or administrative throughput?
+Required outputs: representative learner and faculty workflows; accessibility
+requirements; integration boundaries.
+
+10 ARTIFICIAL INTELLIGENCE
+Status: NOT STARTED
+Purpose: Define responsible, useful, and limited roles for AI in the ecosystem.
+Core question: Where can AI assist human learning and institutional work, and
+where must it not make decisions?
+Required outputs: use-case matrix, human oversight rules, privacy risks,
+accuracy expectations, disclosure, and fallback procedures.
+
+11 BLOCKCHAIN INTEGRITY LAYER
+Status: NOT STARTED
+Purpose: Test whether tamper-evident records or decentralized verification
+solve a real institutional problem.
+Core question: What integrity problem requires this technology, if any?
+Required outputs: concrete use cases, alternatives comparison, governance,
+identity model, costs, failure modes, and a decision to use, defer, or reject.
+
+12 RESEARCH FRAMEWORK
+Status: NOT STARTED
+Purpose: Define how the project learns from users, institutions, evidence, and
+pilots.
+Core question: How will Project CAMPUS know whether its assumptions are true?
+Required outputs: research questions, methods, participant groups, ethics,
+data handling, synthesis process, and success measures.
+
+13 TECHNICAL ARCHITECTURE
+Status: NOT STARTED
+Purpose: Translate validated requirements into a technical system design.
+Core question: What technical architecture can support the vision under real
+institutional constraints?
+Required outputs: logical architecture, integrations, data model, security,
+scalability, accessibility, operations, and technology decisions.
+
+14 GOVERNANCE
+Status: NOT STARTED
+Purpose: Define authority, accountability, participation, ownership, and
+change processes.
+Core question: Who decides, who is affected, who can inspect the system, and
+who can challenge a decision?
+Required outputs: governance bodies, roles, policies, escalation paths,
+data stewardship, consent, and dispute handling.
+
+15 IMPLEMENTATION ROADMAP
+Status: NOT STARTED
+Purpose: Sequence discovery, pilot, evaluation, delivery, and expansion.
+Core question: What is the smallest credible path from document to useful
+institutional experiment?
+Required outputs: phases, dependencies, people, budget assumptions, risks,
+gates, pilot scope, and exit criteria.
+
+16 LONG-TERM VISION
+Status: NOT STARTED
+Purpose: Describe future possibilities without allowing them to distort the
+near-term plan.
+Core question: What could Project CAMPUS become if the foundational work
+proves valuable?
+Required outputs: scenarios, assumptions, signals, and boundaries around
+speculation.
+
+17 REFERENCES
+Status: NOT STARTED
+Purpose: Collect sources used by the document and make the reasoning
+traceable.
+Core question: What does this project rely on, and where can a reader verify
+it?
+Required outputs: consistent citation format, source types, access dates,
+interviews, policies, datasets, and a list of claims needing stronger support.
+
+18 APPENDICES
+Status: NOT STARTED
+Purpose: Hold supporting material that improves rigor without interrupting the
+main argument.
+Core question: What evidence, diagrams, definitions, or instruments should be
+available to the reader but kept outside the main flow?
+Possible contents: glossary, interview guide, survey instrument, process maps,
+architecture diagrams, decision log, risk register, and revision history.
+
+============================================================
+9. PROJECT DECISION LOG
+============================================================
+
+Record decisions here once they affect the direction of the project.
+
+D-001
+Decision: Use a chapter-based living vision document as the current public
+artifact.
+Reason: The project needs a coherent argument before platform implementation.
+Status: ACTIVE
+
+D-002
+Decision: Use Visayas State University as the working example and explicitly
+avoid implying official institutional affiliation.
+Reason: A concrete context makes the proposal testable while preserving
+honesty about the project's status.
+Status: ACTIVE
+
+D-003
+Decision: Keep implementation format open while documentation is developed.
+Reason: The project may later require several artifacts, not one file or one
+site.
+Status: ACTIVE
+
+Add future decisions below this line.
+
+============================================================
+10. OPEN QUESTIONS
+============================================================
+
+1. Who is the first real decision-maker or pilot partner for Project CAMPUS?
+2. Which current university workflow is painful enough to justify a pilot?
+3. What access to VSU users, policies, systems, and institutional data is
+   available, and under what permissions?
+4. What is the smallest useful product or research intervention?
+5. Which outcomes would demonstrate value to students, faculty, staff, and
+   administrators?
+6. What must remain decentralized, human-led, or outside the platform?
+7. What privacy, consent, accessibility, security, and governance constraints
+   are non-negotiable?
+8. Which proposed technologies are necessary, and which are merely possible?
+9. What resources, collaborators, and funding assumptions are realistic?
+10. How will the document be reviewed, revised, and versioned?
+
+============================================================
+11. NEXT DOCUMENTATION PASS
+============================================================
+
+Recommended immediate sequence:
+
+1. Complete Chapter 04, Problem Analysis.
+2. Review Chapters 01-07 and label claims as observed, supported, inferred,
+   proposed, or open.
+3. Create a small evidence register for sources, interviews, observations, and
+   assumptions.
+4. Define one candidate pilot workflow before expanding the module list.
+5. Use the chapter blueprint for every new chapter.
+6. Keep implementation decisions in the decision log instead of burying them
+   inside prose.
+
+Definition of a healthy next version:
+The document can explain one specific institutional problem, identify who
+experiences it, show evidence that it matters, propose a bounded intervention,
+and state how that intervention would be evaluated.

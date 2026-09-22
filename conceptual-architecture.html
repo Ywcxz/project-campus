@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CAMPUS Conceptual Architecture — the relational layers, domains, boundaries, and invariants guiding Project CAMPUS.">
+<title>CAMPUS Conceptual Architecture — Project CAMPUS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-brand">Project <em>CAMPUS</em></span>
+  <button class="topbar-toggle" id="spineToggle" aria-label="Toggle chapters">☰</button>
+</div>
+<div class="spine-backdrop" id="spineBackdrop"></div>
+
+<div class="shell">
+
+  <nav class="spine" id="spine">
+    <div class="spine-head">
+      <a href="index.html" class="spine-brand">Project <em>CAMPUS</em></a>
+      <div class="spine-lockup">Living Document · v0.1</div>
+    </div>
+    <ol class="spine-list" id="spineList"><!-- rendered by js/main.js --></ol>
+  </nav>
+
+  <main class="content">
+    <div class="content-inner">
+      <article class="chapter">
+
+        <div class="lockup">
+          <span>Project CAMPUS</span><span class="x">×</span><span class="vsu">Architecture</span>
+        </div>
+
+        <div class="eyebrow">Chapter 06 · Available</div>
+        <h1>CAMPUS Conceptual Architecture</h1>
+        <p class="subtitle">The relational structure behind the project</p>
+
+        <p>
+          The CAMPUS conceptual architecture defines the relationships among
+          the principal entities, capabilities, boundaries, and future
+          dimensions of the system. It provides the foundation from which the
+          MVP, technical architecture, prototype, research experiments, and
+          future development can be derived.
+        </p>
+
+        <p>
+          The architecture is intentionally broader than the initial MVP. It
+          describes the architectural space being investigated, while research
+          and validation determine which parts should actually be implemented.
+        </p>
+
+        <div class="field-card">
+          <span class="field-card-label">Core Architectural Principle</span>
+          <p class="field-card-text">
+            Represent the university not only as a collection of information and
+            services, but as a network of meaningful relationships among people,
+            organizations, knowledge, education, research, places, activities,
+            services, opportunities, and communities.
+          </p>
+        </div>
+
+        <h2>Conceptual layers</h2>
+
+        <p>
+          CAMPUS can be understood through five broad conceptual layers:
+        </p>
+
+        <p class="q">
+          CAMPUS Experience → Relational Campus Layer → Knowledge and Discovery
+          → Integration and Systems → University Infrastructure
+        </p>
+
+        <p>
+          The experience layer includes search, discovery, profiles,
+          communities, places, pathways, activities, knowledge, opportunities,
+          and services. The relational layer represents entities, relationships,
+          context, time, provenance, identity, permissions, status, and
+          visibility. The lower layers connect discovery to institutional
+          systems, networks, devices, facilities, and the physical campus.
+        </p>
+
+        <h2>The relational campus layer</h2>
+
+        <p>
+          The Relational Campus Layer is the conceptual core of CAMPUS. It
+          represents entities and the relationships among them while preserving
+          the context required to interpret those relationships.
+        </p>
+
+        <p>
+          A person may be a member of an organization that hosts an event at a
+          place containing a facility. The important information is not only
+          that these entities exist, but who established the relationship, when
+          it is valid, whether it is active, who can see it, what authority
+          supports it, and what other relationships can be discovered from it.
+        </p>
+
+        <h2>Core entity domains</h2>
+
+        <p>
+          The current conceptual model identifies people, organizations,
+          education, knowledge, research, places and facilities, activities,
+          opportunities, and services and resources. These are conceptual
+          domains, not finalized database tables or object types.
+        </p>
+
+        <div class="field-card">
+          <span class="field-card-label">Entity Domains</span>
+          <p class="field-card-text">
+            People and roles; academic units and communities; programs,
+            courses, and learning activities; documents and scholarly knowledge;
+            research projects and outputs; campuses, buildings, rooms, and
+            equipment; events and other activities; scholarships, internships,
+            training, and projects; and institutional or community services.
+          </p>
+        </div>
+
+        <p>
+          People may have several simultaneous or historical relationships with
+          the university. Organizations may contain, own, operate, host,
+          sponsor, administer, or participate in other entities. Knowledge
+          objects should preserve provenance, authority, status, and visibility.
+          Spatial entities should participate in discovery without requiring a
+          complete digital twin.
+        </p>
+
+        <h2>Relationships as first-class objects</h2>
+
+        <p>
+          Relationships should be treated as meaningful objects rather than
+          incidental links. A relationship may contain a source, target, type,
+          status, start, end, authority, provenance, visibility, permissions,
+          and context.
+        </p>
+
+        <p>
+          This allows CAMPUS to represent a teaching relationship for a
+          particular term, an authorship relationship with publication
+          metadata, or a facility's location within a building. Relationships
+          can therefore have their own provenance, temporal validity,
+          permissions, and contextual meaning.
+        </p>
+
+        <h2>Time and continuity</h2>
+
+        <p>
+          University relationships change. The architecture should distinguish
+          current, historical, planned, temporary, recurring, and expired
+          relationships. This provides a conceptual foundation for continuity
+          without requiring all historical information to remain publicly
+          visible.
+        </p>
+
+        <h2>Identity, authority, and visibility</h2>
+
+        <p>
+          A relational architecture requires reliable identification of
+          entities. CAMPUS therefore treats authentication, identity, roles,
+          organizational affiliation, authorization, permissions, account
+          lifecycle, relationship ownership, institutional authority, and
+          potentially federated identities as foundational concerns.
+        </p>
+
+        <p>
+          CAMPUS should not automatically create a second identity
+          infrastructure where appropriate institutional services already
+          exist. The exact identity architecture remains unresolved.
+        </p>
+
+        <p>
+          Provenance and authority are part of the system's trust model. The
+          architecture must distinguish official institutional information,
+          community contributions, personal opinions, unverified information,
+          and scholarly or research knowledge. This distinction should be
+          visible where it affects interpretation.
+        </p>
+
+        <p class="q">
+          Connected does not mean public.
+        </p>
+
+        <p>
+          Visibility may depend on identity, role, affiliation, relationship,
+          consent, sensitivity, policy, legal requirements, security, and
+          context. A relational model must not assume universal transparency.
+        </p>
+
+        <h2>Search and discovery</h2>
+
+        <p>
+          Search is a primary access mechanism to the relational model, but it
+          is not limited to keyword matching. The intended discovery progression
+          is:
+        </p>
+
+        <p class="q">
+          Query → Entity → Context → Related Entities → New Discovery → Action
+        </p>
+
+        <p>
+          A user might search for a person and discover research, begin with a
+          facility and find its responsible organization, or search for a course
+          and find related opportunities. Relationship traversal is one of the
+          central behaviors the MVP should test.
+        </p>
+
+        <h2>Community, knowledge, and place</h2>
+
+        <p>
+          CAMPUS may provide a community-facing environment for appropriately
+          authorized contributions, discussions, activities, recommendations,
+          and contextual knowledge. Attribution, source information, timestamps,
+          verification, moderation, reporting, version history, permissions,
+          and institutional endorsement are possible mechanisms; the governance
+          model remains unresolved.
+        </p>
+
+        <p>
+          Physical space is part of the relational model rather than a separate
+          subsystem. People can use facilities, facilities can be located in
+          buildings, and buildings can belong to a campus. A map is one
+          interface to these relationships, not the definition of the spatial
+          architecture. A complete digital twin is not required for the initial
+          implementation.
+        </p>
+
+        <h2>Integration boundary</h2>
+
+        <p>
+          CAMPUS exists alongside specialized institutional systems. It should
+          not automatically become authoritative for information that belongs
+          elsewhere. Depending on the system, it may represent references,
+          metadata, relationship information, synchronized subsets, indexes,
+          links, or derived information.
+        </p>
+
+        <div class="field-card">
+          <span class="field-card-label">Integration Principle</span>
+          <p class="field-card-text">
+            CAMPUS should know enough to connect the university without needing
+            to own everything the university knows.
+          </p>
+        </div>
+
+        <h2>Deployment directions</h2>
+
+        <p>
+          The conceptual architecture allows centralized, local-first, and
+          hybrid deployment models. A centralized model connects users through
+          a CAMPUS platform to institutional systems. A local-first model uses
+          a campus-controlled node for users, systems, and data. A hybrid model
+          combines local functionality with controlled synchronization or APIs
+          to external services.
+        </p>
+
+        <p>
+          The hybrid direction is relevant to the current research because it
+          may support local continuity while preserving controlled external
+          connections. No deployment model is established yet.
+        </p>
+
+        <h2>Experience and future dimensions</h2>
+
+        <p>
+          Potential experiences include search, profiles, relationship
+          navigation, community participation, place discovery, pathways, and
+          knowledge discovery. These are experience categories rather than a
+          commitment to implement every interface.
+        </p>
+
+        <p>
+          The relational core may support future dimensions such as Digital
+          Space and Community Knowledge, Curriculum Continuity and Learning
+          Records, Pathways, Research Discovery, Spatial Campus or Digital
+          Twin, GIS, analytics, and AI. These should remain extensions of the
+          foundation rather than independent product silos, and their priority
+          must depend on evidence.
+        </p>
+
+        <h2>Architectural invariants</h2>
+
+        <p>
+          The following principles should remain stable unless evidence shows
+          they should change:
+        </p>
+
+        <ul class="not-list">
+          <li><span class="mark">01</span> Relationships are central and discoverable.</li>
+          <li><span class="mark">02</span> Existing systems retain appropriate authority.</li>
+          <li><span class="mark">03</span> Identity and permissions are foundational.</li>
+          <li><span class="mark">04</span> Provenance and context matter.</li>
+          <li><span class="mark">05</span> Physical and digital contexts can connect.</li>
+          <li><span class="mark">06</span> The architecture remains extensible.</li>
+          <li><span class="mark">07</span> MVP scope remains bounded.</li>
+          <li><span class="mark">08</span> Evidence can change the architecture.</li>
+        </ul>
+
+        <h2>Conceptual boundary</h2>
+
+        <p>
+          This architecture does not establish a database technology, programming
+          language, application framework, graph versus relational database, API
+          specification, deployment infrastructure, cloud provider, local
+          hardware, synchronization protocol, identity provider, search engine,
+          GIS platform, AI model, frontend framework, or production topology.
+        </p>
+
+        <p>
+          Those decisions belong in the technical architecture and should be
+          derived from the requirements and findings established elsewhere in
+          the blueprint. This conceptual architecture is the design hypothesis
+          against which those technical alternatives can be evaluated.
+        </p>
+
+        <div class="closing-note">
+          <div class="eyebrow">Architectural Summary</div>
+          <p>
+            CAMPUS does not attempt to digitize every university function. It
+            attempts to make the relationships among university functions,
+            people, knowledge, places, resources, and opportunities more
+            persistent, discoverable, contextual, and actionable.
+          </p>
+        </div>
+
+        <div class="chapter-nav" id="chapterNav"><!-- rendered by js/main.js --></div>
+
+      </article>
+    </div>
+  </main>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
