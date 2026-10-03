@@ -38,7 +38,7 @@ Collect only what a feature needs, use it only for that purpose, limit who can a
 - Who writes the rules, and how can the community change them?
 - Who moderates, and how does someone appeal a decision?
 - How are corrections and disputes handled?
-- How is criticism of the university protected?
+- How do accountable names and a safe way to criticize the university coexist?
 - How are harassment and scams reported, and who acts on them?
 - What changes for users under 18?
 

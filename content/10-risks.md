@@ -10,6 +10,7 @@ The largest risk is that the problems are smaller than assumed. The second is th
 | Facebook's network effects | Network | Target what Facebook does badly on campus; start with one bounded community | The pilot group drifts back within weeks |
 | Duplicating existing or planned systems, DIGITS included | Network, intranet | Systems discovery; complement, don't compete | The capability exists or is planned elsewhere |
 | No owner for moderation | Network | Name a moderation owner and rules before launch | No one at VSU will own it |
+| Offices don't answer on the network | Network | Make office responsiveness part of the pitch; start with offices that commit to answer | Student questions sit unanswered for days |
 | Privacy breach or over-collection | All | Collect less; legal review; synthetic data in prototypes | Requirements can't be met responsibly |
 | Pooled demand too sparse, or service too poor | Hop-It | Guardrails, human dispatch, a small cohort | The Alpha disproves the hypothesis |
 | Scope creep | All | The product structure, the gates, and the decision register | Work starts on a later direction without a decision |

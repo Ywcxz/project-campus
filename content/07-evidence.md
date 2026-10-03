@@ -9,6 +9,9 @@ CAMPUS has not yet shown, with VSU evidence, that the problems it addresses exis
 | Hypothesis | Bears on | Status |
 | --- | --- | --- |
 | Information people need is scattered across offices, websites, documents, group chats, and word of mouth | Network | [Unresolved] |
+| Reaching the right office or person takes several visits before a conversation even starts | Network | [Unresolved] |
+| Students take institutional questions to unofficial Facebook groups, where peers answer and a wrong answer carries no consequence | Network | [Unresolved] |
+| There is no easy place for students, faculty, and staff to interact across roles | Network | [Unresolved] |
 | It is hard to find the person, group, place, or opportunity behind a need | Network; later directions | [Unresolved] |
 | Official notices and rumor look alike where campus conversation happens | Network | [Unresolved] |
 | Finding something doesn't tell people what to do next | Network | [Unresolved] |
@@ -16,6 +19,8 @@ CAMPUS has not yet shown, with VSU evidence, that the problems it addresses exis
 | Places and their services aren't connected to information about them | Later directions | [Unresolved] |
 | Individual food runs duplicate effort across scattered campus demand | Hop-It | [Unresolved] |
 | Some students can't rely on mobile data for campus services | Intranet | [Unresolved] |
+
+Several of these, especially the network rows, come from the author's own observations as an alumnus. That makes them community knowledge: the right questions to test first, not evidence. [Established]
 
 CAMPUS does not claim that VSU's systems are inadequate, that every group feels these problems equally, or that technology alone would solve them. [Established]
 

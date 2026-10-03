@@ -31,11 +31,11 @@ Connecting more information without its context also spreads mistakes faster. CA
 
 ## Five design principles
 
-These principles were set out in the July 2026 version of this document and dropped from v0.1. Version 0.2 restores them. [Proposed] (D-033)
+These principles were set out in the July 2026 version of this document and dropped from v0.1. Version 0.2 restores them, with principle 3 reworded to fit the network's purpose. [Proposed] (D-033)
 
 1. **Verification before scale.** Don't build for a problem until real evidence confirms it.
 2. **Hyperlocal depth, not national breadth.** Useful and specific to VSU beats generic and scalable. The most persistent drift in this project has been the urge to generalize beyond one institution.
-3. **Complement the administrative layer, compete with nothing.** Work alongside VSU's existing systems, never against them.
+3. **Complement the administrative layer; compete only where the campus is poorly served.** Work alongside VSU's existing systems, never against them, and replace only what fails the university. That is the network's case against Facebook (D-035).
 4. **Ship the useful thing before the impressive one.** Blockchain, AI, and similar technology wait until a named need calls for them.
 5. **Technology serves a named problem.** No feature exists without a documented reason.
 

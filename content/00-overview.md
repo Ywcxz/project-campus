@@ -16,7 +16,7 @@ CAMPUS, the Connected Academic Matrix Platform for Universities and Schools, is 
 | Part | What it is | Status |
 | --- | --- | --- |
 | [CAMPUS](01-campus.md) | The umbrella vision: a digital layer over the physical university | Proposed |
-| [Social/academic network](02-social-network.md) | The centerpiece proposal: a university-designed community space with discussions, groups, real-time chat, and student services, governed by VSU values, as an alternative to Facebook for campus life | Proposed; leads the first pitch |
+| [Social/academic network](02-social-network.md) | The centerpiece proposal: VSU's own alternative to Facebook for campus life, with discussions, groups, real-time chat, and student services, designed and governed for the university and free of ads and endless feeds | Proposed; leads the first pitch |
 | [Hop-It](03-hop-it.md) | The first product: a scheduled, pooled campus delivery experiment, built independently of university systems as working proof of capability | Specified for Alpha |
 | [Campus intranet](04-intranet.md) | The long-term backbone: local-first infrastructure, offered as a direction for VSU ICT and DIGITS, not an immediate ask | Direction only |
 | [Later directions](05-later-directions.md) | Digital twin, high-school-to-college bridging, learning record, research discovery, analytics and AI | Not commitments |
@@ -37,6 +37,6 @@ Sources are kept apart by type as well: official information, community knowledg
 
 ## What changed from v0.1
 
-Version 0.1, committed on 22 September 2026, was a 55,776-word R&D blueprint plus an 18-chapter site that restated it in about 19,300 words. Version 0.2 reorganizes everything around the product structure and cuts the text to about 8,800 words. Nothing is lost: v0.1 sits unchanged in the [archive](https://github.com/Ywcxz/project-campus/tree/main/archive/v0.1), and chapters cite its sections where detail helps. Every change of direction is recorded as decisions D-021 to D-034.
+Version 0.1, committed on 22 September 2026, was a 55,776-word R&D blueprint plus an 18-chapter site that restated it in about 19,300 words. Version 0.2 reorganizes everything around the product structure and cuts the text to about 9,400 words. Nothing is lost: v0.1 sits unchanged in the [archive](https://github.com/Ywcxz/project-campus/tree/main/archive/v0.1), and chapters cite its sections where detail helps. Every change of direction is recorded as decisions D-021 to D-035.
 
 > **Not affiliated.** Project CAMPUS is not officially affiliated with Visayas State University.

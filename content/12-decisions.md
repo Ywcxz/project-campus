@@ -24,8 +24,9 @@ All were recorded on 3 October 2026. "Project instructions v2" means the owner's
 | D-030 | Stakeholder names and conversations are kept in a private log outside this repository. The repository records only decisions and anonymized evidence. | [Established] | Owner's request, October 2026 |
 | D-031 | Claims carry one of three tags (Established, Proposed, Unresolved), and sources are typed separately (official, community knowledge, opinion, unverified, scholarly, external). This replaces DOCUMENT-BLUEPRINT's five tags; the Hop-It PRD keeps its own five labels internally. | [Established] | Project rules 1 and 4 |
 | D-032 | The master document is Markdown in `content/`, rendered by the site with no build step. v0.1 is archived unchanged, and old URLs redirect to the nearest v0.2 chapter. | [Proposed] | v0.2 restructure; ends the two parallel versions of v0.1 |
-| D-033 | The five design principles from July 2026 are restored ([Chapter 1](01-campus.md)). | [Proposed] | July 2026 vision document |
+| D-033 | The five design principles from July 2026 are restored ([Chapter 1](01-campus.md)), with principle 3 reworded to fit D-035. | [Proposed] | July 2026 vision document |
 | D-034 | The July 2026 channel model (channels, four layers, tiered sync) is the network's starting architecture. | [Proposed] | July 2026 vision document |
+| D-035 | The network is VSU's own alternative to Facebook for campus life. Its policies, interface, structure, feed, privacy, moderation, speech, and communities are designed and governed for the university, with no ads, reels, stories, or feeds built for endless scrolling. Its purpose is to connect relevant information to the right people and close the gap between students and the institution. Resolves Q-03. | [Established] | Owner's decision, 3 October 2026 |
 
 ## Decisions carried from v0.1
 
@@ -65,8 +66,7 @@ v0.1's planning file, DOCUMENT-BLUEPRINT.txt, used the numbers D-001 to D-003 fo
 | ID | Question | Priority | How it gets answered |
 | --- | --- | --- | --- |
 | Q-01 | Is the campus communication problem real at VSU, and for whom? | P0 | Field interviews and survey |
-| Q-02 | Which tasks would bring people to the network alongside Facebook? | P0 | Field research, then a bounded test |
-| Q-03 | Does "alternative to Facebook" conflict with principle 3, "compete with nothing"? | P0 | Owner's decision |
+| Q-02 | Which use cases should the network's first version win? Chapter 2 proposes three. | P0 | Field research, then a bounded test |
 | Q-04 | Real-time chat or tiered sync, and at what infrastructure cost? | P1 | Technical experiment |
 | Q-05 | Who at VSU would own moderation and the community rules? | P1 | Institutional discussion |
 | Q-06 | Which identity approach would VSU accept? | P1 | Systems discovery |
@@ -79,5 +79,7 @@ v0.1's planning file, DOCUMENT-BLUEPRINT.txt, used the numbers D-001 to D-003 fo
 | Q-13 | Is connectivity a real barrier for the people the intranet would serve? | P2 | Field research |
 | Q-14 | Licensing and IP model for this repository and its code | P2 | Owner's decision |
 | Q-15 | The related-work review | P1 | Desk research ([Chapter 9](09-related-work.md)) |
+| Q-16 | How do accountable identity and a safe way to raise concerns coexist on the network? | P1 | Field research, then a design decision |
+| Q-17 | Which offices will commit to answering students on the network, and how fast? | P0 | The OVPSAS pitch |
 
-Priorities follow v0.1: P0 blocks the next step, P1 shapes the design and comes early, and P2 can run in parallel. The full v0.1 register of about 65 questions is in the [archive](https://github.com/Ywcxz/project-campus/blob/main/archive/v0.1/campus-rd-blueprint-v0.1.md) (§18.4).
+Q-03 was resolved by D-035. Priorities follow v0.1: P0 blocks the next step, P1 shapes the design and comes early, and P2 can run in parallel. The full v0.1 register of about 65 questions is in the [archive](https://github.com/Ywcxz/project-campus/blob/main/archive/v0.1/campus-rd-blueprint-v0.1.md) (§18.4).

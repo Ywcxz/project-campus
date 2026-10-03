@@ -9,6 +9,7 @@ This review has not been done yet. [Unresolved] This chapter sets out what the r
 - **Philippine universities:** student portals and apps, community platforms, campus delivery or errand services, and campus networks, starting with Eastern Visayas State University (EVSU) and other state universities in the region.
 - **International:** university community platforms, campus delivery services, local-first or offline campus networks, and campus digital twins.
 - **What VSU people already use:** Facebook groups and pages, Messenger group chats, and delivery apps where they operate near campus.
+- **The closest precedent:** Workplace from Meta, Facebook's own version for organizations, which Meta announced in 2024 it would discontinue. Why it ended matters to a proposal built as a university's own Facebook.
 
 ## What to record for each system
 
