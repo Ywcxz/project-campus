@@ -20,7 +20,7 @@ CAMPUS has not yet shown, with VSU evidence, that the problems it addresses exis
 | Individual food runs duplicate effort across scattered campus demand | Hop-It | [Unresolved] |
 | Some students can't rely on mobile data for campus services | Intranet | [Unresolved] |
 
-Several of these, especially the network rows, come from the author's own observations as an alumnus. That makes them community knowledge: the right questions to test first, not evidence. [Established]
+Several of these, especially the network rows, come from the author's own observations as an alumnus. That makes them community knowledge: the right questions to test first, not evidence. [Established] The network's wider list of 29 candidate problems is in [Chapter 2.1](02a-use-cases.md).
 
 CAMPUS does not claim that VSU's systems are inadequate, that every group feels these problems equally, or that technology alone would solve them. [Established]
 

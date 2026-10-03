@@ -18,7 +18,8 @@ async function fetchChapters() {
 }
 
 function pad2(n) {
-  return String(n).padStart(2, "0");
+  const [whole, part] = String(n).split(".");
+  return whole.padStart(2, "0") + (part ? `.${part}` : "");
 }
 
 function escapeHtml(text) {

@@ -7,9 +7,9 @@ This review has not been done yet. [Unresolved] This chapter sets out what the r
 ## What it must cover
 
 - **Philippine universities:** student portals and apps, community platforms, campus delivery or errand services, and campus networks, starting with Eastern Visayas State University (EVSU) and other state universities in the region.
-- **International:** university community platforms, campus delivery services, local-first or offline campus networks, and campus digital twins.
+- **International:** university community platforms, campus delivery services, local-first or offline campus networks, and campus digital twins, plus the platforms the use-case inventory borrows from ([Chapter 2.1](02a-use-cases.md)).
 - **What VSU people already use:** Facebook groups and pages, Messenger group chats, and delivery apps where they operate near campus.
-- **The closest precedent:** Workplace from Meta, Facebook's own version for organizations, which Meta announced in 2024 it would discontinue. Why it ended matters to a proposal built as a university's own Facebook.
+- **The closest precedent:** Workplace from Meta, a version of Facebook for internal communication inside organizations. It launched in 2016 and was reported at seven million paying users in 2021. In May 2024 Meta announced it would close Workplace to focus on AI and metaverse technologies; it was set to go read-only on 1 September 2025 and shut down fully on 1 June 2026. Coverage at the time reported that growth had slowed after the pandemic, and that concerns over Meta's data practices had made some enterprise customers hesitant. [Established] Two lessons for CAMPUS: an institution that relies on someone else's platform can lose it to that owner's priorities, and even Meta found adoption hard. Sources: [TechCrunch](https://techcrunch.com/2024/05/14/sources-meta-is-shutting-down-workplace-its-enterprise-communications-business), [Social Media Today](https://www.socialmediatoday.com/news/meta-is-shutting-down-its-workplace-enterprise-platform/716139/), [TechRadar](https://www.techradar.com/pro/meta-shuts-down-workplace-its-slack-rival-that-never-really-took-off).
 
 ## What to record for each system
 

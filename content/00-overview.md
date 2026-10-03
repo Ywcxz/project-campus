@@ -37,6 +37,6 @@ Sources are kept apart by type as well: official information, community knowledg
 
 ## What changed from v0.1
 
-Version 0.1, committed on 22 September 2026, was a 55,776-word R&D blueprint plus an 18-chapter site that restated it in about 19,300 words. Version 0.2 reorganizes everything around the product structure and cuts the text to about 9,400 words. Nothing is lost: v0.1 sits unchanged in the [archive](https://github.com/Ywcxz/project-campus/tree/main/archive/v0.1), and chapters cite its sections where detail helps. Every change of direction is recorded as decisions D-021 to D-035.
+Version 0.1, committed on 22 September 2026, was a 55,776-word R&D blueprint plus an 18-chapter site that restated it in about 19,300 words. Version 0.2 reorganizes everything around the product structure and cuts the text to about 11,700 words. Nothing is lost: v0.1 sits unchanged in the [archive](https://github.com/Ywcxz/project-campus/tree/main/archive/v0.1), and chapters cite its sections where detail helps. Every change of direction is recorded as decisions D-021 to D-036.
 
 > **Not affiliated.** Project CAMPUS is not officially affiliated with Visayas State University.

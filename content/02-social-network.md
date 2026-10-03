@@ -30,7 +30,7 @@ The vision covers any purpose students, faculty, and staff have, but a first ver
 2. **Answers people can trust.** Office replies are marked official, and other answers carry a name and a role, so a wrong answer has an owner.
 3. **Talking across roles.** Students, faculty, and staff reach each other in one place, under rules suited to each role.
 
-Each is a hypothesis for field research before it becomes a feature.
+Each is a hypothesis for field research before it becomes a feature. [Chapter 2.1](02a-use-cases.md) widens the list to 29 candidate use cases.
 
 ## What it would include
 

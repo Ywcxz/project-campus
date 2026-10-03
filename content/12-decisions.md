@@ -27,6 +27,7 @@ All were recorded on 3 October 2026. "Project instructions v2" means the owner's
 | D-033 | The five design principles from July 2026 are restored ([Chapter 1](01-campus.md)), with principle 3 reworded to fit D-035. | [Proposed] | July 2026 vision document |
 | D-034 | The July 2026 channel model (channels, four layers, tiered sync) is the network's starting architecture. | [Proposed] | July 2026 vision document |
 | D-035 | The network is VSU's own alternative to Facebook for campus life. Its policies, interface, structure, feed, privacy, moderation, speech, and communities are designed and governed for the university, with no ads, reels, stories, or feeds built for endless scrolling. Its purpose is to connect relevant information to the right people and close the gap between students and the institution. Resolves Q-03. | [Established] | Owner's decision, 3 October 2026 |
+| D-036 | The pitch's problem slides use only problems with VSU field evidence. [Chapter 2.1](02a-use-cases.md) is the candidate list, and its stages are proposals. | [Proposed] | Project rule 7: credibility comes from evidence |
 
 ## Decisions carried from v0.1
 
