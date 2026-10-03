@@ -1,92 +1,68 @@
-# Project CAMPUS — Vision Document Site
+# Project CAMPUS — Master Document
 
-A static site for the Project CAMPUS living vision document. Same approach
-as CampusOS · VSU's housing site: plain HTML/CSS/JS, no framework, no build
-step, data-driven chapter list. This one deploys to Vercel instead of
-Netlify, otherwise the philosophy is identical.
+CAMPUS (Connected Academic Matrix Platform for Universities and Schools) is a proposal for a different approach to digital transformation at Visayas State University: a digital layer over the physical university that connects people, organizations, knowledge, places, services, and opportunities, designed around VSU's own culture, values, policies, geography, and people.
 
-## Structure
+**Live:** https://project-campus-gilt.vercel.app · **Version:** 0.2, October 2026 · **Status:** an independent proposal, not reviewed or endorsed by any VSU office.
+
+## Read the document
+
+- **Start here:** [00 Overview](content/00-overview.md)
+- **Part I, the vision:** [01 CAMPUS](content/01-campus.md)
+- **Part II, products and directions:** [02 The Social/Academic Network](content/02-social-network.md), [03 Hop-It](content/03-hop-it.md), [04 Campus Intranet](content/04-intranet.md), [05 Later Directions](content/05-later-directions.md)
+- **Part III, grounding:** [06 VSU Context](content/06-vsu-context.md), [07 Problems and Evidence](content/07-evidence.md), [08 Information, Governance, and Privacy](content/08-governance.md), [09 Related Work](content/09-related-work.md) (outline), [10 Risks and Stop Conditions](content/10-risks.md)
+- **Part IV, records:** [11 Roadmap and Milestones](content/11-roadmap.md), [12 Decision Register and Open Questions](content/12-decisions.md)
+
+## Sources of truth
+
+- **This repository** is the master document. A decision counts once it is in [the decision register](content/12-decisions.md).
+- **Hop-It** is governed by its Alpha PRD v1.0 and Functional Specification v1.0, which this repository summarizes but does not yet contain.
+- **Stakeholder records** are kept in a private log outside this repository, by design (D-030).
+
+## Repository layout
 
 ```
 project-campus/
-├── index.html                  ← cover page: hero, flagship panel, table of contents
-├── campus-rd-blueprint.html    ← Chapter 01
-├── project-definition.html     ← Chapter 02
-├── executive-summary.html      ← Chapter 03
-├── problem-statement.html      ← Chapter 04
-├── research-questions.html     ← Chapter 05
-├── css/
-│   └── style.css          ← design system (paper/ink/brass/sea tokens)
-├── js/
-│   └── main.js              ← fetches data/chapters.json, renders the spine
-│                               nav, the cover-page TOC, and the prev/next
-│                               chapter footer on every page
-├── data/
-│   └── chapters.json      ← the chapter registry — this is the only file
-│                             you need to edit to add a new chapter
-├── vercel.json            ← cache headers, no config needed beyond this
-└── README.md
+├── index.html            cover page
+├── <slug>.html           13 identical chapter pages; each renders its Markdown file
+├── content/              the master document, one Markdown file per chapter
+├── data/chapters.json    chapter registry: order, titles, parts, status, source file
+├── js/main.js            renders nav, contents, and chapters (small Markdown renderer)
+├── css/style.css         design system
+├── archive/v0.1/         the v0.1 blueprint and planning file, unchanged
+├── tests/                jsdom render test
+└── vercel.json           cache headers and redirects from v0.1 URLs
 ```
 
-## Adding a new chapter
+## Editing
 
-1. Write a descriptive HTML filename such as `research-questions.html` — copy
-   the existing chapter page as a starting template: same head, topbar,
-   spine, and shell markup, just swap out the contents of the chapter
-   article itself.
-2. In `data/chapters.json`, set that chapter's `"slug"` to the filename
-   (without `.html`) and `"status"` to `"available"`.
-3. That's it — the spine nav, the cover-page table of contents, and the
-   prev/next footer links all update automatically because they're rendered
-   from that one JSON file, not hardcoded per page.
+- **Change a chapter:** edit its file in `content/`. GitHub and the site read the same file.
+- **Add a chapter:** see [content/README.md](content/README.md).
+- **Record a decision:** add a row to `content/12-decisions.md`.
 
-## Running locally
+## Run and test locally
 
-Same caveat as the CampusOS site: opening the HTML files directly
-(`file://...`) won't work because the pages `fetch()` `data/chapters.json`,
-and browsers block that over `file://`. Run a tiny local server instead:
+Pages fetch `data/chapters.json` and `content/*.md`, which browsers block over `file://`, so serve the folder:
 
 ```bash
-cd project-campus
 python3 -m http.server 8000
 ```
 
-Then open `http://localhost:8000`.
+Then open http://localhost:8000. To check that every chapter renders cleanly:
 
-## Deploying to Vercel
+```bash
+node --check js/main.js
+cd tests && npm install && npm test
+```
 
-### First deploy
-1. Push this folder to a GitHub repository (or drag-and-drop at
-   [vercel.com/new](https://vercel.com/new) if you don't want to set up
-   GitHub yet).
-2. In Vercel: **Add New → Project → Import** the repo.
-3. Framework preset: **Other** (it's a plain static site — no build
-   command, no output directory override needed).
-4. Deploy. You get a `*.vercel.app` URL immediately; a custom domain can be
-   added later under **Project Settings → Domains**, free of charge.
+## Deploy
 
-### Every update after that
-Push to GitHub → Vercel redeploys automatically. Editing `chapters.json` or
-adding a new chapter page works the same way as updating `listings.json` on
-the CampusOS site: edit, commit, push, done.
+Push to GitHub and Vercel redeploys (framework preset "Other", no build command). `.vercelignore` keeps `tests/` out of deploys. Old v0.1 URLs, including `/instructions.txt`, redirect to their nearest v0.2 page.
 
 ## Design notes
 
-- **Palette / type:** a field-notebook aesthetic — Newsreader (serif) for
-  headings and pull-quotes, IBM Plex Sans for body text, IBM Plex Mono for
-  chapter numbers, stamps, and status tags. Paper/ink tones rather than a
-  typical SaaS-landing look, since this is a reference document, not a
-  product pitch.
-- **The spine nav is the table of contents.** It's rendered from
-   `chapters.json` everywhere, so "available" vs. "not started" status can
-  never drift out of sync between the cover page and the sidebar.
-- **Field-card callouts** (the dashed, slightly-rotated boxes) are used for
-  the "Engineering Observation" / "Design Principle" numbered entries —
-  styled like pinned index cards, matching the project's field-research
-  origin rather than generic numbered feature markers.
-- **VSU is the flagship pilot, named explicitly** — the cover page links
-  directly to the live Housing Marketplace and Campus Life Map rather than
-  describing them abstractly, per the "ship real tools before designing
-  speculative ones" principle carried over from the CampusOS vision doc.
+- **Palette and type:** a field-notebook look. Newsreader for headings, IBM Plex Sans for body text, and IBM Plex Mono for numbers, stamps, and status tags. Paper and ink tones, because this is a reference document, not a product pitch.
+- **The spine nav is the table of contents.** It renders from `chapters.json` everywhere, grouped by part, so status never drifts between the cover and the sidebar.
+- **Claim tags are stamps.** Established is solid sea-blue, Proposed is brass, and Unresolved has a dashed border, so a reader can scan a page's evidence at a glance.
+- **Field cards,** the dashed and slightly rotated boxes, hold principles and notes like pinned index cards from field research.
 
 Not officially affiliated with Visayas State University.

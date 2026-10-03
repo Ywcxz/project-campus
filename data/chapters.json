@@ -1,110 +1,15 @@
 [
-  {
-    "number": 1,
-    "slug": "campus-rd-blueprint",
-    "title": "CAMPUS R&D Blueprint",
-    "status": "available"
-  },
-  {
-    "number": 2,
-    "slug": "project-definition",
-    "title": "Project Definition",
-    "status": "available"
-  },
-  {
-    "number": 3,
-    "slug": "executive-summary",
-    "title": "Executive Summary",
-    "status": "available"
-  },
-  {
-    "number": 4,
-    "slug": "problem-statement",
-    "title": "Problem Statement",
-    "status": "available"
-  },
-  {
-    "number": 5,
-    "slug": "research-questions",
-    "title": "Research Questions",
-    "status": "available"
-  },
-  {
-    "number": 6,
-    "slug": "conceptual-architecture",
-    "title": "CAMPUS Conceptual Architecture",
-    "status": "available"
-  },
-  {
-    "number": 7,
-    "slug": "major-dimensions",
-    "title": "Major Dimensions",
-    "status": "available"
-  },
-  {
-    "number": 8,
-    "slug": "mvp-scope",
-    "title": "MVP Scope",
-    "status": "available"
-  },
-  {
-    "number": 9,
-    "slug": "technical-architecture",
-    "title": "Technical Architecture",
-    "status": "available"
-  },
-  {
-    "number": 10,
-    "slug": "institutional-alignment",
-    "title": "VSU / DIGITS Institutional Alignment",
-    "status": "available"
-  },
-  {
-    "number": 11,
-    "slug": "research-validation-methodology",
-    "title": "Research & Validation Methodology",
-    "status": "available"
-  },
-  {
-    "number": 12,
-    "slug": "development-roadmap",
-    "title": "Development Roadmap",
-    "status": "available"
-  },
-  {
-    "number": 13,
-    "slug": "manpower-infrastructure-resources",
-    "title": "Manpower, Infrastructure & Resources",
-    "status": "available"
-  },
-  {
-    "number": 14,
-    "slug": "budget-framework",
-    "title": "Budget Framework",
-    "status": "available"
-  },
-  {
-    "number": 15,
-    "slug": "governance-privacy-security-ip",
-    "title": "Governance, Privacy, Security & Intellectual Property",
-    "status": "available"
-  },
-  {
-    "number": 16,
-    "slug": "risks-and-limitations",
-    "title": "Risks and Limitations",
-    "status": "available"
-  },
-  {
-    "number": 17,
-    "slug": "expected-outputs-outcomes",
-    "title": "Expected Outputs & Outcomes",
-    "status": "available"
-  },
-  {
-    "number": 18,
-    "slug": "open-questions-decision-register",
-    "title": "Open Questions & Decision Register",
-    "status": "available"
-  }
+  { "number": 0, "slug": "overview", "title": "Overview", "subtitle": "What CAMPUS is, where it stands, and how to read this document", "part": "Start here", "role": "Start here", "source": "content/00-overview.md", "status": "available" },
+  { "number": 1, "slug": "campus", "title": "CAMPUS", "subtitle": "A digital layer over the physical university", "part": "Part I: The vision", "role": "Umbrella vision", "source": "content/01-campus.md", "status": "available" },
+  { "number": 2, "slug": "social-network", "title": "The Social/Academic Network", "subtitle": "A campus community space that VSU designs and governs", "part": "Part II: Products and directions", "role": "Centerpiece proposal", "source": "content/02-social-network.md", "status": "available" },
+  { "number": 3, "slug": "hop-it", "title": "Hop-It", "subtitle": "Scheduled, pooled campus delivery, built independently as a proof of capability", "part": "Part II: Products and directions", "role": "First product", "source": "content/03-hop-it.md", "status": "available" },
+  { "number": 4, "slug": "intranet", "title": "Campus Intranet and Local-First Infrastructure", "subtitle": "A long-term backbone, offered as a direction for VSU ICT and DIGITS", "part": "Part II: Products and directions", "role": "Long-term backbone", "source": "content/04-intranet.md", "status": "available" },
+  { "number": 5, "slug": "later-directions", "title": "Later Directions", "subtitle": "Possible futures, recorded so they don't steer today's work", "part": "Part II: Products and directions", "role": "Not commitments", "source": "content/05-later-directions.md", "status": "available" },
+  { "number": 6, "slug": "vsu-context", "title": "VSU Context", "subtitle": "The Strategic Plan, DIGITS, and the path into the institution", "part": "Part III: Grounding", "role": "Alignment framework", "source": "content/06-vsu-context.md", "status": "available" },
+  { "number": 7, "slug": "evidence", "title": "Problems and Evidence", "subtitle": "What CAMPUS claims, what it has shown, and how it will find out", "part": "Part III: Grounding", "role": "Hypotheses", "source": "content/07-evidence.md", "status": "available" },
+  { "number": 8, "slug": "governance", "title": "Information, Governance, and Privacy", "subtitle": "Who said it, who may see it, and who decides", "part": "Part III: Grounding", "role": "Trust and privacy", "source": "content/08-governance.md", "status": "available" },
+  { "number": 9, "slug": "related-work", "title": "Related Work", "subtitle": "Existing systems in the Philippines and abroad, and how CAMPUS must differ", "part": "Part III: Grounding", "role": "Review frame", "source": "content/09-related-work.md", "status": "outline" },
+  { "number": 10, "slug": "risks", "title": "Risks and Stop Conditions", "subtitle": "What could go wrong, and when to stop", "part": "Part III: Grounding", "role": "Failure modes", "source": "content/10-risks.md", "status": "available" },
+  { "number": 11, "slug": "roadmap", "title": "Roadmap and Milestones", "subtitle": "What gets made, in what order, and how progress is judged", "part": "Part IV: Records", "role": "Sequence", "source": "content/11-roadmap.md", "status": "available" },
+  { "number": 12, "slug": "decisions", "title": "Decision Register and Open Questions", "subtitle": "What has been decided, what changed, and what is still open", "part": "Part IV: Records", "role": "Control layer", "source": "content/12-decisions.md", "status": "available" }
 ]

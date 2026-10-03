@@ -1,7 +1,9 @@
 /* ============================================================
-   Project CAMPUS — Shared utilities
-   Include on every page. Renders the spine nav from
-   data/chapters.json so adding a chapter is a one-file edit.
+   Project CAMPUS — shared script (master document v0.2)
+   Include on every page. From data/chapters.json it renders the
+   spine nav, the cover-page contents, each chapter's body
+   (Markdown from content/), and the prev/next footer.
+   GitHub and the site read the same Markdown files.
    ============================================================ */
 
 async function fetchChapters() {
@@ -19,33 +21,59 @@ function pad2(n) {
   return String(n).padStart(2, "0");
 }
 
+function escapeHtml(text) {
+  return String(text)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
 function currentSlug() {
   const file = window.location.pathname.split("/").pop() || "index.html";
   return file.replace(".html", "") === "" ? "index" : file.replace(".html", "");
+}
+
+function isLinked(ch) {
+  return Boolean(ch.slug) && (ch.status === "available" || ch.status === "outline");
+}
+
+function dotClass(ch) {
+  if (ch.status === "available") return "written";
+  if (ch.status === "outline") return "outline";
+  return "not-started";
+}
+
+function statusLabel(ch) {
+  if (ch.status === "available") return "Available";
+  if (ch.status === "outline") return "Outline";
+  return "Not started";
 }
 
 function renderSpine(chapters) {
   const list = document.getElementById("spineList");
   if (!list) return;
   const here = currentSlug();
-
+  let part = null;
   list.innerHTML = chapters
     .map((ch) => {
+      let head = "";
+      if (ch.part && ch.part !== part) {
+        part = ch.part;
+        head = `<li class="spine-part">${escapeHtml(part)}</li>`;
+      }
       const isActive = ch.slug === here;
-      const dotClass = ch.status === "available" ? "written" : "not-started";
       const inner = `
         <span class="spine-num">${pad2(ch.number)}</span>
-        <span class="spine-title">${ch.title}</span>
-        <span class="spine-dot ${dotClass}"></span>
+        <span class="spine-title">${escapeHtml(ch.title)}</span>
+        <span class="spine-dot ${dotClass(ch)}"></span>
       `;
-      if (ch.slug) {
-        return `<li class="spine-item${isActive ? " active" : ""}">
-          <a href="${ch.slug}.html">${inner}</a>
+      if (isLinked(ch)) {
+        return `${head}<li class="spine-item${isActive ? " active" : ""}">
+          <a href="${ch.slug}.html"${isActive ? ' aria-current="page"' : ""}>${inner}</a>
         </li>`;
       }
-      return `<li class="spine-item">
-        <span class="disabled">${inner}</span>
-      </li>`;
+      return `${head}<li class="spine-item"><span class="disabled">${inner}</span></li>`;
     })
     .join("");
 }
@@ -53,16 +81,21 @@ function renderSpine(chapters) {
 function renderToc(chapters) {
   const el = document.getElementById("tocGrid");
   if (!el) return;
+  let part = null;
   el.innerHTML = chapters
     .map((ch) => {
-      const written = ch.status === "available";
-      const title = written
-        ? `<a href="${ch.slug}.html">${ch.title}</a>`
-        : ch.title;
-      return `<div class="toc-row${written ? " is-written" : ""}">
+      let head = "";
+      if (ch.part && ch.part !== part) {
+        part = ch.part;
+        head = `<div class="toc-part">${escapeHtml(part)}</div>`;
+      }
+      const linked = isLinked(ch);
+      const title = linked ? `<a href="${ch.slug}.html">${escapeHtml(ch.title)}</a>` : escapeHtml(ch.title);
+      const sub = ch.subtitle ? `<span class="toc-sub">${escapeHtml(ch.subtitle)}</span>` : "";
+      return `${head}<div class="toc-row${linked ? " is-written" : ""}${ch.status === "outline" ? " is-outline" : ""}">
         <span class="n">${pad2(ch.number)}</span>
-        <span class="t">${title}</span>
-        <span class="s">${written ? "Available" : "Not started"}</span>
+        <span class="t">${title}${sub}</span>
+        <span class="s">${statusLabel(ch)}</span>
       </div>`;
     })
     .join("");
@@ -79,33 +112,221 @@ function renderChapterNav(chapters) {
   const next = idx < chapters.length - 1 ? chapters[idx + 1] : null;
 
   const prevHTML = prev
-    ? prev.slug
-      ? `<a href="${prev.slug}.html"><span class="dir">← Previous</span><span class="label">${prev.title}</span></a>`
-      : `<span class="disabled"><span class="dir">← Previous</span><span class="label">${prev.title}</span></span>`
+    ? isLinked(prev)
+      ? `<a href="${prev.slug}.html"><span class="dir">← Previous</span><span class="label">${escapeHtml(prev.title)}</span></a>`
+      : `<span class="disabled"><span class="dir">← Previous</span><span class="label">${escapeHtml(prev.title)}</span></span>`
     : `<span></span>`;
 
   const nextHTML = next
-    ? next.slug
-      ? `<a class="next" href="${next.slug}.html"><span class="dir">Next →</span><span class="label">${next.title}</span></a>`
-      : `<span class="disabled next"><span class="dir">Next</span><span class="label">${next.title} — not yet written</span></span>`
+    ? isLinked(next)
+      ? `<a class="next" href="${next.slug}.html"><span class="dir">Next →</span><span class="label">${escapeHtml(next.title)}</span></a>`
+      : `<span class="disabled next"><span class="dir">Next</span><span class="label">${escapeHtml(next.title)} — not yet written</span></span>`
     : `<span></span>`;
 
   el.innerHTML = prevHTML + nextHTML;
 }
 
-function headingId(text, index) {
-  const slug = text
-    .normalize("NFKD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "") || "section";
-  return `${slug}-${index + 1}`;
+/* ── Markdown → HTML ──────────────────────────────────────────
+   A deliberately small subset, documented in content/README.md.
+   ──────────────────────────────────────────────────────────── */
+
+const CLAIM_TAGS = ["Established", "Proposed", "Unresolved", "Deferred", "Superseded", "Rejected", "Investigating", "Under review"];
+const TAG_PATTERN = new RegExp(`\\[(${CLAIM_TAGS.join("|")})\\](?!\\()`, "g");
+
+function safeHref(raw, linkMap) {
+  const href = raw.replace(/&amp;/g, "&").trim();
+  const chapterLink = href.match(/^(?:\.\/)?([\w.-]+\.md)(#[\w-]*)?$/);
+  if (chapterLink && linkMap[chapterLink[1]]) return linkMap[chapterLink[1]] + (chapterLink[2] || "");
+  if (/^(https?:\/\/|mailto:|#|\.{1,2}\/)/i.test(href) || /^[\w.-]+\.(html|md|txt)(#[\w-]*)?$/i.test(href)) {
+    return escapeHtml(href);
+  }
+  return "#";
+}
+
+function renderInline(text, linkMap) {
+  const codes = [];
+  let s = escapeHtml(text).replace(/`([^`]+)`/g, (_, code) => {
+    codes.push(code);
+    return `\u0000${codes.length - 1}\u0000`;
+  });
+  s = s.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, label, href) => {
+    const target = safeHref(href, linkMap);
+    const external = /^https?:/i.test(target);
+    return `<a href="${target}"${external ? ' target="_blank" rel="noopener"' : ""}>${label}</a>`;
+  });
+  s = s.replace(TAG_PATTERN, (_, tag) => `<span class="tag tag-${tag.toLowerCase().replace(/\s+/g, "-")}">${tag}</span>`);
+  s = s.replace(/\*\*([^*]+?)\*\*/g, "<strong>$1</strong>");
+  s = s.replace(/(^|[^\w*])\*(?!\s)([^*]+?)\*(?![\w*])/g, "$1<em>$2</em>");
+  return s.replace(/\u0000(\d+)\u0000/g, (_, i) => `<code>${codes[Number(i)]}</code>`);
+}
+
+function isTableSeparator(line) {
+  if (!line || !line.includes("|")) return false;
+  const cells = line.trim().replace(/^\|/, "").replace(/\|$/, "").split("|");
+  return cells.length > 0 && cells.every((c) => /^\s*:?-{3,}:?\s*$/.test(c));
+}
+
+function splitRow(line) {
+  return line.trim().replace(/^\|/, "").replace(/\|$/, "").split("|").map((c) => c.trim());
+}
+
+function startsBlock(lines, i) {
+  const line = lines[i];
+  return (
+    /^\s*$/.test(line) ||
+    /^#{1,4}\s/.test(line) ||
+    /^```/.test(line) ||
+    /^\s*>/.test(line) ||
+    /^\s*([-*]|\d+\.)\s+/.test(line) ||
+    /^\s*(-{3,}|\*{3,})\s*$/.test(line) ||
+    (line.includes("|") && i + 1 < lines.length && isTableSeparator(lines[i + 1]))
+  );
+}
+
+function renderMarkdown(source, linkMap = {}) {
+  const lines = String(source).replace(/\r\n?/g, "\n").split("\n");
+  const out = [];
+  let i = 0;
+  let afterTitle = false;
+
+  while (i < lines.length) {
+    const line = lines[i];
+
+    if (/^\s*$/.test(line)) { i++; continue; }
+
+    if (/^```/.test(line)) {
+      const code = [];
+      i++;
+      while (i < lines.length && !/^```\s*$/.test(lines[i])) code.push(lines[i++]);
+      i++;
+      out.push(`<pre><code>${escapeHtml(code.join("\n"))}</code></pre>`);
+      afterTitle = false;
+      continue;
+    }
+
+    const heading = line.match(/^(#{1,4})\s+(.+?)\s*#*\s*$/);
+    if (heading) {
+      const level = heading[1].length;
+      out.push(`<h${level}>${renderInline(heading[2], linkMap)}</h${level}>`);
+      afterTitle = level === 1;
+      i++;
+      continue;
+    }
+
+    if (/^\s*(-{3,}|\*{3,})\s*$/.test(line)) { out.push("<hr>"); afterTitle = false; i++; continue; }
+
+    if (line.includes("|") && i + 1 < lines.length && isTableSeparator(lines[i + 1])) {
+      const head = splitRow(line);
+      i += 2;
+      const rows = [];
+      while (i < lines.length && lines[i].includes("|") && !/^\s*$/.test(lines[i])) rows.push(splitRow(lines[i++]));
+      const th = head.map((cell) => `<th>${renderInline(cell, linkMap)}</th>`).join("");
+      const body = rows
+        .map((row) => `<tr>${head.map((_, k) => `<td>${renderInline(row[k] || "", linkMap)}</td>`).join("")}</tr>`)
+        .join("");
+      const wide = head.length >= 4 ? ' class="wide"' : "";
+      out.push(`<div class="table-wrap"><table${wide}><thead><tr>${th}</tr></thead><tbody>${body}</tbody></table></div>`);
+      afterTitle = false;
+      continue;
+    }
+
+    if (/^\s*>/.test(line)) {
+      const quote = [];
+      while (i < lines.length && /^\s*>/.test(lines[i])) quote.push(lines[i++].replace(/^\s*>\s?/, ""));
+      const text = quote.join(" ").trim();
+      const card = text.match(/^\*\*(.+?)\*\*\s*(.*)$/);
+      out.push(
+        card
+          ? `<div class="field-card"><span class="field-card-label">${renderInline(card[1].replace(/[.:]\s*$/, ""), linkMap)}</span><p class="field-card-text">${renderInline(card[2], linkMap)}</p></div>`
+          : `<p class="q">${renderInline(text, linkMap)}</p>`
+      );
+      afterTitle = false;
+      continue;
+    }
+
+    const item = line.match(/^\s*([-*]|\d+\.)\s+(.*)$/);
+    if (item) {
+      const ordered = /\d/.test(item[1]);
+      const items = [];
+      while (i < lines.length) {
+        const next = lines[i].match(/^\s*([-*]|\d+\.)\s+(.*)$/);
+        if (next && /\d/.test(next[1]) === ordered) { items.push(next[2]); i++; continue; }
+        if (!next && items.length && /^\s{2,}\S/.test(lines[i])) { items[items.length - 1] += ` ${lines[i].trim()}`; i++; continue; }
+        break;
+      }
+      const tag = ordered ? "ol" : "ul";
+      out.push(`<${tag}>${items.map((it) => `<li>${renderInline(it, linkMap)}</li>`).join("")}</${tag}>`);
+      afterTitle = false;
+      continue;
+    }
+
+    const para = [];
+    do { para.push(lines[i].trim()); i++; } while (i < lines.length && !startsBlock(lines, i));
+    const text = para.join(" ");
+    if (afterTitle && /^\*[^*].*[^*]\*$/.test(text)) out.push(`<p class="subtitle">${renderInline(text.slice(1, -1), linkMap)}</p>`);
+    else out.push(`<p>${renderInline(text, linkMap)}</p>`);
+    afterTitle = false;
+  }
+  return out.join("\n");
+}
+
+async function renderChapter(chapters) {
+  const el = document.getElementById("chapter");
+  if (!el) return;
+  const ch = chapters.find((c) => c.slug === currentSlug());
+  if (!ch) {
+    el.innerHTML = `<p class="chapter-error">This page isn't listed in data/chapters.json.</p>`;
+    el.setAttribute("aria-busy", "false");
+    return;
+  }
+
+  document.title = `${ch.title} — Project CAMPUS`;
+  const meta = document.querySelector('meta[name="description"]');
+  if (meta && ch.subtitle) meta.setAttribute("content", `${ch.title}: ${ch.subtitle}`);
+
+  const linkMap = {};
+  chapters.forEach((c) => {
+    if (c.source && c.slug) linkMap[c.source.split("/").pop()] = `${c.slug}.html`;
+  });
+
+  const header = `
+    <div class="lockup"><span>Project CAMPUS</span><span class="x">×</span><span class="vsu">${escapeHtml(ch.role || ch.part || "")}</span></div>
+    <div class="eyebrow">${ch.number === 0 ? "Start here" : `Chapter ${pad2(ch.number)}`}${ch.status === "outline" ? " · Outline" : ""}</div>`;
+
+  try {
+    const res = await fetch(ch.source);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    el.innerHTML = header + renderMarkdown(await res.text(), linkMap);
+  } catch (err) {
+    console.warn("renderChapter() failed:", err.message);
+    el.innerHTML = `${header}<h1>${escapeHtml(ch.title)}</h1>
+      <p class="chapter-error">This chapter couldn't be loaded. It lives in <code>${escapeHtml(ch.source || "")}</code> in the repository.</p>`;
+  }
+  el.setAttribute("aria-busy", "false");
+}
+
+function headingSlug(text) {
+  return (
+    text
+      .normalize("NFKD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "") || "section"
+  );
 }
 
 function initSectionAnchors() {
-  document.querySelectorAll(".chapter h2").forEach((heading, index) => {
-    if (!heading.id) heading.id = headingId(heading.textContent, index);
+  const used = new Set();
+  document.querySelectorAll(".chapter h2").forEach((heading) => {
+    if (!heading.id) {
+      const base = headingSlug(heading.textContent);
+      let id = base;
+      let n = 2;
+      while (used.has(id) || document.getElementById(id)) id = `${base}-${n++}`;
+      heading.id = id;
+    }
+    used.add(heading.id);
     if (heading.querySelector(".heading-anchor")) return;
 
     const anchor = document.createElement("a");
@@ -118,10 +339,24 @@ function initSectionAnchors() {
   });
 }
 
+function scrollToHash() {
+  if (!window.location.hash) return;
+  const target = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
+  if (target) target.scrollIntoView();
+}
+
+function readStoredTheme() {
+  try { return localStorage.getItem("campus-theme"); } catch (err) { return null; }
+}
+
+function storeTheme(value) {
+  try { localStorage.setItem("campus-theme", value); } catch (err) { /* private mode: theme just won't persist */ }
+}
+
 function initTheme() {
   const root = document.documentElement;
   const queryTheme = new URLSearchParams(window.location.search).get("theme");
-  const storedTheme = localStorage.getItem("campus-theme");
+  const storedTheme = readStoredTheme();
   const savedTheme = storedTheme === "ink" ? "dark" : storedTheme === "paper" ? "light" : storedTheme;
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const forcedTheme = queryTheme === "ink" ? "dark" : queryTheme === "paper" ? "light" : queryTheme;
@@ -138,7 +373,7 @@ function initTheme() {
     toggle.addEventListener("click", () => {
       const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
       root.dataset.theme = nextTheme;
-      localStorage.setItem("campus-theme", nextTheme);
+      storeTheme(nextTheme);
       updateToggleLabels();
     });
     parent.append(toggle);
@@ -180,6 +415,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   renderSpine(chapters);
   renderToc(chapters);
   renderChapterNav(chapters);
-  initSectionAnchors();
   initMobileSpine();
+  await renderChapter(chapters);
+  initSectionAnchors();
+  scrollToHash();
 });

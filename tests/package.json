@@ -1,0 +1,7 @@
+{
+  "name": "project-campus-tests",
+  "private": true,
+  "description": "Renders every chapter of the master document in jsdom and checks the output.",
+  "scripts": { "test": "node render.test.js" },
+  "devDependencies": { "jsdom": "^24.0.0" }
+}

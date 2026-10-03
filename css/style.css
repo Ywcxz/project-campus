@@ -343,3 +343,67 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
   .heading-anchor { left: -18px; opacity: .7; }
   .spine-head .theme-toggle { display: none; }
 }
+
+/* ── v0.2: PARTS, RENDERED MARKDOWN, CLAIM TAGS ───────────── */
+.spine-part {
+  padding: 18px 14px 6px; font-family: var(--font-mono); font-size: 10.5px;
+  letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3);
+}
+.spine-part:first-child { padding-top: 2px; }
+.spine-dot.outline { background: transparent; border: 1px solid var(--brass); }
+
+.toc-part {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--ink-3); padding: 26px 0 10px;
+  border-bottom: 1px solid var(--rule);
+}
+.toc-part:first-child { padding-top: 12px; }
+.toc-row .toc-sub { display: block; font-size: 13px; color: var(--ink-2); margin-top: 3px; }
+.toc-row.is-outline .s { color: var(--ink-2); }
+.cover-note { margin-top: 44px; font-size: 13px; color: var(--ink-3); max-width: 620px; }
+
+.chapter-loading, .chapter-error { font-size: 14.5px; color: var(--ink-3); margin: 24px 0; }
+.chapter h3 { font-family: var(--font-display); font-weight: 600; font-size: 18px; margin: 30px 0 10px; }
+.chapter ul, .chapter ol { margin: 0 0 20px; padding-left: 22px; max-width: 640px; }
+.chapter ul { list-style: disc; }
+.chapter ol { list-style: decimal; }
+.chapter li { font-size: 15.5px; margin-bottom: 7px; padding-left: 3px; }
+.chapter li::marker { color: var(--brass); }
+.chapter a { border-bottom: 1px solid var(--brass); }
+.chapter a:hover { color: var(--brass); }
+.chapter .heading-anchor { border-bottom: none; }
+.chapter strong { font-weight: 600; }
+.chapter code {
+  font-family: var(--font-mono); font-size: .86em; background: var(--paper-2);
+  border: 1px solid var(--rule); border-radius: 2px; padding: 0 4px;
+}
+.chapter pre {
+  font-family: var(--font-mono); font-size: 12.5px; line-height: 1.6; color: var(--ink);
+  background: var(--paper-2); border: 1px solid var(--rule); border-radius: 2px;
+  padding: 14px 16px; margin: 4px 0 24px; overflow-x: auto; max-width: 640px;
+}
+.chapter pre code { background: none; border: none; padding: 0; font-size: inherit; }
+.chapter hr { border: none; border-top: 1px solid var(--rule); margin: 40px 0; max-width: 640px; }
+
+.table-wrap { overflow-x: auto; margin: 6px 0 28px; -webkit-overflow-scrolling: touch; }
+.chapter table { border-collapse: collapse; width: 100%; font-size: 14px; line-height: 1.5; }
+.chapter table.wide { min-width: 620px; }
+.chapter th {
+  font-family: var(--font-mono); font-size: 10.5px; font-weight: 500; letter-spacing: .05em;
+  text-transform: uppercase; color: var(--ink-2); text-align: left; vertical-align: bottom;
+  padding: 0 14px 8px 0; border-bottom: 1.5px solid var(--rule-2);
+}
+.chapter td { padding: 10px 14px 10px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.chapter td:first-child { font-weight: 500; }
+
+/* Claim tags: the evidence status of a statement, encoded in colour and line. */
+.tag {
+  display: inline-block; font-family: var(--font-mono); font-size: 10px; font-weight: 500;
+  letter-spacing: .05em; text-transform: uppercase; line-height: 1.55;
+  border: 1px solid var(--rule-2); border-radius: 3px; padding: 0 6px;
+  vertical-align: 1px; white-space: nowrap; color: var(--ink-2);
+}
+.tag-established { color: var(--sea); border-color: var(--sea); background: var(--sea-bg); }
+.tag-proposed { color: var(--brass); border-color: var(--brass); background: var(--brass-bg); }
+.tag-unresolved { border-style: dashed; border-color: var(--ink-3); }
+.tag-deferred, .tag-superseded, .tag-rejected, .tag-investigating, .tag-under-review { color: var(--ink-3); }
