@@ -2,17 +2,31 @@
   "cleanUrls": false,
   "trailingSlash": false,
   "headers": [
-    {
-      "source": "/data/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=300" }]
-    },
-    {
-      "source": "/css/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }]
-    },
-    {
-      "source": "/js/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }]
-    }
+    { "source": "/data/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=300" }] },
+    { "source": "/content/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=300" }] },
+    { "source": "/css/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] },
+    { "source": "/js/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] }
+  ],
+  "redirects": [
+    { "source": "/instructions.txt", "destination": "/archive/v0.1/campus-rd-blueprint-v0.1.md", "permanent": false },
+    { "source": "/DOCUMENT-BLUEPRINT.txt", "destination": "/archive/v0.1/document-blueprint-v0.1.txt", "permanent": false },
+    { "source": "/campus-rd-blueprint.html", "destination": "/overview.html", "permanent": false },
+    { "source": "/executive-summary.html", "destination": "/overview.html", "permanent": false },
+    { "source": "/project-definition.html", "destination": "/campus.html", "permanent": false },
+    { "source": "/conceptual-architecture.html", "destination": "/campus.html", "permanent": false },
+    { "source": "/technical-architecture.html", "destination": "/campus.html", "permanent": false },
+    { "source": "/major-dimensions.html", "destination": "/later-directions.html", "permanent": false },
+    { "source": "/mvp-scope.html", "destination": "/hop-it.html", "permanent": false },
+    { "source": "/problem-statement.html", "destination": "/evidence.html", "permanent": false },
+    { "source": "/research-questions.html", "destination": "/evidence.html", "permanent": false },
+    { "source": "/research-validation-methodology.html", "destination": "/evidence.html", "permanent": false },
+    { "source": "/institutional-alignment.html", "destination": "/vsu-context.html", "permanent": false },
+    { "source": "/governance-privacy-security-ip.html", "destination": "/governance.html", "permanent": false },
+    { "source": "/risks-and-limitations.html", "destination": "/risks.html", "permanent": false },
+    { "source": "/development-roadmap.html", "destination": "/roadmap.html", "permanent": false },
+    { "source": "/manpower-infrastructure-resources.html", "destination": "/roadmap.html", "permanent": false },
+    { "source": "/budget-framework.html", "destination": "/roadmap.html", "permanent": false },
+    { "source": "/expected-outputs-outcomes.html", "destination": "/roadmap.html", "permanent": false },
+    { "source": "/open-questions-decision-register.html", "destination": "/decisions.html", "permanent": false }
   ]
 }
