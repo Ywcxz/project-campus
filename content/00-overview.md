@@ -23,7 +23,7 @@ CAMPUS, the Connected Academic Matrix Platform for Universities and Schools, is 
 
 ## What comes next
 
-The outputs come in this order: this master document, then an interactive scrollytelling documentary site for students, faculty, staff, and administration, then pitch slides, then Hop-It Alpha. [Established] The first pitch goes to OVPSAS, the Office of the Vice President for Academic Affairs and Services, because the social/academic network would benefit that office most. [Proposed]
+The outputs come in this order: this master document, then an interactive scrollytelling documentary site for students, faculty, staff, and administration, then pitch slides, then Hop-It Alpha. [Established] The first pitch goes to OVPSAS, the Office of the Vice President for Student Affairs and Services, because the social/academic network would benefit that office most. [Proposed]
 
 ## How to read this document
 

@@ -11,7 +11,7 @@ The centerpiece proposal is VSU's own alternative to Facebook for campus life: a
 | What problem? | Reaching the right office or person can take several visits before a conversation even starts. Students take their questions to unofficial Facebook groups instead, where other students answer and anonymity means no one answers for a wrong reply. And there is no easy place for students, faculty, and staff to interact across roles. [Unresolved] These come from the author's observations and need field evidence. |
 | Who needs it? | Students first; then faculty and staff, the offices that answer students, and student organizations. [Proposed] |
 | What evidence? | None from the field yet. A research plan with an interview guide and a survey draft exists but has not been run. [Established] |
-| Relation to existing systems? | It is meant to replace Facebook for campus life, not VSU's official systems. [Established] (D-035) How it relates to official channels and any DIGITS components, such as OneVSU Portal and Mobile, is VSU's decision. [Unresolved] |
+| Relation to existing systems? | It is meant to replace Facebook for campus life, not VSU's official systems. [Established] (D-035) How it relates to official channels and any DIGITS components, such as OneVSU Portal and Mobile, is VSU's decision. [Unresolved] VSU already runs related systems, including a document request tracker, a helpdesk, and staff chat, and the network should hand off to them rather than duplicate them ([Chapter 9](09-related-work.md)). [Proposed] |
 | Stage? | Centerpiece proposal. Its first version is not defined, and research comes before any build. [Established] |
 | Privacy, governance, and cost? | The highest of any CAMPUS product: identity, moderation, marketplace disputes, message privacy, data retention, hosting, and someone at VSU to run it. [Proposed] |
 | How could it be disproved? | Field research finds students can already reach offices and get reliable answers, offices won't answer on the network, a pilot group drifts back to Facebook within weeks, or VSU cannot or will not govern it. [Proposed] |
@@ -46,7 +46,7 @@ All of it is [Proposed]. The first version would include only what the research 
 
 - **Labelled information.** Every post shows whether it is official, community knowledge, opinion, or unverified, so a notice from an office never looks like a rumor. [Proposed]
 - **Rules written with the university.** Community rules and moderation come from VSU and its community, not from an advertising platform. [Proposed]
-- **Membership tied to VSU.** Ideally through the university's own accounts, if VSU allows it. [Unresolved]
+- **Membership tied to VSU.** Ideally through the university's own accounts, if VSU allows it. [Unresolved] VSU's e-learning site already offers sign-in with @vsu.edu.ph Google accounts ([Chapter 9](09-related-work.md)). [Established]
 - **Real places.** Groups and posts can attach to actual buildings, dorms, and the VSU market. [Proposed]
 - **Room to run on campus.** In the long run it could run on the campus intranet, so core functions work without mobile data ([Chapter 4](04-intranet.md)). [Proposed]
 
