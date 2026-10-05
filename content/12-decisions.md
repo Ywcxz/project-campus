@@ -31,12 +31,13 @@ All were recorded on 3 October 2026. "Project instructions v2" means the owner's
 
 ## Decisions recorded after v0.2
 
-Recorded on 4 October 2026.
+D-037 and D-038 were recorded on 4 October 2026, and D-039 on 5 October 2026.
 
 | ID | Decision | Status | Basis |
 | --- | --- | --- | --- |
 | D-037 | The student survey runs as the scenes prototype, an interactive page that shows one scene at a time, not as a standard form. Of the two prototypes, the scenes version is the chosen format, with fixes due before launch. The field research kit and the response script follow it. | [Established] | Owner's decision, October 2026 |
 | D-038 | A problem earns a pitch slide only if it clears three bars fixed before any data is read: at least 4 of 12 student interviews describe a specific past incident; at least 30% of survey respondents report it several times or often; and most of those rate it moderate or serious. | [Proposed] | Field research kit; D-036 |
+| D-039 | The student survey runs on its own site, with its own repository and Vercel project, separate from the master document's site, so respondents don't read the proposal before answering. Responses go to a private Google Sheet through an Apps Script web app, and interview volunteers sign up on a separate Google Form, so contact details never meet survey answers. | [Established] | Owner's decision, 5 October 2026 |
 
 ## Decisions carried from v0.1
 
