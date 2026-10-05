@@ -9,7 +9,7 @@ CAMPUS (Connected Academic Matrix Platform for Universities and Schools) is a pr
 - **Start here:** [00 Overview](content/00-overview.md)
 - **Part I, the vision:** [01 CAMPUS](content/01-campus.md)
 - **Part II, products and directions:** [02 The Social/Academic Network](content/02-social-network.md), [02.1 Network Use Cases](content/02a-use-cases.md), [03 Hop-It](content/03-hop-it.md), [04 Campus Intranet](content/04-intranet.md), [05 Later Directions](content/05-later-directions.md)
-- **Part III, grounding:** [06 VSU Context](content/06-vsu-context.md), [07 Problems and Evidence](content/07-evidence.md), [08 Information, Governance, and Privacy](content/08-governance.md), [09 Related Work](content/09-related-work.md) (outline), [10 Risks and Stop Conditions](content/10-risks.md)
+- **Part III, grounding:** [06 VSU Context](content/06-vsu-context.md), [07 Problems and Evidence](content/07-evidence.md), [08 Information, Governance, and Privacy](content/08-governance.md), [09 Related Work](content/09-related-work.md) (first pass), [10 Risks and Stop Conditions](content/10-risks.md)
 - **Part IV, records:** [11 Roadmap and Milestones](content/11-roadmap.md), [12 Decision Register and Open Questions](content/12-decisions.md)
 
 ## Sources of truth

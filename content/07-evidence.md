@@ -28,8 +28,8 @@ CAMPUS does not claim that VSU's systems are inadequate, that every group feels 
 
 - The author's own experience and observations as a VSU alumnus. This is community knowledge: useful for asking questions, not proof. [Established]
 - Scholarly work on last-mile delivery, which shaped Hop-It's design ([Chapter 3](03-hop-it.md)). [Established]
-- A field research plan covering student interviews, a survey, problem synthesis, and prototype scoping, with an interview guide and a survey draft. It has not been run, and it is not yet in this repository. [Established]
-- No interviews, surveys, usage data, or institutional documents have been gathered for VSU yet. [Established]
+- A field research plan covering student interviews, a survey, problem synthesis, and prototype scoping, with an interview guide and a survey draft. It has not been run, and it is not yet in this repository. [Established] The student survey will run as an interactive page, the scenes prototype. [Established] (D-037)
+- No interviews, surveys, or usage data have been gathered for VSU yet. [Established] Public institutional sources, including the Third SOUA and VSU's service pages, are cited in [Chapter 6](06-vsu-context.md) and [Chapter 9](09-related-work.md). [Established]
 
 ## How CAMPUS will find out
 
@@ -52,5 +52,11 @@ Every claim that matters gets an entry: the claim, the evidence type, the source
 | --- | --- | --- | --- | --- |
 | E-001 | Delivery time windows trade route efficiency against customer service | Scholarly | Agatz et al., 2011 | Hop-It's windows |
 | E-002 | Urban delivery demand is growing, and efficiency interventions need evaluating | Scholarly | Savelsbergh and Van Woensel, 2016 | Hop-It's design |
+| E-003 | DIGITS is a proposed 2027–2029 roadmap, and OneVSU aims to give students and others one simpler way into university services and information | Official | Third SOUA, 18 September 2026 | The network's first version; Q-11, Q-18 |
+| E-004 | VSU runs a document request and tracking system and an osTicket helpdesk with ticket status | Official | VSU service pages, 4 October 2026 | Reach the right office |
+| E-005 | VSU's e-learning site offers sign-in with @vsu.edu.ph Google accounts | Official | VSUEE login page, 4 October 2026 | Q-06 |
+| E-006 | Meta closed Facebook Campus, a .edu-only section covering 204 schools, in March 2022, saying Groups served students best | External | TechCrunch; Adweek | Network adoption risk |
+| E-007 | Yik Yak's anonymity carried racist and violent posts that colleges had little power to stop | External | Higher Ed Dive, 2021 | Q-16 |
+| E-008 | Campus delivery robots found only about seven months of work a year, by Starship's estimate | External | Axios, 2 September 2026 | Hop-It demand; Q-19 |
 
 Field evidence will be added as it is gathered. The v0.1 research-question bank, about 65 questions, is in the [archive](https://github.com/Ywcxz/project-campus/blob/main/archive/v0.1/campus-rd-blueprint-v0.1.md) (§5 and §18.4); many of those questions were written for the retired v0.1 prototype.

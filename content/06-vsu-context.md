@@ -22,10 +22,11 @@ Every row is a possible contribution, not a demonstrated one. [Proposed] (v0.1 �
 
 ## DIGITS
 
-- DIGITS is a proposed 2027–2029 digital transformation roadmap presented in the President's Third State of the University Address. [Established] A citation to the address still needs to be added. [Unresolved]
-- Its named components are OneVSU Mobile, OneVSU Portal, OneVSU ERP, an Executive Dashboard, e-attendance, and MATS. [Established]
-- v0.1 expanded the name as "Digital Innovation for Green, Intelligent and Transformative Systems" without a source. [Unresolved]
-- This document assumes nothing about DIGITS's architecture, status, ownership, data, interfaces, or governance. [Established]
+- VSU DIGITS, Digital Innovation for Green, Intelligent and Transformative Systems, is a proposed digital transformation roadmap for 2027 to 2029. The President presented it in the Third State of the University Address on 18 September 2026, which also confirms the expansion v0.1 used without a source. [Established] ([Third SOUA](https://www.vsu.edu.ph/articles/news/3045-3rd-state-of-the-university-address))
+- The address names four initiatives: OneVSU Mobile, the OneVSU Portal, the OneVSU Enterprise Resource Plan, and the University Executive Dashboard. It says DIGITS should connect the way the university works and give students, faculty, staff, alumni, researchers, and partners one simpler way into university services and information. [Established]
+- One of its performance indicators is electronic daily attendance tracking, and a mobile attendance app with facial recognition was adopted for employees on 14 September 2026. The address also describes MATS, the Management Approval Tracking System, already introduced for submitting, reviewing, and approving proposals and resolutions. [Established]
+- Its scope covers digital governance, digital learning, research and innovation, student and stakeholder experience, smart green campus systems, digital infrastructure and cybersecurity, and digital culture and workforce. [Established]
+- This document assumes nothing about DIGITS's architecture, status, ownership, data, interfaces, or governance beyond what the address states. [Established] What OneVSU Mobile and the Portal will cover for students is open (Q-18), and [Chapter 9](09-related-work.md) maps where VSU's current systems overlap CAMPUS.
 
 v0.1 listed six possible relationships between CAMPUS and DIGITS (v0.1 §10.9). All remain open, and VSU decides among them:
 
@@ -38,12 +39,12 @@ v0.1 listed six possible relationships between CAMPUS and DIGITS (v0.1 §10.9). 
 
 ## Working assumptions to verify
 
-- About 10,000 students attend the Main Campus. [Unresolved]
-- Systems in use include VSUEE and CumulusOne; their functions and owners are not yet confirmed. [Unresolved]
+- About 10,000 students attend the Main Campus. [Unresolved] The Third SOUA reports 2,604 first-year students enrolled at the Main Campus in 2026, which fits that estimate without confirming it. [Established]
+- VSUEE is the VSU E-Learning Environment, a Moodle site that offers sign-in with @vsu.edu.ph Google accounts. [Established] Cumulus, recorded earlier as CumulusOne, appears on VSU's helpdesk as a help topic paired with HRIS; its function and owner are not confirmed. [Unresolved] Other public-facing systems are listed in [Chapter 9](09-related-work.md).
 
 ## The path into the institution
 
-The first pitch goes to OVPSAS, because the social/academic network would benefit that office most. [Proposed] Progress is measured on a seven-stage ladder ([Chapter 11](11-roadmap.md)): interest is not permission, and permission is not a pilot. As of October 2026, no VSU office has reached any stage. [Established]
+The first pitch goes to OVPSAS, the Office of the Vice President for Student Affairs and Services, because the social/academic network would benefit that office most. [Proposed] VSU has separate vice presidents for Academic Affairs and for Student Affairs and Services. [Established] ([Key Officials](https://www.vsu.edu.ph/administration)) The network's faculty-facing parts would therefore also concern academic affairs. [Proposed] Progress is measured on a seven-stage ladder ([Chapter 11](11-roadmap.md)): interest is not permission, and permission is not a pilot. As of October 2026, no VSU office has reached any stage. [Established]
 
 Before proposing any integration, CAMPUS has to learn what VSU already runs: which systems exist, who owns them, which data is authoritative, what interfaces exist, how identity works, which policies apply, and what is already planned. The point is not to justify CAMPUS. It is to find where CAMPUS is useful, unnecessary, complementary, constrained, or inappropriate. [Established] (v0.1 §10.10)
 

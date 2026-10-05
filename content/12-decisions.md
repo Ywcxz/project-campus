@@ -25,9 +25,18 @@ All were recorded on 3 October 2026. "Project instructions v2" means the owner's
 | D-031 | Claims carry one of three tags (Established, Proposed, Unresolved), and sources are typed separately (official, community knowledge, opinion, unverified, scholarly, external). This replaces DOCUMENT-BLUEPRINT's five tags; the Hop-It PRD keeps its own five labels internally. | [Established] | Project rules 1 and 4 |
 | D-032 | The master document is Markdown in `content/`, rendered by the site with no build step. v0.1 is archived unchanged, and old URLs redirect to the nearest v0.2 chapter. | [Proposed] | v0.2 restructure; ends the two parallel versions of v0.1 |
 | D-033 | The five design principles from July 2026 are restored ([Chapter 1](01-campus.md)), with principle 3 reworded to fit D-035. | [Proposed] | July 2026 vision document |
-| D-034 | The July 2026 channel model (channels, four layers, tiered sync) is the network's starting architecture. | [Proposed] | July 2026 vision document |
+| D-034 | The July 2026 channel model (channels, four layers, tiered sync) is the network's starting architecture: a starting point under D-018 that Q-04 can revise. | [Proposed] | July 2026 vision document |
 | D-035 | The network is VSU's own alternative to Facebook for campus life. Its policies, interface, structure, feed, privacy, moderation, speech, and communities are designed and governed for the university, with no ads, reels, stories, or feeds built for endless scrolling. Its purpose is to connect relevant information to the right people and close the gap between students and the institution. Resolves Q-03. | [Established] | Owner's decision, 3 October 2026 |
 | D-036 | The pitch's problem slides use only problems with VSU field evidence. [Chapter 2.1](02a-use-cases.md) is the candidate list, and its stages are proposals. | [Proposed] | Project rule 7: credibility comes from evidence |
+
+## Decisions recorded after v0.2
+
+Recorded on 4 October 2026.
+
+| ID | Decision | Status | Basis |
+| --- | --- | --- | --- |
+| D-037 | The student survey runs as the scenes prototype, an interactive page that shows one scene at a time, not as a standard form. Of the two prototypes, the scenes version is the chosen format, with fixes due before launch. The field research kit and the response script follow it. | [Established] | Owner's decision, October 2026 |
+| D-038 | A problem earns a pitch slide only if it clears three bars fixed before any data is read: at least 4 of 12 student interviews describe a specific past incident; at least 30% of survey respondents report it several times or often; and most of those rate it moderate or serious. | [Proposed] | Field research kit; D-036 |
 
 ## Decisions carried from v0.1
 
@@ -74,13 +83,23 @@ v0.1's planning file, DOCUMENT-BLUEPRINT.txt, used the numbers D-001 to D-003 fo
 | Q-07 | Hop-It's pilot area, hours, vendors, and approvals | P0 before real users | Operations and campus approval |
 | Q-08 | Hop-It's success and guardrail thresholds | P0 before real users | Owner's decision |
 | Q-09 | Publish the Hop-It PRD and spec here, or link a Hop-It repository? | P2 | Owner's decision |
-| Q-10 | What systems does VSU run, who owns them, and which data is authoritative? | P1 | Systems discovery |
+| Q-10 | What systems does VSU run, who owns them, and which data is authoritative? | P1 | Systems discovery; the public view is in [Chapter 9](09-related-work.md) |
 | Q-11 | How does CAMPUS relate to DIGITS? | P1 | VSU decides |
-| Q-12 | A source for the DIGITS name and a citation for the Third SOUA | P1 | Official documents |
 | Q-13 | Is connectivity a real barrier for the people the intranet would serve? | P2 | Field research |
 | Q-14 | Licensing and IP model for this repository and its code | P2 | Owner's decision |
-| Q-15 | The related-work review | P1 | Desk research ([Chapter 9](09-related-work.md)) |
+| Q-15 | The related-work review: a first pass is done, other regional state universities and delivery coverage in Baybay remain, and digital twins had only a light pass | P1 | Desk research ([Chapter 9](09-related-work.md)), then field checks |
 | Q-16 | How do accountable identity and a safe way to raise concerns coexist on the network? | P1 | Field research, then a design decision |
 | Q-17 | Which offices will commit to answering students on the network, and how fast? | P0 | The OVPSAS pitch |
+| Q-18 | What will OneVSU Mobile and the OneVSU Portal cover for students: notices, office directories, service requests, or Q&A? | P1 | Systems discovery, before the pitch |
+| Q-19 | How does the academic calendar, including breaks, change Hop-It's demand, and when should the Alpha run? | P1 | Owner's decision, with the Alpha plan |
 
-Q-03 was resolved by D-035. Priorities follow v0.1: P0 blocks the next step, P1 shapes the design and comes early, and P2 can run in parallel. The full v0.1 register of about 65 questions is in the [archive](https://github.com/Ywcxz/project-campus/blob/main/archive/v0.1/campus-rd-blueprint-v0.1.md) (§18.4).
+Q-03 was resolved by D-035, and Q-12 was answered on 4 October 2026 by the Third SOUA, cited in [Chapter 6](06-vsu-context.md). Priorities follow v0.1: P0 blocks the next step, P1 shapes the design and comes early, and P2 can run in parallel. The full v0.1 register of about 65 questions is in the [archive](https://github.com/Ywcxz/project-campus/blob/main/archive/v0.1/campus-rd-blueprint-v0.1.md) (§18.4).
+
+## Corrections
+
+Factual errors found after publication are fixed in place and listed here. [Established]
+
+| ID | Correction | Fixed | Source |
+| --- | --- | --- | --- |
+| C-01 | OVPSAS is the Office of the Vice President for Student Affairs and Services, not Academic Affairs and Services. Fixed in Chapters 0 and 2.1; Chapter 6 now spells it out. | 4 October 2026 | Third SOUA; VSU Key Officials page |
+| C-02 | The e-attendance named under DIGITS tracks employees' daily attendance. Chapter 2.1 had assumed it covered event attendance. | 4 October 2026 | Third SOUA |
