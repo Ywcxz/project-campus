@@ -31,7 +31,7 @@ All were recorded on 3 October 2026. "Project instructions v2" means the owner's
 
 ## Decisions recorded after v0.2
 
-D-037 and D-038 were recorded on 4 October 2026, D-039 on 5 October 2026, and D-040 to D-053 on 7 October 2026. On 7 October 2026 the owner also confirmed D-032, D-033, D-034, D-036, D-038, D-043, D-044, and D-045, which had been recorded as proposals.
+D-037 and D-038 were recorded on 4 October 2026, D-039 on 5 October 2026, and D-040 to D-054 on 7 October 2026. On 7 October 2026 the owner also confirmed D-032, D-033, D-034, D-036, D-038, D-043, D-044, and D-045, which had been recorded as proposals.
 
 | ID | Decision | Status | Basis |
 | --- | --- | --- | --- |
@@ -52,6 +52,7 @@ D-037 and D-038 were recorded on 4 October 2026, D-039 on 5 October 2026, and D-
 | D-051 | The study's sampling settings: a six-week window (`N` = 6) with one date per weekday for each group (`k` = 1), raised to 2 only if a practice tally takes under about 15 minutes. Three practice tallies on days outside the sample come first. The window starts on the Monday after the census is settled, inside regular class weeks and clear of exam weeks and breaks. Resolves Q-21. | [Established] | Owner's decision, 7 October 2026 |
 | D-052 | Groups with no posts in the 30 days before they are checked stay in the study's census, excluded as inactive, so they can still be named as predecessors for H3. They get no day tallies. Resolves Q-22. | [Established] | Owner's decision, 7 October 2026 |
 | D-053 | The study's cut-offs, fixed before any data is read. H1, altered or contradicted reappearances: supports at 25% or more, counts against under 10%, judged after 20 traced announcements. H2, unanswered questions in community groups: supports at 30% or more, counts against at 15% or less, after 50 questions. H3, included community groups that replace an earlier one: supports at 25% or more, counts against under 10%, after 15 community groups. H4, the highest topic rate of anonymous posting against the overall rate: supports at 2× or more, counts against if anonymous posts are under 5% of all posts or no topic reaches 1.5×, after 30 anonymous posts. Results in between are inconclusive, and results below the minimum are not enough data. Resolves Q-23. | [Established] | Owner's decision, 7 October 2026 |
+| D-054 | Amends D-053 before any data is read: for H4, a topic's rate counts only if the topic has at least 10 posts, anonymous and named, on the sampled days. If no topic has 10 posts, H4 reads not enough data. This stops a topic with a handful of posts from deciding the result. | [Established] | Owner's decision, 7 October 2026 |
 
 ## Decisions carried from v0.1
 
