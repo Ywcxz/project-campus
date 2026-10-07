@@ -20,7 +20,7 @@ In the long run, CAMPUS points toward campus-controlled infrastructure: essentia
 
 The idea began as an intranet students could use without mobile data. The July 2026 version of this document reframed it after a fair objection: most students already have some internet access. The lasting value is not offline access for its own sake but an architecture organized around how campus information behaves. [Established]
 
-That architecture has four layers: an interface installed once, data held as small independent objects such as posts and notices, a sync layer that sends only what changed, and storage both on campus servers and on each device. Sync speeds are tiered. Official notices arrive within about a minute, discussions and listings follow on a slower cycle, and archives load on demand. None of these techniques is new; what CAMPUS adds is a domain model shaped like the university. [Proposed] (D-034)
+That architecture has four layers: an interface installed once, data held as small independent objects such as posts and notices, a sync layer that sends only what changed, and storage both on campus servers and on each device. Sync speeds are tiered. Official notices arrive within about a minute, discussions and listings follow on a slower cycle, and archives load on demand. This is the network's starting architecture. [Established] (D-034) None of these techniques is new; what CAMPUS adds is a domain model shaped like the university. [Proposed]
 
 ```text
 outside services and the internet

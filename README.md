@@ -1,6 +1,6 @@
 # Project CAMPUS — Master Document
 
-CAMPUS (Connected Academic Matrix Platform for Universities and Schools) is a proposal for a different approach to digital transformation at Visayas State University: a digital layer over the physical university that connects people, organizations, knowledge, places, services, and opportunities, designed around VSU's own culture, values, policies, geography, and people.
+CAMPUS (Connecting All Members, Places, and University Services) is a proposal for a different approach to digital transformation at Visayas State University: a digital layer over the physical university that connects people, organizations, knowledge, places, services, and opportunities, designed around VSU's own culture, values, policies, geography, and people.
 
 **Live:** https://project-campus-gilt.vercel.app · **Version:** 0.2, October 2026 · **Status:** an independent proposal, not reviewed or endorsed by any VSU office.
 

@@ -2,7 +2,7 @@
 
 *What CAMPUS is, where it stands, and how to read this document*
 
-CAMPUS, the Connected Academic Matrix Platform for Universities and Schools, is a proposal for a different approach to digital transformation at Visayas State University. It imagines a digital layer over the physical university that connects people, organizations, knowledge, places, services, and opportunities, designed around VSU's own culture, values, policies, geography, and people. It is not a commercial product and not a plan for Philippine higher education in general. [Established]
+CAMPUS, short for Connecting All Members, Places, and University Services, is a proposal for a different approach to digital transformation at Visayas State University. It imagines a digital layer over the physical university that connects people, organizations, knowledge, places, services, and opportunities, designed around VSU's own culture, values, policies, geography, and people. It is not a commercial product and not a plan for Philippine higher education in general. [Established]
 
 ## Where it stands, October 2026
 
@@ -37,6 +37,6 @@ Sources are kept apart by type as well: official information, community knowledg
 
 ## What changed from v0.1
 
-Version 0.1, committed on 22 September 2026, was a 55,776-word R&D blueprint plus an 18-chapter site that restated it in about 19,300 words. Version 0.2 reorganizes everything around the product structure and cuts the text to about 11,700 words. Nothing is lost: v0.1 sits unchanged in the [archive](https://github.com/Ywcxz/project-campus/tree/main/archive/v0.1), and chapters cite its sections where detail helps. Every change of direction is recorded as decisions D-021 to D-036.
+Version 0.1, committed on 22 September 2026, was a 55,776-word R&D blueprint plus an 18-chapter site that restated it in about 19,300 words. Version 0.2 reorganizes everything around the product structure and cuts the text to about 11,700 words. Nothing is lost: v0.1 sits unchanged in the [archive](https://github.com/Ywcxz/project-campus/tree/main/archive/v0.1), and chapters cite its sections where detail helps. Every change of direction since then is recorded in the decision register, starting at D-021.
 
 > **Not affiliated.** Project CAMPUS is not officially affiliated with Visayas State University.

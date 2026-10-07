@@ -52,7 +52,7 @@ All of it is [Proposed]. The first version would include only what the research 
 
 ## Starting architecture: channels
 
-The July 2026 version of this document organized all information into channels: a college, a course section, an office's official announcements, a marketplace category, or one student organization. People subscribe to the channels that matter to them, and each channel syncs at a speed suited to its content. Official notices arrive within about a minute, discussions and listings sync on a slower cycle, and archives load only when someone opens them. Version 0.2 restores this as the network's starting architecture. [Proposed] (D-034)
+The July 2026 version of this document organized all information into channels: a college, a course section, an office's official announcements, a marketplace category, or one student organization. People subscribe to the channels that matter to them, and each channel syncs at a speed suited to its content. Official notices arrive within about a minute, discussions and listings sync on a slower cycle, and archives load only when someone opens them. Version 0.2 restores this as the network's starting architecture, which the real-time chat question (Q-04) can still revise. [Established] (D-034)
 
 The channel model replaced an earlier "offline platform" pitch, which had met a fair objection: most students already have some internet access. What survived was a domain model shaped like the university, not a claim about connectivity. [Established]
 
