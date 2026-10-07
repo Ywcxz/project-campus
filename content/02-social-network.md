@@ -63,7 +63,7 @@ v0.1 already put a community and knowledge layer (profiles, organization pages, 
 ## Hard questions
 
 - **Why would people move?** Everyone is already on Facebook, it is free, and it is familiar. The network wins only by doing the three things above clearly better. [Unresolved]
-- **Accountability or safety to speak?** Anonymity in unofficial groups is why a wrong answer carries no consequence. It is also why students dare to raise concerns. A network where every post carries a verified name could silence the criticism it promises to protect, so the design needs both: accountable identity by default and a protected way to raise concerns. [Unresolved] (Q-16)
+- **Accountability or safety to speak?** Anonymity in unofficial groups is why a wrong answer carries no consequence. It is also why students dare to raise concerns. A network where every post carries a verified name could silence the criticism it promises to protect, so the design needs both. The direction is set: participation is identified by default, and some categories or sections may let members take part anonymously or under a pseudonym. [Established] (D-046) Dcard's verified-but-unnamed posting is the closest tested precedent ([Chapter 9](09-related-work.md)). [Established] What is open is which sections, and anonymous to whom: on a network VSU runs, a student criticizing VSU needs protection from the institution as well as from other members, so who may reveal an identity, and through what process, decides whether the anonymous sections feel safe. [Unresolved] (Q-16) The Facebook study looks at which topics people already post anonymously, to inform which sections need the setting ([Chapter 7.1](07a-facebook-study.md)). [Established] (D-048)
 - **Will offices answer?** The gap between students and the university is partly organizational. The network closes it only if offices commit to respond, which makes office responsiveness, not software, the real ask of the pitch. [Unresolved] (Q-17)
 - **Real-time chat or tiered sync?** The channel model deliberately avoided the always-on infrastructure that instant messaging needs. Real-time chat brings that cost back. [Unresolved]
 - **Who moderates?** Moderation needs people, rules, appeals, and an owner inside VSU. [Unresolved]
@@ -73,7 +73,7 @@ v0.1 already put a community and knowledge layer (profiles, organization pages, 
 
 ## How it would be tested before it is built
 
-1. **Field research.** Interviews and a survey on how students, faculty, staff, and offices use Facebook and official channels today, starting with the three use cases above.
+1. **Field research.** Interviews and a survey on how students, faculty, staff, and offices use Facebook and official channels today, starting with the three use cases above, alongside a manual study of public VSU-related Facebook pages and groups ([Chapter 7.1](07a-facebook-study.md)).
 2. **Problem synthesis.** Decide whether the problem is real, for whom, and how serious it is. Stop or narrow if it isn't.
 3. **A bounded first version, if justified.** One community, for example a college or a set of organizations, with consent, clear rules, and an exit plan. [Proposed]
 4. **Gate.** Continue only if people choose it over Facebook for the tasks it targets.
