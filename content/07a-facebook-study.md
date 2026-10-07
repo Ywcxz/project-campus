@@ -21,13 +21,13 @@ These rules come from the owner's brief. [Established] (D-041)
 
 Public visibility does not settle whether studying something is ethical, and verbatim quotes can be found again by searching for them, which identifies their authors; the Association of Internet Researchers' guidelines note that reworded quotes or composites can reduce that risk. [Established] Recording no quotes, names, or links applies that advice. [Established]
 
-**The author's own activity.** As an alumnus, the author already belongs to some of the groups the census may include, and has taken part in them. While a channel is in the census, he does not post, comment, react, or message in it. If he took part there before the study began, the private workbook says so in one line, without describing what he posted, and his own posts and comments are never counted or coded: a reply of his is not a peer answer. [Proposed] (D-045)
+**The author's own activity.** As an alumnus, the author already belongs to some of the groups the census may include, and has taken part in them. While a channel is in the census, he does not post, comment, react, or message in it. If he took part there before the study began, the private workbook says so in one line, without describing what he posted, and his own posts and comments are never counted or coded: a reply of his is not a peer answer. [Established] (D-045)
 
 ## Which channels count
 
-VSU has one official university Facebook page, and it is in the census. [Established] Which of the other pages and groups the search turns up count as Main Campus channels is still open. [Unresolved] (Q-20) The search may find pages for colleges, offices, the student government, and organizations, and community groups for batches, dorms, buying and selling, and anonymous stories. Which of these exist is what the search log will show. [Unresolved]
+VSU has one official university Facebook page, and it is in the census. [Established] The other pages and groups the search turns up are sorted by the rule below. [Established] (D-047) The search may find pages for colleges, offices, the student government, and organizations, and community groups for batches, dorms, buying and selling, and anonymous stories. Which of these exist is what the search log will show. [Unresolved]
 
-A working rule for the first search pass: [Proposed] (Q-20)
+The working rule, adopted for the census and open to revision after the first search pass: [Established] (D-047)
 
 - **University-wide channels are in,** tagged as shared, because Main Campus people use them even though they serve every campus. The official page is one.
 - **Channels tied to the Main Campus are in:** a Main Campus college, office, organization, dorm, place, or batch.
@@ -36,16 +36,16 @@ A working rule for the first search pass: [Proposed] (Q-20)
 
 ## Starting hypotheses
 
-The owner set four starting hypotheses. Each tests a problem hypothesis from [Chapter 7](07-evidence.md). [Established] (D-042)
+The owner set four starting hypotheses, and reworded H4 so that observation can test it. Each tests a problem hypothesis from [Chapter 7](07-evidence.md). [Established] (D-042, D-048)
 
 | ID | Starting hypothesis | Chapter 7 hypothesis it tests | What observation can show |
 | --- | --- | --- | --- |
 | H1 | Official information is fragmented across channels | Information is scattered; official notices and rumor look alike | Where official announcements first appear, where they reappear, how late, and whether they change on the way |
 | H2 | Serious questions go unanswered in community groups | Students take institutional questions to unofficial groups | How many questions sampled days hold, and whether an official source, a peer, or no one answered |
 | H3 | Groups drift and get replaced when their founders leave | Knowledge is lost when officers change | Which groups replace earlier ones, and which have gone inactive |
-| H4 | Students prefer pseudonymous participation | Accountable identity against safety to speak (Q-16) | Behavior only; a preference needs interviews and the survey |
+| H4 | Where a group or page allows anonymous posts, people post anonymously for some topics far more than for others | Accountable identity against safety to speak (Q-16) | Which topics people post anonymously and which under their names, where anonymous posts are allowed |
 
-H4 is about why people participate as they do, which observation cannot see. Rewording it as something observable, or handing it to the interviews, is open. [Unresolved] (Q-23) One observable version: in groups and pages that allow anonymous posts, which topics people post anonymously and which under their names. That would tell the network which sections need the anonymous or pseudonymous setting that D-046 allows. [Proposed] Field notes that fit no hypothesis are coded NEW, so the study can find what it was not looking for. [Established] (D-043) Changes to the hypotheses after the first tally are entered in the decision register with a date. [Proposed]
+H4 first read "students prefer pseudonymous participation," a preference that observation cannot see. The reworded H4 asks what observation can see, and its answer informs which network sections get the anonymous or pseudonymous setting that D-046 allows. [Established] (D-048) The v1 workbook has no field for it, so it needs an addition before the first tally: counts of anonymous and named posts by topic in each day tally, with the topics defined in the Guide tab. [Proposed] Field notes that fit no hypothesis are coded NEW, so the study can find what it was not looking for. [Established] (D-043) Changes to the hypotheses after the first tally are entered in the decision register with a date, as change control requires for anything above a minor change ([Chapter 11](11-roadmap.md)). [Established]
 
 ## The instrument
 
@@ -81,7 +81,7 @@ In newspaper content analysis, Riffe, Aust, and Lacy found that samples stratifi
 - **Reasons.** It records what people do, not why. [Established]
 - **What was removed.** Posts deleted or hidden before a tally are missed, and counts keep changing after it. [Established]
 - **How many people a problem affects.** Activity in public groups is not a measure of the student body; the survey measures prevalence. This study alone cannot put a problem on a pitch slide, and the D-038 bars stay as they are. [Established]
-- **A second opinion.** One person codes everything. The working definitions limit drift, and recoding a random tenth of the field notes some weeks later would show how consistent the coding is. [Proposed]
+- **A second opinion.** One person codes everything. The working definitions limit drift, and a random tenth of the field notes is recoded some weeks later to show how consistent the coding is. [Established] (D-049)
 
 ## How it could be proved wrong
 
@@ -92,7 +92,7 @@ Each hypothesis has a result that counts against it. [Proposed]
 | H1 | Official announcements come from one or two channels, and where they reappear in groups they arrive unchanged |
 | H2 | Most questions on sampled days get an answer, from an official source or a peer, within the two-day window |
 | H3 | Long-lived groups stay active through changes of officers and batches, and few groups replace earlier ones |
-| H4 | Not testable by observation as worded (Q-23) |
+| H4 | Anonymous posts are rare even where they are allowed, or spread about evenly across topics |
 
 The numbers that turn these into pass or fail are to be fixed before the first tally, as D-038 fixed the pitch bars before any data was read. [Proposed] What those numbers are is open. [Unresolved] (Q-23)
 
@@ -111,7 +111,9 @@ Rules for what leaves the workbook. [Established] (D-044)
 - The workbook is built and verified with synthetic data. [Established]
 - No channel has been censused and no day tallied. [Established]
 - The owner confirmed the instrument and the reporting rules on 7 October 2026. [Established] (D-043, D-044)
-- Before the first tally: Q-20, Q-21, and Q-23 need answers, and D-045 needs the owner's confirmation. Q-22 can wait for the first search pass. [Established]
+- The owner settled the rest of the study's design the same day: the author's own activity, which channels count, H4's wording, and the recode check. [Established] (D-045, D-047, D-048, D-049)
+- The first search pass and the census can start. [Established]
+- Before the first tally: Q-21 and Q-23 need answers, and the workbook needs its H4 addition. Q-22 can wait for the first search pass. [Established]
 
 ## Sources
 
