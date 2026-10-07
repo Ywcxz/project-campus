@@ -21,7 +21,7 @@ These rules come from the owner's brief. [Established] (D-041)
 
 Public visibility does not settle whether studying something is ethical, and verbatim quotes can be found again by searching for them, which identifies their authors; the Association of Internet Researchers' guidelines note that reworded quotes or composites can reduce that risk. [Established] Recording no quotes, names, or links applies that advice. [Established]
 
-**The author's own activity.** As an alumnus, the author already belongs to some of the groups the census may include, and has taken part in them. While a channel is in the census, he does not post, comment, react, or message in it. Activity there before the study began is noted in the private workbook, and his own posts and comments are never counted or coded: a reply of his is not a peer answer. [Proposed] (D-045)
+**The author's own activity.** As an alumnus, the author already belongs to some of the groups the census may include, and has taken part in them. While a channel is in the census, he does not post, comment, react, or message in it. If he took part there before the study began, the private workbook says so in one line, without describing what he posted, and his own posts and comments are never counted or coded: a reply of his is not a peer answer. [Proposed] (D-045)
 
 ## Which channels count
 
