@@ -16,12 +16,23 @@ These rules come from the owner's brief. [Established] (D-041)
 
 - **Public channels only.** Public pages and public groups related to VSU Main Campus. Private groups, group chats, and personal profiles are out of scope, whether or not the author can see them.
 - **By hand.** The author does all Facebook work manually. No scraping, scripts, browser automation, or AI tools open, browse, or collect from Facebook or any Meta site.
-- **Observation only.** The author does not post, comment, react, or message in the channels studied.
+- **Observation only.** The study records what is publicly visible and asks nothing of anyone.
 - **Nothing that identifies people.** No names, profile links, post links, or screenshots are recorded. Field notes are paraphrases, with no quotes, names, or links.
 
 Public visibility does not settle whether studying something is ethical, and verbatim quotes can be found again by searching for them, which identifies their authors; the Association of Internet Researchers' guidelines note that reworded quotes or composites can reduce that risk. [Established] Recording no quotes, names, or links applies that advice. [Established]
 
-What counts as a VSU Main Campus channel, and how to treat channels shared with other VSU campuses, is still open. [Unresolved] (Q-20)
+**The author's own activity.** As an alumnus, the author already belongs to some of the groups the census may include, and has taken part in them. While a channel is in the census, he does not post, comment, react, or message in it. Activity there before the study began is noted in the private workbook, and his own posts and comments are never counted or coded: a reply of his is not a peer answer. [Proposed] (D-045)
+
+## Which channels count
+
+VSU has one official university Facebook page, and it is in the census. [Established] Which of the other pages and groups the search turns up count as Main Campus channels is still open. [Unresolved] (Q-20) The search may find pages for colleges, offices, the student government, and organizations, and community groups for batches, dorms, buying and selling, and anonymous stories. Which of these exist is what the search log will show. [Unresolved]
+
+A working rule for the first search pass: [Proposed] (Q-20)
+
+- **University-wide channels are in,** tagged as shared, because Main Campus people use them even though they serve every campus. The official page is one.
+- **Channels tied to the Main Campus are in:** a Main Campus college, office, organization, dorm, place, or batch.
+- **Community groups are in if most of what they post is about Main Campus life,** judged by what they post, not by their name.
+- **Channels about another campus only are out.**
 
 ## Starting hypotheses
 
@@ -34,11 +45,11 @@ The owner set four starting hypotheses. Each tests a problem hypothesis from [Ch
 | H3 | Groups drift and get replaced when their founders leave | Knowledge is lost when officers change | Which groups replace earlier ones, and which have gone inactive |
 | H4 | Students prefer pseudonymous participation | Accountable identity against safety to speak (Q-16) | Behavior only; a preference needs interviews and the survey |
 
-H4 is about why people participate as they do, which observation cannot see. Rewording it as something observable, or handing it to the interviews, is open. [Unresolved] (Q-23) Field notes that fit no hypothesis are coded NEW, so the study can find what it was not looking for. [Proposed] (D-043) Changes to the hypotheses after the first tally are entered in the decision register with a date. [Proposed]
+H4 is about why people participate as they do, which observation cannot see. Rewording it as something observable, or handing it to the interviews, is open. [Unresolved] (Q-23) One observable version: in groups and pages that allow anonymous posts, which topics people post anonymously and which under their names. That would tell the network which sections need the anonymous or pseudonymous setting that D-046 allows. [Proposed] Field notes that fit no hypothesis are coded NEW, so the study can find what it was not looking for. [Established] (D-043) Changes to the hypotheses after the first tally are entered in the decision register with a date. [Proposed]
 
 ## The instrument
 
-The study runs on a spreadsheet workbook built for Google Sheets (v1, 7 October 2026). It starts blank, with a dropdown for every categorical field. [Established] The tabs follow the owner's brief; splitting traces into two tabs, the IDs, the working definitions, and the row checks are proposals awaiting the owner. [Proposed] (D-043)
+The study runs on a spreadsheet workbook built for Google Sheets (v1, 7 October 2026). It starts blank, with a dropdown for every categorical field. [Established] The tabs follow the owner's brief, and the owner confirmed the design choices added to it: traces split into two tabs, the IDs, the working definitions, and the row checks. [Established] (D-043)
 
 | Tab | One row per | What it records |
 | --- | --- | --- |
@@ -52,7 +63,7 @@ The study runs on a spreadsheet workbook built for Google Sheets (v1, 7 October 
 | Sampling plan | planned day in one group | Which days to tally, listed as overdue, due today, upcoming, or done |
 | Summary | figure | Totals and rates, by formula only |
 
-The workbook guards its own rules. Every data tab checks each row and explains problems in plain language, the census flags any address that looks like a post or a profile rather than a page or group, and field notes flag links, @-mentions, and quote marks. [Proposed] (D-043)
+The workbook guards its own rules. Every data tab checks each row and explains problems in plain language, the census flags any address that looks like a post or a profile rather than a page or group, and field notes flag links, @-mentions, and quote marks. [Established] (D-043)
 
 A copy filled with synthetic data matched independent calculations for every summary figure, planned date, and row check, with no formula errors. [Established] It has not yet been tested inside Google Sheets itself. [Unresolved]
 
@@ -60,7 +71,7 @@ A copy filled with synthetic data matched independent calculations for every sum
 
 Day tallies sample days, not posts: random days for each included group, stratified by weekday, each tallied two days after it happens so that replies have time to arrive. [Established] (D-042)
 
-The proposed design is a constructed week. Each group gets `k` dates for every weekday inside an `N`-week window, and with `k` above 1 the window splits into `k` blocks, one date per weekday in each. The dates come from a fixed seed, so the plan can be reproduced and no date can be swapped later for a busier one. [Proposed] (D-043) With `k` = 1, each group needs seven tallies, so twenty groups need 140. [Established]
+The design is a constructed week. Each group gets `k` dates for every weekday inside an `N`-week window, and with `k` above 1 the window splits into `k` blocks, one date per weekday in each. The dates come from a fixed seed, so the plan can be reproduced and no date can be swapped later for a busier one. [Established] (D-043) With `k` = 1, each group needs seven tallies, so twenty groups need 140. [Established]
 
 In newspaper content analysis, Riffe, Aust, and Lacy found that samples stratified by weekday estimated six months of content better than simple random or consecutive-day samples, and that one constructed week did about as well as four. [Established] Whether that efficiency carries over to Facebook groups has not been tested. [Unresolved] The start date, `N`, and `k` are open, a choice between workload and steadier rates. [Unresolved] (Q-21) So is whether long-inactive groups stay in the census, which matters for H3. [Unresolved] (Q-22)
 
@@ -87,7 +98,7 @@ The numbers that turn these into pass or fail are to be fixed before the first t
 
 ## Reporting
 
-Proposed rules for what leaves the workbook. [Proposed] (D-044)
+Rules for what leaves the workbook. [Established] (D-044)
 
 - The workbook stays private, outside this repository, as the stakeholder log does (D-030).
 - This chapter gains a findings section with counts and rates by kind of channel.
@@ -99,7 +110,8 @@ Proposed rules for what leaves the workbook. [Proposed] (D-044)
 
 - The workbook is built and verified with synthetic data. [Established]
 - No channel has been censused and no day tallied. [Established]
-- Before the first tally: Q-20 to Q-23 need answers, and D-043 and D-044 need the owner's confirmation. [Proposed]
+- The owner confirmed the instrument and the reporting rules on 7 October 2026. [Established] (D-043, D-044)
+- Before the first tally: Q-20, Q-21, and Q-23 need answers, and D-045 needs the owner's confirmation. Q-22 can wait for the first search pass. [Established]
 
 ## Sources
 
