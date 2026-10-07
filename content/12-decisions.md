@@ -31,7 +31,7 @@ All were recorded on 3 October 2026. "Project instructions v2" means the owner's
 
 ## Decisions recorded after v0.2
 
-D-037 and D-038 were recorded on 4 October 2026, D-039 on 5 October 2026, and D-040 to D-049 on 7 October 2026. On 7 October 2026 the owner also confirmed D-032, D-033, D-034, D-036, D-038, D-043, D-044, and D-045, which had been recorded as proposals.
+D-037 and D-038 were recorded on 4 October 2026, D-039 on 5 October 2026, and D-040 to D-053 on 7 October 2026. On 7 October 2026 the owner also confirmed D-032, D-033, D-034, D-036, D-038, D-043, D-044, and D-045, which had been recorded as proposals.
 
 | ID | Decision | Status | Basis |
 | --- | --- | --- | --- |
@@ -48,6 +48,10 @@ D-037 and D-038 were recorded on 4 October 2026, D-039 on 5 October 2026, and D-
 | D-047 | The Facebook study's census follows a working rule. University-wide channels, including the official university page, are in and tagged as shared with other campuses; channels tied to a Main Campus college, office, organization, dorm, place, or batch are in; community groups are in if most of what they post is about Main Campus life, judged by their posts rather than their name; channels about another campus only are out. The rule can be revised after the first search pass, with any change entered here. Resolves Q-20. | [Established] | Owner's decision, 7 October 2026 |
 | D-048 | H4 is reworded so that observation can test it: where a group or page allows anonymous posts, people post anonymously for some topics far more than for others. Its answer informs which network sections get the setting D-046 allows. The v1 workbook has no field for it, so it needs an addition before the first tally. Replaces H4 in D-042 and settles that part of Q-23. | [Established] | Owner's decision, 7 October 2026 |
 | D-049 | In the Facebook study, a random tenth of the field notes is recoded some weeks after first coding, to check consistency while one person codes everything. | [Established] | Owner's decision, 7 October 2026 |
+| D-050 | The Facebook study's H4 topics, in order of precedence: complaints about the university, personal problems, buying and selling, offices and services, academics, campus life, and other. A post goes under the first topic that fits, and a post under a group nickname counts as anonymous. | [Established] | Owner's decision, 7 October 2026 |
+| D-051 | The study's sampling settings: a six-week window (`N` = 6) with one date per weekday for each group (`k` = 1), raised to 2 only if a practice tally takes under about 15 minutes. Three practice tallies on days outside the sample come first. The window starts on the Monday after the census is settled, inside regular class weeks and clear of exam weeks and breaks. Resolves Q-21. | [Established] | Owner's decision, 7 October 2026 |
+| D-052 | Groups with no posts in the 30 days before they are checked stay in the study's census, excluded as inactive, so they can still be named as predecessors for H3. They get no day tallies. Resolves Q-22. | [Established] | Owner's decision, 7 October 2026 |
+| D-053 | The study's cut-offs, fixed before any data is read. H1, altered or contradicted reappearances: supports at 25% or more, counts against under 10%, judged after 20 traced announcements. H2, unanswered questions in community groups: supports at 30% or more, counts against at 15% or less, after 50 questions. H3, included community groups that replace an earlier one: supports at 25% or more, counts against under 10%, after 15 community groups. H4, the highest topic rate of anonymous posting against the overall rate: supports at 2× or more, counts against if anonymous posts are under 5% of all posts or no topic reaches 1.5×, after 30 anonymous posts. Results in between are inconclusive, and results below the minimum are not enough data. Resolves Q-23. | [Established] | Owner's decision, 7 October 2026 |
 
 ## Decisions carried from v0.1
 
@@ -103,11 +107,8 @@ v0.1's planning file, DOCUMENT-BLUEPRINT.txt, used the numbers D-001 to D-003 fo
 | Q-17 | Which offices will commit to answering students on the network, and how fast? | P0 | The OVPSAS pitch |
 | Q-18 | What will OneVSU Mobile and the OneVSU Portal cover for students: notices, office directories, service requests, or Q&A? | P1 | Systems discovery, before the pitch |
 | Q-19 | How does the academic calendar, including breaks, change Hop-It's demand, and when should the Alpha run? | P1 | Owner's decision, with the Alpha plan |
-| Q-21 | The study's sampling settings: the start date, the number of weeks (`N`), and the days per weekday (`k`) | P0 before the first tally | Owner's decision, weighing workload against steadier rates |
-| Q-22 | Do long-inactive groups stay in the study's census? The answer matters for H3. | P1 | Owner's decision |
-| Q-23 | Which results count against H1 to H4 in the Facebook study, in numbers? [Chapter 7.1](07a-facebook-study.md) sets out what would count against each. | P0 before the first tally | Owner's decision, fixed before any data is read, as D-038 was for the pitch |
 
-Q-03 was resolved by D-035 and Q-20 by D-047, and Q-12 was answered on 4 October 2026 by the Third SOUA, cited in [Chapter 6](06-vsu-context.md). Priorities follow v0.1: P0 blocks the next step, P1 shapes the design and comes early, and P2 can run in parallel. The full v0.1 register of about 65 questions is in the [archive](https://github.com/Ywcxz/project-campus/blob/main/archive/v0.1/campus-rd-blueprint-v0.1.md) (§18.4).
+Q-03 was resolved by D-035, Q-20 by D-047, Q-21 by D-051, Q-22 by D-052, and Q-23 by D-053. Q-12 was answered on 4 October 2026 by the Third SOUA, cited in [Chapter 6](06-vsu-context.md). Priorities follow v0.1: P0 blocks the next step, P1 shapes the design and comes early, and P2 can run in parallel. The full v0.1 register of about 65 questions is in the [archive](https://github.com/Ywcxz/project-campus/blob/main/archive/v0.1/campus-rd-blueprint-v0.1.md) (§18.4).
 
 ## Corrections
 
