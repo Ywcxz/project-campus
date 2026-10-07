@@ -12,6 +12,7 @@ The largest risk is that the problems are smaller than assumed. The second is th
 | No owner for moderation | Network | Name a moderation owner and rules before launch | No one at VSU will own it |
 | Offices don't answer on the network | Network | Make office responsiveness part of the pitch; start with offices that commit to answer | Student questions sit unanswered for days |
 | Privacy breach or over-collection | All | Collect less; legal review; synthetic data in prototypes | Requirements can't be met responsibly |
+| The Facebook study exposes people or groups | Field research | No names, links, quotes, or screenshots; a private workbook; findings reported by kind of channel (D-041, D-044) | A published finding can be traced back to a person, a post, or a community-run group |
 | Pooled demand too sparse, or service too poor | Hop-It | Guardrails, human dispatch, a small cohort | The Alpha disproves the hypothesis |
 | Scope creep | All | The product structure, the gates, and the decision register | Work starts on a later direction without a decision |
 | Solo capacity | All | Sequence the outputs, ship small, write decisions down | Commitments exceed one person's time |

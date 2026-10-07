@@ -73,7 +73,7 @@ v0.1 already put a community and knowledge layer (profiles, organization pages, 
 
 ## How it would be tested before it is built
 
-1. **Field research.** Interviews and a survey on how students, faculty, staff, and offices use Facebook and official channels today, starting with the three use cases above.
+1. **Field research.** Interviews and a survey on how students, faculty, staff, and offices use Facebook and official channels today, starting with the three use cases above, alongside a manual study of public VSU-related Facebook pages and groups ([Chapter 7.1](07a-facebook-study.md)).
 2. **Problem synthesis.** Decide whether the problem is real, for whom, and how serious it is. Stop or narrow if it isn't.
 3. **A bounded first version, if justified.** One community, for example a college or a set of organizations, with consent, clear rules, and an exit plan. [Proposed]
 4. **Gate.** Continue only if people choose it over Facebook for the tasks it targets.
