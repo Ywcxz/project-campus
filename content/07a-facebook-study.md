@@ -34,6 +34,8 @@ The working rule, adopted for the census and open to revision after the first se
 - **Community groups are in if most of what they post is about Main Campus life,** judged by what they post, not by their name.
 - **Channels about another campus only are out.**
 
+Groups with no posts in the 30 days before they are checked stay in the census but are excluded as inactive. They can still be named as the group a newer one replaces, which H3 needs, and they get no day tallies. [Established] (D-052)
+
 ## Starting hypotheses
 
 The owner set four starting hypotheses, and reworded H4 so that observation can test it. Each tests a problem hypothesis from [Chapter 7](07-evidence.md). [Established] (D-042, D-048)
@@ -45,11 +47,11 @@ The owner set four starting hypotheses, and reworded H4 so that observation can 
 | H3 | Groups drift and get replaced when their founders leave | Knowledge is lost when officers change | Which groups replace earlier ones, and which have gone inactive |
 | H4 | Where a group or page allows anonymous posts, people post anonymously for some topics far more than for others | Accountable identity against safety to speak (Q-16) | Which topics people post anonymously and which under their names, where anonymous posts are allowed |
 
-H4 first read "students prefer pseudonymous participation," a preference that observation cannot see. The reworded H4 asks what observation can see, and its answer informs which network sections get the anonymous or pseudonymous setting that D-046 allows. [Established] (D-048) Workbook v1.1 records it: in groups with anonymous posting or nicknames on, each day tally counts posts by topic, anonymous and named. [Established] The seven topics and their order of precedence are a proposal, to be settled before data collection. [Proposed] Field notes that fit no hypothesis are coded NEW, so the study can find what it was not looking for. [Established] (D-043) Changes to the hypotheses after the first tally are entered in the decision register with a date, as change control requires for anything above a minor change ([Chapter 11](11-roadmap.md)). [Established]
+H4 first read "students prefer pseudonymous participation," a preference that observation cannot see. The reworded H4 asks what observation can see, and its answer informs which network sections get the anonymous or pseudonymous setting that D-046 allows. [Established] (D-048) Workbook v1.1 records it: in groups with anonymous posting or nicknames on, each day tally counts posts by topic, anonymous and named. [Established] The seven topics, in order of precedence, are complaints about the university, personal problems, buying and selling, offices and services, academics, campus life, and other. A post goes under the first that fits, and a post under a group nickname counts as anonymous. [Established] (D-050) Field notes that fit no hypothesis are coded NEW, so the study can find what it was not looking for. [Established] (D-043) Changes to the hypotheses after the first tally are entered in the decision register with a date, as change control requires for anything above a minor change ([Chapter 11](11-roadmap.md)). [Established]
 
 ## The instrument
 
-The study runs on a spreadsheet workbook built for Google Sheets (v1, 7 October 2026; v1.1 the same day). It starts blank, with a dropdown for every categorical field. [Established] Version 1.1 adds the H4 topic counts to day tallies, and two census columns: whether a channel is shared with other VSU campuses (D-047) and whether the author took part there before the study (D-045). [Established] The tabs follow the owner's brief, and the owner confirmed the design choices added to it: traces split into two tabs, the IDs, the working definitions, and the row checks. [Established] (D-043)
+The study runs on a spreadsheet workbook built for Google Sheets (v1, 7 October 2026; v1.1 and v1.2 the same day). It starts blank, with a dropdown for every categorical field. [Established] Version 1.1 adds the H4 topic counts to day tallies, and two census columns: whether a channel is shared with other VSU campuses (D-047) and whether the author took part there before the study (D-045). [Established] Version 1.2 adds a Results tab that applies the cut-offs (D-053), an Inactive exclusion reason (D-052), and the sampling settings (D-051). [Established] The tabs follow the owner's brief, and the owner confirmed the design choices added to it: traces split into two tabs, the IDs, the working definitions, and the row checks. [Established] (D-043)
 
 | Tab | One row per | What it records |
 | --- | --- | --- |
@@ -65,7 +67,7 @@ The study runs on a spreadsheet workbook built for Google Sheets (v1, 7 October 
 
 The workbook guards its own rules. Every data tab checks each row and explains problems in plain language, the census flags any address that looks like a post or a profile rather than a page or group, and field notes flag links, @-mentions, and quote marks. [Established] (D-043)
 
-A copy filled with synthetic data matched independent calculations for every summary figure, planned date, and row check, with no formula errors. Filled with the same synthetic data, v1.1 matched v1 on every existing figure, and its new figures and checks matched independent calculations. [Established] It has not yet been tested inside Google Sheets itself. [Unresolved]
+A copy filled with synthetic data matched independent calculations for every summary figure, planned date, and row check, with no formula errors. Filled with the same synthetic data, v1.1 matched v1 on every existing figure, and its new figures and checks matched independent calculations. Version 1.2 matched v1.1 the same way, and its Results tab gave the expected result in test cases built for every outcome, including values exactly on a cut-off. [Established] It has not yet been tested inside Google Sheets itself. [Unresolved]
 
 ## Sampling
 
@@ -73,7 +75,7 @@ Day tallies sample days, not posts: random days for each included group, stratif
 
 The design is a constructed week. Each group gets `k` dates for every weekday inside an `N`-week window, and with `k` above 1 the window splits into `k` blocks, one date per weekday in each. The dates come from a fixed seed, so the plan can be reproduced and no date can be swapped later for a busier one. [Established] (D-043) With `k` = 1, each group needs seven tallies, so twenty groups need 140. [Established]
 
-In newspaper content analysis, Riffe, Aust, and Lacy found that samples stratified by weekday estimated six months of content better than simple random or consecutive-day samples, and that one constructed week did about as well as four. [Established] Whether that efficiency carries over to Facebook groups has not been tested. [Unresolved] The start date, `N`, and `k` are open, a choice between workload and steadier rates. [Unresolved] (Q-21) So is whether long-inactive groups stay in the census, which matters for H3. [Unresolved] (Q-22)
+In newspaper content analysis, Riffe, Aust, and Lacy found that samples stratified by weekday estimated six months of content better than simple random or consecutive-day samples, and that one constructed week did about as well as four. [Established] Whether that efficiency carries over to Facebook groups has not been tested. [Unresolved] The settings are fixed. The window runs six weeks with `k` = 1, raised to 2 only if a practice tally takes under about 15 minutes; three practice tallies on days outside the sample come first, to time them. The window starts on the Monday after the census is settled, inside regular class weeks and clear of exam weeks and breaks. [Established] (D-051)
 
 ## What it cannot show
 
@@ -85,16 +87,16 @@ In newspaper content analysis, Riffe, Aust, and Lacy found that samples stratifi
 
 ## How it could be proved wrong
 
-Each hypothesis has a result that counts against it. [Proposed]
+The cut-offs were fixed on 7 October 2026, before any data was read, as D-038 fixed the pitch bars. [Established] (D-053) The workbook's Results tab applies them in order: below the minimum a result reads *not enough data*; otherwise it is checked for *counts against*, then *supports*, and anything in between is *inconclusive*. [Established]
 
-| ID | Counts against it |
-| --- | --- |
-| H1 | Official announcements come from one or two channels, and where they reappear in groups they arrive unchanged |
-| H2 | Most questions on sampled days get an answer, from an official source or a peer, within the two-day window |
-| H3 | Long-lived groups stay active through changes of officers and batches, and few groups replace earlier ones |
-| H4 | Anonymous posts are rare even where they are allowed, or spread about evenly across topics |
+| ID | Measure | Supports it | Counts against it | Judged after |
+| --- | --- | --- | --- | --- |
+| H1 | Reappearances of official announcements that were altered or contradicted | 25% or more | Under 10% | 20 traced announcements |
+| H2 | Questions in community groups with no answer by tally time | 30% or more | 15% or less | 50 questions |
+| H3 | Included community groups that replace an earlier group | 25% or more | Under 10% | 15 community groups |
+| H4 | The highest topic rate of anonymous posting, against the overall rate | A topic at 2× or more | Anonymous posts under 5% of all posts, or no topic at 1.5× | 30 anonymous posts |
 
-The numbers that turn these into pass or fail are to be fixed before the first tally, as D-038 fixed the pitch bars before any data was read. [Proposed] What those numbers are is open. [Unresolved] (Q-23)
+H1 is judged on alterations alone, so its result does not depend on which announcements the author chooses to trace. [Established] (D-053)
 
 ## Reporting
 
@@ -111,10 +113,10 @@ Rules for what leaves the workbook. [Established] (D-044)
 - The workbook is built and verified with synthetic data. [Established]
 - No channel has been censused and no day tallied. [Established]
 - The owner confirmed the instrument and the reporting rules on 7 October 2026. [Established] (D-043, D-044)
-- The owner settled the rest of the study's design the same day: the author's own activity, which channels count, H4's wording, and the recode check. [Established] (D-045, D-047, D-048, D-049)
+- The owner settled the rest of the study's design the same day: the author's own activity, which channels count, H4's wording and topics, the recode check, the sampling settings, inactive groups, and the cut-offs. [Established] (D-045, D-047 to D-053)
 - The first search pass and the census can start. [Established]
-- Workbook v1.1 has the H4 addition. [Established]
-- Before the first tally: Q-21 and Q-23 need answers, and the H4 topic list needs the owner's confirmation. Q-22 can wait for the first search pass. [Established]
+- Workbook v1.2 has the H4 topic counts, the Results tab, and the decided settings. [Established]
+- Nothing in the study's design is open. Next come the first search pass and the census, then three practice tallies, then the start date. [Established] (D-051)
 
 ## Sources
 
