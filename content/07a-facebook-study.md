@@ -45,11 +45,11 @@ The owner set four starting hypotheses, and reworded H4 so that observation can 
 | H3 | Groups drift and get replaced when their founders leave | Knowledge is lost when officers change | Which groups replace earlier ones, and which have gone inactive |
 | H4 | Where a group or page allows anonymous posts, people post anonymously for some topics far more than for others | Accountable identity against safety to speak (Q-16) | Which topics people post anonymously and which under their names, where anonymous posts are allowed |
 
-H4 first read "students prefer pseudonymous participation," a preference that observation cannot see. The reworded H4 asks what observation can see, and its answer informs which network sections get the anonymous or pseudonymous setting that D-046 allows. [Established] (D-048) The v1 workbook has no field for it, so it needs an addition before the first tally: counts of anonymous and named posts by topic in each day tally, with the topics defined in the Guide tab. [Proposed] Field notes that fit no hypothesis are coded NEW, so the study can find what it was not looking for. [Established] (D-043) Changes to the hypotheses after the first tally are entered in the decision register with a date, as change control requires for anything above a minor change ([Chapter 11](11-roadmap.md)). [Established]
+H4 first read "students prefer pseudonymous participation," a preference that observation cannot see. The reworded H4 asks what observation can see, and its answer informs which network sections get the anonymous or pseudonymous setting that D-046 allows. [Established] (D-048) Workbook v1.1 records it: in groups with anonymous posting or nicknames on, each day tally counts posts by topic, anonymous and named. [Established] The seven topics and their order of precedence are a proposal, to be settled before data collection. [Proposed] Field notes that fit no hypothesis are coded NEW, so the study can find what it was not looking for. [Established] (D-043) Changes to the hypotheses after the first tally are entered in the decision register with a date, as change control requires for anything above a minor change ([Chapter 11](11-roadmap.md)). [Established]
 
 ## The instrument
 
-The study runs on a spreadsheet workbook built for Google Sheets (v1, 7 October 2026). It starts blank, with a dropdown for every categorical field. [Established] The tabs follow the owner's brief, and the owner confirmed the design choices added to it: traces split into two tabs, the IDs, the working definitions, and the row checks. [Established] (D-043)
+The study runs on a spreadsheet workbook built for Google Sheets (v1, 7 October 2026; v1.1 the same day). It starts blank, with a dropdown for every categorical field. [Established] Version 1.1 adds the H4 topic counts to day tallies, and two census columns: whether a channel is shared with other VSU campuses (D-047) and whether the author took part there before the study (D-045). [Established] The tabs follow the owner's brief, and the owner confirmed the design choices added to it: traces split into two tabs, the IDs, the working definitions, and the row checks. [Established] (D-043)
 
 | Tab | One row per | What it records |
 | --- | --- | --- |
@@ -65,7 +65,7 @@ The study runs on a spreadsheet workbook built for Google Sheets (v1, 7 October 
 
 The workbook guards its own rules. Every data tab checks each row and explains problems in plain language, the census flags any address that looks like a post or a profile rather than a page or group, and field notes flag links, @-mentions, and quote marks. [Established] (D-043)
 
-A copy filled with synthetic data matched independent calculations for every summary figure, planned date, and row check, with no formula errors. [Established] It has not yet been tested inside Google Sheets itself. [Unresolved]
+A copy filled with synthetic data matched independent calculations for every summary figure, planned date, and row check, with no formula errors. Filled with the same synthetic data, v1.1 matched v1 on every existing figure, and its new figures and checks matched independent calculations. [Established] It has not yet been tested inside Google Sheets itself. [Unresolved]
 
 ## Sampling
 
@@ -113,7 +113,8 @@ Rules for what leaves the workbook. [Established] (D-044)
 - The owner confirmed the instrument and the reporting rules on 7 October 2026. [Established] (D-043, D-044)
 - The owner settled the rest of the study's design the same day: the author's own activity, which channels count, H4's wording, and the recode check. [Established] (D-045, D-047, D-048, D-049)
 - The first search pass and the census can start. [Established]
-- Before the first tally: Q-21 and Q-23 need answers, and the workbook needs its H4 addition. Q-22 can wait for the first search pass. [Established]
+- Workbook v1.1 has the H4 addition. [Established]
+- Before the first tally: Q-21 and Q-23 need answers, and the H4 topic list needs the owner's confirmation. Q-22 can wait for the first search pass. [Established]
 
 ## Sources
 
