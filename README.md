@@ -30,6 +30,7 @@ project-campus/
 ├── css/style.css         design system
 ├── archive/v0.1/         the v0.1 blueprint and planning file, unchanged
 ├── tests/                jsdom render test
+├── .github/workflows/    runs the render test on every pull request
 └── vercel.json           cache headers and redirects from v0.1 URLs
 ```
 
@@ -54,9 +55,11 @@ node --check js/main.js
 cd tests && npm install && npm test
 ```
 
+GitHub runs the same checks on every pull request and every push to `main`, and shows the result on the PR as "Render test".
+
 ## Deploy
 
-Push to GitHub and Vercel redeploys (framework preset "Other", no build command). `.vercelignore` keeps `tests/` out of deploys. Old v0.1 URLs, including `/instructions.txt`, redirect to their nearest v0.2 page.
+Push to GitHub and Vercel redeploys (framework preset "Other", no build command). `.vercelignore` keeps `tests/` and `.github/` out of deploys. Old v0.1 URLs, including `/instructions.txt`, redirect to their nearest v0.2 page.
 
 ## Design notes
 
