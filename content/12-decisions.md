@@ -23,21 +23,22 @@ All were recorded on 3 October 2026. "Project instructions v2" means the owner's
 | D-029 | The milestone ladder has seven stages: recognition, interest, alignment, permission to prototype, pilot, collaboration, adoption. v0.1's eighth stage, commercialization, is removed. | [Established] | Project rules; follows D-021 |
 | D-030 | Stakeholder names and conversations are kept in a private log outside this repository. The repository records only decisions and anonymized evidence. | [Established] | Owner's request, October 2026 |
 | D-031 | Claims carry one of three tags (Established, Proposed, Unresolved), and sources are typed separately (official, community knowledge, opinion, unverified, scholarly, external). This replaces DOCUMENT-BLUEPRINT's five tags; the Hop-It PRD keeps its own five labels internally. | [Established] | Project rules 1 and 4 |
-| D-032 | The master document is Markdown in `content/`, rendered by the site with no build step. v0.1 is archived unchanged, and old URLs redirect to the nearest v0.2 chapter. | [Proposed] | v0.2 restructure; ends the two parallel versions of v0.1 |
-| D-033 | The five design principles from July 2026 are restored ([Chapter 1](01-campus.md)), with principle 3 reworded to fit D-035. | [Proposed] | July 2026 vision document |
-| D-034 | The July 2026 channel model (channels, four layers, tiered sync) is the network's starting architecture: a starting point under D-018 that Q-04 can revise. | [Proposed] | July 2026 vision document |
+| D-032 | The master document is Markdown in `content/`, rendered by the site with no build step. v0.1 is archived unchanged, and old URLs redirect to the nearest v0.2 chapter. | [Established] | v0.2 restructure; ends the two parallel versions of v0.1; confirmed by the owner, 7 October 2026 |
+| D-033 | The five design principles from July 2026 are restored ([Chapter 1](01-campus.md)), with principle 3 reworded to fit D-035. | [Established] | July 2026 vision document; confirmed by the owner, 7 October 2026 |
+| D-034 | The July 2026 channel model (channels, four layers, tiered sync) is the network's starting architecture: a starting point under D-018 that Q-04 can revise. | [Established] | July 2026 vision document; confirmed by the owner, 7 October 2026 |
 | D-035 | The network is VSU's own alternative to Facebook for campus life. Its policies, interface, structure, feed, privacy, moderation, speech, and communities are designed and governed for the university, with no ads, reels, stories, or feeds built for endless scrolling. Its purpose is to connect relevant information to the right people and close the gap between students and the institution. Resolves Q-03. | [Established] | Owner's decision, 3 October 2026 |
-| D-036 | The pitch's problem slides use only problems with VSU field evidence. [Chapter 2.1](02a-use-cases.md) is the candidate list, and its stages are proposals. | [Proposed] | Project rule 7: credibility comes from evidence |
+| D-036 | The pitch's problem slides use only problems with VSU field evidence. [Chapter 2.1](02a-use-cases.md) is the candidate list, and its stages are proposals. | [Established] | Project rule 7: credibility comes from evidence; confirmed by the owner, 7 October 2026 |
 
 ## Decisions recorded after v0.2
 
-D-037 and D-038 were recorded on 4 October 2026, and D-039 on 5 October 2026.
+D-037 and D-038 were recorded on 4 October 2026, D-039 on 5 October 2026, and D-040 on 7 October 2026. On 7 October 2026 the owner also confirmed D-032, D-033, D-034, D-036, and D-038, which had been recorded as proposals.
 
 | ID | Decision | Status | Basis |
 | --- | --- | --- | --- |
 | D-037 | The student survey runs as the scenes prototype, an interactive page that shows one scene at a time, not as a standard form. Of the two prototypes, the scenes version is the chosen format, with fixes due before launch. The field research kit and the response script follow it. | [Established] | Owner's decision, October 2026 |
-| D-038 | A problem earns a pitch slide only if it clears three bars fixed before any data is read: at least 4 of 12 student interviews describe a specific past incident; at least 30% of survey respondents report it several times or often; and most of those rate it moderate or serious. | [Proposed] | Field research kit; D-036 |
+| D-038 | A problem earns a pitch slide only if it clears three bars fixed before any data is read: at least 4 of 12 student interviews describe a specific past incident; at least 30% of survey respondents report it several times or often; and most of those rate it moderate or serious. | [Established] | Field research kit; D-036; confirmed by the owner, 7 October 2026 |
 | D-039 | The student survey runs on its own site, with its own repository and Vercel project, separate from the master document's site, so respondents don't read the proposal before answering. Responses go to a private Google Sheet through an Apps Script web app, and interview volunteers sign up on a separate Google Form, so contact details never meet survey answers. | [Established] | Owner's decision, 5 October 2026 |
+| D-040 | CAMPUS stands for Connecting All Members, Places, and University Services. The earlier expansion, Connected Academic Matrix Platform for Universities and Schools, is retired because it implied a product for many institutions, which D-021 rules out. The v0.1 archive keeps the old name unchanged. | [Established] | Owner's decision, 7 October 2026; follows D-021 |
 
 ## Decisions carried from v0.1
 
@@ -70,7 +71,7 @@ v0.1's planning file, DOCUMENT-BLUEPRINT.txt, used the numbers D-001 to D-003 fo
 | --- | --- | --- |
 | DB-1 | A chapter-based living document is the public artifact | [Established] |
 | DB-2 | VSU is the working example, with no implied affiliation | No-affiliation rule [Established]; "working example" [Superseded] (D-021) |
-| DB-3 | The implementation format stays open | [Under review] (D-032) |
+| DB-3 | The implementation format stays open | [Superseded] (D-032) |
 
 ## Open questions
 

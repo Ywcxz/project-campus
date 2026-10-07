@@ -2,7 +2,7 @@
 
 *An inventory of campus problems the network could solve, each to test before building*
 
-Chapter 2 names three use cases from the author's experience. This inventory widens the search to 29 candidate problems across six areas of university life, each paired with the use case that would answer it and the platforms that already solve something similar. Every entry is a hypothesis. [Unresolved] The inventory decides what to ask in interviews and surveys; only evidence decides what gets built or goes on a pitch slide. [Proposed] (D-036)
+Chapter 2 names three use cases from the author's experience. This inventory widens the search to 29 candidate problems across six areas of university life, each paired with the use case that would answer it and the platforms that already solve something similar. Every entry is a hypothesis. [Unresolved] The inventory decides what to ask in interviews and surveys; only evidence decides what gets built or goes on a pitch slide. [Established] (D-036)
 
 ## How to read it
 
@@ -98,6 +98,6 @@ A use case enters the first version or the early group only if Facebook clearly 
 
 ## What this means for the pitch
 
-The pitch's first slides should show three to five problems with VSU evidence behind them: a quote from an interview, a number from the survey, a real example. A list of plausible problems without evidence invites the question "how do you know?", and today the honest answer is "not yet." [Proposed] (D-036)
+The pitch's problem slides use only problems with VSU evidence behind them, and each must clear the bars fixed in D-038 before any data is read. [Established] (D-036, D-038) Three to five such problems, each shown with a quote from an interview, a number from the survey, and a real example, would make the opening. [Proposed] A list of plausible problems without evidence invites the question "how do you know?", and today the honest answer is "not yet." [Established]
 
 The gap problems in the first section are the strongest candidates. They are the most specific to VSU, and most of them touch student services, the remit of OVPSAS, the Office of the Vice President for Student Affairs and Services; reaching faculty also involves academic affairs. [Proposed] Every entry above becomes an interview probe, such as "Tell me about the last time you needed…", and the survey measures how often each problem happens and how much time it costs people. [Proposed]

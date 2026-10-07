@@ -31,7 +31,7 @@ Connecting more information without its context also spreads mistakes faster. CA
 
 ## Five design principles
 
-These principles were set out in the July 2026 version of this document and dropped from v0.1. Version 0.2 restores them, with principle 3 reworded to fit the network's purpose. [Proposed] (D-033)
+These principles were set out in the July 2026 version of this document and dropped from v0.1. Version 0.2 restores them, with principle 3 reworded to fit the network's purpose. [Established] (D-033)
 
 1. **Verification before scale.** Don't build for a problem until real evidence confirms it.
 2. **Hyperlocal depth, not national breadth.** Useful and specific to VSU beats generic and scalable. The most persistent drift in this project has been the urge to generalize beyond one institution.
