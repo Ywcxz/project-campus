@@ -29,6 +29,7 @@ CAMPUS does not claim that VSU's systems are inadequate, that every group feels 
 - The author's own experience and observations as a VSU alumnus. This is community knowledge: useful for asking questions, not proof. [Established]
 - Scholarly work on last-mile delivery, which shaped Hop-It's design ([Chapter 3](03-hop-it.md)). [Established]
 - A field research plan covering student interviews, a survey, problem synthesis, and prototype scoping, with an interview guide and a survey draft. It has not been run, and it is not yet in this repository. [Established] The student survey will run as an interactive page, the scenes prototype. [Established] (D-037)
+- A study of VSU-related Facebook pages and groups: a manual, observation-only census and sampled tallies of public pages and groups, recording no names, links, or screenshots. [Established] (D-041) Its instrument is built, and findings will enter this chapter only as anonymized evidence (D-030). [Established] Its starting hypotheses are that official information is fragmented across channels, that serious questions go unanswered in community groups, that groups drift and get replaced when their founders leave, and that students prefer to take part under pseudonyms. [Unresolved]
 - No interviews, surveys, or usage data have been gathered for VSU yet. [Established] Public institutional sources, including the Third SOUA and VSU's service pages, are cited in [Chapter 6](06-vsu-context.md) and [Chapter 9](09-related-work.md). [Established]
 
 ## How CAMPUS will find out

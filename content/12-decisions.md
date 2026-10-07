@@ -31,7 +31,7 @@ All were recorded on 3 October 2026. "Project instructions v2" means the owner's
 
 ## Decisions recorded after v0.2
 
-D-037 and D-038 were recorded on 4 October 2026, D-039 on 5 October 2026, and D-040 on 7 October 2026. On 7 October 2026 the owner also confirmed D-032, D-033, D-034, D-036, and D-038, which had been recorded as proposals.
+D-037 and D-038 were recorded on 4 October 2026, D-039 on 5 October 2026, and D-040 and D-041 on 7 October 2026. On 7 October 2026 the owner also confirmed D-032, D-033, D-034, D-036, and D-038, which had been recorded as proposals.
 
 | ID | Decision | Status | Basis |
 | --- | --- | --- | --- |
@@ -39,6 +39,7 @@ D-037 and D-038 were recorded on 4 October 2026, D-039 on 5 October 2026, and D-
 | D-038 | A problem earns a pitch slide only if it clears three bars fixed before any data is read: at least 4 of 12 student interviews describe a specific past incident; at least 30% of survey respondents report it several times or often; and most of those rate it moderate or serious. | [Established] | Field research kit; D-036; confirmed by the owner, 7 October 2026 |
 | D-039 | The student survey runs on its own site, with its own repository and Vercel project, separate from the master document's site, so respondents don't read the proposal before answering. Responses go to a private Google Sheet through an Apps Script web app, and interview volunteers sign up on a separate Google Form, so contact details never meet survey answers. | [Established] | Owner's decision, 5 October 2026 |
 | D-040 | CAMPUS stands for Connecting All Members, Places, and University Services. The earlier expansion, Connected Academic Matrix Platform for Universities and Schools, is retired because it implied a product for many institutions, which D-021 rules out. The v0.1 archive keeps the old name unchanged. | [Established] | Owner's decision, 7 October 2026; follows D-021 |
+| D-041 | A study of VSU's Facebook landscape maps how and where the campus communicates online, to inform the network and the case to the administration. It covers public pages and groups only and is manual and observation-only: the project owner does all Facebook work by hand, and nothing opens, browses, or automates Facebook or any Meta site. It records no names, profile links, post links, or screenshots, and its only free text is a paraphrase without quotes, names, or links. Each included group is tallied on randomly drawn days, stratified by weekday, with each day tallied two days later. | [Established] | Owner's decision, October 2026; D-030 |
 
 ## Decisions carried from v0.1
 
@@ -77,7 +78,7 @@ v0.1's planning file, DOCUMENT-BLUEPRINT.txt, used the numbers D-001 to D-003 fo
 
 | ID | Question | Priority | How it gets answered |
 | --- | --- | --- | --- |
-| Q-01 | Is the campus communication problem real at VSU, and for whom? | P0 | Field interviews and survey |
+| Q-01 | Is the campus communication problem real at VSU, and for whom? | P0 | Field interviews and survey; the Facebook landscape study (D-041) |
 | Q-02 | Which use cases should the network's first version win? Chapter 2 proposes three. | P0 | Field research, then a bounded test |
 | Q-04 | Real-time chat or tiered sync, and at what infrastructure cost? | P1 | Technical experiment |
 | Q-05 | Who at VSU would own moderation and the community rules? | P1 | Institutional discussion |
@@ -94,6 +95,9 @@ v0.1's planning file, DOCUMENT-BLUEPRINT.txt, used the numbers D-001 to D-003 fo
 | Q-17 | Which offices will commit to answering students on the network, and how fast? | P0 | The OVPSAS pitch |
 | Q-18 | What will OneVSU Mobile and the OneVSU Portal cover for students: notices, office directories, service requests, or Q&A? | P1 | Systems discovery, before the pitch |
 | Q-19 | How does the academic calendar, including breaks, change Hop-It's demand, and when should the Alpha run? | P1 | Owner's decision, with the Alpha plan |
+| Q-20 | Which Facebook pages and groups count as VSU Main Campus channels, and how are channels shared with other VSU campuses treated? | P0 before the census | Owner's decision |
+| Q-21 | How many sampled days per weekday should each group get, trading workload against steadier rates? | P1 | Owner's decision |
+| Q-22 | Do long-inactive groups stay in the census? This bears on the hypothesis that groups drift and get replaced. | P1 | Owner's decision |
 
 Q-03 was resolved by D-035, and Q-12 was answered on 4 October 2026 by the Third SOUA, cited in [Chapter 6](06-vsu-context.md). Priorities follow v0.1: P0 blocks the next step, P1 shapes the design and comes early, and P2 can run in parallel. The full v0.1 register of about 65 questions is in the [archive](https://github.com/Ywcxz/project-campus/blob/main/archive/v0.1/campus-rd-blueprint-v0.1.md) (§18.4).
 
