@@ -37,4 +37,4 @@ Never name stakeholders or cite private conversations in this repository. They b
 
 ## Test before pushing
 
-`cd tests && npm install && npm test` renders every chapter in jsdom and fails on raw Markdown, broken links, mismatched titles, or table rows with the wrong number of cells.
+`cd tests && npm install && npm test` renders every chapter in jsdom and fails on raw Markdown, broken links, mismatched titles, or table rows with the wrong number of cells. GitHub also runs it on every pull request and shows the result on the PR.
