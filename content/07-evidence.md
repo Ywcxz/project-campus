@@ -16,6 +16,8 @@ CAMPUS has not yet shown, with VSU evidence, that the problems it addresses exis
 | Official notices and rumor look alike where campus conversation happens | Network | [Unresolved] |
 | Finding something doesn't tell people what to do next | Network | [Unresolved] |
 | Knowledge is lost when students graduate or organization officers change | Network; learning record | [Unresolved] |
+| First-generation students lack knowledge of how the university works that peers and offices could supply | Network | [Unresolved] |
+| Community spaces VSU cannot govern leave harmed students and the university with little recourse | Network | [Unresolved] |
 | Places and their services aren't connected to information about them | Later directions | [Unresolved] |
 | Individual food runs duplicate effort across scattered campus demand | Hop-It | [Unresolved] |
 | Some students can't rely on mobile data for campus services | Intranet | [Unresolved] |
@@ -36,6 +38,7 @@ CAMPUS does not claim that VSU's systems are inadequate, that every group feels 
 - A field research plan covering student interviews, a survey, problem synthesis, and prototype scoping, with an interview guide and a survey draft. It has not been run, and it is not yet in this repository. [Established] The student survey will run as an interactive page, the scenes prototype. [Established] (D-037)
 - A manual, observation-only study of public VSU-related Facebook pages and groups, with its instrument built and checked on synthetic data ([Chapter 7.1](07a-facebook-study.md)). It has not started. [Established] (D-041)
 - Public VSU records of its network, data center, and the 2013 typhoon outage, cited in [Chapter 4](04-intranet.md). [Established]
+- Public VSU records of its accounts, student services, organizations, and notices, and an April 2025 investigation by VSU's student media of a VSU community group on Facebook, cited in [Chapter 2](02-social-network.md) and its sub-chapters. These are signals for the network's case, not field evidence of how often its problems occur. [Established]
 - No interviews, surveys, observations, or usage data have been gathered for VSU yet. [Established] Public institutional sources, including the Third SOUA and VSU's service pages, are cited in [Chapter 6](06-vsu-context.md) and [Chapter 9](09-related-work.md). [Established]
 
 ## How CAMPUS will find out
@@ -76,5 +79,20 @@ Every claim that matters gets an entry: the claim, the evidence type, the source
 | E-017 | In 2016, only 4% of the traffic in one Purdue University building went to academic sites, and filtering heavy streaming in classrooms cut campus bandwidth use by about a third | External | EdTech Magazine, 6 August 2019 | D-059 |
 | E-018 | The Philippines opened 5925 to 6425 MHz to Wi-Fi in 2024, at up to 250 mW indoors | External | TechPorn, on NTC Memorandum Circular No. 002-07-2024 | Access capacity |
 | E-019 | Smart's no-expiry Magic Data packs cost ₱249 for 8 GB and ₱349 for 16 GB | External | NoypiGeeks, 4 March 2026 | Q-28 |
+| E-020 | Of 2,604 first-year students enrolled at the Main Campus in 2026, 1,248 (47.9%) are first-generation college students, and 582 were admitted through the affirmative action pathway | Official | Third SOUA, 18 September 2026 | The network's need; [Chapter 2](02-social-network.md) |
+| E-021 | VSU issued Google Workspace accounts to all 9,245 registered Main Campus students in October 2022; about 17% were active a day later | Official | VSU news, 4 October 2022 | Q-06; adoption |
+| E-022 | Student accounts are named after school ID numbers, issued after the late enrollment period, and revocable on non-enrollment or graduation; Integrated High School students also receive accounts | Official | VSU news, 22 August 2023 and 4 October 2022 | Q-38, Q-39, D-069 |
+| E-023 | A public Facebook group for VSU people, with over 12,500 members, anonymous posting, and administrators who were not clearly identified, was investigated by VSU's student media for online hate and a false accusation against a student; VSU's recourse was limited to tracing posters and seeking a takedown | Community knowledge, student press | The Amaranth, 10 April 2025 | Q-16; D-065 |
+| E-024 | In early October 2026, VSU's website announcements feed listed 21 items from July 2021 to September 2026, mostly enrollment and exam schedules | Official | VSU announcements feed, checked 8 October 2026 | H1; notices |
+| E-025 | VSU announces typhoon suspensions through radio, television, SMS, the website, and other social media, no later than 4:30 a.m. | Official | BOR Resolution No. 162, s. 2024 | Notices; D-063 |
+| E-026 | WAIS is open only to VSU account holders, generates its data as JSON, and plans a mobile app with push notifications | Official | VSU news, 9 July 2026 | Q-40 |
+| E-027 | VSU's list of accredited organizations for 2022–23 had 57 entries under the college structure that VSU replaced with faculties in January 2025 | Official | VSU accredited organizations page; VSU news, 16 January 2025 | D-062; H3 |
+| E-028 | VSU lists its student affairs services under CHED's three groups: student welfare, student development, and institutional student programs | Official | VSU accreditation page for Area IV, 2021; CMO No. 9, s. 2013 | The OVPSAS pitch; [Chapter 2.4](02d-network-proposal.md) |
+| E-029 | Engagement-based ranking amplified emotionally charged, out-group hostile political posts compared with a time-ordered feed, and users did not prefer what it chose | Scholarly | Milli et al., arXiv:2305.16941 | D-061 |
+| E-030 | A time-ordered feed substantially reduced time spent on Facebook and Instagram, without significant changes in polarization over three months | Scholarly | Guess et al., 2023 | D-061; adoption |
+| E-031 | Advertising brought in about 97.6% of Meta's revenue in 2025 | External, company report | Meta, January 2026 | The difference from social media |
+| E-032 | The University of Brighton's community network lost its members' sense of ownership as it became more of an institutional channel, and later declined after years of neglect | External, practitioner accounts | Athabasca University's Landing, about 2010 | Risks; D-062 |
+| E-033 | SURF's Mastodon pilot for Dutch education institutions needed little moderation, partly because institutional logins make users accountable | External | GEICT interview with SURF, 18 March 2026 | D-046; moderation load |
+| E-034 | By its founders' account, Fizz reached almost every undergraduate at one US college within months, while students there reported bullying and misinformation that were not removed promptly | External, student press | The Dartmouth, 25 October 2022 | Adoption; Q-16 |
 
 Field evidence will be added as it is gathered. The v0.1 research-question bank, about 65 questions, is in the [archive](https://github.com/Ywcxz/project-campus/blob/main/archive/v0.1/campus-rd-blueprint-v0.1.md) (§5 and §18.4); many of those questions were written for the retired v0.1 prototype.

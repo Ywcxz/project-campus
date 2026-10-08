@@ -23,6 +23,13 @@ The largest risk is that the problems are smaller than assumed. The second is th
 | The campus becomes its own single point of failure | Intranet | A copy of critical data off the Main Campus, phones that keep what people need, and island-mode drills | A drill shows campus services cannot run without the uplink, or a data center outage loses data |
 | Academic priority slows real class work or turns into censorship | Intranet | Priority by destination and place, published tiers, exceptions on request, and slowing rather than blocking (D-059) | Classes report that their group chats or teaching videos are slowed, or anyone asks to block a site for its content |
 | Emergency mode fails when it is needed | Intranet: emergencies | Backup power in shelter buildings, drills before typhoon season, and ownership by the Crisis Management Committee (D-060) | A drill shows the shelter network dies within hours, or no one is named to switch it on |
+| The network becomes one more institutional channel | Network | Channels owned by organizations, councils, and members as well as offices; visible member activity; students on the network council (D-062, D-066) | Activity narrows to official posts, or organizations move back to Facebook |
+| VSU uses the network to watch or silence students | Network | Pseudonyms revealed only through a two-key process students share in, published rules, notices that say when VSU asked for an action, and transparency reports (D-065, D-066) | Any reveal for criticism, or any request to read private messages outside legal process |
+| A host's legal duties go unmet | Network | A legal review before real users, a notice-and-action process, and reports routed to the offices that must act (Q-36) | A report of harassment or exploitation waits past the time the law or the rules allow |
+| A thin start across the whole campus | Network | One dense community first, tools useful to one person, and offices as contributors of last resort (Resnick, Konstan, and Chen, 2012) | Weekly activity in the pilot falls below the threshold set under D-067 |
+| Moderators burn out | Network | Several moderators per channel, rotating terms, simple tools, and the council's backing | Reports wait longer than the agreed time for several weeks running |
+| Harm to minors | Network | College members only at first, stricter defaults for anyone under 18, and a process for the law against online sexual abuse of children (D-069) | Any incident involving a minor |
+| A network with no owner after its pilot | Network | Open components, documentation, and a pilot that ends with VSU ownership or a clean close | No VSU office agrees to own it by the end of the pilot |
 
 ## Stop conditions
 

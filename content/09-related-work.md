@@ -39,7 +39,7 @@ These come from VSU's public pages, checked on 4 October 2026. Who owns each sys
 | Output Messenger | Office chat, listed on the helpdesk as for VSU employees only | Talk across roles |
 | Google Workspace and Microsoft 365 | University accounts, including Google accounts for students | Identity (Q-06) |
 | Citizen's Charter 2026 | Service standards, posted on VSU's website | Reach the right office |
-| Announcements, news, calendar, and the official Facebook page | Official notices and events | Notices; events |
+| Announcements, news, calendar, and the official Facebook page | Official notices and events; the news and announcements have public RSS feeds | Notices; events |
 | Weather Advisory and Information System (WAIS) | Localized weather advisories for the Main Campus, launched in July 2026 | Notices |
 | Directory, housing, job posting, alumni updates, facilities booking | Phone directory, student housing information, job openings, alumni relations, and guest services and facilities | Reach the right office; dorms; jobs; alumni |
 
@@ -66,7 +66,8 @@ What this means for CAMPUS:
 
 - **Facebook and Messenger.** In the Digital 2026 report, 94.9% of Philippine internet users aged 16 and over had used Facebook in the past month, against a global average of 56.9%, and 90.6% had used Messenger. [Established] This is the network effect the risk register warns about ([Chapter 10](10-risks.md)).
 - **Office pages on Facebook.** Universities in the region use Facebook as an official help channel: EVSU directs applicants with questions to its admission office's Facebook page. [Established] VSU keeps an official Facebook page; which VSU offices answer students on Facebook is not known. [Unresolved] The landscape study will map the official pages that exist ([Chapter 7.1](07a-facebook-study.md)). [Proposed]
-- **Freedom walls and confession pages.** Philippine university freedom walls are anonymous Facebook pages run by unnamed administrators. [Established] A 2025 student study of the three most followed, at UP Diliman, National University, and Ateneo de Manila, found they open up student discourse but raise cyberbullying, misinformation, and privacy concerns, and it called for accountability within anonymous spaces. [Established] A Canadian study of 2,712 posts on one university's confessions page found that 26.1% supported students' learning, through asking for and giving academic help. [Established] The network's "Answers people can trust" therefore competes partly with anonymous pages students already use for help. [Proposed] Whether VSU has active pages of this kind, and what students use them for, is a question for the landscape study and the interviews. [Unresolved]
+- **Freedom walls and confession pages.** Philippine university freedom walls are anonymous Facebook pages run by unnamed administrators. [Established] A 2025 student study of the three most followed, at UP Diliman, National University, and Ateneo de Manila, found they open up student discourse but raise cyberbullying, misinformation, and privacy concerns, and it called for accountability within anonymous spaces. [Established] A Canadian study of 2,712 posts on one university's confessions page found that 26.1% supported students' learning, through asking for and giving academic help. [Established] The network's "Answers people can trust" therefore competes partly with anonymous pages students already use for help. [Proposed] Whether VSU has active pages of this kind, and what students use them for, is a question for the landscape study and the interviews. [Unresolved] One VSU case is on record: in April 2025, VSU's student media investigated a public Facebook group for VSU people, with over 12,500 members and anonymous posting, for online hate and a false accusation against a student ([Chapter 2](02-social-network.md)). [Established]
+- **Official channels by rule.** A Philippine college designated student email and moderated Facebook groups as its official channels in June 2026, and discouraged class group chats because announcements were drowned out, rumors outran official statements, and notifications disturbed rest. [Established] This is the "Facebook, done better" alternative the network's pilot compares against (D-067). [Proposed]
 - **Delivery and errands.** foodpanda delivers in Tacloban and lets customers schedule orders up to seven days ahead. [Established] Errand runs, the *pabili* that Hop-It's name echoes, are an established service: Grab offers a pabili option in which a rider buys items for the customer, and Facebook groups connect people with riders who run errands. [Established] Whether any of these operate in Baybay City or onto the campus has not been checked. [Unresolved] Scheduling and errand-running alone are therefore not Hop-It's difference; pooling scheduled orders into shared runs is. [Proposed]
 
 ## Philippine universities and apps
@@ -77,6 +78,8 @@ What this means for CAMPUS:
 | Enderun Colleges app (2021) | The college's own app for students, faculty, staff, and alumni, with interest channels, official school channels, push notifications, and access to classes and grades | The closest Philippine precedent to the channel model; whether people kept using it is not public. [Unresolved] |
 | ALON CampUs | A student community app for Philippine universities from an independent developer, with school identity verification, announcements, boards for housing, careers, and organizations, and anonymous boards | An Everytime-style app already exists in the Philippines; its reach is unknown. [Unresolved] |
 | USC AppDate, De La Salle Araneta University (2018) | A student council app for announcements, built after an earlier online grievance desk fell out of use and stopped | A channel for concerns dies when people don't trust it or see no response. [Established] |
+| Iskomunidad, UP Diliman | A community wiki for the UP Diliman community, hosted by its Interactive Learning Center, with organization profiles, projects, directories, and events; 3,722 articles and 6,268 registered users in October 2026 | A Philippine university can host community knowledge for years; its scale is modest beside its student body. [Established] |
+| USTeP app, University of Science and Technology of Southern Philippines (2024) | A learning portal app with course management, quizzes, virtual classrooms, and offline course pages | Like VSUEE's app, a state university's app built for learning, not community. [Established] |
 
 No Philippine state university running its own community network turned up in this pass, which does not prove that none exists. [Unresolved]
 
@@ -93,6 +96,12 @@ Workplace from Meta remains the closest precedent: a version of Facebook for int
 | Pizarra, University of Valladolid (Spain) | A mobile app the university built on its existing information systems as a communication channel for its community, separate from teaching; described in a 2013 paper | Universities have built their own channels before; the source gives no adoption figures. [Unresolved] |
 | CampusGroups, Anthology Engage, Presence (US) | Commercial platforms for student organizations and events, with rosters, documents, elections, budgets, and event promotion | Managing organizations is a mature, paid category; CAMPUS should borrow its patterns rather than invent them. [Established] Vendors' adoption claims are unverified. [Unresolved] |
 | Matrix at TU Dresden and LMU Munich (Germany) | Both universities run their own Matrix chat servers for students and staff; at TU Dresden only university members can sign in | Real-time chat can run on university servers through an open protocol, owned by the IT unit. [Established] (Q-04) |
+| Thefacebook at Harvard (US, 2004) | Opened to Harvard students only; more than half of Harvard's undergraduates registered within the first month, before it spread to Columbia, Stanford, and Yale and then school by school; open to the public from September 2006 | A network wins by being dense in one community first. [Established] |
+| Discord Student Hubs | Hubs a student unlocks with a school email, holding student-run servers; not affiliated with or managed by the school, with Discord's own team handling violations | Verification without the school's governance. [Established] |
+| Fizz (US, 2022) | An anonymous campus app moderated by students; by its founders' account, used by almost every undergraduate at one college within months; students there reported bullying, homophobia, and misinformation not removed promptly | Demand for campus talk is strong, and anonymity without accountability brings harm. [Established] |
+| community@brighton and the Landing (UK and Canada) | The University of Brighton's Elgg network grew to tens of thousands of users, drifted toward course and institutional use, lost members' sense of ownership, and declined after years of neglect; Athabasca University's Landing took its lessons and calls gardening a better metaphor than architecture | Institution-run networks last only with members' ownership and sustained care. [Established] |
+| Mastodon at the University of Innsbruck and SURF (Austria and the Netherlands) | Innsbruck runs a Mastodon server on its own hardware for all employees, with university sign-in, since 2024; SURF's pilot for Dutch education institutions uses institutional logins, had over 1,250 users in 2026, and needed little moderation | Institutions can run their own social platforms, and identified membership keeps moderation light. [Established] |
+| Viva Engage at the University of Manchester (UK) | Microsoft's enterprise social network, offered to staff and postgraduate researchers only | A university's enterprise social tool can leave students out entirely. [Established] |
 
 ## Campus delivery
 
@@ -160,6 +169,7 @@ Reviewed only lightly, since the digital twin is a later direction ([Chapter 5](
 5. Build the academic calendar into Hop-It's demand assumptions (Q-19). [Proposed]
 6. For real-time chat, evaluate an open protocol that VSU ICT could host, such as Matrix, before building a chat server (Q-04). [Proposed]
 7. For the intranet, start with measurement, keep shared caches to those run with content owners and to curated collections, and build security on identity and metadata rather than inspection (D-056, D-057, D-058). [Proposed]
+8. For the network, start dense in one community, be useful to one person before being social, give members ownership of their spaces, and test the network against a well-run Facebook group with the same office commitment (D-062, D-067, D-068). [Proposed]
 
 ## Status
 
@@ -167,15 +177,15 @@ Reviewed only lightly, since the digital twin is a later direction ([Chapter 5](
 | --- | --- |
 | VSU's own systems | First pass from public pages; owners and data unknown (Q-10) |
 | What VSU people use | Desk research done; VSU-specific use waits on field research |
-| Philippine universities | First pass; other state universities in the region not yet checked |
-| International platforms | First pass |
+| Philippine universities | First pass, with additions on 8 October 2026; other state universities in the region not yet checked |
+| International platforms | Second pass, 8 October 2026, with [Chapter 2](02-social-network.md) |
 | Campus delivery | First pass; delivery coverage in Baybay not yet checked |
 | Local-first infrastructure | Second pass, 8 October 2026, with [Chapter 4](04-intranet.md) |
 | Campus digital twins | Light pass |
 
 ## Sources
 
-Checked on 4 October 2026, except the local-first infrastructure sources added on 8 October 2026. The source type follows each entry ([Chapter 8](08-governance.md)). Sources for VSU's own network are listed in [Chapter 4](04-intranet.md).
+Checked on 4 October 2026, except the local-first infrastructure and network sources added on 8 October 2026. The source type follows each entry ([Chapter 8](08-governance.md)). Sources for VSU's own network are listed in [Chapter 4](04-intranet.md), and for VSU's student-facing systems in [Chapter 2.3](02c-network-fit.md).
 
 - Visayas State University. [Third State of the University Address](https://www.vsu.edu.ph/articles/news/3045-3rd-state-of-the-university-address), 18 September 2026. Official.
 - Visayas State University. [Key Officials](https://www.vsu.edu.ph/administration), [Citizen's Charter](https://www.vsu.edu.ph/citizens-charter), [Helpdesk](https://helpdesk.vsu.edu.ph/open.php), [Document Request and Tracking System](https://docrequest.vsu.edu.ph/), and [E-Learning Environment](https://elearning.vsu.edu.ph). Official.
@@ -216,4 +226,14 @@ Checked on 4 October 2026, except the local-first infrastructure sources added o
 - Cadapan, E. V. (1998). [Analysis of the performance of a proxy cache hierarchy on a small-scale network](https://www.ukdr.uplb.edu.ph/etd-grad/581). Master's thesis, UP Los Baños. Scholarly.
 - Zhang, L., Afanasyev, A., Burke, J., Jacobson, V., claffy, kc, Crowley, P., Papadopoulos, C., Wang, L., and Zhang, B. (2014). Named data networking. *ACM SIGCOMM Computer Communication Review*, 44(3), 66–73. [doi:10.1145/2656877.2656887](https://doi.org/10.1145/2656877.2656887). Scholarly.
 - [foodpanda: a Tacloban restaurant page](https://www.foodpanda.ph/restaurant/r1sx/ocho-seafood-and-grill-tacloban); [GrabExpress Pabili](https://www.grab.com/ph/blog/grabexpresscities/), Grab, 2020; [Interaksyon](https://interaksyon.philstar.com/trends-spotlights/2020/04/30/167577/how-filipinos-making-food-delivery-services-easy-amid-covid-19-quarantine/), 2020. External.
+- The Amaranth, VSU's student media. "Freedom of speech? Viscan FB group slammed for fueling online hate," 10 April 2025, listed in its [investigative section](https://amaranth.vsu.edu.ph/specials/investigative). Community knowledge, student press.
+- Villagers Montessori College. [Memo No. 6, s. 2026, on official communication channels](https://vmc.edu.ph/wp-content/uploads/2026/07/VMC-Memo-6-s.-26-Official-Communication-channel.pdf), 15 June 2026. External, from another college.
+- UP Diliman Interactive Learning Center. [Iskomunidad](https://iskomunidad.upd.edu.ph/index.php/Main_Page). Official, from UP Diliman.
+- [USTP launches university app for iOS](https://thepost.net.ph/news/campus/ustp-launches-university-app-for-ios/), The Post, 23 January 2024. External.
+- [History of Facebook](https://en.wikipedia.org/wiki/History_of_Facebook), Wikipedia. External.
+- Discord. [Student Hubs guidelines](https://support.discord.com/hc/articles/4407546283031), updated 16 November 2023. External, vendor.
+- [Fizz takes hold of campus, users share mixed reactions](https://thedartmouth.com/article/2022/10/fizz-takes-hold-of-campus-users-share-mixed-reactions), The Dartmouth, 25 October 2022. External, student press.
+- Athabasca University's Landing. [RIP community@brighton](https://landing.athabascau.ca/bookmarks/view/974991/rip-communitybrighton) and [Ownership, structures and behaviours](https://landing.athabascau.ca/blog/view/10516/ownership-structures-and-behaviours), about 2010. External, practitioner accounts.
+- University of Innsbruck. [Mastodon for all university employees](https://www.uibk.ac.at/en/newsroom/2024/mastodon-for-all-university-employees/), 8 April 2024. External, from another university. [Beyond X: how universities in the Netherlands are building alternatives to big tech](https://www.blogs.unicamp.br/geict/?p=891), GEICT, Unicamp, 18 March 2026. External.
+- University of Manchester IT Services. [Microsoft Viva Engage](https://www.itservices.manchester.ac.uk/ourservices/microsoft365/yammer). External, from another university.
 - Digital twins: [University of Glasgow case study](https://wates.co.uk/wp-content/uploads/2023/08/IES-University-of-Glagow-Case-Study.pdf), IES; [University of Manchester](https://matterport.com/news/university-of-manchester-taps-matterport-digital-twins-to-transform), Matterport. External, vendor.
