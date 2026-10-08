@@ -102,10 +102,33 @@ Workplace from Meta remains the closest precedent: a version of Facebook for int
 
 ## Local-first infrastructure
 
-- **Local-first software.** Kleppmann and colleagues (2019) argue that cloud apps take ownership away from users and stop working when a service shuts down, and they propose software that works offline and syncs across devices, using data structures called CRDTs. [Established] It is the research basis for the tiered sync in [Chapter 4](04-intranet.md), and it names the risk Workplace's customers met. [Proposed]
+[Chapter 4](04-intranet.md) sets out the campus-first design; this section reviews who has built pieces of it. This pass found no university running the whole design, which does not prove that none does. [Unresolved]
+
+- **Local-first software.** Kleppmann and colleagues (2019) argue that cloud apps take ownership away from users and stop working when a service shuts down, and they propose software that works offline and syncs across devices, using data structures called CRDTs. [Established] It is the research basis for the device ring and the tiered sync in [Chapter 4](04-intranet.md), and it names the risk Workplace's customers met. [Proposed]
 - **Kolibri.** An open-source, offline-first learning platform from Learning Equality, launched in 2017, that runs on low-cost devices from a local server. Its makers report reaching more than 13 million learners and teachers in over 220 countries and territories, including government school systems in the Philippines. [Established] It shows the local-server pattern working for learning content; it is not a community network. [Proposed]
 - **University chat servers.** The Matrix deployments above show an institution-owned path for messaging. [Established]
-- **VSU's continuity work.** The solar-backed data center and the continuity framework show VSU already investing in keeping ICT running through disruption. Whether that extends to student-facing services is for VSU ICT. [Unresolved]
+- **VSU's continuity work.** The solar-backed data center, the fiber backbone rebuilt after Typhoon Haiyan, and the continuity framework show VSU already investing in keeping ICT running through disruption ([Chapter 4](04-intranet.md)). Whether that extends to student-facing services is for VSU ICT. [Unresolved]
+
+| System | What it is | Lesson for CAMPUS |
+| --- | --- | --- |
+| SMTH BBS, Tsinghua University, China, 1995 | One of China's first campus bulletin boards, hosted by the university; made campus-only and real-name under a 2005 Ministry of Education mandate, after which network staff took control of its server | The institution that hosts a community can close it. [Established] The network's governance has to bind VSU too (Q-16). [Proposed] |
+| PTT, National Taiwan University, 1995 | A non-commercial, open-source bulletin board run by a student club on the university's network, with over 1.5 million registered users by 2014 | A campus-hosted community can outgrow its campus when it is useful and run by its users. [Established] |
+| USTC and CERNET, China | A university-run public mirror of open-source software; in 2013, by a student's account, a campus network that billed traffic leaving the national education network | Billing outside traffic gave campus services a practical draw. [Proposed] VSU's costs are not known (Q-24). [Unresolved] |
+| sciebo, North Rhine-Westphalia, Germany, 2015 | File sync and sharing for 22 universities, run from three university data centers to comply with German data protection law | Universities can pool data centers instead of each building alone; VSU's five campuses are a smaller version of the same idea. [Proposed] |
+| Afripedia, French-speaking Africa | Kiwix servers with offline Wikipedia in universities in 11 countries, some without internet access | Offline reference libraries already run in universities, including some with no internet at all. [Established] |
+| Fully offline Moodle, UP Open University, 2026 | Moodle on a local server over a standalone network, keeping completion tracking and progress monitoring | The platform VSUEE runs on has been built to run fully offline by a Philippine team. [Established] |
+| 5G campus testbed, Ateneo de Manila University, 2020 | A campus 5G testbed with telecom partners, trying caching and mesh networking | A private campus cellular network has been tried in the Philippines as research, with telecom partners. [Established] |
+| eduroam through PREGINET | Wi-Fi sign-in shared across institutions, used by UP Diliman, UP Open University, and UP Los Baños; UP Diliman's campus network also issues its own network accounts | Identity at the door is already available to Philippine universities. [Established] Whether VSU takes part is not known (Q-27). [Unresolved] |
+| DepEd Commons, 2020 | Globe and Smart let users reach DepEd's learning platform without spending mobile data | Off campus, telecom whitelisting could do for VSU services what campus Wi-Fi does on campus. [Proposed] Whether telecoms would do it for VSU is not known. [Unresolved] |
+| EVSU smart campus, 2024 | A first phase budgeted at ₱1.5 billion, with an innovation hub, a fabrication laboratory, smart classrooms, command-and-control facilities, tracking cameras, and face-recognition ID checks | A neighboring state university is investing heavily in campus infrastructure. [Established] CAMPUS's direction centers on where information lives, and proposes no cameras or face recognition. [Proposed] |
+| Truman State University and Purdue University, US | Truman State ranks traffic in five tiers, academic first and peer-to-peer last, and slows lower tiers; Purdue filtered heavy streaming in classrooms on weekday hours and left residence halls out | Academic priority with a fair share is established practice; Purdue also found that only 4% of one building's traffic went to academic sites. [Established] Prioritizing without blocking is the owner's direction (D-059). [Established] |
+| Ifugao State University cell site, 2022 | A Smart cell site built on the campus, giving it a second carrier's signal | Weak mobile signal on a campus can be fixed by the carriers themselves. [Established] |
+| 00000JAPAN, Japan | Free Wi-Fi with no sign-in that participating providers open after disasters, at public places and shelters | An emergency network open to everyone is a tested practice ([Chapter 4.1](04a-emergencies.md)). [Established] |
+| INASP bandwidth study, 2003 | Case studies of universities in Ethiopia, Tanzania, Uganda, Malawi, Sri Lanka, and South Africa | Measure how bandwidth is used before buying more or building around it. [Established] |
+| Proxy cache thesis, UP Los Baños, 1998 | A master's thesis on the performance of a proxy cache hierarchy on a small network | Philippine universities studied campus caching while it was still possible; the full text is not online. [Established] |
+| Named Data Networking, US universities | A network design in which routers cache data by name, so repeated requests are answered nearby | The general form of the caching idea remains a research design, not something VSU could deploy today. [Established] |
+
+What CAMPUS adds is a combination, not a component: a campus-first rule for VSU-made data, rings that each survive the failure of those outside them, source labels that travel into caches and the library, and a design shaped by VSU's typhoon history, its resident students, and a network that already joins five campuses. [Proposed] Each of those differences still needs its evidence half from VSU ICT and the field. [Unresolved]
 
 ## Campus digital twins
 
@@ -136,6 +159,7 @@ Reviewed only lightly, since the digital twin is a later direction ([Chapter 5](
 4. Ask what OneVSU Mobile and the Portal will cover before the pitch (Q-18). [Proposed]
 5. Build the academic calendar into Hop-It's demand assumptions (Q-19). [Proposed]
 6. For real-time chat, evaluate an open protocol that VSU ICT could host, such as Matrix, before building a chat server (Q-04). [Proposed]
+7. For the intranet, start with measurement, keep shared caches to those run with content owners and to curated collections, and build security on identity and metadata rather than inspection (D-056, D-057, D-058). [Proposed]
 
 ## Status
 
@@ -146,12 +170,12 @@ Reviewed only lightly, since the digital twin is a later direction ([Chapter 5](
 | Philippine universities | First pass; other state universities in the region not yet checked |
 | International platforms | First pass |
 | Campus delivery | First pass; delivery coverage in Baybay not yet checked |
-| Local-first infrastructure | First pass |
+| Local-first infrastructure | Second pass, 8 October 2026, with [Chapter 4](04-intranet.md) |
 | Campus digital twins | Light pass |
 
 ## Sources
 
-Checked on 4 October 2026. The source type follows each entry ([Chapter 8](08-governance.md)).
+Checked on 4 October 2026, except the local-first infrastructure sources added on 8 October 2026. The source type follows each entry ([Chapter 8](08-governance.md)). Sources for VSU's own network are listed in [Chapter 4](04-intranet.md).
 
 - Visayas State University. [Third State of the University Address](https://www.vsu.edu.ph/articles/news/3045-3rd-state-of-the-university-address), 18 September 2026. Official.
 - Visayas State University. [Key Officials](https://www.vsu.edu.ph/administration), [Citizen's Charter](https://www.vsu.edu.ph/citizens-charter), [Helpdesk](https://helpdesk.vsu.edu.ph/open.php), [Document Request and Tracking System](https://docrequest.vsu.edu.ph/), and [E-Learning Environment](https://elearning.vsu.edu.ph). Official.
@@ -176,5 +200,20 @@ Checked on 4 October 2026. The source type follows each entry ([Chapter 8](08-go
 - Reyes, D., Erera, A., Savelsbergh, M., Sahasrabudhe, S., and O'Neil, R. (2018). [The Meal Delivery Routing Problem](https://optimization-online.org/wp-content/uploads/2018/04/6571.pdf). Optimization Online preprint. Scholarly.
 - Kleppmann, M., Wiggins, A., van Hardenberg, P., and McGranaghan, M. (2019). Local-first software: you own your data, in spite of the cloud. *Onward! 2019*, 154–178. [doi:10.1145/3359591.3359737](https://doi.org/10.1145/3359591.3359737). Scholarly.
 - [5 Questions with Lauren Lichtman](https://the-learning-agency.com/the-cutting-ed/article/5-questions-with-lauren-lichtman/), The Learning Agency, on Kolibri. External.
+- [SMTH BBS](https://en.wikipedia.org/wiki/SMTH_BBS) and [PTT Bulletin Board System](https://en.wikipedia.org/wiki/PTT_Bulletin_Board_System), Wikipedia. External.
+- [USTC Open Source Software Mirror](https://mirrors.ustc.edu.cn/); [Outbound routes of USTC network](https://01.me/en/2013/07/ustc-network/), a USTC student's account, 23 July 2013. External.
+- Vogl, R., Angenent, H., Rudolph, D., Thoring, A., Schild, C., Stieglitz, S., and Meske, C. (2015). [sciebo, the Campuscloud for NRW](https://www.wi.uni-muenster.de/publication/104892). *EUNIS 2015*, 15–26. Scholarly.
+- [Kiwix](https://en.wikipedia.org/wiki/Kiwix), Wikipedia, on the Afripedia project. External.
+- Lactuan, L. K., Pugoy, R. A., and others (2026). [Building a Fully Offline Moodle Ecosystem: Designing Local-Network Learning for Connectivity-Restricted Environments](https://indico.global/event/15189/contributions/142269/). MoodleMoot Japan 2026. Scholarly, conference abstract.
+- [University Campus 5G Testbed and Use Case Deployments in the Philippines](https://archium.ateneo.edu/ecce-faculty-pubs/118/), *Broadband Access Communication Technologies XIV*, SPIE 11307, 2020. Scholarly.
+- DOST-ASTI. [PREGINET connects institutions with eduroam](https://asti.dost.gov.ph/news-articles/paving-the-way-for-ph-research-dost-astis-preginet-connects-institutions-with-eduroam/), 6 February 2024. Official. UP Diliman, [DILNET services](https://dilnet.upd.edu.ph/services/). Official, from UP Diliman.
+- DepEd Commons: [ABS-CBN News](https://abs-cbn.com/news/04/21/20/access-to-online-study-platform-free-of-data-charges-deped), 21 April 2020; [PLDT and Smart](https://cms.pldt.com/drupal/node/187), 27 April 2020. External.
+- [Eastern Visayas university starts P1.5-B smart campus project](https://alpha.pna.gov.ph/articles/1223123), Philippine News Agency, 22 April 2024. External.
+- Truman State University, [Bandwidth management](https://its.truman.edu/docs/bandwidth-management); [Academics vs. entertainment: how colleges manage competing demands on the network](https://edtechmagazine.com/higher/article/2019/08/academics-vs-entertainment-how-colleges-manage-competing-demands-network), EdTech Magazine, 6 August 2019. External.
+- Ifugao State University. [Smart signal expected as IFSU houses cell site](https://ifsu.edu.ph/postview/eyJpdiI6Ikw0MWVjVUxNcnJDWDJoa2NQaUNQblE9PSIsInZhbHVlIjoidGRzaDhiMytEeWVZUFdmcWc5K3ZIUT09IiwibWFjIjoiYWI3NDIwNDc1YTg5MjJjNTNmZThjNjA2MmM5MTE0YzUwMzliZDJmZTdlNDU4OWFhMzVlNTBjZDkzYWEwNjY1ZSJ9), 16 May 2022. Official, from IFSU.
+- Wi-Biz. [00000JAPAN guideline, version 5.0](https://www.wlan-business.org/wp-content/uploads/2024/03/00000JAPAN_Guideline_V5.0.pdf), April 2024, in Japanese. External.
+- Venter, G. (2003). [Optimising Internet Bandwidth in Developing Country Higher Education](https://www.inasp.info/sites/default/files/2018-04/optimising_internet_bandwidth_report.pdf). INASP. External, research report.
+- Cadapan, E. V. (1998). [Analysis of the performance of a proxy cache hierarchy on a small-scale network](https://www.ukdr.uplb.edu.ph/etd-grad/581). Master's thesis, UP Los Baños. Scholarly.
+- Zhang, L., Afanasyev, A., Burke, J., Jacobson, V., claffy, kc, Crowley, P., Papadopoulos, C., Wang, L., and Zhang, B. (2014). Named data networking. *ACM SIGCOMM Computer Communication Review*, 44(3), 66–73. [doi:10.1145/2656877.2656887](https://doi.org/10.1145/2656877.2656887). Scholarly.
 - [foodpanda: a Tacloban restaurant page](https://www.foodpanda.ph/restaurant/r1sx/ocho-seafood-and-grill-tacloban); [GrabExpress Pabili](https://www.grab.com/ph/blog/grabexpresscities/), Grab, 2020; [Interaksyon](https://interaksyon.philstar.com/trends-spotlights/2020/04/30/167577/how-filipinos-making-food-delivery-services-easy-amid-covid-19-quarantine/), 2020. External.
 - Digital twins: [University of Glasgow case study](https://wates.co.uk/wp-content/uploads/2023/08/IES-University-of-Glagow-Case-Study.pdf), IES; [University of Manchester](https://matterport.com/news/university-of-manchester-taps-matterport-digital-twins-to-transform), Matterport. External, vendor.

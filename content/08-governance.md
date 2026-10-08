@@ -31,7 +31,7 @@ Collect only what a feature needs, use it only for that purpose, limit who can a
 | --- | --- | --- | --- |
 | Hop-It | Name, phone, delivery location, fulfillment evidence | Consent and incident handling | Approved retention, consent, privacy notice, and incident process |
 | Social/academic network | Profiles, posts, messages, listings | Moderation, speech, scams, minors | Community rules, a moderation owner at VSU, a privacy review |
-| Campus intranet | Whatever the hosted services hold | Security of campus infrastructure | VSU ICT ownership and a security review |
+| Campus intranet | Whatever the hosted services hold, plus network logs | Security of campus infrastructure, and monitoring that outgrows its purpose | VSU ICT ownership, a security review, and a published network policy that limits logs (D-057) |
 
 ## Questions the network's rules must answer
 
