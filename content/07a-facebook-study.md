@@ -51,7 +51,7 @@ H4 first read "students prefer pseudonymous participation," a preference that ob
 
 ## The instrument
 
-The study runs on a spreadsheet workbook built for Google Sheets (v1, 7 October 2026; v1.1 and v1.2 the same day). It starts blank, with a dropdown for every categorical field. [Established] Version 1.1 adds the H4 topic counts to day tallies, and two census columns: whether a channel is shared with other VSU campuses (D-047) and whether the author took part there before the study (D-045). [Established] Version 1.2 adds a Results tab that applies the cut-offs (D-053), an Inactive exclusion reason (D-052), and the sampling settings (D-051). [Established] The tabs follow the owner's brief, and the owner confirmed the design choices added to it: traces split into two tabs, the IDs, the working definitions, and the row checks. [Established] (D-043)
+The study runs on a spreadsheet workbook built for Google Sheets (v1, 7 October 2026; v1.1 to v1.3 the same day). It starts blank, with a dropdown for every categorical field. [Established] Version 1.1 adds the H4 topic counts to day tallies, and two census columns: whether a channel is shared with other VSU campuses (D-047) and whether the author took part there before the study (D-045). [Established] Version 1.2 adds a Results tab that applies the cut-offs (D-053), an Inactive exclusion reason (D-052), and the sampling settings (D-051); version 1.3 adds the 10-post minimum for H4 topics (D-054). [Established] The tabs follow the owner's brief, and the owner confirmed the design choices added to it: traces split into two tabs, the IDs, the working definitions, and the row checks. [Established] (D-043)
 
 | Tab | One row per | What it records |
 | --- | --- | --- |
@@ -67,7 +67,7 @@ The study runs on a spreadsheet workbook built for Google Sheets (v1, 7 October 
 
 The workbook guards its own rules. Every data tab checks each row and explains problems in plain language, the census flags any address that looks like a post or a profile rather than a page or group, and field notes flag links, @-mentions, and quote marks. [Established] (D-043)
 
-A copy filled with synthetic data matched independent calculations for every summary figure, planned date, and row check, with no formula errors. Filled with the same synthetic data, v1.1 matched v1 on every existing figure, and its new figures and checks matched independent calculations. Version 1.2 matched v1.1 the same way, and its Results tab gave the expected result in test cases built for every outcome, including values exactly on a cut-off. [Established] It has not yet been tested inside Google Sheets itself. [Unresolved]
+A copy filled with synthetic data matched independent calculations for every summary figure, planned date, and row check, with no formula errors. Filled with the same synthetic data, v1.1 matched v1 on every existing figure, and its new figures and checks matched independent calculations. Versions 1.2 and 1.3 matched their predecessors the same way, and the Results tab gave the expected result in test cases built for every outcome, including values exactly on a cut-off. [Established] It has not yet been tested inside Google Sheets itself. [Unresolved]
 
 ## Sampling
 
@@ -94,9 +94,9 @@ The cut-offs were fixed on 7 October 2026, before any data was read, as D-038 fi
 | H1 | Reappearances of official announcements that were altered or contradicted | 25% or more | Under 10% | 20 traced announcements |
 | H2 | Questions in community groups with no answer by tally time | 30% or more | 15% or less | 50 questions |
 | H3 | Included community groups that replace an earlier group | 25% or more | Under 10% | 15 community groups |
-| H4 | The highest topic rate of anonymous posting, against the overall rate | A topic at 2× or more | Anonymous posts under 5% of all posts, or no topic at 1.5× | 30 anonymous posts |
+| H4 | The highest topic rate of anonymous posting, against the overall rate, among topics with at least 10 posts | A topic at 2× or more | Anonymous posts under 5% of all posts, or no topic at 1.5× | 30 anonymous posts, and a topic with 10 posts |
 
-H1 is judged on alterations alone, so its result does not depend on which announcements the author chooses to trace. [Established] (D-053)
+H1 is judged on alterations alone, so its result does not depend on which announcements the author chooses to trace. [Established] (D-053) H4 counts only topics with at least 10 posts, so a topic with a handful of posts cannot decide the result. [Established] (D-054)
 
 ## Reporting
 
@@ -113,9 +113,9 @@ Rules for what leaves the workbook. [Established] (D-044)
 - The workbook is built and verified with synthetic data. [Established]
 - No channel has been censused and no day tallied. [Established]
 - The owner confirmed the instrument and the reporting rules on 7 October 2026. [Established] (D-043, D-044)
-- The owner settled the rest of the study's design the same day: the author's own activity, which channels count, H4's wording and topics, the recode check, the sampling settings, inactive groups, and the cut-offs. [Established] (D-045, D-047 to D-053)
+- The owner settled the rest of the study's design the same day: the author's own activity, which channels count, H4's wording and topics, the recode check, the sampling settings, inactive groups, and the cut-offs. [Established] (D-045, D-047 to D-054)
 - The first search pass and the census can start. [Established]
-- Workbook v1.2 has the H4 topic counts, the Results tab, and the decided settings. [Established]
+- Workbook v1.3 has the H4 topic counts, the Results tab, and the decided settings. [Established]
 - Nothing in the study's design is open. Next come the first search pass and the census, then three practice tallies, then the start date. [Established] (D-051)
 
 ## Sources
