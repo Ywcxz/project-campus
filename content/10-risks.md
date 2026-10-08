@@ -19,6 +19,10 @@ The largest risk is that the problems are smaller than assumed. The second is th
 | Credibility with technical reviewers | All | Working software, field research, and documented decisions, never claimed experience | Reviewers can't verify what is claimed |
 | A prototype mistaken for production | Hop-It, network | Label every environment; synthetic data first | Real users rely on something unsupported |
 | Unclear ownership of the work | All | Records of authorship; agreements before any collaboration | A partner assumes ownership |
+| Campus infrastructure used to watch or silence people | Intranet, network | Identity and metadata only, no decryption, short retention, and a published network policy (D-057) | Any proposal to inspect content or to record what each person browses |
+| The campus becomes its own single point of failure | Intranet | A copy of critical data off the Main Campus, phones that keep what people need, and island-mode drills | A drill shows campus services cannot run without the uplink, or a data center outage loses data |
+| Academic priority slows real class work or turns into censorship | Intranet | Priority by destination and place, published tiers, exceptions on request, and slowing rather than blocking (D-059) | Classes report that their group chats or teaching videos are slowed, or anyone asks to block a site for its content |
+| Emergency mode fails when it is needed | Intranet: emergencies | Backup power in shelter buildings, drills before typhoon season, and ownership by the Crisis Management Committee (D-060) | A drill shows the shelter network dies within hours, or no one is named to switch it on |
 
 ## Stop conditions
 

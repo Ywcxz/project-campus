@@ -8,7 +8,7 @@ CAMPUS (Connecting All Members, Places, and University Services) is a proposal f
 
 - **Start here:** [00 Overview](content/00-overview.md)
 - **Part I, the vision:** [01 CAMPUS](content/01-campus.md)
-- **Part II, products and directions:** [02 The Social/Academic Network](content/02-social-network.md), [02.1 Network Use Cases](content/02a-use-cases.md), [03 Hop-It](content/03-hop-it.md), [04 Campus Intranet](content/04-intranet.md), [05 Later Directions](content/05-later-directions.md)
+- **Part II, products and directions:** [02 The Social/Academic Network](content/02-social-network.md), [02.1 Network Use Cases](content/02a-use-cases.md), [03 Hop-It](content/03-hop-it.md), [04 Campus Intranet](content/04-intranet.md), [04.1 The Campus Ring in Emergencies](content/04a-emergencies.md), [04.2 Wireless Access and Existing Systems](content/04b-campus-network.md), [05 Later Directions](content/05-later-directions.md)
 - **Part III, grounding:** [06 VSU Context](content/06-vsu-context.md), [07 Problems and Evidence](content/07-evidence.md), [07.1 The Facebook Landscape Study](content/07a-facebook-study.md), [08 Information, Governance, and Privacy](content/08-governance.md), [09 Related Work](content/09-related-work.md) (first pass), [10 Risks and Stop Conditions](content/10-risks.md)
 - **Part IV, records:** [11 Roadmap and Milestones](content/11-roadmap.md), [12 Decision Register and Open Questions](content/12-decisions.md)
 
@@ -23,7 +23,7 @@ CAMPUS (Connecting All Members, Places, and University Services) is a proposal f
 ```
 project-campus/
 ├── index.html            cover page
-├── <slug>.html           14 identical chapter pages; each renders its Markdown file
+├── <slug>.html           17 identical chapter pages; each renders its Markdown file
 ├── content/              the master document, one Markdown file per chapter
 ├── data/chapters.json    chapter registry: order, titles, parts, status, source file
 ├── js/main.js            renders nav, contents, and chapters (small Markdown renderer)

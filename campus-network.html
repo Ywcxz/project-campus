@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Project CAMPUS master document.">
+<title>Project CAMPUS — Master Document</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=0.2">
+</head>
+<body>
+<!-- Chapter shell. Every chapter page is this same file; the body is
+     content/<file>.md, chosen by this page's file name via data/chapters.json. -->
+
+<div class="topbar">
+  <span class="topbar-brand">Project <em>CAMPUS</em></span>
+  <button class="topbar-toggle" id="spineToggle" aria-label="Toggle chapters">☰</button>
+</div>
+<div class="spine-backdrop" id="spineBackdrop"></div>
+
+<div class="shell">
+
+  <nav class="spine" id="spine">
+    <div class="spine-head">
+      <a href="index.html" class="spine-brand">Project <em>CAMPUS</em></a>
+      <div class="spine-lockup">Master Document · v0.2</div>
+    </div>
+    <ol class="spine-list" id="spineList"><!-- rendered by js/main.js --></ol>
+  </nav>
+
+  <main class="content">
+    <div class="content-inner">
+      <article class="chapter" id="chapter" aria-busy="true">
+        <p class="chapter-loading">Loading chapter…</p>
+        <noscript><p class="chapter-error">This chapter is written in Markdown and rendered with JavaScript. Read it in the content/ folder of the GitHub repository.</p></noscript>
+      </article>
+      <nav class="chapter-nav" id="chapterNav" aria-label="Previous and next chapter"></nav>
+    </div>
+  </main>
+
+</div>
+
+<script src="js/main.js?v=0.2"></script>
+</body>
+</html>
