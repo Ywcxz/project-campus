@@ -36,16 +36,16 @@ CAMPUS does not claim that VSU's systems are inadequate, that every group feels 
 ## Evidence on hand
 
 - The author's own experience and observations as a VSU alumnus. This is community knowledge: useful for asking questions, not proof. [Established]
-- Scholarly work on last-mile delivery, which shaped Hop-It's design ([Chapter 4.1](04a-hop-it.md)). [Established]
+- Scholarly work on last-mile delivery, which shaped Hop-It's design ([Chapter 5.1](05a-hop-it.md)). [Established]
 - A field research plan covering student interviews, a survey, problem synthesis, and prototype scoping, with an interview guide and a survey draft. It has not been run, and it is not yet in this repository. [Established] The student survey will run as an interactive page, the scenes prototype. [Established] (D-037)
-- A manual, observation-only study of public VSU-related Facebook pages and groups, with its instrument built and checked on synthetic data ([Chapter 7.1](07a-facebook-study.md)). It has not started. [Established] (D-041)
+- A manual, observation-only study of public VSU-related Facebook pages and groups, with its instrument built and checked on synthetic data ([Chapter 8.1](08a-facebook-study.md)). It has not started. [Established] (D-041)
 - Public VSU records of its network, data center, and the 2013 typhoon outage, cited in [Chapter 2](02-intranet.md). [Established]
 - Public VSU records of its accounts, student services, organizations, and notices, and an April 2025 investigation by VSU's student media of a VSU community group on Facebook, cited in [Chapter 3](03-social-network.md) and its sub-chapters. These are signals for the network's case, not field evidence of how often its problems occur. [Established]
-- No interviews, surveys, observations, or usage data have been gathered for VSU yet. [Established] Public institutional sources, including the Third SOUA and VSU's service pages, are cited in [Chapter 6](06-vsu-context.md) and [Chapter 9](09-related-work.md). [Established]
+- No interviews, surveys, observations, or usage data have been gathered for VSU yet. [Established] Public institutional sources, including the Third SOUA and VSU's service pages, are cited in [Chapter 7](07-vsu-context.md) and [Chapter 10](10-related-work.md). [Established]
 
 ## How CAMPUS will find out
 
-The work runs in five streams: problem and user research, institutional systems discovery, technical feasibility, governance and privacy, and research into later directions once they pass a gate. Methods include interviews, observation, surveys, comparative tasks (the current way against a prototype), technical experiments, and Hop-It's Alpha metrics. [Proposed] (v0.1 §11) The first observation study, of public Facebook pages and groups, is set out in [Chapter 7.1](07a-facebook-study.md). [Established] (D-041)
+The work runs in five streams: problem and user research, institutional systems discovery, technical feasibility, governance and privacy, and research into later directions once they pass a gate. Methods include interviews, observation, surveys, comparative tasks (the current way against a prototype), technical experiments, and Hop-It's Alpha metrics. [Proposed] (v0.1 §11) The first observation study, of public Facebook pages and groups, is set out in [Chapter 8.1](08a-facebook-study.md). [Established] (D-041)
 
 Each product passes these gates in order, and any gate can end in proceed, narrow, redefine, or stop. [Proposed] (adapted from v0.1 §11)
 

@@ -11,7 +11,7 @@ Four outputs come in a fixed order: this master document, a scrollytelling docum
 3. **Pitch slides.** For OVPSAS first.
 4. **Hop-It Alpha.** Follows its PRD: synthetic rehearsal, individual baseline, bundled cohort, evidence report, decision.
 
-Field research, meaning the interviews, the survey, and the Facebook landscape study ([Chapter 7.1](07a-facebook-study.md)), should run in parallel. It feeds Chapters 3 and 7 and supplies the site's real VSU examples. [Proposed]
+Field research, meaning the interviews, the survey, and the Facebook landscape study ([Chapter 8.1](08a-facebook-study.md)), should run in parallel. It feeds Chapters 3 and 8 and supplies the site's real VSU examples. [Proposed]
 
 ## The milestone ladder
 

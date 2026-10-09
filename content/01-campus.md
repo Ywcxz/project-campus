@@ -27,7 +27,7 @@ These are concepts, not a database schema. The real model has to come from resea
 
 ## Context travels with information
 
-Connecting more information without its context also spreads mistakes faster. CAMPUS therefore labels information by type: official, community knowledge, opinion, unverified, scholarly, or external ([Chapter 8](08-governance.md)). [Established] A second rule follows from the first: connected does not mean public. The fact that two things are related does not make the relationship visible to everyone, and visibility is decided separately. [Established]
+Connecting more information without its context also spreads mistakes faster. CAMPUS therefore labels information by type: official, community knowledge, opinion, unverified, scholarly, or external ([Chapter 9](09-governance.md)). [Established] A second rule follows from the first: connected does not mean public. The fact that two things are related does not make the relationship visible to everyone, and visibility is decided separately. [Established]
 
 ## Five design principles
 
@@ -62,7 +62,7 @@ Integration       VSU systems and outside services, through approved interfaces
 Infrastructure    campus network and servers, cloud, devices, the physical campus
 ```
 
-The products map onto these layers. The social/academic network is the first experience built on the relational layer, and the campus intranet would be the infrastructure underneath. Hop-It stays outside the stack for now: a separate product that tests delivery on its own. [Proposed] The other products in [Chapter 4](04-products.md), such as the marketplace and Wayfinder, would sit in the experience layer and share the relational layer's members and places. [Proposed]
+The products map onto these layers. The social/academic network is the first experience built on the relational layer, and the campus intranet would be the infrastructure underneath. Hop-It stays outside the stack for now: a separate product that tests delivery on its own. [Proposed] The other products in [Chapter 5](05-products.md), such as the marketplace and Housing, would sit in the experience layer and share the relational layer's members and places. [Proposed] The digital twin ([Chapter 4](04-digital-twin.md)) would grow the place part of that layer into a model of the whole campus. [Proposed]
 
 ## What CAMPUS is not
 

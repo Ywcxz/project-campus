@@ -12,7 +12,7 @@ const chapters = JSON.parse(read("data/chapters.json"));
 const mainJs = read("js/main.js");
 const meta = require("../scripts/sync-meta.js");
 const REF_IDS = new Map();
-for (const [file, page] of [["content/12-decisions.md", "decisions.html"], ["content/07-evidence.md", "evidence.html"]]) {
+for (const [file, page] of [["content/13-decisions.md", "decisions.html"], ["content/08-evidence.md", "evidence.html"]]) {
   for (const line of read(file).split("\n")) {
     const m = line.match(/^\|\s*([DQCE]-\d{2,3})\s*\|/);
     if (m) REF_IDS.set(m[1].toLowerCase(), page);
@@ -197,7 +197,7 @@ function cellCountSep(line) {
   check(ad.querySelectorAll(".doc-contents li").length === chapters.length, "document: contents list every chapter");
   const ids = new Set([...ad.querySelectorAll("[id]")].map((e) => e.id));
   check(ids.size === ad.querySelectorAll("[id]").length, "document: no duplicate ids");
-  const inPage = [...ad.querySelectorAll("#chapter a[href^='#'], #spineList a")];
+  const inPage = [...ad.querySelectorAll("#chapter a[href^='#'], #spineList a:not(.spine-doc)")];
   const broken = inPage.filter((a) => !ids.has(decodeURIComponent(a.getAttribute("href").slice(1))));
   check(broken.length === 0, `document: every in-page link has a target${broken.length ? ` (first broken: ${broken[0].getAttribute("href")})` : ""}`);
   check(![...ad.querySelectorAll("#chapter a:not([href^='http']):is([href$='.html'], [href*='.html#'])")].length, "document: chapter links stay on the page");
@@ -210,7 +210,7 @@ function cellCountSep(line) {
   const md = unit.window.renderMarkdown;
   check(md("Hi <script>alert(1)</script>").includes("&lt;script&gt;"), "renderer escapes HTML");
   check(md("[x](javascript:alert(1))").includes('href="#"'), "renderer blocks javascript: links");
-  check(md("[Hop-It](04a-hop-it.md)", { "04a-hop-it.md": "hop-it.html" }).includes('href="hop-it.html"'), "renderer rewrites chapter links");
+  check(md("[Hop-It](05a-hop-it.md)", { "05a-hop-it.md": "hop-it.html" }).includes('href="hop-it.html"'), "renderer rewrites chapter links");
   check(md("A claim. [Proposed]").includes('class="tag tag-proposed"'), "renderer turns tags into stamps");
   check(md("> **Note.** Text").includes('class="field-card"'), "renderer makes field cards");
   check(md("# T\n\n*Sub*").includes('class="subtitle"'), "renderer detects the subtitle");

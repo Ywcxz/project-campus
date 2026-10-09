@@ -6,7 +6,7 @@ Every chapter of the master document is a Markdown file in this folder. GitHub s
 
 - **Change a chapter:** edit its file here. Nothing else needs to change.
 - **Add a chapter:** write `NN-slug.md` here, starting with `# Title` (it must match the title in `data/chapters.json`) and an italic subtitle line. Copy any chapter page, for example `hop-it.html`, to `slug.html` without editing it. Add an entry to `data/chapters.json`, then run `node scripts/sync-meta.js` to give the new page its own title and link preview.
-- **Record a decision:** add a row to `12-decisions.md`. A decision made anywhere else does not count until it is there. Writing its ID, such as D-081, anywhere in a chapter links to that row automatically.
+- **Record a decision:** add a row to `13-decisions.md`. A decision made anywhere else does not count until it is there. Writing its ID, such as D-081, anywhere in a chapter links to that row automatically.
 
 ## Supported Markdown
 
@@ -19,7 +19,7 @@ The site renders a small subset (see `js/main.js`):
 - `> **Label.** text` for a pinned field card, `> text` for a pull quote
 - fenced code blocks for text diagrams, and `---` for a rule
 
-Link between chapters by file name, as in `[Hop-It](04a-hop-it.md)`. The site rewrites these to its own pages.
+Link between chapters by file name, as in `[Hop-It](05a-hop-it.md)`. The site rewrites these to its own pages.
 
 ## Claim tags
 
@@ -29,7 +29,7 @@ Write `[Established]`, `[Proposed]`, or `[Unresolved]` after a claim. The site s
 - **Proposed:** a design idea or hypothesis not yet validated.
 - **Unresolved:** an open question or an unverified claim.
 
-Source types are tracked separately from tags: official, community knowledge, opinion, unverified, scholarly, and external. See Chapter 8.
+Source types are tracked separately from tags: official, community knowledge, opinion, unverified, scholarly, and external. See Chapter 9.
 
 ## Privacy
 

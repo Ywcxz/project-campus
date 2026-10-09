@@ -69,7 +69,7 @@ A community is the network's unit: a group of members around something real at V
 | Residence | VSU's 21 student dormitories | Dormitory management, with residents | Residents | Management |
 | Place | The VSU Market, the library | The office that manages the place | Anyone | The managing office |
 | Topic | A crop, coastal research, GIS, photography | The members who start it | Anyone | Its owners |
-| Marketplace, linked | Books, uniforms, gadgets, dormitory items, in the Marketplace product ([Chapter 4.2](04b-marketplace.md)) | The network's moderators | Verified members | Moderators |
+| Marketplace, linked | Books, uniforms, gadgets, dormitory items, in the Marketplace product ([Chapter 5.2](05b-marketplace.md)) | The network's moderators | Verified members | Moderators |
 | Concerns | Problems with services or facilities | The student council and OVPSAS, jointly | Students | The council |
 | Hometown, later | Students from the same province or town | The members who start it | Anyone from there | Its owners |
 
@@ -88,7 +88,7 @@ Inside each community are spaces of different kinds, each with its own posting r
 | Discussion | Open conversation, with lighter talk kept in its own space | Members | Slower cycle |
 | Archive | Everything superseded or past | No one | Opened on demand |
 
-Subject communities hold what outlasts a semester: questions, guides such as what seniors wish they had known before taking a subject, and pointers to the library. Course sections, materials, and grades stay in VSUEE. [Proposed] (D-064) Ratings and reviews of individual teachers are not proposed: faculty evaluation is sensitive and belongs to VSU ([Chapter 9](09-related-work.md)). [Proposed]
+Subject communities hold what outlasts a semester: questions, guides such as what seniors wish they had known before taking a subject, and pointers to the library. Course sections, materials, and grades stay in VSUEE. [Proposed] (D-064) Ratings and reviews of individual teachers are not proposed: faculty evaluation is sensitive and belongs to VSU ([Chapter 10](10-related-work.md)). [Proposed]
 
 ### Three rules that keep communities healthy
 
@@ -98,7 +98,7 @@ Subject communities hold what outlasts a semester: questions, guides such as wha
 
 ## Who can see what
 
-Connected does not mean public ([Chapter 8](08-governance.md)). [Established] Every space has one of five visibility levels, and the level is shown on the space. [Proposed]
+Connected does not mean public ([Chapter 9](09-governance.md)). [Established] Every space has one of five visibility levels, and the level is shown on the space. [Proposed]
 
 | Level | Who sees it | For |
 | --- | --- | --- |
@@ -128,7 +128,7 @@ The confidential level is a door, not a desk. A report of sexual harassment goes
 
 ### Labels
 
-Every post carries one of the six information types of [Chapter 8](08-governance.md), set by who posted it and where, not chosen freely. [Proposed] (D-063)
+Every post carries one of the six information types of [Chapter 9](09-governance.md), set by who posted it and where, not chosen freely. [Proposed] (D-063)
 
 - **Official:** only office accounts, only in their official spaces.
 - **Community knowledge:** guides, and peer answers an office has confirmed.
@@ -154,7 +154,7 @@ Each guide is reviewed by its community at the start of each semester, and an an
 
 ### Answers someone stands behind
 
-The patterns come from Stack Exchange's accepted answers and Piazza's instructor-endorsed answers ([Chapter 9](09-related-work.md)). [Established] Discourse, an open-source forum, already lets a topic's owner and staff mark a reply as the solution in chosen categories. [Established] On the network, members answer under a name and role, or a pseudonym where the section allows; an office confirms one answer or posts its own; and the confirmed answer is dated and kept, and new questions like it are pointed to it. [Proposed] A confirmation is only as good as the office behind it, which is why an office's commitment comes before any pilot. [Proposed] (D-068)
+The patterns come from Stack Exchange's accepted answers and Piazza's instructor-endorsed answers ([Chapter 10](10-related-work.md)). [Established] Discourse, an open-source forum, already lets a topic's owner and staff mark a reply as the solution in chosen categories. [Established] On the network, members answer under a name and role, or a pseudonym where the section allows; an office confirms one answer or posts its own; and the confirmed answer is dated and kept, and new questions like it are pointed to it. [Proposed] A confirmation is only as good as the office behind it, which is why an office's commitment comes before any pilot. [Proposed] (D-068)
 
 ## Asking: routing questions to people who know
 
@@ -251,9 +251,9 @@ An event is an entity, not a post that scrolls away. It has a time, a place, org
 
 ## Student services, and the link to the marketplace
 
-The marketplace is its own product, linked from the network rather than built as one of its spaces. [Established] (D-078) Its design, including who may sell, what may be sold, and how trust is earned, is in [Chapter 4.2](04b-marketplace.md). The network links to it from the communities where trading comes up, such as a dormitory or a subject's book exchange, and shares its verified membership and moderators with it. [Proposed]
+The marketplace is its own product, linked from the network rather than built as one of its spaces. [Established] (D-078) Its design, including who may sell, what may be sold, and how trust is earned, is in [Chapter 5.2](05b-marketplace.md). The network links to it from the communities where trading comes up, such as a dormitory or a subject's book exchange, and shares its verified membership and moderators with it. [Proposed]
 
-- **Services, later.** Tutoring, printing, layout, and photography listings, reviewed only by confirmed clients, with deliveries handed to Hop-It ([Chapter 4.1](04a-hop-it.md)). [Proposed]
+- **Services, later.** Tutoring, printing, layout, and photography listings, reviewed only by confirmed clients, with deliveries handed to Hop-It ([Chapter 5.1](05a-hop-it.md)). [Proposed]
 
 ## Pseudonymous sections
 
@@ -266,7 +266,7 @@ Participation is identified by default, and some sections may allow anonymous or
 | Pseudonym | A stable nickname that other members cannot link to the member | The link, under two keys | Concerns about the university; personal problems |
 | Fully anonymous | Nothing | Nothing | Not offered |
 
-Dcard's posting under a verified university affiliation without a name is the tested precedent for the role-only option ([Chapter 9](09-related-work.md)). [Established] Full anonymity is not offered, because no one could act on threats, harassment, or exploitation, as Yik Yak's history and the 2025 case at VSU show. [Proposed]
+Dcard's posting under a verified university affiliation without a name is the tested precedent for the role-only option ([Chapter 10](10-related-work.md)). [Established] Full anonymity is not offered, because no one could act on threats, harassment, or exploitation, as Yik Yak's history and the 2025 case at VSU show. [Proposed]
 
 A simpler version, anonymous to other members and verified to VSU, protects a member from peers but not from the institution: if VSU can see who wrote a criticism of VSU, the anonymity protects least where it is needed most. [Proposed] So the link between a nickname and a member would be stored so that no single person can open it: one key held by the student council and one by VSU's data protection officer, or by people they name, so that both must agree. [Proposed] An identity would be revealed only for named violations, such as threats, harassment, impersonation, or sexual content involving a minor, or under legal process, and never for criticizing the university. Every reveal would be logged and reported, in aggregate, each semester. [Proposed] (D-065) Which sections get pseudonyms follows the Facebook study's H4, on the topics people already post about anonymously far more than others. [Established] (D-048, D-050)
 
@@ -329,7 +329,7 @@ The network grows outward in steps, each with its own verification and its own g
 2. **Alumni.** VSU accounts can be revoked at graduation, so graduates need a separate path, such as verification against VSU's graduation records, with an alumni role. [Proposed] (Q-45) Alumni would then mentor, answer career questions, and keep helping in the communities they knew, which serves the Strategic Plan's goal of Strong Alumni Engagement. [Proposed]
 3. **Applicants and their parents.** A public "Ask VSU" section, where they can ask about programs, admission, and student life and be answered by verified students, alumni, and offices, extends the use case of a window for aspiring students ([Chapter 3.1](03a-use-cases.md)). [Proposed] Parents of first-generation students, who could not ask anyone at home with a college degree, may gain the most. [Proposed] Applicants may be minors, so the section would allow public questions and answers only, with no private messages to them. [Proposed]
 
-Out of scope are minors from outside VSU and the general public. [Proposed] A knowledge exchange open to every level of education, from elementary pupils to professionals, is a different product with different safety duties, and it falls outside CAMPUS (D-021). [Proposed] If the idea belongs anywhere, it is closer to the Education Protocol Concept, which [Chapter 5](05-later-directions.md) records as a separate project. [Proposed]
+Out of scope are minors from outside VSU and the general public. [Proposed] A knowledge exchange open to every level of education, from elementary pupils to professionals, is a different product with different safety duties, and it falls outside CAMPUS (D-021). [Proposed] If the idea belongs anywhere, it is closer to the Education Protocol Concept, which [Chapter 6](06-later-directions.md) records as a separate project. [Proposed]
 
 ## Phones, data, and language
 
@@ -425,7 +425,7 @@ Anything the evidence does not call for. [Established] (principle 5) In particul
 
 ## Sources
 
-Checked on 8 and 9 October 2026. The source type follows each entry ([Chapter 8](08-governance.md)).
+Checked on 8 and 9 October 2026. The source type follows each entry ([Chapter 9](09-governance.md)).
 
 - Visayas State University. [All VSU students and staff to get Microsoft and Google licenses](https://www.vsu.edu.ph/articles/news/2394-all-vsu-students-and-staff-to-get-microsoft-google-licenses), 22 August 2023; [VSU rolls out 9,245 free Google Workspace accounts to students in Main Campus](https://www.vsu.edu.ph/articles/news/2255-vsu-rolls-out-9-245-free-google-workspace-accounts-to-all-students-in-main-campus), 4 October 2022; [VSU implements new vision, mission, organizational structures](https://www.vsu.edu.ph/articles/news/2666-vsu-implements-new-vision-mission-organizational-structures), 16 January 2025; [VSU UDRMO unveils WAIS](https://www.vsu.edu.ph/articles/news/3011-vsu-udrmo-unveils-wais-strengthens-climate-resilience-efforts), 9 July 2026; [Accredited Organizations](https://www.vsu.edu.ph/students/accredited-organizations), school year 2022–23; [Main Campus faculties](https://www.vsu.edu.ph/academe/main-campus); [Graduate faculty of the Department of Food Science and Technology](https://www.vsu.edu.ph/21-content-main/informational/1611-graduate-faculty-of-dept-of-food-science-and-technology), an example of VSU's graduate faculty pages; [Student Services](https://www.vsu.edu.ph/vsu/1156-student-services); [Frequently asked questions on sexual harassment](https://www.vsu.edu.ph/vsu/1356-anti-sexual-harassment); [News feed](https://www.vsu.edu.ph/articles/news?format=feed&type=rss) and [announcements feed](https://www.vsu.edu.ph/articles/bulletin?format=feed&type=rss); [University Policies](https://www.vsu.edu.ph/about/university-policies), including BOR Resolution No. 162, s. 2024, on suspending classes and work, and BOR Resolution No. 100, s. 2025, on raising and selling animals; [VSU commits to data privacy and protection](https://www.vsu.edu.ph/articles/news/1919-vsu-commits-to-data-privacy-and-protection), 24 February 2021. Official.
 - [Republic Act No. 10173, Data Privacy Act of 2012](https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html), Sections 3(l), 11(e), 13, and 16(e); [Republic Act No. 11313, Safe Spaces Act](https://lawphil.net/statutes/repacts/ra2019/ra_11313_2019.html), Sections 12, 21, and 22; National Privacy Commission, [Circular No. 2022-04](https://privacy.gov.ph/wp-content/uploads/2023/05/Circular-2022-04.pdf), Section 5. Official.

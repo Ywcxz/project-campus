@@ -80,7 +80,7 @@ Whether putting academic traffic first helps students focus is a hope rather tha
 
 Joining the campus network takes a VSU account. [Established] (D-057) The kind of sign-in eduroam uses would tie each connection to a member without reading what they do. [Proposed] Four details decide whether it works.
 
-- **Which accounts.** VSU's students have university Google accounts ([Chapter 9](09-related-work.md)). Google's Secure LDAP service lets campus systems such as FreeRADIUS check those accounts and is included in the Education Fundamentals, Standard, and Plus editions, but Google warns that Wi-Fi sign-in can exceed its daily query limits with many users or irregular internet connectivity. [Established] If every sign-in had to reach Google, an internet outage would lock people out of the campus network itself; a campus copy of the directory, or cached credentials, keeps island mode working. [Proposed] (Q-32)
+- **Which accounts.** VSU's students have university Google accounts ([Chapter 10](10-related-work.md)). Google's Secure LDAP service lets campus systems such as FreeRADIUS check those accounts and is included in the Education Fundamentals, Standard, and Plus editions, but Google warns that Wi-Fi sign-in can exceed its daily query limits with many users or irregular internet connectivity. [Established] If every sign-in had to reach Google, an internet outage would lock people out of the campus network itself; a campus copy of the directory, or cached credentials, keeps island mode working. [Proposed] (Q-32)
 - **Exceptions.** Guests need a visitor network, and emergency mode opens a network to everyone sheltering on campus ([Chapter 2.1](02a-emergencies.md)). [Proposed]
 - **Turnover.** Every new class needs accounts on day one; 2,604 first-year students enrolled at the Main Campus in 2026. [Established] Accounts also have to close cleanly when people leave. [Proposed]
 - **Logs.** Sign-in ties every connection to a person, so connection logs are personal data and are kept briefly (D-057). [Proposed]
@@ -124,7 +124,7 @@ Across all of them, five things would change for VSU ICT: how people sign in, wh
 
 ## Sources
 
-Checked on 8 October 2026. The source type follows each entry ([Chapter 8](08-governance.md)).
+Checked on 8 October 2026. The source type follows each entry ([Chapter 9](09-governance.md)).
 
 - Visayas State University. [VSU's ICT team successfully deploys free WIFI to all main campus dorms](https://www.vsu.edu.ph/articles/news/2353-vsu-s-ict-team-successfully-deploys-free-wifi-to-all-main-campus-dorms), 30 May 2023; [VSU gets 15M CHED grant to build smart campus](https://www.vsu.edu.ph/articles/news/1889-vsu-gets-15m-ched-grant-to-build-smart-campus), 18 January 2021; [Third State of the University Address](https://www.vsu.edu.ph/articles/news/3045-3rd-state-of-the-university-address), 18 September 2026. Official.
 - VSU University Computer Center. [Projects](https://ucc.vsu.edu.ph/projects), undated, describing work through 2017. Official.

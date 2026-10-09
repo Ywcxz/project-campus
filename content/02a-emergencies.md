@@ -38,7 +38,7 @@ The two events failed in different ways. In 2013 the outside link broke; in 2022
 | Where to go | Which buildings are open as shelters, where relief is handed out, where to charge a phone | The campus ring, as a simple page and map |
 | Who is safe | Students, staff, and dormitory residents checking in, so the Crisis Management Committee knows who is unaccounted for | The campus ring, kept only for the emergency |
 | Reaching help and family | Calls and messages beyond the campus | The internet ring when any link works; carriers' free-call stations otherwise |
-| Fact apart from rumor | Official posts marked official, unconfirmed reports marked unverified | The campus ring, using the information types of [Chapter 8](08-governance.md) |
+| Fact apart from rumor | Official posts marked official, unconfirmed reports marked unverified | The campus ring, using the information types of [Chapter 9](09-governance.md) |
 
 Every row is a proposal, and the list itself is a hypothesis for interviews with the Crisis Management Committee and with students who lived through Agaton on campus. [Proposed] (Q-31)
 
@@ -92,7 +92,7 @@ Emergency mode is the campus ring's design for those days. Each part is a propos
 
 ## Sources
 
-Checked on 8 October 2026. The source type follows each entry ([Chapter 8](08-governance.md)).
+Checked on 8 October 2026. The source type follows each entry ([Chapter 9](09-governance.md)).
 
 - Visayas State University. [Around 2,000 students and their families receive relief assistance after TS Agaton](https://www.vsu.edu.ph/articles/news/2178-around-2-000-students-and-their-families-receive-relief-assistance-after-ts-agaton), 26 April 2022; [Third State of the University Address](https://www.vsu.edu.ph/articles/news/3045-3rd-state-of-the-university-address), 18 September 2026. Official.
 - VSU University Computer Center. [Projects](https://ucc.vsu.edu.ph/projects), undated, describing work through 2017. Official.

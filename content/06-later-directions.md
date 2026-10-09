@@ -11,7 +11,7 @@ None of these is a commitment. Each needs its own evidence, governance review, a
 | Research discovery | Finding researchers, expertise, projects, laboratories, and publications | Must not duplicate VSU's research repositories or management systems. It could grow from the network's relational model and the topics members choose to help with (D-071, D-075). [Deferred] |
 | Analytics and AI, including GIS | Insight and assistance built on governed data | Only in this order: governed data, meaningful relationships, a validated use case, then analytics or AI. Never the reverse. [Deferred] |
 
-The digital twin was listed here until 9 October 2026, when it moved to the products, keeping the same conditions ([Chapter 4.5](04e-digital-twin.md), D-077). [Established]
+The digital twin was listed here until 9 October 2026, when it moved out, keeping the same conditions; it now has its own chapter ([Chapter 4](04-digital-twin.md), D-077, D-081). [Established]
 
 Pathways, v0.1's education-to-career dimension, is not on the current list. It stays parked in the archive unless a decision revives it (v0.1 §7.4; D-022).
 

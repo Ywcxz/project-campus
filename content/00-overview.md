@@ -18,8 +18,9 @@ CAMPUS (Connecting All Members, Places, and University Services) is a proposal f
 | [CAMPUS](01-campus.md) | The umbrella vision: a digital layer over the physical university | Proposed |
 | [Campus intranet](02-intranet.md) | The long-term backbone: local-first infrastructure, offered as a direction for VSU ICT and DIGITS, not an immediate ask | Direction only |
 | [Social/academic network](03-social-network.md) | The centerpiece proposal: VSU's own alternative to Facebook for campus life, with discussions, groups, real-time chat, and student services, designed and governed for the university and free of ads and endless feeds | Proposed; leads the first pitch |
-| [Products](04-products.md) | Separate tools that each do one job on campus. [Hop-It](04a-hop-it.md) comes first: a scheduled, pooled campus delivery experiment, built independently of university systems as working proof of capability. A marketplace, Housing, Wayfinder, and a digital twin follow as short entries | Hop-It specified for Alpha; the rest are entries to test |
-| [Later directions](05-later-directions.md) | High-school-to-college bridging, learning record, research discovery, analytics and AI | Not commitments |
+| [Digital twin](04-digital-twin.md) | A living model of the campus and what happens in it: possibly the largest project of all and the university's long-term aspiration, starting from finding places and knowing which office handles what | Research only; first step proposed |
+| [Products](05-products.md) | Separate tools that each do one job on campus. [Hop-It](05a-hop-it.md) comes first: a scheduled, pooled campus delivery experiment, built independently of university systems as working proof of capability. A marketplace and Housing follow as short entries | Hop-It specified for Alpha; the rest are entries to test |
+| [Later directions](06-later-directions.md) | High-school-to-college bridging, learning record, research discovery, analytics and AI | Not commitments |
 
 ## What comes next
 
@@ -33,7 +34,7 @@ Every significant claim carries one of three tags:
 - [Proposed] means a design idea or hypothesis that has not been validated.
 - [Unresolved] means an open question, or a claim nobody has verified yet.
 
-Sources are kept apart by type as well: official information, community knowledge, opinion, unverified information, scholarly work, and external sources ([Chapter 8](08-governance.md)). Decisions are recorded in one place, the [decision register](12-decisions.md). A decision made in a conversation or a draft counts only once it is entered there.
+Sources are kept apart by type as well: official information, community knowledge, opinion, unverified information, scholarly work, and external sources ([Chapter 9](09-governance.md)). Decisions are recorded in one place, the [decision register](13-decisions.md). A decision made in a conversation or a draft counts only once it is entered there.
 
 ## What changed from v0.1
 

@@ -10,7 +10,7 @@ The marketplace is a place for VSU's students and employees to buy and sell from
 | --- | --- |
 | What problem? | Buying and selling between VSU people happens in crowded groups open to strangers and scammers, where a buyer can't tell whether a seller is from VSU. [Unresolved] Nothing has been measured. |
 | Who needs it? | Students and employees who buy and sell second-hand: incoming students looking for used books and uniforms, graduating students clearing out, and dormitory residents moving rooms. [Proposed] |
-| What evidence? | None from VSU yet. The Facebook landscape study may find buy-and-sell groups and show how they work ([Chapter 7.1](07a-facebook-study.md)), and the survey could ask about scams. [Unresolved] |
+| What evidence? | None from VSU yet. The Facebook landscape study may find buy-and-sell groups and show how they work ([Chapter 8.1](08a-facebook-study.md)), and the survey could ask about scams. [Unresolved] |
 | Relation to existing systems? | Nothing at VSU does this ([Chapter 3.3](03c-network-fit.md)). [Established] It would compete with Facebook buy-and-sell groups, which principle 3 allows only where the campus is poorly served, and only if the evidence shows it is. [Proposed] |
 | Stage? | Later, once the network's moderation and dispute rules exist. [Proposed] |
 | Privacy, governance, and cost? | Listings show a member's name and role, and records of exchanges are deleted soon after they close, as the network's rules propose for transactions ([Chapter 3.2](03b-network-design.md)). [Proposed] Moderation is the main cost, and a host of trade has legal duties still to be checked (Q-36). [Unresolved] |
@@ -20,8 +20,8 @@ The marketplace is a place for VSU's students and employees to buy and sell from
 
 - **Who.** Verified members only, so that a buyer knows the seller is a VSU student or employee. [Proposed]
 - **What.** Categories for books, uniforms, gadgets, and dormitory items, and a list of prohibited and regulated items that follows the law and VSU's policies, such as its 2025 policy on raising and selling animals at VSU. [Proposed] What that policy allows is not checked here. [Unresolved]
-- **Where.** Suggested meeting points in busy public places on campus, shown in Wayfinder ([Chapter 4.4](04d-wayfinder.md)). [Proposed]
-- **Money.** Payment happens outside the marketplace, as in Hop-It's Alpha ([Chapter 4.1](04a-hop-it.md)). [Proposed]
+- **Where.** Suggested meeting points in busy public places on campus, shown among the digital twin's places ([Chapter 4](04-digital-twin.md)). [Proposed]
+- **Money.** Payment happens outside the marketplace, as in Hop-It's Alpha ([Chapter 5.1](05a-hop-it.md)). [Proposed]
 - **Trust.** After an exchange both sides confirm it, and only confirmed exchanges count toward a seller's record, which the seller and buyers can see. Scams are reported to moderators, and repeat offenders lose access. [Proposed]
 
 ## How it links to the network
