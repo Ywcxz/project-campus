@@ -2,11 +2,11 @@
 
 *What CAMPUS is, where it stands, and how to read this document*
 
-CAMPUS, short for Connecting All Members, Places, and University Services, is a proposal for a different approach to digital transformation at Visayas State University. It imagines a digital layer over the physical university that connects people, organizations, knowledge, places, services, and opportunities, designed around VSU's own culture, values, policies, geography, and people. It is not a commercial product and not a plan for Philippine higher education in general. [Established]
+CAMPUS (Connecting All Members, Places, and University Services) is a proposal for a different approach to digital transformation at Visayas State University. It imagines a digital layer over the physical university that connects people, organizations, knowledge, places, services, and opportunities, designed around VSU's own culture, values, policies, geography, and people. It is not a commercial product and not a plan for Philippine higher education in general. [Established]
 
 ## Where it stands, October 2026
 
-- CAMPUS is an independent project led full-time by one person, Leo M. Subingsubing, a VSU Main Campus alumnus (BS Mechanical Engineering), as a passion project. There is no team, partner, or institutional collaboration. [Established]
+- CAMPUS is an independent project led full-time by one person, Leo M. Subingsubing, a VSU Main Campus alumnus, as a passion project. There is no team, partner, or institutional collaboration. [Established]
 - No VSU office has reviewed, endorsed, approved, funded, or adopted CAMPUS. When this document refers to VSU's plans, systems, or goals, it implies none of these. [Established]
 - The first product, Hop-It, has an Alpha PRD and a functional specification, both dated late September 2026. [Established]
 - No field research has been run yet, so every problem CAMPUS addresses is still a hypothesis. [Established]

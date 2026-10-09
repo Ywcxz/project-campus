@@ -19,9 +19,19 @@
   --rule:     #D6D2C2;
   --rule-2:   #C3BEA9;
 
-  /* Brass — stamps, chapter marks, written-status */
-  --brass:    #9C6B2C;
-  --brass-bg: #F1E4CC;
+  /* Brass: VSU gold, deep enough to read as text. Stamps, chapter
+     marks, "you are here". */
+  --brass:    #84620B;
+  --brass-bg: #F4E8C1;
+
+  /* VSU green and gold, used sparingly: hover, part labels, the
+     ribbon at the top of the sidebar. Tuned to this paper palette;
+     these are not official VSU brand values. */
+  --green:     #17643A;
+  --green-bg:  #D5E6D3;
+  --ribbon:    #17643A;   /* the ribbon's green stays deep in both themes */
+  --gold:      #E2AE1C;   /* fills only (ribbon, pins), never text */
+  --highlight: #F2DD8C;   /* selected text, like a highlighter */
 
   /* Sea — live links, flagship pilot */
   --sea:      #17495A;
@@ -35,7 +45,7 @@
   --topbar-h: 56px;
 
   --scroll-thumb:       rgba(31, 42, 34, .22);
-  --scroll-thumb-hover: rgba(31, 42, 34, .40);
+  --scroll-thumb-hover: rgba(23, 100, 58, .55);
   color-scheme: light;
 }
 
@@ -48,12 +58,17 @@
   --ink-3:    #89958A;
   --rule:     #465249;
   --rule-2:   #617064;
-  --brass:    #D4A55A;
-  --brass-bg: #4A3D29;
+  --brass:    #DDB04F;
+  --brass-bg: #4A3F22;
+  --green:     #86C99A;
+  --green-bg:  #233D2C;
+  --ribbon:    #2E8A52;
+  --gold:      #E6B53A;
+  --highlight: #5C4B1A;
   --sea:      #8FC5D0;
   --sea-bg:   #29464B;
   --scroll-thumb:       rgba(238, 240, 231, .20);
-  --scroll-thumb-hover: rgba(238, 240, 231, .36);
+  --scroll-thumb-hover: rgba(134, 201, 154, .50);
   color-scheme: dark;
 }
 
@@ -67,6 +82,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 a { color: inherit; text-decoration: none; }
+::selection { background: var(--highlight); color: var(--ink); }
 ol, ul { list-style: none; }
 img, svg { display: block; max-width: 100%; }
 button { font-family: var(--font-body); cursor: pointer; background: none; border: none; }
@@ -100,7 +116,7 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
   display: none;
   position: sticky; top: 0; z-index: 300;
   height: var(--topbar-h);
-  background: var(--paper-2);
+  background: linear-gradient(var(--ribbon) 0 4px, var(--gold) 4px 6px) top / 100% 6px no-repeat, var(--paper-2);
   border-bottom: 1px solid var(--rule);
   align-items: center;
   justify-content: space-between;
@@ -133,7 +149,8 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
    open it automatically. */
 .spine {
   width: var(--spine-w); flex-shrink: 0;
-  background: var(--paper-2);
+  /* The ribbon: VSU green over a thin gold line. */
+  background: linear-gradient(var(--ribbon) 0 4px, var(--gold) 4px 6px) top / 100% 6px no-repeat, var(--paper-2);
   border-right: 1px solid var(--rule);
   position: sticky; top: 0; height: 100vh; height: 100dvh;
   display: flex; flex-direction: column; overflow: hidden;
@@ -141,8 +158,9 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 .spine-head { flex-shrink: 0; padding: 32px 28px 20px; border-bottom: 1px solid var(--rule); }
 .spine-brand {
   font-family: var(--font-display); font-size: 19px; font-weight: 500;
-  display: block; margin-bottom: 6px;
+  display: block; margin-bottom: 6px; transition: color .15s;
 }
+.spine-brand:hover { color: var(--green); }
 .spine-brand em { font-style: italic; font-weight: 600; }
 .spine-lockup {
   font-family: var(--font-mono); font-size: 10px; letter-spacing: .05em;
@@ -160,7 +178,7 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 
 .spine-part {
   padding: 22px 12px 6px; font-size: 11.5px; font-weight: 600;
-  letter-spacing: .01em; color: var(--ink-3);
+  letter-spacing: .01em; color: var(--green);
 }
 .spine-part:first-child { padding-top: 4px; }
 
@@ -171,7 +189,8 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
   font-size: 13.5px; line-height: 1.4; color: var(--ink-2);
   transition: background-color .12s, color .12s;
 }
-.spine-item a:hover { background: var(--paper-3); color: var(--ink); }
+.spine-item a:hover { background: var(--green-bg); color: var(--green); }
+.spine-item a:hover .spine-num { color: var(--green); }
 .spine-item a:focus-visible, .spine-toggle:focus-visible { outline: 2px solid var(--brass); outline-offset: -2px; }
 .spine-item a[aria-current="page"] { background: var(--brass-bg); color: var(--ink); font-weight: 500; }
 .spine-item span.disabled { color: var(--ink-3); cursor: default; }
@@ -179,6 +198,7 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 .spine-num {
   font-family: var(--font-mono); font-size: 11px; color: var(--ink-3);
   min-width: 20px; flex-shrink: 0; font-variant-numeric: tabular-nums;
+  transition: color .12s;
 }
 .spine-item a[aria-current="page"] .spine-num { color: var(--brass); }
 .spine-title { flex: 1; min-width: 0; }
@@ -194,7 +214,9 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
   display: grid; place-items: center; color: var(--ink-3);
   transition: background-color .12s, color .12s;
 }
-.spine-toggle:hover { background: var(--rule); color: var(--ink); }
+@media (hover: hover) {
+  .spine-toggle:hover { background: var(--green-bg); color: var(--green); }
+}
 .spine-toggle svg { transition: transform .2s ease; }
 .spine-group.open > .spine-row .spine-toggle svg { transform: rotate(90deg); }
 
@@ -225,7 +247,7 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
   width: 3px; border-radius: 2px; background: transparent;
   transition: background-color .12s;
 }
-.spine-subitem:hover::before { background: var(--rule-2); }
+.spine-subitem:hover::before { background: var(--green); }
 .spine-subitem.active::before { background: var(--brass); }
 
 @media (pointer: coarse) {
@@ -261,7 +283,7 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
   color: var(--ink-2); text-transform: uppercase; margin-bottom: 22px;
 }
 .lockup .x { color: var(--ink-3); font-size: 11px; }
-.lockup .vsu { color: var(--sea); font-weight: 500; }
+.lockup .vsu { color: var(--green); font-weight: 500; }
 
 /* ── HERO (cover page) ────────────────────────────────────── */
 .hero { padding-top: 8px; margin-bottom: 56px; }
@@ -286,9 +308,9 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
   display: inline-flex; align-items: center; gap: 8px;
   padding: 11px 20px; border-radius: 3px; font-size: 13.5px; font-weight: 500;
   border: 1px solid var(--ink); color: var(--ink);
-  transition: background .15s, color .15s;
+  transition: background-color .15s, border-color .15s, color .15s;
 }
-.btn:hover { background: var(--ink); color: var(--paper); }
+.btn:hover { background: var(--green); border-color: var(--green); color: var(--paper); }
 .btn-sea { border-color: var(--sea); color: var(--sea); }
 .btn-sea:hover { background: var(--sea); color: var(--paper); }
 
@@ -326,16 +348,28 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 .toc-row {
   display: flex; align-items: baseline; gap: 16px;
   padding: 13px 0; border-bottom: 1px solid var(--rule);
+  position: relative; isolation: isolate;
 }
+/* The tint sits between the rules and reaches a little past the text. */
+.toc-row::before {
+  content: ""; position: absolute; inset: 0 -10px; z-index: -1;
+  border-radius: 6px; background: transparent; transition: background-color .15s;
+}
+.toc-row.is-written .t a::after { content: ""; position: absolute; inset: 0 -10px; }
+.toc-row .n { transition: color .15s; }
 .toc-row .n { font-family: var(--font-mono); font-size: 12px; color: var(--ink-3); min-width: 22px; flex-shrink: 0; font-variant-numeric: tabular-nums; }
 .toc-row .t { flex: 1; font-size: 15px; }
-.toc-row .t a { border-bottom: 1px solid var(--brass); }
-.toc-row .t a:hover { color: var(--brass); }
+.toc-row .t a { border-bottom: 1px solid var(--brass); transition: color .15s, border-color .15s; }
+@media (hover: hover) {
+  .toc-row.is-written:hover::before { background: var(--green-bg); }
+  .toc-row.is-written:hover .t a { color: var(--green); border-bottom-color: var(--green); }
+  .toc-row.is-written:hover .n { color: var(--green); }
+}
+.toc-row .t a:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; border-radius: 2px; }
 .toc-row .s {
   font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .04em;
   text-transform: uppercase; color: var(--ink-3);
 }
-.toc-row.is-written .s { color: var(--brass); }
 
 /* ── CHAPTER PAGE ─────────────────────────────────────────── */
 .chapter h1 {
@@ -377,7 +411,7 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 .field-card::before {
   content: ""; position: absolute; top: -7px; left: 24px;
   width: 14px; height: 14px; border-radius: 50%;
-  background: var(--brass); box-shadow: 0 2px 3px rgba(0,0,0,.25);
+  background: var(--gold); box-shadow: 0 2px 3px rgba(0,0,0,.25);
 }
 .field-card-label {
   display: block; font-family: var(--font-mono); font-size: 10.5px;
@@ -417,8 +451,8 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
   font-size: 13px; display: flex; flex-direction: column; gap: 4px;
 }
 .chapter-nav .dir { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-3); text-transform: uppercase; letter-spacing: .05em; }
-.chapter-nav a .label { color: var(--ink); font-weight: 500; }
-.chapter-nav a:hover .label { color: var(--brass); }
+.chapter-nav a .label { color: var(--ink); font-weight: 500; transition: color .15s; }
+.chapter-nav a:hover .label { color: var(--green); }
 .chapter-nav span.disabled .label { color: var(--ink-3); }
 .chapter-nav .next { text-align: right; }
 
@@ -441,7 +475,7 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 /* ── v0.2: PARTS, RENDERED MARKDOWN, CLAIM TAGS ───────────── */
 .toc-part {
   font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em;
-  text-transform: uppercase; color: var(--ink-3); padding: 26px 0 10px;
+  text-transform: uppercase; color: var(--green); padding: 26px 0 10px;
   border-bottom: 1px solid var(--rule);
 }
 .toc-part:first-child { padding-top: 12px; }
@@ -460,8 +494,8 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 .chapter ol { list-style: decimal; }
 .chapter li { font-size: 15.5px; margin-bottom: 7px; padding-left: 3px; }
 .chapter li::marker { color: var(--brass); }
-.chapter a { border-bottom: 1px solid var(--brass); }
-.chapter a:hover { color: var(--brass); }
+.chapter a { border-bottom: 1px solid var(--brass); transition: color .15s, border-color .15s; }
+.chapter a:hover { color: var(--green); border-bottom-color: var(--green); }
 .chapter .heading-anchor { border-bottom: none; }
 .chapter strong { font-weight: 600; }
 .chapter code {
