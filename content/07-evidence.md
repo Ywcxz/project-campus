@@ -17,6 +17,8 @@ CAMPUS has not yet shown, with VSU evidence, that the problems it addresses exis
 | Finding something doesn't tell people what to do next | Network | [Unresolved] |
 | Knowledge is lost when students graduate or organization officers change | Network; learning record | [Unresolved] |
 | First-generation students lack knowledge of how the university works that peers and offices could supply | Network | [Unresolved] |
+| The same questions are asked and answered again in each batch, because answers given in group chats cannot be found later | Network | [Unresolved] |
+| Outdated information keeps circulating after rules or structures change, with nothing to mark it as out of date | Network | [Unresolved] |
 | Community spaces VSU cannot govern leave harmed students and the university with little recourse | Network | [Unresolved] |
 | Places and their services aren't connected to information about them | Later directions | [Unresolved] |
 | Individual food runs duplicate effort across scattered campus demand | Hop-It | [Unresolved] |
@@ -94,5 +96,11 @@ Every claim that matters gets an entry: the claim, the evidence type, the source
 | E-032 | The University of Brighton's community network lost its members' sense of ownership as it became more of an institutional channel, and later declined after years of neglect | External, practitioner accounts | Athabasca University's Landing, about 2010 | Risks; D-062 |
 | E-033 | SURF's Mastodon pilot for Dutch education institutions needed little moderation, partly because institutional logins make users accountable | External | GEICT interview with SURF, 18 March 2026 | D-046; moderation load |
 | E-034 | By its founders' account, Fizz reached almost every undergraduate at one US college within months, while students there reported bullying and misinformation that were not removed promptly | External, student press | The Dartmouth, 25 October 2022 | Adoption; Q-16 |
+| E-035 | The share of US teenagers who used Facebook fell from 71% in 2014–15 to 32% in 2022, so Facebook Campus launched where young people were leaving Facebook | External, research | Pew Research Center, 10 August 2022 | Adoption; [Chapter 2](02-social-network.md) |
+| E-036 | Members of an online community contributed more when reminded that their contributions were unique, and when given specific, challenging goals | Scholarly | Ling et al., 2005 | D-071; D-072 |
+| E-037 | Stack Overflow users increased the activity a badge rewarded as they neared it, then returned to their usual level after earning it | Scholarly | Anderson et al., 2013 | D-072 |
+| E-038 | Brainly, a homework network with a Philippine site since 2014, has students earn points by answering and spend them to ask, with rankings and volunteer moderators | External | NewsBytes.PH, 21 April 2014 | D-072 |
+| E-039 | Stack Overflow closes accidental duplicate questions with a link to the original, and keeps differently worded ones as signposts | External, vendor | Stack Overflow, 29 April 2009 | D-071 |
+| E-040 | VSU lists its graduate faculty by department with each one's specialization and research interest, and created a Geospatial and GIS Research and Services Center in its January 2025 restructuring | Official | VSU graduate faculty pages; VSU news, 16 January 2025 | D-071; routing |
 
 Field evidence will be added as it is gathered. The v0.1 research-question bank, about 65 questions, is in the [archive](https://github.com/Ywcxz/project-campus/blob/main/archive/v0.1/campus-rd-blueprint-v0.1.md) (§5 and §18.4); many of those questions were written for the retired v0.1 prototype.

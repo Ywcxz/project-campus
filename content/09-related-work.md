@@ -55,7 +55,7 @@ The Third SOUA, delivered on 18 September 2026, also announced plans that touch 
 
 What this means for CAMPUS:
 
-- "Reach the right office", as routing and tracking, would duplicate the document tracker, the helpdesk, and OneVSU's aim. The network should help people find the right office or system and hand them into it, and leave tracking to VSU's tools. [Proposed]
+- "Reach the right office", as routing and tracking of service requests, would duplicate the document tracker, the helpdesk, and OneVSU's aim. The network should help people find the right office or system and hand them into it, and leave tracking to VSU's tools. [Proposed]
 - The network should carry official notices, including WAIS advisories, to the channels where people will see them, rather than issue notices of its own. [Proposed]
 - Staff have an internal chat app, and students have no equivalent channel in VSU's public list of services. Whether students can reach staff through anything besides visits, email, and Facebook is for field research. [Unresolved]
 - Town halls and student voice should feed the planned listening sessions, not compete with them. [Proposed]
@@ -68,6 +68,7 @@ What this means for CAMPUS:
 - **Office pages on Facebook.** Universities in the region use Facebook as an official help channel: EVSU directs applicants with questions to its admission office's Facebook page. [Established] VSU keeps an official Facebook page; which VSU offices answer students on Facebook is not known. [Unresolved] The landscape study will map the official pages that exist ([Chapter 7.1](07a-facebook-study.md)). [Proposed]
 - **Freedom walls and confession pages.** Philippine university freedom walls are anonymous Facebook pages run by unnamed administrators. [Established] A 2025 student study of the three most followed, at UP Diliman, National University, and Ateneo de Manila, found they open up student discourse but raise cyberbullying, misinformation, and privacy concerns, and it called for accountability within anonymous spaces. [Established] A Canadian study of 2,712 posts on one university's confessions page found that 26.1% supported students' learning, through asking for and giving academic help. [Established] The network's "Answers people can trust" therefore competes partly with anonymous pages students already use for help. [Proposed] Whether VSU has active pages of this kind, and what students use them for, is a question for the landscape study and the interviews. [Unresolved] One VSU case is on record: in April 2025, VSU's student media investigated a public Facebook group for VSU people, with over 12,500 members and anonymous posting, for online hate and a false accusation against a student ([Chapter 2](02-social-network.md)). [Established]
 - **Official channels by rule.** A Philippine college designated student email and moderated Facebook groups as its official channels in June 2026, and discouraged class group chats because announcements were drowned out, rumors outran official statements, and notifications disturbed rest. [Established] This is the "Facebook, done better" alternative the network's pilot compares against (D-067). [Proposed]
+- **Group chats.** In the author's experience, batches, classes, and organizations coordinate in Messenger group chats, where answers are buried within days and each batch asks again ([Chapter 2](02-social-network.md)). [Unresolved] Group chats are outside the Facebook study's reach, since private groups and chats are out of its scope (D-041), so the interviews and the survey are the only way to see them. [Established]
 - **Delivery and errands.** foodpanda delivers in Tacloban and lets customers schedule orders up to seven days ahead. [Established] Errand runs, the *pabili* that Hop-It's name echoes, are an established service: Grab offers a pabili option in which a rider buys items for the customer, and Facebook groups connect people with riders who run errands. [Established] Whether any of these operate in Baybay City or onto the campus has not been checked. [Unresolved] Scheduling and errand-running alone are therefore not Hop-It's difference; pooling scheduled orders into shared runs is. [Proposed]
 
 ## Philippine universities and apps
@@ -89,7 +90,7 @@ Workplace from Meta remains the closest precedent: a version of Facebook for int
 
 | System | What happened | Lesson for CAMPUS |
 | --- | --- | --- |
-| Facebook Campus (Meta, US) | A section inside Facebook open only to people with .edu addresses, launched in fall 2020 and covering 204 schools by its end; closed on 10 March 2022, with Meta saying Groups served students best | Campus-only membership does not make people switch, even when Facebook builds it. [Established] |
+| Facebook Campus (Meta, US) | A section inside Facebook open only to people with .edu addresses, launched in fall 2020 and covering 204 schools by its end; closed on 10 March 2022, with Meta saying Groups served students best. It launched as US teenagers were leaving Facebook: their use fell from 71% in 2014–15 to 32% in 2022 (Pew) | Campus-only membership does not make people switch, even when Facebook builds it. [Established] At VSU, where nearly everyone uses Facebook, the incumbent is stronger still. [Proposed] |
 | Everytime (South Korea) | A company-run app with a verified board for each university, timetables, and course reviews; 7.85 million cumulative users, 2.9 million monthly users, and 377 partner campuses as of December 2025 | Daily academic use plus verified membership is the hook, and the operator is a company, not the universities. [Established] |
 | Dcard (Taiwan) | Started in 2011 by university students for verified students; its forum let people post anonymously or under their university's name only; later opened sign-up to phone numbers (2021) and added real-name verification (2022) | Posting under a verified affiliation without a name is a tested middle path for Q-16. [Established] |
 | Yik Yak (US) | Anonymous posts by location; racist and violent posts that colleges had little power to stop; bans on campus Wi-Fi failed because students used mobile data; shut down in 2017, relaunched in 2021, sold to Sidechat in 2023 | Unlimited anonymity fails at campus scale, and controlling the campus network does not control behavior. [Established] |
@@ -102,6 +103,8 @@ Workplace from Meta remains the closest precedent: a version of Facebook for int
 | community@brighton and the Landing (UK and Canada) | The University of Brighton's Elgg network grew to tens of thousands of users, drifted toward course and institutional use, lost members' sense of ownership, and declined after years of neglect; Athabasca University's Landing took its lessons and calls gardening a better metaphor than architecture | Institution-run networks last only with members' ownership and sustained care. [Established] |
 | Mastodon at the University of Innsbruck and SURF (Austria and the Netherlands) | Innsbruck runs a Mastodon server on its own hardware for all employees, with university sign-in, since 2024; SURF's pilot for Dutch education institutions uses institutional logins, had over 1,250 users in 2026, and needed little moderation | Institutions can run their own social platforms, and identified membership keeps moderation light. [Established] |
 | Viva Engage at the University of Manchester (UK) | Microsoft's enterprise social network, offered to staff and postgraduate researchers only | A university's enterprise social tool can leave students out entirely. [Established] |
+| Stack Overflow (US) | Closes accidental duplicate questions with a link to the original and keeps differently worded ones as signposts; its users increased the activity a badge rewarded as they neared it, then returned to their usual level | Point repeated questions to existing answers; public metrics steer behavior toward the metric. [Established] (D-071, D-072) |
+| Brainly (Poland; Philippine site since 2014) | A homework network where students earn points by answering and spend them to ask, with rankings and volunteer moderators | A points economy makes asking cost something. [Established] A campus network should never do that. [Proposed] (D-072) |
 
 ## Campus delivery
 
@@ -154,15 +157,18 @@ Reviewed only lightly, since the digital twin is a later direction ([Chapter 5](
 | Pattern | Seen in | Use in CAMPUS | Watch for |
 | --- | --- | --- | --- |
 | Endorsed answers | Stack Exchange, Piazza, Ed Discussion | Answers offices confirm | Offices must commit to confirming (Q-17) |
+| Duplicates linked to an original | Stack Overflow | Existing answers shown before a question posts | Keep differently worded questions as signposts |
+| Routing to opted-in helpers | Ling et al., 2005, on unique contributions | Questions sent to members who chose the topic | Caps and rotation, so a few helpers don't carry everything |
 | Channels | Telegram, Slack, Enderun's app | Official notices and communities | Channels without owners go stale |
 | Verified affiliation | Everytime, Dcard, Facebook Campus | Membership tied to VSU | Verification alone does not bring people |
 | Service requests with status | 311 apps, FixMyStreet, VSU Helpdesk | Report a campus problem | Hand off to VSU's helpdesk, not a rival queue |
 | Moderated question sessions | Reddit AMAs | Town halls | Fit VSU's planned listening sessions |
 | Course reviews | Everytime | Not proposed | Faculty evaluation is sensitive and belongs to VSU |
+| Public scores and points | Stack Overflow badges, Brainly points | Not proposed (D-072) | Metrics steer behavior, and points can put a price on asking |
 
 ## What the review changes
 
-1. Narrow "Reach the right office" to finding the right office or system and handing off to it, and leave routing and tracking to VSU's systems. [Proposed]
+1. Narrow "Reach the right office" to finding the right office or system and handing off to it, and leave the routing and tracking of service requests to VSU's systems; routing questions to people who know is a different job (D-071). [Proposed]
 2. Give the network a daily reason to open, as Everytime does with timetables, using VSU data only where VSU permits; Facebook Campus shows campus-only membership is not enough. [Proposed]
 3. For Q-16, test posting under a verified role without a name, such as "3rd-year student, Agriculture", alongside named posting, with the limits Yik Yak lacked. [Proposed]
 4. Ask what OneVSU Mobile and the Portal will cover before the pitch (Q-18). [Proposed]
@@ -170,6 +176,7 @@ Reviewed only lightly, since the digital twin is a later direction ([Chapter 5](
 6. For real-time chat, evaluate an open protocol that VSU ICT could host, such as Matrix, before building a chat server (Q-04). [Proposed]
 7. For the intranet, start with measurement, keep shared caches to those run with content owners and to curated collections, and build security on identity and metadata rather than inspection (D-056, D-057, D-058). [Proposed]
 8. For the network, start dense in one community, be useful to one person before being social, give members ownership of their spaces, and test the network against a well-run Facebook group with the same office commitment (D-062, D-067, D-068). [Proposed]
+9. Show existing answers before a question posts, route questions to helpers who opted in, and recognize helpers without public scores or points (D-071, D-072). [Proposed]
 
 ## Status
 
@@ -236,4 +243,9 @@ Checked on 4 October 2026, except the local-first infrastructure and network sou
 - Athabasca University's Landing. [RIP community@brighton](https://landing.athabascau.ca/bookmarks/view/974991/rip-communitybrighton) and [Ownership, structures and behaviours](https://landing.athabascau.ca/blog/view/10516/ownership-structures-and-behaviours), about 2010. External, practitioner accounts.
 - University of Innsbruck. [Mastodon for all university employees](https://www.uibk.ac.at/en/newsroom/2024/mastodon-for-all-university-employees/), 8 April 2024. External, from another university. [Beyond X: how universities in the Netherlands are building alternatives to big tech](https://www.blogs.unicamp.br/geict/?p=891), GEICT, Unicamp, 18 March 2026. External.
 - University of Manchester IT Services. [Microsoft Viva Engage](https://www.itservices.manchester.ac.uk/ourservices/microsoft365/yammer). External, from another university.
+- Pew Research Center. [Teens, Social Media and Technology 2022](https://www.pewresearch.org/internet/2022/08/10/teens-social-media-and-technology-2022/), 10 August 2022. External, research.
+- Stack Overflow. [Handling duplicate questions](https://stackoverflow.blog/2009/04/29/handling-duplicate-questions/), 29 April 2009. External, vendor.
+- [Poland-based social learning network rolls out PH site](https://newsbytes.ph/2014/04/21/poland-based-social-learning-network-rolls-out-ph-site/), NewsBytes.PH, 21 April 2014, on Brainly. External.
+- Anderson, A., Huttenlocher, D., Kleinberg, J., and Leskovec, J. (2013). [Steering user behavior with badges](https://archives.iw3c2.org/www2013/proceedings/p95.pdf). *WWW 2013*, 95–106. Scholarly.
+- Ling, K., Beenen, G., Ludford, P., and others (2005). [Using social psychology to motivate contributions to online communities](https://presnick.people.si.umich.edu/papers/cscw04). *Journal of Computer-Mediated Communication*, 10(4). Scholarly.
 - Digital twins: [University of Glasgow case study](https://wates.co.uk/wp-content/uploads/2023/08/IES-University-of-Glagow-Case-Study.pdf), IES; [University of Manchester](https://matterport.com/news/university-of-manchester-taps-matterport-digital-twins-to-transform), Matterport. External, vendor.

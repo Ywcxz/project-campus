@@ -30,6 +30,10 @@ The largest risk is that the problems are smaller than assumed. The second is th
 | Moderators burn out | Network | Several moderators per channel, rotating terms, simple tools, and the council's backing | Reports wait longer than the agreed time for several weeks running |
 | Harm to minors | Network | College members only at first, stricter defaults for anyone under 18, and a process for the law against online sexual abuse of children (D-069) | Any incident involving a minor |
 | A network with no owner after its pilot | Network | Open components, documentation, and a pilot that ends with VSU ownership or a clean close | No VSU office agrees to own it by the end of the pilot |
+| The memory becomes a liability | Network | States that mark outdated knowledge, a review each semester, and a retention schedule that lets conversation fade and authors remove their names (D-063, D-070) | Members act on outdated answers, or someone cannot get an old personal post removed |
+| Routing wears out a few helpers | Network | Opt-in topics, caps and rotation, peers before faculty, and answers reused instead of repeated (D-071) | A few helpers answer most questions, then stop |
+| The network is seen as a complaints channel | Network | Lead with knowledge and service; moderation kept apart from institutional response (D-066) | Offices decline to take part, or most posts are complaints with no response |
+| Hidden ranking or scoring creeps in | Network | No hidden scores, explainable ordering, and no public counts of members (D-061, D-072) | A proposal to rank people or quietly reduce a post's reach |
 
 ## Stop conditions
 
