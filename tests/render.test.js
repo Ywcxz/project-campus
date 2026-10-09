@@ -68,6 +68,18 @@ function cellCountSep(line) {
   check(c.querySelectorAll("#tocGrid .toc-row").length === chapters.length, "cover: contents list every chapter");
   check(c.querySelectorAll("#tocGrid .toc-part").length === new Set(chapters.map((ch) => ch.part)).size, "cover: each part labelled once");
   check(c.querySelectorAll("#spineList .spine-item").length === chapters.length, "cover: spine lists every chapter");
+  check(!/\bAvailable\b/.test(c.getElementById("tocGrid").textContent), "cover: contents carry no 'Available' label");
+  check(!c.querySelector(".spine-dot"), "cover: spine has no status dots");
+  const subCount = chapters.filter((ch) => !Number.isInteger(Number(ch.number))).length;
+  check(c.querySelectorAll("#spineList .spine-subitem").length === subCount, "cover: every sub-chapter nests under its chapter");
+  check(c.querySelectorAll("#tocGrid .toc-row.is-sub").length === subCount, "cover: contents indent every sub-chapter");
+  check(!c.querySelector("#spineList .spine-group.open"), "cover: every chapter starts folded");
+  const firstToggle = c.querySelector("#spineList .spine-toggle");
+  check(firstToggle && firstToggle.getAttribute("aria-expanded") === "false", "cover: chevron reports folded");
+  firstToggle.click();
+  check(firstToggle.closest(".spine-group").classList.contains("open") && firstToggle.getAttribute("aria-expanded") === "true", "cover: chevron opens a chapter");
+  firstToggle.click();
+  check(!firstToggle.closest(".spine-group").classList.contains("open") && firstToggle.getAttribute("aria-expanded") === "false", "cover: chevron folds it again");
   cover.window.close();
 
   const sources = new Set();
@@ -108,6 +120,11 @@ function cellCountSep(line) {
     });
     check(d.querySelectorAll("#spineList .spine-item").length === chapters.length, `${label} spine lists every chapter`);
     check(Boolean(d.querySelector("#spineList .spine-item.active")), `${label} spine marks this chapter`);
+    check(d.querySelectorAll('#spineList [aria-current="page"]').length === 1, `${label} spine marks exactly one current page`);
+    const openGroups = [...d.querySelectorAll("#spineList .spine-group.open")];
+    const ownGroup = d.querySelector('#spineList [aria-current="page"]')?.closest(".spine-group");
+    check(openGroups.length === (ownGroup ? 1 : 0) && (!ownGroup || openGroups[0] === ownGroup), `${label} only this chapter's group is open`);
+    if (ownGroup) check(ownGroup.querySelector(".spine-toggle").getAttribute("aria-expanded") === "true", `${label} open group's chevron says so`);
     check(d.querySelectorAll("#chapterNav a").length >= 1, `${label} previous/next links render`);
     check(d.title.startsWith(ch.title), `${label} document title set`);
     dom.window.close();

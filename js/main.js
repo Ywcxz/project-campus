@@ -39,16 +39,42 @@ function isLinked(ch) {
   return Boolean(ch.slug) && (ch.status === "available" || ch.status === "outline");
 }
 
-function dotClass(ch) {
-  if (ch.status === "available") return "written";
-  if (ch.status === "outline") return "outline";
-  return "not-started";
-}
-
+// Available chapters carry no label: being listed means they can be read.
+// Only the exceptions say so.
 function statusLabel(ch) {
-  if (ch.status === "available") return "Available";
+  if (ch.status === "available") return "";
   if (ch.status === "outline") return "Outline";
   return "Not started";
+}
+
+// Sub-chapters (2.1, 4.2) belong to the whole-numbered chapter before them.
+function isSubChapter(ch) {
+  return !Number.isInteger(Number(ch.number));
+}
+
+function chapterTree(chapters) {
+  const tree = [];
+  chapters.forEach((ch) => {
+    const parent = isSubChapter(ch)
+      ? [...tree].reverse().find((node) => Number(node.ch.number) === Math.floor(Number(ch.number)))
+      : null;
+    if (parent) parent.children.push(ch);
+    else tree.push({ ch, children: [] });
+  });
+  return tree;
+}
+
+const CHEVRON = `<svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true" focusable="false"><path d="M4.5 2.5 8 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+function spineEntry(ch, here) {
+  const isActive = ch.slug === here;
+  const label = statusLabel(ch);
+  const inner = `<span class="spine-num">${pad2(ch.number)}</span><span class="spine-title">${escapeHtml(ch.title)}</span>${
+    label ? `<span class="spine-status">${label}</span>` : ""
+  }`;
+  return isLinked(ch)
+    ? `<a href="${ch.slug}.html"${isActive ? ' aria-current="page"' : ""}>${inner}</a>`
+    : `<span class="disabled">${inner}</span>`;
 }
 
 function renderSpine(chapters) {
@@ -56,27 +82,57 @@ function renderSpine(chapters) {
   if (!list) return;
   const here = currentSlug();
   let part = null;
-  list.innerHTML = chapters
-    .map((ch) => {
+  list.innerHTML = chapterTree(chapters)
+    .map(({ ch, children }) => {
       let head = "";
       if (ch.part && ch.part !== part) {
         part = ch.part;
         head = `<li class="spine-part">${escapeHtml(part)}</li>`;
       }
       const isActive = ch.slug === here;
-      const inner = `
-        <span class="spine-num">${pad2(ch.number)}</span>
-        <span class="spine-title">${escapeHtml(ch.title)}</span>
-        <span class="spine-dot ${dotClass(ch)}"></span>
-      `;
-      if (isLinked(ch)) {
-        return `${head}<li class="spine-item${isActive ? " active" : ""}">
-          <a href="${ch.slug}.html"${isActive ? ' aria-current="page"' : ""}>${inner}</a>
-        </li>`;
+      if (!children.length) {
+        return `${head}<li class="spine-item${isActive ? " active" : ""}">${spineEntry(ch, here)}</li>`;
       }
-      return `${head}<li class="spine-item"><span class="disabled">${inner}</span></li>`;
+
+      // A chapter with sub-chapters opens only on its own pages; elsewhere
+      // the reader opens it with the chevron.
+      const childActive = children.some((c) => c.slug === here);
+      const open = isActive || childActive;
+      const subId = `spine-sub-${String(ch.number).replace(/\W/g, "-")}`;
+      const subs = children
+        .map((c) => `<li class="spine-item spine-subitem${c.slug === here ? " active" : ""}">${spineEntry(c, here)}</li>`)
+        .join("");
+      return `${head}<li class="spine-item spine-group${isActive ? " active" : ""}${childActive ? " has-active" : ""}${open ? " open" : ""}">
+        <div class="spine-row">
+          ${spineEntry(ch, here)}
+          <button class="spine-toggle" type="button" aria-expanded="${open}" aria-controls="${subId}"
+            aria-label="Sub-chapters of ${escapeHtml(ch.title)}">${CHEVRON}</button>
+        </div>
+        <div class="spine-sub" id="${subId}"><ol class="spine-sublist">${subs}</ol></div>
+      </li>`;
     })
     .join("");
+
+  list.addEventListener("click", (event) => {
+    const toggle = event.target.closest(".spine-toggle");
+    if (!toggle) return;
+    const group = toggle.closest(".spine-group");
+    const open = !group.classList.contains("open");
+    group.classList.toggle("open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+  });
+
+  revealCurrent(list);
+}
+
+// If the current chapter sits below the fold of a long spine, scroll the
+// spine (never the page) so it shows about a third of the way down.
+function revealCurrent(list) {
+  const current = list.querySelector('[aria-current="page"]');
+  if (!current || list.scrollHeight <= list.clientHeight) return;
+  const top = current.getBoundingClientRect().top - list.getBoundingClientRect().top + list.scrollTop;
+  const visible = top >= list.scrollTop && top + current.offsetHeight <= list.scrollTop + list.clientHeight;
+  if (!visible) list.scrollTop = Math.max(0, top - list.clientHeight / 3);
 }
 
 function renderToc(chapters) {
@@ -93,10 +149,10 @@ function renderToc(chapters) {
       const linked = isLinked(ch);
       const title = linked ? `<a href="${ch.slug}.html">${escapeHtml(ch.title)}</a>` : escapeHtml(ch.title);
       const sub = ch.subtitle ? `<span class="toc-sub">${escapeHtml(ch.subtitle)}</span>` : "";
-      return `${head}<div class="toc-row${linked ? " is-written" : ""}${ch.status === "outline" ? " is-outline" : ""}">
+      const label = statusLabel(ch);
+      return `${head}<div class="toc-row${linked ? " is-written" : ""}${ch.status === "outline" ? " is-outline" : ""}${isSubChapter(ch) ? " is-sub" : ""}">
         <span class="n">${pad2(ch.number)}</span>
-        <span class="t">${title}${sub}</span>
-        <span class="s">${statusLabel(ch)}</span>
+        <span class="t">${title}${sub}</span>${label ? `\n        <span class="s">${label}</span>` : ""}
       </div>`;
     })
     .join("");

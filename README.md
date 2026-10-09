@@ -64,7 +64,8 @@ Push to GitHub and Vercel redeploys (framework preset "Other", no build command)
 ## Design notes
 
 - **Palette and type:** a field-notebook look. Newsreader for headings, IBM Plex Sans for body text, and IBM Plex Mono for numbers, stamps, and status tags. Paper and ink tones, because this is a reference document, not a product pitch.
-- **The spine nav is the table of contents.** It renders from `chapters.json` everywhere, grouped by part, so status never drifts between the cover and the sidebar.
+- **The spine nav is the table of contents.** It renders from `chapters.json` everywhere, grouped by part, so status never drifts between the cover and the sidebar. Sub-chapters (2.1, 4.2) fold under their chapter: a chevron opens them, and a chapter's own pages open it automatically. Available chapters carry no status label; only an outline or an unstarted chapter says so.
+- **Scrollbars** are thin and rounded with no track, in both themes. When you change an asset in `css/` or `js/`, bump the `?v=` key on every page, because browsers cache those files for a day.
 - **Claim tags are stamps.** Established is solid sea-blue, Proposed is brass, and Unresolved has a dashed border, so a reader can scan a page's evidence at a glance.
 - **Field cards,** the dashed and slightly rotated boxes, hold principles and notes like pinned index cards from field research.
 

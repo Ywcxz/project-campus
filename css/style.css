@@ -33,6 +33,10 @@
 
   --spine-w: 280px;
   --topbar-h: 56px;
+
+  --scroll-thumb:       rgba(31, 42, 34, .22);
+  --scroll-thumb-hover: rgba(31, 42, 34, .40);
+  color-scheme: light;
 }
 
 :root[data-theme="dark"] {
@@ -48,6 +52,9 @@
   --brass-bg: #4A3D29;
   --sea:      #8FC5D0;
   --sea-bg:   #29464B;
+  --scroll-thumb:       rgba(238, 240, 231, .20);
+  --scroll-thumb-hover: rgba(238, 240, 231, .36);
+  color-scheme: dark;
 }
 
 * , *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -103,16 +110,35 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 .topbar-toggle { font-size: 22px; color: var(--ink); padding: 6px; }
 .topbar .theme-toggle { position: static; margin: 0 8px 0 auto; }
 
+/* ── SCROLLBARS ───────────────────────────────────────────── */
+/* Thin, rounded, and quiet: visible enough to show there is more,
+   with no track and no arrow buttons. Chromium and Safari use the
+   -webkit- pseudo-elements; Firefox gets the standard properties.
+   (Chromium ignores the pseudo-elements once the standard ones are
+   set, so those stay behind the @supports check.) */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track, ::-webkit-scrollbar-corner { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb); background-clip: padding-box;
+  border: 3px solid transparent; border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover { background-color: var(--scroll-thumb-hover); border-width: 2px; }
+@supports not selector(::-webkit-scrollbar) {
+  * { scrollbar-width: thin; scrollbar-color: var(--scroll-thumb) transparent; }
+}
+
 /* ── SPINE NAV ────────────────────────────────────────────── */
+/* The head stays put and only the chapter list scrolls. Chapters with
+   sub-chapters fold; a chevron opens them, and a chapter's own pages
+   open it automatically. */
 .spine {
   width: var(--spine-w); flex-shrink: 0;
   background: var(--paper-2);
   border-right: 1px solid var(--rule);
-  position: sticky; top: 0; height: 100vh;
-  overflow-y: auto;
-  padding: 32px 0 40px;
+  position: sticky; top: 0; height: 100vh; height: 100dvh;
+  display: flex; flex-direction: column; overflow: hidden;
 }
-.spine-head { padding: 0 28px 22px; border-bottom: 1px solid var(--rule); margin-bottom: 18px; }
+.spine-head { flex-shrink: 0; padding: 32px 28px 20px; border-bottom: 1px solid var(--rule); }
 .spine-brand {
   font-family: var(--font-display); font-size: 19px; font-weight: 500;
   display: block; margin-bottom: 6px;
@@ -123,24 +149,92 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
   color: var(--ink-3); text-transform: uppercase; line-height: 1.5;
 }
 
-.spine-list { padding: 0 12px; }
-.spine-item a, .spine-item span.disabled {
-  display: flex; align-items: center; gap: 10px;
-  padding: 8px 14px; border-radius: 6px;
-  font-size: 13px; color: var(--ink-2);
+.spine-list {
+  flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain;
+  padding: 14px 12px 40px;
 }
-.spine-item a { transition: background .12s; }
+@media (pointer: fine) {
+  /* Reserve the scrollbar's lane so opening a chapter never nudges the list sideways. */
+  .spine-list { scrollbar-gutter: stable; padding-right: 4px; }
+}
+
+.spine-part {
+  padding: 22px 12px 6px; font-size: 11.5px; font-weight: 600;
+  letter-spacing: .01em; color: var(--ink-3);
+}
+.spine-part:first-child { padding-top: 4px; }
+
+.spine-item { position: relative; }
+.spine-item a, .spine-item span.disabled {
+  display: flex; align-items: baseline; gap: 12px;
+  padding: 7px 12px; border-radius: 8px;
+  font-size: 13.5px; line-height: 1.4; color: var(--ink-2);
+  transition: background-color .12s, color .12s;
+}
 .spine-item a:hover { background: var(--paper-3); color: var(--ink); }
-.spine-item.active a { background: var(--brass-bg); color: var(--ink); font-weight: 500; }
+.spine-item a:focus-visible, .spine-toggle:focus-visible { outline: 2px solid var(--brass); outline-offset: -2px; }
+.spine-item a[aria-current="page"] { background: var(--brass-bg); color: var(--ink); font-weight: 500; }
 .spine-item span.disabled { color: var(--ink-3); cursor: default; }
+
 .spine-num {
   font-family: var(--font-mono); font-size: 11px; color: var(--ink-3);
-  width: 20px; flex-shrink: 0;
+  min-width: 20px; flex-shrink: 0; font-variant-numeric: tabular-nums;
 }
+.spine-item a[aria-current="page"] .spine-num { color: var(--brass); }
 .spine-title { flex: 1; min-width: 0; }
-.spine-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
-.spine-dot.written { background: var(--brass); }
-.spine-dot.not-started { background: transparent; border: 1px solid var(--ink-3); }
+.spine-status { font-family: var(--font-mono); font-size: 10px; color: var(--ink-3); flex-shrink: 0; }
+
+/* A chapter with sub-chapters: the link fills the row, the chevron sits on top at its right. */
+.spine-group > .spine-row > a, .spine-group > .spine-row > span.disabled { padding-right: 40px; }
+.spine-group.has-active > .spine-row > a { color: var(--ink); }
+.spine-group.has-active > .spine-row > a .spine-num { color: var(--brass); }
+.spine-toggle {
+  position: absolute; top: 3px; right: 6px;
+  width: 28px; height: 28px; border-radius: 6px;
+  display: grid; place-items: center; color: var(--ink-3);
+  transition: background-color .12s, color .12s;
+}
+.spine-toggle:hover { background: var(--rule); color: var(--ink); }
+.spine-toggle svg { transition: transform .2s ease; }
+.spine-group.open > .spine-row .spine-toggle svg { transform: rotate(90deg); }
+
+/* The fold: rows grow from 0 to their height, and closed links leave the tab order. */
+.spine-sub {
+  display: grid; grid-template-rows: 0fr; visibility: hidden;
+  transition: grid-template-rows .2s ease, visibility 0s linear .2s;
+}
+.spine-group.open > .spine-sub {
+  grid-template-rows: 1fr; visibility: visible;
+  transition: grid-template-rows .2s ease, visibility 0s;
+}
+/* The guide line is a background, not a border, so the fold's clipping can't cut the marker below. */
+.spine-sublist {
+  min-height: 0; overflow: hidden;
+  margin-left: 18px; padding: 0 0 0 10px;
+  background: linear-gradient(var(--rule), var(--rule)) 1px 0 / 1px 100% no-repeat;
+}
+/* Vertical breathing room lives on the items, inside the clip, so a folded chapter is 0px tall. */
+.spine-subitem:first-child { margin-top: 2px; }
+.spine-subitem:last-child { margin-bottom: 6px; }
+/* Sub-chapter numbers line up with their chapter's title. */
+.spine-subitem a, .spine-subitem span.disabled { padding: 6px 10px 6px 16px; gap: 10px; font-size: 13px; }
+.spine-subitem .spine-num { font-size: 10.5px; min-width: 28px; }
+/* A marker on the guide line shows where you are among the sub-chapters. */
+.spine-subitem::before {
+  content: ""; position: absolute; left: -10px; top: 8px; bottom: 8px;
+  width: 3px; border-radius: 2px; background: transparent;
+  transition: background-color .12s;
+}
+.spine-subitem:hover::before { background: var(--rule-2); }
+.spine-subitem.active::before { background: var(--brass); }
+
+@media (pointer: coarse) {
+  .spine-item a, .spine-item span.disabled { padding-top: 9px; padding-bottom: 9px; }
+  .spine-toggle { width: 34px; height: 34px; top: 3px; right: 4px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spine-sub, .spine-group.open > .spine-sub, .spine-toggle svg { transition: none; }
+}
 
 .spine-backdrop {
   display: none; position: fixed; inset: 0; background: rgba(20,22,17,.4);
@@ -233,7 +327,7 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
   display: flex; align-items: baseline; gap: 16px;
   padding: 13px 0; border-bottom: 1px solid var(--rule);
 }
-.toc-row .n { font-family: var(--font-mono); font-size: 12px; color: var(--ink-3); width: 22px; flex-shrink: 0; }
+.toc-row .n { font-family: var(--font-mono); font-size: 12px; color: var(--ink-3); min-width: 22px; flex-shrink: 0; font-variant-numeric: tabular-nums; }
 .toc-row .t { flex: 1; font-size: 15px; }
 .toc-row .t a { border-bottom: 1px solid var(--brass); }
 .toc-row .t a:hover { color: var(--brass); }
@@ -334,7 +428,7 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
   .shell { flex-direction: column; }
   .spine {
     position: fixed; inset: 0 auto 0 0; width: 84%; max-width: 320px;
-    height: 100vh; transform: translateX(-100%);
+    height: auto; transform: translateX(-100%);
     transition: transform .22s ease; z-index: 300;
   }
   .spine.open { transform: translateX(0); }
@@ -345,13 +439,6 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 }
 
 /* ── v0.2: PARTS, RENDERED MARKDOWN, CLAIM TAGS ───────────── */
-.spine-part {
-  padding: 18px 14px 6px; font-family: var(--font-mono); font-size: 10.5px;
-  letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3);
-}
-.spine-part:first-child { padding-top: 2px; }
-.spine-dot.outline { background: transparent; border: 1px solid var(--brass); }
-
 .toc-part {
   font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em;
   text-transform: uppercase; color: var(--ink-3); padding: 26px 0 10px;
@@ -359,6 +446,10 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 }
 .toc-part:first-child { padding-top: 12px; }
 .toc-row .toc-sub { display: block; font-size: 13px; color: var(--ink-2); margin-top: 3px; }
+/* Sub-chapters sit under their chapter's title, rule and all. */
+.toc-row.is-sub { margin-left: 38px; padding: 10px 0; }
+.toc-row.is-sub .n { min-width: 34px; }
+.toc-row.is-sub .t { font-size: 14.5px; }
 .toc-row.is-outline .s { color: var(--ink-2); }
 .cover-note { margin-top: 44px; font-size: 13px; color: var(--ink-3); max-width: 620px; }
 
