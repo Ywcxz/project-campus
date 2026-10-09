@@ -28,19 +28,21 @@
 
   /* Brass: VSU gold, deep enough to read as text. Stamps, chapter
      marks, "you are here". */
-  --brass:    #7F5E0A;
+  --brass:    #785808;
   --brass-bg: #F4E8C1;
 
   /* VSU green and gold, used sparingly: hover, part labels, the
-     ribbon at the top of the sidebar. Tuned to this paper palette;
+     soft light at the page corners. Tuned to this paper palette;
      these are not official VSU brand values. */
   --green:     #17643A;
   --green-bg:  #D5E6D3;
-  --ribbon:    #17643A;   /* the ribbon's green stays deep in both themes */
-  --gold:      #E2AE1C;   /* fills only (ribbon, pins), never text */
+  --gold:      #E2AE1C;   /* fills only (pins), never text */
   --highlight: #F2DD8C;   /* selected text, like a highlighter */
-  --glow-gold:  rgba(226, 174, 28, .16);
-  --glow-green: rgba(23, 100, 58, .10);
+  --glow-gold:  rgba(250, 200, 40, .34);
+  --glow-green: rgba(70, 185, 110, .24);
+  --ink-read:   #323C35;
+  --toggle-ink: #A47708;
+  --toggle-bg:  var(--brass-bg);   /* chapter prose: Libron is a dark face, so its ink is a step softer */
 
   /* Sea — live links, flagship pilot */
   --sea:      #17495A;
@@ -72,11 +74,13 @@
   --brass-bg: #4A3F22;
   --green:     #86C99A;
   --green-bg:  #233D2C;
-  --ribbon:    #2E8A52;
   --gold:      #E6B53A;
   --highlight: #5C4B1A;
   --glow-gold:  rgba(230, 181, 58, .11);
   --glow-green: rgba(46, 138, 82, .20);
+  --ink-read:   #D2D7CC;
+  --toggle-ink: var(--green);
+  --toggle-bg:  var(--green-bg);
   --sea:      #8FC5D0;
   --sea-bg:   #29464B;
   --scroll-thumb:       rgba(238, 240, 231, .20);
@@ -110,18 +114,30 @@ ol, ul { list-style: none; }
 img, svg { display: block; max-width: 100%; }
 button { font-family: var(--font-body); cursor: pointer; background: none; border: none; }
 
+/* Theme toggle: a sun in light mode, a crescent moon in dark mode. The
+   moon is the sun's disc with a second disc sliding across it, and the
+   rays draw in or out, so the switch shows what changed. */
 .theme-toggle {
-  display: block; position: fixed; top: 18px; right: 24px; z-index: 400;
-  width: 36px; height: 36px; padding: 0;
-  border: 1px solid var(--rule-2); border-radius: 50%;
-  color: var(--ink-2); font-size: 18px; line-height: 34px; text-align: center;
-  transition: color .12s, border-color .12s, background .12s;
+  display: grid; place-items: center; flex-shrink: 0;
+  width: 34px; height: 34px; padding: 0; border-radius: 10px;
+  border: 1px solid var(--rule); background: var(--paper);
+  color: var(--toggle-ink);
+  transition: background-color .15s, border-color .15s, color .15s;
 }
-.theme-toggle::before { content: attr(data-icon); }
-.theme-toggle:hover, .theme-toggle:focus-visible {
-  color: var(--ink); border-color: var(--brass); background: var(--brass-bg);
+.theme-toggle svg { width: 18px; height: 18px; overflow: visible; }
+.theme-toggle .tt-disc, .theme-toggle .tt-bite, .theme-toggle .tt-rays {
+  transform-box: fill-box; transform-origin: center;
+  transition: transform .45s cubic-bezier(.5, 0, .2, 1), opacity .3s ease;
 }
+.theme-toggle .tt-bite { transform: translate(9px, -9px); }
+:root[data-theme="dark"] .theme-toggle .tt-disc { transform: scale(1.55); }
+:root[data-theme="dark"] .theme-toggle .tt-bite { transform: translate(0, 0); }
+:root[data-theme="dark"] .theme-toggle .tt-rays { transform: rotate(-60deg) scale(.4); opacity: 0; }
+.theme-toggle:hover { background: var(--toggle-bg); border-color: var(--toggle-ink); }
 .theme-toggle:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle .tt-disc, .theme-toggle .tt-bite, .theme-toggle .tt-rays { transition: none; }
+}
 
 /* ── LAYOUT SHELL ─────────────────────────────────────────── */
 .shell { display: flex; min-height: 100vh; }
@@ -139,7 +155,7 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
   display: none;
   position: sticky; top: 0; z-index: 300;
   height: var(--topbar-h);
-  background: linear-gradient(var(--ribbon) 0 4px, var(--gold) 4px 6px) top / 100% 6px no-repeat, var(--paper-2);
+  background: var(--paper-2);
   border-bottom: 1px solid var(--rule);
   align-items: center;
   justify-content: space-between;
@@ -147,7 +163,7 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 }
 .topbar-brand { font-family: var(--font-display); font-weight: 600; font-size: 16px; }
 .topbar-toggle { font-size: 22px; color: var(--ink); padding: 6px; }
-.topbar .theme-toggle { position: static; margin: 0 8px 0 auto; }
+.topbar .theme-toggle { margin: 0 8px 0 auto; }
 
 /* ── SCROLLBARS ───────────────────────────────────────────── */
 /* Thin, rounded, and quiet: visible enough to show there is more,
@@ -172,10 +188,8 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
    open it automatically. */
 .spine {
   width: var(--spine-w); flex-shrink: 0;
-  /* The ribbon (VSU green over a thin gold line), a green wash fading
-     down from it, and a faint gold pool at the foot. */
+  /* A green wash fading down from the top, and a faint gold pool at the foot. */
   background:
-    linear-gradient(var(--ribbon) 0 4px, var(--gold) 4px 6px) top / 100% 6px no-repeat,
     linear-gradient(var(--glow-green), transparent 260px),
     radial-gradient(120% 40% at 0% 100%, var(--glow-gold), transparent 70%),
     var(--paper-2);
@@ -183,7 +197,12 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
   position: sticky; top: 0; height: 100vh; height: 100dvh;
   display: flex; flex-direction: column; overflow: hidden;
 }
-.spine-head { flex-shrink: 0; padding: 32px 28px 20px; border-bottom: 1px solid var(--rule); }
+.spine-head {
+  flex-shrink: 0; padding: 30px 20px 20px 28px; border-bottom: 1px solid var(--rule);
+  display: grid; grid-template-columns: 1fr auto; column-gap: 12px; align-items: start;
+}
+.spine-head .spine-brand, .spine-head .spine-lockup { grid-column: 1; }
+.spine-head .theme-toggle { grid-column: 2; grid-row: 1 / span 2; }
 .spine-brand {
   font-family: var(--font-display); font-size: 19px; font-weight: 500;
   display: block; margin-bottom: 6px; transition: color .15s;
@@ -423,8 +442,8 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
   outline: 2px solid var(--brass); outline-offset: 3px;
 }
 .chapter p {
-  font-family: var(--font-read); font-size: 17.5px; line-height: 1.7;
-  color: var(--ink); margin-bottom: 18px; max-width: 640px;
+  font-family: var(--font-read); font-size: 17px; line-height: 1.72;
+  color: var(--ink-read); margin-bottom: 18px; max-width: 640px;
 }
 .chapter p.q {
   font-family: var(--font-display); font-style: italic; font-size: 18px;
@@ -498,6 +517,7 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
   }
   .spine.open { transform: translateX(0); }
   .spine-backdrop.open { display: block; }
+  :root { --glow-left: 0px; }
   .content { padding: 36px 22px 72px; }
   .heading-anchor { left: -18px; opacity: .7; }
   .spine-head .theme-toggle { display: none; }
@@ -526,13 +546,13 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 .chapter ul, .chapter ol { margin: 0 0 20px; padding-left: 22px; max-width: 640px; }
 .chapter ul { list-style: disc; }
 .chapter ol { list-style: decimal; }
-.chapter li { font-family: var(--font-read); font-size: 17.5px; line-height: 1.65; margin-bottom: 7px; padding-left: 3px; }
-@media (max-width: 900px) { .chapter p, .chapter li { font-size: 17px; } }
+.chapter li { font-family: var(--font-read); font-size: 17px; line-height: 1.68; color: var(--ink-read); margin-bottom: 7px; padding-left: 3px; }
+@media (max-width: 900px) { .chapter p, .chapter li { font-size: 16.5px; } }
 .chapter li::marker { color: var(--brass); }
 .chapter a { border-bottom: 1px solid var(--brass); transition: color .15s, border-color .15s; }
 .chapter a:hover { color: var(--green); border-bottom-color: var(--green); }
 .chapter .heading-anchor { border-bottom: none; }
-.chapter strong { font-weight: 600; }
+.chapter strong { font-weight: 600; color: var(--ink); }
 .chapter code {
   font-family: var(--font-mono); font-size: .86em; background: var(--paper-2);
   border: 1px solid var(--rule); border-radius: 2px; padding: 0 4px;

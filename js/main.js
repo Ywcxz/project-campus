@@ -422,11 +422,23 @@ function initTheme() {
     : savedTheme || (prefersDark ? "dark" : "light");
   root.dataset.theme = initialTheme;
 
+  let toggleCount = 0;
   const createToggle = (parent) => {
     if (!parent || parent.querySelector(".theme-toggle")) return;
+    const id = `tt-mask-${++toggleCount}`;
     const toggle = document.createElement("button");
     toggle.className = "theme-toggle";
     toggle.type = "button";
+    // Sun: a disc and eight rays. Moon: the disc grows and a second disc,
+    // cut out through the mask, slides across it to leave a crescent.
+    const rays = [0, 45, 90, 135, 180, 225, 270, 315]
+      .map((deg) => `<line x1="12" y1="2.6" x2="12" y2="4.6" transform="rotate(${deg} 12 12)"/>`)
+      .join("");
+    toggle.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <mask id="${id}"><rect x="-6" y="-6" width="36" height="36" fill="#fff"/><circle class="tt-bite" cx="16.5" cy="8" r="5.6" fill="#000"/></mask>
+      <circle class="tt-disc" cx="12" cy="12" r="4.6" fill="currentColor" mask="url(#${id})"/>
+      <g class="tt-rays" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">${rays}</g>
+    </svg>`;
     toggle.addEventListener("click", () => {
       const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
       root.dataset.theme = nextTheme;
@@ -439,11 +451,9 @@ function initTheme() {
   const updateToggleLabels = () => {
     const darkMode = root.dataset.theme === "dark";
     document.querySelectorAll(".theme-toggle").forEach((toggle) => {
-      toggle.textContent = "";
-      toggle.dataset.icon = darkMode ? "☀" : "☾";
       toggle.setAttribute("aria-pressed", String(darkMode));
-      toggle.setAttribute("aria-label", darkMode ? "Switch to Light Mode" : "Switch to Dark Mode");
-      toggle.title = darkMode ? "Switch to Light Mode" : "Switch to Dark Mode";
+      toggle.setAttribute("aria-label", "Dark mode");
+      toggle.title = darkMode ? "Switch to light mode" : "Switch to dark mode";
     });
   };
 
