@@ -5,8 +5,10 @@
 // link to open in a browser. Meta sites are skipped: no automated tool
 // requests them (project rule 8; D-041).
 //
-//   node scripts/archive-sources.js            every cited page
-//   node scripts/archive-sources.js --missing  only pages with no copy
+//   node scripts/archive-sources.js             every cited page
+//   node scripts/archive-sources.js --missing   only pages with no copy
+//   add --markdown for a list with links, as the weekly link check prints
+//   in its run summary on GitHub
 //
 // It only reads from the Wayback Machine's availability service, one page a
 // second. Needs Node 18 or later.
@@ -47,21 +49,26 @@ const asDate = (ts) => `${ts.slice(0, 4)}-${ts.slice(4, 6)}-${ts.slice(6, 8)}`;
 
 (async () => {
   const onlyMissing = process.argv.includes("--missing");
+  const md = process.argv.includes("--markdown");
   const pages = citedPages();
   let missing = 0;
   let failed = 0;
+  if (md) console.log(`## Cited pages${onlyMissing ? " with no Wayback Machine copy" : ""}\n`);
   for (const [i, url] of pages.entries()) {
     if (i) await sleep(1000);
     try {
       const copy = await closestCopy(url);
-      if (copy && !onlyMissing) console.log(`copy ${asDate(copy.when)}  ${url}\n                 ${copy.link}`);
+      if (copy && !onlyMissing) {
+        console.log(md ? `- ${url} — [copy of ${asDate(copy.when)}](${copy.link})` : `copy ${asDate(copy.when)}  ${url}\n                 ${copy.link}`);
+      }
       if (!copy) {
         missing++;
-        console.log(`no copy          ${url}\n  save it:        https://web.archive.org/save/${url}`);
+        const save = `https://web.archive.org/save/${url}`;
+        console.log(md ? `- ${url} — [save a copy](${save})` : `no copy          ${url}\n  save it:        ${save}`);
       }
     } catch (err) {
       failed++;
-      console.log(`not checked      ${url}  (${err.message})`);
+      console.log(md ? `- ${url} — not checked (${err.message})` : `not checked      ${url}  (${err.message})`);
     }
   }
   console.log(`\n${pages.length} cited pages, Meta sites skipped. ${missing} have no copy${failed ? `; ${failed} could not be checked` : ""}.`);

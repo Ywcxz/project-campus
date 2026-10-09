@@ -1,6 +1,8 @@
 # Checks every outside link in the master document once a week, and on
 # demand from the Actions tab. It does not run on pull requests, so a slow
 # or blocked site never holds up a merge; a failed run emails the owner.
+# Its second job lists cited pages that have no copy in the Wayback Machine,
+# with a save link for each, in the run's summary.
 # Meta sites are never requested (project rule 8; D-041).
 name: Link check
 
@@ -26,6 +28,7 @@ jobs:
           fail: true
           args: >-
             --no-progress
+            --exclude-loopback
             --max-concurrency 4
             --timeout 30
             --max-retries 2
@@ -41,3 +44,17 @@ jobs:
             --exclude '//m\.me/'
             README.md
             'content/*.md'
+
+  archive:
+    name: Archive check
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: List cited pages with no archived copy
+        run: node scripts/archive-sources.js --missing --markdown >> "$GITHUB_STEP_SUMMARY"
