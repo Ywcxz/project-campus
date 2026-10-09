@@ -8,7 +8,7 @@ CAMPUS (Connecting All Members, Places, and University Services) is a proposal f
 
 - **Start here:** [00 Overview](content/00-overview.md)
 - **Part I, the vision:** [01 CAMPUS](content/01-campus.md)
-- **Part II, products and directions:** [02 Campus Intranet and Local-First Infrastructure](content/02-intranet.md), [02.1 The Campus Ring in Emergencies](content/02a-emergencies.md), [02.2 Wireless Access and Existing Systems](content/02b-campus-network.md), [03 The Social/Academic Network](content/03-social-network.md), [03.1 Network Use Cases](content/03a-use-cases.md), [03.2 How the Network Would Work](content/03b-network-design.md), [03.3 The Network and VSU's Systems](content/03c-network-fit.md), [03.4 Proposing the Network to VSU](content/03d-network-proposal.md), [04 Digital Twin](content/04-digital-twin.md), [05 Products](content/05-products.md), [05.1 Hop-It](content/05a-hop-it.md), [05.2 Marketplace](content/05b-marketplace.md), [05.3 Housing](content/05c-housing.md), [06 Later Directions](content/06-later-directions.md)
+- **Part II, products and directions:** [02 Campus Intranet and Local-First Infrastructure](content/02-intranet.md), [02.1 The Campus Ring in Emergencies](content/02a-emergencies.md), [02.2 Wireless Access and Existing Systems](content/02b-campus-network.md), [02.3 Testing the Campus Ring](content/02c-ring-tests.md), [03 The Social/Academic Network](content/03-social-network.md), [03.1 Network Use Cases](content/03a-use-cases.md), [03.2 How the Network Would Work](content/03b-network-design.md), [03.3 The Network and VSU's Systems](content/03c-network-fit.md), [03.4 Proposing the Network to VSU](content/03d-network-proposal.md), [04 Digital Twin](content/04-digital-twin.md), [05 Products](content/05-products.md), [05.1 Hop-It](content/05a-hop-it.md), [05.2 Marketplace](content/05b-marketplace.md), [05.3 Housing](content/05c-housing.md), [06 Later Directions](content/06-later-directions.md)
 - **Part III, grounding:** [07 VSU Context](content/07-vsu-context.md), [08 Problems and Evidence](content/08-evidence.md), [08.1 The Facebook Landscape Study](content/08a-facebook-study.md), [09 Information, Governance, and Privacy](content/09-governance.md), [10 Related Work](content/10-related-work.md), [11 Risks and Stop Conditions](content/11-risks.md)
 - **Part IV, records:** [12 Roadmap and Milestones](content/12-roadmap.md), [13 Decision Register and Open Questions](content/13-decisions.md)
 
@@ -24,7 +24,7 @@ CAMPUS (Connecting All Members, Places, and University Services) is a proposal f
 ```
 project-campus/
 ├── index.html            cover page
-├── <slug>.html           24 chapter pages, identical except for their head metadata; each renders its Markdown file
+├── <slug>.html           25 chapter pages, identical except for their head metadata; each renders its Markdown file
 ├── document.html         every chapter on one page, for reading through or printing
 ├── content/              the master document, one Markdown file per chapter
 ├── data/chapters.json    chapter registry: order, titles, parts, status, source file

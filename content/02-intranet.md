@@ -4,7 +4,7 @@
 
 Much of what VSU's people write, post, and share is made on campus for other people on campus, yet it leaves through an internet provider to someone else's servers and comes back, even when the sender and the reader sit in the same building. [Unresolved] This chapter proposes a different default: what VSU makes lives on VSU's own network and servers, phones keep what their owners need, and the wider internet becomes the outer ring, still open for everything that comes from outside. [Proposed] It remains a direction offered to VSU ICT and the DIGITS program, not a request. CAMPUS does not ask VSU to build, fund, or host anything here. [Established] (D-022)
 
-> **In short.** VSU has already built most of the physical layer this idea needs: a fiber backbone, Wi-Fi across most of the Main Campus, a typhoon-hardened data center, and links to its other campuses. [Established] What CAMPUS would add is a rule about where things live, set out below as four rings. [Proposed] Two parts of the original idea do not survive the evidence: caching whatever people browse, which stopped working for most of the web once it was encrypted, and inspecting traffic to catch breaches, which would mean decrypting everyone's traffic. [Established] Whether the rest is worth doing depends on measurements only VSU ICT can make. [Unresolved]
+> **In short.** VSU has already built most of the physical layer this idea needs: a fiber backbone, Wi-Fi across most of the Main Campus, a typhoon-hardened data center on solar backup, and links to its other campuses. [Established] What CAMPUS would add is a rule about where things live, set out below as four rings and six rules. [Proposed] Two parts of the original idea do not survive the evidence: caching whatever people browse, which stopped working for most of the web once it was encrypted, and inspecting traffic to catch breaches, which would mean decrypting everyone's traffic. [Established] Whether the mechanisms work can be tested on a bench, by the author alone, without VSU's systems or people ([Chapter 2.3](02c-ring-tests.md)). [Proposed] Whether the direction is worth doing at VSU depends on measurements only VSU ICT can make. [Unresolved]
 
 ## At a glance
 
@@ -12,9 +12,9 @@ Much of what VSU's people write, post, and share is made on campus for other peo
 | --- | --- |
 | What problem? | Campus-made information travels through outside platforms and the internet link even between people in the same building, so campus services slow or stop when that link does, and the data sits outside VSU's control. Students pay for mobile data to reach what the university provides, and campus Wi-Fi may serve dormitory residents far better than everyone else. [Unresolved] Nothing has been measured at VSU yet. |
 | Who needs it? | Every student on campus, including the majority who live outside the 25 dormitories and cottages that had free Wi-Fi in 2023 [Proposed]; offices that need continuity; people sheltering on campus in emergencies ([Chapter 2.1](02a-emergencies.md)); and VSU ICT as the operator. [Proposed] |
-| What evidence? | VSU's public records of its network and of the 2013 typhoon outage, and research on caching and encryption. [Established] Nothing yet on VSU's traffic, hosting, or outage history. [Unresolved] |
+| What evidence? | VSU's public records of its network and of the outages after Typhoons Haiyan in 2013 and Odette in 2021, and research on caching, encryption, and network security. [Established] Nothing yet on VSU's traffic, hosting, or full outage record. [Unresolved] |
 | Relation to existing systems? | It builds on infrastructure VSU ICT already runs and depends entirely on its network, hosting, and security, and on DIGITS plans this document does not assume. [Established] |
-| Stage? | Research direction only. A small local-first experiment may fit inside prototyping, but a campus deployment is not on the table. [Established] (v0.1 D-012) The first step would be a measurement with VSU ICT. [Proposed] (D-058) |
+| Stage? | Research direction only. A small local-first experiment may fit inside prototyping, but a campus deployment is not on the table. [Established] (v0.1 D-012) The first step at VSU would be a measurement with VSU ICT. [Proposed] (D-058) A bench test needs nothing from VSU and can come before that measurement ([Chapter 2.3](02c-ring-tests.md)). [Proposed] (D-088) |
 | Privacy, governance, and cost? | The heaviest of any direction: hardware, staff on call, security, synchronization, and network logs, which are personal data under the Data Privacy Act. [Proposed] |
 | How could it be disproved? | Measurement shows little campus-to-campus traffic and rare, short outages; students on campus mostly use their own mobile data; running it costs more than it returns; or DIGITS already covers the need. [Proposed] |
 
@@ -52,6 +52,31 @@ Ring 1  Device      what each phone or laptop keeps, so the
 
 The rule is that each ring keeps working when every ring outside it fails. [Proposed] A phone out of coverage still shows the notices it last synced. If the internet link is cut, campus services still work for anyone on campus Wi-Fi. If the campus network itself goes down, phones fall back on what they keep, and a copy of critical data held off the Main Campus survives. [Proposed] v0.1's hybrid model, a local campus layer syncing with outside services (v0.1 §6.15), is the second and fourth rings on their own. [Established]
 
+### Six rules
+
+Six rules turn the rings into design choices. [Proposed] (D-087)
+
+1. **Local when possible.** Campus-made data lives on campus by default (D-055).
+2. **Cloud when necessary.** Outside services keep the work they do best: mail and documents, collaboration beyond VSU, remote access, and the internet itself.
+3. **Synchronized when disconnected.** No service assumes a constant connection. Phones keep what people need and send what they wrote when a connection returns (D-034).
+4. **Verified when accessed.** Being on campus Wi-Fi grants no trust. Every service checks who is asking, and with what role, on campus or off.
+5. **Traceable when changed.** Official information keeps its history: who posted it, what changed, and what replaced it (D-063).
+6. **Resilient when disrupted.** Each ring keeps working when the rings outside it fail, so service degrades step by step rather than all at once (D-060).
+
+### What keeps working when something fails
+
+The rule of the rings can be checked one failure at a time. [Proposed]
+
+| What fails | What keeps working | What that depends on |
+| --- | --- | --- |
+| The internet link | Every campus service, for anyone on campus Wi-Fi: notices, files, the library, chat, and sign-in. Outside services, such as Google's and Microsoft's, stop. [Proposed] | Sign-in, name lookups, and certificates that work without the internet, set out below [Proposed] |
+| Power | The network and servers on backup power. VSU's solar backup powers the data center and the administration building, and can keep internet services running up to four hours in an outage. [Established] (E-043) | Batteries or generators for the network in other buildings, which [Chapter 2.1](02a-emergencies.md) takes up (Q-30) [Proposed] |
+| The link to VSU's other campuses | Each campus keeps whatever it hosts itself [Proposed] | A plan for which services each campus needs on its own [Proposed] |
+| The data center | Phones show what they keep, and services come back from a copy kept off the Main Campus [Proposed] | A copy elsewhere, such as at a component campus, tested before it is needed [Proposed] |
+| Every network | Phones show the notices, guides, schedules, and maps they last synced, and keep what people write until a network returns [Proposed] | Apps built to work offline (D-034) [Proposed] |
+
+VSU has lived through the first two rows together: five days after Typhoon Odette in December 2021, power and internet at the Main Campus were only partly restored. [Established] (E-042)
+
 ## What it is for: access and reliability
 
 The direction's main benefit is accessibility and reliability over the long term: everyone on campus gets free, dependable access to what the university provides, wherever they are on campus, and those services keep working when outside links fail. [Established] (D-059) Five pieces make up that case. [Proposed]
@@ -69,13 +94,14 @@ Public VSU sources describe most of the physical layer that the campus ring need
 | Element | What VSU's public sources say | Source |
 | --- | --- | --- |
 | Fiber backbone | Typhoon Haiyan destroyed the internet leased line and about 90% of the fiber backbone in November 2013. A temporary Wi-Fi backbone carried the network until a new fiber backbone was finished in 2017. | Computer Center projects page |
-| Internet links | A 2 Mbps leased line from 2000 to 2013; a 15 Mbps line raised to 60 Mbps in 2018, for 185 Mbps across all links; about 450 Mbps in January 2021, with 1 Gbps as the target; and 4 Gbps set aside for dormitories alone by May 2023, on leased lines funded by CHED | Computer Center, 2018; VSU news, 2021 and 2023 |
+| Internet links | A 2 Mbps leased line from 2000 to 2013; a 15 Mbps line raised to 60 Mbps in 2018, for 185 Mbps across all links; about 450 Mbps in January 2021, with 1 Gbps as the target; 4 Gbps set aside for dormitories alone by May 2023, on leased lines funded by CHED; and a PLDT subscription upgraded to 1 Gbps by September 2023 | Computer Center, 2018; VSU news, 2021 and 2023 |
 | Wi-Fi | About 60% of the campus covered in January 2021, with 95% as the target; close to 98% of the Main Campus on the VSU Unifi network by May 2023, though the first access points, bought in 2017, needed upgrading | VSU news, 2021 and 2023 |
 | Dormitories | Free Wi-Fi with no data cap or time limit in 25 dormitories and cottages, for 1,772 resident students | VSU news, 2023 |
-| Data center | A climate-proof data center funded by a CHED smart campus grant and designed to withstand typhoons, earthquakes, and flooding; the grant also covered a security management system for VSU's in-house servers | VSU news, 2021 and 2023 |
-| Power | A hybrid solar system backs the data center and the administration building and keeps connectivity up during power interruptions | Third SOUA, 2026 |
+| Data center | A climate-proof data center funded by a CHED smart campus grant and designed to withstand typhoons, earthquakes, and flooding; the grant also covered a security management system for VSU's in-house servers. VSU reported a containerized data center in September 2023, described it as nearing completion in May 2024, and had it on a hybrid solar system by June 2026 | VSU news, 2021, 2023, 2024, and 2026 |
+| Power | A hybrid solar system, part of a ₱33.6 million project to enhance the University Management Information System (UMIS), powers the data center and the administration building and can keep internet services running up to four hours in an outage; it is planned to reach other offices and research labs, and in the long term the whole ICT network. VSU also has its own power plant, whose generators powered more than half of the Main Campus after Typhoon Odette in 2021 | VSU news, December 2021 and June 2026; Third SOUA, 2026 |
 | Other campuses | The four component campuses, at Alangalang, Isabel, Tolosa, and Villaba, and the liaison offices in Manila and Cebu, are connected to the Main Campus network | VSU news, 2023 |
-| Cloud services | Email and documents through Google's education services, and library subscriptions to e-book and journal publishers, all depending on the internet link | Computer Center projects page |
+| IPv6 | Certified IPv6-ready in May 2024, the first university in Eastern Visayas by VSU's account, working with DOST-ASTI through PREGINET; VSU named IoT in smart classrooms, connected lab equipment, campus-wide environmental monitoring, and networking research among the aims | VSU news, May 2024 |
+| Cloud services | Google Workspace accounts for all registered Main Campus students since October 2022, more than 18,000 Microsoft 365 licenses from September 2023, and library subscriptions to e-book and journal publishers, all depending on the internet link | VSU news, 2022 and 2023; Computer Center projects page |
 | Continuity | The STRIDES framework for disaster preparedness and continuity of essential services, adopted in 2026 | Third SOUA, 2026 |
 
 Every row is official information from VSU's own pages. [Established] Some of it is years old, and the network has likely changed since. [Unresolved]
@@ -99,6 +125,24 @@ Not all traffic can or should stay on campus. Where it belongs depends on who ma
 
 Every row is a proposal [Proposed], except the fifth, which follows from how encryption works rather than from a choice. [Established]
 
+### Different data, different rules
+
+Where data lives is half the design. The other half is who has the last word on it, and how it moves when connections come and go. One rule for everything would be too loose for records and too rigid for conversation. [Proposed]
+
+| Kind of data | Who has the last word | How it moves | Example |
+| --- | --- | --- | --- |
+| Records in VSU's systems | The system that holds them (D-004) | Linked, or read with permission; never copied into a shared cache | Grades, enrollment, personnel files |
+| Official notices and guides | The office or author that posted them | Each change kept as a new version, with what it replaced; public versions cached on campus and kept on phones | A class suspension, updated at noon (D-063) |
+| Discussion and questions | The community | Synced at the tiers of D-034, then archived and deleted on a schedule (D-070) | A thread about a scholarship requirement |
+| Reports and posts written offline | The person, until the office that receives them acknowledges them | Held in the phone's outbox and sent once, in order, when a connection returns | A leaking pipe reported from a dormitory with no signal |
+| Public files and media | The office or author | One copy on campus serves everyone who asks | A form, a campus map, a recorded lecture |
+| Moderation and administration | The people who acted | Written to a log that keeps every entry and shows any later change to one | A post removed, with the reason given |
+| Text written together | Everyone editing it | Merged automatically, as local-first software does, and only if a pilot shows people write together | A guide drafted by several officers |
+
+Every row is a proposal. [Proposed] The last waits for evidence that anyone needs it. [Deferred]
+
+No blockchain is needed for any of this. A log that keeps every entry and shows any tampering gives the provenance this document asks for: an institution that already holds authority needs records anyone can check, not a network of strangers agreeing on them. [Proposed] This applies principle 4 of [Chapter 1](01-campus.md). [Established]
+
 ### Keeping campus traffic on campus is the easy part
 
 When a service runs on VSU's own servers, a phone on campus Wi-Fi reaches it entirely inside VSU's network, whatever address it uses; no internet provider carries that traffic. [Established] Three details decide whether it keeps working when the internet link is down.
@@ -118,6 +162,8 @@ The only way to cache encrypted traffic in general is to decrypt it, by making e
 What remains is caching designed for the campus, which never keeps a record of who asked for what (D-056):
 
 - **VSU's own services.** VSU holds the certificates for its own sites, so a campus cache can store and serve their pages, course files, and media as often as people ask. This is the caching the original idea meant, and probably the largest share of what a campus cache could hold. [Proposed]
+- **Thousands at once.** When many requests for the same item arrive together, a cache can combine them into one request to the server that holds it (RFC 9111). [Established] (E-046) A suspension notice announced by VSU's 4:30 a.m. deadline (E-025) and read by thousands of phones would then be fetched once, and a 500 KB file read by 1,000 phones would cross the uplink once instead of 1,000 times: 0.5 MB instead of 500 MB. [Proposed] When that server cannot be reached, a cache may keep serving the last copy it holds (RFC 5861). [Established] Public pages would then stay readable in island mode. [Proposed]
+- **Never the private part.** A page meant for one person, such as a grade report, is marked private, and a shared cache must not store it (RFC 9111). [Established] (E-046)
 - **Updates and apps.** Apple's content caching keeps software updates, apps, and encrypted iCloud content on a campus machine for every Apple device on the network, and Microsoft Connected Cache does the same for Microsoft content, in a version for enterprise and education that is generally available. [Established] LanCache stores large downloads still served without encryption and passes encrypted traffic through untouched. [Established]
 - **Video and social media.** Google Global Cache and Netflix Open Connect place servers inside the networks of internet providers and other operators that meet their traffic and routing requirements; Netflix's embedded servers, for example, require at least 5 Gbps of peak Netflix traffic and an operator with its own public network number. [Established] For a single campus, the realistic lever is its choice of providers and where they connect, not hardware on campus. [Proposed]
 - **Names.** A campus DNS resolver keeps recent lookups for everyone, which saves time rather than bandwidth. [Established]
@@ -148,6 +194,7 @@ An earlier version of the idea would broadcast campus updates once for every dev
 The original idea held that a network whose users are known, the students, faculty, and staff, can detect and stop breaches more easily, with university accounts made mandatory to use it. [Established] (D-057) That holds because "known" means identity, not inspection. [Proposed]
 
 - **University accounts at the door.** Joining the campus network takes a VSU account. [Established] (D-057) Wi-Fi that signs each person in this way, as eduroam does, ties every connection to a member without reading what they do. The national research network PREGINET offers eduroam, which UP Diliman, UP Open University, and UP Los Baños use, and under it only a person's home institution can see their network activity. [Established] Whether VSU takes part is not known. [Unresolved] (Q-27)
+- **No trust for being inside.** Zero trust, as NIST defines it, grants no implicit trust to a user account or a device for its physical or network location alone. [Established] (E-047) Joining campus Wi-Fi with a VSU account is the first check, not the last: every service still checks who is asking and with what role, on campus or off, so a device on campus gets no more than its user's own sign-in allows. [Proposed] (D-087) An earlier version of the idea had people connect only from inside the university; that works as a convenience, not as protection, and campus services stay reachable from outside through the gateway, behind the same sign-in. [Proposed]
 - **Separate lanes.** Students, staff, servers, and campus devices on separate network segments, so that a compromised phone cannot reach an office's servers. [Proposed]
 - **Patterns, not content.** Attacks detected from connection metadata such as volumes, timing, and destinations, kept briefly and in aggregate. [Proposed]
 
@@ -163,14 +210,14 @@ History carries a warning. Tsinghua University's SMTH bulletin board, among Chin
 
 ### Staying up when the link fails
 
-VSU has lived the scenario the campus ring is for. When Typhoon Haiyan struck in November 2013, the university's internet leased line was destroyed and could not be restored, and about 90% of the fiber backbone was lost. [Established] A campus-first answer has four parts. [Proposed]
+VSU has lived the scenario the campus ring is for. When Typhoon Haiyan struck in November 2013, the university's internet leased line was destroyed and could not be restored, and about 90% of the fiber backbone was lost. [Established] Five days after Typhoon Odette in December 2021, power and internet at the Main Campus were only partly restored: more than half of the campus ran on the VSU Power Plant's generators, and internet came back first through the one provider whose line had kept running. [Established] (E-042) A campus-first answer has four parts. [Proposed]
 
 1. **Island mode.** Campus services, sign-in, and name lookups that keep working with the uplink cut, tested in a scheduled drill rather than discovered in a storm.
 2. **Copies away from the data center.** The data center is hardened, but it is still one building. Critical data needs a second copy elsewhere, for example at a component campus over VSU's network or with a cloud provider.
-3. **More than one way out.** Uplinks from different providers, entering the campus by different routes. After Typhoon Opong in 2025, the DICT began installing 100 donated satellite terminals across Masbate in October to restore communications. [Established] Satellite service could be VSU's last-resort link. [Proposed] The Konektadong Pinoy Act of 2025 lets data transmission providers operate without a congressional franchise, which may widen VSU's choice of providers. [Established] Its effect on VSU is not known. [Unresolved]
+3. **More than one way out.** Uplinks from different providers, entering the campus by different routes. After Odette, PLDT's line was the only one running at first, until Globe restored fiber to VSU's core offices. [Established] (E-042) After Typhoon Opong in 2025, the DICT began installing 100 donated satellite terminals across Masbate in October to restore communications. [Established] Satellite service could be VSU's last-resort link. [Proposed] The Konektadong Pinoy Act of 2025 lets data transmission providers operate without a congressional franchise, which may widen VSU's choice of providers. [Established] Its effect on VSU is not known. [Unresolved]
 4. **Phones that remember.** The device ring keeps notices and schedules readable when every network is down. (D-034)
 
-VSU's STRIDES framework and its continuity planning are where such measures would belong, and [Chapter 2.1](02a-emergencies.md) works them through for the two emergencies VSU has already faced, including a network that opens to everyone sheltering on campus. [Proposed] (D-060)
+VSU's STRIDES framework and its continuity planning are where such measures would belong, and [Chapter 2.1](02a-emergencies.md) works them through for the three emergencies VSU has already faced, including a network that opens to everyone sheltering on campus. [Proposed] (D-060)
 
 ## How the hardware would be structured
 
@@ -197,10 +244,10 @@ Two or more internet providers on separate routes     Ring 4
 | Devices | Apps keep what people need and fetch only what changed | Phones and laptops on campus Wi-Fi | CAMPUS apps built to work offline first [Proposed] |
 | Access | Access points powered and connected by building switches, outdoor units where people gather, and wireless bridges where fiber cannot reach | Close to 98% coverage in 2023, with the first access points due for upgrade [Established] | Access points sized by how many people use a space, and sign-in with university accounts [Proposed] |
 | Backbone and core | Fiber from buildings to redundant core switches in the data center | A fiber backbone since 2017 [Established]; its layout and redundancy are not public [Unresolved] | Two paths to each major building, so one cut does not isolate it [Proposed] |
-| Data center | Servers, storage, backup, power, and cooling | A climate-proof data center with solar backup [Established] | A small cluster for campus services, and a copy of critical data off the Main Campus [Proposed] |
+| Data center | Servers, storage, backup, power, and cooling | A climate-proof, containerized data center on solar backup [Established] | A small cluster for campus services, and a copy of critical data off the Main Campus [Proposed] |
 | Campus services | Name lookups, sign-in, caches, the library, chat, and hosting for campus systems and CAMPUS products | Systems built on self-hostable software; where they are hosted is not public [Unresolved] | A rule that campus-made data lives here by default [Proposed] |
-| Edge | Firewalls, the gateway for outside access, and links to providers | Leased lines funded by CHED; Globe was a provider in 2018 [Established] | Providers on separate routes, and peering at an exchange if VSU holds its own address space [Proposed] |
-| Later | A low-power sensor network and a local message broker | DIGITS envisions sensors for energy, water, and facilities [Established] | Sensor data kept on campus for a smart green campus and any digital twin ([Chapter 4](04-digital-twin.md)) [Deferred] |
+| Edge | Firewalls, the gateway for outside access, and links to providers | Leased lines funded by CHED, with Globe and PLDT among the providers; IPv6-ready since 2024 [Established] | Providers on separate routes, and peering at an exchange if VSU holds its own address space [Proposed] |
+| Later | A low-power sensor network and a local message broker | DIGITS envisions sensors for energy, water, and facilities, and VSU named campus-wide environmental monitoring and connected lab equipment among the aims of its IPv6 work [Established] | Sensor data kept on campus for a smart green campus, research, and any digital twin ([Chapter 4](04-digital-twin.md)) [Deferred] |
 
 [Chapter 2.2](02b-campus-network.md) takes the access layer further: why access points rather than towers, how to size crowded rooms, cost references from Philippine state universities, and what changes for VSUEE, the portal, Cumulus, and VSU's other systems. [Proposed]
 
@@ -226,16 +273,17 @@ No university found in this review runs the whole design, which does not prove t
 
 ## Stages, each with a way to stop
 
-Every stage is a proposal for VSU ICT to accept, change, or decline. [Proposed] (D-058)
+The bench test is the author's own work and needs nothing from VSU. Every later stage is a proposal for VSU ICT to accept, change, or decline. [Proposed] (D-058, D-088)
 
 | Stage | What happens | What it needs | Stop or narrow if |
 | --- | --- | --- | --- |
+| Bench | The seven tests of [Chapter 2.3](02c-ring-tests.md), on the author's own equipment with synthetic data | Nothing from VSU (D-088) | A test fails in a way no change to the design fixes |
 | 0. Measure | With VSU ICT: a typical week of traffic by type of destination, a list of outages and what kept working, and a map of where each system is hosted and how people sign in | VSU ICT's agreement; totals only, never data about a person | Nothing to stop yet: this stage produces the evidence |
 | 1. Quick wins | A campus name resolver, update caches, and a trial library server | A few ordinary servers and some ICT time | The caches serve little, or the library goes unused for a semester |
 | 2. Campus first | Campus-made data hosted on campus by default, sign-in that works on campus without the internet, academic priority with a fair share for everything else under VSU's network policy, and island-mode and emergency drills | Ownership by VSU ICT and the Crisis Management Committee | The drill shows services cannot run on their own, and fixing that costs more than it returns |
 | 3. Campus platform | The social/academic network and its chat run on campus servers, if those products pass their own gates | The network's pilot gate ([Chapter 3](03-social-network.md)) | The network fails its pilot |
 
-Research only, and not on the roadmap: broadcasting campus content over radio or multicast, named-data networking, a private campus cellular network with its own SIM cards, keeping copies of outside content beyond what its owners allow, and the sensor platform for a digital twin. [Deferred]
+Research only, and not on the roadmap: broadcasting campus content over radio or multicast, named-data networking, a private campus cellular network with its own SIM cards, keeping copies of outside content beyond what its owners allow, servers in every building cluster, campus-hosted live audio and video, a campus emergency report over Wi-Fi ([Chapter 2.1](02a-emergencies.md)), and the sensor platform for a digital twin. [Deferred]
 
 ## What would prove or disprove it
 
@@ -251,6 +299,8 @@ VSU ICT owns the network, and DIGITS is VSU's own roadmap. Whether CAMPUS relate
 
 In practice, that means building products that could move to campus servers later, from open components with no dependence on one cloud's proprietary services. [Proposed] Hop-It is built from components (Docker, PostgreSQL, FastAPI) that run on hardware VSU could own. [Proposed]
 
+Parts of the work could also become student research. VSU named networking research and experimentation among the aims of its IPv6 work in 2024. [Established] (E-044) The bench test and Stage 0's measurements are the kind of projects students in VSU's computing and engineering programs could take on, if their faculty want them ([Chapter 2.3](02c-ring-tests.md)). [Proposed]
+
 ## Open questions
 
 - Which functions genuinely benefit from running on campus, and which are better left with outside providers?
@@ -264,15 +314,17 @@ In practice, that means building products that could move to campus servers late
 - Do students on campus connect through campus Wi-Fi or their own mobile data? (Q-13)
 - How much do VSU students spend on mobile data, and how much of it goes to academic needs? (Q-28)
 - How well does campus Wi-Fi serve students outside the dormitories during class hours, and where is mobile signal weak? (Q-29)
+- What pass marks should the bench test use? (D-088)
 - Is the added complexity worth it?
 
 [Unresolved] (v0.1 §7.7)
 
 ## Sources
 
-Checked on 8 October 2026. The source type follows each entry ([Chapter 9](09-governance.md)).
+Checked on 8 October 2026, except those added on 9 October 2026 after the owner's brainstorm. The source type follows each entry ([Chapter 9](09-governance.md)).
 
 - Visayas State University. [VSU's ICT team successfully deploys free WIFI to all main campus dorms](https://www.vsu.edu.ph/articles/news/2353-vsu-s-ict-team-successfully-deploys-free-wifi-to-all-main-campus-dorms), 30 May 2023; [VSU gets 15M CHED grant to build smart campus](https://www.vsu.edu.ph/articles/news/1889-vsu-gets-15m-ched-grant-to-build-smart-campus), 18 January 2021; [Third State of the University Address](https://www.vsu.edu.ph/articles/news/3045-3rd-state-of-the-university-address), 18 September 2026; [Location and Facilities](https://www.vsu.edu.ph/about/overview/location-and-facilities); [E-Learning Environment login](https://elearning.vsu.edu.ph/login/index.php). Official.
+- Visayas State University, added 9 October 2026. [Power, internet temporarily restored at Main Campus 5 days after #OdettePH](https://vsu.edu.ph/articles/news/2121-power-internet-temporarily-restored-at-main-campus-5-days-after-odetteph), 22 December 2021; [PLDT inks agreement with VSU; Smart Campus equipment given to colleges](https://www.vsu.edu.ph/articles/news/2401-pldt-inks-agreement-with-vsu-smart-campus-equipment-distributed-to-colleges), 7 September 2023; [VSU is first university in Eastern Visayas to become IPv6 ready](https://www.vsu.edu.ph/articles/news/2534-vsu-is-first-university-in-eastern-visayas-to-become-ipv6-ready), 15 May 2024; [VSU installs hybrid solar power system to strengthen ICT resilience](https://www.vsu.edu.ph/articles/news/3007-vsu-installs-hybrid-solar-power-system-to-strengthen-ict-resilience), 30 June 2026; [VSU rolls out 9,245 free Google Workspace accounts to students in Main Campus](https://www.vsu.edu.ph/articles/news/2255-vsu-rolls-out-9-245-free-google-workspace-accounts-to-all-students-in-main-campus), 4 October 2022. Official.
 - VSU University Computer Center. [Projects](https://ucc.vsu.edu.ph/projects), undated, describing work through 2017; [Leased line upgraded from 15mbps to 60mbps](https://ucc.vsu.edu.ph/2018/03/15/leased-line-upgraded-from-15mbps-to-60mbps), March 2018. Official.
 - [Republic Act No. 10173, Data Privacy Act of 2012](https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html); [Republic Act No. 10929, Free Internet Access in Public Places Act](https://lawphil.net/statutes/repacts/ra2017/ra_10929_2017.html); [Republic Act No. 10175, Cybercrime Prevention Act of 2012](https://lawphil.net/statutes/repacts/ra2012/ra_10175_2012.html). Official.
 - DOST-ASTI. [PREGINET services](https://preginet.asti.dost.gov.ph/service); [PREGINET connects institutions with eduroam](https://asti.dost.gov.ph/news-articles/paving-the-way-for-ph-research-dost-astis-preginet-connects-institutions-with-eduroam/), 6 February 2024. Official.
@@ -285,6 +337,8 @@ Checked on 8 October 2026. The source type follows each entry ([Chapter 9](09-go
 - [HTTPS by default](https://security.googleblog.com/2025/10/https-by-default.html), Google, October 2025. External.
 - CA/Browser Forum. [Ballot SC081v3](https://cabforum.org/2025/04/11/ballot-sc081v3-introduce-schedule-of-reducing-validity-and-data-reuse-periods/), April 2025, with its schedule summarized by [DNSimple](https://support.dnsimple.com/articles/announcement-ssl-certificate-validity-changes/). External.
 - IETF. [RFC 9704: Establishing Local DNS Authority in Validated Split-Horizon Environments](https://www.rfc-editor.org/rfc/rfc9704.html), January 2025; [RFC 9119: Multicast Considerations over IEEE 802 Wireless Media](https://www.rfc-editor.org/rfc/rfc9119.html), October 2021. External, standards.
+- IETF. [RFC 9111: HTTP Caching](https://rfc-editor.org/rfc/rfc9111.html), June 2022, Sections 4 and 5.2.2.7; [RFC 5861: HTTP Cache-Control Extensions for Stale Content](https://rfc-editor.org/rfc/rfc5861.html), May 2010. External, standards.
+- Rose, S., Borchert, O., Mitchell, S., and Connelly, S. (2020). [Zero Trust Architecture](https://nvlpubs.nist.gov/nistpubs/specialpublications/NIST.SP.800-207.pdf). NIST Special Publication 800-207. External, standard.
 - Caches: Apple, [Intro to content caching](https://support.apple.com/guide/deployment/intro-to-content-caching-depde72e125f/web); Microsoft, [Microsoft Connected Cache](https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache); [LanCache documentation](https://lancache.net/docs/); Google, [Introduction to GGC](https://support.google.com/interconnect/answer/9058809?hl=en); [Open Connect](https://en.wikipedia.org/wiki/Open_Connect), Wikipedia. External.
 - [Output Messenger](https://www.outputmessenger.com/), the maker's site. External, vendor.
 - [Kiwix](https://en.wikipedia.org/wiki/Kiwix), Wikipedia; [Internet-in-a-Box](https://internet-in-a-box.org/). External.
