@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- meta: written by scripts/sync-meta.js from data/chapters.json -->
-<title>Related Work — Project CAMPUS</title>
-<meta name="description" content="Existing systems in the Philippines and abroad, and how CAMPUS must differ. Chapter 9 of Project CAMPUS, an independent proposal for Visayas State University.">
-<link rel="canonical" href="https://project-campus-gilt.vercel.app/related-work.html">
+<title>The Whole Document — Project CAMPUS</title>
+<meta name="description" content="Every chapter of the Project CAMPUS master document on one page, to read straight through, print, or save as a PDF. An independent proposal for Visayas State University.">
+<link rel="canonical" href="https://project-campus-gilt.vercel.app/document.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Project CAMPUS">
-<meta property="og:title" content="Related Work — Project CAMPUS">
-<meta property="og:description" content="Existing systems in the Philippines and abroad, and how CAMPUS must differ. Chapter 9 of Project CAMPUS, an independent proposal for Visayas State University.">
-<meta property="og:url" content="https://project-campus-gilt.vercel.app/related-work.html">
+<meta property="og:title" content="The Whole Document — Project CAMPUS">
+<meta property="og:description" content="Every chapter of the Project CAMPUS master document on one page, to read straight through, print, or save as a PDF. An independent proposal for Visayas State University.">
+<meta property="og:url" content="https://project-campus-gilt.vercel.app/document.html">
 <meta property="og:image" content="https://project-campus-gilt.vercel.app/img/og-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -30,8 +30,9 @@
 <link rel="stylesheet" href="css/style.css?v=0.2.6">
 </head>
 <body>
-<!-- Chapter shell. Every chapter page is this same file; the body is
-     content/<file>.md, chosen by this page's file name via data/chapters.json. -->
+<!-- The whole document on one page: every chapter in data/chapters.json,
+     rendered in order, for reading straight through, printing, or saving
+     as one PDF. -->
 
 <div class="topbar">
   <span class="topbar-brand">Project <em>CAMPUS</em></span>
@@ -51,11 +52,10 @@
 
   <main class="content">
     <div class="content-inner">
-      <article class="chapter" id="chapter" aria-busy="true">
-        <p class="chapter-loading">Loading chapter…</p>
+      <article class="chapter" id="chapter" data-mode="all" aria-busy="true">
+        <p class="chapter-loading">Loading the whole document…</p>
         <noscript><p class="chapter-error">This chapter is written in Markdown and rendered with JavaScript. Read it in the content/ folder of the GitHub repository.</p></noscript>
       </article>
-      <nav class="chapter-nav" id="chapterNav" aria-label="Previous and next chapter"></nav>
     </div>
   </main>
 

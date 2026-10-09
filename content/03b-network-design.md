@@ -2,7 +2,7 @@
 
 *Members, communities, knowledge, and rules: a design to test before it is built*
 
-This chapter turns the principles of [Chapter 2](02-social-network.md) into a working design: who can join, how the network is organized, who can see what, how questions find the people who know, how knowledge is kept and when it fades, how helpers are recognized, how notices, trade, and pseudonymous speech work, how the network is governed, and what runs underneath. Every part is a proposal for field research and a pilot to test, and the first version would include only what the evidence calls for. [Proposed]
+This chapter turns the principles of [Chapter 3](03-social-network.md) into a working design: who can join, how the network is organized, who can see what, how questions find the people who know, how knowledge is kept and when it fades, how helpers are recognized, how notices, trade, and pseudonymous speech work, how the network is governed, and what runs underneath. Every part is a proposal for field research and a pilot to test, and the first version would include only what the evidence calls for. [Proposed]
 
 > **In short.** Members sign in with VSU accounts and carry roles. They join communities that belong to real VSU units, places, organizations, and subjects, each with a named owner and with spaces for notices, questions, guides, events, and discussion. A question is routed to members who chose to help with its topic and to the office responsible, after the network has shown any answer that already exists. Knowledge is labelled, dated, and kept, while conversation fades on a schedule. Helping is recognized without public scores. Pseudonyms hide a member from other members but not from a reveal process that needs two keys. Moderators enforce rules written with the community, offices answer concerns, and neither does the other's job. Everything runs on open components VSU could host. [Proposed]
 
@@ -56,7 +56,7 @@ Program and year are education details, which the Data Privacy Act counts as sen
 
 ## Communities: the network shaped like VSU
 
-A community is the network's unit: a group of members around something real at VSU, with an owner, a membership rule, and its own spaces. Communities exist because the thing they serve exists, not because someone started a chat: the scholarships community exists because scholarships do, and it outlives every student who joins it. [Proposed] (D-062) VSU's 2025 case, in which a lost-and-found group's creator said he had been removed and the only visible administrator appeared to be a dummy account, shows what happens when a community belongs to whoever controls it ([Chapter 2](02-social-network.md)). [Established]
+A community is the network's unit: a group of members around something real at VSU, with an owner, a membership rule, and its own spaces. Communities exist because the thing they serve exists, not because someone started a chat: the scholarships community exists because scholarships do, and it outlives every student who joins it. [Proposed] (D-062) VSU's 2025 case, in which a lost-and-found group's creator said he had been removed and the only visible administrator appeared to be a dummy account, shows what happens when a community belongs to whoever controls it ([Chapter 3](03-social-network.md)). [Established]
 
 | Community type | Examples at VSU | Owner | Who joins | Who posts notices |
 | --- | --- | --- | --- | --- |
@@ -69,7 +69,7 @@ A community is the network's unit: a group of members around something real at V
 | Residence | VSU's 21 student dormitories | Dormitory management, with residents | Residents | Management |
 | Place | The VSU Market, the library | The office that manages the place | Anyone | The managing office |
 | Topic | A crop, coastal research, GIS, photography | The members who start it | Anyone | Its owners |
-| Marketplace | Books, uniforms, gadgets, dormitory items | The network's moderators | Verified members | Moderators |
+| Marketplace, linked | Books, uniforms, gadgets, dormitory items, in the Marketplace product ([Chapter 4.2](04b-marketplace.md)) | The network's moderators | Verified members | Moderators |
 | Concerns | Problems with services or facilities | The student council and OVPSAS, jointly | Students | The council |
 | Hometown, later | Students from the same province or town | The members who start it | Anyone from there | Its owners |
 
@@ -249,14 +249,11 @@ Private messages stay private: moderators cannot read them. A member who reports
 
 An event is an entity, not a post that scrolls away. It has a time, a place, organizers, and the communities it concerns, and after it happens it keeps its materials, such as slides, photos, recordings, and follow-up discussion, as part of the network's memory. [Proposed] Attendance is shown as a count, with names only for members who choose to show them. [Proposed]
 
-## The marketplace and student services
+## Student services, and the link to the marketplace
 
-- **Who.** Verified members only, so that a buyer knows the seller is a VSU student or employee. [Proposed]
-- **What.** Categories for books, uniforms, gadgets, and dormitory items, and a list of prohibited and regulated items that follows the law and VSU's policies, such as its 2025 policy on raising and selling animals at VSU. [Proposed] What that policy allows is not checked here. [Unresolved]
-- **Where.** Suggested meeting points in busy public places on campus. [Proposed]
-- **Money.** Payment happens outside the network, as in Hop-It's Alpha ([Chapter 3](03-hop-it.md)). [Proposed]
-- **Trust.** After an exchange both sides confirm it, and only confirmed exchanges count toward a seller's record, which the seller and buyers can see. Scams are reported to moderators, and repeat offenders lose access. [Proposed]
-- **Services, later.** Tutoring, printing, layout, and photography listings, reviewed only by confirmed clients, with deliveries handed to Hop-It. [Proposed]
+The marketplace is its own product, linked from the network rather than built as one of its spaces. [Established] (D-078) Its design, including who may sell, what may be sold, and how trust is earned, is in [Chapter 4.2](04b-marketplace.md). The network links to it from the communities where trading comes up, such as a dormitory or a subject's book exchange, and shares its verified membership and moderators with it. [Proposed]
+
+- **Services, later.** Tutoring, printing, layout, and photography listings, reviewed only by confirmed clients, with deliveries handed to Hop-It ([Chapter 4.1](04a-hop-it.md)). [Proposed]
 
 ## Pseudonymous sections
 
@@ -330,7 +327,7 @@ The network grows outward in steps, each with its own verification and its own g
 
 1. **College students, faculty, and staff** of the Main Campus, through VSU accounts. The pilot stops here (D-069).
 2. **Alumni.** VSU accounts can be revoked at graduation, so graduates need a separate path, such as verification against VSU's graduation records, with an alumni role. [Proposed] (Q-45) Alumni would then mentor, answer career questions, and keep helping in the communities they knew, which serves the Strategic Plan's goal of Strong Alumni Engagement. [Proposed]
-3. **Applicants and their parents.** A public "Ask VSU" section, where they can ask about programs, admission, and student life and be answered by verified students, alumni, and offices, extends the use case of a window for aspiring students ([Chapter 2.1](02a-use-cases.md)). [Proposed] Parents of first-generation students, who could not ask anyone at home with a college degree, may gain the most. [Proposed] Applicants may be minors, so the section would allow public questions and answers only, with no private messages to them. [Proposed]
+3. **Applicants and their parents.** A public "Ask VSU" section, where they can ask about programs, admission, and student life and be answered by verified students, alumni, and offices, extends the use case of a window for aspiring students ([Chapter 3.1](03a-use-cases.md)). [Proposed] Parents of first-generation students, who could not ask anyone at home with a college degree, may gain the most. [Proposed] Applicants may be minors, so the section would allow public questions and answers only, with no private messages to them. [Proposed]
 
 Out of scope are minors from outside VSU and the general public. [Proposed] A knowledge exchange open to every level of education, from elementary pupils to professionals, is a different product with different safety duties, and it falls outside CAMPUS (D-021). [Proposed] If the idea belongs anywhere, it is closer to the Education Protocol Concept, which [Chapter 5](05-later-directions.md) records as a separate project. [Proposed]
 
@@ -338,7 +335,7 @@ Out of scope are minors from outside VSU and the general public. [Proposed] A kn
 
 - **An installable web app first.** Android accounted for about 87% of mobile web page views in the Philippines in September 2026, and iPhones have received push notifications from web apps added to the home screen since iOS 16.4 in 2023. [Established] One web app can therefore reach almost every phone without app store approval. [Proposed]
 - **Text first.** Compressed images, no autoplay video, and only what changed fetched at each sync, so daily use costs little mobile data. [Proposed] How little is for a pilot to measure. [Unresolved]
-- **Readable offline.** Notices, guides, and saved events stay on the phone, the device ring of [Chapter 4](04-intranet.md). [Proposed] (D-034)
+- **Readable offline.** Notices, guides, and saved events stay on the phone, the device ring of [Chapter 2](02-intranet.md). [Proposed] (D-034)
 - **Languages.** Members write in any language. The interface would start in English and Filipino and add Cebuano and Waray if the survey shows people want them. [Proposed] (Q-41) VSU's own barangay, Pangasugan, is among the few places where a further language, Baybayanon, is spoken. [Established]
 - **Accessibility.** Scalable text, enough contrast, and support for screen readers, aiming at the Web Content Accessibility Guidelines, in line with the services for students with special needs that CHED lists among student affairs services. [Proposed]
 
@@ -362,7 +359,7 @@ and announcements; WAIS                       document tracker, VSUEE,
 - **Sign-in.** For a pilot, members can prove membership with a one-time code sent to their VSU email address, which needs no integration with VSU's systems. Single sign-on through OpenID Connect with VSU's Google accounts, limited to the vsu.edu.ph domain, or with VSU's own identity system, would come later with VSU ICT's agreement. [Proposed] (Q-06)
 - **Official feeds.** VSU's website already publishes RSS feeds of its news and its announcements. [Established] The network could carry them into the university's official space with their source shown, and could show WAIS advisories, which WAIS already generates as JSON, if VSU's disaster risk management office agrees. [Proposed] (Q-40)
 - **Sync.** The channel model's tiers: official notices within about a minute, other spaces on a slower cycle, and archives only when opened. [Established] (D-034)
-- **Build.** Two paths are open. One composes open-source parts, such as a forum engine like Discourse and, if needed, a Matrix server, behind a thin VSU layer for roles, communities, labels, states, and routing. The other builds the network from scratch on the stack Hop-It uses. [Proposed] (Q-33) The first is faster and better tested; the second fits the labels, states, and routing more closely and shows more of what the project can build. Either way, everything runs in containers VSU could host later, with no dependence on one cloud's proprietary services ([Chapter 4](04-intranet.md)). [Proposed]
+- **Build.** Two paths are open. One composes open-source parts, such as a forum engine like Discourse and, if needed, a Matrix server, behind a thin VSU layer for roles, communities, labels, states, and routing. The other builds the network from scratch on the stack Hop-It uses. [Proposed] (Q-33) The first is faster and better tested; the second fits the labels, states, and routing more closely and shows more of what the project can build. Either way, everything runs in containers VSU could host later, with no dependence on one cloud's proprietary services ([Chapter 2](02-intranet.md)). [Proposed]
 - **Security.** Encrypted connections and storage, a log of every moderator and administrator action, regular backups, and a breach process run with VSU's data protection officer. [Proposed] VSU's own privacy training in 2021 put the guiding rule simply: don't collect what you can't protect. [Established]
 
 ## Scenes

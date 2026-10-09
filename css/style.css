@@ -19,9 +19,22 @@
   --rule:     #D6D2C2;
   --rule-2:   #C3BEA9;
 
-  /* Brass — stamps, chapter marks, written-status */
-  --brass:    #9C6B2C;
-  --brass-bg: #F1E4CC;
+  /* Brass: VSU gold, deep enough to read as text. Stamps, chapter
+     marks, "you are here". */
+  --brass:    #785808;
+  --brass-bg: #F4E8C1;
+
+  /* VSU green and gold, used sparingly: hover, part labels, the
+     soft light at the page corners. Tuned to this paper palette;
+     these are not official VSU brand values. */
+  --green:     #17643A;
+  --green-bg:  #D5E6D3;
+  --gold:      #E2AE1C;   /* fills only (pins), never text */
+  --highlight: #F2DD8C;   /* selected text, like a highlighter */
+  --glow-gold:  rgba(250, 200, 40, .34);
+  --glow-green: rgba(70, 185, 110, .24);
+  --toggle-ink: #A47708;   /* the sun icon */
+  --toggle-bg:  var(--brass-bg);
 
   /* Sea — live links, flagship pilot */
   --sea:      #17495A;
@@ -33,6 +46,10 @@
 
   --spine-w: 280px;
   --topbar-h: 56px;
+
+  --scroll-thumb:       rgba(31, 42, 34, .22);
+  --scroll-thumb-hover: rgba(23, 100, 58, .55);
+  color-scheme: light;
 }
 
 :root[data-theme="dark"] {
@@ -44,10 +61,21 @@
   --ink-3:    #89958A;
   --rule:     #465249;
   --rule-2:   #617064;
-  --brass:    #D4A55A;
-  --brass-bg: #4A3D29;
+  --brass:    #DDB04F;
+  --brass-bg: #4A3F22;
+  --green:     #86C99A;
+  --green-bg:  #233D2C;
+  --gold:      #E6B53A;
+  --highlight: #5C4B1A;
+  --glow-gold:  rgba(230, 181, 58, .11);
+  --glow-green: rgba(46, 138, 82, .20);
+  --toggle-ink: var(--green);
+  --toggle-bg:  var(--green-bg);
   --sea:      #8FC5D0;
   --sea-bg:   #29464B;
+  --scroll-thumb:       rgba(238, 240, 231, .20);
+  --scroll-thumb-hover: rgba(134, 201, 154, .50);
+  color-scheme: dark;
 }
 
 * , *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -60,22 +88,46 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 a { color: inherit; text-decoration: none; }
+
+/* Soft light at the edges of the page: gold from the top right, green
+   from the bottom left of the reading area. Fixed to the window, so it
+   stays put while the text scrolls. */
+html::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(70vw 60vh at 100% 0%, var(--glow-gold), transparent 70%),
+    radial-gradient(60vw 70vh at var(--glow-left, var(--spine-w)) 100%, var(--glow-green), transparent 70%);
+}
+@media (prefers-contrast: more) { html::before { display: none; } }
+::selection { background: var(--highlight); color: var(--ink); }
 ol, ul { list-style: none; }
 img, svg { display: block; max-width: 100%; }
 button { font-family: var(--font-body); cursor: pointer; background: none; border: none; }
 
+/* Theme toggle: a sun in light mode, a crescent moon in dark mode. The
+   moon is the sun's disc with a second disc sliding across it, and the
+   rays draw in or out, so the switch shows what changed. */
 .theme-toggle {
-  display: block; position: fixed; top: 18px; right: 24px; z-index: 400;
-  width: 36px; height: 36px; padding: 0;
-  border: 1px solid var(--rule-2); border-radius: 50%;
-  color: var(--ink-2); font-size: 18px; line-height: 34px; text-align: center;
-  transition: color .12s, border-color .12s, background .12s;
+  display: grid; place-items: center; flex-shrink: 0;
+  width: 34px; height: 34px; padding: 0; border-radius: 10px;
+  border: 1px solid var(--rule); background: var(--paper);
+  color: var(--toggle-ink);
+  transition: background-color .15s, border-color .15s, color .15s;
 }
-.theme-toggle::before { content: attr(data-icon); }
-.theme-toggle:hover, .theme-toggle:focus-visible {
-  color: var(--ink); border-color: var(--brass); background: var(--brass-bg);
+.theme-toggle svg { width: 18px; height: 18px; overflow: visible; }
+.theme-toggle .tt-disc, .theme-toggle .tt-bite, .theme-toggle .tt-rays {
+  transform-box: fill-box; transform-origin: center;
+  transition: transform .45s cubic-bezier(.5, 0, .2, 1), opacity .3s ease;
 }
+.theme-toggle .tt-bite { transform: translate(9px, -9px); }
+:root[data-theme="dark"] .theme-toggle .tt-disc { transform: scale(1.55); }
+:root[data-theme="dark"] .theme-toggle .tt-bite { transform: translate(0, 0); }
+:root[data-theme="dark"] .theme-toggle .tt-rays { transform: rotate(-60deg) scale(.4); opacity: 0; }
+.theme-toggle:hover { background: var(--toggle-bg); border-color: var(--toggle-ink); }
 .theme-toggle:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle .tt-disc, .theme-toggle .tt-bite, .theme-toggle .tt-rays { transition: none; }
+}
 
 /* ── LAYOUT SHELL ─────────────────────────────────────────── */
 .shell { display: flex; min-height: 100vh; }
@@ -101,46 +153,147 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 }
 .topbar-brand { font-family: var(--font-display); font-weight: 600; font-size: 16px; }
 .topbar-toggle { font-size: 22px; color: var(--ink); padding: 6px; }
-.topbar .theme-toggle { position: static; margin: 0 8px 0 auto; }
+.topbar .theme-toggle { margin: 0 8px 0 auto; }
+
+/* ── SCROLLBARS ───────────────────────────────────────────── */
+/* Thin, rounded, and quiet: visible enough to show there is more,
+   with no track and no arrow buttons. Chromium and Safari use the
+   -webkit- pseudo-elements; Firefox gets the standard properties.
+   (Chromium ignores the pseudo-elements once the standard ones are
+   set, so those stay behind the @supports check.) */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track, ::-webkit-scrollbar-corner { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb); background-clip: padding-box;
+  border: 3px solid transparent; border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover { background-color: var(--scroll-thumb-hover); border-width: 2px; }
+@supports not selector(::-webkit-scrollbar) {
+  * { scrollbar-width: thin; scrollbar-color: var(--scroll-thumb) transparent; }
+}
 
 /* ── SPINE NAV ────────────────────────────────────────────── */
+/* The head stays put and only the chapter list scrolls. Chapters with
+   sub-chapters fold; a chevron opens them, and a chapter's own pages
+   open it automatically. */
 .spine {
   width: var(--spine-w); flex-shrink: 0;
-  background: var(--paper-2);
+  /* A green wash fading down from the top, and a faint gold pool at the foot. */
+  background:
+    linear-gradient(var(--glow-green), transparent 260px),
+    radial-gradient(120% 40% at 0% 100%, var(--glow-gold), transparent 70%),
+    var(--paper-2);
   border-right: 1px solid var(--rule);
-  position: sticky; top: 0; height: 100vh;
-  overflow-y: auto;
-  padding: 32px 0 40px;
+  position: sticky; top: 0; height: 100vh; height: 100dvh;
+  display: flex; flex-direction: column; overflow: hidden;
 }
-.spine-head { padding: 0 28px 22px; border-bottom: 1px solid var(--rule); margin-bottom: 18px; }
+.spine-head {
+  flex-shrink: 0; padding: 30px 20px 20px 28px; border-bottom: 1px solid var(--rule);
+  display: grid; grid-template-columns: 1fr auto; column-gap: 12px; align-items: start;
+}
+.spine-head .spine-brand, .spine-head .spine-lockup { grid-column: 1; }
+.spine-head .theme-toggle { grid-column: 2; grid-row: 1 / span 2; }
 .spine-brand {
   font-family: var(--font-display); font-size: 19px; font-weight: 500;
-  display: block; margin-bottom: 6px;
+  display: block; margin-bottom: 6px; transition: color .15s;
 }
+.spine-brand:hover { color: var(--green); }
 .spine-brand em { font-style: italic; font-weight: 600; }
 .spine-lockup {
   font-family: var(--font-mono); font-size: 10px; letter-spacing: .05em;
   color: var(--ink-3); text-transform: uppercase; line-height: 1.5;
 }
 
-.spine-list { padding: 0 12px; }
-.spine-item a, .spine-item span.disabled {
-  display: flex; align-items: center; gap: 10px;
-  padding: 8px 14px; border-radius: 6px;
-  font-size: 13px; color: var(--ink-2);
+.spine-list {
+  flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain;
+  padding: 14px 12px 40px;
 }
-.spine-item a { transition: background .12s; }
-.spine-item a:hover { background: var(--paper-3); color: var(--ink); }
-.spine-item.active a { background: var(--brass-bg); color: var(--ink); font-weight: 500; }
+@media (pointer: fine) {
+  /* Reserve the scrollbar's lane so opening a chapter never nudges the list sideways. */
+  .spine-list { scrollbar-gutter: stable; padding-right: 4px; }
+}
+
+.spine-part {
+  padding: 22px 12px 6px; font-size: 11.5px; font-weight: 600;
+  letter-spacing: .01em; color: var(--green);
+}
+.spine-part:first-child { padding-top: 4px; }
+
+.spine-item { position: relative; }
+.spine-item a, .spine-item span.disabled {
+  display: flex; align-items: baseline; gap: 12px;
+  padding: 7px 12px; border-radius: 8px;
+  font-size: 13.5px; line-height: 1.4; color: var(--ink-2);
+  transition: background-color .12s, color .12s;
+}
+.spine-item a:hover { background: var(--green-bg); color: var(--green); }
+.spine-item a:hover .spine-num { color: var(--green); }
+.spine-item a:focus-visible, .spine-toggle:focus-visible { outline: 2px solid var(--brass); outline-offset: -2px; }
+.spine-item a[aria-current="page"] { background: var(--brass-bg); color: var(--ink); font-weight: 500; }
 .spine-item span.disabled { color: var(--ink-3); cursor: default; }
+
 .spine-num {
   font-family: var(--font-mono); font-size: 11px; color: var(--ink-3);
-  width: 20px; flex-shrink: 0;
+  min-width: 20px; flex-shrink: 0; font-variant-numeric: tabular-nums;
+  transition: color .12s;
 }
+.spine-item a[aria-current="page"] .spine-num { color: var(--brass); }
 .spine-title { flex: 1; min-width: 0; }
-.spine-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
-.spine-dot.written { background: var(--brass); }
-.spine-dot.not-started { background: transparent; border: 1px solid var(--ink-3); }
+.spine-status { font-family: var(--font-mono); font-size: 10px; color: var(--ink-3); flex-shrink: 0; }
+
+/* A chapter with sub-chapters: the link fills the row, the chevron sits on top at its right. */
+.spine-group > .spine-row > a, .spine-group > .spine-row > span.disabled { padding-right: 40px; }
+.spine-group.has-active > .spine-row > a { color: var(--ink); }
+.spine-group.has-active > .spine-row > a .spine-num { color: var(--brass); }
+.spine-toggle {
+  position: absolute; top: 3px; right: 6px;
+  width: 28px; height: 28px; border-radius: 6px;
+  display: grid; place-items: center; color: var(--ink-3);
+  transition: background-color .12s, color .12s;
+}
+@media (hover: hover) {
+  .spine-toggle:hover { background: var(--green-bg); color: var(--green); }
+}
+.spine-toggle svg { transition: transform .2s ease; }
+.spine-group.open > .spine-row .spine-toggle svg { transform: rotate(90deg); }
+
+/* The fold: rows grow from 0 to their height, and closed links leave the tab order. */
+.spine-sub {
+  display: grid; grid-template-rows: 0fr; visibility: hidden;
+  transition: grid-template-rows .2s ease, visibility 0s linear .2s;
+}
+.spine-group.open > .spine-sub {
+  grid-template-rows: 1fr; visibility: visible;
+  transition: grid-template-rows .2s ease, visibility 0s;
+}
+/* The guide line is a background, not a border, so the fold's clipping can't cut the marker below. */
+.spine-sublist {
+  min-height: 0; overflow: hidden;
+  margin-left: 18px; padding: 0 0 0 10px;
+  background: linear-gradient(var(--rule), var(--rule)) 1px 0 / 1px 100% no-repeat;
+}
+/* Vertical breathing room lives on the items, inside the clip, so a folded chapter is 0px tall. */
+.spine-subitem:first-child { margin-top: 2px; }
+.spine-subitem:last-child { margin-bottom: 6px; }
+/* Sub-chapter numbers line up with their chapter's title. */
+.spine-subitem a, .spine-subitem span.disabled { padding: 6px 10px 6px 16px; gap: 10px; font-size: 13px; }
+.spine-subitem .spine-num { font-size: 10.5px; min-width: 28px; }
+/* A marker on the guide line shows where you are among the sub-chapters. */
+.spine-subitem::before {
+  content: ""; position: absolute; left: -10px; top: 8px; bottom: 8px;
+  width: 3px; border-radius: 2px; background: transparent;
+  transition: background-color .12s;
+}
+.spine-subitem:hover::before { background: var(--green); }
+.spine-subitem.active::before { background: var(--brass); }
+
+@media (pointer: coarse) {
+  .spine-item a, .spine-item span.disabled { padding-top: 9px; padding-bottom: 9px; }
+  .spine-toggle { width: 34px; height: 34px; top: 3px; right: 4px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spine-sub, .spine-group.open > .spine-sub, .spine-toggle svg { transition: none; }
+}
 
 .spine-backdrop {
   display: none; position: fixed; inset: 0; background: rgba(20,22,17,.4);
@@ -167,7 +320,7 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
   color: var(--ink-2); text-transform: uppercase; margin-bottom: 22px;
 }
 .lockup .x { color: var(--ink-3); font-size: 11px; }
-.lockup .vsu { color: var(--sea); font-weight: 500; }
+.lockup .vsu { color: var(--green); font-weight: 500; }
 
 /* ── HERO (cover page) ────────────────────────────────────── */
 .hero { padding-top: 8px; margin-bottom: 56px; }
@@ -192,9 +345,9 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
   display: inline-flex; align-items: center; gap: 8px;
   padding: 11px 20px; border-radius: 3px; font-size: 13.5px; font-weight: 500;
   border: 1px solid var(--ink); color: var(--ink);
-  transition: background .15s, color .15s;
+  transition: background-color .15s, border-color .15s, color .15s;
 }
-.btn:hover { background: var(--ink); color: var(--paper); }
+.btn:hover { background: var(--green); border-color: var(--green); color: var(--paper); }
 .btn-sea { border-color: var(--sea); color: var(--sea); }
 .btn-sea:hover { background: var(--sea); color: var(--paper); }
 
@@ -232,16 +385,28 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 .toc-row {
   display: flex; align-items: baseline; gap: 16px;
   padding: 13px 0; border-bottom: 1px solid var(--rule);
+  position: relative; isolation: isolate;
 }
-.toc-row .n { font-family: var(--font-mono); font-size: 12px; color: var(--ink-3); width: 22px; flex-shrink: 0; }
+/* The tint sits between the rules and reaches a little past the text. */
+.toc-row::before {
+  content: ""; position: absolute; inset: 0 -10px; z-index: -1;
+  border-radius: 6px; background: transparent; transition: background-color .15s;
+}
+.toc-row.is-written .t a::after { content: ""; position: absolute; inset: 0 -10px; }
+.toc-row .n { transition: color .15s; }
+.toc-row .n { font-family: var(--font-mono); font-size: 12px; color: var(--ink-3); min-width: 22px; flex-shrink: 0; font-variant-numeric: tabular-nums; }
 .toc-row .t { flex: 1; font-size: 15px; }
-.toc-row .t a { border-bottom: 1px solid var(--brass); }
-.toc-row .t a:hover { color: var(--brass); }
+.toc-row .t a { border-bottom: 1px solid var(--brass); transition: color .15s, border-color .15s; }
+@media (hover: hover) {
+  .toc-row.is-written:hover::before { background: var(--green-bg); }
+  .toc-row.is-written:hover .t a { color: var(--green); border-bottom-color: var(--green); }
+  .toc-row.is-written:hover .n { color: var(--green); }
+}
+.toc-row .t a:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; border-radius: 2px; }
 .toc-row .s {
   font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .04em;
   text-transform: uppercase; color: var(--ink-3);
 }
-.toc-row.is-written .s { color: var(--brass); }
 
 /* ── CHAPTER PAGE ─────────────────────────────────────────── */
 .chapter h1 {
@@ -283,7 +448,7 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 .field-card::before {
   content: ""; position: absolute; top: -7px; left: 24px;
   width: 14px; height: 14px; border-radius: 50%;
-  background: var(--brass); box-shadow: 0 2px 3px rgba(0,0,0,.25);
+  background: var(--gold); box-shadow: 0 2px 3px rgba(0,0,0,.25);
 }
 .field-card-label {
   display: block; font-family: var(--font-mono); font-size: 10.5px;
@@ -323,8 +488,8 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
   font-size: 13px; display: flex; flex-direction: column; gap: 4px;
 }
 .chapter-nav .dir { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-3); text-transform: uppercase; letter-spacing: .05em; }
-.chapter-nav a .label { color: var(--ink); font-weight: 500; }
-.chapter-nav a:hover .label { color: var(--brass); }
+.chapter-nav a .label { color: var(--ink); font-weight: 500; transition: color .15s; }
+.chapter-nav a:hover .label { color: var(--green); }
 .chapter-nav span.disabled .label { color: var(--ink-3); }
 .chapter-nav .next { text-align: right; }
 
@@ -334,31 +499,29 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
   .shell { flex-direction: column; }
   .spine {
     position: fixed; inset: 0 auto 0 0; width: 84%; max-width: 320px;
-    height: 100vh; transform: translateX(-100%);
+    height: auto; transform: translateX(-100%);
     transition: transform .22s ease; z-index: 300;
   }
   .spine.open { transform: translateX(0); }
   .spine-backdrop.open { display: block; }
+  :root { --glow-left: 0px; }
   .content { padding: 36px 22px 72px; }
   .heading-anchor { left: -18px; opacity: .7; }
   .spine-head .theme-toggle { display: none; }
 }
 
 /* ── v0.2: PARTS, RENDERED MARKDOWN, CLAIM TAGS ───────────── */
-.spine-part {
-  padding: 18px 14px 6px; font-family: var(--font-mono); font-size: 10.5px;
-  letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3);
-}
-.spine-part:first-child { padding-top: 2px; }
-.spine-dot.outline { background: transparent; border: 1px solid var(--brass); }
-
 .toc-part {
   font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em;
-  text-transform: uppercase; color: var(--ink-3); padding: 26px 0 10px;
+  text-transform: uppercase; color: var(--green); padding: 26px 0 10px;
   border-bottom: 1px solid var(--rule);
 }
 .toc-part:first-child { padding-top: 12px; }
 .toc-row .toc-sub { display: block; font-size: 13px; color: var(--ink-2); margin-top: 3px; }
+/* Sub-chapters sit under their chapter's title, rule and all. */
+.toc-row.is-sub { margin-left: 38px; padding: 10px 0; }
+.toc-row.is-sub .n { min-width: 34px; }
+.toc-row.is-sub .t { font-size: 14.5px; }
 .toc-row.is-outline .s { color: var(--ink-2); }
 .cover-note { margin-top: 44px; font-size: 13px; color: var(--ink-3); max-width: 620px; }
 
@@ -369,8 +532,8 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 .chapter ol { list-style: decimal; }
 .chapter li { font-size: 15.5px; margin-bottom: 7px; padding-left: 3px; }
 .chapter li::marker { color: var(--brass); }
-.chapter a { border-bottom: 1px solid var(--brass); }
-.chapter a:hover { color: var(--brass); }
+.chapter a { border-bottom: 1px solid var(--brass); transition: color .15s, border-color .15s; }
+.chapter a:hover { color: var(--green); border-bottom-color: var(--green); }
 .chapter .heading-anchor { border-bottom: none; }
 .chapter strong { font-weight: 600; }
 .chapter code {
@@ -407,3 +570,182 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 .tag-proposed { color: var(--brass); border-color: var(--brass); background: var(--brass-bg); }
 .tag-unresolved { border-style: dashed; border-color: var(--ink-3); }
 .tag-deferred, .tag-superseded, .tag-rejected, .tag-investigating, .tag-under-review { color: var(--ink-3); }
+
+/* ── REFERENCES: D-061, Q-36, C-01, E-010 ─────────────────── */
+/* A dotted underline marks a reference that previews on hover. */
+.chapter a.ref {
+  border-bottom: 1px dotted var(--brass); font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.chapter a.ref:hover, .chapter a.ref:focus-visible { border-bottom-style: solid; }
+.chapter a.ref:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; border-radius: 2px; }
+
+.ref-preview {
+  position: fixed; z-index: 500; max-width: 340px;
+  padding: 12px 14px 13px; border-radius: 10px;
+  background: var(--paper); border: 1px solid var(--rule-2);
+  box-shadow: 0 10px 28px -12px rgba(20, 30, 22, .35);
+  font-family: var(--font-body); font-size: 13.5px; line-height: 1.5; color: var(--ink-2);
+  animation: ref-in .12s ease-out;
+}
+.ref-preview[hidden] { display: none; }
+.ref-preview-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin-bottom: 6px; }
+.ref-preview-id { font-family: var(--font-mono); font-size: 12px; font-weight: 500; color: var(--brass); }
+.ref-preview-kind { font-size: 12px; color: var(--ink-3); }
+.ref-preview-status { margin-left: auto; font-size: 12px; color: var(--ink-3); }
+.ref-preview-text { margin: 0; color: var(--ink); }
+.ref-preview strong { font-weight: 600; }
+@keyframes ref-in { from { opacity: 0; transform: translateY(-3px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .ref-preview { animation: none; } }
+
+/* The row a reference landed on. */
+.chapter tr[id] { scroll-margin-top: 80px; }
+.chapter tr.is-target td { background: var(--brass-bg); }
+.chapter tr.is-target td:first-child { box-shadow: inset 3px 0 0 var(--brass); padding-left: 10px; }
+
+/* ── ON THIS PAGE ─────────────────────────────────────────── */
+.page-toc { display: none; }
+@media (min-width: 1240px) {
+  .content.has-toc {
+    display: grid; grid-template-columns: minmax(0, 700px) 200px;
+    column-gap: 56px; align-items: start;
+  }
+  .page-toc {
+    display: block; position: sticky; top: 64px;
+    max-height: calc(100vh - 96px); overflow-y: auto; overscroll-behavior: contain;
+    padding: 4px 4px 12px 0;
+  }
+}
+.page-toc-title { font-size: 11.5px; font-weight: 600; color: var(--green); margin: 0 0 8px; }
+.page-toc ol { list-style: none; padding: 0 0 0 10px; margin: 0;
+  background: linear-gradient(var(--rule), var(--rule)) 0 0 / 1px 100% no-repeat; }
+.page-toc li { position: relative; }
+.page-toc a {
+  display: block; padding: 4px 0 4px 8px; font-size: 12.5px; line-height: 1.4; color: var(--ink-3);
+  transition: color .12s;
+}
+.page-toc a::before {
+  content: ""; position: absolute; left: -11px; top: 6px; bottom: 6px; width: 3px; border-radius: 2px;
+  background: transparent; transition: background-color .12s;
+}
+.page-toc a:hover { color: var(--green); }
+.page-toc a:hover::before { background: var(--green); }
+.page-toc a[aria-current] { color: var(--ink); font-weight: 500; }
+.page-toc a[aria-current]::before { background: var(--brass); }
+.page-toc a:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; border-radius: 2px; }
+
+/* ── EVIDENCE VIEW ────────────────────────────────────────── */
+.claims-lens {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+  margin: -14px 0 30px; font-size: 12.5px;
+}
+.claims-lens-label { color: var(--ink-3); margin-right: 4px; }
+.claims-lens button {
+  font-size: 12.5px; color: var(--ink-2); padding: 3px 10px; border-radius: 999px;
+  border: 1px solid var(--rule); background: transparent;
+  transition: background-color .12s, border-color .12s, color .12s;
+}
+.claims-lens button .n { font-family: var(--font-mono); font-size: 11px; color: var(--ink-3); margin-left: 2px; }
+.claims-lens button:hover { border-color: var(--green); color: var(--green); background: var(--green-bg); }
+.claims-lens button[aria-pressed="true"] { border-color: var(--ink-2); color: var(--ink); background: var(--paper-2); font-weight: 500; }
+.claims-lens button[data-lens="established"][aria-pressed="true"] { border-color: var(--sea); background: var(--sea-bg); color: var(--sea); }
+.claims-lens button[data-lens="proposed"][aria-pressed="true"] { border-color: var(--brass); background: var(--brass-bg); color: var(--brass); }
+.claims-lens button[data-lens="unresolved"][aria-pressed="true"] { border-style: dashed; border-color: var(--ink-2); background: var(--paper-3); }
+.claims-lens button:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+
+/* With a view on, text that isn't the chosen kind of claim steps back. */
+.chapter[data-lens] :is(p, li, td, .field-card-text):not(.subtitle) { color: var(--ink-3); transition: color .2s; }
+.chapter[data-lens] .tag { opacity: .45; }
+.chapter[data-lens] .claim { border-radius: 3px; -webkit-box-decoration-break: clone; box-decoration-break: clone; transition: background-color .2s, color .2s; }
+.chapter[data-lens="established"] .claim[data-claim="established"],
+.chapter[data-lens="proposed"] .claim[data-claim="proposed"],
+.chapter[data-lens="unresolved"] .claim[data-claim="unresolved"] { color: var(--ink); padding: 1px 2px; }
+.chapter[data-lens="established"] .claim[data-claim="established"] { background: var(--sea-bg); }
+.chapter[data-lens="proposed"] .claim[data-claim="proposed"] { background: var(--brass-bg); }
+.chapter[data-lens="unresolved"] .claim[data-claim="unresolved"] {
+  background: var(--paper-3); text-decoration: underline dashed var(--ink-3); text-underline-offset: 3px;
+}
+.chapter[data-lens="established"] .claim[data-claim="established"] .tag,
+.chapter[data-lens="proposed"] .claim[data-claim="proposed"] .tag,
+.chapter[data-lens="unresolved"] .claim[data-claim="unresolved"] .tag { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .chapter[data-lens] :is(p, li, td, .field-card-text), .chapter[data-lens] .claim { transition: none; }
+}
+
+/* ── THE WHOLE DOCUMENT ON ONE PAGE ───────────────────────── */
+.spine-doc {
+  grid-column: 1; display: inline-block; margin-top: 10px; font-size: 12px; color: var(--ink-3);
+  border-bottom: 1px solid var(--rule-2); justify-self: start; transition: color .12s, border-color .12s;
+}
+.spine-doc:hover { color: var(--green); border-color: var(--green); }
+.spine-doc[aria-current] { color: var(--ink); border-color: var(--brass); }
+.spine-doc:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+
+.doc-intro { margin-bottom: 30px; }
+.chapter .doc-byline { font-size: 14px; color: var(--ink-2); margin-bottom: 8px; }
+.chapter .doc-note { font-size: 14px; color: var(--ink-3); margin-bottom: 8px; }
+.chapter .doc-howto { font-size: 14px; color: var(--ink-2); margin-bottom: 26px; }
+.doc-intro .claims-lens { margin-top: 0; }
+.doc-contents { border-top: 1px solid var(--rule); padding-top: 18px; margin-bottom: 20px; }
+.doc-contents-title { font-size: 11.5px; font-weight: 600; color: var(--green); margin-bottom: 8px; }
+.chapter .doc-contents ol { list-style: none; padding: 0; columns: 2 260px; column-gap: 32px; }
+.chapter .doc-contents li { font-size: 14px; margin: 0; padding: 0; break-inside: avoid; }
+.chapter .doc-contents li.is-sub { padding-left: 34px; }
+.chapter .doc-contents a { display: flex; gap: 12px; padding: 3px 0; border-bottom: none; }
+.chapter .doc-contents a .n { font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-3); min-width: 22px; }
+.chapter .doc-contents a:hover .t { color: var(--green); }
+.doc-chapter { border-top: 1px solid var(--rule); padding-top: 48px; margin-top: 56px; scroll-margin-top: 16px; }
+.doc-chapter > .eyebrow { margin-bottom: 10px; }
+
+.print-only { display: none; }
+
+/* ── PRINT ────────────────────────────────────────────────── */
+/* Printing, or saving as a PDF, gives a plain paper copy: no sidebar,
+   no glows, light colors whatever the theme, chapters on new pages,
+   and web addresses written out after outside links. */
+@media print {
+  @page { size: A4; margin: 18mm 17mm 20mm; }
+  :root, :root[data-theme="dark"] {
+    --paper: #FFFFFF; --paper-2: #F5F5F0; --paper-3: #ECECE4;
+    --ink: #111611; --ink-2: #3D433A; --ink-3: #5E6459;
+    --rule: #CFCBBB; --rule-2: #B5B09B;
+    --brass: #6B4F07; --brass-bg: #F6EDD0; --green: #135733; --green-bg: #E3EFE1;
+    --sea: #17495A; --sea-bg: #E7F0F1;
+    color-scheme: light;
+  }
+  html::before, .spine, .topbar, .spine-backdrop, .theme-toggle, .chapter-nav, .page-toc,
+  .claims-lens, .ref-preview, .heading-anchor, .screen-only, .chapter-loading { display: none !important; }
+  .print-only { display: block; }
+  body { background: #fff; }
+  .shell { display: block; min-height: 0; }
+  .content, .content.has-toc { display: block; padding: 0; }
+  .content-inner, .content-inner.wide { max-width: none; }
+
+  .chapter p, .chapter li { font-size: 10.5pt; line-height: 1.55; max-width: none; orphans: 3; widows: 3; }
+  .chapter table { font-size: 9pt; }
+  .chapter table.wide { min-width: 0; }
+  .table-wrap { overflow: visible; }
+  .chapter pre { white-space: pre-wrap; max-width: none; }
+  .chapter h1 { font-size: 26pt; }
+  .chapter h2 { font-size: 15pt; margin-top: 22pt; }
+  .chapter h3 { font-size: 12pt; }
+  h1, h2, h3, .eyebrow { break-after: avoid; }
+  tr, .field-card, pre, .chapter p.q, .doc-contents li { break-inside: avoid; }
+  .field-card { transform: none; box-shadow: none; }
+  .print-source { font-size: 8.5pt; color: var(--ink-3); margin: -4px 0 14pt; max-width: none; }
+
+  .doc-chapter { break-before: page; border-top: none; padding-top: 0; margin-top: 0; }
+  .doc-contents { break-after: page; }
+
+  /* Links: outside addresses are written out; inside ones read as plain text. */
+  .chapter a, .chapter a.ref { border-bottom: none; color: inherit; }
+  .chapter a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 8pt; color: var(--ink-3); word-break: break-all; }
+  .chapter tr.is-target td { background: none; box-shadow: none; }
+
+  /* The evidence view is a screen tool; paper shows every claim alike. */
+  .chapter[data-lens] :is(p, li, td, .field-card-text) { color: var(--ink) !important; }
+  .chapter[data-lens] .claim { background: none !important; text-decoration: none !important; padding: 0 !important; }
+  .chapter[data-lens] .tag { opacity: 1; }
+}
+.inline-link { border-bottom: 1px solid var(--brass); transition: color .15s, border-color .15s; }
+.inline-link:hover { color: var(--green); border-bottom-color: var(--green); }

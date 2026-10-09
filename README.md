@@ -8,7 +8,7 @@ CAMPUS (Connecting All Members, Places, and University Services) is a proposal f
 
 - **Start here:** [00 Overview](content/00-overview.md)
 - **Part I, the vision:** [01 CAMPUS](content/01-campus.md)
-- **Part II, products and directions:** [02 The Social/Academic Network](content/02-social-network.md), [02.1 Network Use Cases](content/02a-use-cases.md), [02.2 How the Network Would Work](content/02b-network-design.md), [02.3 The Network and VSU's Systems](content/02c-network-fit.md), [02.4 Proposing the Network to VSU](content/02d-network-proposal.md), [03 Hop-It](content/03-hop-it.md), [04 Campus Intranet](content/04-intranet.md), [04.1 The Campus Ring in Emergencies](content/04a-emergencies.md), [04.2 Wireless Access and Existing Systems](content/04b-campus-network.md), [05 Later Directions](content/05-later-directions.md)
+- **Part II, products and directions:** [02 Campus Intranet](content/02-intranet.md), [02.1 The Campus Ring in Emergencies](content/02a-emergencies.md), [02.2 Wireless Access and Existing Systems](content/02b-campus-network.md), [03 The Social/Academic Network](content/03-social-network.md), [03.1 Network Use Cases](content/03a-use-cases.md), [03.2 How the Network Would Work](content/03b-network-design.md), [03.3 The Network and VSU's Systems](content/03c-network-fit.md), [03.4 Proposing the Network to VSU](content/03d-network-proposal.md), [04 Products](content/04-products.md), [04.1 Hop-It](content/04a-hop-it.md), [04.2 Marketplace](content/04b-marketplace.md), [04.3 Housing](content/04c-housing.md), [04.4 Wayfinder](content/04d-wayfinder.md), [04.5 Digital Twin](content/04e-digital-twin.md), [05 Later Directions](content/05-later-directions.md)
 - **Part III, grounding:** [06 VSU Context](content/06-vsu-context.md), [07 Problems and Evidence](content/07-evidence.md), [07.1 The Facebook Landscape Study](content/07a-facebook-study.md), [08 Information, Governance, and Privacy](content/08-governance.md), [09 Related Work](content/09-related-work.md) (first pass), [10 Risks and Stop Conditions](content/10-risks.md)
 - **Part IV, records:** [11 Roadmap and Milestones](content/11-roadmap.md), [12 Decision Register and Open Questions](content/12-decisions.md)
 
@@ -23,11 +23,15 @@ CAMPUS (Connecting All Members, Places, and University Services) is a proposal f
 ```
 project-campus/
 ├── index.html            cover page
-├── <slug>.html           20 identical chapter pages; each renders its Markdown file
+├── <slug>.html           25 chapter pages, identical except for their head metadata; each renders its Markdown file
+├── document.html         every chapter on one page, for reading through or printing
 ├── content/              the master document, one Markdown file per chapter
 ├── data/chapters.json    chapter registry: order, titles, parts, status, source file
 ├── js/main.js            renders nav, contents, and chapters (small Markdown renderer)
 ├── css/style.css         design system
+├── img/                  icon and link-preview card
+├── favicon.ico           the icon, for browsers that ask for it by name
+├── scripts/sync-meta.js  writes each page's title, description, and preview tags
 ├── archive/v0.1/         the v0.1 blueprint and planning file, unchanged
 ├── tests/                jsdom render test
 ├── .github/workflows/    runs the render test on every pull request
@@ -38,6 +42,7 @@ project-campus/
 
 - **Change a chapter:** edit its file in `content/`. GitHub and the site read the same file.
 - **Add a chapter:** see [content/README.md](content/README.md).
+- **Change a title or subtitle:** edit `data/chapters.json`, then run `node scripts/sync-meta.js` so link previews match. The render test fails until you do.
 - **Record a decision:** add a row to `content/12-decisions.md`.
 
 ## Run and test locally
@@ -64,8 +69,15 @@ Push to GitHub and Vercel redeploys (framework preset "Other", no build command)
 ## Design notes
 
 - **Palette and type:** a field-notebook look. Newsreader for headings, IBM Plex Sans for body text, and IBM Plex Mono for numbers, stamps, and status tags. Paper and ink tones, because this is a reference document, not a product pitch.
-- **The spine nav is the table of contents.** It renders from `chapters.json` everywhere, grouped by part, so status never drifts between the cover and the sidebar.
-- **Claim tags are stamps.** Established is solid sea-blue, Proposed is brass, and Unresolved has a dashed border, so a reader can scan a page's evidence at a glance.
+- **VSU green and gold, used sparingly.** Green marks what the cursor is on (links, chapter rows, buttons, the scrollbar), the part labels, and the university's name in the lockup. Gold marks where you are (the current chapter), the stamps, and the pins. Soft light comes in from the page's corners, gold from the top right and green from the bottom left, and the sidebar has a green wash at its top. The theme toggle is a gold sun by day and a green crescent by night. The values are tuned to this paper palette, not taken from an official VSU brand guide.
+- **The spine nav is the table of contents.** It renders from `chapters.json` everywhere, grouped by part, so status never drifts between the cover and the sidebar. Sub-chapters (2.1, 3.4, 4.5) fold under their chapter: a chevron opens them, and a chapter's own pages open it automatically. Available chapters carry no status label; only an outline or an unstarted chapter says so.
+- **Scrollbars** are thin and rounded with no track, in both themes. When you change an asset in `css/` or `js/`, bump the `?v=` key on every page, because browsers cache those files for a day.
+- **On this page.** On wide screens, chapters with four or more sections list them beside the text and mark the one being read.
+- **Evidence view.** Under each chapter's subtitle, a switch highlights the Established, Proposed, or Unresolved claims, with a count of each, and dims everything else. A claim is the text a tag closes, plus any citation in brackets right after it. The choice carries from page to page in the same tab.
+- **Printing.** Printing any page, or saving it as a PDF, gives a plain light copy: no sidebar or glows, chapters on new pages, outside web addresses written out, and a line naming the source and saying the proposal is independent. `document.html` puts every chapter on one page for printing the whole document at once; the cover and the sidebar link to it.
+- **References preview.** Every D-, Q-, C-, and E- number in a chapter links to its row in the register or the evidence log, and shows that row on hover or keyboard focus. The row you land on is highlighted.
+- **Link previews.** Each page carries its own title and description for Messenger, Facebook, and search engines, with one shared card image (`img/og-card.png`). If an old preview sticks after a change, Facebook's Sharing Debugger refreshes it.
+- **Claim tags are stamps.** Established is solid sea-blue, Proposed is gold, and Unresolved has a dashed border, so a reader can scan a page's evidence at a glance.
 - **Field cards,** the dashed and slightly rotated boxes, hold principles and notes like pinned index cards from field research.
 
 Not officially affiliated with Visayas State University.

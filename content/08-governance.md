@@ -44,7 +44,7 @@ Collect only what a feature needs, use it only for that purpose, limit who can a
 - How do reports reach the VSU offices that must act on them, such as the Anti-Sexual Harassment Office?
 - Who may ask for a post's removal on VSU's behalf, and how is that shown to the member?
 
-[Unresolved] [Chapter 2.2](02b-network-design.md) proposes answers, built on D-065 and D-066. [Proposed]
+[Unresolved] [Chapter 3.2](03b-network-design.md) proposes answers, built on D-065 and D-066. [Proposed]
 
 ## Ownership and licensing
 

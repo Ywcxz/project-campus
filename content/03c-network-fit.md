@@ -23,9 +23,9 @@ The network has to fit a university that already runs many systems and plans mor
 | Graduate faculty pages | Graduate faculty by department, with each one's specialization and research interest | Topics faculty could choose to help with (D-071) | VSU website |
 | Phone directory | Offices' telephone numbers | Finding the right office | VSU Students page |
 | Job postings and alumni updates | Job openings, and a site for alumni relations | Opportunities; a path for alumni (Q-45) | VSU Students page |
-| Anti-Sexual Harassment Office | Receives complaints; its members include student government | Reports from the network ([Chapter 2.2](02b-network-design.md)) | VSU FAQ page |
+| Anti-Sexual Harassment Office | Receives complaints; its members include student government | Reports from the network ([Chapter 3.2](03b-network-design.md)) | VSU FAQ page |
 | Accredited organizations | A public list, with 57 entries for 2022–23 | Organization communities | VSU website |
-| The Amaranth | VSU's student media | Hosted, never edited, under the Campus Journalism Act ([Chapter 2.1](02a-use-cases.md)) | VSU Students page |
+| The Amaranth | VSU's student media | Hosted, never edited, under the Campus Journalism Act ([Chapter 3.1](03a-use-cases.md)) | VSU Students page |
 | Plans in the Third SOUA | Regular listening sessions, digitized customer feedback for ISO 9001, an accommodation management system, and DIGITS's OneVSU Mobile and Portal | Student voice, notices, and possibly much more (Q-18) | Third SOUA |
 
 Every row is drawn from VSU's public pages and news. [Established] Who owns each system inside VSU, and how much it is used, cannot be seen from outside. [Unresolved] (Q-10)
@@ -47,7 +47,7 @@ The network depends on seventeen concepts. The table compares each with the clos
 | Knowledge that lasts beyond each batch | Website pages, and The Amaranth's archive | No | A memory for guides and answers that outlast each batch |
 | Organizations with members, events, records, and handover | Recognition by student services, and the public list | Partly | Organization spaces that keep their records when officers change |
 | Events and opportunities in one place, kept afterward | The website calendar, announcements, job postings, and scholarship pages | Partly | One place, with reminders, for what concerns each member, and events that keep their materials |
-| Trade among verified members | Nothing at VSU | No | A marketplace where every seller is a verified member |
+| Trade among verified members | Nothing at VSU | No | A marketplace where every seller is a verified member, as its own product ([Chapter 4.2](04b-marketplace.md)) |
 | Rules for online community spaces, with appeal | The student handbook, whose online provisions are not public | Unknown | Rules for community spaces, written with the community (Q-37) |
 | Safe ways to raise concerns, with answers | Planned listening sessions, and offices that take complaints | Partly | A standing channel where concerns can be raised, under a pseudonym if needed, and answered in public |
 | A home ordered by relevance that ends, with no ads | The website, which has no ads but is the same for everyone | No | A digest of what matters to each member |
@@ -74,7 +74,7 @@ Nothing here moves a system or changes its authority. Each system's owner decide
 | Student services and other offices | Office accounts and official spaces | Staff time to answer and confirm, the largest change | Their services and authority |
 | Anti-Sexual Harassment Office and student discipline | Reports routed to them | Reports arriving from the network | Their processes |
 | Data protection officer | A privacy impact assessment and registration | A new system to assess and register | VSU's privacy program |
-| VSU ICT | Possibly hosting, later | Servers, patches, backups, and monitoring, if VSU hosts it ([Chapter 4](04-intranet.md)) | The campus network |
+| VSU ICT | Possibly hosting, later | Servers, patches, backups, and monitoring, if VSU hosts it ([Chapter 2](02-intranet.md)) | The campus network |
 | DIGITS and OneVSU | Undecided | Depends on VSU's choice among the relationships in [Chapter 6](06-vsu-context.md) | VSU's roadmap |
 
 The largest change is not technical: offices would answer some student questions once, in public, instead of many times in private. [Proposed] That is also the network's largest benefit to them. [Proposed]
@@ -166,7 +166,7 @@ For scale, VSU spent more than ₱4 million on Google and Microsoft subscription
 | Safe Spaces Act | Schools must act on gender-based sexual harassment, online included, when they know or should know of it; heads who fail to act can be fined | [Established] |
 | Anti-OSAEC and Anti-CSAEM Act of 2022 | Platforms that let people communicate are internet intermediaries with duties: terms that prohibit child sexual abuse material, removal within 24 hours of notice, keeping certain data for set periods, and reporting | Whether a VSU-run network counts is for legal review [Unresolved] |
 | Electronic Commerce Act of 2000, Section 30 | A service provider that merely gives access is not liable for others' content if it lacks actual knowledge of its unlawfulness and gains nothing from it | [Established] A prompt notice-and-action process protects the host [Proposed] |
-| Cybercrime Prevention Act of 2012 | Service providers must keep traffic data for set periods ([Chapter 4](04-intranet.md)) | Whether it covers the network is for legal review [Unresolved] |
+| Cybercrime Prevention Act of 2012 | Service providers must keep traffic data for set periods ([Chapter 2](02-intranet.md)) | Whether it covers the network is for legal review [Unresolved] |
 | Campus Journalism Act of 1991 | Student publications keep their editorial independence | [Established] |
 | Malabanan v. Ramento, 1984 | Students keep their freedom of speech on campus, within reasonable limits | [Established] |
 

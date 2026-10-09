@@ -29,7 +29,7 @@ As of October 2026, no office below has reached any stage of the milestone ladde
 
 CHED's policies on student affairs and services, CMO No. 9, s. 2013, group the services into student welfare, student development, and institutional student programs, and VSU's accreditation evidence lists its basic services under those three groups. [Established] The network maps onto most of them. That is the strongest case for OVPSAS to sponsor it: the network would be a way to deliver services OVPSAS already provides, not a new mandate. [Proposed]
 
-| Student affairs service | Where the network would help | Use case in [Chapter 2.1](02a-use-cases.md) |
+| Student affairs service | Where the network would help | Use case in [Chapter 3.1](03a-use-cases.md) |
 | --- | --- | --- |
 | Information and orientation | Official spaces, first-year guides, and confirmed answers that later batches find again | Notices; student guides; answers people can trust |
 | Guidance and counseling | Clear routes to guidance, never crisis support itself | Wellbeing |
@@ -44,7 +44,7 @@ CHED's policies on student affairs and services, CMO No. 9, s. 2013, group the s
 | Scholarships and financial assistance | One list with deadlines and official verification | Scholarships |
 | Food services | Vendor pages, and links to Hop-It | Vendors near campus |
 | Health and wellness | Routes to health services | Wellbeing |
-| Safety and security | Reports tied to a place, and emergency notices ([Chapter 4.1](04a-emergencies.md)) | Report a campus problem |
+| Safety and security | Reports tied to a place, and emergency notices ([Chapter 2.1](02a-emergencies.md)) | Report a campus problem |
 | Student housing | Dormitory communities and boarding house listings | Dorms and boarding houses |
 | Multi-faith services | Communities for religious organizations, 9 of them accredited in 2022–23 | Organizations |
 | International students | Communities and guides of their own, later, if they want them | Not yet in the inventory |
@@ -105,20 +105,20 @@ Every row is a proposal. [Proposed] The comparison group would be run on Faceboo
 
 | Question | Short answer | Detail |
 | --- | --- | --- |
-| Why not just use Facebook? | Students would keep Facebook for life beyond the campus. For campus tasks the network adds verified membership, visible authority, answers that are kept and dated, records that last, and rules VSU's community writes, and the pilot tests whether that matters against a well-run Facebook group. | [Chapter 2](02-social-network.md) |
-| Why not just use Messenger group chats? | Keep them for coordinating. They bury answers within days, so each batch asks again; the network keeps the answers and links into the chats. | [Chapter 2](02-social-network.md) |
-| Isn't this a complaints platform? | No. It is where questions get answered and knowledge is kept. Concerns are one part of it: moderators keep the rules, and offices decide what needs a response. | [Chapter 2.2](02b-network-design.md) |
-| Who will write the guides, and keep them current? | Seniors, officers, and alumni in a guide sprint before launch; offices that confirm them; and a review by each community every semester. | [Chapter 2.2](02b-network-design.md) |
-| Isn't this OneVSU's job? | Possibly in part. CAMPUS asks first what OneVSU will cover and designs to complement it, and VSU decides the relationship. | [Chapter 2.3](02c-network-fit.md) |
-| Who moderates? | Moderators from each community, trained network moderators, and a council with students on it, with VSU's offices handling cases beyond the rules. | [Chapter 2.2](02b-network-design.md) |
-| Will VSU be liable for what students post? | A host has duties under several laws, and a prompt notice-and-action process is how a host meets them; a legal review comes before any real users. | [Chapter 2.3](02c-network-fit.md) |
-| Can students criticize VSU on a VSU network? | Yes. The rules protect speech on student welfare and public matters, and a pseudonym is revealed only for named violations, through a process students share in. | [Chapter 2.2](02b-network-design.md) |
-| What will it cost? | A pilot needs one small server. At scale, servers are modest and people are the main cost, which the pilot measures. | [Chapter 2.3](02c-network-fit.md) |
+| Why not just use Facebook? | Students would keep Facebook for life beyond the campus. For campus tasks the network adds verified membership, visible authority, answers that are kept and dated, records that last, and rules VSU's community writes, and the pilot tests whether that matters against a well-run Facebook group. | [Chapter 3](03-social-network.md) |
+| Why not just use Messenger group chats? | Keep them for coordinating. They bury answers within days, so each batch asks again; the network keeps the answers and links into the chats. | [Chapter 3](03-social-network.md) |
+| Isn't this a complaints platform? | No. It is where questions get answered and knowledge is kept. Concerns are one part of it: moderators keep the rules, and offices decide what needs a response. | [Chapter 3.2](03b-network-design.md) |
+| Who will write the guides, and keep them current? | Seniors, officers, and alumni in a guide sprint before launch; offices that confirm them; and a review by each community every semester. | [Chapter 3.2](03b-network-design.md) |
+| Isn't this OneVSU's job? | Possibly in part. CAMPUS asks first what OneVSU will cover and designs to complement it, and VSU decides the relationship. | [Chapter 3.3](03c-network-fit.md) |
+| Who moderates? | Moderators from each community, trained network moderators, and a council with students on it, with VSU's offices handling cases beyond the rules. | [Chapter 3.2](03b-network-design.md) |
+| Will VSU be liable for what students post? | A host has duties under several laws, and a prompt notice-and-action process is how a host meets them; a legal review comes before any real users. | [Chapter 3.3](03c-network-fit.md) |
+| Can students criticize VSU on a VSU network? | Yes. The rules protect speech on student welfare and public matters, and a pseudonym is revealed only for named violations, through a process students share in. | [Chapter 3.2](03b-network-design.md) |
+| What will it cost? | A pilot needs one small server. At scale, servers are modest and people are the main cost, which the pilot measures. | [Chapter 3.3](03c-network-fit.md) |
 | What if students don't use it? | Then the pilot says so, against thresholds fixed in advance, and it stops. | This chapter |
-| What happens if the author leaves? | The network is built from open components and documented, and every pilot ends with VSU owning it or with a clean close. | [Chapter 2.3](02c-network-fit.md) |
-| Does it replace VSUEE, the portal, or the helpdesk? | No. It links into them. | [Chapter 2.3](02c-network-fit.md) |
-| What data does it collect? | Only what each feature needs, with education details shown only by choice, under VSU's privacy program; knowledge is kept, and conversation fades on a published schedule. | [Chapter 2.2](02b-network-design.md) |
-| Can parents and applicants use it? | Later, through a public section answered by verified members. The pilot is for current college members. | [Chapter 2.2](02b-network-design.md) |
+| What happens if the author leaves? | The network is built from open components and documented, and every pilot ends with VSU owning it or with a clean close. | [Chapter 3.3](03c-network-fit.md) |
+| Does it replace VSUEE, the portal, or the helpdesk? | No. It links into them. | [Chapter 3.3](03c-network-fit.md) |
+| What data does it collect? | Only what each feature needs, with education details shown only by choice, under VSU's privacy program; knowledge is kept, and conversation fades on a published schedule. | [Chapter 3.2](03b-network-design.md) |
+| Can parents and applicants use it? | Later, through a public section answered by verified members. The pilot is for current college members. | [Chapter 3.2](03b-network-design.md) |
 | Why trust one alumnus with this? | Not on trust: judge the working software, the field evidence, and the recorded decisions. | Project rule 7 |
 | What do you need from us now? | Permission to run the survey. Everything else waits for evidence. | This chapter |
 

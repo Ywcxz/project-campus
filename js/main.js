@@ -39,16 +39,46 @@ function isLinked(ch) {
   return Boolean(ch.slug) && (ch.status === "available" || ch.status === "outline");
 }
 
-function dotClass(ch) {
-  if (ch.status === "available") return "written";
-  if (ch.status === "outline") return "outline";
-  return "not-started";
-}
-
+// Available chapters carry no label: being listed means they can be read.
+// Only the exceptions say so.
 function statusLabel(ch) {
-  if (ch.status === "available") return "Available";
+  if (ch.status === "available") return "";
   if (ch.status === "outline") return "Outline";
   return "Not started";
+}
+
+// Sub-chapters (2.1, 4.2) belong to the whole-numbered chapter before them.
+function isSubChapter(ch) {
+  return !Number.isInteger(Number(ch.number));
+}
+
+function chapterTree(chapters) {
+  const tree = [];
+  chapters.forEach((ch) => {
+    const parent = isSubChapter(ch)
+      ? [...tree].reverse().find((node) => Number(node.ch.number) === Math.floor(Number(ch.number)))
+      : null;
+    if (parent) parent.children.push(ch);
+    else tree.push({ ch, children: [] });
+  });
+  return tree;
+}
+
+const CHEVRON = `<svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true" focusable="false"><path d="M4.5 2.5 8 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+// On the one-page document the sidebar links to each chapter's section.
+const ONE_PAGE = () => document.getElementById("chapter")?.dataset.mode === "all";
+const chapterHref = (ch) => (ONE_PAGE() ? `#ch-${ch.slug}` : `${ch.slug}.html`);
+
+function spineEntry(ch, here) {
+  const isActive = ch.slug === here;
+  const label = statusLabel(ch);
+  const inner = `<span class="spine-num">${pad2(ch.number)}</span><span class="spine-title">${escapeHtml(ch.title)}</span>${
+    label ? `<span class="spine-status">${label}</span>` : ""
+  }`;
+  return isLinked(ch)
+    ? `<a href="${chapterHref(ch)}"${isActive ? ' aria-current="page"' : ""}>${inner}</a>`
+    : `<span class="disabled">${inner}</span>`;
 }
 
 function renderSpine(chapters) {
@@ -56,27 +86,57 @@ function renderSpine(chapters) {
   if (!list) return;
   const here = currentSlug();
   let part = null;
-  list.innerHTML = chapters
-    .map((ch) => {
+  list.innerHTML = chapterTree(chapters)
+    .map(({ ch, children }) => {
       let head = "";
       if (ch.part && ch.part !== part) {
         part = ch.part;
         head = `<li class="spine-part">${escapeHtml(part)}</li>`;
       }
       const isActive = ch.slug === here;
-      const inner = `
-        <span class="spine-num">${pad2(ch.number)}</span>
-        <span class="spine-title">${escapeHtml(ch.title)}</span>
-        <span class="spine-dot ${dotClass(ch)}"></span>
-      `;
-      if (isLinked(ch)) {
-        return `${head}<li class="spine-item${isActive ? " active" : ""}">
-          <a href="${ch.slug}.html"${isActive ? ' aria-current="page"' : ""}>${inner}</a>
-        </li>`;
+      if (!children.length) {
+        return `${head}<li class="spine-item${isActive ? " active" : ""}">${spineEntry(ch, here)}</li>`;
       }
-      return `${head}<li class="spine-item"><span class="disabled">${inner}</span></li>`;
+
+      // A chapter with sub-chapters opens only on its own pages; elsewhere
+      // the reader opens it with the chevron.
+      const childActive = children.some((c) => c.slug === here);
+      const open = isActive || childActive;
+      const subId = `spine-sub-${String(ch.number).replace(/\W/g, "-")}`;
+      const subs = children
+        .map((c) => `<li class="spine-item spine-subitem${c.slug === here ? " active" : ""}">${spineEntry(c, here)}</li>`)
+        .join("");
+      return `${head}<li class="spine-item spine-group${isActive ? " active" : ""}${childActive ? " has-active" : ""}${open ? " open" : ""}">
+        <div class="spine-row">
+          ${spineEntry(ch, here)}
+          <button class="spine-toggle" type="button" aria-expanded="${open}" aria-controls="${subId}"
+            aria-label="Sub-chapters of ${escapeHtml(ch.title)}">${CHEVRON}</button>
+        </div>
+        <div class="spine-sub" id="${subId}"><ol class="spine-sublist">${subs}</ol></div>
+      </li>`;
     })
     .join("");
+
+  list.addEventListener("click", (event) => {
+    const toggle = event.target.closest(".spine-toggle");
+    if (!toggle) return;
+    const group = toggle.closest(".spine-group");
+    const open = !group.classList.contains("open");
+    group.classList.toggle("open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+  });
+
+  revealCurrent(list);
+}
+
+// If the current chapter sits below the fold of a long spine, scroll the
+// spine (never the page) so it shows about a third of the way down.
+function revealCurrent(list) {
+  const current = list.querySelector('[aria-current="page"]');
+  if (!current || list.scrollHeight <= list.clientHeight) return;
+  const top = current.getBoundingClientRect().top - list.getBoundingClientRect().top + list.scrollTop;
+  const visible = top >= list.scrollTop && top + current.offsetHeight <= list.scrollTop + list.clientHeight;
+  if (!visible) list.scrollTop = Math.max(0, top - list.clientHeight / 3);
 }
 
 function renderToc(chapters) {
@@ -93,10 +153,10 @@ function renderToc(chapters) {
       const linked = isLinked(ch);
       const title = linked ? `<a href="${ch.slug}.html">${escapeHtml(ch.title)}</a>` : escapeHtml(ch.title);
       const sub = ch.subtitle ? `<span class="toc-sub">${escapeHtml(ch.subtitle)}</span>` : "";
-      return `${head}<div class="toc-row${linked ? " is-written" : ""}${ch.status === "outline" ? " is-outline" : ""}">
+      const label = statusLabel(ch);
+      return `${head}<div class="toc-row${linked ? " is-written" : ""}${ch.status === "outline" ? " is-outline" : ""}${isSubChapter(ch) ? " is-sub" : ""}">
         <span class="n">${pad2(ch.number)}</span>
-        <span class="t">${title}${sub}</span>
-        <span class="s">${statusLabel(ch)}</span>
+        <span class="t">${title}${sub}</span>${label ? `\n        <span class="s">${label}</span>` : ""}
       </div>`;
     })
     .join("");
@@ -137,7 +197,12 @@ const TAG_PATTERN = new RegExp(`\\[(${CLAIM_TAGS.join("|")})\\](?!\\()`, "g");
 function safeHref(raw, linkMap) {
   const href = raw.replace(/&amp;/g, "&").trim();
   const chapterLink = href.match(/^(?:\.\/)?([\w.-]+\.md)(#[\w-]*)?$/);
-  if (chapterLink && linkMap[chapterLink[1]]) return linkMap[chapterLink[1]] + (chapterLink[2] || "");
+  if (chapterLink && linkMap[chapterLink[1]]) {
+    const target = linkMap[chapterLink[1]];
+    const frag = chapterLink[2] || "";
+    // One-page document: "#ch-slug" plus "#section" becomes "#slug--section".
+    return target.startsWith("#ch-") && frag ? `#${target.slice(4)}--${frag.slice(1)}` : target + frag;
+  }
   if (/^(https?:\/\/|mailto:|#|\.{1,2}\/)/i.test(href) || /^[\w.-]+\.(html|md|txt)(#[\w-]*)?$/i.test(href)) {
     return escapeHtml(href);
   }
@@ -223,7 +288,10 @@ function renderMarkdown(source, linkMap = {}) {
       while (i < lines.length && lines[i].includes("|") && !/^\s*$/.test(lines[i])) rows.push(splitRow(lines[i++]));
       const th = head.map((cell) => `<th>${renderInline(cell, linkMap)}</th>`).join("");
       const body = rows
-        .map((row) => `<tr>${head.map((_, k) => `<td>${renderInline(row[k] || "", linkMap)}</td>`).join("")}</tr>`)
+        .map((row) => {
+          const id = REF_ROW.test(row[0] || "") ? ` id="${row[0].toLowerCase()}"` : "";
+          return `<tr${id}>${head.map((_, k) => `<td>${renderInline(row[k] || "", linkMap)}</td>`).join("")}</tr>`;
+        })
         .join("");
       const wide = head.length >= 4 ? ' class="wide"' : "";
       out.push(`<div class="table-wrap"><table${wide}><thead><tr>${th}</tr></thead><tbody>${body}</tbody></table></div>`);
@@ -271,9 +339,365 @@ function renderMarkdown(source, linkMap = {}) {
   return out.join("\n");
 }
 
+/* ── References: D-061, Q-36, C-01, E-010 ─────────────────────
+   Every decision, open question, correction, and evidence item has a
+   row in the register (Chapter 12) or the evidence log (Chapter 7).
+   Mentions anywhere in a chapter link to that row, and show the row
+   in a small preview on hover or keyboard focus.
+   ──────────────────────────────────────────────────────────── */
+
+const REF_ROW = /^[DQCE]-\d{2,3}$/;
+const REF_MENTION = /\b[DQCE]-\d{2,3}\b/g;
+const REF_KIND = { D: "Decision", Q: "Open question", C: "Correction", E: "Evidence" };
+const HAS_TAG = new RegExp(TAG_PATTERN.source); // non-global copy: safe for .test()
+
+function parseRefRows(source, page) {
+  const rows = {};
+  let section = "";
+  String(source).split("\n").forEach((line) => {
+    const heading = line.match(/^##\s+(.+)/);
+    if (heading) section = heading[1];
+    if (!/^\|/.test(line)) return;
+    const cells = splitRow(line);
+    if (!REF_ROW.test(cells[0])) return;
+    const id = cells[0];
+    const letter = id[0];
+    let status = cells.slice(2).find((c) => HAS_TAG.test(c)) || "";
+    if (letter === "Q") status = `Priority ${cells[2] || "not set"}`;
+    if (letter === "C") status = cells[2] ? `Fixed ${cells[2]}` : "";
+    if (letter === "E") status = cells[2] || "";
+    const kind = letter === "D" && /v0\.1/.test(section) ? "Decision carried from v0.1" : REF_KIND[letter];
+    rows[id] = { id, page, kind, text: cells[1] || "", status };
+  });
+  return rows;
+}
+
+async function loadRefIndex(chapters) {
+  const sources = chapters.filter((c) => c.slug === "decisions" || c.slug === "evidence");
+  const parts = await Promise.all(
+    sources.map(async (c) => {
+      try {
+        const res = await fetch(c.source);
+        return res.ok ? parseRefRows(await res.text(), `${c.slug}.html`) : {};
+      } catch (err) {
+        return {};
+      }
+    })
+  );
+  return Object.assign({}, ...parts);
+}
+
+function linkifyRefs(root, index, here) {
+  if (!root || !Object.keys(index).length) return;
+  const skip = "a, code, pre, h1, h2, h3, h4, .eyebrow, .lockup";
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+    acceptNode(node) {
+      REF_MENTION.lastIndex = 0;
+      if (!REF_MENTION.test(node.nodeValue)) return NodeFilter.FILTER_SKIP;
+      const parent = node.parentElement;
+      if (!parent || parent.closest(skip)) return NodeFilter.FILTER_REJECT;
+      // A row's own ID cell doesn't link to itself.
+      const cell = parent.closest("td");
+      if (cell && !cell.previousElementSibling && REF_ROW.test(cell.textContent.trim())) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  });
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  nodes.forEach((node) => {
+    const text = node.nodeValue;
+    const frag = document.createDocumentFragment();
+    let last = 0;
+    text.replace(REF_MENTION, (id, at) => {
+      const ref = index[id];
+      if (!ref) return id;
+      frag.append(text.slice(last, at));
+      const a = document.createElement("a");
+      a.className = "ref";
+      a.href = `${here === "*" || ref.page === `${here}.html` ? "" : ref.page}#${id.toLowerCase()}`;
+      a.dataset.ref = id;
+      a.textContent = id;
+      frag.append(a);
+      last = at + id.length;
+      return id;
+    });
+    if (!last) return;
+    frag.append(text.slice(last));
+    node.replaceWith(frag);
+  });
+}
+
+function refPreviewHTML(ref, linkMap) {
+  const plain = ref.text.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
+  const short = plain.length > 300 ? `${plain.slice(0, 300).replace(/\s+\S*$/, "")}…` : plain;
+  const status = HAS_TAG.test(ref.status) ? renderInline(ref.status, linkMap) : escapeHtml(ref.status);
+  return `<div class="ref-preview-head"><span class="ref-preview-id">${escapeHtml(ref.id)}</span><span class="ref-preview-kind">${escapeHtml(ref.kind)}</span>${
+    ref.status ? `<span class="ref-preview-status">${status}</span>` : ""
+  }</div><p class="ref-preview-text">${renderInline(short, linkMap)}</p>`;
+}
+
+function initRefPreviews(root, index, linkMap) {
+  if (!root || !Object.keys(index).length) return;
+  const card = document.createElement("div");
+  card.className = "ref-preview";
+  card.id = "refPreview";
+  card.setAttribute("role", "tooltip");
+  card.hidden = true;
+  document.body.append(card);
+  let current = null;
+  let timer = null;
+
+  const place = (a) => {
+    const r = a.getBoundingClientRect();
+    const w = Math.min(340, window.innerWidth - 24);
+    card.style.width = `${w}px`;
+    const left = Math.max(12, Math.min(r.left, window.innerWidth - w - 12));
+    card.style.left = `${left}px`;
+    const below = r.bottom + 8;
+    const h = card.offsetHeight;
+    card.style.top = `${below + h > window.innerHeight - 8 && r.top - h - 8 > 8 ? r.top - h - 8 : below}px`;
+  };
+  const show = (a) => {
+    const ref = index[a.dataset.ref];
+    if (!ref) return;
+    current = a;
+    card.innerHTML = refPreviewHTML(ref, linkMap);
+    card.hidden = false;
+    place(a);
+    a.setAttribute("aria-describedby", "refPreview");
+  };
+  const hide = () => {
+    clearTimeout(timer);
+    if (current) current.removeAttribute("aria-describedby");
+    current = null;
+    card.hidden = true;
+  };
+
+  root.addEventListener("mouseover", (e) => {
+    const a = e.target.closest("a.ref");
+    if (!a || a === current) return;
+    clearTimeout(timer);
+    timer = setTimeout(() => show(a), 120);
+  });
+  root.addEventListener("mouseout", (e) => {
+    const a = e.target.closest("a.ref");
+    if (a && !a.contains(e.relatedTarget)) hide();
+  });
+  root.addEventListener("focusin", (e) => {
+    const a = e.target.closest("a.ref");
+    if (a) show(a);
+  });
+  root.addEventListener("focusout", hide);
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") hide(); });
+  window.addEventListener("scroll", hide, { passive: true });
+}
+
+/* ── Evidence view ────────────────────────────────────────────
+   Each claim tag closes the claim before it: the text since the
+   previous tag in the same paragraph, list item, or cell, plus a
+   citation in brackets right after the tag, as in "… [Proposed]
+   (D-065)". The evidence view highlights one kind and dims the rest.
+   ──────────────────────────────────────────────────────────── */
+
+const LENS_KINDS = ["established", "proposed", "unresolved"];
+
+function tagKind(tag) {
+  const cls = [...tag.classList].find((c) => c.startsWith("tag-"));
+  return cls ? cls.slice(4) : "other";
+}
+
+function groupClaims(root) {
+  root.querySelectorAll("p, li, td").forEach((block) => {
+    if (!block.querySelector(".tag") || block.closest(".claims-lens")) return;
+    const nodes = [...block.childNodes];
+    let group = [];
+    const wrap = (kind) => {
+      const span = document.createElement("span");
+      span.className = "claim";
+      span.dataset.claim = kind;
+      group[0].before(span);
+      group.forEach((n) => span.append(n));
+      group = [];
+    };
+    for (let i = 0; i < nodes.length; i++) {
+      const node = nodes[i];
+      group.push(node);
+      const tag = node.nodeType === 1 && (node.matches(".tag") ? node : node.querySelector(".tag"));
+      if (!tag) continue;
+      // A citation in brackets right after the tag belongs to the claim.
+      let j = i + 1;
+      if (nodes[j] && nodes[j].nodeType === 3 && /^\s*\(/.test(nodes[j].nodeValue)) {
+        let depth = 0;
+        for (; j < nodes.length; j++) {
+          const n = nodes[j];
+          if (n.nodeType === 3) {
+            let cut = -1;
+            for (let k = 0; k < n.nodeValue.length; k++) {
+              if (n.nodeValue[k] === "(") depth++;
+              if (n.nodeValue[k] === ")" && --depth === 0) { cut = k + 1; break; }
+            }
+            if (cut > -1) {
+              if (cut < n.nodeValue.length) nodes.splice(j + 1, 0, n.splitText(cut));
+              group.push(n);
+              j++;
+              break;
+            }
+          }
+          group.push(n);
+        }
+        i = j - 1;
+      }
+      wrap(tagKind(tag));
+    }
+  });
+}
+
+function readLens() {
+  try { return sessionStorage.getItem("campus-lens") || ""; } catch (err) { return ""; }
+}
+function storeLens(value) {
+  try { sessionStorage.setItem("campus-lens", value); } catch (err) { /* private mode: the view just won't carry over */ }
+}
+
+function initLens(root, after) {
+  if (!root || !after) return;
+  const counts = {};
+  root.querySelectorAll(".claim").forEach((c) => { counts[c.dataset.claim] = (counts[c.dataset.claim] || 0) + 1; });
+  const total = LENS_KINDS.reduce((n, k) => n + (counts[k] || 0), 0);
+  if (total < 3) return;
+  const label = { established: "Established", proposed: "Proposed", unresolved: "Unresolved" };
+  const bar = document.createElement("div");
+  bar.className = "claims-lens";
+  bar.setAttribute("role", "group");
+  bar.setAttribute("aria-label", "Evidence view: highlight claims by their tag");
+  bar.innerHTML = `<span class="claims-lens-label">Evidence view</span>
+    <button type="button" data-lens="" aria-pressed="true">All</button>${LENS_KINDS.filter((k) => counts[k])
+      .map((k) => `<button type="button" data-lens="${k}" aria-pressed="false">${label[k]} <span class="n">${counts[k]}</span></button>`)
+      .join("")}`;
+  after.after(bar);
+  const apply = (value) => {
+    if (value && !counts[value]) value = "";
+    if (value) root.dataset.lens = value;
+    else delete root.dataset.lens;
+    bar.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lens === value)));
+  };
+  bar.addEventListener("click", (e) => {
+    const b = e.target.closest("button");
+    if (!b) return;
+    apply(b.dataset.lens);
+    storeLens(b.dataset.lens);
+  });
+  apply(readLens());
+}
+
+/* ── On this page ─────────────────────────────────────────────
+   Chapters with four or more sections get a list of them beside
+   the text on wide screens, marking the section being read.
+   ──────────────────────────────────────────────────────────── */
+
+function initPageToc() {
+  const article = document.getElementById("chapter");
+  const content = document.querySelector(".content");
+  if (!article || !content || article.dataset.mode === "all") return;
+  const heads = [...article.querySelectorAll("h2[id]")];
+  if (heads.length < 4) return;
+  const title = (h) => [...h.childNodes].filter((n) => !(n.nodeType === 1 && n.matches(".heading-anchor"))).map((n) => n.textContent).join("").trim();
+  const aside = document.createElement("aside");
+  aside.className = "page-toc";
+  aside.setAttribute("aria-label", "On this page");
+  aside.innerHTML = `<p class="page-toc-title">On this page</p><ol>${heads
+    .map((h) => `<li><a href="#${h.id}">${escapeHtml(title(h))}</a></li>`)
+    .join("")}</ol>`;
+  content.append(aside);
+  content.classList.add("has-toc");
+  const links = [...aside.querySelectorAll("a")];
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    let current = -1;
+    heads.forEach((h, i) => { if (h.getBoundingClientRect().top <= 120) current = i; });
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) current = heads.length - 1;
+    links.forEach((a, i) => (i === current ? a.setAttribute("aria-current", "location") : a.removeAttribute("aria-current")));
+  };
+  window.addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  update();
+}
+
+/* ── Printing ─────────────────────────────────────────────────── */
+
+const SITE = "project-campus-gilt.vercel.app";
+const printSource = (path) =>
+  `<p class="print-only print-source">From the Project CAMPUS master document, version 0.2: ${SITE}/${path}. An independent proposal, not officially affiliated with Visayas State University.</p>`;
+
+/* ── The whole document on one page ───────────────────────────── */
+
+async function renderAll(el, chapters) {
+  const linkMap = {};
+  chapters.forEach((c) => { if (c.source && c.slug) linkMap[c.source.split("/").pop()] = `#ch-${c.slug}`; });
+  const refs = loadRefIndex(chapters);
+  const texts = await Promise.all(
+    chapters.map(async (c) => {
+      try {
+        const res = await fetch(c.source);
+        return res.ok ? await res.text() : null;
+      } catch (err) {
+        return null;
+      }
+    })
+  );
+
+  const contents = chapters
+    .map((c) => `<li class="${isSubChapter(c) ? "is-sub" : ""}"><a href="#ch-${c.slug}"><span class="n">${pad2(c.number)}</span><span class="t">${escapeHtml(c.title)}</span></a></li>`)
+    .join("");
+  const intro = `<header class="doc-intro">
+      <div class="lockup"><span>Project CAMPUS</span><span class="x">×</span><span class="vsu">Visayas State University</span></div>
+      <div class="eyebrow">The whole document</div>
+      <h1>Project CAMPUS</h1>
+      <p class="subtitle">A different approach to digital transformation for Visayas State University</p>
+      <p class="doc-byline">Master document, version 0.2. Prepared by Leo M. Subingsubing, Visayas State University Main Campus alumnus, Pangasugan, Baybay City, Leyte.</p>
+      <p class="doc-note">Not officially affiliated with Visayas State University. No VSU office has reviewed, endorsed, or adopted this proposal.</p>
+      <p class="doc-howto screen-only">Every chapter on one page, to read straight through or to print. To save it as a PDF, use your browser's Print command and choose "Save as PDF".</p>
+      <p class="print-only print-source">${SITE}/document.html</p>
+    </header>
+    <nav class="doc-contents" aria-label="Contents"><p class="doc-contents-title">Contents</p><ol>${contents}</ol></nav>`;
+
+  const sections = chapters
+    .map((c, i) => {
+      const eyebrow = `<div class="eyebrow">${c.number === 0 ? "Start here" : `Chapter ${pad2(c.number)}`}${c.status === "outline" ? " · Outline" : ""}</div>`;
+      const body =
+        texts[i] == null
+          ? `<h1>${escapeHtml(c.title)}</h1><p class="chapter-error">This chapter couldn't be loaded. It lives in <code>${escapeHtml(c.source || "")}</code> in the repository.</p>`
+          : renderMarkdown(texts[i], linkMap);
+      return `<section class="doc-chapter" id="ch-${c.slug}">${eyebrow}${body}</section>`;
+    })
+    .join("");
+  el.innerHTML = intro + sections;
+
+  // Section anchors carry their chapter's slug, so they stay unique on one page.
+  el.querySelectorAll(".doc-chapter").forEach((section) => {
+    const slug = section.id.slice(3);
+    const used = new Set();
+    section.querySelectorAll("h2").forEach((h) => {
+      const base = `${slug}--${headingSlug(h.textContent)}`;
+      let id = base;
+      for (let n = 2; used.has(id); n++) id = `${base}-${n}`;
+      used.add(id);
+      h.id = id;
+    });
+  });
+
+  const index = await refs;
+  linkifyRefs(el, index, "*");
+  initRefPreviews(el, index, linkMap);
+  groupClaims(el);
+  initLens(el, el.querySelector(".doc-howto"));
+  el.setAttribute("aria-busy", "false");
+}
+
 async function renderChapter(chapters) {
   const el = document.getElementById("chapter");
   if (!el) return;
+  if (el.dataset.mode === "all") return renderAll(el, chapters);
   const ch = chapters.find((c) => c.slug === currentSlug());
   if (!ch) {
     el.innerHTML = `<p class="chapter-error">This page isn't listed in data/chapters.json.</p>`;
@@ -292,12 +716,19 @@ async function renderChapter(chapters) {
 
   const header = `
     <div class="lockup"><span>Project CAMPUS</span><span class="x">×</span><span class="vsu">${escapeHtml(ch.role || ch.part || "")}</span></div>
-    <div class="eyebrow">${ch.number === 0 ? "Start here" : `Chapter ${pad2(ch.number)}`}${ch.status === "outline" ? " · Outline" : ""}</div>`;
+    <div class="eyebrow">${ch.number === 0 ? "Start here" : `Chapter ${pad2(ch.number)}`}${ch.status === "outline" ? " · Outline" : ""}</div>
+    ${printSource(`${ch.slug}.html`)}`;
 
+  const refs = loadRefIndex(chapters);
   try {
     const res = await fetch(ch.source);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     el.innerHTML = header + renderMarkdown(await res.text(), linkMap);
+    const index = await refs;
+    linkifyRefs(el, index, ch.slug);
+    initRefPreviews(el, index, linkMap);
+    groupClaims(el);
+    initLens(el, el.querySelector(".subtitle"));
   } catch (err) {
     console.warn("renderChapter() failed:", err.message);
     el.innerHTML = `${header}<h1>${escapeHtml(ch.title)}</h1>
@@ -341,9 +772,12 @@ function initSectionAnchors() {
 }
 
 function scrollToHash() {
+  document.querySelectorAll(".is-target").forEach((el) => el.classList.remove("is-target"));
   if (!window.location.hash) return;
   const target = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
-  if (target) target.scrollIntoView();
+  if (!target) return;
+  if (target.tagName === "TR") target.classList.add("is-target");
+  target.scrollIntoView();
 }
 
 function readStoredTheme() {
@@ -366,11 +800,23 @@ function initTheme() {
     : savedTheme || (prefersDark ? "dark" : "light");
   root.dataset.theme = initialTheme;
 
+  let toggleCount = 0;
   const createToggle = (parent) => {
     if (!parent || parent.querySelector(".theme-toggle")) return;
+    const id = `tt-mask-${++toggleCount}`;
     const toggle = document.createElement("button");
     toggle.className = "theme-toggle";
     toggle.type = "button";
+    // Sun: a disc and eight rays. Moon: the disc grows and a second disc,
+    // cut out through the mask, slides across it to leave a crescent.
+    const rays = [0, 45, 90, 135, 180, 225, 270, 315]
+      .map((deg) => `<line x1="12" y1="2.6" x2="12" y2="4.6" transform="rotate(${deg} 12 12)"/>`)
+      .join("");
+    toggle.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <mask id="${id}"><rect x="-6" y="-6" width="36" height="36" fill="#fff"/><circle class="tt-bite" cx="16.5" cy="8" r="5.6" fill="#000"/></mask>
+      <circle class="tt-disc" cx="12" cy="12" r="4.6" fill="currentColor" mask="url(#${id})"/>
+      <g class="tt-rays" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">${rays}</g>
+    </svg>`;
     toggle.addEventListener("click", () => {
       const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
       root.dataset.theme = nextTheme;
@@ -383,17 +829,26 @@ function initTheme() {
   const updateToggleLabels = () => {
     const darkMode = root.dataset.theme === "dark";
     document.querySelectorAll(".theme-toggle").forEach((toggle) => {
-      toggle.textContent = "";
-      toggle.dataset.icon = darkMode ? "☀" : "☾";
       toggle.setAttribute("aria-pressed", String(darkMode));
-      toggle.setAttribute("aria-label", darkMode ? "Switch to Light Mode" : "Switch to Dark Mode");
-      toggle.title = darkMode ? "Switch to Light Mode" : "Switch to Dark Mode";
+      toggle.setAttribute("aria-label", "Dark mode");
+      toggle.title = darkMode ? "Switch to light mode" : "Switch to dark mode";
     });
   };
 
   createToggle(document.querySelector(".spine-head"));
   createToggle(document.querySelector(".topbar"));
   updateToggleLabels();
+}
+
+function initDocumentLink() {
+  const head = document.querySelector(".spine-head");
+  if (!head || head.querySelector(".spine-doc")) return;
+  const a = document.createElement("a");
+  a.className = "spine-doc";
+  a.href = "document.html";
+  a.textContent = "The whole document on one page";
+  if (ONE_PAGE()) a.setAttribute("aria-current", "page");
+  head.append(a);
 }
 
 function initMobileSpine() {
@@ -414,10 +869,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   initTheme();
   const chapters = await fetchChapters();
   renderSpine(chapters);
+  initDocumentLink();
   renderToc(chapters);
   renderChapterNav(chapters);
   initMobileSpine();
   await renderChapter(chapters);
   initSectionAnchors();
+  initPageToc();
   scrollToHash();
+  window.addEventListener("hashchange", scrollToHash);
 });
