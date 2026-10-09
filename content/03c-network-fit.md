@@ -13,11 +13,11 @@ The network has to fit a university that already runs many systems and plans mor
 | University Google and Microsoft accounts | An @vsu.edu.ph Google account and a Microsoft 365 account for every student, faculty member, and employee; more than 16,000 licenses ready in 2023, renewed each year | Sign-in (Q-06) | VSU news, 2022 and 2023 |
 | VSUEE | VSU's Moodle learning system, university-wide since 2020, with a branded mobile app since July 2022 that downloads course materials and sends push notifications; 17,191 students were enrolled as users by May 2022 | Course discussion and course messages, which stay in VSUEE | VSU news, 2022 |
 | my.VSU | Grades, subjects, and schedules | Role details, only with VSU's permission (Q-39) | VSU Students page |
-| Helpdesk and document tracker | Tickets with status on osTicket, and document requests with tracking | Reaching the right office; reporting a problem | VSU service pages ([Chapter 9](09-related-work.md)) |
+| Helpdesk and document tracker | Tickets with status on osTicket, and document requests with tracking | Reaching the right office; reporting a problem | VSU service pages ([Chapter 10](10-related-work.md)) |
 | Website news, announcements, and calendar | Official news and notices, with public RSS feeds | Official notices | VSU website |
 | Official Facebook page | University news and notices for the public | Official notices; VSU's public face, which stays | VSU website |
 | WAIS | Localized weather advisories for VSU account holders, generated automatically as JSON, with a mobile app and push notifications planned | Advisories in official spaces (Q-40) | VSU news, July 2026 |
-| Output Messenger | Office chat, for employees only | Staff keep it; students have no equivalent | VSU helpdesk ([Chapter 9](09-related-work.md)) |
+| Output Messenger | Office chat, for employees only | Staff keep it; students have no equivalent | VSU helpdesk ([Chapter 10](10-related-work.md)) |
 | Student services | Guidance and counseling, career and job placement, organization recognition, admission, scholarships, student housing, campus ministry, and community engagement | The services the network would help students reach | VSU Student Services page |
 | Department-Based Guidance Facilitators | Trained in peer support and responsible care | Peer helpers for routes to guidance, designed with the guidance office | Third SOUA |
 | Graduate faculty pages | Graduate faculty by department, with each one's specialization and research interest | Topics faculty could choose to help with (D-071) | VSU website |
@@ -47,7 +47,7 @@ The network depends on seventeen concepts. The table compares each with the clos
 | Knowledge that lasts beyond each batch | Website pages, and The Amaranth's archive | No | A memory for guides and answers that outlast each batch |
 | Organizations with members, events, records, and handover | Recognition by student services, and the public list | Partly | Organization spaces that keep their records when officers change |
 | Events and opportunities in one place, kept afterward | The website calendar, announcements, job postings, and scholarship pages | Partly | One place, with reminders, for what concerns each member, and events that keep their materials |
-| Trade among verified members | Nothing at VSU | No | A marketplace where every seller is a verified member, as its own product ([Chapter 4.2](04b-marketplace.md)) |
+| Trade among verified members | Nothing at VSU | No | A marketplace where every seller is a verified member, as its own product ([Chapter 5.2](05b-marketplace.md)) |
 | Rules for online community spaces, with appeal | The student handbook, whose online provisions are not public | Unknown | Rules for community spaces, written with the community (Q-37) |
 | Safe ways to raise concerns, with answers | Planned listening sessions, and offices that take complaints | Partly | A standing channel where concerns can be raised, under a pseudonym if needed, and answered in public |
 | A home ordered by relevance that ends, with no ads | The website, which has no ads but is the same for everyone | No | A digest of what matters to each member |
@@ -75,7 +75,7 @@ Nothing here moves a system or changes its authority. Each system's owner decide
 | Anti-Sexual Harassment Office and student discipline | Reports routed to them | Reports arriving from the network | Their processes |
 | Data protection officer | A privacy impact assessment and registration | A new system to assess and register | VSU's privacy program |
 | VSU ICT | Possibly hosting, later | Servers, patches, backups, and monitoring, if VSU hosts it ([Chapter 2](02-intranet.md)) | The campus network |
-| DIGITS and OneVSU | Undecided | Depends on VSU's choice among the relationships in [Chapter 6](06-vsu-context.md) | VSU's roadmap |
+| DIGITS and OneVSU | Undecided | Depends on VSU's choice among the relationships in [Chapter 7](07-vsu-context.md) | VSU's roadmap |
 
 The largest change is not technical: offices would answer some student questions once, in public, instead of many times in private. [Proposed] That is also the network's largest benefit to them. [Proposed]
 
@@ -92,7 +92,7 @@ VSU's account practices settle much of the identity design, and leave four quest
 
 ### What the network would own, and what it would only point to
 
-This extends the own-or-reference rule of [Chapter 6](06-vsu-context.md). [Established]
+This extends the own-or-reference rule of [Chapter 7](07-vsu-context.md). [Established]
 
 | Data | The network's role | Where the authority lies |
 | --- | --- | --- |
@@ -113,7 +113,7 @@ The Third SOUA describes DIGITS as connecting the university's separate systems,
 
 ## Lessons from similar systems
 
-[Chapter 9](09-related-work.md) reviews each precedent. Here each lesson is matched to the design response it calls for. [Proposed]
+[Chapter 10](10-related-work.md) reviews each precedent. Here each lesson is matched to the design response it calls for. [Proposed]
 
 | Precedent | What happened | Design response |
 | --- | --- | --- |
@@ -174,7 +174,7 @@ None of these blocks a pilot. Together they mean the network needs a legal revie
 
 ### Adoption
 
-Facebook's network effects are the largest risk ([Chapter 10](10-risks.md)). [Established] They are stronger at VSU than where Facebook Campus failed, because Facebook remains nearly universal in the Philippines. [Proposed] The precedents point both ways: Facebook itself, Everytime, Dcard, and Fizz show students joining campus networks in large numbers when those networks serve them daily, while Facebook Campus, Workplace, and community@brighton show what happens when they do not, or when their owner stops caring. [Established] VSU's own rollout of Google accounts shows that giving people an account is not the same as their using it. [Established]
+Facebook's network effects are the largest risk ([Chapter 11](11-risks.md)). [Established] They are stronger at VSU than where Facebook Campus failed, because Facebook remains nearly universal in the Philippines. [Proposed] The precedents point both ways: Facebook itself, Everytime, Dcard, and Fizz show students joining campus networks in large numbers when those networks serve them daily, while Facebook Campus, Workplace, and community@brighton show what happens when they do not, or when their owner stops caring. [Established] VSU's own rollout of Google accounts shows that giving people an account is not the same as their using it. [Established]
 
 Research on starting online communities offers tested tactics: a clear and limited scope, tools useful to one person before the community is large, staff who contribute when members have not yet, new spaces only when existing ones are busy, and visible activity. [Established] (Resnick, Konstan, and Chen, 2012) For the network that means a pilot dense in one community; notices, deadlines, an office directory, and guides that are useful from the first day; offices as contributors of last resort; and few communities at first. [Proposed]
 
@@ -220,7 +220,7 @@ The network is feasible as a bounded pilot with one committed office, a seeded m
 
 ## Sources
 
-Checked on 8 and 9 October 2026. The source type follows each entry ([Chapter 8](08-governance.md)).
+Checked on 8 and 9 October 2026. The source type follows each entry ([Chapter 9](09-governance.md)).
 
 - Visayas State University. [VSU rolls out 9,245 free Google Workspace accounts to students in Main Campus](https://www.vsu.edu.ph/articles/news/2255-vsu-rolls-out-9-245-free-google-workspace-accounts-to-all-students-in-main-campus), 4 October 2022; [All VSU students and staff to get Microsoft and Google licenses](https://www.vsu.edu.ph/articles/news/2394-all-vsu-students-and-staff-to-get-microsoft-google-licenses), 22 August 2023; [VSU e-Learning app now available](https://www.vsu.edu.ph/articles/news/2225-vsu-e-learning-app-now-available-for-viscans-via-google-play-and-app-store), 29 July 2022; [VSU UDRMO unveils WAIS](https://www.vsu.edu.ph/articles/news/3011-vsu-udrmo-unveils-wais-strengthens-climate-resilience-efforts), 9 July 2026; [Students](https://www.vsu.edu.ph/students); [Student Services](https://www.vsu.edu.ph/vsu/1156-student-services); [Frequently asked questions on sexual harassment](https://www.vsu.edu.ph/vsu/1356-anti-sexual-harassment); [Accredited Organizations](https://www.vsu.edu.ph/students/accredited-organizations); [General Privacy Notice](https://vsu.edu.ph/privacy); [VSU commits to data privacy and protection](https://www.vsu.edu.ph/articles/news/1919-vsu-commits-to-data-privacy-and-protection), 24 February 2021; [Third State of the University Address](https://www.vsu.edu.ph/articles/news/3045-3rd-state-of-the-university-address), 18 September 2026; [News feed](https://www.vsu.edu.ph/articles/news?format=feed&type=rss) and [announcements feed](https://www.vsu.edu.ph/articles/bulletin?format=feed&type=rss); [Graduate faculty of the Department of Food Science and Technology](https://www.vsu.edu.ph/21-content-main/informational/1611-graduate-faculty-of-dept-of-food-science-and-technology), an example of VSU's graduate faculty pages. Official.
 - [Republic Act No. 10173, Data Privacy Act of 2012](https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html), Sections 3(l), 11(e), 13, and 16(e); [Republic Act No. 11313, Safe Spaces Act](https://lawphil.net/statutes/repacts/ra2019/ra_11313_2019.html); [Republic Act No. 11930, Anti-OSAEC and Anti-CSAEM Act](https://lawphil.net/statutes/repacts/ra2022/ra_11930_2022.html), Sections 3 and 9; [Republic Act No. 8792, Electronic Commerce Act of 2000](https://lawphil.net/statutes/repacts/ra2000/ra_8792_2000.html), Section 30; National Privacy Commission, [Circular No. 2022-04](https://privacy.gov.ph/wp-content/uploads/2023/05/Circular-2022-04.pdf), on registration of data processing systems, Sections 5 and 7. Official.

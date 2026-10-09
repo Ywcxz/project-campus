@@ -24,13 +24,13 @@ Much of VSU's campus life already runs on a social network: questions about enro
 
 The case for the network runs in five steps, each a hypothesis to test. [Proposed]
 
-1. VSU's community life already happens on a social network, mostly Facebook and Messenger, which almost every Filipino internet user uses: 94.9% of those aged 16 and over had used Facebook in the past month, according to the Digital 2026 report ([Chapter 9](09-related-work.md)). [Established]
+1. VSU's community life already happens on a social network, mostly Facebook and Messenger, which almost every Filipino internet user uses: 94.9% of those aged 16 and over had used Facebook in the past month, according to the Digital 2026 report ([Chapter 10](10-related-work.md)). [Established]
 2. That network was built for other purposes. Advertising brought in about 97.6% of Meta's revenue in 2025, its feeds are ranked to hold attention, and its group chats are built for conversation in the moment. [Established] It knows nothing of VSU's roles, offices, or rules.
 3. Many of campus life's problems are problems of routing and memory: a question that should reach the person who can answer it, a notice that should reach the students it concerns and stay checkable, an answer that should carry the authority of whoever gave it and still be there next year. [Proposed]
 4. A network shaped like the university, with verified members, visible roles, communities for real VSU units, labels on every post, and a memory that knows its age, could do those jobs better than a general platform. [Proposed]
 5. People will move only for jobs it does clearly better, so the network should aim to win a few specific jobs, judged by the knowledge it moves rather than the attention it holds. [Proposed] (D-061)
 
-Steps 1 and 3 need VSU evidence from the survey, the interviews, and the Facebook study ([Chapter 7.1](07a-facebook-study.md)). [Unresolved] Step 5 is what keeps the network from becoming a smaller copy of Facebook. [Proposed]
+Steps 1 and 3 need VSU evidence from the survey, the interviews, and the Facebook study ([Chapter 8.1](08a-facebook-study.md)). [Unresolved] Step 5 is what keeps the network from becoming a smaller copy of Facebook. [Proposed]
 
 ### What "social/academic" means
 
@@ -81,11 +81,11 @@ Organizations face the same loss. VSU's list of accredited organizations for 202
 
 ### No shared place across roles
 
-VSU staff have an office chat system, Output Messenger, listed for employees only, and VSU's public list of services shows no equivalent for students. [Established] ([Chapter 9](09-related-work.md)) VSUEE can carry messages and forums inside courses, where its settings allow. [Established] Outside a course, a student who wants to reach a faculty member they don't have, an adviser, or an office may have nothing but visits, email, the helpdesk, and Facebook. [Unresolved]
+VSU staff have an office chat system, Output Messenger, listed for employees only, and VSU's public list of services shows no equivalent for students. [Established] ([Chapter 10](10-related-work.md)) VSUEE can carry messages and forums inside courses, where its settings allow. [Established] Outside a course, a student who wants to reach a faculty member they don't have, an adviser, or an office may have nothing but visits, email, the helpdesk, and Facebook. [Unresolved]
 
 ### What is not known
 
-The signals above are public records, student journalism, and research from elsewhere. They suggest where to look; they do not show how often VSU students meet these problems or what the problems cost them. [Established] The student survey measures that, the interviews collect specific past incidents, and the Facebook study records what is publicly visible ([Chapter 7](07-evidence.md)). If they find the problems small, the network narrows or stops. [Established]
+The signals above are public records, student journalism, and research from elsewhere. They suggest where to look; they do not show how often VSU students meet these problems or what the problems cost them. [Established] The student survey measures that, the interviews collect specific past incidents, and the Facebook study records what is publicly visible ([Chapter 8](08-evidence.md)). If they find the problems small, the network narrows or stops. [Established]
 
 Three interview probes would test the memory and routing hypotheses directly: when did you last ask something you suspected had been asked before, and where did you look first; have you ever acted on information that turned out to be out of date; and whom would you ask if you wanted to learn something none of your classes teaches? [Proposed]
 
@@ -147,7 +147,7 @@ Research supports the choice of feed. In a preregistered study of 806 Twitter us
 
 ### Group chats: for talking now, not for knowing later
 
-Much campus coordination runs on Messenger group chats, and 90.6% of Philippine internet users aged 16 and over had used Messenger in the past month. [Established] ([Chapter 9](09-related-work.md)) In the author's experience, batches, classes, and organizations each keep their own. [Unresolved] Group chats are good at what they were made for, talking in the moment, and poor at what campus knowledge needs. [Proposed]
+Much campus coordination runs on Messenger group chats, and 90.6% of Philippine internet users aged 16 and over had used Messenger in the past month. [Established] ([Chapter 10](10-related-work.md)) In the author's experience, batches, classes, and organizations each keep their own. [Unresolved] Group chats are good at what they were made for, talking in the moment, and poor at what campus knowledge needs. [Proposed]
 
 | What campus knowledge needs | In a group chat | On the network |
 | --- | --- | --- |
@@ -172,13 +172,13 @@ That would fix some of the problems above at almost no cost. It would not give v
 
 ### Facebook Campus, reconsidered for VSU
 
-Meta's Facebook Campus is the closest failed precedent: a college-only section of Facebook, closed in 2022 after Meta concluded that Groups served students best ([Chapter 9](09-related-work.md)). [Established] Two of its lessons carry over to VSU. Verified membership did not make students switch, and a campus space needs a reason to be opened every day, which social features alone did not supply. [Proposed]
+Meta's Facebook Campus is the closest failed precedent: a college-only section of Facebook, closed in 2022 after Meta concluded that Groups served students best ([Chapter 10](10-related-work.md)). [Established] Two of its lessons carry over to VSU. Verified membership did not make students switch, and a campus space needs a reason to be opened every day, which social features alone did not supply. [Proposed]
 
 One lesson reverses. Campus launched in the United States as young people were leaving Facebook: the share of US teenagers who used it fell from 71% in 2014–15 to 32% in 2022. [Established] (Pew Research Center, 2022) At VSU the opposite holds, since almost everyone uses Facebook. [Established] The network therefore faces a stronger incumbent than Facebook Campus did, and it cannot win by being where students are. It can win only on what Facebook and group chats cannot do: routing, memory, and visible authority. [Proposed] What would bring members back daily is still open: notices, schedules if VSU allows, the marketplace, or questions in their subjects. [Unresolved] (Q-46)
 
 ### Other kinds of platform
 
-- **Anonymous campus apps** such as Fizz, Yik Yak, and Philippine freedom walls show how much students want to talk about their own campus: by its founders' account, Fizz reached almost every undergraduate at one US college within months of launching. They also show what unlimited anonymity brings, since students there reported bullying and misinformation that were not removed promptly. [Established] ([Chapter 9](09-related-work.md))
+- **Anonymous campus apps** such as Fizz, Yik Yak, and Philippine freedom walls show how much students want to talk about their own campus: by its founders' account, Fizz reached almost every undergraduate at one US college within months of launching. They also show what unlimited anonymity brings, since students there reported bullying and misinformation that were not removed promptly. [Established] ([Chapter 10](10-related-work.md))
 - **Peer question-and-answer platforms.** Stack Overflow closes accidental duplicate questions with a link to the original and keeps differently worded ones as signposts, so that people who phrase a problem differently still find the answer. [Established] Brainly, which opened a Philippine site in 2014, runs a points economy for homework help: students earn points by answering and spend them to ask, with rankings and volunteer moderators. [Established] The network borrows the first idea and declines the second, because on a campus network asking must never cost anything. [Proposed] (D-071, D-072)
 - **Workplace tools** such as Microsoft Teams, Viva Engage, and Meta's closed Workplace are built for an organization's internal work; the University of Manchester, for one, offers Viva Engage only to staff and postgraduate researchers. [Established] VSU's Microsoft and Google subscriptions include chat and team spaces; whether VSU uses them for student community is not known. [Unresolved]
 - **Learning systems** such as VSUEE, Piazza, and Ed Discussion hold discussion inside courses. The network does not; course work stays in VSUEE. [Proposed] (D-064)
@@ -235,7 +235,7 @@ Nothing here moves a VSU system or changes its authority. [Established] (D-004) 
 
 ## Similar systems, and where the network differs
 
-Project rule 5 asks, for every precedent, how CAMPUS differs and which VSU need justifies the difference. [Established] The precedents are reviewed in [Chapter 9](09-related-work.md) and their lessons drawn in [Chapter 3.3](03c-network-fit.md); the pattern is below. [Proposed]
+Project rule 5 asks, for every precedent, how CAMPUS differs and which VSU need justifies the difference. [Established] The precedents are reviewed in [Chapter 10](10-related-work.md) and their lessons drawn in [Chapter 3.3](03c-network-fit.md); the pattern is below. [Proposed]
 
 | Kind | Examples | What it shows | How the network differs | VSU need behind the difference |
 | --- | --- | --- | --- | --- |
@@ -272,7 +272,7 @@ On balance, the network is feasible as a bounded pilot with one committed office
 
 ## Stages, each with a way to stop
 
-Every stage after the first is a proposal VSU can accept, change, or decline, and each can end in proceed, narrow, redefine, or stop ([Chapter 7](07-evidence.md)). [Proposed]
+Every stage after the first is a proposal VSU can accept, change, or decline, and each can end in proceed, narrow, redefine, or stop ([Chapter 8](08-evidence.md)). [Proposed]
 
 | Stage | What happens | What it needs | Stop or narrow if |
 | --- | --- | --- | --- |
@@ -311,7 +311,7 @@ Every stage after the first is a proposal VSU can accept, change, or decline, an
 
 ## How it grew from v0.1
 
-v0.1 already put a community and knowledge layer (profiles, organization pages, discussions, events) at the foundation of its first build, and it ruled out an unrestricted university social network (v0.1 §7.2). Version 0.2 keeps that limit, since the network is bounded and governed. It adds three things v0.1 did not have: real-time chat, a marketplace, and the explicit aim of replacing Facebook for campus life (D-035). Those three carry most of the moderation and privacy load, so each needs its own evidence. [Established] (D-023) The marketplace has since become its own product, linked from the network ([Chapter 4.2](04b-marketplace.md)). [Established] (D-078)
+v0.1 already put a community and knowledge layer (profiles, organization pages, discussions, events) at the foundation of its first build, and it ruled out an unrestricted university social network (v0.1 §7.2). Version 0.2 keeps that limit, since the network is bounded and governed. It adds three things v0.1 did not have: real-time chat, a marketplace, and the explicit aim of replacing Facebook for campus life (D-035). Those three carry most of the moderation and privacy load, so each needs its own evidence. [Established] (D-023) The marketplace has since become its own product, linked from the network ([Chapter 5.2](05b-marketplace.md)). [Established] (D-078)
 
 The October 2026 revision of this chapter builds the rest of the proposal around them: why VSU would need it, what it would do for the university, how it differs from social media, how it would work ([Chapter 3.2](03b-network-design.md)), how it fits VSU's systems and whether it is feasible ([Chapter 3.3](03c-network-fit.md)), and how to propose it ([Chapter 3.4](03d-network-proposal.md)). [Established] The owner's own brainstorming then sharpened its core around routing and memory, kept moderation apart from institutional response, and set limits on recognition and on who the network serves. [Established] These are recorded as proposals D-070 to D-075, with revisions to D-061, D-062, D-063, and D-066, and all await the owner. [Proposed] D-075 also proposes how v0.1's relational model carries into the network, the question D-025 left open. [Proposed]
 
@@ -344,7 +344,7 @@ The October 2026 revision of this chapter builds the rest of the proposal around
 
 ## Sources
 
-Checked on 8 and 9 October 2026. The source type follows each entry ([Chapter 8](08-governance.md)). Sources for VSU's systems are listed in [Chapter 3.3](03c-network-fit.md).
+Checked on 8 and 9 October 2026. The source type follows each entry ([Chapter 9](09-governance.md)). Sources for VSU's systems are listed in [Chapter 3.3](03c-network-fit.md).
 
 - Visayas State University. [Third State of the University Address](https://www.vsu.edu.ph/articles/news/3045-3rd-state-of-the-university-address), 18 September 2026; [All VSU students and staff to get Microsoft and Google licenses](https://www.vsu.edu.ph/articles/news/2394-all-vsu-students-and-staff-to-get-microsoft-google-licenses), 22 August 2023; [VSU implements new vision, mission, organizational structures](https://www.vsu.edu.ph/articles/news/2666-vsu-implements-new-vision-mission-organizational-structures), 16 January 2025; [Accredited Organizations](https://www.vsu.edu.ph/students/accredited-organizations), school year 2022–23; [Graduate faculty of the Department of Food Science and Technology](https://www.vsu.edu.ph/21-content-main/informational/1611-graduate-faculty-of-dept-of-food-science-and-technology), an example of VSU's graduate faculty pages; [VSU UDRMO unveils WAIS](https://www.vsu.edu.ph/articles/news/3011-vsu-udrmo-unveils-wais-strengthens-climate-resilience-efforts), 9 July 2026; [Announcements feed](https://www.vsu.edu.ph/articles/bulletin?format=feed&type=rss); [Proposed Guidelines on Cancellation/Suspension of Classes/Work due to Typhoon, Flooding, Other Weather Disturbances and Calamities](https://www.vsu.edu.ph/university-policies-2/2862-proposed-guidelines-on-cancellation-suspension-of-classes-work-in-the-visayas-state-university-due-to-typhoon-flooding-other-weather-disturbances-and-calamities-bor-resolution-no-162-s-2024), BOR Resolution No. 162, s. 2024. Official.
 - The Amaranth, VSU's student media. "Freedom of speech? Viscan FB group slammed for fueling online hate," 10 April 2025, listed in its [investigative section](https://amaranth.vsu.edu.ph/specials/investigative). Community knowledge, student press.

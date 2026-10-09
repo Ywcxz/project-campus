@@ -11,15 +11,15 @@ Housing lists boarding houses and rentals near the Main Campus for students who 
 | What problem? | Finding a boarding house or a rental near campus runs on word of mouth and group posts. Listings go stale, and students can't easily compare vacancy, price, house rules, or safety. [Unresolved] |
 | Who needs it? | Students who live off campus, above all incoming and transferring students and their parents, and landlords near campus who want tenants. [Proposed] How many VSU students live off campus is not known here. [Unresolved] |
 | What evidence? | VSU's 25 dormitories and cottages had 1,772 resident students in 2023 ([Chapter 2](02-intranet.md)). [Established] Nothing yet on how off-campus students find housing; the survey could ask. [Unresolved] |
-| Relation to existing systems? | VSU's website carries student housing information ([Chapter 9](09-related-work.md)). [Established] Housing would link to it and cover what it does not: private rentals off campus. [Proposed] Whether VSU or Baybay City accredits or inspects boarding houses is unknown; if either does, Housing shows that status rather than inventing its own. [Unresolved] (Q-50) |
+| Relation to existing systems? | VSU's website carries student housing information ([Chapter 10](10-related-work.md)). [Established] Housing would link to it and cover what it does not: private rentals off campus. [Proposed] Whether VSU or Baybay City accredits or inspects boarding houses is unknown; if either does, Housing shows that status rather than inventing its own. [Unresolved] (Q-50) |
 | Stage? | Later. [Proposed] |
-| Privacy, governance, and cost? | Where a student lives is sensitive, so listings describe the property and never who lives there ([Chapter 8](08-governance.md)). [Proposed] Fake listings and deposit scams are the main risks, and stale listings the main cost. [Proposed] |
+| Privacy, governance, and cost? | Where a student lives is sensitive, so listings describe the property and never who lives there ([Chapter 9](09-governance.md)). [Proposed] Fake listings and deposit scams are the main risks, and stale listings the main cost. [Proposed] |
 | How could it be disproved? | Students find housing easily; few rooms change hands outside personal networks; landlords won't keep listings current; or VSU already plans the same service. [Proposed] |
 
 ## What a listing would show
 
 - The property: type, rooms, monthly price range, utilities, and whether water and Wi-Fi are included. [Proposed]
-- How far it is from campus, and the way there, from Wayfinder ([Chapter 4.4](04d-wayfinder.md)). [Proposed]
+- How far it is from campus, and the way there, from the digital twin's places ([Chapter 4](04-digital-twin.md)). [Proposed]
 - House rules, such as curfews and visitors, as the landlord states them. [Proposed]
 - When a room is free, confirmed by the landlord at a set interval, so old listings expire on their own. [Proposed]
 - Reviews from verified members who lived there, after their stay. [Proposed]

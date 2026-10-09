@@ -63,7 +63,7 @@ The build is a modular monolith: a mobile-first React and TypeScript PWA, a Fast
 
 ## Independent of VSU systems, not of VSU
 
-A real-user Alpha on campus still touches the university: delivery locations, vendors in the VSU market, rider access, participant recruitment and consent, and data governance. The PRD itself lists these as needing approval before real users. [Established] (PRD §20) On the milestone ladder in [Chapter 11](11-roadmap.md), running Hop-It with real participants on campus is likely a permission-to-prototype step, and should be treated as one. [Proposed]
+A real-user Alpha on campus still touches the university: delivery locations, vendors in the VSU market, rider access, participant recruitment and consent, and data governance. The PRD itself lists these as needing approval before real users. [Established] (PRD §20) On the milestone ladder in [Chapter 12](12-roadmap.md), running Hop-It with real participants on campus is likely a permission-to-prototype step, and should be treated as one. [Proposed]
 
 ## Decisions still open before real users
 

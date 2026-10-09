@@ -6,7 +6,7 @@ The network is proposed as VSU's own alternative to Facebook for campus life (D-
 
 ## Why observe before asking
 
-- The network's problem hypotheses about Facebook come from the author's own observations as an alumnus, which makes them community knowledge, not evidence ([Chapter 7](07-evidence.md)). [Established]
+- The network's problem hypotheses about Facebook come from the author's own observations as an alumnus, which makes them community knowledge, not evidence ([Chapter 8](08-evidence.md)). [Established]
 - Interviews and the survey record what people say they do. This study records what is publicly visible. Each can check the other. [Proposed]
 - What it finds can sharpen interview probes, and it can supply the documentary site and the pitch with real VSU patterns, described without identifying anyone. [Proposed]
 
@@ -38,16 +38,16 @@ Groups with no posts in the 30 days before they are checked stay in the census b
 
 ## Starting hypotheses
 
-The owner set four starting hypotheses, and reworded H4 so that observation can test it. Each tests a problem hypothesis from [Chapter 7](07-evidence.md). [Established] (D-042, D-048)
+The owner set four starting hypotheses, and reworded H4 so that observation can test it. Each tests a problem hypothesis from [Chapter 8](08-evidence.md). [Established] (D-042, D-048)
 
-| ID | Starting hypothesis | Chapter 7 hypothesis it tests | What observation can show |
+| ID | Starting hypothesis | Chapter 8 hypothesis it tests | What observation can show |
 | --- | --- | --- | --- |
 | H1 | Official information is fragmented across channels | Information is scattered; official notices and rumor look alike | Where official announcements first appear, where they reappear, how late, and whether they change on the way |
 | H2 | Serious questions go unanswered in community groups | Students take institutional questions to unofficial groups | How many questions sampled days hold, and whether an official source, a peer, or no one answered |
 | H3 | Groups drift and get replaced when their founders leave | Knowledge is lost when officers change | Which groups replace earlier ones, and which have gone inactive |
 | H4 | Where a group or page allows anonymous posts, people post anonymously for some topics far more than for others | Accountable identity against safety to speak (Q-16) | Which topics people post anonymously and which under their names, where anonymous posts are allowed |
 
-H4 first read "students prefer pseudonymous participation," a preference that observation cannot see. The reworded H4 asks what observation can see, and its answer informs which network sections get the anonymous or pseudonymous setting that D-046 allows. [Established] (D-048) Workbook v1.1 records it: in groups with anonymous posting or nicknames on, each day tally counts posts by topic, anonymous and named. [Established] The seven topics, in order of precedence, are complaints about the university, personal problems, buying and selling, offices and services, academics, campus life, and other. A post goes under the first that fits, and a post under a group nickname counts as anonymous. [Established] (D-050) Field notes that fit no hypothesis are coded NEW, so the study can find what it was not looking for. [Established] (D-043) Changes to the hypotheses after the first tally are entered in the decision register with a date, as change control requires for anything above a minor change ([Chapter 11](11-roadmap.md)). [Established]
+H4 first read "students prefer pseudonymous participation," a preference that observation cannot see. The reworded H4 asks what observation can see, and its answer informs which network sections get the anonymous or pseudonymous setting that D-046 allows. [Established] (D-048) Workbook v1.1 records it: in groups with anonymous posting or nicknames on, each day tally counts posts by topic, anonymous and named. [Established] The seven topics, in order of precedence, are complaints about the university, personal problems, buying and selling, offices and services, academics, campus life, and other. A post goes under the first that fits, and a post under a group nickname counts as anonymous. [Established] (D-050) Field notes that fit no hypothesis are coded NEW, so the study can find what it was not looking for. [Established] (D-043) Changes to the hypotheses after the first tally are entered in the decision register with a date, as change control requires for anything above a minor change ([Chapter 12](12-roadmap.md)). [Established]
 
 ## The instrument
 
@@ -106,7 +106,7 @@ Rules for what leaves the workbook. [Established] (D-044)
 - This chapter gains a findings section with counts and rates by kind of channel.
 - Official VSU pages may be named. Community-run pages and groups, their admins, and their members are not.
 - Examples in the documentary site and the pitch are paraphrased composites, never quotes, screenshots, or links.
-- Findings enter the evidence register in [Chapter 7](07-evidence.md), typed by the kind of channel observed: official or community knowledge.
+- Findings enter the evidence register in [Chapter 8](08-evidence.md), typed by the kind of channel observed: official or community knowledge.
 
 ## Status, October 2026
 
@@ -120,7 +120,7 @@ Rules for what leaves the workbook. [Established] (D-044)
 
 ## Sources
 
-Checked on 7 October 2026. The source type follows each entry ([Chapter 8](08-governance.md)).
+Checked on 7 October 2026. The source type follows each entry ([Chapter 9](09-governance.md)).
 
 - franzke, a. s., Bechmann, A., Zimmer, M., Ess, C., and the Association of Internet Researchers. [Internet Research: Ethical Guidelines 3.0](https://aoir.org/reports/ethics3.pdf), 2020. Scholarly.
 - Riffe, D., Aust, C. E., and Lacy, S. R. [The Effectiveness of Random, Consecutive Day and Constructed Week Sampling in Newspaper Content Analysis](https://aejmc.us/wp-content/uploads/sites/29/2012/09/Journalism-Quarterly-1993-RiffeAustLacy-133-39.pdf), Journalism Quarterly 70(1), 133–139, 1993. Scholarly.

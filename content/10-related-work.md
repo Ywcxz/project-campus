@@ -47,7 +47,7 @@ Every row is drawn from VSU's own pages or the Third SOUA. [Established]
 
 The Third SOUA, delivered on 18 September 2026, also announced plans that touch CAMPUS. [Established]
 
-- **DIGITS.** OneVSU Mobile, the OneVSU Portal, the OneVSU Enterprise Resource Plan, and the University Executive Dashboard, aimed in part at giving students, faculty, staff, alumni, and partners one simpler way into university services and information ([Chapter 6](06-vsu-context.md)).
+- **DIGITS.** OneVSU Mobile, the OneVSU Portal, the OneVSU Enterprise Resource Plan, and the University Executive Dashboard, aimed in part at giving students, faculty, staff, alumni, and partners one simpler way into university services and information ([Chapter 7](07-vsu-context.md)).
 - **Listening sessions.** The administration intends to hold regular listening sessions with employees and students as a standing practice of governance.
 - **Continuity.** A hybrid solar system now backs the data center and the administration building, and the university adopted a framework for disaster response and continuity of essential services.
 - **Payments.** A LANDBANK cashless program began rolling out to students and employees on 2 September 2026.
@@ -64,8 +64,8 @@ What this means for CAMPUS:
 
 ## What VSU people already use
 
-- **Facebook and Messenger.** In the Digital 2026 report, 94.9% of Philippine internet users aged 16 and over had used Facebook in the past month, against a global average of 56.9%, and 90.6% had used Messenger. [Established] This is the network effect the risk register warns about ([Chapter 10](10-risks.md)).
-- **Office pages on Facebook.** Universities in the region use Facebook as an official help channel: EVSU directs applicants with questions to its admission office's Facebook page. [Established] VSU keeps an official Facebook page; which VSU offices answer students on Facebook is not known. [Unresolved] The landscape study will map the official pages that exist ([Chapter 7.1](07a-facebook-study.md)). [Proposed]
+- **Facebook and Messenger.** In the Digital 2026 report, 94.9% of Philippine internet users aged 16 and over had used Facebook in the past month, against a global average of 56.9%, and 90.6% had used Messenger. [Established] This is the network effect the risk register warns about ([Chapter 11](11-risks.md)).
+- **Office pages on Facebook.** Universities in the region use Facebook as an official help channel: EVSU directs applicants with questions to its admission office's Facebook page. [Established] VSU keeps an official Facebook page; which VSU offices answer students on Facebook is not known. [Unresolved] The landscape study will map the official pages that exist ([Chapter 8.1](08a-facebook-study.md)). [Proposed]
 - **Freedom walls and confession pages.** Philippine university freedom walls are anonymous Facebook pages run by unnamed administrators. [Established] A 2025 student study of the three most followed, at UP Diliman, National University, and Ateneo de Manila, found they open up student discourse but raise cyberbullying, misinformation, and privacy concerns, and it called for accountability within anonymous spaces. [Established] A Canadian study of 2,712 posts on one university's confessions page found that 26.1% supported students' learning, through asking for and giving academic help. [Established] The network's "Answers people can trust" therefore competes partly with anonymous pages students already use for help. [Proposed] Whether VSU has active pages of this kind, and what students use them for, is a question for the landscape study and the interviews. [Unresolved] One VSU case is on record: in April 2025, VSU's student media investigated a public Facebook group for VSU people, with over 12,500 members and anonymous posting, for online hate and a false accusation against a student ([Chapter 3](03-social-network.md)). [Established]
 - **Official channels by rule.** A Philippine college designated student email and moderated Facebook groups as its official channels in June 2026, and discouraged class group chats because announcements were drowned out, rumors outran official statements, and notifications disturbed rest. [Established] This is the "Facebook, done better" alternative the network's pilot compares against (D-067). [Proposed]
 - **Group chats.** In the author's experience, batches, classes, and organizations coordinate in Messenger group chats, where answers are buried within days and each batch asks again ([Chapter 3](03-social-network.md)). [Unresolved] Group chats are outside the Facebook study's reach, since private groups and chats are out of its scope (D-041), so the interviews and the survey are the only way to see them. [Established]
@@ -144,7 +144,7 @@ What CAMPUS adds is a combination, not a component: a campus-first rule for VSU-
 
 ## Campus digital twins
 
-Reviewed only lightly, since the digital twin is research only ([Chapter 4.5](04e-digital-twin.md)). [Established]
+Reviewed only lightly, since the digital twin is research only ([Chapter 4](04-digital-twin.md)). [Established]
 
 - The University of Glasgow built a digital twin of its Western Campus and three heavily used student buildings with an energy-modeling firm, feeding it building-management data, as part of a smart campus program. [Established]
 - The University of Manchester turned 3D scans of its music and drama centre into a virtual induction that students complete before using its rehearsal rooms, which helped them get familiar with the space. [Established]
@@ -192,7 +192,7 @@ Reviewed only lightly, since the digital twin is research only ([Chapter 4.5](04
 
 ## Sources
 
-Checked on 4 October 2026, except the local-first infrastructure and network sources added on 8 October 2026. The source type follows each entry ([Chapter 8](08-governance.md)). Sources for VSU's own network are listed in [Chapter 2](02-intranet.md), and for VSU's student-facing systems in [Chapter 3.3](03c-network-fit.md).
+Checked on 4 October 2026, except the local-first infrastructure and network sources added on 8 October 2026. The source type follows each entry ([Chapter 9](09-governance.md)). Sources for VSU's own network are listed in [Chapter 2](02-intranet.md), and for VSU's student-facing systems in [Chapter 3.3](03c-network-fit.md).
 
 - Visayas State University. [Third State of the University Address](https://www.vsu.edu.ph/articles/news/3045-3rd-state-of-the-university-address), 18 September 2026. Official.
 - Visayas State University. [Key Officials](https://www.vsu.edu.ph/administration), [Citizen's Charter](https://www.vsu.edu.ph/citizens-charter), [Helpdesk](https://helpdesk.vsu.edu.ph/open.php), [Document Request and Tracking System](https://docrequest.vsu.edu.ph/), and [E-Learning Environment](https://elearning.vsu.edu.ph). Official.

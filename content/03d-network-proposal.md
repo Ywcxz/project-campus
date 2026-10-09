@@ -8,7 +8,7 @@ The network leads the first pitch, which goes to OVPSAS, the Office of the Vice 
 
 ## Whom it concerns
 
-As of October 2026, no office below has reached any stage of the milestone ladder. [Established] ([Chapter 11](11-roadmap.md)) The table names offices, never people. [Established] (D-030)
+As of October 2026, no office below has reached any stage of the milestone ladder. [Established] ([Chapter 12](12-roadmap.md)) The table names offices, never people. [Established] (D-030)
 
 | Office | Why it matters | What the network would ask of it | What it will want to know |
 | --- | --- | --- | --- |
@@ -131,7 +131,7 @@ Every row is a proposal. [Proposed] The comparison group would be run on Faceboo
 
 ## The story for the slides
 
-The pitch slides come after field research ([Chapter 11](11-roadmap.md)). A possible sequence, each slide a proposal: [Proposed]
+The pitch slides come after field research ([Chapter 12](12-roadmap.md)). A possible sequence, each slide a proposal: [Proposed]
 
 1. **A morning at VSU.** The 4:30 a.m. suspension and the first-year student's question, told from the student's side.
 2. **What students told us.** Only problems that clear the D-038 bars, each with an interview quote, a survey number, and a real example. (D-036)
@@ -170,7 +170,7 @@ The framing should be cultivation rather than construction: a community network 
 
 ## Sources
 
-Checked on 8 and 9 October 2026. The source type follows each entry ([Chapter 8](08-governance.md)).
+Checked on 8 and 9 October 2026. The source type follows each entry ([Chapter 9](09-governance.md)).
 
 - Commission on Higher Education. [CMO No. 09, s. 2013, Enhanced Policies and Guidelines on Student Affairs and Services](https://legacy.ched.gov.ph/wp-content/uploads/2017/10/CMO-No.09-s2013.pdf), listed on [CHED's 2013 memorandum orders](https://legacy.ched.gov.ph/2013-ched-memorandum-orders/). Official. The scanned order could not be read as text; its grouping of services is taken from VSU's accreditation page below.
 - Visayas State University. [Area IV: Support to Students, supporting documents](https://aaccup-2021-04.vsu.edu.ph/programs/bsme/bsme-area-iv-supporting-documents), AACCUP accreditation, 2021; [Fifth VP, campus chancellors in VSU's new org structure](https://www.vsu.edu.ph/articles/news/1746-fifth-vp-campus-chancellors-in-vsu-s-new-org-structure), 10 January 2020; [Third State of the University Address](https://www.vsu.edu.ph/articles/news/3045-3rd-state-of-the-university-address), 18 September 2026; [Student Services](https://www.vsu.edu.ph/vsu/1156-student-services); [Accredited Organizations](https://www.vsu.edu.ph/students/accredited-organizations). Official.

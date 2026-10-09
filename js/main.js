@@ -840,15 +840,14 @@ function initTheme() {
   updateToggleLabels();
 }
 
+// The last entry in the chapter list: every chapter on one page.
 function initDocumentLink() {
-  const head = document.querySelector(".spine-head");
-  if (!head || head.querySelector(".spine-doc")) return;
-  const a = document.createElement("a");
-  a.className = "spine-doc";
-  a.href = "document.html";
-  a.textContent = "The whole document on one page";
-  if (ONE_PAGE()) a.setAttribute("aria-current", "page");
-  head.append(a);
+  const list = document.getElementById("spineList");
+  if (!list || list.querySelector(".spine-doc")) return;
+  const li = document.createElement("li");
+  li.className = "spine-doc-item";
+  li.innerHTML = `<a class="spine-doc" href="document.html"${ONE_PAGE() ? ' aria-current="page"' : ""}>The whole document on one page</a>`;
+  list.append(li);
 }
 
 function initMobileSpine() {
