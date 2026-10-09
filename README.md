@@ -34,10 +34,10 @@ project-campus/
 ├── favicon.ico           the icon, for browsers that ask for it by name
 ├── scripts/sync-meta.js  writes each page's title, description, and preview tags
 ├── scripts/archive-sources.js  lists cited pages and whether the Wayback Machine holds a copy
-├── scripts/hooks/        the name guard, a pre-commit hook that keeps stakeholder names out
+├── scripts/hooks/        the name guard as a local pre-commit hook, for commits made on your own computer
 ├── archive/v0.1/         the v0.1 blueprint and planning file, unchanged
 ├── tests/                jsdom render test
-├── .github/workflows/    the render test on every pull request; a weekly link check
+├── .github/workflows/    the render test and the name guard on every pull request; a weekly link check
 ├── CLAUDE.md             working rules for Claude sessions in this repository
 └── vercel.json           cache headers and redirects from v0.1 URLs
 ```
@@ -49,7 +49,7 @@ project-campus/
 - **Change a title or subtitle:** edit `data/chapters.json`, then run `node scripts/sync-meta.js` so link previews match. The render test fails until you do.
 - **Record a decision:** add a row to `content/13-decisions.md`.
 - **Add evidence:** add a row to the evidence register in `content/08-evidence.md`, with its source linked, a confidence rating, and the date you checked it. The render test enforces the format.
-- **Turn on the name guard** once per clone: `git config core.hooksPath scripts/hooks`. It reads stakeholder names from `~/.config/project-campus/private-names.txt`, outside this repository, and stops any commit that adds one (D-030).
+- **Name guard** (D-030). On GitHub, open Settings > Secrets and variables > Actions, choose New repository secret, name it `PRIVATE_NAMES`, and enter the names, one per line. From then on, every pull request and every push to `main` fails the "Name guard" check if a line it adds contains one of them. The check names the file and line, never the name. Full names or surnames work best, since a common first name can also appear in a citation. If you commit from your own computer, the same check can run before each commit: `git config core.hooksPath scripts/hooks`, with the names in `~/.config/project-campus/private-names.txt`.
 
 ## Run and test locally
 

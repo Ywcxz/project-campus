@@ -11,7 +11,7 @@ This master document is the reference, and what people read is built from it: a 
 3. **Scrollytelling documentary site.** Interactive, for students, faculty, staff, and administration. Readers choose topics, expand them, and see real VSU examples. It is built now, with placeholders where VSU evidence is still missing, filled in as field research reports. Administration and other interested parties see it early; students see it only after they have answered the survey (D-084).
 4. **Student survey site.** Built alongside the documentary site, on a site of its own, so respondents don't read the proposal before answering (D-037, D-039).
 5. **OVPSAS.** Two separate asks: permission to run the survey, and interest in CAMPUS ([Chapter 3.4](03d-network-proposal.md); D-083).
-6. **Field research.** The survey once permission is granted, the student interviews, and the Facebook landscape study ([Chapter 8.1](08a-facebook-study.md)). Which parts need VSU's permission or an ethics review is open (Q-51), and D-086 proposes publishing the protocol in [Chapter 8](08-evidence.md) before the survey opens.
+6. **Field research.** The survey once permission is granted, the student interviews, and the Facebook landscape study ([Chapter 8.1](08a-facebook-study.md)). Which parts need VSU's permission or an ethics review is open (Q-51), and the protocol is published in [Chapter 8](08-evidence.md) before the survey opens (D-086).
 7. **Pitch slides.** For OVPSAS first. Problem slides use only problems that clear the D-038 bars.
 8. **Hop-It Alpha.** Follows its PRD: synthetic rehearsal, individual baseline, bundled cohort, evidence report, decision.
 

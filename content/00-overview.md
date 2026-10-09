@@ -26,7 +26,7 @@ CAMPUS (Connecting All Members, Places, and University Services) is a proposal f
 
 This document is the reference, in the way a thesis is: it holds the content, the sources, and the record of decisions. Most people will meet CAMPUS through what is built from it: a concept note, an interactive scrollytelling documentary site for students, faculty, staff, and administration, and later a pitch deck. [Established] (D-082)
 
-The first approach to OVPSAS, the Office of the Vice President for Student Affairs and Services, is the concept note, with two separate asks: permission to run the student survey, and interest in CAMPUS. [Established] (D-083) The documentary site and the survey site are built alongside it. The documentary site holds placeholders where VSU evidence is still missing, and students see it only after they have answered the survey. [Established] (D-039, D-084) Field research follows, then pitch slides, then Hop-It Alpha ([Chapter 12](12-roadmap.md)). [Established] The first pitch goes to OVPSAS because the social/academic network would benefit that office most. [Proposed]
+The first approach to OVPSAS, the Office of the Vice President for Student Affairs and Services, is the concept note, with two separate asks: permission to run the student survey, and interest in CAMPUS. [Established] (D-083) The documentary site and the survey site are built alongside it. The documentary site is built now, with placeholders where VSU evidence is still missing, and students see it only after they have answered the survey. [Established] (D-039, D-084) Field research follows, then pitch slides, then Hop-It Alpha ([Chapter 12](12-roadmap.md)). [Established] The first pitch goes to OVPSAS because the social/academic network would benefit that office most. [Proposed]
 
 ## How to read this document
 
@@ -36,7 +36,7 @@ Every significant claim carries one of three tags:
 - [Proposed] means a design idea or hypothesis that has not been validated.
 - [Unresolved] means an open question, or a claim nobody has verified yet.
 
-Sources are kept apart by type as well: official information, community knowledge, opinion, unverified information, scholarly work, and external sources ([Chapter 9](09-governance.md)). The evidence behind the main claims is listed in the [evidence register](08-evidence.md), each item linked to its source, rated for confidence, and dated when last checked. Decisions are recorded in one place, the [decision register](13-decisions.md). A decision made in a conversation or a draft counts only once it is entered there.
+Sources are kept apart by type as well: official information, community knowledge, opinion, unverified information, scholarly work, and external sources ([Chapter 9](09-governance.md)). The evidence behind the main claims is listed in the [evidence register](08-evidence.md), each item linked to its source, rated for confidence, and dated when its source is checked. Decisions are recorded in one place, the [decision register](13-decisions.md). A decision made in a conversation or a draft counts only once it is entered there.
 
 ## What changed from v0.1
 

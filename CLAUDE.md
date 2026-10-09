@@ -36,4 +36,5 @@ cd tests && npm install && npm test
 - Changed a title or subtitle in `data/chapters.json`? Run `node scripts/sync-meta.js`.
 - Changed anything in `css/` or `js/`? Bump the `?v=` key on every page.
 - The owner checks visuals himself. Verify with the render test, not screenshots.
+- If the "Name guard" check fails, a line you added names someone on the owner's private list. Remove the line it points to; the check never shows the name.
 - Work on a branch and open a pull request; the owner merges.

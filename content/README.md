@@ -46,7 +46,7 @@ Source types are tracked separately from tags: official, community knowledge, op
 
 ## Privacy
 
-Never name stakeholders or cite private conversations in this repository. They belong in the private stakeholder log (decision D-030). Deleting something after a push does not remove it from git history. The name guard in `scripts/hooks/` stops a commit that adds a name from your private list; turn it on with `git config core.hooksPath scripts/hooks`.
+Never name stakeholders or cite private conversations in this repository. They belong in the private stakeholder log (decision D-030). Deleting something after a push does not remove it from git history. The "Name guard" check fails any pull request that adds a name from the owner's private list, which is kept as a GitHub secret and never in this repository; see the main README to set it up.
 
 Community-run Facebook pages and groups are never named or linked, and neither is an article whose web address names one: link the publication's section page instead (D-044). No automated tool, including the link check and the archive script, requests Facebook or any other Meta site (D-041).
 
