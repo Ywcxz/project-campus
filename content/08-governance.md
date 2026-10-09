@@ -23,14 +23,14 @@ A relationship can exist while only authorized people see it, only some details 
 
 ## Privacy by design
 
-Collect only what a feature needs, use it only for that purpose, limit who can access it, keep it only as long as necessary, keep it accurate, say plainly what is collected, and secure it. [Established] (v0.1 §15.14) The Data Privacy Act of 2012 (Republic Act No. 10173) governs personal data in the Philippines, and how it applies to each product needs review before any real users. [Unresolved]
+Collect only what a feature needs, use it only for that purpose, limit who can access it, keep it only as long as necessary, keep it accurate, say plainly what is collected, and secure it. [Established] (v0.1 §15.14) For the network, keeping data only as long as necessary means a memory with a schedule: knowledge such as confirmed answers and guides is kept, dated, and can lose its author's name, while conversation fades. [Proposed] (D-070) The Data Privacy Act of 2012 (Republic Act No. 10173) governs personal data in the Philippines, and how it applies to each product needs review before any real users. [Unresolved]
 
 ## Governance by product
 
 | Product | Personal data | Main governance risk | Needed before real users |
 | --- | --- | --- | --- |
 | Hop-It | Name, phone, delivery location, fulfillment evidence | Consent and incident handling | Approved retention, consent, privacy notice, and incident process |
-| Social/academic network | Profiles, posts, messages, listings | Moderation, speech, scams, minors | Community rules, a moderation owner at VSU, a privacy review |
+| Social/academic network | Profiles, including education details, which are sensitive personal information; posts, messages, and listings; topics members help with; links between pseudonyms and members | Moderation, speech, scams, minors, a university's power over its students' speech, and a memory that keeps what should fade | Community rules, a moderation owner at VSU, moderation kept apart from institutional response (D-066), a retention schedule that keeps knowledge and lets conversation fade (D-070), a privacy impact assessment and registration through VSU's data protection officer, a legal review of a host's duties (Q-36), and the reveal process for pseudonyms (D-065) |
 | Campus intranet | Whatever the hosted services hold, plus network logs | Security of campus infrastructure, and monitoring that outgrows its purpose | VSU ICT ownership, a security review, and a published network policy that limits logs (D-057) |
 
 ## Questions the network's rules must answer
@@ -41,8 +41,10 @@ Collect only what a feature needs, use it only for that purpose, limit who can a
 - How do accountable names and a safe way to criticize the university coexist?
 - How are harassment and scams reported, and who acts on them?
 - What changes for users under 18?
+- How do reports reach the VSU offices that must act on them, such as the Anti-Sexual Harassment Office?
+- Who may ask for a post's removal on VSU's behalf, and how is that shown to the member?
 
-[Unresolved]
+[Unresolved] [Chapter 2.2](02b-network-design.md) proposes answers, built on D-065 and D-066. [Proposed]
 
 ## Ownership and licensing
 
