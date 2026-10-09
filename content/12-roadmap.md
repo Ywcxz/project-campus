@@ -2,16 +2,20 @@
 
 *What gets made, in what order, and how progress is judged*
 
-Four outputs come in a fixed order: this master document, a scrollytelling documentary site, pitch slides, and Hop-It Alpha. [Established] Institutional progress is tracked separately, on a seven-stage ladder where each stage needs its own evidence. [Established]
+This master document is the reference, and what people read is built from it: a concept note, a documentary site, and a pitch deck. [Established] (D-082) The steps below come in this order, with the documentary site and the survey site built side by side. [Established] Institutional progress is tracked separately, on a seven-stage ladder where each stage needs its own evidence. [Established]
 
-## Outputs
+## Outputs and steps
 
-1. **Master document.** This document, the source for everything after it. Decisions live in its register.
-2. **Scrollytelling documentary site.** Interactive, for students, faculty, staff, and administration. Readers choose topics, expand them, and see real VSU examples. It is built from this document.
-3. **Pitch slides.** For OVPSAS first.
-4. **Hop-It Alpha.** Follows its PRD: synthetic rehearsal, individual baseline, bundled cohort, evidence report, decision.
+1. **Master document.** This document, the reference for everything after it. Decisions live in its register.
+2. **Concept note.** A short note for the first approach to OVPSAS, built from this document (D-083).
+3. **Scrollytelling documentary site.** Interactive, for students, faculty, staff, and administration. Readers choose topics, expand them, and see real VSU examples. It is built now, with placeholders where VSU evidence is still missing, filled in as field research reports. Administration and other interested parties see it early; students see it only after they have answered the survey (D-084).
+4. **Student survey site.** Built alongside the documentary site, on a site of its own, so respondents don't read the proposal before answering (D-037, D-039).
+5. **OVPSAS.** Two separate asks: permission to run the survey, and interest in CAMPUS ([Chapter 3.4](03d-network-proposal.md); D-083).
+6. **Field research.** The survey once permission is granted, the student interviews, and the Facebook landscape study ([Chapter 8.1](08a-facebook-study.md)). Which parts need VSU's permission or an ethics review is open (Q-51), and the protocol is published in [Chapter 8](08-evidence.md) before the survey opens (D-086).
+7. **Pitch slides.** For OVPSAS first. Problem slides use only problems that clear the D-038 bars.
+8. **Hop-It Alpha.** Follows its PRD: synthetic rehearsal, individual baseline, bundled cohort, evidence report, decision.
 
-Field research, meaning the interviews, the survey, and the Facebook landscape study ([Chapter 8.1](08a-facebook-study.md)), should run in parallel. It feeds Chapters 3 and 8 and supplies the site's real VSU examples. [Proposed]
+Field research feeds Chapters 3 and 8 and supplies the documentary site's and the pitch's real VSU examples. [Proposed]
 
 ## The milestone ladder
 

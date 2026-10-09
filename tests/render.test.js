@@ -14,7 +14,7 @@ const meta = require("../scripts/sync-meta.js");
 const REF_IDS = new Map();
 for (const [file, page] of [["content/13-decisions.md", "decisions.html"], ["content/08-evidence.md", "evidence.html"]]) {
   for (const line of read(file).split("\n")) {
-    const m = line.match(/^\|\s*([DQCE]-\d{2,3})\s*\|/);
+    const m = line.match(/^\|\s*([DQCEP]-\d{2,3})\s*\|/);
     if (m) REF_IDS.set(m[1].toLowerCase(), page);
   }
 }
@@ -79,6 +79,35 @@ function cellCountSep(line) {
   }
   for (const f of ["img/og-card.png", "img/favicon.svg", "img/apple-touch-icon.png", "favicon.ico"]) {
     check(fs.existsSync(path.join(ROOT, f)), `${f} exists`);
+  }
+
+  // Evidence register: every entry links its source, rates confidence by
+  // the Chapter 8 rubric, and dates its last check (D-085).
+  const cellsOf = (line) => line.trim().replace(/^\|/, "").replace(/\|$/, "").split("|").map((s) => s.trim());
+  const evidenceLines = read("content/08-evidence.md").split("\n");
+  const eRows = evidenceLines.filter((l) => /^\|\s*E-\d{3}\s*\|/.test(l)).map(cellsOf);
+  check(eRows.length >= 40, `evidence register has its entries (${eRows.length})`);
+  for (const r of eRows) {
+    check(r.length === 7, `${r[0]}: has seven cells`);
+    check(/\]\(https?:\/\//.test(r[3] || ""), `${r[0]}: source is linked`);
+    check(["High", "Medium", "Low"].includes(r[5]), `${r[0]}: confidence is High, Medium, or Low`);
+    check(/^(\d{1,2} [A-Z][a-z]+ \d{4}|—)$/.test(r[6] || ""), `${r[0]}: checked is a date or a dash`);
+  }
+  const pRows = evidenceLines.filter((l) => /^\|\s*P-\d{2,3}\s*\|/.test(l)).map(cellsOf);
+  check(pRows.length >= 20, `problem hypotheses carry IDs (${pRows.length})`);
+  pRows.forEach((r, n) => check(r[0] === `P-${String(n + 1).padStart(2, "0")}`, `${r[0]}: problem hypotheses are numbered in order`));
+
+  // The retired expansion of the name (D-040) appears only in the archive and
+  // in the register row that retired it.
+  const RETIRED = /Connected Academic Matrix/i;
+  const named = [
+    ...fs.readdirSync(path.join(ROOT, "content")).filter((f) => f.endsWith(".md")).map((f) => `content/${f}`),
+    ...fs.readdirSync(ROOT).filter((f) => f.endsWith(".html") || f.endsWith(".md")),
+    "data/chapters.json",
+  ];
+  for (const f of named) {
+    const bad = read(f).split("\n").filter((l) => RETIRED.test(l) && !(f === "content/13-decisions.md" && /^\|\s*D-040\s*\|/.test(l)));
+    check(bad.length === 0, `${f}: does not use the retired name (D-040)`);
   }
 
   const cover = load("index.html");
@@ -187,6 +216,14 @@ function cellCountSep(line) {
   check(![...rd.querySelectorAll("a.ref")].some((a) => a.textContent === "Q-03"), "resolved questions without a row stay plain text");
   check(!rd.querySelector("tr#d-061 td:first-child a"), "a row's own ID does not link to itself");
   reg.window.close();
+
+  const ev = load("evidence.html");
+  await settle(ev, (d) => d.getElementById("chapter")?.getAttribute("aria-busy") === "false");
+  const ed = ev.window.document;
+  check(Boolean(ed.querySelector("tr#e-001")) && Boolean(ed.querySelector("tr#p-01")), "evidence and problem rows carry anchors");
+  check(!ed.querySelector("tr#p-01 td:first-child a"), "a problem row's own ID does not link to itself");
+  check([...ed.querySelectorAll("a.ref")].some((a) => a.textContent === "P-19" && a.getAttribute("href") === "#p-19"), "problem mentions link to their row on the same page");
+  ev.window.close();
 
   // The whole document on one page.
   const all = load("document.html");
