@@ -4,13 +4,6 @@
    for gravitas, plain sans for reading, mono for stamps & IDs.
    ============================================================ */
 
-/* Libron: chapter body text. A reading face descended from Newsreader
-   (via Readerly), self-hosted under the OFL. See fonts/libron/. */
-@font-face { font-family: "Libron"; src: url("../fonts/libron/Libron-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: "Libron"; src: url("../fonts/libron/Libron-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
-@font-face { font-family: "Libron"; src: url("../fonts/libron/Libron-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
-@font-face { font-family: "Libron"; src: url("../fonts/libron/Libron-BoldItalic.woff2") format("woff2"); font-weight: 700; font-style: italic; font-display: swap; }
-
 :root {
   /* Paper */
   --paper:    #F3F4EE;
@@ -40,9 +33,8 @@
   --highlight: #F2DD8C;   /* selected text, like a highlighter */
   --glow-gold:  rgba(250, 200, 40, .34);
   --glow-green: rgba(70, 185, 110, .24);
-  --ink-read:   #323C35;
-  --toggle-ink: #A47708;
-  --toggle-bg:  var(--brass-bg);   /* chapter prose: Libron is a dark face, so its ink is a step softer */
+  --toggle-ink: #A47708;   /* the sun icon */
+  --toggle-bg:  var(--brass-bg);
 
   /* Sea — live links, flagship pilot */
   --sea:      #17495A;
@@ -50,7 +42,6 @@
 
   --font-display: 'Newsreader', Georgia, serif;
   --font-body:    'IBM Plex Sans', -apple-system, sans-serif;
-  --font-read:    'Libron', 'Newsreader', Georgia, serif;   /* chapter prose */
   --font-mono:    'IBM Plex Mono', 'Courier New', monospace;
 
   --spine-w: 280px;
@@ -78,7 +69,6 @@
   --highlight: #5C4B1A;
   --glow-gold:  rgba(230, 181, 58, .11);
   --glow-green: rgba(46, 138, 82, .20);
-  --ink-read:   #D2D7CC;
   --toggle-ink: var(--green);
   --toggle-bg:  var(--green-bg);
   --sea:      #8FC5D0;
@@ -441,10 +431,7 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 .heading-anchor:focus-visible {
   outline: 2px solid var(--brass); outline-offset: 3px;
 }
-.chapter p {
-  font-family: var(--font-read); font-size: 17px; line-height: 1.72;
-  color: var(--ink-read); margin-bottom: 18px; max-width: 640px;
-}
+.chapter p { font-size: 15.5px; color: var(--ink); margin-bottom: 18px; max-width: 640px; }
 .chapter p.q {
   font-family: var(--font-display); font-style: italic; font-size: 18px;
   color: var(--ink); border-left: 2px solid var(--brass); padding-left: 18px;
@@ -538,21 +525,17 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 .toc-row.is-outline .s { color: var(--ink-2); }
 .cover-note { margin-top: 44px; font-size: 13px; color: var(--ink-3); max-width: 620px; }
 
-.chapter-loading, .chapter-error,
-.chapter .chapter-loading, .chapter .chapter-error { font-family: var(--font-body); font-size: 14.5px; color: var(--ink-3); margin: 24px 0; }
-/* Field cards keep Newsreader's italic, not the reading face. */
-.chapter .field-card-text { font-family: var(--font-display); font-size: 16.5px; margin-bottom: 0; }
+.chapter-loading, .chapter-error { font-size: 14.5px; color: var(--ink-3); margin: 24px 0; }
 .chapter h3 { font-family: var(--font-display); font-weight: 600; font-size: 18px; margin: 30px 0 10px; }
 .chapter ul, .chapter ol { margin: 0 0 20px; padding-left: 22px; max-width: 640px; }
 .chapter ul { list-style: disc; }
 .chapter ol { list-style: decimal; }
-.chapter li { font-family: var(--font-read); font-size: 17px; line-height: 1.68; color: var(--ink-read); margin-bottom: 7px; padding-left: 3px; }
-@media (max-width: 900px) { .chapter p, .chapter li { font-size: 16.5px; } }
+.chapter li { font-size: 15.5px; margin-bottom: 7px; padding-left: 3px; }
 .chapter li::marker { color: var(--brass); }
 .chapter a { border-bottom: 1px solid var(--brass); transition: color .15s, border-color .15s; }
 .chapter a:hover { color: var(--green); border-bottom-color: var(--green); }
 .chapter .heading-anchor { border-bottom: none; }
-.chapter strong { font-weight: 600; color: var(--ink); }
+.chapter strong { font-weight: 600; }
 .chapter code {
   font-family: var(--font-mono); font-size: .86em; background: var(--paper-2);
   border: 1px solid var(--rule); border-radius: 2px; padding: 0 4px;
@@ -619,3 +602,150 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 .chapter tr[id] { scroll-margin-top: 80px; }
 .chapter tr.is-target td { background: var(--brass-bg); }
 .chapter tr.is-target td:first-child { box-shadow: inset 3px 0 0 var(--brass); padding-left: 10px; }
+
+/* ── ON THIS PAGE ─────────────────────────────────────────── */
+.page-toc { display: none; }
+@media (min-width: 1240px) {
+  .content.has-toc {
+    display: grid; grid-template-columns: minmax(0, 700px) 200px;
+    column-gap: 56px; align-items: start;
+  }
+  .page-toc {
+    display: block; position: sticky; top: 64px;
+    max-height: calc(100vh - 96px); overflow-y: auto; overscroll-behavior: contain;
+    padding: 4px 4px 12px 0;
+  }
+}
+.page-toc-title { font-size: 11.5px; font-weight: 600; color: var(--green); margin: 0 0 8px; }
+.page-toc ol { list-style: none; padding: 0 0 0 10px; margin: 0;
+  background: linear-gradient(var(--rule), var(--rule)) 0 0 / 1px 100% no-repeat; }
+.page-toc li { position: relative; }
+.page-toc a {
+  display: block; padding: 4px 0 4px 8px; font-size: 12.5px; line-height: 1.4; color: var(--ink-3);
+  transition: color .12s;
+}
+.page-toc a::before {
+  content: ""; position: absolute; left: -11px; top: 6px; bottom: 6px; width: 3px; border-radius: 2px;
+  background: transparent; transition: background-color .12s;
+}
+.page-toc a:hover { color: var(--green); }
+.page-toc a:hover::before { background: var(--green); }
+.page-toc a[aria-current] { color: var(--ink); font-weight: 500; }
+.page-toc a[aria-current]::before { background: var(--brass); }
+.page-toc a:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; border-radius: 2px; }
+
+/* ── EVIDENCE VIEW ────────────────────────────────────────── */
+.claims-lens {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+  margin: -14px 0 30px; font-size: 12.5px;
+}
+.claims-lens-label { color: var(--ink-3); margin-right: 4px; }
+.claims-lens button {
+  font-size: 12.5px; color: var(--ink-2); padding: 3px 10px; border-radius: 999px;
+  border: 1px solid var(--rule); background: transparent;
+  transition: background-color .12s, border-color .12s, color .12s;
+}
+.claims-lens button .n { font-family: var(--font-mono); font-size: 11px; color: var(--ink-3); margin-left: 2px; }
+.claims-lens button:hover { border-color: var(--green); color: var(--green); background: var(--green-bg); }
+.claims-lens button[aria-pressed="true"] { border-color: var(--ink-2); color: var(--ink); background: var(--paper-2); font-weight: 500; }
+.claims-lens button[data-lens="established"][aria-pressed="true"] { border-color: var(--sea); background: var(--sea-bg); color: var(--sea); }
+.claims-lens button[data-lens="proposed"][aria-pressed="true"] { border-color: var(--brass); background: var(--brass-bg); color: var(--brass); }
+.claims-lens button[data-lens="unresolved"][aria-pressed="true"] { border-style: dashed; border-color: var(--ink-2); background: var(--paper-3); }
+.claims-lens button:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+
+/* With a view on, text that isn't the chosen kind of claim steps back. */
+.chapter[data-lens] :is(p, li, td, .field-card-text):not(.subtitle) { color: var(--ink-3); transition: color .2s; }
+.chapter[data-lens] .tag { opacity: .45; }
+.chapter[data-lens] .claim { border-radius: 3px; -webkit-box-decoration-break: clone; box-decoration-break: clone; transition: background-color .2s, color .2s; }
+.chapter[data-lens="established"] .claim[data-claim="established"],
+.chapter[data-lens="proposed"] .claim[data-claim="proposed"],
+.chapter[data-lens="unresolved"] .claim[data-claim="unresolved"] { color: var(--ink); padding: 1px 2px; }
+.chapter[data-lens="established"] .claim[data-claim="established"] { background: var(--sea-bg); }
+.chapter[data-lens="proposed"] .claim[data-claim="proposed"] { background: var(--brass-bg); }
+.chapter[data-lens="unresolved"] .claim[data-claim="unresolved"] {
+  background: var(--paper-3); text-decoration: underline dashed var(--ink-3); text-underline-offset: 3px;
+}
+.chapter[data-lens="established"] .claim[data-claim="established"] .tag,
+.chapter[data-lens="proposed"] .claim[data-claim="proposed"] .tag,
+.chapter[data-lens="unresolved"] .claim[data-claim="unresolved"] .tag { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .chapter[data-lens] :is(p, li, td, .field-card-text), .chapter[data-lens] .claim { transition: none; }
+}
+
+/* ── THE WHOLE DOCUMENT ON ONE PAGE ───────────────────────── */
+.spine-doc {
+  grid-column: 1; display: inline-block; margin-top: 10px; font-size: 12px; color: var(--ink-3);
+  border-bottom: 1px solid var(--rule-2); justify-self: start; transition: color .12s, border-color .12s;
+}
+.spine-doc:hover { color: var(--green); border-color: var(--green); }
+.spine-doc[aria-current] { color: var(--ink); border-color: var(--brass); }
+.spine-doc:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+
+.doc-intro { margin-bottom: 30px; }
+.chapter .doc-byline { font-size: 14px; color: var(--ink-2); margin-bottom: 8px; }
+.chapter .doc-note { font-size: 14px; color: var(--ink-3); margin-bottom: 8px; }
+.chapter .doc-howto { font-size: 14px; color: var(--ink-2); margin-bottom: 26px; }
+.doc-intro .claims-lens { margin-top: 0; }
+.doc-contents { border-top: 1px solid var(--rule); padding-top: 18px; margin-bottom: 20px; }
+.doc-contents-title { font-size: 11.5px; font-weight: 600; color: var(--green); margin-bottom: 8px; }
+.chapter .doc-contents ol { list-style: none; padding: 0; columns: 2 260px; column-gap: 32px; }
+.chapter .doc-contents li { font-size: 14px; margin: 0; padding: 0; break-inside: avoid; }
+.chapter .doc-contents li.is-sub { padding-left: 34px; }
+.chapter .doc-contents a { display: flex; gap: 12px; padding: 3px 0; border-bottom: none; }
+.chapter .doc-contents a .n { font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-3); min-width: 22px; }
+.chapter .doc-contents a:hover .t { color: var(--green); }
+.doc-chapter { border-top: 1px solid var(--rule); padding-top: 48px; margin-top: 56px; scroll-margin-top: 16px; }
+.doc-chapter > .eyebrow { margin-bottom: 10px; }
+
+.print-only { display: none; }
+
+/* ── PRINT ────────────────────────────────────────────────── */
+/* Printing, or saving as a PDF, gives a plain paper copy: no sidebar,
+   no glows, light colors whatever the theme, chapters on new pages,
+   and web addresses written out after outside links. */
+@media print {
+  @page { size: A4; margin: 18mm 17mm 20mm; }
+  :root, :root[data-theme="dark"] {
+    --paper: #FFFFFF; --paper-2: #F5F5F0; --paper-3: #ECECE4;
+    --ink: #111611; --ink-2: #3D433A; --ink-3: #5E6459;
+    --rule: #CFCBBB; --rule-2: #B5B09B;
+    --brass: #6B4F07; --brass-bg: #F6EDD0; --green: #135733; --green-bg: #E3EFE1;
+    --sea: #17495A; --sea-bg: #E7F0F1;
+    color-scheme: light;
+  }
+  html::before, .spine, .topbar, .spine-backdrop, .theme-toggle, .chapter-nav, .page-toc,
+  .claims-lens, .ref-preview, .heading-anchor, .screen-only, .chapter-loading { display: none !important; }
+  .print-only { display: block; }
+  body { background: #fff; }
+  .shell { display: block; min-height: 0; }
+  .content, .content.has-toc { display: block; padding: 0; }
+  .content-inner, .content-inner.wide { max-width: none; }
+
+  .chapter p, .chapter li { font-size: 10.5pt; line-height: 1.55; max-width: none; orphans: 3; widows: 3; }
+  .chapter table { font-size: 9pt; }
+  .chapter table.wide { min-width: 0; }
+  .table-wrap { overflow: visible; }
+  .chapter pre { white-space: pre-wrap; max-width: none; }
+  .chapter h1 { font-size: 26pt; }
+  .chapter h2 { font-size: 15pt; margin-top: 22pt; }
+  .chapter h3 { font-size: 12pt; }
+  h1, h2, h3, .eyebrow { break-after: avoid; }
+  tr, .field-card, pre, .chapter p.q, .doc-contents li { break-inside: avoid; }
+  .field-card { transform: none; box-shadow: none; }
+  .print-source { font-size: 8.5pt; color: var(--ink-3); margin: -4px 0 14pt; max-width: none; }
+
+  .doc-chapter { break-before: page; border-top: none; padding-top: 0; margin-top: 0; }
+  .doc-contents { break-after: page; }
+
+  /* Links: outside addresses are written out; inside ones read as plain text. */
+  .chapter a, .chapter a.ref { border-bottom: none; color: inherit; }
+  .chapter a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 8pt; color: var(--ink-3); word-break: break-all; }
+  .chapter tr.is-target td { background: none; box-shadow: none; }
+
+  /* The evidence view is a screen tool; paper shows every claim alike. */
+  .chapter[data-lens] :is(p, li, td, .field-card-text) { color: var(--ink) !important; }
+  .chapter[data-lens] .claim { background: none !important; text-decoration: none !important; padding: 0 !important; }
+  .chapter[data-lens] .tag { opacity: 1; }
+}
+.inline-link { border-bottom: 1px solid var(--brass); transition: color .15s, border-color .15s; }
+.inline-link:hover { color: var(--green); border-bottom-color: var(--green); }

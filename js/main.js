@@ -66,6 +66,10 @@ function chapterTree(chapters) {
 
 const CHEVRON = `<svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true" focusable="false"><path d="M4.5 2.5 8 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
+// On the one-page document the sidebar links to each chapter's section.
+const ONE_PAGE = () => document.getElementById("chapter")?.dataset.mode === "all";
+const chapterHref = (ch) => (ONE_PAGE() ? `#ch-${ch.slug}` : `${ch.slug}.html`);
+
 function spineEntry(ch, here) {
   const isActive = ch.slug === here;
   const label = statusLabel(ch);
@@ -73,7 +77,7 @@ function spineEntry(ch, here) {
     label ? `<span class="spine-status">${label}</span>` : ""
   }`;
   return isLinked(ch)
-    ? `<a href="${ch.slug}.html"${isActive ? ' aria-current="page"' : ""}>${inner}</a>`
+    ? `<a href="${chapterHref(ch)}"${isActive ? ' aria-current="page"' : ""}>${inner}</a>`
     : `<span class="disabled">${inner}</span>`;
 }
 
@@ -193,7 +197,12 @@ const TAG_PATTERN = new RegExp(`\\[(${CLAIM_TAGS.join("|")})\\](?!\\()`, "g");
 function safeHref(raw, linkMap) {
   const href = raw.replace(/&amp;/g, "&").trim();
   const chapterLink = href.match(/^(?:\.\/)?([\w.-]+\.md)(#[\w-]*)?$/);
-  if (chapterLink && linkMap[chapterLink[1]]) return linkMap[chapterLink[1]] + (chapterLink[2] || "");
+  if (chapterLink && linkMap[chapterLink[1]]) {
+    const target = linkMap[chapterLink[1]];
+    const frag = chapterLink[2] || "";
+    // One-page document: "#ch-slug" plus "#section" becomes "#slug--section".
+    return target.startsWith("#ch-") && frag ? `#${target.slice(4)}--${frag.slice(1)}` : target + frag;
+  }
   if (/^(https?:\/\/|mailto:|#|\.{1,2}\/)/i.test(href) || /^[\w.-]+\.(html|md|txt)(#[\w-]*)?$/i.test(href)) {
     return escapeHtml(href);
   }
@@ -405,7 +414,7 @@ function linkifyRefs(root, index, here) {
       frag.append(text.slice(last, at));
       const a = document.createElement("a");
       a.className = "ref";
-      a.href = `${ref.page === `${here}.html` ? "" : ref.page}#${id.toLowerCase()}`;
+      a.href = `${here === "*" || ref.page === `${here}.html` ? "" : ref.page}#${id.toLowerCase()}`;
       a.dataset.ref = id;
       a.textContent = id;
       frag.append(a);
@@ -483,9 +492,212 @@ function initRefPreviews(root, index, linkMap) {
   window.addEventListener("scroll", hide, { passive: true });
 }
 
+/* ── Evidence view ────────────────────────────────────────────
+   Each claim tag closes the claim before it: the text since the
+   previous tag in the same paragraph, list item, or cell, plus a
+   citation in brackets right after the tag, as in "… [Proposed]
+   (D-065)". The evidence view highlights one kind and dims the rest.
+   ──────────────────────────────────────────────────────────── */
+
+const LENS_KINDS = ["established", "proposed", "unresolved"];
+
+function tagKind(tag) {
+  const cls = [...tag.classList].find((c) => c.startsWith("tag-"));
+  return cls ? cls.slice(4) : "other";
+}
+
+function groupClaims(root) {
+  root.querySelectorAll("p, li, td").forEach((block) => {
+    if (!block.querySelector(".tag") || block.closest(".claims-lens")) return;
+    const nodes = [...block.childNodes];
+    let group = [];
+    const wrap = (kind) => {
+      const span = document.createElement("span");
+      span.className = "claim";
+      span.dataset.claim = kind;
+      group[0].before(span);
+      group.forEach((n) => span.append(n));
+      group = [];
+    };
+    for (let i = 0; i < nodes.length; i++) {
+      const node = nodes[i];
+      group.push(node);
+      const tag = node.nodeType === 1 && (node.matches(".tag") ? node : node.querySelector(".tag"));
+      if (!tag) continue;
+      // A citation in brackets right after the tag belongs to the claim.
+      let j = i + 1;
+      if (nodes[j] && nodes[j].nodeType === 3 && /^\s*\(/.test(nodes[j].nodeValue)) {
+        let depth = 0;
+        for (; j < nodes.length; j++) {
+          const n = nodes[j];
+          if (n.nodeType === 3) {
+            let cut = -1;
+            for (let k = 0; k < n.nodeValue.length; k++) {
+              if (n.nodeValue[k] === "(") depth++;
+              if (n.nodeValue[k] === ")" && --depth === 0) { cut = k + 1; break; }
+            }
+            if (cut > -1) {
+              if (cut < n.nodeValue.length) nodes.splice(j + 1, 0, n.splitText(cut));
+              group.push(n);
+              j++;
+              break;
+            }
+          }
+          group.push(n);
+        }
+        i = j - 1;
+      }
+      wrap(tagKind(tag));
+    }
+  });
+}
+
+function readLens() {
+  try { return sessionStorage.getItem("campus-lens") || ""; } catch (err) { return ""; }
+}
+function storeLens(value) {
+  try { sessionStorage.setItem("campus-lens", value); } catch (err) { /* private mode: the view just won't carry over */ }
+}
+
+function initLens(root, after) {
+  if (!root || !after) return;
+  const counts = {};
+  root.querySelectorAll(".claim").forEach((c) => { counts[c.dataset.claim] = (counts[c.dataset.claim] || 0) + 1; });
+  const total = LENS_KINDS.reduce((n, k) => n + (counts[k] || 0), 0);
+  if (total < 3) return;
+  const label = { established: "Established", proposed: "Proposed", unresolved: "Unresolved" };
+  const bar = document.createElement("div");
+  bar.className = "claims-lens";
+  bar.setAttribute("role", "group");
+  bar.setAttribute("aria-label", "Evidence view: highlight claims by their tag");
+  bar.innerHTML = `<span class="claims-lens-label">Evidence view</span>
+    <button type="button" data-lens="" aria-pressed="true">All</button>${LENS_KINDS.filter((k) => counts[k])
+      .map((k) => `<button type="button" data-lens="${k}" aria-pressed="false">${label[k]} <span class="n">${counts[k]}</span></button>`)
+      .join("")}`;
+  after.after(bar);
+  const apply = (value) => {
+    if (value && !counts[value]) value = "";
+    if (value) root.dataset.lens = value;
+    else delete root.dataset.lens;
+    bar.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lens === value)));
+  };
+  bar.addEventListener("click", (e) => {
+    const b = e.target.closest("button");
+    if (!b) return;
+    apply(b.dataset.lens);
+    storeLens(b.dataset.lens);
+  });
+  apply(readLens());
+}
+
+/* ── On this page ─────────────────────────────────────────────
+   Chapters with four or more sections get a list of them beside
+   the text on wide screens, marking the section being read.
+   ──────────────────────────────────────────────────────────── */
+
+function initPageToc() {
+  const article = document.getElementById("chapter");
+  const content = document.querySelector(".content");
+  if (!article || !content || article.dataset.mode === "all") return;
+  const heads = [...article.querySelectorAll("h2[id]")];
+  if (heads.length < 4) return;
+  const title = (h) => [...h.childNodes].filter((n) => !(n.nodeType === 1 && n.matches(".heading-anchor"))).map((n) => n.textContent).join("").trim();
+  const aside = document.createElement("aside");
+  aside.className = "page-toc";
+  aside.setAttribute("aria-label", "On this page");
+  aside.innerHTML = `<p class="page-toc-title">On this page</p><ol>${heads
+    .map((h) => `<li><a href="#${h.id}">${escapeHtml(title(h))}</a></li>`)
+    .join("")}</ol>`;
+  content.append(aside);
+  content.classList.add("has-toc");
+  const links = [...aside.querySelectorAll("a")];
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    let current = -1;
+    heads.forEach((h, i) => { if (h.getBoundingClientRect().top <= 120) current = i; });
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) current = heads.length - 1;
+    links.forEach((a, i) => (i === current ? a.setAttribute("aria-current", "location") : a.removeAttribute("aria-current")));
+  };
+  window.addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  update();
+}
+
+/* ── Printing ─────────────────────────────────────────────────── */
+
+const SITE = "project-campus-gilt.vercel.app";
+const printSource = (path) =>
+  `<p class="print-only print-source">From the Project CAMPUS master document, version 0.2: ${SITE}/${path}. An independent proposal, not officially affiliated with Visayas State University.</p>`;
+
+/* ── The whole document on one page ───────────────────────────── */
+
+async function renderAll(el, chapters) {
+  const linkMap = {};
+  chapters.forEach((c) => { if (c.source && c.slug) linkMap[c.source.split("/").pop()] = `#ch-${c.slug}`; });
+  const refs = loadRefIndex(chapters);
+  const texts = await Promise.all(
+    chapters.map(async (c) => {
+      try {
+        const res = await fetch(c.source);
+        return res.ok ? await res.text() : null;
+      } catch (err) {
+        return null;
+      }
+    })
+  );
+
+  const contents = chapters
+    .map((c) => `<li class="${isSubChapter(c) ? "is-sub" : ""}"><a href="#ch-${c.slug}"><span class="n">${pad2(c.number)}</span><span class="t">${escapeHtml(c.title)}</span></a></li>`)
+    .join("");
+  const intro = `<header class="doc-intro">
+      <div class="lockup"><span>Project CAMPUS</span><span class="x">×</span><span class="vsu">Visayas State University</span></div>
+      <div class="eyebrow">The whole document</div>
+      <h1>Project CAMPUS</h1>
+      <p class="subtitle">A different approach to digital transformation for Visayas State University</p>
+      <p class="doc-byline">Master document, version 0.2. Prepared by Leo M. Subingsubing, Visayas State University Main Campus alumnus, Pangasugan, Baybay City, Leyte.</p>
+      <p class="doc-note">Not officially affiliated with Visayas State University. No VSU office has reviewed, endorsed, or adopted this proposal.</p>
+      <p class="doc-howto screen-only">Every chapter on one page, to read straight through or to print. To save it as a PDF, use your browser's Print command and choose "Save as PDF".</p>
+      <p class="print-only print-source">${SITE}/document.html</p>
+    </header>
+    <nav class="doc-contents" aria-label="Contents"><p class="doc-contents-title">Contents</p><ol>${contents}</ol></nav>`;
+
+  const sections = chapters
+    .map((c, i) => {
+      const eyebrow = `<div class="eyebrow">${c.number === 0 ? "Start here" : `Chapter ${pad2(c.number)}`}${c.status === "outline" ? " · Outline" : ""}</div>`;
+      const body =
+        texts[i] == null
+          ? `<h1>${escapeHtml(c.title)}</h1><p class="chapter-error">This chapter couldn't be loaded. It lives in <code>${escapeHtml(c.source || "")}</code> in the repository.</p>`
+          : renderMarkdown(texts[i], linkMap);
+      return `<section class="doc-chapter" id="ch-${c.slug}">${eyebrow}${body}</section>`;
+    })
+    .join("");
+  el.innerHTML = intro + sections;
+
+  // Section anchors carry their chapter's slug, so they stay unique on one page.
+  el.querySelectorAll(".doc-chapter").forEach((section) => {
+    const slug = section.id.slice(3);
+    const used = new Set();
+    section.querySelectorAll("h2").forEach((h) => {
+      const base = `${slug}--${headingSlug(h.textContent)}`;
+      let id = base;
+      for (let n = 2; used.has(id); n++) id = `${base}-${n}`;
+      used.add(id);
+      h.id = id;
+    });
+  });
+
+  const index = await refs;
+  linkifyRefs(el, index, "*");
+  initRefPreviews(el, index, linkMap);
+  groupClaims(el);
+  initLens(el, el.querySelector(".doc-howto"));
+  el.setAttribute("aria-busy", "false");
+}
+
 async function renderChapter(chapters) {
   const el = document.getElementById("chapter");
   if (!el) return;
+  if (el.dataset.mode === "all") return renderAll(el, chapters);
   const ch = chapters.find((c) => c.slug === currentSlug());
   if (!ch) {
     el.innerHTML = `<p class="chapter-error">This page isn't listed in data/chapters.json.</p>`;
@@ -504,7 +716,8 @@ async function renderChapter(chapters) {
 
   const header = `
     <div class="lockup"><span>Project CAMPUS</span><span class="x">×</span><span class="vsu">${escapeHtml(ch.role || ch.part || "")}</span></div>
-    <div class="eyebrow">${ch.number === 0 ? "Start here" : `Chapter ${pad2(ch.number)}`}${ch.status === "outline" ? " · Outline" : ""}</div>`;
+    <div class="eyebrow">${ch.number === 0 ? "Start here" : `Chapter ${pad2(ch.number)}`}${ch.status === "outline" ? " · Outline" : ""}</div>
+    ${printSource(`${ch.slug}.html`)}`;
 
   const refs = loadRefIndex(chapters);
   try {
@@ -514,6 +727,8 @@ async function renderChapter(chapters) {
     const index = await refs;
     linkifyRefs(el, index, ch.slug);
     initRefPreviews(el, index, linkMap);
+    groupClaims(el);
+    initLens(el, el.querySelector(".subtitle"));
   } catch (err) {
     console.warn("renderChapter() failed:", err.message);
     el.innerHTML = `${header}<h1>${escapeHtml(ch.title)}</h1>
@@ -625,6 +840,17 @@ function initTheme() {
   updateToggleLabels();
 }
 
+function initDocumentLink() {
+  const head = document.querySelector(".spine-head");
+  if (!head || head.querySelector(".spine-doc")) return;
+  const a = document.createElement("a");
+  a.className = "spine-doc";
+  a.href = "document.html";
+  a.textContent = "The whole document on one page";
+  if (ONE_PAGE()) a.setAttribute("aria-current", "page");
+  head.append(a);
+}
+
 function initMobileSpine() {
   const toggle = document.getElementById("spineToggle");
   const spine = document.getElementById("spine");
@@ -643,11 +869,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   initTheme();
   const chapters = await fetchChapters();
   renderSpine(chapters);
+  initDocumentLink();
   renderToc(chapters);
   renderChapterNav(chapters);
   initMobileSpine();
   await renderChapter(chapters);
   initSectionAnchors();
+  initPageToc();
   scrollToHash();
   window.addEventListener("hashchange", scrollToHash);
 });

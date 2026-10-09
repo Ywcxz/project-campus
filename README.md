@@ -24,11 +24,11 @@ CAMPUS (Connecting All Members, Places, and University Services) is a proposal f
 project-campus/
 ├── index.html            cover page
 ├── <slug>.html           25 chapter pages, identical except for their head metadata; each renders its Markdown file
+├── document.html         every chapter on one page, for reading through or printing
 ├── content/              the master document, one Markdown file per chapter
 ├── data/chapters.json    chapter registry: order, titles, parts, status, source file
 ├── js/main.js            renders nav, contents, and chapters (small Markdown renderer)
 ├── css/style.css         design system
-├── fonts/libron/         Libron web fonts and their licence (OFL)
 ├── img/                  icon and link-preview card
 ├── favicon.ico           the icon, for browsers that ask for it by name
 ├── scripts/sync-meta.js  writes each page's title, description, and preview tags
@@ -68,10 +68,13 @@ Push to GitHub and Vercel redeploys (framework preset "Other", no build command)
 
 ## Design notes
 
-- **Palette and type:** a field-notebook look. Newsreader for headings, Libron for chapter text, IBM Plex Sans for the interface and tables, and IBM Plex Mono for numbers, stamps, and status tags. Libron is a reading face descended from Newsreader, self-hosted in `fonts/libron/` under the OFL. Paper and ink tones, because this is a reference document, not a product pitch.
-- **VSU green and gold, used sparingly.** Green marks what the cursor is on (links, chapter rows, buttons, the scrollbar), the part labels, and the university's name in the lockup. Gold marks where you are (the current chapter), the stamps, and the pins. Soft light comes in from the page's corners, gold from the top right and green from the bottom left, and the sidebar has a green wash at its top. The theme toggle is a gold sun by day and a green crescent by night. Chapter text uses a slightly softer ink than headings, because Libron is a dark face. The values are tuned to this paper palette, not taken from an official VSU brand guide.
+- **Palette and type:** a field-notebook look. Newsreader for headings, IBM Plex Sans for body text, and IBM Plex Mono for numbers, stamps, and status tags. Paper and ink tones, because this is a reference document, not a product pitch.
+- **VSU green and gold, used sparingly.** Green marks what the cursor is on (links, chapter rows, buttons, the scrollbar), the part labels, and the university's name in the lockup. Gold marks where you are (the current chapter), the stamps, and the pins. Soft light comes in from the page's corners, gold from the top right and green from the bottom left, and the sidebar has a green wash at its top. The theme toggle is a gold sun by day and a green crescent by night. The values are tuned to this paper palette, not taken from an official VSU brand guide.
 - **The spine nav is the table of contents.** It renders from `chapters.json` everywhere, grouped by part, so status never drifts between the cover and the sidebar. Sub-chapters (2.1, 3.4, 4.5) fold under their chapter: a chevron opens them, and a chapter's own pages open it automatically. Available chapters carry no status label; only an outline or an unstarted chapter says so.
 - **Scrollbars** are thin and rounded with no track, in both themes. When you change an asset in `css/` or `js/`, bump the `?v=` key on every page, because browsers cache those files for a day.
+- **On this page.** On wide screens, chapters with four or more sections list them beside the text and mark the one being read.
+- **Evidence view.** Under each chapter's subtitle, a switch highlights the Established, Proposed, or Unresolved claims, with a count of each, and dims everything else. A claim is the text a tag closes, plus any citation in brackets right after it. The choice carries from page to page in the same tab.
+- **Printing.** Printing any page, or saving it as a PDF, gives a plain light copy: no sidebar or glows, chapters on new pages, outside web addresses written out, and a line naming the source and saying the proposal is independent. `document.html` puts every chapter on one page for printing the whole document at once; the cover and the sidebar link to it.
 - **References preview.** Every D-, Q-, C-, and E- number in a chapter links to its row in the register or the evidence log, and shows that row on hover or keyboard focus. The row you land on is highlighted.
 - **Link previews.** Each page carries its own title and description for Messenger, Facebook, and search engines, with one shared card image (`img/og-card.png`). If an old preview sticks after a change, Facebook's Sharing Debugger refreshes it.
 - **Claim tags are stamps.** Established is solid sea-blue, Proposed is gold, and Unresolved has a dashed border, so a reader can scan a page's evidence at a glance.

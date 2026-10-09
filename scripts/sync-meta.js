@@ -61,7 +61,15 @@ function block(m) {
   ].join("\n");
 }
 
-const pages = [COVER, ...chapters.map(pageMeta)];
+const DOCUMENT = {
+  file: "document.html",
+  title: "The Whole Document — Project CAMPUS",
+  description:
+    "Every chapter of the Project CAMPUS master document on one page, to read straight through, print, or save as a PDF. An independent proposal for Visayas State University.",
+  type: "article",
+};
+
+const pages = [COVER, DOCUMENT, ...chapters.map(pageMeta)];
 const MARKED = /<!-- meta:[\s\S]*?<!-- \/meta -->/;
 const LEGACY = /<meta name="description"[^>]*>\n<title>[^<]*<\/title>/;
 

@@ -6,7 +6,6 @@
     { "source": "/content/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=300" }] },
     { "source": "/css/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] },
     { "source": "/js/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] },
-    { "source": "/fonts/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000" }] },
     { "source": "/img/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] }
   ],
   "redirects": [
