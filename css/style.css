@@ -4,6 +4,13 @@
    for gravitas, plain sans for reading, mono for stamps & IDs.
    ============================================================ */
 
+/* Libron: chapter body text. A reading face descended from Newsreader
+   (via Readerly), self-hosted under the OFL. See fonts/libron/. */
+@font-face { font-family: "Libron"; src: url("../fonts/libron/Libron-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Libron"; src: url("../fonts/libron/Libron-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Libron"; src: url("../fonts/libron/Libron-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Libron"; src: url("../fonts/libron/Libron-BoldItalic.woff2") format("woff2"); font-weight: 700; font-style: italic; font-display: swap; }
+
 :root {
   /* Paper */
   --paper:    #F3F4EE;
@@ -21,7 +28,7 @@
 
   /* Brass: VSU gold, deep enough to read as text. Stamps, chapter
      marks, "you are here". */
-  --brass:    #84620B;
+  --brass:    #7F5E0A;
   --brass-bg: #F4E8C1;
 
   /* VSU green and gold, used sparingly: hover, part labels, the
@@ -32,6 +39,8 @@
   --ribbon:    #17643A;   /* the ribbon's green stays deep in both themes */
   --gold:      #E2AE1C;   /* fills only (ribbon, pins), never text */
   --highlight: #F2DD8C;   /* selected text, like a highlighter */
+  --glow-gold:  rgba(226, 174, 28, .16);
+  --glow-green: rgba(23, 100, 58, .10);
 
   /* Sea — live links, flagship pilot */
   --sea:      #17495A;
@@ -39,6 +48,7 @@
 
   --font-display: 'Newsreader', Georgia, serif;
   --font-body:    'IBM Plex Sans', -apple-system, sans-serif;
+  --font-read:    'Libron', 'Newsreader', Georgia, serif;   /* chapter prose */
   --font-mono:    'IBM Plex Mono', 'Courier New', monospace;
 
   --spine-w: 280px;
@@ -65,6 +75,8 @@
   --ribbon:    #2E8A52;
   --gold:      #E6B53A;
   --highlight: #5C4B1A;
+  --glow-gold:  rgba(230, 181, 58, .11);
+  --glow-green: rgba(46, 138, 82, .20);
   --sea:      #8FC5D0;
   --sea-bg:   #29464B;
   --scroll-thumb:       rgba(238, 240, 231, .20);
@@ -82,6 +94,17 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 a { color: inherit; text-decoration: none; }
+
+/* Soft light at the edges of the page: gold from the top right, green
+   from the bottom left of the reading area. Fixed to the window, so it
+   stays put while the text scrolls. */
+html::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(70vw 60vh at 100% 0%, var(--glow-gold), transparent 70%),
+    radial-gradient(60vw 70vh at var(--glow-left, var(--spine-w)) 100%, var(--glow-green), transparent 70%);
+}
+@media (prefers-contrast: more) { html::before { display: none; } }
 ::selection { background: var(--highlight); color: var(--ink); }
 ol, ul { list-style: none; }
 img, svg { display: block; max-width: 100%; }
@@ -149,8 +172,13 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
    open it automatically. */
 .spine {
   width: var(--spine-w); flex-shrink: 0;
-  /* The ribbon: VSU green over a thin gold line. */
-  background: linear-gradient(var(--ribbon) 0 4px, var(--gold) 4px 6px) top / 100% 6px no-repeat, var(--paper-2);
+  /* The ribbon (VSU green over a thin gold line), a green wash fading
+     down from it, and a faint gold pool at the foot. */
+  background:
+    linear-gradient(var(--ribbon) 0 4px, var(--gold) 4px 6px) top / 100% 6px no-repeat,
+    linear-gradient(var(--glow-green), transparent 260px),
+    radial-gradient(120% 40% at 0% 100%, var(--glow-gold), transparent 70%),
+    var(--paper-2);
   border-right: 1px solid var(--rule);
   position: sticky; top: 0; height: 100vh; height: 100dvh;
   display: flex; flex-direction: column; overflow: hidden;
@@ -394,7 +422,10 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 .heading-anchor:focus-visible {
   outline: 2px solid var(--brass); outline-offset: 3px;
 }
-.chapter p { font-size: 15.5px; color: var(--ink); margin-bottom: 18px; max-width: 640px; }
+.chapter p {
+  font-family: var(--font-read); font-size: 17.5px; line-height: 1.7;
+  color: var(--ink); margin-bottom: 18px; max-width: 640px;
+}
 .chapter p.q {
   font-family: var(--font-display); font-style: italic; font-size: 18px;
   color: var(--ink); border-left: 2px solid var(--brass); padding-left: 18px;
@@ -487,12 +518,16 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 .toc-row.is-outline .s { color: var(--ink-2); }
 .cover-note { margin-top: 44px; font-size: 13px; color: var(--ink-3); max-width: 620px; }
 
-.chapter-loading, .chapter-error { font-size: 14.5px; color: var(--ink-3); margin: 24px 0; }
+.chapter-loading, .chapter-error,
+.chapter .chapter-loading, .chapter .chapter-error { font-family: var(--font-body); font-size: 14.5px; color: var(--ink-3); margin: 24px 0; }
+/* Field cards keep Newsreader's italic, not the reading face. */
+.chapter .field-card-text { font-family: var(--font-display); font-size: 16.5px; margin-bottom: 0; }
 .chapter h3 { font-family: var(--font-display); font-weight: 600; font-size: 18px; margin: 30px 0 10px; }
 .chapter ul, .chapter ol { margin: 0 0 20px; padding-left: 22px; max-width: 640px; }
 .chapter ul { list-style: disc; }
 .chapter ol { list-style: decimal; }
-.chapter li { font-size: 15.5px; margin-bottom: 7px; padding-left: 3px; }
+.chapter li { font-family: var(--font-read); font-size: 17.5px; line-height: 1.65; margin-bottom: 7px; padding-left: 3px; }
+@media (max-width: 900px) { .chapter p, .chapter li { font-size: 17px; } }
 .chapter li::marker { color: var(--brass); }
 .chapter a { border-bottom: 1px solid var(--brass); transition: color .15s, border-color .15s; }
 .chapter a:hover { color: var(--green); border-bottom-color: var(--green); }

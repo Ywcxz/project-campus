@@ -66,9 +66,9 @@ What this means for CAMPUS:
 
 - **Facebook and Messenger.** In the Digital 2026 report, 94.9% of Philippine internet users aged 16 and over had used Facebook in the past month, against a global average of 56.9%, and 90.6% had used Messenger. [Established] This is the network effect the risk register warns about ([Chapter 10](10-risks.md)).
 - **Office pages on Facebook.** Universities in the region use Facebook as an official help channel: EVSU directs applicants with questions to its admission office's Facebook page. [Established] VSU keeps an official Facebook page; which VSU offices answer students on Facebook is not known. [Unresolved] The landscape study will map the official pages that exist ([Chapter 7.1](07a-facebook-study.md)). [Proposed]
-- **Freedom walls and confession pages.** Philippine university freedom walls are anonymous Facebook pages run by unnamed administrators. [Established] A 2025 student study of the three most followed, at UP Diliman, National University, and Ateneo de Manila, found they open up student discourse but raise cyberbullying, misinformation, and privacy concerns, and it called for accountability within anonymous spaces. [Established] A Canadian study of 2,712 posts on one university's confessions page found that 26.1% supported students' learning, through asking for and giving academic help. [Established] The network's "Answers people can trust" therefore competes partly with anonymous pages students already use for help. [Proposed] Whether VSU has active pages of this kind, and what students use them for, is a question for the landscape study and the interviews. [Unresolved] One VSU case is on record: in April 2025, VSU's student media investigated a public Facebook group for VSU people, with over 12,500 members and anonymous posting, for online hate and a false accusation against a student ([Chapter 2](02-social-network.md)). [Established]
+- **Freedom walls and confession pages.** Philippine university freedom walls are anonymous Facebook pages run by unnamed administrators. [Established] A 2025 student study of the three most followed, at UP Diliman, National University, and Ateneo de Manila, found they open up student discourse but raise cyberbullying, misinformation, and privacy concerns, and it called for accountability within anonymous spaces. [Established] A Canadian study of 2,712 posts on one university's confessions page found that 26.1% supported students' learning, through asking for and giving academic help. [Established] The network's "Answers people can trust" therefore competes partly with anonymous pages students already use for help. [Proposed] Whether VSU has active pages of this kind, and what students use them for, is a question for the landscape study and the interviews. [Unresolved] One VSU case is on record: in April 2025, VSU's student media investigated a public Facebook group for VSU people, with over 12,500 members and anonymous posting, for online hate and a false accusation against a student ([Chapter 3](03-social-network.md)). [Established]
 - **Official channels by rule.** A Philippine college designated student email and moderated Facebook groups as its official channels in June 2026, and discouraged class group chats because announcements were drowned out, rumors outran official statements, and notifications disturbed rest. [Established] This is the "Facebook, done better" alternative the network's pilot compares against (D-067). [Proposed]
-- **Group chats.** In the author's experience, batches, classes, and organizations coordinate in Messenger group chats, where answers are buried within days and each batch asks again ([Chapter 2](02-social-network.md)). [Unresolved] Group chats are outside the Facebook study's reach, since private groups and chats are out of its scope (D-041), so the interviews and the survey are the only way to see them. [Established]
+- **Group chats.** In the author's experience, batches, classes, and organizations coordinate in Messenger group chats, where answers are buried within days and each batch asks again ([Chapter 3](03-social-network.md)). [Unresolved] Group chats are outside the Facebook study's reach, since private groups and chats are out of its scope (D-041), so the interviews and the survey are the only way to see them. [Established]
 - **Delivery and errands.** foodpanda delivers in Tacloban and lets customers schedule orders up to seven days ahead. [Established] Errand runs, the *pabili* that Hop-It's name echoes, are an established service: Grab offers a pabili option in which a rider buys items for the customer, and Facebook groups connect people with riders who run errands. [Established] Whether any of these operate in Baybay City or onto the campus has not been checked. [Unresolved] Scheduling and errand-running alone are therefore not Hop-It's difference; pooling scheduled orders into shared runs is. [Proposed]
 
 ## Philippine universities and apps
@@ -114,12 +114,12 @@ Workplace from Meta remains the closest precedent: a version of Facebook for int
 
 ## Local-first infrastructure
 
-[Chapter 4](04-intranet.md) sets out the campus-first design; this section reviews who has built pieces of it. This pass found no university running the whole design, which does not prove that none does. [Unresolved]
+[Chapter 2](02-intranet.md) sets out the campus-first design; this section reviews who has built pieces of it. This pass found no university running the whole design, which does not prove that none does. [Unresolved]
 
-- **Local-first software.** Kleppmann and colleagues (2019) argue that cloud apps take ownership away from users and stop working when a service shuts down, and they propose software that works offline and syncs across devices, using data structures called CRDTs. [Established] It is the research basis for the device ring and the tiered sync in [Chapter 4](04-intranet.md), and it names the risk Workplace's customers met. [Proposed]
+- **Local-first software.** Kleppmann and colleagues (2019) argue that cloud apps take ownership away from users and stop working when a service shuts down, and they propose software that works offline and syncs across devices, using data structures called CRDTs. [Established] It is the research basis for the device ring and the tiered sync in [Chapter 2](02-intranet.md), and it names the risk Workplace's customers met. [Proposed]
 - **Kolibri.** An open-source, offline-first learning platform from Learning Equality, launched in 2017, that runs on low-cost devices from a local server. Its makers report reaching more than 13 million learners and teachers in over 220 countries and territories, including government school systems in the Philippines. [Established] It shows the local-server pattern working for learning content; it is not a community network. [Proposed]
 - **University chat servers.** The Matrix deployments above show an institution-owned path for messaging. [Established]
-- **VSU's continuity work.** The solar-backed data center, the fiber backbone rebuilt after Typhoon Haiyan, and the continuity framework show VSU already investing in keeping ICT running through disruption ([Chapter 4](04-intranet.md)). Whether that extends to student-facing services is for VSU ICT. [Unresolved]
+- **VSU's continuity work.** The solar-backed data center, the fiber backbone rebuilt after Typhoon Haiyan, and the continuity framework show VSU already investing in keeping ICT running through disruption ([Chapter 2](02-intranet.md)). Whether that extends to student-facing services is for VSU ICT. [Unresolved]
 
 | System | What it is | Lesson for CAMPUS |
 | --- | --- | --- |
@@ -135,7 +135,7 @@ Workplace from Meta remains the closest precedent: a version of Facebook for int
 | EVSU smart campus, 2024 | A first phase budgeted at ₱1.5 billion, with an innovation hub, a fabrication laboratory, smart classrooms, command-and-control facilities, tracking cameras, and face-recognition ID checks | A neighboring state university is investing heavily in campus infrastructure. [Established] CAMPUS's direction centers on where information lives, and proposes no cameras or face recognition. [Proposed] |
 | Truman State University and Purdue University, US | Truman State ranks traffic in five tiers, academic first and peer-to-peer last, and slows lower tiers; Purdue filtered heavy streaming in classrooms on weekday hours and left residence halls out | Academic priority with a fair share is established practice; Purdue also found that only 4% of one building's traffic went to academic sites. [Established] Prioritizing without blocking is the owner's direction (D-059). [Established] |
 | Ifugao State University cell site, 2022 | A Smart cell site built on the campus, giving it a second carrier's signal | Weak mobile signal on a campus can be fixed by the carriers themselves. [Established] |
-| 00000JAPAN, Japan | Free Wi-Fi with no sign-in that participating providers open after disasters, at public places and shelters | An emergency network open to everyone is a tested practice ([Chapter 4.1](04a-emergencies.md)). [Established] |
+| 00000JAPAN, Japan | Free Wi-Fi with no sign-in that participating providers open after disasters, at public places and shelters | An emergency network open to everyone is a tested practice ([Chapter 2.1](02a-emergencies.md)). [Established] |
 | INASP bandwidth study, 2003 | Case studies of universities in Ethiopia, Tanzania, Uganda, Malawi, Sri Lanka, and South Africa | Measure how bandwidth is used before buying more or building around it. [Established] |
 | Proxy cache thesis, UP Los Baños, 1998 | A master's thesis on the performance of a proxy cache hierarchy on a small network | Philippine universities studied campus caching while it was still possible; the full text is not online. [Established] |
 | Named Data Networking, US universities | A network design in which routers cache data by name, so repeated requests are answered nearby | The general form of the caching idea remains a research design, not something VSU could deploy today. [Established] |
@@ -144,7 +144,7 @@ What CAMPUS adds is a combination, not a component: a campus-first rule for VSU-
 
 ## Campus digital twins
 
-Reviewed only lightly, since the digital twin is a later direction ([Chapter 5](05-later-directions.md)). [Established]
+Reviewed only lightly, since the digital twin is research only ([Chapter 4.5](04e-digital-twin.md)). [Established]
 
 - The University of Glasgow built a digital twin of its Western Campus and three heavily used student buildings with an energy-modeling firm, feeding it building-management data, as part of a smart campus program. [Established]
 - The University of Manchester turned 3D scans of its music and drama centre into a virtual induction that students complete before using its rehearsal rooms, which helped them get familiar with the space. [Established]
@@ -152,7 +152,7 @@ Reviewed only lightly, since the digital twin is a later direction ([Chapter 5](
 
 ## Patterns the use-case inventory borrows
 
-[Chapter 2.1](02a-use-cases.md) borrows patterns, not products. [Established]
+[Chapter 3.1](03a-use-cases.md) borrows patterns, not products. [Established]
 
 | Pattern | Seen in | Use in CAMPUS | Watch for |
 | --- | --- | --- | --- |
@@ -185,14 +185,14 @@ Reviewed only lightly, since the digital twin is a later direction ([Chapter 5](
 | VSU's own systems | First pass from public pages; owners and data unknown (Q-10) |
 | What VSU people use | Desk research done; VSU-specific use waits on field research |
 | Philippine universities | First pass, with additions on 8 October 2026; other state universities in the region not yet checked |
-| International platforms | Second pass, 8 October 2026, with [Chapter 2](02-social-network.md) |
+| International platforms | Second pass, 8 October 2026, with [Chapter 3](03-social-network.md) |
 | Campus delivery | First pass; delivery coverage in Baybay not yet checked |
-| Local-first infrastructure | Second pass, 8 October 2026, with [Chapter 4](04-intranet.md) |
+| Local-first infrastructure | Second pass, 8 October 2026, with [Chapter 2](02-intranet.md) |
 | Campus digital twins | Light pass |
 
 ## Sources
 
-Checked on 4 October 2026, except the local-first infrastructure and network sources added on 8 October 2026. The source type follows each entry ([Chapter 8](08-governance.md)). Sources for VSU's own network are listed in [Chapter 4](04-intranet.md), and for VSU's student-facing systems in [Chapter 2.3](02c-network-fit.md).
+Checked on 4 October 2026, except the local-first infrastructure and network sources added on 8 October 2026. The source type follows each entry ([Chapter 8](08-governance.md)). Sources for VSU's own network are listed in [Chapter 2](02-intranet.md), and for VSU's student-facing systems in [Chapter 3.3](03c-network-fit.md).
 
 - Visayas State University. [Third State of the University Address](https://www.vsu.edu.ph/articles/news/3045-3rd-state-of-the-university-address), 18 September 2026. Official.
 - Visayas State University. [Key Officials](https://www.vsu.edu.ph/administration), [Citizen's Charter](https://www.vsu.edu.ph/citizens-charter), [Helpdesk](https://helpdesk.vsu.edu.ph/open.php), [Document Request and Tracking System](https://docrequest.vsu.edu.ph/), and [E-Learning Environment](https://elearning.vsu.edu.ph). Official.

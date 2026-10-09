@@ -135,7 +135,7 @@ function cellCountSep(line) {
   const md = unit.window.renderMarkdown;
   check(md("Hi <script>alert(1)</script>").includes("&lt;script&gt;"), "renderer escapes HTML");
   check(md("[x](javascript:alert(1))").includes('href="#"'), "renderer blocks javascript: links");
-  check(md("[Hop-It](03-hop-it.md)", { "03-hop-it.md": "hop-it.html" }).includes('href="hop-it.html"'), "renderer rewrites chapter links");
+  check(md("[Hop-It](04a-hop-it.md)", { "04a-hop-it.md": "hop-it.html" }).includes('href="hop-it.html"'), "renderer rewrites chapter links");
   check(md("A claim. [Proposed]").includes('class="tag tag-proposed"'), "renderer turns tags into stamps");
   check(md("> **Note.** Text").includes('class="field-card"'), "renderer makes field cards");
   check(md("# T\n\n*Sub*").includes('class="subtitle"'), "renderer detects the subtitle");

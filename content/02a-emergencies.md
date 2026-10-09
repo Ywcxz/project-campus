@@ -2,7 +2,7 @@
 
 *Keeping campus information and contact alive when power and outside links fail*
 
-Twice in thirteen years, weather has tested VSU's connections. In November 2013, Typhoon Haiyan destroyed the university's internet leased line and about 90% of its fiber backbone ([Chapter 4](04-intranet.md)). In April 2022, after four days of rain from Tropical Storm Agaton, students were trapped on campus, floodwater entered dormitories and academic buildings, and residents from shorelines, waterways, and slopes nearby were evacuated into VSU's academic buildings. [Established] This chapter asks what the campus ring could do on days like those. Like the rest of the intranet direction, it is a proposal for VSU, not a request. [Proposed] (D-060)
+Twice in thirteen years, weather has tested VSU's connections. In November 2013, Typhoon Haiyan destroyed the university's internet leased line and about 90% of its fiber backbone ([Chapter 2](02-intranet.md)). In April 2022, after four days of rain from Tropical Storm Agaton, students were trapped on campus, floodwater entered dormitories and academic buildings, and residents from shorelines, waterways, and slopes nearby were evacuated into VSU's academic buildings. [Established] This chapter asks what the campus ring could do on days like those. Like the rest of the intranet direction, it is a proposal for VSU, not a request. [Proposed] (D-060)
 
 > **In short.** In an emergency the campus ring's job narrows to five things: official advisories, where to go, who is safe, how to reach help, and keeping fact apart from rumor. It can do them without the internet if three conditions hold: power at the right buildings, a network open to everyone sheltering there, and services that live on campus and on phones. [Proposed]
 

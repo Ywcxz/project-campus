@@ -62,7 +62,7 @@ Integration       VSU systems and outside services, through approved interfaces
 Infrastructure    campus network and servers, cloud, devices, the physical campus
 ```
 
-The products map onto these layers. The social/academic network is the first experience built on the relational layer, and the campus intranet would be the infrastructure underneath. Hop-It stays outside the stack for now: a separate product that tests delivery on its own. [Proposed]
+The products map onto these layers. The social/academic network is the first experience built on the relational layer, and the campus intranet would be the infrastructure underneath. Hop-It stays outside the stack for now: a separate product that tests delivery on its own. [Proposed] The other products in [Chapter 4](04-products.md), such as the marketplace and Wayfinder, would sit in the experience layer and share the relational layer's members and places. [Proposed]
 
 ## What CAMPUS is not
 

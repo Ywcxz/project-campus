@@ -6,11 +6,12 @@ None of these is a commitment. Each needs its own evidence, governance review, a
 
 | Direction | What it would do | Why it waits |
 | --- | --- | --- |
-| Digital twin | An interactive model of the campus: buildings, rooms, facilities, and what happens in them | Needs spatial data, operational integration, and infrastructure far beyond any first product. Basic place information can come earlier inside other products. [Deferred] |
 | High-school-to-college bridging | Connecting prospective and incoming students with VSU before they enroll | Not yet defined. The Education Protocol Concept is a separate project, not part of CAMPUS. [Unresolved] |
 | Learning record | Linking programs, courses, competencies, projects, and achievements across a student's time at VSU | Academic records are sensitive, and CAMPUS must never become the authoritative record system. [Deferred] |
 | Research discovery | Finding researchers, expertise, projects, laboratories, and publications | Must not duplicate VSU's research repositories or management systems. It could grow from the network's relational model and the topics members choose to help with (D-071, D-075). [Deferred] |
 | Analytics and AI, including GIS | Insight and assistance built on governed data | Only in this order: governed data, meaningful relationships, a validated use case, then analytics or AI. Never the reverse. [Deferred] |
+
+The digital twin was listed here until 9 October 2026, when it moved to the products, keeping the same conditions ([Chapter 4.5](04e-digital-twin.md), D-077). [Established]
 
 Pathways, v0.1's education-to-career dimension, is not on the current list. It stays parked in the archive unless a decision revives it (v0.1 §7.4; D-022).
 
