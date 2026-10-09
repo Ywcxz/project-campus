@@ -23,12 +23,15 @@ CAMPUS (Connecting All Members, Places, and University Services) is a proposal f
 ```
 project-campus/
 ├── index.html            cover page
-├── <slug>.html           25 identical chapter pages; each renders its Markdown file
+├── <slug>.html           25 chapter pages, identical except for their head metadata; each renders its Markdown file
 ├── content/              the master document, one Markdown file per chapter
 ├── data/chapters.json    chapter registry: order, titles, parts, status, source file
 ├── js/main.js            renders nav, contents, and chapters (small Markdown renderer)
 ├── css/style.css         design system
 ├── fonts/libron/         Libron web fonts and their licence (OFL)
+├── img/                  icon and link-preview card
+├── favicon.ico           the icon, for browsers that ask for it by name
+├── scripts/sync-meta.js  writes each page's title, description, and preview tags
 ├── archive/v0.1/         the v0.1 blueprint and planning file, unchanged
 ├── tests/                jsdom render test
 ├── .github/workflows/    runs the render test on every pull request
@@ -39,6 +42,7 @@ project-campus/
 
 - **Change a chapter:** edit its file in `content/`. GitHub and the site read the same file.
 - **Add a chapter:** see [content/README.md](content/README.md).
+- **Change a title or subtitle:** edit `data/chapters.json`, then run `node scripts/sync-meta.js` so link previews match. The render test fails until you do.
 - **Record a decision:** add a row to `content/12-decisions.md`.
 
 ## Run and test locally
@@ -68,6 +72,8 @@ Push to GitHub and Vercel redeploys (framework preset "Other", no build command)
 - **VSU green and gold, used sparingly.** Green marks what the cursor is on (links, chapter rows, buttons, the scrollbar), the part labels, and the university's name in the lockup. Gold marks where you are (the current chapter), the stamps, and the pins. Soft light comes in from the page's corners, gold from the top right and green from the bottom left, and the sidebar has a green wash at its top. The theme toggle is a gold sun by day and a green crescent by night. Chapter text uses a slightly softer ink than headings, because Libron is a dark face. The values are tuned to this paper palette, not taken from an official VSU brand guide.
 - **The spine nav is the table of contents.** It renders from `chapters.json` everywhere, grouped by part, so status never drifts between the cover and the sidebar. Sub-chapters (2.1, 3.4, 4.5) fold under their chapter: a chevron opens them, and a chapter's own pages open it automatically. Available chapters carry no status label; only an outline or an unstarted chapter says so.
 - **Scrollbars** are thin and rounded with no track, in both themes. When you change an asset in `css/` or `js/`, bump the `?v=` key on every page, because browsers cache those files for a day.
+- **References preview.** Every D-, Q-, C-, and E- number in a chapter links to its row in the register or the evidence log, and shows that row on hover or keyboard focus. The row you land on is highlighted.
+- **Link previews.** Each page carries its own title and description for Messenger, Facebook, and search engines, with one shared card image (`img/og-card.png`). If an old preview sticks after a change, Facebook's Sharing Debugger refreshes it.
 - **Claim tags are stamps.** Established is solid sea-blue, Proposed is gold, and Unresolved has a dashed border, so a reader can scan a page's evidence at a glance.
 - **Field cards,** the dashed and slightly rotated boxes, hold principles and notes like pinned index cards from field research.
 

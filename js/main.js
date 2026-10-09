@@ -279,7 +279,10 @@ function renderMarkdown(source, linkMap = {}) {
       while (i < lines.length && lines[i].includes("|") && !/^\s*$/.test(lines[i])) rows.push(splitRow(lines[i++]));
       const th = head.map((cell) => `<th>${renderInline(cell, linkMap)}</th>`).join("");
       const body = rows
-        .map((row) => `<tr>${head.map((_, k) => `<td>${renderInline(row[k] || "", linkMap)}</td>`).join("")}</tr>`)
+        .map((row) => {
+          const id = REF_ROW.test(row[0] || "") ? ` id="${row[0].toLowerCase()}"` : "";
+          return `<tr${id}>${head.map((_, k) => `<td>${renderInline(row[k] || "", linkMap)}</td>`).join("")}</tr>`;
+        })
         .join("");
       const wide = head.length >= 4 ? ' class="wide"' : "";
       out.push(`<div class="table-wrap"><table${wide}><thead><tr>${th}</tr></thead><tbody>${body}</tbody></table></div>`);
@@ -327,6 +330,159 @@ function renderMarkdown(source, linkMap = {}) {
   return out.join("\n");
 }
 
+/* ── References: D-061, Q-36, C-01, E-010 ─────────────────────
+   Every decision, open question, correction, and evidence item has a
+   row in the register (Chapter 12) or the evidence log (Chapter 7).
+   Mentions anywhere in a chapter link to that row, and show the row
+   in a small preview on hover or keyboard focus.
+   ──────────────────────────────────────────────────────────── */
+
+const REF_ROW = /^[DQCE]-\d{2,3}$/;
+const REF_MENTION = /\b[DQCE]-\d{2,3}\b/g;
+const REF_KIND = { D: "Decision", Q: "Open question", C: "Correction", E: "Evidence" };
+const HAS_TAG = new RegExp(TAG_PATTERN.source); // non-global copy: safe for .test()
+
+function parseRefRows(source, page) {
+  const rows = {};
+  let section = "";
+  String(source).split("\n").forEach((line) => {
+    const heading = line.match(/^##\s+(.+)/);
+    if (heading) section = heading[1];
+    if (!/^\|/.test(line)) return;
+    const cells = splitRow(line);
+    if (!REF_ROW.test(cells[0])) return;
+    const id = cells[0];
+    const letter = id[0];
+    let status = cells.slice(2).find((c) => HAS_TAG.test(c)) || "";
+    if (letter === "Q") status = `Priority ${cells[2] || "not set"}`;
+    if (letter === "C") status = cells[2] ? `Fixed ${cells[2]}` : "";
+    if (letter === "E") status = cells[2] || "";
+    const kind = letter === "D" && /v0\.1/.test(section) ? "Decision carried from v0.1" : REF_KIND[letter];
+    rows[id] = { id, page, kind, text: cells[1] || "", status };
+  });
+  return rows;
+}
+
+async function loadRefIndex(chapters) {
+  const sources = chapters.filter((c) => c.slug === "decisions" || c.slug === "evidence");
+  const parts = await Promise.all(
+    sources.map(async (c) => {
+      try {
+        const res = await fetch(c.source);
+        return res.ok ? parseRefRows(await res.text(), `${c.slug}.html`) : {};
+      } catch (err) {
+        return {};
+      }
+    })
+  );
+  return Object.assign({}, ...parts);
+}
+
+function linkifyRefs(root, index, here) {
+  if (!root || !Object.keys(index).length) return;
+  const skip = "a, code, pre, h1, h2, h3, h4, .eyebrow, .lockup";
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+    acceptNode(node) {
+      REF_MENTION.lastIndex = 0;
+      if (!REF_MENTION.test(node.nodeValue)) return NodeFilter.FILTER_SKIP;
+      const parent = node.parentElement;
+      if (!parent || parent.closest(skip)) return NodeFilter.FILTER_REJECT;
+      // A row's own ID cell doesn't link to itself.
+      const cell = parent.closest("td");
+      if (cell && !cell.previousElementSibling && REF_ROW.test(cell.textContent.trim())) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  });
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  nodes.forEach((node) => {
+    const text = node.nodeValue;
+    const frag = document.createDocumentFragment();
+    let last = 0;
+    text.replace(REF_MENTION, (id, at) => {
+      const ref = index[id];
+      if (!ref) return id;
+      frag.append(text.slice(last, at));
+      const a = document.createElement("a");
+      a.className = "ref";
+      a.href = `${ref.page === `${here}.html` ? "" : ref.page}#${id.toLowerCase()}`;
+      a.dataset.ref = id;
+      a.textContent = id;
+      frag.append(a);
+      last = at + id.length;
+      return id;
+    });
+    if (!last) return;
+    frag.append(text.slice(last));
+    node.replaceWith(frag);
+  });
+}
+
+function refPreviewHTML(ref, linkMap) {
+  const plain = ref.text.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
+  const short = plain.length > 300 ? `${plain.slice(0, 300).replace(/\s+\S*$/, "")}…` : plain;
+  const status = HAS_TAG.test(ref.status) ? renderInline(ref.status, linkMap) : escapeHtml(ref.status);
+  return `<div class="ref-preview-head"><span class="ref-preview-id">${escapeHtml(ref.id)}</span><span class="ref-preview-kind">${escapeHtml(ref.kind)}</span>${
+    ref.status ? `<span class="ref-preview-status">${status}</span>` : ""
+  }</div><p class="ref-preview-text">${renderInline(short, linkMap)}</p>`;
+}
+
+function initRefPreviews(root, index, linkMap) {
+  if (!root || !Object.keys(index).length) return;
+  const card = document.createElement("div");
+  card.className = "ref-preview";
+  card.id = "refPreview";
+  card.setAttribute("role", "tooltip");
+  card.hidden = true;
+  document.body.append(card);
+  let current = null;
+  let timer = null;
+
+  const place = (a) => {
+    const r = a.getBoundingClientRect();
+    const w = Math.min(340, window.innerWidth - 24);
+    card.style.width = `${w}px`;
+    const left = Math.max(12, Math.min(r.left, window.innerWidth - w - 12));
+    card.style.left = `${left}px`;
+    const below = r.bottom + 8;
+    const h = card.offsetHeight;
+    card.style.top = `${below + h > window.innerHeight - 8 && r.top - h - 8 > 8 ? r.top - h - 8 : below}px`;
+  };
+  const show = (a) => {
+    const ref = index[a.dataset.ref];
+    if (!ref) return;
+    current = a;
+    card.innerHTML = refPreviewHTML(ref, linkMap);
+    card.hidden = false;
+    place(a);
+    a.setAttribute("aria-describedby", "refPreview");
+  };
+  const hide = () => {
+    clearTimeout(timer);
+    if (current) current.removeAttribute("aria-describedby");
+    current = null;
+    card.hidden = true;
+  };
+
+  root.addEventListener("mouseover", (e) => {
+    const a = e.target.closest("a.ref");
+    if (!a || a === current) return;
+    clearTimeout(timer);
+    timer = setTimeout(() => show(a), 120);
+  });
+  root.addEventListener("mouseout", (e) => {
+    const a = e.target.closest("a.ref");
+    if (a && !a.contains(e.relatedTarget)) hide();
+  });
+  root.addEventListener("focusin", (e) => {
+    const a = e.target.closest("a.ref");
+    if (a) show(a);
+  });
+  root.addEventListener("focusout", hide);
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") hide(); });
+  window.addEventListener("scroll", hide, { passive: true });
+}
+
 async function renderChapter(chapters) {
   const el = document.getElementById("chapter");
   if (!el) return;
@@ -350,10 +506,14 @@ async function renderChapter(chapters) {
     <div class="lockup"><span>Project CAMPUS</span><span class="x">×</span><span class="vsu">${escapeHtml(ch.role || ch.part || "")}</span></div>
     <div class="eyebrow">${ch.number === 0 ? "Start here" : `Chapter ${pad2(ch.number)}`}${ch.status === "outline" ? " · Outline" : ""}</div>`;
 
+  const refs = loadRefIndex(chapters);
   try {
     const res = await fetch(ch.source);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     el.innerHTML = header + renderMarkdown(await res.text(), linkMap);
+    const index = await refs;
+    linkifyRefs(el, index, ch.slug);
+    initRefPreviews(el, index, linkMap);
   } catch (err) {
     console.warn("renderChapter() failed:", err.message);
     el.innerHTML = `${header}<h1>${escapeHtml(ch.title)}</h1>
@@ -397,9 +557,12 @@ function initSectionAnchors() {
 }
 
 function scrollToHash() {
+  document.querySelectorAll(".is-target").forEach((el) => el.classList.remove("is-target"));
   if (!window.location.hash) return;
   const target = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
-  if (target) target.scrollIntoView();
+  if (!target) return;
+  if (target.tagName === "TR") target.classList.add("is-target");
+  target.scrollIntoView();
 }
 
 function readStoredTheme() {
@@ -486,4 +649,5 @@ document.addEventListener("DOMContentLoaded", async () => {
   await renderChapter(chapters);
   initSectionAnchors();
   scrollToHash();
+  window.addEventListener("hashchange", scrollToHash);
 });

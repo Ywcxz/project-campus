@@ -10,6 +10,15 @@ const ROOT = path.resolve(__dirname, "..");
 const read = (p) => fs.readFileSync(path.join(ROOT, p), "utf8");
 const chapters = JSON.parse(read("data/chapters.json"));
 const mainJs = read("js/main.js");
+const meta = require("../scripts/sync-meta.js");
+const REF_IDS = new Map();
+for (const [file, page] of [["content/12-decisions.md", "decisions.html"], ["content/07-evidence.md", "evidence.html"]]) {
+  for (const line of read(file).split("\n")) {
+    const m = line.match(/^\|\s*([DQCE]-\d{2,3})\s*\|/);
+    if (m) REF_IDS.set(m[1].toLowerCase(), page);
+  }
+}
+let refLinks = 0;
 const RAW_TAG = /\[(Established|Proposed|Unresolved|Deferred|Superseded|Rejected|Investigating|Under review)\]/;
 
 let checks = 0;
@@ -62,6 +71,16 @@ function cellCountSep(line) {
 }
 
 (async () => {
+  // Static metadata: what link previews and search engines read.
+  for (const m of meta.pages) {
+    const html = read(m.file);
+    const found = html.match(meta.MARKED);
+    check(found && found[0] === meta.block(m), `${m.file}: head metadata matches data/chapters.json (run node scripts/sync-meta.js)`);
+  }
+  for (const f of ["img/og-card.png", "img/favicon.svg", "img/apple-touch-icon.png", "favicon.ico"]) {
+    check(fs.existsSync(path.join(ROOT, f)), `${f} exists`);
+  }
+
   const cover = load("index.html");
   await settle(cover, (d) => d.querySelectorAll("#tocGrid .toc-row").length > 0);
   const c = cover.window.document;
@@ -118,6 +137,13 @@ function cellCountSep(line) {
       check(href !== "#", `${label} link "${a.textContent.trim()}" has a usable target`);
       check(targetExists(href), `${label} link target exists: ${href}`);
     });
+    article.querySelectorAll("a.ref").forEach((a) => {
+      refLinks++;
+      const [file, hash] = a.getAttribute("href").split("#");
+      const id = (hash || "").toLowerCase();
+      check(REF_IDS.has(id), `${label} reference ${a.textContent} points to a row that exists`);
+      check((file || `${ch.slug}.html`) === REF_IDS.get(id), `${label} reference ${a.textContent} points to the right page`);
+    });
     check(d.querySelectorAll("#spineList .spine-item").length === chapters.length, `${label} spine lists every chapter`);
     check(Boolean(d.querySelector("#spineList .spine-item.active")), `${label} spine marks this chapter`);
     check(d.querySelectorAll('#spineList [aria-current="page"]').length === 1, `${label} spine marks exactly one current page`);
@@ -129,6 +155,15 @@ function cellCountSep(line) {
     check(d.title.startsWith(ch.title), `${label} document title set`);
     dom.window.close();
   }
+
+  check(refLinks > 100, `decision and question references are linked across chapters (${refLinks})`);
+  const reg = load("decisions.html");
+  await settle(reg, (d) => d.getElementById("chapter")?.getAttribute("aria-busy") === "false");
+  const rd = reg.window.document;
+  check(Boolean(rd.querySelector("tr#d-061")) && Boolean(rd.querySelector("tr#q-36")), "register rows carry anchors");
+  check(![...rd.querySelectorAll("a.ref")].some((a) => a.textContent === "Q-03"), "resolved questions without a row stay plain text");
+  check(!rd.querySelector("tr#d-061 td:first-child a"), "a row's own ID does not link to itself");
+  reg.window.close();
 
   const unit = load("overview.html");
   await settle(unit, (d) => d.getElementById("chapter")?.getAttribute("aria-busy") === "false");
