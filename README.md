@@ -15,6 +15,7 @@ CAMPUS (Connecting All Members, Places, and University Services) is a proposal f
 ## Sources of truth
 
 - **This repository** is the master document. A decision counts once it is in [the decision register](content/13-decisions.md).
+- **What people read** (the concept note, the documentary site, and the pitch deck) is built from this repository and points back to it (D-082).
 - **Hop-It** is governed by its Alpha PRD v1.0 and Functional Specification v1.0, which this repository summarizes but does not yet contain.
 - **Stakeholder records** are kept in a private log outside this repository, by design (D-030).
 
@@ -32,9 +33,12 @@ project-campus/
 ├── img/                  icon and link-preview card
 ├── favicon.ico           the icon, for browsers that ask for it by name
 ├── scripts/sync-meta.js  writes each page's title, description, and preview tags
+├── scripts/archive-sources.js  lists cited pages and whether the Wayback Machine holds a copy
+├── scripts/hooks/        the name guard, a pre-commit hook that keeps stakeholder names out
 ├── archive/v0.1/         the v0.1 blueprint and planning file, unchanged
 ├── tests/                jsdom render test
-├── .github/workflows/    runs the render test on every pull request
+├── .github/workflows/    the render test on every pull request; a weekly link check
+├── CLAUDE.md             working rules for Claude sessions in this repository
 └── vercel.json           cache headers and redirects from v0.1 URLs
 ```
 
@@ -44,6 +48,8 @@ project-campus/
 - **Add a chapter:** see [content/README.md](content/README.md).
 - **Change a title or subtitle:** edit `data/chapters.json`, then run `node scripts/sync-meta.js` so link previews match. The render test fails until you do.
 - **Record a decision:** add a row to `content/13-decisions.md`.
+- **Add evidence:** add a row to the evidence register in `content/08-evidence.md`, with its source linked, a confidence rating, and the date you checked it. The render test enforces the format.
+- **Turn on the name guard** once per clone: `git config core.hooksPath scripts/hooks`. It reads stakeholder names from `~/.config/project-campus/private-names.txt`, outside this repository, and stops any commit that adds one (D-030).
 
 ## Run and test locally
 
@@ -60,11 +66,11 @@ node --check js/main.js
 cd tests && npm install && npm test
 ```
 
-GitHub runs the same checks on every pull request and every push to `main`, and shows the result on the PR as "Render test".
+GitHub runs the same checks on every pull request and every push to `main`, and shows the result on the PR as "Render test". A separate "Link check" runs every Monday, and on demand from the Actions tab, and fails when a cited page stops answering; it never requests Facebook or any other Meta site (D-041). To see which cited pages have a copy in the Wayback Machine, with save links for the rest, run `node scripts/archive-sources.js --missing`.
 
 ## Deploy
 
-Push to GitHub and Vercel redeploys (framework preset "Other", no build command). `.vercelignore` keeps `tests/` and `.github/` out of deploys. Old v0.1 URLs, including `/instructions.txt`, redirect to their nearest v0.2 page.
+Push to GitHub and Vercel redeploys (framework preset "Other", no build command). `.vercelignore` keeps `tests/`, `scripts/`, `.github/`, and `CLAUDE.md` out of deploys. Old v0.1 URLs, including `/instructions.txt`, redirect to their nearest v0.2 page.
 
 ## Design notes
 
@@ -75,7 +81,7 @@ Push to GitHub and Vercel redeploys (framework preset "Other", no build command)
 - **On this page.** On wide screens, chapters with four or more sections list them beside the text and mark the one being read.
 - **Evidence view.** Under each chapter's subtitle, a switch highlights the Established, Proposed, or Unresolved claims, with a count of each, and dims everything else. A claim is the text a tag closes, plus any citation in brackets right after it. The choice carries from page to page in the same tab.
 - **Printing.** Printing any page, or saving it as a PDF, gives a plain light copy: no sidebar or glows, chapters on new pages, outside web addresses written out, and a line naming the source and saying the proposal is independent. `document.html` puts every chapter on one page for printing the whole document at once; the cover and the sidebar link to it.
-- **References preview.** Every D-, Q-, C-, and E- number in a chapter links to its row in the register or the evidence log, and shows that row on hover or keyboard focus. The row you land on is highlighted.
+- **References preview.** Every D-, Q-, C-, E-, and P- number in a chapter links to its row in the decision register or the evidence chapter, and shows that row on hover or keyboard focus; evidence rows show their confidence too. The row you land on is highlighted.
 - **Link previews.** Each page carries its own title and description for Messenger, Facebook, and search engines, with one shared card image (`img/og-card.png`). If an old preview sticks after a change, Facebook's Sharing Debugger refreshes it.
 - **Claim tags are stamps.** Established is solid sea-blue, Proposed is gold, and Unresolved has a dashed border, so a reader can scan a page's evidence at a glance.
 - **Field cards,** the dashed and slightly rotated boxes, hold principles and notes like pinned index cards from field research.

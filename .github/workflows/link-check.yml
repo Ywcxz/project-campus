@@ -1,0 +1,43 @@
+# Checks every outside link in the master document once a week, and on
+# demand from the Actions tab. It does not run on pull requests, so a slow
+# or blocked site never holds up a merge; a failed run emails the owner.
+# Meta sites are never requested (project rule 8; D-041).
+name: Link check
+
+on:
+  schedule:
+    - cron: "17 1 * * 1" # Mondays, 9:17 a.m. in the Philippines
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    name: Link check
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Check outside links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          fail: true
+          args: >-
+            --no-progress
+            --max-concurrency 4
+            --timeout 30
+            --max-retries 2
+            --accept 200..=299,403,429
+            --exclude 'facebook\.com'
+            --exclude 'fb\.(com|me|watch)'
+            --exclude 'instagram\.com'
+            --exclude 'threads\.(net|com)'
+            --exclude 'whatsapp\.com'
+            --exclude 'messenger\.com'
+            --exclude 'atmeta\.com'
+            --exclude '(//|\.)meta\.com'
+            --exclude '//m\.me/'
+            README.md
+            'content/*.md'

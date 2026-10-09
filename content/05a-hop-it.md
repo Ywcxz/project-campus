@@ -81,5 +81,5 @@ PRD → runnable Alpha slices → synthetic rehearsal → individual baseline
 ## Sources
 
 - Agatz, N., Campbell, A., Fleischmann, M., and Savelsbergh, M. (2011). Time Slot Management in Attended Home Delivery. *Transportation Science*, 45(3), 435–449. [doi:10.1287/trsc.1100.0346](https://doi.org/10.1287/trsc.1100.0346)
-- Savelsbergh, M., and Van Woensel, T. (2016). New Opportunities and Challenges for City Logistics. *Transportation Research Procedia*, 12, 5–13. [doi:10.1016/j.trpro.2016.02.004](https://doi.org/10.1016/j.trpro.2016.02.004)
+- Taniguchi, E., Thompson, R. G., and Yamada, T. (2016). New Opportunities and Challenges for City Logistics. *Transportation Research Procedia*, 12, 5–13. [doi:10.1016/j.trpro.2016.02.004](https://doi.org/10.1016/j.trpro.2016.02.004). The Hop-It PRD credits this paper to Savelsbergh and Van Woensel (C-03).
 - Hop-It Alpha PRD v1.0 and Functional Specification v1.0, not yet published in this repository. [Unresolved]

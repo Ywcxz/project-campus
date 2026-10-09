@@ -339,16 +339,17 @@ function renderMarkdown(source, linkMap = {}) {
   return out.join("\n");
 }
 
-/* ── References: D-061, Q-36, C-01, E-010 ─────────────────────
-   Every decision, open question, correction, and evidence item has a
-   row in the register (Chapter 12) or the evidence log (Chapter 7).
+/* ── References: D-061, Q-36, C-01, E-010, P-07 ───────────────
+   Every decision, open question, and correction has a row in the
+   decision register (Chapter 13); every evidence item and problem
+   hypothesis has one in the evidence chapter (Chapter 8).
    Mentions anywhere in a chapter link to that row, and show the row
    in a small preview on hover or keyboard focus.
    ──────────────────────────────────────────────────────────── */
 
-const REF_ROW = /^[DQCE]-\d{2,3}$/;
-const REF_MENTION = /\b[DQCE]-\d{2,3}\b/g;
-const REF_KIND = { D: "Decision", Q: "Open question", C: "Correction", E: "Evidence" };
+const REF_ROW = /^[DQCEP]-\d{2,3}$/;
+const REF_MENTION = /\b[DQCEP]-\d{2,3}\b/g;
+const REF_KIND = { D: "Decision", Q: "Open question", C: "Correction", E: "Evidence", P: "Problem hypothesis" };
 const HAS_TAG = new RegExp(TAG_PATTERN.source); // non-global copy: safe for .test()
 
 function parseRefRows(source, page) {
@@ -365,7 +366,7 @@ function parseRefRows(source, page) {
     let status = cells.slice(2).find((c) => HAS_TAG.test(c)) || "";
     if (letter === "Q") status = `Priority ${cells[2] || "not set"}`;
     if (letter === "C") status = cells[2] ? `Fixed ${cells[2]}` : "";
-    if (letter === "E") status = cells[2] || "";
+    if (letter === "E") status = [cells[2], cells[5] && `${cells[5]} confidence`].filter(Boolean).join(" · ");
     const kind = letter === "D" && /v0\.1/.test(section) ? "Decision carried from v0.1" : REF_KIND[letter];
     rows[id] = { id, page, kind, text: cells[1] || "", status };
   });
