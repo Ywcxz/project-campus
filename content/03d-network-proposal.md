@@ -70,11 +70,11 @@ Every row is a proposal. [Proposed] No gain should be promised in money or hours
 
 ## The asks, in order
 
-Each ask is a separate step on the milestone ladder and needs its own evidence. [Established] (D-029)
+Each ask is a separate step and needs its own evidence. The first is a research permission, tracked apart from the milestone ladder; the others are steps on it. [Established] (D-029, D-090)
 
 | Step | The ask | Evidence brought | What VSU gives | Ladder stage |
 | --- | --- | --- | --- | --- |
-| 1 | Permission to run the student survey | The survey site and how it handles data | Permission | Permission, for research only |
+| 1 | Permission to run the student survey | The survey site and how it handles data | Written permission | None: a research permission ([Chapter 12](12-roadmap.md), D-090) |
 | 2 | Interest in CAMPUS, asked separately | This document and the documentary site | A follow-up | Recognition, then interest |
 | 3 | One office's commitment to answer students within an agreed time, on a channel it already uses | Survey and interview findings that clear the D-038 bars | Staff time for a set period | Alignment |
 | 4 | Permission for a one-semester pilot in one community | The results of step 3, and the pilot proposal below | Written permission naming the scope | Permission to prototype |

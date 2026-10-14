@@ -70,6 +70,7 @@ What this means for CAMPUS:
 - **Official channels by rule.** A Philippine college designated student email and moderated Facebook groups as its official channels in June 2026, and discouraged class group chats because announcements were drowned out, rumors outran official statements, and notifications disturbed rest. [Established] This is the "Facebook, done better" alternative the network's pilot compares against (D-067). [Proposed]
 - **Group chats.** In the author's experience, batches, classes, and organizations coordinate in Messenger group chats, where answers are buried within days and each batch asks again ([Chapter 3](03-social-network.md)). [Unresolved] Group chats are outside the Facebook study's reach, since private groups and chats are out of its scope (D-041), so the interviews and the survey are the only way to see them. [Established]
 - **Delivery and errands.** foodpanda delivers in Tacloban and lets customers schedule orders up to seven days ahead. [Established] Errand runs, the *pabili* that Hop-It's name echoes, are an established service: Grab offers a pabili option in which a rider buys items for the customer, and Facebook groups connect people with riders who run errands. [Established] Whether any of these operate in Baybay City or onto the campus has not been checked. [Unresolved] Scheduling and errand-running alone are therefore not Hop-It's difference; pooling scheduled orders into shared runs is. [Proposed]
+- **Student-built tools.** VSU students have built campus tools of their own. An unofficial, student-led campus map for VSU describes building search, facility details, events, and walking directions. [Established] (E-052) The author also knows of student projects for a smart campus, for deliveries, and for boarding houses, none known to be endorsed by VSU. [Unresolved] What they do, and whether they are active, has not been checked, so how CAMPUS would differ from them is not yet known. [Unresolved] They are the closest local precedents for the digital twin's first step, Hop-It, and Housing, and their makers could become collaborators. [Proposed]
 
 ## Philippine universities and apps
 
@@ -111,6 +112,7 @@ Workplace from Meta remains the closest precedent: a version of Facebook for int
 - **Robot delivery.** Starship pioneered campus robot delivery at George Mason University in 2019 and grew to 67 campuses before announcing in May 2026 that it was shifting its US focus away from campuses; by its own estimate, its robots found only about seven months of work a year on a campus. [Established] Others continue: Ohio State's 125 Avride robots made nearly 235,000 deliveries to campus buildings in the 2025–2026 academic year. [Established] Campus demand follows the academic calendar, which Hop-It's PRD does not yet address. [Proposed] (Q-19)
 - **Order bundling.** Research using real meal-delivery data treats meal delivery as one of the hardest last-mile problems, since an order is expected within the hour, and finds potential benefits in bundling orders, scheduling courier shifts, and managing demand. [Established] (Yıldız and Savelsbergh, 2019; Reyes et al., 2018) Hop-It's scheduled windows are a form of demand management: they trade speed for orders that can share a run. [Proposed]
 - **Scheduled ordering** already exists in mainstream apps (above), so Hop-It's difference is pooling scheduled campus orders into shared runs, with human dispatch and fixed campus drop points. [Proposed]
+- **At VSU.** Students have built delivery services of their own, by the author's account. [Unresolved] How they work, whether they pool orders, and whether they are active have not been checked, so Hop-It's difference from them is not yet known. [Unresolved]
 
 ## Local-first infrastructure
 
@@ -178,6 +180,7 @@ Reviewed only lightly, since the digital twin is research only ([Chapter 4](04-d
 7. For the intranet, start with measurement, keep shared caches to those run with content owners and to curated collections, and build security on identity and metadata rather than inspection (D-056, D-057, D-058). [Proposed]
 8. For the network, start dense in one community, be useful to one person before being social, give members ownership of their spaces, and test the network against a well-run Facebook group with the same office commitment (D-062, D-067, D-068). [Proposed]
 9. Show existing answers before a question posts, route questions to helpers who opted in, and recognize helpers without public scores or points (D-071, D-072). [Proposed]
+10. Find out what VSU's student-built tools already do before the twin's first step is proposed, before Hop-It runs with real users, and before Housing grows, and ask their makers whether CAMPUS could build on their work rather than beside it (Q-54). [Proposed]
 
 ## Status
 
@@ -187,7 +190,7 @@ Reviewed only lightly, since the digital twin is research only ([Chapter 4](04-d
 | What VSU people use | Desk research done; VSU-specific use waits on field research |
 | Philippine universities | First pass, with additions on 8 October 2026; other state universities in the region not yet checked |
 | International platforms | Second pass, 8 October 2026, with [Chapter 3](03-social-network.md) |
-| Campus delivery | First pass; delivery coverage in Baybay not yet checked |
+| Campus delivery | First pass; delivery coverage in Baybay, and VSU students' own delivery services, not yet checked |
 | Local-first infrastructure | Second pass, 8 October 2026, with [Chapter 2](02-intranet.md) |
 | Campus digital twins | Light pass |
 

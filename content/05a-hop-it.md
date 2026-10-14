@@ -19,7 +19,7 @@ The name comes from the Bisaya *hapit*, as in *magpahapit ko sa tindahan*: askin
 | What evidence? | The design draws on last-mile delivery research. There is no local demand estimate, field study, or willingness-to-pay data yet. [Established] |
 | Relation to existing systems? | None by design: no CAMPUS sign-on, no student-system data, and no assumed VSU integration. It is not automatically a CAMPUS subsystem. [Established] |
 | Stage? | MVP: an Alpha with controlled participants, after a synthetic rehearsal. [Established] |
-| Privacy, governance, and cost? | It collects only participant name and phone, delivery location, and fulfillment evidence, and handles no payments. Retention, consent, privacy notice, and incident handling need approval before real users. [Established] |
+| Privacy, governance, and cost? | It collects only participant name and phone, a username and password for sign-in (D-091), delivery location, and fulfillment evidence, and handles no payments. Retention, consent, privacy notice, and incident handling need approval before real users. [Established] Passwords would be kept only in a form that cannot be read back. [Proposed] |
 | How could it be disproved? | Compatible orders turn out too rare to pool, or pooled runs cut effort but break the guardrails on lateness, cancellations, failures, or acceptability. A disproved hypothesis is a valid Alpha result. [Established] |
 
 ## The hypothesis
@@ -52,7 +52,7 @@ Starting defaults, all configurable: 30-minute windows, 30-minute lead time, and
 
 Payments and wallets; maps, routing, and live traffic; automatic dispatch, AI, and forecasting; open vendor onboarding; full SMS, email, or push messaging; and any CAMPUS sign-on or VSU data. [Established] (PRD §5.2)
 
-The build is a modular monolith: a mobile-first React and TypeScript PWA, a FastAPI API, PostgreSQL, a simple worker, and Docker, on top of an existing authentication and participant-management foundation. [Established] (PRD §5.3)
+The build is a modular monolith: a mobile-first React and TypeScript PWA, a FastAPI API, PostgreSQL, a simple worker, and Docker. [Established] (PRD §5.3) The PRD builds on an existing authentication and participant-management foundation, which this document cannot verify. [Unresolved] The owner has since decided that the Alpha's participants sign in with a username and password checked against Hop-It's own database, in place of the PRD's one-time codes; the PRD and the Functional Specification are to be revised to match. [Established] (D-091)
 
 ## Why Hop-It comes first
 
@@ -67,7 +67,9 @@ A real-user Alpha on campus still touches the university: delivery locations, ve
 
 ## Decisions still open before real users
 
-Pilot area and zones; operating hours and slot capacity; window length and the priority promise; capacity and restricted items; fees, payouts, and cost inputs; how payment happens outside the platform; recruitment and consent; the sign-in and notification providers; retention, privacy notice, and incident process; and the success and guardrail thresholds. [Unresolved] (PRD §20; Spec §17)
+Pilot area and zones; operating hours and slot capacity; window length and the priority promise; who may ride, and on what safety, insurance, and liability terms (Q-07); capacity and restricted items; rider payouts and cost inputs; how payment for the food happens outside the platform; recruitment and consent; the notification provider; retention, privacy notice, and incident process; and the success and guardrail thresholds. [Unresolved] (PRD §20; Spec §17)
+
+Settled since the PRD: sign-in uses a username and password (D-091), and the first test on campus uses selected participants (faculty, staff, students, riders, and vendors), charges customers and vendors no fees, and pays or otherwise rewards riders. [Established] (D-092) With no fees, the test measures delivery effort per order and whether people accept waiting, not what they would pay. [Proposed]
 
 ## Road to a decision
 

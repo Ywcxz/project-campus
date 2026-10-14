@@ -31,6 +31,18 @@ Field research feeds Chapters 3 and 8 and supplies the documentary site's and th
 
 Interest is not permission, permission is not a pilot, and a pilot is not adoption. v0.1 had an eighth stage, commercialization, which is gone because CAMPUS is not a commercial product (D-029). As of October 2026, no VSU office has reached any stage. [Established]
 
+## Permissions
+
+Some steps need a permission that is not a stage of support. Each is asked for and granted on its own, in writing, and none of them moves VSU up the ladder. [Established] (D-090)
+
+| Permission | What it allows | Who grants it, as far as known | Status, October 2026 |
+| --- | --- | --- | --- |
+| Research permission | Running the student survey and the interviews | Asked of OVPSAS first (D-083); the deciding office is open (Q-51) | Not yet asked |
+| Ethics clearance | Research with people as participants | VSU's Research Ethics Board, through its Human Ethics Review Committee, if its review covers a study by an alumnus (E-051, Q-51) | Not yet asked |
+| Access to VSU data or systems | Aggregate network figures (D-058), or a look inside VSU's existing systems | VSU ICT for network figures; otherwise each system's owner, not yet known (Q-10) | Not yet asked |
+
+Informal advice and feedback from VSU people count as none of these. [Established] (D-090) Permission to prototype and the pilot are permissions too, and they stay on the ladder as stages of support (D-029). [Established]
+
 ## Environments
 
 Work moves through environments in order, so a prototype is never mistaken for a service: local development, controlled prototype, demonstration, research test, institutional pilot (only with authorization), and production (only after adoption). [Established] (v0.1 §12.21)
