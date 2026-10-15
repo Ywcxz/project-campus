@@ -7,13 +7,15 @@ This master document is the reference, and what people read is built from it: a 
 ## Outputs and steps
 
 1. **Master document.** This document, the reference for everything after it. Decisions live in its register.
-2. **Concept note.** A short note for the first approach to OVPSAS, built from this document (D-083) and tried first on readers the author trusts (D-095).
+2. **Concept note.** A short note for the first approach to OVPSAS, built from this document (D-083) and tried first on readers the author trusts (D-095). It is printed, with a PDF of the same text, and the documentary site is its interactive companion (D-100).
 3. **Scrollytelling documentary site.** Interactive, for students, faculty, staff, and administration. Readers choose topics, expand them, and see real VSU examples. It is built now, with placeholders where VSU evidence is still missing, filled in as field research reports. Administration and other interested parties see it early; students see it only after they have answered the survey (D-084).
 4. **Student survey site.** Built alongside the documentary site, on a site of its own, so respondents don't read the proposal before answering (D-037, D-039).
-5. **OVPSAS.** Two separate asks: permission to run the survey and the interviews, and interest in CAMPUS ([Chapter 3.4](03d-network-proposal.md); D-083).
-6. **Field research.** The survey once permission is granted, the student interviews, and the Facebook landscape study ([Chapter 8.1](08a-facebook-study.md)). Which parts need VSU's permission or an ethics review is open (Q-51), and the protocol is published in [Chapter 8](08-evidence.md) before the survey opens (D-086).
-7. **Pitch slides.** For OVPSAS first. Problem slides use only problems that clear the D-038 bars.
-8. **Hop-It Alpha.** Follows its PRD: synthetic rehearsal, individual baseline, bundled cohort, evidence report, decision.
+5. **Network prototype.** A small prototype of the network on made-up data, built alongside steps 2 to 4 to show the author can build what the note proposes. It needs nothing from VSU (D-099, D-014).
+6. **OVPSAS.** Two separate asks: permission to run the survey and the interviews, and interest in CAMPUS ([Chapter 3.4](03d-network-proposal.md); D-083).
+7. **Field research.** The survey once permission is granted, the student interviews, and the Facebook landscape study ([Chapter 8.1](08a-facebook-study.md)). Which parts need VSU's permission or an ethics review is open (Q-51), and the protocol is published in [Chapter 8](08-evidence.md) before the survey opens (D-086).
+8. **Pitch slides.** For OVPSAS first. Problem slides use only problems that clear the D-038 bars.
+
+Hop-It's Alpha is no longer on this list: delivery is a later module of the network, taken up on its own evidence, and its PRD keeps its own sequence for then: synthetic rehearsal, individual baseline, bundled cohort, evidence report, decision. [Established] (D-098)
 
 Field research feeds Chapters 3 and 8 and supplies the documentary site's and the pitch's real VSU examples. [Proposed]
 

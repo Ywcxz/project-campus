@@ -2,7 +2,7 @@
 
 *Verified listings for boarding houses and rentals near campus*
 
-Housing lists boarding houses and rentals near the Main Campus for students who live off campus. University dormitories are not part of it: they stay with VSU's own housing information and the network's dormitory communities. [Established] (D-080) An earlier housing site was retired when Hop-It became the first product, and that decision stands; this entry returns to the same need as one product among several. [Established] (D-028, D-080)
+Housing lists boarding houses and rentals near the Main Campus for students who live off campus. University dormitories are not part of it: they stay with VSU's own housing information and the network's dormitory communities. [Established] (D-080) An earlier housing site was retired, and that decision stands; this entry returns to the same need as a later module of the network. [Established] (D-028, D-098)
 
 ## At a glance
 
@@ -11,7 +11,7 @@ Housing lists boarding houses and rentals near the Main Campus for students who 
 | What problem? | Finding a boarding house or a rental near campus runs on word of mouth and group posts. Listings go stale, and students can't easily compare vacancy, price, house rules, or safety. [Unresolved] |
 | Who needs it? | Students who live off campus, above all incoming and transferring students and their parents, and landlords near campus who want tenants. [Proposed] How many VSU students live off campus is not known here. [Unresolved] |
 | What evidence? | VSU's 25 dormitories and cottages had 1,772 resident students in 2023 ([Chapter 2](02-intranet.md)). [Established] Nothing yet on how off-campus students find housing; the survey could ask. [Unresolved] |
-| Relation to existing systems? | VSU's website carries student housing information ([Chapter 10](10-related-work.md)). [Established] Housing would link to it and cover what it does not: private rentals off campus. [Proposed] Whether VSU or Baybay City accredits or inspects boarding houses is unknown; if either does, Housing shows that status rather than inventing its own. [Unresolved] (Q-50) |
+| Relation to existing systems? | VSU's website carries student housing information ([Chapter 10](10-related-work.md)). [Established] Housing would link to it and cover what it does not: private rentals off campus. [Proposed] Whether VSU or Baybay City accredits or inspects boarding houses is unknown; if either does, Housing shows that status rather than inventing its own. [Unresolved] (Q-50) Students have built boarding-house tools of their own, by the author's account; where one works, the network links to it rather than rebuilding it. [Unresolved] (D-098; [Chapter 10](10-related-work.md)) |
 | Stage? | Later. [Proposed] |
 | Privacy, governance, and cost? | Where a student lives is sensitive, so listings describe the property and never who lives there ([Chapter 9](09-governance.md)). [Proposed] Fake listings and deposit scams are the main risks, and stale listings the main cost. [Proposed] |
 | How could it be disproved? | Students find housing easily; few rooms change hands outside personal networks; landlords won't keep listings current; or VSU already plans the same service. [Proposed] |

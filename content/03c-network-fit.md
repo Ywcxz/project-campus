@@ -48,7 +48,7 @@ The network depends on seventeen concepts. The table compares each with the clos
 | Knowledge that lasts beyond each batch | Website pages, and The Amaranth's archive | No | A memory for guides and answers that outlast each batch |
 | Organizations with members, events, records, and handover | Recognition by student services, and the public list | Partly | Organization spaces that keep their records when officers change |
 | Events and opportunities in one place, kept afterward | The website calendar, announcements, job postings, and scholarship pages | Partly | One place, with reminders, for what concerns each member, and events that keep their materials |
-| Trade among verified members | Nothing at VSU | No | A marketplace where every seller is a verified member, as its own product ([Chapter 5.2](05b-marketplace.md)) |
+| Trade among verified members | Nothing at VSU | No | A marketplace where every seller is a verified member, as a later module of the network ([Chapter 3.5](03e-marketplace.md)) |
 | Rules for online community spaces, with appeal | The student handbook, whose online provisions are not public | Unknown | Rules for community spaces, written with the community (Q-37) |
 | Safe ways to raise concerns, with answers | Planned listening sessions, and offices that take complaints | Partly | A standing channel where concerns can be raised, under a pseudonym if needed, and answered in public |
 | A home ordered by relevance that ends, with no ads | The website, which has no ads but is the same for everyone | No | A digest of what matters to each member |

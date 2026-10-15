@@ -69,7 +69,7 @@ A community is the network's unit: a group of members around something real at V
 | Residence | VSU's 21 student dormitories | Dormitory management, with residents | Residents | Management |
 | Place | The VSU Market, the library | The office that manages the place | Anyone | The managing office |
 | Topic | A crop, coastal research, GIS, photography | The members who start it | Anyone | Its owners |
-| Marketplace, linked | Books, uniforms, gadgets, dormitory items, in the Marketplace product ([Chapter 5.2](05b-marketplace.md)) | The network's moderators | Verified members | Moderators |
+| Marketplace, a later module | Books, uniforms, gadgets, dormitory items, in the marketplace module ([Chapter 3.5](03e-marketplace.md)) | The network's moderators | Verified members | Moderators |
 | Concerns | Problems with services or facilities | The student council and OVPSAS, jointly | Students | The council |
 | Hometown, later | Students from the same province or town | The members who start it | Anyone from there | Its owners |
 
@@ -251,9 +251,9 @@ An event is an entity, not a post that scrolls away. It has a time, a place, org
 
 ## Student services, and the link to the marketplace
 
-The marketplace is its own product, linked from the network rather than built as one of its spaces. [Established] (D-078) Its design, including who may sell, what may be sold, and how trust is earned, is in [Chapter 5.2](05b-marketplace.md). The network links to it from the communities where trading comes up, such as a dormitory or a subject's book exchange, and shares its verified membership and moderators with it. [Proposed]
+The marketplace is a later module of the network, not part of its first version. [Established] (D-098) Its design, including who may sell, what may be sold, and how trust is earned, is in [Chapter 3.5](03e-marketplace.md). The network links to it from the communities where trading comes up, such as a dormitory or a subject's book exchange, and shares its verified membership and moderators with it. [Proposed]
 
-- **Services, later.** Tutoring, printing, layout, and photography listings, reviewed only by confirmed clients, with deliveries handed to Hop-It ([Chapter 5.1](05a-hop-it.md)). [Proposed]
+- **Services, later.** Tutoring, printing, layout, and photography listings, reviewed only by confirmed clients, with deliveries handed to Hop-It ([Chapter 3.7](03g-hop-it.md)). [Proposed]
 
 ## Pseudonymous sections
 

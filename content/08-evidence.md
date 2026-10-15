@@ -31,7 +31,7 @@ CAMPUS has not yet shown, with VSU evidence, that the problems it addresses exis
 | P-21 | Buying and selling between VSU people happens in crowded groups open to strangers and scammers, where a buyer can't tell whether a seller is from VSU | Marketplace | [Unresolved] |
 | P-22 | Finding a boarding house or rental near campus runs on word of mouth and group posts; listings go stale, and students can't easily compare vacancy, price, house rules, or safety | Housing | [Unresolved] |
 
-Each hypothesis keeps its number for good, so survey items, interview prompts, study results, and pitch slides can name the problem they bear on, and every result traces back to one. [Established] (D-085) P-21 and P-22 come from the product entries in [Chapter 5.2](05b-marketplace.md) and [Chapter 5.3](05c-housing.md). [Established]
+Each hypothesis keeps its number for good, so survey items, interview prompts, study results, and pitch slides can name the problem they bear on, and every result traces back to one. [Established] (D-085) P-21 and P-22 come from the module entries in [Chapter 3.5](03e-marketplace.md) and [Chapter 3.6](03f-housing.md). [Established]
 
 Several of these, especially the network rows, come from the author's own observations as an alumnus. That makes them community knowledge: the right questions to test first, not evidence. [Established] The network's wider list of 29 candidate problems is in [Chapter 3.1](03a-use-cases.md).
 
@@ -40,7 +40,7 @@ CAMPUS does not claim that VSU's systems are inadequate, that every group feels 
 ## Evidence on hand
 
 - The author's own experience and observations as a VSU alumnus. This is community knowledge: useful for asking questions, not proof. [Established]
-- Scholarly work on last-mile delivery, which shaped Hop-It's design ([Chapter 5.1](05a-hop-it.md)). [Established]
+- Scholarly work on last-mile delivery, which shaped Hop-It's design ([Chapter 3.7](03g-hop-it.md)). [Established]
 - A field research plan covering student interviews, a survey, problem synthesis, and prototype scoping, with an interview guide and a survey draft. It has not been run, and it is not yet in this repository. [Established] The student survey will run as an interactive page, the scenes prototype. [Established] (D-037) Its protocol will be published in this chapter before the survey opens. [Established] (D-086)
 - A manual, observation-only study of public VSU-related Facebook pages and groups, with its instrument built and checked on synthetic data ([Chapter 8.1](08a-facebook-study.md)). It has not started. [Established] (D-041)
 - Public VSU records of its network, data center, and power, and of the outages after Typhoons Haiyan in 2013 and Odette in 2021, cited in [Chapter 2](02-intranet.md) and its sub-chapters. [Established]

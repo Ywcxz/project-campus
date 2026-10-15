@@ -28,6 +28,7 @@
     { "source": "/manpower-infrastructure-resources.html", "destination": "/roadmap.html", "permanent": false },
     { "source": "/budget-framework.html", "destination": "/roadmap.html", "permanent": false },
     { "source": "/expected-outputs-outcomes.html", "destination": "/roadmap.html", "permanent": false },
-    { "source": "/open-questions-decision-register.html", "destination": "/decisions.html", "permanent": false }
+    { "source": "/open-questions-decision-register.html", "destination": "/decisions.html", "permanent": false },
+    { "source": "/products.html", "destination": "/social-network.html", "permanent": false }
   ]
 }

@@ -297,7 +297,7 @@ Research only, and not on the roadmap: broadcasting campus content over radio or
 
 VSU ICT owns the network, and DIGITS is VSU's own roadmap. Whether CAMPUS relates to DIGITS at all is for VSU to decide ([Chapter 7](07-vsu-context.md)). [Established] This chapter's job is narrower: to show where CAMPUS products could run if VSU ever chose a campus-first backbone, and to keep today's work from blocking that path. [Proposed]
 
-In practice, that means building products that could move to campus servers later, from open components with no dependence on one cloud's proprietary services. [Proposed] Hop-It is built from components (Docker, PostgreSQL, FastAPI) that run on hardware VSU could own. [Proposed]
+In practice, that means building products that could move to campus servers later, from open components with no dependence on one cloud's proprietary services. [Proposed] Hop-It's PRD names components (Docker, PostgreSQL, FastAPI) that run on hardware VSU could own, and the network prototype is held to the same rule. [Proposed] (D-099)
 
 Parts of the work could also become student research. VSU named networking research and experimentation among the aims of its IPv6 work in 2024. [Established] (E-044) The bench test and Stage 0's measurements are the kind of projects students in VSU's computing and engineering programs could take on, if their faculty want them ([Chapter 2.3](02c-ring-tests.md)). [Proposed]
 
