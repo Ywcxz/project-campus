@@ -78,7 +78,7 @@ Three questions must still be settled before the survey opens:
 
 ## The survey protocol, proposed
 
-This is the protocol D-086 requires, set out for the owner to confirm. Every rule in it is fixed before any answer is read. [Proposed] (D-086) The survey opens only once the research permission is granted, and ethics clearance too if VSU requires it, and Q-53 stays open until the owner confirms this protocol. [Established] (D-083, D-090)
+This is the protocol D-086 requires, set out for the owner to confirm. Every rule in it is fixed before any answer is read. [Proposed] (D-086) The survey opens only once the research permission is granted, and ethics clearance too if VSU requires it, and Q-53 stays open until the owner confirms this protocol. [Established] (D-083, D-090) The survey site is due for a major rework; this protocol follows its current version, scenes-v1, and changes with it, item by item. [Proposed]
 
 ### Who takes part
 
@@ -110,7 +110,7 @@ Year, college, and scholarship status are details of a person's education, which
 
 ### Where answers are kept, and who sees them
 
-Answers go through an Apps Script web app to a private Google Sheet, and interview volunteers sign up on a separate form, so contact details never meet answers. [Established] (D-039) Only the author opens the sheet, the Google account that owns it uses two-step verification, and the sheet is never shared by link. [Proposed] VSU receives totals, never individual answers. [Proposed] Nothing from the sheet enters this repository. [Established] (D-086) Google holds the sheet, possibly outside the Philippines; whether that needs anything more under the Data Privacy Act is a question for VSU's data protection officer. [Unresolved] Until the survey opens, its site stays in prototype mode and sends nothing. [Proposed]
+Answers go through an Apps Script web app to a private Google Sheet, and interview volunteers sign up on a separate form, so contact details never meet answers. [Established] (D-039) Only the author opens the sheet, the Google account that owns it uses two-step verification, and the sheet is never shared by link. [Proposed] VSU receives totals, never individual answers. [Proposed] Nothing from the sheet enters this repository. [Established] (D-086) Google holds the sheet, possibly outside the Philippines; whether that needs anything more under the Data Privacy Act is a question for VSU's data protection officer. [Unresolved] Until the survey opens, its link is shared with no one, and any answers that arrive before then are deleted unread. [Proposed]
 
 ### When answers are deleted
 
