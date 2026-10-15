@@ -13,6 +13,7 @@ The network has to fit a university that already runs many systems and plans mor
 | University Google and Microsoft accounts | An @vsu.edu.ph Google account and a Microsoft 365 account for every student, faculty member, and employee; more than 16,000 licenses ready in 2023, renewed each year | Sign-in (Q-06) | VSU news, 2022 and 2023 |
 | VSUEE | VSU's Moodle learning system, university-wide since 2020, with a branded mobile app since July 2022 that downloads course materials and sends push notifications; 17,191 students were enrolled as users by May 2022 | Course discussion and course messages, which stay in VSUEE | VSU news, 2022 |
 | my.VSU | Grades, subjects, and schedules | Role details, only with VSU's permission (Q-39) | VSU Students page |
+| CumulusOne | The student records management system of the university, by VSU's account in April 2026: online enrollment, electronic grade submission, and access to academic records, with a pilot test set for June 2026 (E-049) | Role details, only with VSU's permission (Q-39); the records stay with it | VSU news, 2026 |
 | Helpdesk and document tracker | Tickets with status on osTicket, and document requests with tracking | Reaching the right office; reporting a problem | VSU service pages ([Chapter 10](10-related-work.md)) |
 | Website news, announcements, and calendar | Official news and notices, with public RSS feeds | Official notices | VSU website |
 | Official Facebook page | University news and notices for the public | Official notices; VSU's public face, which stays | VSU website |

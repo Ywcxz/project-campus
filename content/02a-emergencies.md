@@ -104,7 +104,7 @@ Campus safety apps show the pattern where networks work. At the University at Al
 - **Who decides.** The Crisis Management Committee, or someone it names, switches emergency mode on and off. [Proposed]
 - **Logs.** An open network has no sign-in and no consent screen. Japan's guideline bars providers from using its connection logs for commercial purposes. [Established] On campus, emergency logs would be kept only as long as the emergency requires. [Proposed]
 - **Check-in data.** Who is safe, and where, is sensitive, and some students are minors. It would be visible only to those coordinating the response, and deleted once the emergency ends. [Proposed]
-- **Location.** Nothing in emergency mode locates people from the network; a place is shared only when a person sends it (D-089). [Proposed]
+- **Location.** Nothing in emergency mode, or anywhere else in CAMPUS, locates people from network data; a place is shared only when a person sends it. [Established] (D-089) The one other case is the member's own choice: a member may share their own location, from their phone, with people or an office they pick, for a set time, much as Rave Guardian's safety timer does (E-048). It is off by default, ends on its own, and keeps no history. [Established] (D-089) Whether to build it waits with the emergency report, since it needs an office to watch for shared locations. [Proposed] Finding a lost phone is left to the phone's own service. [Established] (D-089)
 - **Accuracy.** Only designated offices post as official; everything else carries its type, so that a rumor never looks like an advisory. [Proposed]
 - **Misuse.** Open networks attract misuse, so emergency mode would offer campus emergency services and a fair share of the internet, nothing more. [Proposed]
 

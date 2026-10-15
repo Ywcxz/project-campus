@@ -29,7 +29,7 @@ Collect only what a feature needs, use it only for that purpose, limit who can a
 
 | Product | Personal data | Main governance risk | Needed before real users |
 | --- | --- | --- | --- |
-| Hop-It | Name, phone, delivery location, fulfillment evidence | Consent and incident handling | Approved retention, consent, privacy notice, and incident process |
+| Hop-It | Name, phone, a username and password for sign-in (D-091), delivery location, fulfillment evidence | Consent and incident handling | Approved retention, consent, privacy notice, and incident process |
 | Social/academic network | Profiles, including education details, which are sensitive personal information; posts, messages, and listings; topics members help with; links between pseudonyms and members | Moderation, speech, scams, minors, a university's power over its students' speech, and a memory that keeps what should fade | Community rules, a moderation owner at VSU, moderation kept apart from institutional response (D-066), a retention schedule that keeps knowledge and lets conversation fade (D-070), a privacy impact assessment and registration through VSU's data protection officer, a legal review of a host's duties (Q-36), and the reveal process for pseudonyms (D-065) |
 | Campus intranet | Whatever the hosted services hold, plus network logs | Security of campus infrastructure, and monitoring that outgrows its purpose | VSU ICT ownership, a security review, and a published network policy that limits logs (D-057) |
 

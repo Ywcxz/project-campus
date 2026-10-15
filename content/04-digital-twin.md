@@ -13,7 +13,7 @@ The Main Campus has 61.6 hectares of grounds and 188 buildings ([Chapter 2](02-i
 | What problem? | Facilities, utilities, and space information sit in separate places, so planning, maintenance, and emergency response can't see the campus as a whole. [Unresolved] Day to day, new students, parents, and visitors can't easily find buildings and offices, or know which office handles a request, so they ask around and make extra trips. [Unresolved] |
 | Who needs it? | Facilities and planning staff, energy managers, and the disaster risk management office for the full model; students, visitors, and Hop-It's riders for its first step. [Proposed] |
 | What evidence? | A light review of campus twins at Glasgow and Manchester ([Chapter 10](10-related-work.md)). [Established] Nothing at VSU yet; interviews could ask how first-year students learned their way around and how many visits a typical request took. [Unresolved] |
-| Relation to existing systems? | VSU has completed an inventory of roads, water, drainage, electrical systems, and GIS, and DIGITS envisions sensors for energy, water, and facilities. [Established] Its Citizen's Charter 2026 lists services, steps, and processing times, and its document tracker and helpdesk track requests ([Chapter 10](10-related-work.md)). [Established] The twin would point to these and hand people into them, never restate them as its own authority. [Proposed] Any twin would be VSU's own, built on VSU's data; CAMPUS would not own it. [Proposed] OneVSU may cover office directories too. [Unresolved] (Q-18) Whether VSU already runs or plans a campus map or directions service has not been confirmed. [Unresolved] (Q-54) The first step is proposed only once systems discovery shows it would not duplicate one. [Proposed] |
+| Relation to existing systems? | VSU has completed an inventory of roads, water, drainage, electrical systems, and GIS, and DIGITS envisions sensors for energy, water, and facilities. [Established] Its Citizen's Charter 2026 lists services, steps, and processing times, and its document tracker and helpdesk track requests ([Chapter 10](10-related-work.md)). [Established] The twin would point to these and hand people into them, never restate them as its own authority. [Proposed] Any twin would be VSU's own, built on VSU's data; CAMPUS would not own it. [Proposed] OneVSU may cover office directories too. [Unresolved] (Q-18) An unofficial, student-led campus map for VSU describes building search, facility details, events, and walking directions. [Established] (E-052) How well it works and how much it is used are not known, and whether VSU runs or plans a map or directions service of its own has not been confirmed. [Unresolved] (Q-54) The first step is proposed only once systems discovery shows it would not duplicate one. [Proposed] |
 | Stage? | The full twin is research only. [Proposed] A full twin is outside any first build. [Established] (v0.1 D-008) Its first step, places and the office guide, needs accurate information and an owner rather than new infrastructure. [Proposed] |
 | Privacy, governance, and cost? | The highest infrastructure cost of anything in this document. [Proposed] It maps places and offices, not people; occupancy is counted, never tracked by person (D-089); and utility maps and sensitive rooms, such as laboratories and the data center, are shown without detail. [Proposed] Keeping it current is a standing cost: every entry needs an owner and a date it was last confirmed. [Proposed] |
 | How could it be disproved? | VSU's GIS and facility systems already meet planning needs; people find places and offices without trouble; no office wants to maintain a twin; or its cost outweighs what VSU would gain. [Proposed] |
@@ -34,10 +34,19 @@ The products build on the early steps: Housing shows distance and the way to cam
 
 Three-dimensional models, simulation, and live sensor dashboards wait until the earlier steps show an office would use them. [Deferred] In the light review, campus twins serve estates and energy teams first, and the student-facing use is closer to a guide to places, which is why that guide comes first here. [Proposed]
 
+### The spatial interface
+
+The author's longer-term idea is a way into the network itself: browsing CAMPUS by place as well as by list, so that a building shows what its communities post there, such as notices, questions, and events. [Proposed] (P-05, P-13) The familiar list would remain for anyone who prefers it. [Proposed]
+
+It stays research only, behind the first step. [Established] (D-093) It needs step 1's places and the network's communities before it has anything to show, it would cost far more to build and keep current than a list, and nothing yet shows that finding things by place beats a list or search for campus tasks. [Proposed] It maps places and what is posted about them, never people. [Established] (D-093)
+
+It would be disproved if people in a test find what they need faster, and with fewer mistakes, in a list than on the map, or if they use the map only in their first weeks on campus. [Proposed]
+
 ## Open questions
 
 - Would VSU share its GIS inventory and the Citizen's Charter in a usable form, and who would keep office information current? (Q-49)
 - Does VSU itself aim for a digital twin, and which office would own one? [Unresolved]
 - What will OneVSU cover for students? (Q-18)
-- Does VSU already run or plan a campus map or directions service that the first step should build on instead? (Q-54)
+- Does VSU, or do its students, already run or plan a campus map or directions service that the first step should build on instead? (Q-54)
+- Would browsing the network by place help people find things faster than a list or search? [Unresolved]
 - Which places should not be mapped in detail? [Unresolved]
