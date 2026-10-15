@@ -56,7 +56,7 @@ The build is a modular monolith: a mobile-first React and TypeScript PWA, a Fast
 
 ## Why it no longer comes first
 
-- Its reasons to come first, that it can be built without any VSU system or data and earns credibility through working software, now serve the network prototype, which shows OVPSAS the very thing CAMPUS proposes. [Established] (D-099)
+- The reasons it came first, that it can be built without any VSU system or data and earns credibility through working software, hold as well for a prototype of the network, which is what CAMPUS itself proposes. [Established] (D-099)
 - Students have built delivery services of their own, by the author's account, so delivery is a weaker proof of what CAMPUS can do than the network itself. [Proposed] ([Chapter 10](10-related-work.md))
 - Its results would still say nothing about the social/academic network. The two test different hypotheses. [Established]
 - Its PRD, its specification, and the decisions made for it (D-091, D-092, D-097) stay in force for when it is taken up. [Established] (D-098)

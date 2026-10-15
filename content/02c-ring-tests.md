@@ -35,7 +35,7 @@ Real phones (a few) ─────────┤
        standing in for services hosted off campus
 ```
 
-The server runs the same kind of open components Hop-It uses, in containers VSU could host later: Docker, PostgreSQL, and FastAPI, with an ordinary web cache in front. [Proposed] The uplink can be switched on, slowed to imitate a congested link, or cut. [Proposed] The scripted phones run on a computer on the same network, so they test the servers, the cache, and the sync, not the radio; how Wi-Fi copes with a crowded room is for the campus test and [Chapter 2.2](02b-campus-network.md). [Proposed] The content is synthetic: notices, files, and discussions written for the test, never VSU's data. [Established] (D-014)
+The server runs open components of the kind Hop-It's PRD names, in containers VSU could host later: Docker, PostgreSQL, and FastAPI, with an ordinary web cache in front. [Proposed] The uplink can be switched on, slowed to imitate a congested link, or cut. [Proposed] The scripted phones run on a computer on the same network, so they test the servers, the cache, and the sync, not the radio; how Wi-Fi copes with a crowded room is for the campus test and [Chapter 2.2](02b-campus-network.md). [Proposed] The content is synthetic: notices, files, and discussions written for the test, never VSU's data. [Established] (D-014)
 
 ## The tests
 
@@ -77,7 +77,7 @@ VSU named networking research and experimentation among the aims of its IPv6 wor
 ## Open questions
 
 - What pass marks should the tests use? (D-088)
-- Should the bench run on Hop-It's stack, or test the open-source parts the network might compose? (Q-33)
+- Should the bench run on the stack Hop-It's PRD names, or on the open-source parts the network might compose? (Q-33)
 - Which faculty, if any, would want parts of this as student research?
 
 [Unresolved]

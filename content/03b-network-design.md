@@ -349,17 +349,18 @@ Server: in the cloud for a pilot, on campus if VSU chooses       Ring 4, later R
   posts, labels, and states · routing by topic · search
   notifications · retention schedule · moderation and audit log
   chat server, only if a pilot calls for it
+  later modules, each on its own evidence: marketplace, Housing, Hop-It
       │ reads, with permission               │ links into
 VSU's public feeds: website news             VSU systems: helpdesk,
 and announcements; WAIS                       document tracker, VSUEE,
-                                              my.VSU; Hop-It
+                                              my.VSU
 ```
 
 - **Data model.** People, roles, communities, spaces, posts, topics, places, and events, with the links between them, stored from the first version so that later features can build on them. [Proposed] (D-075)
 - **Sign-in.** For a pilot, members can prove membership with a one-time code sent to their VSU email address, which needs no integration with VSU's systems. Single sign-on through OpenID Connect with VSU's Google accounts, limited to the vsu.edu.ph domain, or with VSU's own identity system, would come later with VSU ICT's agreement. [Proposed] (Q-06)
 - **Official feeds.** VSU's website already publishes RSS feeds of its news and its announcements. [Established] The network could carry them into the university's official space with their source shown, and could show WAIS advisories, which WAIS already generates as JSON, if VSU's disaster risk management office agrees. [Proposed] (Q-40)
 - **Sync.** The channel model's tiers: official notices within about a minute, other spaces on a slower cycle, and archives only when opened. [Established] (D-034)
-- **Build.** Two paths are open. One composes open-source parts, such as a forum engine like Discourse and, if needed, a Matrix server, behind a thin VSU layer for roles, communities, labels, states, and routing. The other builds the network from scratch on the stack Hop-It uses. [Proposed] (Q-33) The first is faster and better tested; the second fits the labels, states, and routing more closely and shows more of what the project can build. Either way, everything runs in containers VSU could host later, with no dependence on one cloud's proprietary services ([Chapter 2](02-intranet.md)). [Proposed]
+- **Build.** Two paths are open. One composes open-source parts, such as a forum engine like Discourse and, if needed, a Matrix server, behind a thin VSU layer for roles, communities, labels, states, and routing. The other builds the network from scratch on the stack Hop-It's PRD names. [Proposed] (Q-33) The first is faster and better tested; the second fits the labels, states, and routing more closely and shows more of what the project can build. Either way, everything runs in containers VSU could host later, with no dependence on one cloud's proprietary services ([Chapter 2](02-intranet.md)). [Proposed]
 - **Security.** Encrypted connections and storage, a log of every moderator and administrator action, regular backups, and a breach process run with VSU's data protection officer. [Proposed] VSU's own privacy training in 2021 put the guiding rule simply: don't collect what you can't protect. [Established]
 
 ## Scenes

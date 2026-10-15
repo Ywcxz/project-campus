@@ -49,9 +49,9 @@ CAMPUS does not claim that VSU's systems are inadequate, that every group feels 
 
 ## How CAMPUS will find out
 
-The work runs in five streams: problem and user research, institutional systems discovery, technical feasibility, governance and privacy, and research into later directions once they pass a gate. Methods include interviews, observation, surveys, comparative tasks (the current way against a prototype), technical experiments, and Hop-It's Alpha metrics. [Proposed] (v0.1 §11) The first observation study, of public Facebook pages and groups, is set out in [Chapter 8.1](08a-facebook-study.md). [Established] (D-041)
+The work runs in five streams: problem and user research, institutional systems discovery, technical feasibility, governance and privacy, and research into later directions once they pass a gate. Methods include interviews, observation, surveys, comparative tasks (the current way against a prototype), technical experiments, and, once delivery is taken up, Hop-It's Alpha metrics. [Proposed] (v0.1 §11) The first observation study, of public Facebook pages and groups, is set out in [Chapter 8.1](08a-facebook-study.md). [Established] (D-041)
 
-Each product passes these gates in order, and any gate can end in proceed, narrow, redefine, or stop. [Proposed] (adapted from v0.1 §11)
+The network and each of its later modules pass these gates in order, and any gate can end in proceed, narrow, redefine, or stop. [Proposed] (adapted from v0.1 §11)
 
 1. **Problem.** Is the problem real and meaningful at VSU?
 2. **Value.** Does the product do the job better than what people use now?

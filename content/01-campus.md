@@ -62,7 +62,7 @@ Integration       VSU systems and outside services, through approved interfaces
 Infrastructure    campus network and servers, cloud, devices, the physical campus
 ```
 
-CAMPUS's parts map onto these layers. The social/academic network, the one product CAMPUS proposes, is the first experience built on the relational layer, and the campus intranet would be the infrastructure underneath. [Established] (D-098) The network's later modules, the marketplace, Housing, and Hop-It's delivery ([Chapter 3](03-social-network.md)), would sit in the experience layer and share the relational layer's members and places. [Proposed] The digital twin ([Chapter 4](04-digital-twin.md)) would grow the place part of that layer into a model of the whole campus. [Proposed]
+CAMPUS's parts map onto these layers. The social/academic network is the one product CAMPUS proposes, with the campus intranet as its long-term infrastructure. [Established] (D-098) The network would be the first experience built on the relational layer, with the intranet underneath. [Proposed] The network's later modules, the marketplace, Housing, and Hop-It's delivery ([Chapter 3](03-social-network.md)), would sit in the experience layer and share the relational layer's members and places. [Proposed] The digital twin ([Chapter 4](04-digital-twin.md)) would grow the place part of that layer into a model of the whole campus. [Proposed]
 
 ## What CAMPUS is not
 
