@@ -7,10 +7,10 @@ This master document is the reference, and what people read is built from it: a 
 ## Outputs and steps
 
 1. **Master document.** This document, the reference for everything after it. Decisions live in its register.
-2. **Concept note.** A short note for the first approach to OVPSAS, built from this document (D-083).
+2. **Concept note.** A short note for the first approach to OVPSAS, built from this document (D-083) and tried first on readers the author trusts (D-095).
 3. **Scrollytelling documentary site.** Interactive, for students, faculty, staff, and administration. Readers choose topics, expand them, and see real VSU examples. It is built now, with placeholders where VSU evidence is still missing, filled in as field research reports. Administration and other interested parties see it early; students see it only after they have answered the survey (D-084).
 4. **Student survey site.** Built alongside the documentary site, on a site of its own, so respondents don't read the proposal before answering (D-037, D-039).
-5. **OVPSAS.** Two separate asks: permission to run the survey, and interest in CAMPUS ([Chapter 3.4](03d-network-proposal.md); D-083).
+5. **OVPSAS.** Two separate asks: permission to run the survey and the interviews, and interest in CAMPUS ([Chapter 3.4](03d-network-proposal.md); D-083).
 6. **Field research.** The survey once permission is granted, the student interviews, and the Facebook landscape study ([Chapter 8.1](08a-facebook-study.md)). Which parts need VSU's permission or an ethics review is open (Q-51), and the protocol is published in [Chapter 8](08-evidence.md) before the survey opens (D-086).
 7. **Pitch slides.** For OVPSAS first. Problem slides use only problems that clear the D-038 bars.
 8. **Hop-It Alpha.** Follows its PRD: synthetic rehearsal, individual baseline, bundled cohort, evidence report, decision.
@@ -37,7 +37,7 @@ Some steps need a permission that is not a stage of support. Each is asked for a
 
 | Permission | What it allows | Who grants it, as far as known | Status, October 2026 |
 | --- | --- | --- | --- |
-| Research permission | Running the student survey and the interviews | Asked of OVPSAS first (D-083); the deciding office is open (Q-51) | Not yet asked |
+| Research permission | Running the student survey and the interviews, with a campus ID or pass for the author if VSU requires one | Asked of OVPSAS first (D-083); the deciding office is open (Q-51) | Not yet asked |
 | Ethics clearance | Research with people as participants | VSU's Research Ethics Board, through its Human Ethics Review Committee, if its review covers a study by an alumnus (E-051, Q-51) | Not yet asked |
 | Access to VSU data or systems | Aggregate network figures (D-058), or a look inside VSU's existing systems | VSU ICT for network figures; otherwise each system's owner, not yet known (Q-10) | Not yet asked |
 

@@ -4,7 +4,7 @@
 
 The network leads the first pitch, which goes to OVPSAS, the Office of the Vice President for Student Affairs and Services. [Established] (D-024) This chapter plans how to propose it: whom at VSU it concerns, how it serves OVPSAS's own mandate, what the university would gain and give, which asks come in which order, how a pilot would be set up, and which questions to expect. It follows the project's rule that credibility comes from evidence, never from claims. [Established] (project rule 7)
 
-> **In short.** Propose the network as a way to deliver services OVPSAS already owes students, and as a memory that spares offices and seniors from answering the same questions every year, not as an app or a complaints channel. Ask in steps that match the milestone ladder: first, permission to run the survey and, separately, interest in CAMPUS; then, with evidence, one office's commitment to answer students; then a one-semester pilot in one community, judged against thresholds fixed in advance and compared with a well-run Facebook group. Bring evidence and a stop condition to every step, and a plan for VSU to own the network or for it to end cleanly. [Proposed]
+> **In short.** Propose the network as a way to deliver services OVPSAS already owes students, and as a memory that spares offices and seniors from answering the same questions every year, not as an app or a complaints channel. Ask in steps that match the milestone ladder: first, permission to run the survey and the interviews and, separately, interest in CAMPUS; then, with evidence, one office's commitment to answer students; then a one-semester pilot in one community, judged against thresholds fixed in advance and compared with a well-run Facebook group. Bring evidence and a stop condition to every step, and a plan for VSU to own the network or for it to end cleanly. [Proposed]
 
 ## Whom it concerns
 
@@ -74,7 +74,7 @@ Each ask is a separate step and needs its own evidence. The first is a research 
 
 | Step | The ask | Evidence brought | What VSU gives | Ladder stage |
 | --- | --- | --- | --- | --- |
-| 1 | Permission to run the student survey | The survey site and how it handles data | Written permission | None: a research permission ([Chapter 12](12-roadmap.md), D-090) |
+| 1 | Permission to run the student survey and the interviews | The survey site, and how the survey and the interviews handle data ([Chapter 8](08-evidence.md)) | Written permission, and a campus ID or pass for the author if VSU requires one | None: a research permission ([Chapter 12](12-roadmap.md), D-090) |
 | 2 | Interest in CAMPUS, asked separately | This document and the documentary site | A follow-up | Recognition, then interest |
 | 3 | One office's commitment to answer students within an agreed time, on a channel it already uses | Survey and interview findings that clear the D-038 bars | Staff time for a set period | Alignment |
 | 4 | Permission for a one-semester pilot in one community | The results of step 3, and the pilot proposal below | Written permission naming the scope | Permission to prototype |
@@ -120,7 +120,7 @@ Every row is a proposal. [Proposed] The comparison group would be run on Faceboo
 | What data does it collect? | Only what each feature needs, with education details shown only by choice, under VSU's privacy program; knowledge is kept, and conversation fades on a published schedule. | [Chapter 3.2](03b-network-design.md) |
 | Can parents and applicants use it? | Later, through a public section answered by verified members. The pilot is for current college members. | [Chapter 3.2](03b-network-design.md) |
 | Why trust one alumnus with this? | Not on trust: judge the working software, the field evidence, and the recorded decisions. | Project rule 7 |
-| What do you need from us now? | Permission to run the survey. Everything else waits for evidence. | This chapter |
+| What do you need from us now? | Permission to run the survey and the interviews, and, separately, whether CAMPUS interests you. Everything else waits for evidence. | This chapter |
 
 ## How to frame it
 

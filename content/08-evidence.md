@@ -62,17 +62,19 @@ Each product passes these gates in order, and any gate can end in proceed, narro
 
 ## Protecting the people who take part
 
-The student survey and the interviews will be the first time CAMPUS handles anyone's personal information, and permission to run the survey is the first thing it asks of VSU (D-083). [Established] Under the Data Privacy Act of 2012, collecting personal information needs the person's consent or another basis the Act allows, and education details such as program and year count as sensitive personal information, with stricter conditions ([Republic Act No. 10173](https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html), Sections 3, 12, and 13). [Established] (E-041)
+The student survey and the interviews will be the first time CAMPUS handles anyone's personal information, and permission to run the survey and the interviews is the first thing it asks of VSU (D-083). [Established] Under the Data Privacy Act of 2012, collecting personal information needs the person's consent or another basis the Act allows, and education details such as program and year count as sensitive personal information, with stricter conditions ([Republic Act No. 10173](https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html), Sections 3, 12, and 13). [Established] (E-041)
 
 What is settled: the survey runs on a site of its own, its responses go to a private Google Sheet, and interview volunteers sign up on a separate form, so contact details never meet survey answers. [Established] (D-039) The Facebook study records no names, links, quotes, or screenshots, and its workbook stays outside this repository. [Established] (D-041, D-044)
 
 The protocol is published in this chapter before the survey opens: the consent text, how responses are stored, who can see them, when they are deleted, and how the D-038 bars are computed. Responses, contact details, and interview notes never enter this repository. [Established] (D-086)
 
-Three questions must be settled before the survey opens:
+Only students aged 18 and over take part in the first round of the survey and the interviews. If minors are included later, each needs a parent's or legal guardian's consent and their own assent. [Established] (D-094)
+
+Three questions must still be settled before the survey opens:
 
 - Which parts of the field research need VSU's permission or an ethics review, and from which office, when the researcher is an alumnus working outside VSU? (Q-51)
-- Some first-year students may be under 18. Are they screened out, or included with a parent's or guardian's consent? (Q-52)
 - What does the consent screen promise, who can see responses and interview notes, and when are they deleted? (Q-53)
+- Should a problem that applies only to some students be judged against everyone who answers, or only against those it applies to? (Q-57)
 
 ## Evidence register
 

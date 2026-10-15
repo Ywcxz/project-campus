@@ -52,7 +52,7 @@ Starting defaults, all configurable: 30-minute windows, 30-minute lead time, and
 
 Payments and wallets; maps, routing, and live traffic; automatic dispatch, AI, and forecasting; open vendor onboarding; full SMS, email, or push messaging; and any CAMPUS sign-on or VSU data. [Established] (PRD §5.2)
 
-The build is a modular monolith: a mobile-first React and TypeScript PWA, a FastAPI API, PostgreSQL, a simple worker, and Docker. [Established] (PRD §5.3) The PRD builds on an existing authentication and participant-management foundation, which this document cannot verify. [Unresolved] The owner has since decided that the Alpha's participants sign in with a username and password checked against Hop-It's own database, in place of the PRD's one-time codes; the PRD and the Functional Specification are to be revised to match. [Established] (D-091)
+The build is a modular monolith: a mobile-first React and TypeScript PWA, a FastAPI API, PostgreSQL, a simple worker, and Docker. [Established] (PRD §5.3) The PRD assumed an existing authentication and participant-management foundation, but no Hop-It code or repository exists yet, so the Alpha builds its sign-in and participant management from the start. [Established] (C-07) The owner has since decided that the Alpha's participants sign in with a username and password checked against Hop-It's own database, in place of the PRD's one-time codes; the PRD and the Functional Specification are to be revised to match. [Established] (D-091)
 
 ## Why Hop-It comes first
 
@@ -63,11 +63,11 @@ The build is a modular monolith: a mobile-first React and TypeScript PWA, a Fast
 
 ## Independent of VSU systems, not of VSU
 
-A real-user Alpha on campus still touches the university: delivery locations, vendors in the VSU market, rider access, participant recruitment and consent, and data governance. The PRD itself lists these as needing approval before real users. [Established] (PRD §20) On the milestone ladder in [Chapter 12](12-roadmap.md), running Hop-It with real participants on campus is likely a permission-to-prototype step, and should be treated as one. [Proposed]
+A real-user Alpha on campus still touches the university: delivery locations, vendors in the VSU market, rider access, participant recruitment and consent, and data governance. The PRD itself lists these as needing approval before real users. [Established] (PRD §20) On the milestone ladder in [Chapter 12](12-roadmap.md), running Hop-It with real participants on campus is likely a permission-to-prototype step, and should be treated as one. [Proposed] Hop-It is not run as a business in its Alpha: customers and vendors pay no fees in the first campus test. Any later paid operation would be a separate decision, recorded in the register, that needs VSU's permission, and CAMPUS itself stays non-commercial. [Established] (D-097, D-021)
 
 ## Decisions still open before real users
 
-Pilot area and zones; operating hours and slot capacity; window length and the priority promise; who may ride, and on what safety, insurance, and liability terms (Q-07); capacity and restricted items; rider payouts and cost inputs; how payment for the food happens outside the platform; recruitment and consent; the notification provider; retention, privacy notice, and incident process; and the success and guardrail thresholds. [Unresolved] (PRD §20; Spec §17)
+Pilot area and zones; operating hours and slot capacity; window length and the priority promise; who may ride, and on what safety, insurance, and liability terms (Q-07); capacity and restricted items; rider payouts and cost inputs; who covers the test's costs, including riders' pay (Q-56); how payment for the food happens outside the platform; recruitment and consent; the notification provider; retention, privacy notice, and incident process; and the success and guardrail thresholds. [Unresolved] (PRD §20; Spec §17)
 
 Settled since the PRD: sign-in uses a username and password (D-091), and the first test on campus uses selected participants (faculty, staff, students, riders, and vendors), charges customers and vendors no fees, and pays or otherwise rewards riders. [Established] (D-092) With no fees, the test measures delivery effort per order and whether people accept waiting, not what they would pay. [Proposed]
 

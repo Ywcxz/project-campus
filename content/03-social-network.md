@@ -276,7 +276,7 @@ Every stage after the first is a proposal VSU can accept, change, or decline, an
 
 | Stage | What happens | What it needs | Stop or narrow if |
 | --- | --- | --- | --- |
-| 0. Evidence | The survey, interviews, and Facebook study, with problems judged against the D-038 bars | Permission to run the survey | No network problem clears the bars |
+| 0. Evidence | The survey, interviews, and Facebook study, with problems judged against the D-038 bars | Permission to run the survey and the interviews | No network problem clears the bars |
 | 1. An office commits | One office agrees to answer student questions within an agreed time for a set period, on a channel it already uses | OVPSAS and one willing office (D-068) | No office will commit (Q-17) |
 | 2. Bounded pilot | One community for one semester, its memory seeded before launch, compared with a matched community on a well-run Facebook group with the same office commitment, with thresholds fixed before any data is read | Permission to prototype, a moderation owner, a privacy impact assessment with VSU's data protection officer, volunteers for a guide sprint, and members' consent | The network does no better than the comparison, kept answers are rarely reused, or a safety threshold is crossed (D-067) |
 | 3. Wider pilot | More communities, single sign-on with VSU accounts, and official feeds | VSU ICT, the data protection officer, and more offices | Use falls once the novelty fades, or costs outrun the value |
