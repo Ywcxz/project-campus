@@ -34,7 +34,11 @@ Steps 1 and 3 need VSU evidence from the survey, the interviews, and the Faceboo
 
 ### What "social/academic" means
 
-The network is social because it is made of people and groups talking, asking, and trading. It is academic because its shape comes from the university: faculties and departments, offices and their services, organizations and councils, dormitories and places, subjects, and the roles of student, faculty member, and staff. [Proposed] It is not a learning system, which VSU already has in VSUEE, and not a portal for official transactions, which DIGITS plans. [Established] It sits between them, as the place where campus life talks and where the university can answer. [Proposed]
+> **Definition.** The network is VSU's own online space for its academic community: students, faculty, staff, and offices. It is built first for the academic side of university life, so that questions reach someone who can answer and notices and answers stay findable and trustworthy. Around that, it carries campus life: organizations, events, interests, and fun. [Established] (D-101)
+
+The network is social in form: it is made of people and groups talking, asking, trading, and sharing campus life. It is academic in shape: its structure comes from the university's faculties and departments, offices and their services, organizations and councils, dormitories and places, subjects, and the roles of student, faculty member, and staff. [Established] (D-101) It is not a learning system, which VSU already has in VSUEE, and not a portal for official transactions, which DIGITS plans. [Established] It sits between them, as the place where campus life talks and where the university can answer. [Proposed] It is not a site for research profiles and papers either, such as ResearchGate; research discovery stays a later direction ([Chapter 6](06-later-directions.md)). [Established] (D-022, D-101)
+
+What to call it is open: "social/academic network" is a working name, to be revisited once the concept note's readers and the first pitch have weighed in. [Unresolved] (Q-58) "Academic social network" would mislead, since research uses it for sites like ResearchGate and Academia.edu. [Proposed] (E-053)
 
 Each kind of system is built to make something grow. Facebook grows attention, a group chat carries the conversation of the moment, VSUEE delivers courses, and the helpdesk resolves tickets. The network would be built to move knowledge between people and keep it where the next person can find it. [Proposed]
 
@@ -286,7 +290,7 @@ The prototype on made-up data sits outside these stages: it needs nothing from V
 
 ## Later modules
 
-CAMPUS proposes one product, the network, with the campus intranet as its long-term infrastructure. [Established] (D-098) The marketplace, Housing, and Hop-It's delivery are later modules of the network, not separate products, and none of them is part of its first version. [Established] (D-098) That version stays with the three jobs and the memory that keeps them. [Proposed] (Q-02) Each is a short entry until field research supports the problem it names. [Proposed] (principle 1)
+CAMPUS proposes one product, the network, with the campus intranet as its long-term infrastructure. [Established] (D-098) The marketplace, Housing, and Hop-It's delivery are later modules of the network, not separate products, and none of them is part of its first version. [Established] (D-098) That version stays with the three jobs and the memory that keeps them. [Proposed] (Q-02) Each module is a short entry until field research supports the problem it names. [Proposed] (principle 1) Until it is taken up, a module may be shown as a mock-up on made-up data, labeled as a later module, but it is not built as a working prototype; only the network gets one. [Established] (D-099, D-102)
 
 | Module | Its job | Stage | What it builds on |
 | --- | --- | --- | --- |
@@ -343,7 +347,7 @@ The October 2026 revision of this chapter builds the rest of the proposal around
 - Which sections allow pseudonyms, anonymous to whom, and through what process is an identity revealed? (Q-16)
 - Which offices will commit to answering students, and how fast? (Q-17)
 - What will OneVSU Mobile and the Portal cover for students? (Q-18)
-- Should the pilot be composed from open-source parts or built from scratch? (Q-33)
+- Should the prototype, and later the pilot, be composed from open-source parts or built from scratch? (Q-33)
 - Which community should host the first pilot? (Q-34)
 - What measures, thresholds, and comparison decide the pilot? (Q-35)
 - What does the law require of VSU as the host of a network? (Q-36)
@@ -353,18 +357,19 @@ The October 2026 revision of this chapter builds the rest of the proposal around
 - Could the network carry VSU's official feeds, and how would offices post? (Q-40)
 - Which languages should the interface support? (Q-41)
 - Who would own and staff the network after a pilot? (Q-42)
-- Which later module comes first, and on what evidence? (Q-48)
 - How long should conversation, listings, and messages be kept? (Q-43)
 - On what terms are members' guides and answers kept? (Q-44)
 - How would graduates keep or regain membership as alumni? (Q-45)
 - What would bring members back every day? (Q-46)
 - Could faculty contributions count toward their recognized service? (Q-47)
+- Which later module comes first, and on what evidence? (Q-48)
+- What should the network be called? (Q-58)
 
 [Unresolved]
 
 ## Sources
 
-Checked on 8 and 9 October 2026. The source type follows each entry ([Chapter 9](09-governance.md)). Sources for VSU's systems are listed in [Chapter 3.3](03c-network-fit.md).
+Checked on 8 and 9 October 2026, except Jordan (2019), checked on 16 October 2026. The source type follows each entry ([Chapter 9](09-governance.md)). Sources for VSU's systems are listed in [Chapter 3.3](03c-network-fit.md).
 
 - Visayas State University. [Third State of the University Address](https://www.vsu.edu.ph/articles/news/3045-3rd-state-of-the-university-address), 18 September 2026; [All VSU students and staff to get Microsoft and Google licenses](https://www.vsu.edu.ph/articles/news/2394-all-vsu-students-and-staff-to-get-microsoft-google-licenses), 22 August 2023; [VSU implements new vision, mission, organizational structures](https://www.vsu.edu.ph/articles/news/2666-vsu-implements-new-vision-mission-organizational-structures), 16 January 2025; [Accredited Organizations](https://www.vsu.edu.ph/students/accredited-organizations), school year 2022–23; [Graduate faculty of the Department of Food Science and Technology](https://www.vsu.edu.ph/21-content-main/informational/1611-graduate-faculty-of-dept-of-food-science-and-technology), an example of VSU's graduate faculty pages; [VSU UDRMO unveils WAIS](https://www.vsu.edu.ph/articles/news/3011-vsu-udrmo-unveils-wais-strengthens-climate-resilience-efforts), 9 July 2026; [Announcements feed](https://www.vsu.edu.ph/articles/bulletin?format=feed&type=rss); [Proposed Guidelines on Cancellation/Suspension of Classes/Work due to Typhoon, Flooding, Other Weather Disturbances and Calamities](https://www.vsu.edu.ph/university-policies-2/2862-proposed-guidelines-on-cancellation-suspension-of-classes-work-in-the-visayas-state-university-due-to-typhoon-flooding-other-weather-disturbances-and-calamities-bor-resolution-no-162-s-2024), BOR Resolution No. 162, s. 2024. Official.
 - The Amaranth, VSU's student media. "Freedom of speech? Viscan FB group slammed for fueling online hate," 10 April 2025, listed in its [investigative section](https://amaranth.vsu.edu.ph/specials/investigative). Community knowledge, student press.
@@ -378,6 +383,7 @@ Checked on 8 and 9 October 2026. The source type follows each entry ([Chapter 9]
 - [Poland-based social learning network rolls out PH site](https://newsbytes.ph/2014/04/21/poland-based-social-learning-network-rolls-out-ph-site/), NewsBytes.PH, 21 April 2014, on Brainly. External.
 - Villagers Montessori College. [Memo No. 6, s. 2026, on official communication channels](https://vmc.edu.ph/wp-content/uploads/2026/07/VMC-Memo-6-s.-26-Official-Communication-channel.pdf), 15 June 2026. External, from another college.
 - Collier, P. J., and Morgan, D. L. (2008). ["Is that paper really due today?": differences in first-generation and traditional college students' understandings of faculty expectations](https://www.firstgenforward.org/scholarly-articles/is-that-paper-really-due-today-differences-in-first-generation-and-traditional-college-students-understandings-of-faculty-expectations). *Higher Education*, 55, 425–446. Scholarly.
+- Jordan, K. (2019). From Social Networks to Publishing Platforms: A Review of the History and Scholarship of Academic Social Network Sites. *Frontiers in Digital Humanities*, 6. [doi:10.3389/fdigh.2019.00005](https://doi.org/10.3389/fdigh.2019.00005). Scholarly.
 - Ostrom, E. (1990). *Governing the Commons: The Evolution of Institutions for Collective Action*. Cambridge University Press. [doi:10.1017/CBO9780511807763](https://doi.org/10.1017/CBO9780511807763). Scholarly.
 - [Malabanan v. Ramento, G.R. No. L-62270](https://chanrobles.com/scdecisions/jurisprudence1984/may1984/gr_l62270_1984.php), Supreme Court of the Philippines, 21 May 1984. Official, jurisprudence.
 - Athabasca University's Landing. [RIP community@brighton](https://landing.athabascau.ca/bookmarks/view/974991/rip-communitybrighton). External, practitioner account.
