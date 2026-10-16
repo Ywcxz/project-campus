@@ -32,7 +32,7 @@ The site renders a small subset (see `js/main.js`):
 - `> **Label.** text` for a pinned field card, `> text` for a pull quote
 - fenced code blocks for text diagrams, and `---` for a rule
 
-Link between chapters by file name, as in `[Hop-It](05a-hop-it.md)`. The site rewrites these to its own pages.
+Link between chapters by file name, as in `[Hop-It](03g-hop-it.md)`. The site rewrites these to its own pages.
 
 ## Claim tags
 

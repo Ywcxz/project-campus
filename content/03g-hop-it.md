@@ -1,8 +1,8 @@
 # Hop-It
 
-*Scheduled, pooled campus delivery, built independently as a proof of capability*
+*Scheduled, pooled campus delivery, a later module of the network*
 
-Hop-It is the first CAMPUS product: a campus delivery experiment in which customers accept a scheduled delivery window so that orders can be pooled into shared runs. It is built independently of university systems, as working proof that the project can ship. [Established] Two documents are its sources of truth: the Alpha PRD v1.0 (28 September 2026), which controls, and the Functional Specification v1.0 (27 September 2026). This chapter summarizes them and never overrides them. [Established] (D-027)
+Hop-It is a campus delivery experiment in which customers accept a scheduled delivery window so that orders can be pooled into shared runs. It was planned as the first CAMPUS product and the proof that the project can ship. Since 15 October 2026 it is a later module of the network instead, and a small prototype of the network is the first build. [Established] (D-098, D-099) Its specification is kept for when it is taken up. [Established] Two documents are its sources of truth: the Alpha PRD v1.0 (28 September 2026), which controls, and the Functional Specification v1.0 (27 September 2026). This chapter summarizes them and never overrides them. [Established] (D-027)
 
 ## Where the idea came from
 
@@ -17,8 +17,8 @@ The name comes from the Bisaya *hapit*, as in *magpahapit ko sa tindahan*: askin
 | What problem? | On-demand delivery treats every order as a separate urgent trip, so scattered demand duplicates pickup and delivery effort. [Proposed] |
 | Who needs it? | Customers on campus (students, faculty, staff), participating vendors, and riders, with Operations running dispatch. [Proposed] |
 | What evidence? | The design draws on last-mile delivery research. There is no local demand estimate, field study, or willingness-to-pay data yet. [Established] |
-| Relation to existing systems? | None by design: no CAMPUS sign-on, no student-system data, and no assumed VSU integration. It is not automatically a CAMPUS subsystem. [Established] |
-| Stage? | MVP: an Alpha with controlled participants, after a synthetic rehearsal. [Established] |
+| Relation to existing systems? | Its PRD needs nothing from VSU: no student-system data and no assumed VSU integration. [Established] How it would use the network's membership, as a later module, is open. [Unresolved] (D-098) Students have built delivery services of their own, by the author's account; how they work is not known ([Chapter 10](10-related-work.md)). [Unresolved] |
+| Stage? | A later module of the network. [Established] (D-098) When it is taken up: an Alpha with controlled participants, after a synthetic rehearsal. [Established] (PRD §18.2) |
 | Privacy, governance, and cost? | It collects only participant name and phone, a username and password for sign-in (D-091), delivery location, and fulfillment evidence, and handles no payments. Retention, consent, privacy notice, and incident handling need approval before real users. [Established] Passwords would be kept only in a form that cannot be read back. [Proposed] |
 | How could it be disproved? | Compatible orders turn out too rare to pool, or pooled runs cut effort but break the guardrails on lateness, cancellations, failures, or acceptability. A disproved hypothesis is a valid Alpha result. [Established] |
 
@@ -54,12 +54,12 @@ Payments and wallets; maps, routing, and live traffic; automatic dispatch, AI, a
 
 The build is a modular monolith: a mobile-first React and TypeScript PWA, a FastAPI API, PostgreSQL, a simple worker, and Docker. [Established] (PRD §5.3) The PRD assumed an existing authentication and participant-management foundation, but no Hop-It code or repository exists yet, so the Alpha builds its sign-in and participant management from the start. [Established] (C-07) The owner has since decided that the Alpha's participants sign in with a username and password checked against Hop-It's own database, in place of the PRD's one-time codes; the PRD and the Functional Specification are to be revised to match. [Established] (D-091)
 
-## Why Hop-It comes first
+## Why it no longer comes first
 
-- It can be built and tested without any VSU system or data, so it doesn't wait on institutional permission to start. [Established]
-- It earns credibility the way this project intends to: working software and measured results, not claims. [Established]
-- It exercises what the larger proposal needs, such as roles, permissions, audit trails, and honest metrics, on a small, bounded problem. [Proposed]
-- Its results say nothing about the social/academic network. The two test different hypotheses. [Established]
+- The reasons it came first, that it can be built without any VSU system or data and earns credibility through working software, hold as well for a prototype of the network, which is what CAMPUS itself proposes. [Established] (D-099)
+- Students have built delivery services of their own, by the author's account, so delivery is a weaker proof of what CAMPUS can do than the network itself. [Proposed] ([Chapter 10](10-related-work.md))
+- Its results would still say nothing about the social/academic network. The two test different hypotheses. [Established]
+- Its PRD, its specification, and the decisions made for it (D-091, D-092, D-097) stay in force for when it is taken up. [Established] (D-098)
 
 ## Independent of VSU systems, not of VSU
 

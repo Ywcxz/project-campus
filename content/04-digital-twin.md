@@ -28,7 +28,7 @@ Each step stands on its own, and none commits VSU to the next. [Proposed]
 4. **Status offices already keep.** Room bookings, outages, and maintenance, linked where VSU permits. [Proposed]
 5. **Sensors.** Energy, water, and occupancy readings carried on the campus network's later stage ([Chapter 2](02-intranet.md)). [Deferred] VSU named campus-wide environmental monitoring and connected lab equipment among the aims of its IPv6 work in 2024. [Established] (E-044)
 
-The products build on the early steps: Housing shows distance and the way to campus from the twin's places, and the marketplace's meeting points are places in it ([Chapter 5](05-products.md)). [Proposed]
+The network's later modules build on the early steps: Housing shows distance and the way to campus from the twin's places, and the marketplace's meeting points are places in it ([Chapter 3](03-social-network.md)). [Proposed]
 
 ## What waits
 

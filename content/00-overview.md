@@ -8,7 +8,7 @@ CAMPUS (Connecting All Members, Places, and University Services) is a proposal f
 
 - CAMPUS is an independent project led full-time by one person, Leo M. Subingsubing, a VSU Main Campus alumnus, as a passion project. There is no team, partner, or institutional collaboration. [Established]
 - No VSU office has reviewed, endorsed, approved, funded, or adopted CAMPUS. When this document refers to VSU's plans, systems, or goals, it implies none of these. [Established]
-- The first product, Hop-It, has an Alpha PRD and a functional specification, both dated late September 2026. [Established]
+- CAMPUS proposes one product, the social/academic network, with the campus intranet as its long-term infrastructure; a small prototype of the network, on made-up data, is the first build. [Established] (D-098, D-099) Hop-It, now a later module of the network, keeps its Alpha PRD and functional specification of late September 2026. [Established]
 - No field research has been run yet, so every problem CAMPUS addresses is still a hypothesis. [Established]
 
 ## The structure
@@ -17,16 +17,15 @@ CAMPUS (Connecting All Members, Places, and University Services) is a proposal f
 | --- | --- | --- |
 | [CAMPUS](01-campus.md) | The umbrella vision: a digital layer over the physical university | Proposed |
 | [Campus intranet](02-intranet.md) | The long-term backbone: local-first infrastructure, offered as a direction for VSU ICT and DIGITS, not an immediate ask | Direction only |
-| [Social/academic network](03-social-network.md) | The centerpiece proposal: VSU's own alternative to Facebook for campus life, with discussions, groups, real-time chat, and student services, designed and governed for the university and free of ads and endless feeds | Proposed; leads the first pitch |
+| [Social/academic network](03-social-network.md) | The one product CAMPUS proposes: VSU's own alternative to Facebook for campus life, with discussions, groups, real-time chat, and student services, designed and governed for the university and free of ads and endless feeds. The marketplace, Housing, and Hop-It's delivery are its later modules | Proposed; leads the first pitch; its prototype is the first build |
 | [Digital twin](04-digital-twin.md) | A living model of the campus and what happens in it: possibly the largest project of all and the university's long-term aspiration, starting from finding places and knowing which office handles what | Research only; first step proposed |
-| [Products](05-products.md) | Separate tools that each do one job on campus. [Hop-It](05a-hop-it.md) comes first: a scheduled, pooled campus delivery experiment, built independently of university systems as working proof of capability. A marketplace and Housing follow as short entries | Hop-It specified for Alpha; the rest are entries to test |
 | [Later directions](06-later-directions.md) | High-school-to-college bridging, learning record, research discovery, analytics and AI | Not commitments |
 
 ## What comes next
 
 This document is the reference, in the way a thesis is: it holds the content, the sources, and the record of decisions. Most people will meet CAMPUS through what is built from it: a concept note, an interactive scrollytelling documentary site for students, faculty, staff, and administration, and later a pitch deck. [Established] (D-082)
 
-The first approach to OVPSAS, the Office of the Vice President for Student Affairs and Services, is the concept note, with two separate asks: permission to run the student survey and the interviews, and interest in CAMPUS. [Established] (D-083) Before it goes, the note is tried on readers the author trusts. [Established] (D-095) The documentary site and the survey site are built alongside it. The documentary site is built now, with placeholders where VSU evidence is still missing, and students see it only after they have answered the survey. [Established] (D-039, D-084) Field research follows, then pitch slides, then Hop-It Alpha ([Chapter 12](12-roadmap.md)). [Established] The first pitch goes to OVPSAS because the social/academic network would benefit that office most. [Proposed]
+The first approach to OVPSAS, the Office of the Vice President for Student Affairs and Services, is the concept note, with two separate asks: permission to run the student survey and the interviews, and interest in CAMPUS. [Established] (D-083) Before it goes, the note is tried on readers the author trusts. [Established] (D-095) It is printed, with a PDF of the same text, and the documentary site is its interactive companion. [Established] (D-100) The documentary site and the survey site are built alongside it. The documentary site is built now, with placeholders where VSU evidence is still missing, and students see it only after they have answered the survey. [Established] (D-039, D-084) A small prototype of the network is built alongside, on made-up data, and the note points to it as proof that the author can build. [Established] (D-095, D-099) Field research follows, then pitch slides ([Chapter 12](12-roadmap.md)). [Established] The first pitch goes to OVPSAS because the social/academic network would benefit that office most. [Proposed]
 
 ## How to read this document
 

@@ -14,7 +14,7 @@ Much of VSU's campus life already runs on a social network: questions about enro
 | Who needs it? | Students first, above all first-year and first-generation students; then the offices that answer them, the seniors who answer the same questions every year, organizations and student councils, and faculty. OVPSAS is the office whose services it would carry most. [Proposed] |
 | What evidence? | Public VSU records, VSU's student media, national data, and research elsewhere. [Established] No interviews, survey, or Facebook observations yet. [Established] |
 | Relation to existing systems? | An alternative to Facebook for campus life, not to VSU's systems. [Established] (D-035) It hands off to VSU's systems and complements the group chats people already use, instead of duplicating either. [Proposed] (D-064, D-074) Its relation to DIGITS, including OneVSU Mobile and the Portal, is VSU's decision. [Unresolved] (D-017, Q-18) |
-| Stage? | Centerpiece proposal. Field research comes first, then an office's commitment to answer students, then a bounded pilot with thresholds fixed in advance. [Proposed] (D-067, D-068) |
+| Stage? | The one product CAMPUS proposes. [Established] (D-098) Its first build is a small prototype on made-up data, to show the author can build it. [Established] (D-099) Toward VSU, field research comes first, then an office's commitment to answer students, then a bounded pilot with thresholds fixed in advance. [Proposed] (D-067, D-068) |
 | Privacy, governance, and cost? | The highest of any CAMPUS product. Education details are sensitive personal information under the Data Privacy Act, a network that keeps answers must also let personal posts fade, a host takes on duties under several laws, and the time of moderators, helpers, and offices costs far more than servers. [Proposed] |
 | How could it be disproved? | Students already reach offices and trust what they find; no office will commit to answer; answers kept on the network are rarely reused; a pilot community drifts back to Facebook; the network does no better than a well-run Facebook group with the same office commitment; or VSU cannot or will not own it. [Proposed] |
 
@@ -272,7 +272,7 @@ On balance, the network is feasible as a bounded pilot with one committed office
 
 ## Stages, each with a way to stop
 
-Every stage after the first is a proposal VSU can accept, change, or decline, and each can end in proceed, narrow, redefine, or stop ([Chapter 8](08-evidence.md)). [Proposed]
+The prototype on made-up data sits outside these stages: it needs nothing from VSU, and it is shown as proof that the author can build, not as an ask. [Established] (D-014, D-095, D-099) Every stage after the first is a proposal VSU can accept, change, or decline, and each can end in proceed, narrow, redefine, or stop ([Chapter 8](08-evidence.md)). [Proposed]
 
 | Stage | What happens | What it needs | Stop or narrow if |
 | --- | --- | --- | --- |
@@ -283,6 +283,25 @@ Every stage after the first is a proposal VSU can accept, change, or decline, an
 | 4. Institutional decision | VSU decides ownership, hosting, staffing, and any relation to DIGITS | An institutional decision (D-029) | VSU declines, and the network remains a research result |
 
 [Chapter 3.4](03d-network-proposal.md) turns these stages into asks, a one-page pilot proposal, and the questions to expect.
+
+## Later modules
+
+CAMPUS proposes one product, the network, with the campus intranet as its long-term infrastructure. [Established] (D-098) The marketplace, Housing, and Hop-It's delivery are later modules of the network, not separate products, and none of them is part of its first version. [Established] (D-098) That version stays with the three jobs and the memory that keeps them. [Proposed] (Q-02) Each is a short entry until field research supports the problem it names. [Proposed] (principle 1)
+
+| Module | Its job | Stage | What it builds on |
+| --- | --- | --- | --- |
+| [Marketplace](03e-marketplace.md) | Buying and selling between verified VSU members | Later [Established] (D-098) | The network's verified membership and moderators [Proposed] |
+| [Housing](03f-housing.md) | Verified listings for boarding houses and rentals near campus | Later [Established] (D-098) | Verified membership; the digital twin's places for distance and routes [Proposed] |
+| [Hop-It](03g-hop-it.md) | Scheduled, pooled delivery on campus | Specified for an Alpha, and kept until it is taken up [Established] | Its own PRD and specification (D-027) [Established] |
+
+What every module shares:
+
+- **One job each.** A module is judged by whether it does its one job better than what people use now. [Proposed]
+- **One membership.** Modules share the network's verified membership and moderators, so a buyer, a tenant, and a customer are the same member. [Proposed] Hop-It's PRD was written to run without any CAMPUS sign-on; how it would join the network's membership is open. [Unresolved]
+- **Hand off before rebuilding.** Where a student-built tool or a VSU service already does a module's job, the network links to it instead of rebuilding it. [Proposed] (D-064)
+- **The same seven questions.** Every entry answers what problem, who needs it, what evidence, its relation to VSU's systems, its stage, its privacy, governance, and cost, and how it could be disproved. [Established] (project rule 3)
+
+A new idea gets an entry only when it names a problem people at VSU have, the people who have it, and how it could be shown wrong; every new entry is recorded in the [decision register](13-decisions.md). [Proposed] (principle 5) Which module comes first is open: field research, judged by the same bars the pitch uses, informs the owner's decision. [Unresolved] (Q-48, D-038) The survey already asks how often students could not get food or supplies, had trouble finding housing, or were scammed when buying or selling ([Chapter 8](08-evidence.md)). [Established]
 
 ## What would prove or disprove it
 
@@ -311,7 +330,7 @@ Every stage after the first is a proposal VSU can accept, change, or decline, an
 
 ## How it grew from v0.1
 
-v0.1 already put a community and knowledge layer (profiles, organization pages, discussions, events) at the foundation of its first build, and it ruled out an unrestricted university social network (v0.1 §7.2). Version 0.2 keeps that limit, since the network is bounded and governed. It adds three things v0.1 did not have: real-time chat, a marketplace, and the explicit aim of replacing Facebook for campus life (D-035). Those three carry most of the moderation and privacy load, so each needs its own evidence. [Established] (D-023) The marketplace has since become its own product, linked from the network ([Chapter 5.2](05b-marketplace.md)). [Established] (D-078)
+v0.1 already put a community and knowledge layer (profiles, organization pages, discussions, events) at the foundation of its first build, and it ruled out an unrestricted university social network (v0.1 §7.2). Version 0.2 keeps that limit, since the network is bounded and governed. It adds three things v0.1 did not have: real-time chat, a marketplace, and the explicit aim of replacing Facebook for campus life (D-035). Those three carry most of the moderation and privacy load, so each needs its own evidence. [Established] (D-023) The marketplace then became its own product (D-078), and on 15 October 2026 it became, with Housing and Hop-It's delivery, a later module of the network ([Chapter 3.5](03e-marketplace.md)). [Established] (D-098)
 
 The October 2026 revision of this chapter builds the rest of the proposal around them: why VSU would need it, what it would do for the university, how it differs from social media, how it would work ([Chapter 3.2](03b-network-design.md)), how it fits VSU's systems and whether it is feasible ([Chapter 3.3](03c-network-fit.md)), and how to propose it ([Chapter 3.4](03d-network-proposal.md)). [Established] The owner's own brainstorming then sharpened its core around routing and memory, kept moderation apart from institutional response, and set limits on recognition and on who the network serves. [Established] These are recorded as proposals D-070 to D-075, with revisions to D-061, D-062, D-063, and D-066, and all await the owner. [Proposed] D-075 also proposes how v0.1's relational model carries into the network, the question D-025 left open. [Proposed]
 
@@ -334,6 +353,7 @@ The October 2026 revision of this chapter builds the rest of the proposal around
 - Could the network carry VSU's official feeds, and how would offices post? (Q-40)
 - Which languages should the interface support? (Q-41)
 - Who would own and staff the network after a pilot? (Q-42)
+- Which later module comes first, and on what evidence? (Q-48)
 - How long should conversation, listings, and messages be kept? (Q-43)
 - On what terms are members' guides and answers kept? (Q-44)
 - How would graduates keep or regain membership as alumni? (Q-45)

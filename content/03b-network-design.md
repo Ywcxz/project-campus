@@ -69,7 +69,7 @@ A community is the network's unit: a group of members around something real at V
 | Residence | VSU's 21 student dormitories | Dormitory management, with residents | Residents | Management |
 | Place | The VSU Market, the library | The office that manages the place | Anyone | The managing office |
 | Topic | A crop, coastal research, GIS, photography | The members who start it | Anyone | Its owners |
-| Marketplace, linked | Books, uniforms, gadgets, dormitory items, in the Marketplace product ([Chapter 5.2](05b-marketplace.md)) | The network's moderators | Verified members | Moderators |
+| Marketplace, a later module | Books, uniforms, gadgets, dormitory items, in the marketplace module ([Chapter 3.5](03e-marketplace.md)) | The network's moderators | Verified members | Moderators |
 | Concerns | Problems with services or facilities | The student council and OVPSAS, jointly | Students | The council |
 | Hometown, later | Students from the same province or town | The members who start it | Anyone from there | Its owners |
 
@@ -251,9 +251,9 @@ An event is an entity, not a post that scrolls away. It has a time, a place, org
 
 ## Student services, and the link to the marketplace
 
-The marketplace is its own product, linked from the network rather than built as one of its spaces. [Established] (D-078) Its design, including who may sell, what may be sold, and how trust is earned, is in [Chapter 5.2](05b-marketplace.md). The network links to it from the communities where trading comes up, such as a dormitory or a subject's book exchange, and shares its verified membership and moderators with it. [Proposed]
+The marketplace is a later module of the network, not part of its first version. [Established] (D-098) Its design, including who may sell, what may be sold, and how trust is earned, is in [Chapter 3.5](03e-marketplace.md). The network links to it from the communities where trading comes up, such as a dormitory or a subject's book exchange, and shares its verified membership and moderators with it. [Proposed]
 
-- **Services, later.** Tutoring, printing, layout, and photography listings, reviewed only by confirmed clients, with deliveries handed to Hop-It ([Chapter 5.1](05a-hop-it.md)). [Proposed]
+- **Services, later.** Tutoring, printing, layout, and photography listings, reviewed only by confirmed clients, with deliveries handed to Hop-It ([Chapter 3.7](03g-hop-it.md)). [Proposed]
 
 ## Pseudonymous sections
 
@@ -349,17 +349,18 @@ Server: in the cloud for a pilot, on campus if VSU chooses       Ring 4, later R
   posts, labels, and states · routing by topic · search
   notifications · retention schedule · moderation and audit log
   chat server, only if a pilot calls for it
+  later modules, each on its own evidence: marketplace, Housing, Hop-It
       │ reads, with permission               │ links into
 VSU's public feeds: website news             VSU systems: helpdesk,
 and announcements; WAIS                       document tracker, VSUEE,
-                                              my.VSU; Hop-It
+                                              my.VSU
 ```
 
 - **Data model.** People, roles, communities, spaces, posts, topics, places, and events, with the links between them, stored from the first version so that later features can build on them. [Proposed] (D-075)
 - **Sign-in.** For a pilot, members can prove membership with a one-time code sent to their VSU email address, which needs no integration with VSU's systems. Single sign-on through OpenID Connect with VSU's Google accounts, limited to the vsu.edu.ph domain, or with VSU's own identity system, would come later with VSU ICT's agreement. [Proposed] (Q-06)
 - **Official feeds.** VSU's website already publishes RSS feeds of its news and its announcements. [Established] The network could carry them into the university's official space with their source shown, and could show WAIS advisories, which WAIS already generates as JSON, if VSU's disaster risk management office agrees. [Proposed] (Q-40)
 - **Sync.** The channel model's tiers: official notices within about a minute, other spaces on a slower cycle, and archives only when opened. [Established] (D-034)
-- **Build.** Two paths are open. One composes open-source parts, such as a forum engine like Discourse and, if needed, a Matrix server, behind a thin VSU layer for roles, communities, labels, states, and routing. The other builds the network from scratch on the stack Hop-It uses. [Proposed] (Q-33) The first is faster and better tested; the second fits the labels, states, and routing more closely and shows more of what the project can build. Either way, everything runs in containers VSU could host later, with no dependence on one cloud's proprietary services ([Chapter 2](02-intranet.md)). [Proposed]
+- **Build.** Two paths are open. One composes open-source parts, such as a forum engine like Discourse and, if needed, a Matrix server, behind a thin VSU layer for roles, communities, labels, states, and routing. The other builds the network from scratch on the stack Hop-It's PRD names. [Proposed] (Q-33) The first is faster and better tested; the second fits the labels, states, and routing more closely and shows more of what the project can build. Either way, everything runs in containers VSU could host later, with no dependence on one cloud's proprietary services ([Chapter 2](02-intranet.md)). [Proposed]
 - **Security.** Encrypted connections and storage, a log of every moderator and administrator action, regular backups, and a breach process run with VSU's data protection officer. [Proposed] VSU's own privacy training in 2021 put the guiding rule simply: don't collect what you can't protect. [Established]
 
 ## Scenes

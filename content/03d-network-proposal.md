@@ -142,7 +142,7 @@ The pitch slides come after field research ([Chapter 12](12-roadmap.md)). A poss
 7. **How it would be governed.** With the community, by VSU's own principles, with due process, and with moderation kept apart from VSU's responses.
 8. **The test.** The pilot, its comparison, its thresholds, and its stop conditions.
 9. **The ask.** One office's commitment, then one semester.
-10. **Who is behind it.** Hop-It's working software, the field research, and the decision register.
+10. **Who is behind it.** The network prototype's working software (D-099), the field research, and the decision register.
 
 The framing should be cultivation rather than construction: a community network is not installed but grown, with its members, in ground prepared for it. [Proposed] The builders of an institution-run network that outlasted its predecessor drew the same conclusion in 2010, calling gardening a better metaphor than architecture because the system keeps changing as people use it. [Established] Which image the slides use is still open. [Unresolved]
 
