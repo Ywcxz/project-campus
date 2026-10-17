@@ -17,7 +17,7 @@ CAMPUS (Connecting All Members, Places, and University Services) is a proposal f
 | --- | --- | --- |
 | [CAMPUS](01-campus.md) | The umbrella vision: a digital layer over the physical university | Proposed |
 | [Campus intranet](02-intranet.md) | The long-term backbone: local-first infrastructure, offered as a direction for VSU ICT and DIGITS, not an immediate ask | Direction only |
-| [Social/academic network](03-social-network.md) | The one product CAMPUS proposes: VSU's own alternative to Facebook for campus life, with discussions, groups, real-time chat, and student services, designed and governed for the university and free of ads and endless feeds. The marketplace, Housing, and Hop-It's delivery are its later modules | Proposed; leads the first pitch; its prototype is the first build |
+| [Social/academic network](03-social-network.md) | The one product CAMPUS proposes: VSU's own alternative to Facebook for campus life, with discussions, groups, and student services, designed and governed for the university and free of ads and endless feeds. The marketplace, Housing, and Hop-It's delivery are its later modules | Proposed; leads the first pitch; its prototype is the first build |
 | [Digital twin](04-digital-twin.md) | A living model of the campus and what happens in it: possibly the largest project of all and the university's long-term aspiration, starting from finding places and knowing which office handles what | Research only; first step proposed |
 | [Later directions](06-later-directions.md) | High-school-to-college bridging, learning record, research discovery, analytics and AI | Not commitments |
 

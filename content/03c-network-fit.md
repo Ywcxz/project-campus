@@ -80,7 +80,7 @@ Nothing here moves a system or changes its authority. Each system's owner decide
 
 The largest change is not technical: offices would answer some student questions once, in public, instead of many times in private. [Proposed] That is also the network's largest benefit to them. [Proposed]
 
-One more system is not VSU's but changes least of all: the group chats where batches, classes, and organizations coordinate. The network leaves them as they are and links into them with share cards, so a notice passed on in a chat carries the way to check it. [Proposed] (D-074)
+One more system is not VSU's but changes least of all: the group chats where batches, classes, and organizations coordinate. The network leaves them as they are and links into them with share cards, so a notice passed on in a chat carries the way to check it. [Established] (D-074)
 
 ### Signing in
 
@@ -89,7 +89,7 @@ VSU's account practices settle much of the identity design, and leave four quest
 - Student Google accounts use the vsu.edu.ph domain, and Microsoft accounts use 365.vsu.edu.ph with the same username. [Established] Either could serve for single sign-on through OpenID Connect, limited to VSU's domain, without a new password; a pilot can instead send a one-time code to a member's VSU email address, which needs no integration. [Proposed] Which form of sign-on, if any, VSU allows is its decision. [Unresolved] (Q-06)
 - Accounts are issued after the late enrollment period, which leaves new students without one in their first weeks. [Established] (Q-38)
 - Student usernames are school ID numbers by default. [Established] The network must never display them. [Proposed]
-- Integrated High School students also hold accounts, so sign-in alone cannot tell a college student from a high school student. [Established] Roles must come from somewhere else (Q-39), and the pilot admits college members only (D-069). [Proposed]
+- Integrated High School students also hold accounts, so sign-in alone cannot tell a college student from a high school student. [Established] Roles must come from somewhere else (Q-39). [Proposed] The first pilot admits college members aged 18 and over. [Established] (D-069)
 
 ### What the network would own, and what it would only point to
 
@@ -106,7 +106,7 @@ This extends the own-or-reference rule of [Chapter 7](07-vsu-context.md). [Estab
 | Courses and grades | Not held | VSUEE and my.VSU |
 | Posts, answers, guides, listings, and messages | Owned, kept or faded under D-070 | The network, under VSU's governance |
 | Topics members help with | Owned, as members declare them | Each member |
-| Links between pseudonyms and members | Owned, under two keys | The process of D-065 |
+| Links between pseudonyms and members | Owned, held as VSU's data protection officer and the student council agree | D-065 |
 
 ## DIGITS and OneVSU
 
@@ -179,7 +179,7 @@ Facebook's network effects are the largest risk ([Chapter 11](11-risks.md)). [Es
 
 Research on starting online communities offers tested tactics: a clear and limited scope, tools useful to one person before the community is large, staff who contribute when members have not yet, new spaces only when existing ones are busy, and visible activity. [Established] (Resnick, Konstan, and Chen, 2012) For the network that means a pilot dense in one community; notices, deadlines, an office directory, and guides that are useful from the first day; offices as contributors of last resort; and few communities at first. [Proposed]
 
-Memory changes the arithmetic of a pilot. A kept answer is worth most in the years after it is given, when later batches find it, so one semester shows the least of what the network would be worth. [Proposed] The pilot therefore seeds its memory before launch, with official information and guides from a short guide sprint, and measures reuse directly: how often members find an existing answer instead of asking, and how often kept answers are read again. [Proposed] (D-070)
+Memory changes the arithmetic of a pilot. A kept answer is worth most in the years after it is given, when later batches find it, so one semester shows the least of what the network would be worth. [Proposed] The pilot therefore seeds its memory before launch, with official information and guides from a short guide sprint, and measures reuse directly: how often members find an existing answer instead of asking, and how often kept answers are read again. [Established] (D-070)
 
 Helpers are the other half. Routing can pile questions on the few people everyone already knows, until they stop answering, so the pilot caps routed questions per helper, rotates them, and counts how many helpers carry the load. [Proposed] (D-071) Faculty time is the scarcest; whether answering and mentoring on the network could count toward faculty members' recognized service is a question for VSU. [Unresolved] (Q-47)
 

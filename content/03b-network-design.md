@@ -4,7 +4,7 @@
 
 This chapter turns the principles of [Chapter 3](03-social-network.md) into a working design: who can join, how the network is organized, who can see what, how questions find the people who know, how knowledge is kept and when it fades, how helpers are recognized, how notices, trade, and pseudonymous speech work, how the network is governed, and what runs underneath. Every part is a proposal for field research and a pilot to test, and the first version would include only what the evidence calls for. [Proposed]
 
-> **In short.** Members sign in with VSU accounts and carry roles. They join communities that belong to real VSU units, places, organizations, and subjects, each with a named owner and with spaces for notices, questions, guides, events, and discussion. A question is routed to members who chose to help with its topic and to the office responsible, after the network has shown any answer that already exists. Knowledge is labelled, dated, and kept, while conversation fades on a schedule. Helping is recognized without public scores. Pseudonyms hide a member from other members but not from a reveal process that needs two keys. Moderators enforce rules written with the community, offices answer concerns, and neither does the other's job. Everything runs on open components VSU could host. [Proposed]
+> **In short.** Members sign in with VSU accounts and carry roles. They join communities that belong to real VSU units, places, organizations, and subjects, each with a named owner and with spaces for notices, questions, guides, events, and discussion. A question is routed to members who chose to help with its topic and to the office responsible, after the network has shown any answer that already exists. Knowledge is labelled, dated, and kept, while conversation fades on a schedule. Helping is recognized without public scores. Pseudonyms hide a member from other members but not from the network, and are never revealed for criticizing the university. Moderators enforce rules written with the community, offices answer concerns, and neither does the other's job. Everything runs on open components VSU could host. [Proposed]
 
 ## The model at a glance
 
@@ -25,7 +25,7 @@ Member ──holds──► Role      student · faculty · staff · office · o
    └──helps with──► Topic   chosen by the member; questions are routed by it
 ```
 
-These are concepts to test, not a database schema. [Proposed] The model is relational from the first version, so that people, communities, knowledge, places, and events can be linked as they appear, while features that depend on those links, such as finding expertise across the whole university, come later. [Proposed] (D-075) It follows the channel model the network starts from (D-034) and the relational domains of [Chapter 1](01-campus.md). [Established]
+These are concepts to test, not a database schema. [Proposed] The model is relational from the first version, so that people, communities, knowledge, places, and events can be linked as they appear, while features that depend on those links, such as finding expertise across the whole university, come later. [Established] (D-075) It follows the channel model the network starts from (D-034) and the relational domains of [Chapter 1](01-campus.md). [Established]
 
 ## Members and roles
 
@@ -37,8 +37,8 @@ Four details of VSU's accounts shape the design. [Proposed]
 
 - **Timing.** Student accounts are issued after the late enrollment period. [Established] New students need another way in during their first weeks, such as a temporary pass tied to their enrollment, or a pilot has to start after accounts are issued. [Proposed] (Q-38)
 - **Names.** Student accounts are named after school ID numbers by default. [Established] The network would show a name each member chooses and never display an ID number. [Proposed]
-- **High school students.** Integrated High School students also hold VSU accounts. [Established] The pilot admits college members only. [Proposed] (D-069)
-- **Graduation.** Accounts can be revoked on non-enrollment or graduation. [Established] Alumni would need a separate path, added later. [Proposed] (D-073, Q-45)
+- **High school students.** Integrated High School students also hold VSU accounts. [Established] The first pilot admits college members aged 18 and over, as the survey does. [Established] (D-069, D-094)
+- **Graduation.** Accounts can be revoked on non-enrollment or graduation. [Established] Alumni would need a separate path, added later. [Established] (D-073, Q-45)
 
 ### Roles
 
@@ -56,7 +56,7 @@ Program and year are education details, which the Data Privacy Act counts as sen
 
 ## Communities: the network shaped like VSU
 
-A community is the network's unit: a group of members around something real at VSU, with an owner, a membership rule, and its own spaces. Communities exist because the thing they serve exists, not because someone started a chat: the scholarships community exists because scholarships do, and it outlives every student who joins it. [Proposed] (D-062) VSU's 2025 case, in which a lost-and-found group's creator said he had been removed and the only visible administrator appeared to be a dummy account, shows what happens when a community belongs to whoever controls it ([Chapter 3](03-social-network.md)). [Established]
+A community is the network's unit: a group of members around something real at VSU, with an owner, a membership rule, and its own spaces. Communities exist because the thing they serve exists, not because someone started a chat: the scholarships community exists because scholarships do, and it outlives every student who joins it. [Established] (D-062) VSU's 2025 case, in which a lost-and-found group's creator said he had been removed and the only visible administrator appeared to be a dummy account, shows what happens when a community belongs to whoever controls it ([Chapter 3](03-social-network.md)). [Established]
 
 | Community type | Examples at VSU | Owner | Who joins | Who posts notices |
 | --- | --- | --- | --- | --- |
@@ -88,11 +88,11 @@ Inside each community are spaces of different kinds, each with its own posting r
 | Discussion | Open conversation, with lighter talk kept in its own space | Members | Slower cycle |
 | Archive | Everything superseded or past | No one | Opened on demand |
 
-Subject communities hold what outlasts a semester: questions, guides such as what seniors wish they had known before taking a subject, and pointers to the library. Course sections, materials, and grades stay in VSUEE. [Proposed] (D-064) Ratings and reviews of individual teachers are not proposed: faculty evaluation is sensitive and belongs to VSU ([Chapter 10](10-related-work.md)). [Proposed]
+Subject communities hold what outlasts a semester: questions, guides such as what seniors wish they had known before taking a subject, and pointers to the library. Course sections, materials, and grades stay in VSUEE. [Established] (D-064) Ratings and reviews of individual teachers are not proposed: faculty evaluation is sensitive and belongs to VSU ([Chapter 10](10-related-work.md)). [Proposed]
 
 ### Three rules that keep communities healthy
 
-- **Structure follows VSU.** VSU replaced its colleges with faculties in January 2025, after its 2022–23 list of organizations was made. [Established] The list of units should come from VSU and change when VSU's structure does, not be kept by CAMPUS. [Proposed] (D-062)
+- **Structure follows VSU.** VSU replaced its colleges with faculties in January 2025, after its 2022–23 list of organizations was made. [Established] The list of units should come from VSU and change when VSU's structure does, not be kept by CAMPUS. [Established] (D-062)
 - **Every community has an owner.** A community whose owner leaves without a successor is archived, readable but closed, so that it cannot drift into something else, as a lost-and-found group on Facebook did. [Proposed]
 - **Communities and spaces open when people need them.** Research on starting online communities advises splitting spaces only after they become active, because many empty spaces make a community look dead. [Established] (Resnick, Konstan, and Chen, 2012) A pilot starts with few communities and adds them on demand. [Proposed]
 
@@ -128,7 +128,7 @@ The confidential level is a door, not a desk. A report of sexual harassment goes
 
 ### Labels
 
-Every post carries one of the six information types of [Chapter 9](09-governance.md), set by who posted it and where, not chosen freely. [Proposed] (D-063)
+Every post carries one of the six information types of [Chapter 9](09-governance.md), set by who posted it and where, not chosen freely. [Established] (D-063)
 
 - **Official:** only office accounts, only in their official spaces.
 - **Community knowledge:** guides, and peer answers an office has confirmed.
@@ -141,7 +141,7 @@ Labels travel. A reshare or quote keeps the original's label and links back to i
 
 ### Knowledge that knows its age
 
-Notices, confirmed answers, and guides carry a state, the academic year they apply to, and, where one exists, the document they rest on, such as a Board of Regents resolution or a page of the Citizen's Charter. [Proposed] (D-063)
+Notices, confirmed answers, and guides carry a state, the academic year they apply to, and, where one exists, the document they rest on, such as a Board of Regents resolution or a page of the Citizen's Charter. [Established] (D-063)
 
 | State | Means | Shown as |
 | --- | --- | --- |
@@ -154,11 +154,11 @@ Each guide is reviewed by its community at the start of each semester, and an an
 
 ### Answers someone stands behind
 
-The patterns come from Stack Exchange's accepted answers and Piazza's instructor-endorsed answers ([Chapter 10](10-related-work.md)). [Established] Discourse, an open-source forum, already lets a topic's owner and staff mark a reply as the solution in chosen categories. [Established] On the network, members answer under a name and role, or a pseudonym where the section allows; an office confirms one answer or posts its own; and the confirmed answer is dated and kept, and new questions like it are pointed to it. [Proposed] A confirmation is only as good as the office behind it, which is why an office's commitment comes before any pilot. [Proposed] (D-068)
+The patterns come from Stack Exchange's accepted answers and Piazza's instructor-endorsed answers ([Chapter 10](10-related-work.md)). [Established] Discourse, an open-source forum, already lets a topic's owner and staff mark a reply as the solution in chosen categories. [Established] On the network, members answer under a name and role, or a pseudonym where the section allows; an office confirms one answer or posts its own; and the confirmed answer is dated and kept, and new questions like it are pointed to it. [Proposed] A confirmation is only as good as the office behind it, which is why an office's commitment comes before any pilot. [Established] (D-068)
 
 ## Asking: routing questions to people who know
 
-Most social platforms broadcast: a question goes to everyone in a group, and whoever happens to be online answers. The network routes. [Proposed] (D-071)
+Most social platforms broadcast: a question goes to everyone in a group, and whoever happens to be online answers. The network routes. [Established] (D-071)
 
 ```text
 a member writes a question
@@ -177,13 +177,13 @@ a member writes a question
 - **Whom to ask.** The asker chooses whether answers should come from students, faculty, an office, or, later, alumni. A question about a scholarship requirement goes to the office as well as to students who have applied; a question about which electives seniors enjoyed goes to students. [Proposed]
 - **Escalation.** A question unanswered after a set time, or one only an office can settle, moves to the office responsible, whose response time is part of its commitment (D-068). [Proposed]
 - **Fair load.** No helper receives more than a set number of routed questions a week, routed questions rotate among helpers, and faculty receive questions only in the topics they opened and within their consultation norms. [Proposed]
-- **Nothing inferred.** Routing uses only the topics members declare and the communities they join. The network never infers what someone knows from what they read, never scores posts to raise or lower their reach, and never ranks people. [Proposed] (D-061, D-071)
+- **Nothing inferred.** Routing uses only the topics members declare and the communities they join. The network never infers what someone knows from what they read, never scores posts to raise or lower their reach, and never ranks people. [Established] (D-061, D-071)
 
 VSU already lists its graduate faculty by department, with each one's specialization and research interest. [Established] Faculty who choose to could bring those topics into the network, which would make "who in VSU knows about this?" answerable without building a separate expertise directory. [Proposed]
 
 ## Memory: what stays and what fades
 
-The network remembers knowledge and lets conversation fade. [Proposed] (D-070)
+The network remembers knowledge and lets conversation fade. [Established] (D-070)
 
 | Kind | Examples | How long it is kept | Can its author remove their name? |
 | --- | --- | --- | --- |
@@ -203,7 +203,7 @@ A memory starts empty, and an empty network looks dead. [Proposed] Before a pilo
 
 ## Recognition without vanity
 
-A knowledge community lives on its helpers, the seeders in the author's torrent analogy: when no one shares, everyone who asks gets nothing. [Proposed] The design question is how to recognize helpers without turning help into a contest. [Proposed] (D-072)
+A knowledge community lives on its helpers, the seeders in the author's torrent analogy: when no one shares, everyone who asks gets nothing. [Proposed] The design question is how to recognize helpers without turning help into a contest. [Established] (D-072)
 
 - **No public scores.** No reputation points, levels, rankings, or meters of how much a member asks against how much they answer. [Proposed] Public metrics steer behavior toward the metric: on Stack Overflow, users increased exactly the activity a badge rewarded as they neared it, and returned to their usual level once they had earned it. [Established] (Anderson et al., 2013) A public asking-versus-answering meter would also single out the members who mostly ask, often the first-year and first-generation students the network most needs to hear from. [Proposed]
 - **No price on asking.** Brainly's homework network has students earn points by answering and spend them to ask. [Established] That suits a homework market; on a campus network, asking must always be free. [Proposed]
@@ -215,7 +215,7 @@ Ranking or classifying members by their activity could also count as profiling, 
 
 ## What people see: a home that ends
 
-The home screen is a digest, not a feed. [Proposed] (D-061)
+The home screen is a digest, not a feed. [Established] (D-061)
 
 1. **Official now.** Unread notices from the member's official spaces, urgent ones first.
 2. **For you.** Replies to the member's posts, and questions in the topics they help with.
@@ -239,9 +239,9 @@ Quiet hours, overnight by default, protect rest, a reason a Philippine college g
 
 Members can message each other and form small group conversations. Norms differ by role: a student writing to a faculty member outside their own classes sends a consultation request, which the faculty member can accept, book into office hours, or point to an office, and no one is expected to answer outside working hours. [Proposed]
 
-Group chats stay where they are. The network does not try to move real-time coordination off Messenger, where nearly everyone already is. [Proposed] (D-074) Instead, every notice, answer, guide, and event has a share card that can be posted into any chat and links back to the current version, so a chat that passes on a notice also passes on the way to check it. [Proposed]
+Group chats stay where they are. The network does not try to move real-time coordination off Messenger, where nearly everyone already is. [Established] (D-074) Instead, every notice, answer, guide, and event has a share card that can be posted into any chat and links back to the current version, so a chat that passes on a notice also passes on the way to check it. [Proposed]
 
-Real-time chat inside the network waits until a pilot shows people want it there. [Proposed] (D-074, Q-04) If it comes, Matrix is the candidate: an open protocol that TU Dresden and LMU Munich run for their students and staff. [Established] Its cost grows with use. Element's sizing guide, for servers without federation, puts up to 500 users at one core and about 1 GiB of memory for the Synapse server plus one core and 4 GiB for its database, and 2,501 to 10,000 users at ten cores and about 8 GiB plus four cores and 16 GiB, with the database growing by about 0.6 GB per active user each year. [Established]
+Real-time chat inside the network waits until a pilot shows people want it there. [Established] (D-074, Q-04) If it comes, Matrix is the candidate: an open protocol that TU Dresden and LMU Munich run for their students and staff. [Established] Its cost grows with use. Element's sizing guide, for servers without federation, puts up to 500 users at one core and about 1 GiB of memory for the Synapse server plus one core and 4 GiB for its database, and 2,501 to 10,000 users at ten cores and about 8 GiB plus four cores and 16 GiB, with the database growing by about 0.6 GB per active user each year. [Established]
 
 Private messages stay private: moderators cannot read them. A member who reports a message shares that message with the moderators, and anything more needs legal process. [Proposed] Whether to encrypt messages end to end, which also limits what a host can detect and act on, is a question for the legal review. [Unresolved] (Q-36)
 
@@ -257,7 +257,7 @@ The marketplace is a later module of the network, not part of its first version.
 
 ## Pseudonymous sections
 
-Participation is identified by default, and some sections may allow anonymous or pseudonymous posts. [Established] (D-046) Q-16 asks which sections, and anonymous to whom. This design proposes an answer to the second part. [Proposed] (D-065)
+Participation is identified by default, and some sections may allow anonymous or pseudonymous posts. [Established] (D-046) Q-16 asks which sections, and anonymous to whom. For the second part, a pseudonymous member is hidden from other members but not from the network, full anonymity is not offered, and the link between a pseudonym and a member is never opened for criticizing the university. [Established] (D-065) Who holds that link, and when it may be opened, is agreed with VSU's data protection officer and the student council before a pilot; the design below is what CAMPUS would propose to them. [Established] (D-065)
 
 | Option | Other members see | The network holds | Proposed use |
 | --- | --- | --- | --- |
@@ -266,15 +266,15 @@ Participation is identified by default, and some sections may allow anonymous or
 | Pseudonym | A stable nickname that other members cannot link to the member | The link, under two keys | Concerns about the university; personal problems |
 | Fully anonymous | Nothing | Nothing | Not offered |
 
-Dcard's posting under a verified university affiliation without a name is the tested precedent for the role-only option ([Chapter 10](10-related-work.md)). [Established] Full anonymity is not offered, because no one could act on threats, harassment, or exploitation, as Yik Yak's history and the 2025 case at VSU show. [Proposed]
+Dcard's posting under a verified university affiliation without a name is the tested precedent for the role-only option ([Chapter 10](10-related-work.md)). [Established] Full anonymity is not offered, because no one could act on threats, harassment, or exploitation, as Yik Yak's history and the 2025 case at VSU show. [Established] (D-065)
 
-A simpler version, anonymous to other members and verified to VSU, protects a member from peers but not from the institution: if VSU can see who wrote a criticism of VSU, the anonymity protects least where it is needed most. [Proposed] So the link between a nickname and a member would be stored so that no single person can open it: one key held by the student council and one by VSU's data protection officer, or by people they name, so that both must agree. [Proposed] An identity would be revealed only for named violations, such as threats, harassment, impersonation, or sexual content involving a minor, or under legal process, and never for criticizing the university. Every reveal would be logged and reported, in aggregate, each semester. [Proposed] (D-065) Which sections get pseudonyms follows the Facebook study's H4, on the topics people already post about anonymously far more than others. [Established] (D-048, D-050)
+A simpler version, anonymous to other members and verified to VSU, protects a member from peers but not from the institution: if VSU can see who wrote a criticism of VSU, the anonymity protects least where it is needed most. [Proposed] So the link between a nickname and a member would be stored so that no single person can open it: one key held by the student council and one by VSU's data protection officer, or by people they name, so that both must agree. [Proposed] An identity would be revealed only for named violations, such as threats, harassment, impersonation, or sexual content involving a minor, or under legal process, and never for criticizing the university. Every reveal would be logged and reported, in aggregate, each semester. [Proposed] Which sections get pseudonyms follows the Facebook study's H4, on the topics people already post about anonymously far more than others. [Established] (D-048, D-050)
 
 ## Rules and moderation
 
 ### Three jobs, kept apart
 
-Moderation, institutional response, and running the platform are different jobs, done by different people. [Proposed] (D-066)
+Moderation, institutional response, and running the platform are different jobs, done by different people. [Established] (D-066)
 
 | Job | Asks | Who | Never |
 | --- | --- | --- | --- |
@@ -301,11 +301,11 @@ Ostrom found that commons which lasted shared a set of design principles. [Estab
 
 ### The speech standard
 
-The rules start from the standard the Supreme Court applied to campus speech in Malabanan v. Ramento: students keep their freedom of speech on campus, discussion of matters affecting their welfare or the public interest is protected, and only conduct that materially disrupts classwork, causes substantial disorder, or invades the rights of others may be restricted, with penalties proportionate to the offense. [Established] On the network, that means criticism of the university, its offices, and its officials stays up, while harassment, threats, doxxing, impersonation, scams, false claims to be official, and sexual content involving minors come down. [Proposed] (D-066) Claims about official matters that an office has not confirmed are labelled unverified rather than removed; removal is kept for impersonating an office and for claims that put people in danger, such as a false evacuation instruction. [Proposed]
+The rules start from the standard the Supreme Court applied to campus speech in Malabanan v. Ramento: students keep their freedom of speech on campus, discussion of matters affecting their welfare or the public interest is protected, and only conduct that materially disrupts classwork, causes substantial disorder, or invades the rights of others may be restricted, with penalties proportionate to the offense. [Established] On the network, that means criticism of the university, its offices, and its officials stays up, while harassment, threats, doxxing, impersonation, scams, false claims to be official, and sexual content involving minors come down. [Established] (D-066) Claims about official matters that an office has not confirmed are labelled unverified rather than removed; removal is kept for impersonating an office and for claims that put people in danger, such as a false evacuation instruction. [Proposed]
 
 ### Process
 
-The Santa Clara Principles on transparency and accountability in content moderation set out the process the network would adopt: rules in one place with examples, notice to the member naming the rule and the reason, an appeal heard by someone not involved in the first decision, and regular reports with numbers. [Established] They also ask platforms to tell users when the state was involved in an action. [Established] On a network run by a state university, that principle applies with special force: when VSU's administration, rather than a community moderator, asks for an action, the notice should say so. [Proposed] (D-066)
+The Santa Clara Principles on transparency and accountability in content moderation set out the process the network would adopt: rules in one place with examples, notice to the member naming the rule and the reason, an appeal heard by someone not involved in the first decision, and regular reports with numbers. [Established] They also ask platforms to tell users when the state was involved in an action. [Established] On a network run by a state university, that principle applies with special force: when VSU's administration, rather than a community moderator, asks for an action, the notice should say so. [Established] (D-066)
 
 ### Layers
 
@@ -323,9 +323,9 @@ How much moderation the network needs is unknown, so a pilot would measure repor
 
 ## Beyond current members
 
-The network grows outward in steps, each with its own verification and its own gate. [Proposed] (D-073)
+The network grows outward in steps, each with its own verification and its own gate. [Established] (D-073)
 
-1. **College students, faculty, and staff** of the Main Campus, through VSU accounts. The pilot stops here (D-069).
+1. **College students, faculty, and staff** of the Main Campus, through VSU accounts. The first pilot stops here, with college students aged 18 and over (D-069).
 2. **Alumni.** VSU accounts can be revoked at graduation, so graduates need a separate path, such as verification against VSU's graduation records, with an alumni role. [Proposed] (Q-45) Alumni would then mentor, answer career questions, and keep helping in the communities they knew, which serves the Strategic Plan's goal of Strong Alumni Engagement. [Proposed]
 3. **Applicants and their parents.** A public "Ask VSU" section, where they can ask about programs, admission, and student life and be answered by verified students, alumni, and offices, extends the use case of a window for aspiring students ([Chapter 3.1](03a-use-cases.md)). [Proposed] Parents of first-generation students, who could not ask anyone at home with a college degree, may gain the most. [Proposed] Applicants may be minors, so the section would allow public questions and answers only, with no private messages to them. [Proposed]
 
@@ -356,7 +356,7 @@ and announcements; WAIS                       document tracker, VSUEE,
                                               my.VSU
 ```
 
-- **Data model.** People, roles, communities, spaces, posts, topics, places, and events, with the links between them, stored from the first version so that later features can build on them. [Proposed] (D-075)
+- **Data model.** People, roles, communities, spaces, posts, topics, places, and events, with the links between them, stored from the first version so that later features can build on them. [Established] (D-075)
 - **Sign-in.** For a pilot, members can prove membership with a one-time code sent to their VSU email address, which needs no integration with VSU's systems. Single sign-on through OpenID Connect with VSU's Google accounts, limited to the vsu.edu.ph domain, or with VSU's own identity system, would come later with VSU ICT's agreement. [Proposed] (Q-06)
 - **Official feeds.** VSU's website already publishes RSS feeds of its news and its announcements. [Established] The network could carry them into the university's official space with their source shown, and could show WAIS advisories, which WAIS already generates as JSON, if VSU's disaster risk management office agrees. [Proposed] (Q-40)
 - **Sync.** The channel model's tiers: official notices within about a minute, other spaces on a slower cycle, and archives only when opened. [Established] (D-034)
@@ -405,13 +405,13 @@ Suppose the network had existed in January 2025, when VSU replaced its colleges 
 
 ## What stays out of a first version
 
-Anything the evidence does not call for. [Established] (principle 5) In particular: course spaces, which VSUEE serves; ratings of teachers; payments; recommendation algorithms and hidden scores; public counts, levels, and rankings; artificial intelligence of any kind; analytics about individuals; real-time chat until a pilot calls for it; discovery of expertise across the whole university; and the alumni, applicant, and parent roles. [Proposed] (D-013, D-064, D-072, D-073, D-074)
+Anything the evidence does not call for. [Established] (principle 5) In particular: course spaces, which VSUEE serves; ratings of teachers; payments; recommendation algorithms and hidden scores; public counts, levels, and rankings; artificial intelligence of any kind; analytics about individuals; real-time chat until a pilot calls for it; discovery of expertise across the whole university; and the alumni, applicant, and parent roles. [Established] (D-013, D-064, D-072, D-073, D-074)
 
 ## Open questions
 
 - Real-time chat or tiered sync, and at what cost? (Q-04)
 - Which identity approach would VSU accept? (Q-06)
-- Which sections allow pseudonyms, and who holds the two keys? (Q-16)
+- Which sections allow pseudonyms, and who holds the link between a pseudonym and a member? (Q-16)
 - Should the pilot be composed from open-source parts or built from scratch? (Q-33)
 - What does the law require of VSU as host, including on encrypting messages? (Q-36)
 - How would incoming students take part before their VSU accounts are issued? (Q-38)

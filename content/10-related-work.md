@@ -105,7 +105,7 @@ Workplace from Meta remains the closest precedent: a version of Facebook for int
 | Mastodon at the University of Innsbruck and SURF (Austria and the Netherlands) | Innsbruck runs a Mastodon server on its own hardware for all employees, with university sign-in, since 2024; SURF's pilot for Dutch education institutions uses institutional logins, had over 1,250 users in 2026, and needed little moderation | Institutions can run their own social platforms, and identified membership keeps moderation light. [Established] |
 | Viva Engage at the University of Manchester (UK) | Microsoft's enterprise social network, offered to staff and postgraduate researchers only | A university's enterprise social tool can leave students out entirely. [Established] |
 | Stack Overflow (US) | Closes accidental duplicate questions with a link to the original and keeps differently worded ones as signposts; its users increased the activity a badge rewarded as they neared it, then returned to their usual level | Point repeated questions to existing answers; public metrics steer behavior toward the metric. [Established] (D-071, D-072) |
-| Brainly (Poland; Philippine site since 2014) | A homework network where students earn points by answering and spend them to ask, with rankings and volunteer moderators | A points economy makes asking cost something. [Established] A campus network should never do that. [Proposed] (D-072) |
+| Brainly (Poland; Philippine site since 2014) | A homework network where students earn points by answering and spend them to ask, with rankings and volunteer moderators | A points economy makes asking cost something. [Established] A campus network should never do that. [Established] (D-072) |
 
 ## Campus delivery
 
