@@ -112,11 +112,11 @@ Year, college, and scholarship status are details of a person's education, which
 
 ### Where answers are kept, and who sees them
 
-Answers go through an Apps Script web app to a private Google Sheet, and interview volunteers sign up on a separate form, so contact details never meet answers. [Established] (D-039) Only the author opens the sheet, the Google account that owns it uses two-step verification, and the sheet is never shared by link. [Proposed] VSU receives totals, never individual answers. [Proposed] Nothing from the sheet enters this repository. [Established] (D-086) Google holds the sheet, possibly outside the Philippines; whether that needs anything more under the Data Privacy Act is a question for VSU's data protection officer. [Unresolved] Until the survey opens, its link is shared with no one, and any answers that arrive before then are deleted unread. [Proposed]
+Answers go through an Apps Script web app to a private Google Sheet, and interview volunteers sign up on a separate form, so contact details never meet answers. [Established] (D-039) Only the author opens the sheet, the Google account that owns it uses two-step verification, and the sheet is never shared by link. [Established] (D-111) VSU, OVPSAS included, receives totals, never individual answers. [Established] (D-111) If an office asks for proof that the results are real, it gets the protocol fixed in advance, the totals, and the number of answers received each day, not the answers themselves. [Proposed] Nothing from the sheet enters this repository. [Established] (D-086) Google holds the sheet, possibly outside the Philippines; whether that needs anything more under the Data Privacy Act is a question for VSU's data protection officer. [Unresolved] Until the survey opens, its link is shared with no one, and any answers that arrive before then are deleted unread. [Proposed]
 
 ### When answers are deleted
 
-Individual answers, stories included, are deleted one academic year after the survey closes, so the analysis and the interview coding check finish within that year; the totals are kept. [Established] (D-110) The exact date is set and published here when the survey's dates are. [Proposed] Deletion reaches every copy: the spreadsheet file itself is deleted and the trash emptied, since deleting rows leaves them in the file's version history, and any downloaded copy is deleted too. [Proposed] Volunteers' contact details are deleted once their interviews are done, or after three months if they are not interviewed. [Proposed] Whether VSU's Research Ethics Board requires other periods is open. [Unresolved] (Q-51)
+Individual answers, stories included, are deleted one academic year after the survey closes, so the analysis and the interview coding check finish within that year; the totals are kept. [Established] (D-110) The exact date is set and published here when the survey's dates are. [Proposed] Deletion reaches every copy: the spreadsheet file itself is deleted and the trash emptied, since deleting rows leaves them in the file's version history, and any downloaded copy is deleted too. [Proposed] Volunteers' contact details are deleted once their interviews are done, or after three months if they are not interviewed. [Established] (D-111) Whether VSU's Research Ethics Board requires other periods is open. [Unresolved] (Q-51)
 
 ### How the D-038 bars are computed
 
@@ -141,7 +141,7 @@ Housing would not earn a pitch slide, but its 45% among those it applies to woul
 
 ### Screening out junk answers
 
-Fixed before any answer is read: [Proposed]
+The site accepts every answer, and these rules, fixed before any answer is read, decide at analysis which ones count: [Established] (D-111)
 
 - Exact copies of one record, sent within ten minutes of each other, count once.
 - A record with fewer than 7 of the 13 problems answered counts toward the number of responses, but not toward the bars.
