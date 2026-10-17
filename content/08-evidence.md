@@ -70,11 +70,12 @@ The protocol is published in this chapter before the survey opens: the consent t
 
 Only students aged 18 and over take part in the first round of the survey and the interviews. If minors are included later, each needs a parent's or legal guardian's consent and their own assent. [Established] (D-094)
 
-Three questions must still be settled before the survey opens:
+Two questions must still be settled before the survey opens:
 
 - Which parts of the field research need VSU's permission or an ethics review, and from which office, when the researcher is an alumnus working outside VSU? (Q-51)
 - What does the consent screen promise, who can see responses and interview notes, and when are they deleted? (Q-53)
-- Should a problem that applies only to some students be judged against everyone who answers, or only against those it applies to? (Q-57)
+
+How to count a problem that applies only to some students (Q-57) was settled on 17 October 2026. [Established] (D-109)
 
 ## The survey protocol, proposed
 
@@ -82,7 +83,7 @@ This is the protocol D-086 requires, set out for the owner to confirm. Every rul
 
 ### Who takes part
 
-Respondents are current VSU Main Campus students aged 18 and over, who confirm both on the consent screen. [Established] (D-094) How students are invited, and through which channels, is agreed with OVPSAS when permission is granted. [Unresolved] Those who answer are a convenience sample, so the results describe them, not every student. [Established]
+Respondents are current VSU Main Campus students aged 18 and over, who confirm both on the consent screen. [Established] (D-094) How students are invited, and through which channels, is agreed with OVPSAS when permission is granted. [Unresolved] Those who answer are a convenience sample, so the results describe them, not every student. [Established] Leaving out students under 18 drops some first-year students, whose problems may differ, so the results say nothing about them. [Established] (D-094)
 
 ### What the consent screen says
 
@@ -106,7 +107,7 @@ The page sends only these answers, with the time they were sent: [Established]
 
 It asks for no name, student number, email address, or phone number. [Established] The script that receives the answers and writes them to the sheet is not yet public; publishing it beside the survey would let anyone check that it keeps nothing more. [Proposed]
 
-Year, college, and scholarship status are details of a person's education, which the Data Privacy Act counts as sensitive personal information. [Established] (E-041) The answers carry no names, but combined, such details could point to one person in a small program. [Proposed] So college becomes a fixed list rather than free text, no result is published for a group of fewer than 10 respondents, and names and identifying details are removed from stories before anything is quoted or summarized. [Proposed] A story is quoted only if its writer allowed it, and only in short passages that identify no one; otherwise it is paraphrased. [Proposed]
+Year, college, and scholarship status are details of a person's education, which the Data Privacy Act counts as sensitive personal information. [Established] (E-041) The answers carry no names, but combined, such details could point to one person in a small program. [Proposed] So college becomes a fixed list rather than free text, no result is published for a group of fewer than 10 respondents, and names and identifying details are removed from stories before anything is quoted or summarized. [Proposed] The floor of 10 also covers combinations, such as one college's first-year students who live off campus. [Proposed] A story is quoted only if its writer allowed it, and only in short passages that identify no one; otherwise it is paraphrased. [Proposed]
 
 ### Where answers are kept, and who sees them
 
@@ -114,17 +115,28 @@ Answers go through an Apps Script web app to a private Google Sheet, and intervi
 
 ### When answers are deleted
 
-Individual answers, stories included, are deleted six months after the results are published in this chapter; the totals are kept. [Proposed] Volunteers' contact details are deleted once their interviews are done, or after three months if they are not interviewed. [Proposed] Whether VSU's Research Ethics Board requires other periods is open. [Unresolved] (Q-51)
+Individual answers, stories included, are deleted six months after the results are published in this chapter; the totals are kept. [Proposed] Deletion reaches every copy: the spreadsheet file itself is deleted and the trash emptied, since deleting rows leaves them in the file's version history, and any downloaded copy is deleted too. [Proposed] Volunteers' contact details are deleted once their interviews are done, or after three months if they are not interviewed. [Proposed] Whether VSU's Research Ethics Board requires other periods is open. [Unresolved] (Q-51)
 
 ### How the D-038 bars are computed
 
-The bars are judged for each of the 13 problems on its own, once there are at least 100 valid answers; below that, a problem's result reads not enough data. [Proposed] With 100 answers, an observed share of 30% carries a margin of about 9 points either way, at 95% confidence. [Established]
+The bars are judged for each of the 13 problems on its own, once there are at least 100 valid answers; below that, a problem's result reads not enough data. [Proposed] With 100 answers from a random sample, an observed share of 30% would carry a margin of about 9 points either way, at 95% confidence. [Established] These answers are a convenience sample, so no margin says how far they are from VSU's students as a whole; 100 is a floor for reading results at all, not a sign that they represent VSU. [Proposed]
 
-- **How often.** The share of valid answers that say a problem happened several times or often. Answers of "Doesn't apply to me", and skipped answers, stay in the count, since D-038 counts all respondents. [Proposed] Whether a problem that applies only to some students should be judged against those it applies to is open. [Unresolved] (Q-57)
+- **How often.** The share of valid answers that say a problem happened several times or often. Answers of "Doesn't apply to me", and skipped answers, stay in the count, since D-038 counts all respondents. [Established] (D-109) Beside that share, every result reports how many respondents the problem applies to and the share among them, and that second share guides which later module comes first (Q-48). [Established] (D-109)
 - **How much it matters.** Among those answers, more than half must rate the problem moderate or serious; a missing rating counts as neither. [Proposed]
 - **Interviews.** At least 4 of the 12 interviews must describe a specific past incident: something the student went through or saw, placed in time, not an opinion or a story about someone else. [Proposed] The author codes every interview from the notes, then recodes three, chosen at random, some weeks later to check consistency, as the Facebook study does with its notes (D-049). [Proposed]
 
 A problem earns a pitch slide only if it clears all three. [Established] (D-038)
+
+For example, with made-up numbers: say 200 valid answers come in, and 80 mark the housing scene "Doesn't apply to me". Of the other 120, 54 say it happened several times or often, and 33 of those 54 rate it moderate or serious.
+
+| Measure | Count | Share |
+| --- | --- | --- |
+| Applies to | 120 of 200 | 60% |
+| Several times or often, among everyone: the bar | 54 of 200 | 27%, below the 30% bar |
+| Several times or often, among those it applies to | 54 of 120 | 45% |
+| Moderate or serious, among those 54 | 33 of 54 | 61%, more than half |
+
+Housing would not earn a pitch slide, but its 45% among those it applies to would count when choosing which later module comes first. [Established] (D-038, D-109)
 
 ### Screening out junk answers
 
@@ -238,6 +250,7 @@ Confidence follows one rubric. **High:** a primary record, or a peer-reviewed st
 | E-051 | VSU's Research Ethics Board, ratified by the Board of Regents through Resolution No. 48, s. 2025, is an independent office under OVPREI; for studies involving human participants, its Human Ethics Review Committee evaluates the ethical soundness of research proposals. The page does not say whether the board covers a study by an alumnus | Official | [OVPREI, Inside the Research Ethics Board, 2025](https://ovprei.vsu.edu.ph/?p=4671) | Q-51; D-086; D-090; [Chapter 12](12-roadmap.md) | High | 14 October 2026 |
 | E-052 | An unofficial, student-led campus map for VSU describes building search, facility details, events, and walking directions, and its menu lists a schedule, a directory, and chat; whether the map itself works was not checked | Community knowledge | [Campus SmartMap for VSU](https://vsumap.vercel.app), undated | Q-54; [Chapter 4](04-digital-twin.md); [Chapter 10](10-related-work.md) | Medium | 14 October 2026 |
 | E-053 | Research on scholarly platforms calls ResearchGate, Academia.edu, and Mendeley academic social network sites: platforms that bring online networking to a specifically academic audience | Scholarly | [Jordan, 2019](https://doi.org/10.3389/fdigh.2019.00005) | Q-58; [Chapter 3](03-social-network.md) | High | 16 October 2026 |
+| E-054 | In an online survey of 677 Filipino university students in 2022, recruited by quota and referral, students' digital capital (the devices and connections they can use, and their skill and understanding in using them) was strongly associated with their sense of belonging to their university, and students from higher-income families and from cities had more digital capital; the design was cross-sectional, so it shows association, not cause | Scholarly | [Clamor and Saloma, 2023](https://doi.org/10.3389/feduc.2023.1137121) | Q-62; [Chapter 3](03-social-network.md) | High | 16 October 2026 |
 
 Two entries have no check date. E-002's paper could not be read, and checking it turned up the wrong authors (C-03). E-031 links a Meta site, which no automated tool opens (D-041), so the owner checks it by hand.
 

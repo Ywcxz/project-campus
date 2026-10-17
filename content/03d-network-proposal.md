@@ -21,7 +21,7 @@ As of October 2026, no office below has reached any stage of the milestone ladde
 | Disaster risk management office | WAIS and emergency notices | Permission to show advisories | Accuracy, and who may post urgent notices |
 | Anti-Sexual Harassment Office and student discipline | Reports from the network | An agreement on how reports reach them | Volume, evidence, and confidentiality |
 | Legal Office | A host's duties, and the rules | A legal review (Q-36) | Liability |
-| University Supreme Student Council and faculty councils | Co-governance, student voice, and volunteer moderators | Seats on the network council, moderators, and one of the two keys | Independence, and whether students can criticize VSU safely |
+| University Supreme Student Council and faculty councils | Co-governance, student voice, and volunteer moderators | Seats on the network council, moderators, and a say in who holds the link behind pseudonyms (D-065) | Independence, and whether students can criticize VSU safely |
 | Office of the President | DIGITS and the planned listening sessions | Eventually, a decision on ownership | Fit with DIGITS and OneVSU |
 | Alumni relations, later | A path for graduates, whose VSU accounts can end at graduation | A way to verify graduates (Q-45) | Who counts as alumni, and what data is shared |
 
@@ -81,7 +81,7 @@ Each ask is a separate step and needs its own evidence. The first is a research 
 | 5 | Running the pilot | Weekly measures against thresholds fixed in advance | Participation, a liaison, and a moderation owner | Pilot |
 | 6 | A decision on ownership | The pilot's evidence report | Ownership, hosting, and staff, or a clean stop | Collaboration, then adoption |
 
-Steps 1 and 2 stay separate so that permission to do research never depends on interest in the proposal. [Established] (project instructions v3) Step 3 tests the network's real ask, office responsiveness, before any software is involved. [Proposed] (D-068)
+Steps 1 and 2 stay separate so that permission to do research never depends on interest in the proposal. [Established] (project instructions v3) Step 3 tests the network's real ask, office responsiveness, before any software is involved. [Established] (D-068)
 
 ## A pilot proposal on one page
 
@@ -112,7 +112,7 @@ Every row is a proposal. [Proposed] The comparison group would be run on Faceboo
 | Isn't this OneVSU's job? | Possibly in part. CAMPUS asks first what OneVSU will cover and designs to complement it, and VSU decides the relationship. | [Chapter 3.3](03c-network-fit.md) |
 | Who moderates? | Moderators from each community, trained network moderators, and a council with students on it, with VSU's offices handling cases beyond the rules. | [Chapter 3.2](03b-network-design.md) |
 | Will VSU be liable for what students post? | A host has duties under several laws, and a prompt notice-and-action process is how a host meets them; a legal review comes before any real users. | [Chapter 3.3](03c-network-fit.md) |
-| Can students criticize VSU on a VSU network? | Yes. The rules protect speech on student welfare and public matters, and a pseudonym is revealed only for named violations, through a process students share in. | [Chapter 3.2](03b-network-design.md) |
+| Can students criticize VSU on a VSU network? | Yes. The rules protect speech on student welfare and public matters, and a pseudonym is never revealed for criticizing the university; when one may be revealed is agreed with the student council and VSU's data protection officer (D-065). | [Chapter 3.2](03b-network-design.md) |
 | What will it cost? | A pilot needs one small server. At scale, servers are modest and people are the main cost, which the pilot measures. | [Chapter 3.3](03c-network-fit.md) |
 | What if students don't use it? | Then the pilot says so, against thresholds fixed in advance, and it stops. | This chapter |
 | What happens if the author leaves? | The network is built from open components and documented, and every pilot ends with VSU owning it or with a clean close. | [Chapter 3.3](03c-network-fit.md) |
@@ -153,7 +153,7 @@ The framing should be cultivation rather than construction: a community network 
 - Anything about DIGITS's architecture, status, or plans beyond the Third SOUA. [Established]
 - Savings of money or time, before a pilot measures them. [Established]
 - That the network would end harassment or misinformation. It would give VSU and its community better ways to respond. [Proposed]
-- That it would replace group chats or Facebook. It complements chats, and competes with Facebook only for campus tasks. [Proposed] (D-074)
+- That it would replace group chats or Facebook. It complements chats, and competes with Facebook only for campus tasks. [Established] (D-074)
 - That it is a platform for VSU's operations. It is a community layer beside them. [Proposed] Its relation to DIGITS is VSU's to decide. [Established] (D-017)
 - Any private conversation, or any stakeholder by name. [Established] (D-030)
 

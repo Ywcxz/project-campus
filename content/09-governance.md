@@ -23,7 +23,7 @@ A relationship can exist while only authorized people see it, only some details 
 
 ## Privacy by design
 
-Collect only what a feature needs, use it only for that purpose, limit who can access it, keep it only as long as necessary, keep it accurate, say plainly what is collected, and secure it. [Established] (v0.1 §15.14) For the network, keeping data only as long as necessary means a memory with a schedule: knowledge such as confirmed answers and guides is kept, dated, and can lose its author's name, while conversation fades. [Proposed] (D-070) The Data Privacy Act of 2012 (Republic Act No. 10173) governs personal data in the Philippines, and how it applies to each product needs review before any real users. [Unresolved]
+Collect only what a feature needs, use it only for that purpose, limit who can access it, keep it only as long as necessary, keep it accurate, say plainly what is collected, and secure it. [Established] (v0.1 §15.14) For the network, keeping data only as long as necessary means a memory with a schedule: knowledge such as confirmed answers and guides is kept, dated, and can lose its author's name, while conversation fades. [Established] (D-070) The Data Privacy Act of 2012 (Republic Act No. 10173) governs personal data in the Philippines, and how it applies to each product needs review before any real users. [Unresolved]
 
 ## Governance by product
 
