@@ -79,40 +79,46 @@ How to count a problem that applies only to some students (Q-57) was settled on 
 
 ## The survey protocol, proposed
 
-This is the protocol D-086 requires, set out for the owner to confirm. Every rule in it is fixed before any answer is read. [Proposed] (D-086) The survey opens only once the research permission is granted, and ethics clearance too if VSU requires it, and Q-53 stays open until the owner confirms this protocol. [Established] (D-083, D-090) The survey site is due for a major rework; this protocol follows its current version, scenes-v1, and changes with it, item by item. [Proposed]
+This is the protocol D-086 requires, set out for the owner to confirm. Every rule in it is fixed before any answer is read. [Proposed] (D-086) The survey opens only once the research permission is granted, and ethics clearance too if VSU requires it, and Q-53 stays open until the owner confirms this protocol. [Established] (D-083, D-090) This protocol follows the survey's second version, scenes-v2, and changes with it, item by item. [Established] (D-112) The survey is called VSUrvey. [Proposed] (D-115) The survey is in English, since its respondents may speak mainly Tagalog or Waray, or be exchange students. [Established] (D-112) A story may be written in English, Filipino, Bisaya, or Waray. [Proposed]
 
 ### Who takes part
 
-Respondents are current VSU Main Campus students aged 18 and over, who confirm both on the consent screen. [Established] (D-094) How students are invited, and through which channels, is agreed with OVPSAS when permission is granted. [Unresolved] Those who answer are a convenience sample, so the results describe them, not every student. [Established] Leaving out students under 18 drops some first-year students, whose problems may differ, so the results say nothing about them. [Established] (D-094)
+Respondents are current VSU Main Campus students aged 18 and over, who confirm both on the consent screen. [Established] (D-094) The page opens on a guard post: the gate stays shut until the respondent ticks that statement, and there is no separate age question. [Established] (D-113) How students are invited, and through which channels, is agreed with OVPSAS when permission is granted. [Unresolved] Those who answer are a convenience sample, so the results describe them, not every student. [Established] Leaving out students under 18 drops some first-year students, whose problems may differ, so the results say nothing about them. [Established] (D-094)
 
 ### What the consent screen says
 
-Today the consent screen asks people to confirm that they are Main Campus students aged 18 or older and agree to take part, and tells them they may skip any question or stop. The screen before it says the survey is anonymous and, once the survey is live, that answers go to a private spreadsheet only the researcher can open. [Established] The proposed screen adds what the answers are for, how long they are kept, that a sent answer cannot be taken back, and where to ask questions: [Proposed]
+The first screen says what the survey is about, that it is independent and not an official VSU survey, and how long it might take. The gate after it lists where the answers are kept and who can open them, how long they are kept, that a sent answer cannot be taken back, who runs the survey, and where to ask questions; the respondent ticks the consent statement before any question is asked. [Established] (D-110, D-111, D-113) Their wording, reworked with the site on 17 October 2026, awaits the owner's check: [Proposed] (Q-53)
 
-> **Proposed consent screen.** This survey is run by Leo M. Subingsubing, a VSU alumnus, for Project CAMPUS, an independent proposal. It is not an official VSU survey. It takes about eight minutes, and your answers help show which campus problems are common and serious. Skip any question you like, and stop whenever you want. Your answers are anonymous, so please don't name anyone in them. They go to a private spreadsheet that only the researcher can open, except that VSU's Research Ethics Board, if it reviews this survey, may check them to confirm the results and must keep them confidential; and they are deleted one academic year after the survey closes; only totals are kept. Because no name is attached, an answer can't be taken back once it is sent. Questions go to the phone number below, or leave a comment at the end of the survey. I'm a current VSU Main Campus student, I'm 18 or older, and I agree to take part.
+> **First screen.** VSUrvey. Short scenes from a day on campus. Tap what's true for you. This survey asks about student life and VSU's services, for Project CAMPUS, an independent proposal by a VSU alumnus. It is not an official VSU survey. Your answers carry no name, so please don't name anyone in them. This might take 5–10 minutes.
 
-The screen gives the author's phone number, so anyone who wants a reply can get one, and the survey ends with an optional comment box for anyone who would rather stay anonymous; comments are kept and deleted with the answers. [Established] (D-110)
+> **The gate.** Skip any question or stop whenever you want. Your answers carry no name. They go to a private Google Sheet only the researcher opens; VSU's Research Ethics Board, if it reviews this survey, may check them in confidence. No result is shared for a group under 10 people. Answers are deleted one academic year after the survey closes; only totals are kept. With no name attached, a sent answer can't be taken back. Run by Leo M. Subingsubing for Project CAMPUS. Questions: his phone number, shown on the screen, or a comment at the end. I'm a current VSU Main Campus student, I'm 18 or older, and I agree to take part.
+
+Both screens say the answers carry no name rather than that they are anonymous, because year, faculty, and the other details could together point to one person in a small group; the floor of 10 keeps published results from singling anyone out. [Proposed] (D-110) The 5 to 10 minutes is an estimate, to be timed on the first run-throughs. [Unresolved]
+
+The gate gives the author's phone number, so anyone who wants a reply can get one, and the survey ends with an optional comment box for anyone who would rather stay anonymous; comments are kept and deleted with the answers. [Established] (D-110)
 
 ### What is collected, and what is not
 
-The page sends only these answers, with the time they were sent: [Established]
+The page sends only these answers, with the time the respondent agreed to take part and the time the answers were sent: [Established] (D-112)
 
-- Where the respondent lives during the semester; their year and organization role; whether they hold a scholarship, with a choice not to say; and their college, if they give it.
-- Where VSU news reaches them, and what they did the last time they needed an office they hadn't dealt with.
-- How often each of 13 problems happened to them, and how much it mattered.
-- Places on a campus map where their time goes, and why.
-- Which problems they would fix first, how far they trust answers in student groups, and how they would post.
+- Where the respondent lives during the semester; their year, faculty, and organization role; and whether they hold a scholarship and whether they are the first in their family to go to college, each with a choice not to say.
+- Their consent, which confirms that they are a current Main Campus student aged 18 or older (D-113).
+- Where VSU news reaches them and the one they rely on most; what they spend on mobile data in a usual week, how much of it goes to schoolwork, and how they get online during class hours.
+- What they did the last time they needed an office they hadn't dealt with.
+- How often each of 15 problems happened to them in the past 12 months at VSU, and how much it mattered.
+- Up to three places on a campus map that gave them trouble, and what went wrong at each.
+- Which problems they would fix first, how far they trust answers in student groups, whether they have ever posted anonymously, and how they would post.
 - What would draw them to a VSU network, or keep them away.
-- An optional story, and whether it may be quoted.
-- An optional comment for the researcher, added when the site is reworked (D-110).
+- An optional story and whether it may be quoted, and an optional comment for the researcher (D-110).
+- Whether the answer was sent in the survey's test mode.
 
-It asks for no name, student number, email address, or phone number. [Established] The script that receives the answers and writes them to the sheet is not yet public; publishing it beside the survey would let anyone check that it keeps nothing more. [Proposed]
+It asks for no name, student number, email address, or phone number. [Established] The script that receives the answers and writes them to the sheet is published with the survey, so anyone can check that it keeps nothing more. [Proposed]
 
-Year, college, and scholarship status are details of a person's education, which the Data Privacy Act counts as sensitive personal information. [Established] (E-041) The answers carry no names, but combined, such details could point to one person in a small program. [Proposed] So college becomes a fixed list rather than free text, and names and identifying details are removed from stories before anything is quoted or summarized. [Proposed] No result is published for a group of fewer than 10 respondents, counting combinations such as one college's first-year students who live off campus. [Established] (D-110) A story is quoted only if its writer allowed it, and only in short passages that identify no one; otherwise it is paraphrased. [Proposed]
+Year, faculty, and scholarship status are details of a person's education, which the Data Privacy Act counts as sensitive personal information. [Established] (E-041) Whether a respondent is the first in their family to go to college is treated the same way. [Proposed] The answers carry no names, but combined, such details could point to one person in a small program. [Proposed] So faculty is a fixed list rather than free text. [Established] (D-112) Names and identifying details are removed from stories and comments before anything is quoted or summarized. [Proposed] No result is published for a group of fewer than 10 respondents, counting combinations such as one faculty's first-year students who live off campus. [Established] (D-110) A story is quoted only if its writer allowed it, and only in short passages that identify no one; otherwise it is paraphrased. [Proposed]
 
 ### Where answers are kept, and who sees them
 
-Answers go through an Apps Script web app to a private Google Sheet, and interview volunteers sign up on a separate form, so contact details never meet answers. [Established] (D-039) Only the author opens the sheet, the Google account that owns it uses two-step verification, and the sheet is never shared by link. [Established] (D-111) VSU, OVPSAS included, receives totals, never individual answers. [Established] (D-111) If an office asks for proof that the results are real, it gets the protocol fixed in advance, the totals, and the number of answers received each day, not the answers themselves. [Established] (D-111) If anyone needs the raw answers checked, the check is made by VSU's Research Ethics Board, if it reviews the survey (Q-51), which audits research data and keeps it confidential; the consent screen says so. [Established] (D-111) Nothing from the sheet enters this repository. [Established] (D-086) Google holds the sheet, possibly outside the Philippines; whether that needs anything more under the Data Privacy Act is a question for VSU's data protection officer. [Unresolved] Until the survey opens, its link is shared with no one, and any answers that arrive before then are deleted unread. [Proposed]
+Answers go through an Apps Script web app to a private Google Sheet, and interview volunteers sign up on a separate form, so contact details never meet answers. [Established] (D-039) Only the author opens the sheet, the Google account that owns it uses two-step verification, and the sheet is never shared by link. [Established] (D-111) VSU, OVPSAS included, receives totals, never individual answers. [Established] (D-111) If an office asks for proof that the results are real, it gets the protocol fixed in advance, the totals, and the number of answers received each day, not the answers themselves. [Established] (D-111) If anyone needs the raw answers checked, the check is made by VSU's Research Ethics Board, if it reviews the survey (Q-51), which audits research data and keeps it confidential; the consent screen says so. [Established] (D-111) Nothing from the sheet enters this repository. [Established] (D-086) Google holds the sheet, possibly outside the Philippines; whether that needs anything more under the Data Privacy Act is a question for VSU's data protection officer. [Unresolved] The survey site ships closed: until the author opens it, once VSU's permission is in hand, it sends no answers except those marked as tests, which are deleted. [Proposed] (D-114) Until then its link is shared with no one, and any other answer that arrives is deleted unread. [Proposed]
 
 ### When answers are deleted
 
@@ -120,7 +126,7 @@ Individual answers, stories included, are deleted one academic year after the su
 
 ### How the D-038 bars are computed
 
-The bars are judged for each of the 13 problems on its own, once there are at least 100 valid answers; below that, a problem's result reads not enough data. [Established] (D-110) With 100 answers from a random sample, an observed share of 30% would carry a margin of about 9 points either way, at 95% confidence. [Established] These answers are a convenience sample, so no margin says how far they are from VSU's students as a whole; 100 is a floor for reading results at all, not a sign that they represent VSU. [Proposed]
+The bars are judged for each of the 15 problems on its own, once there are at least 100 valid answers; below that, a problem's result reads not enough data. [Established] (D-110) With 100 answers from a random sample, an observed share of 30% would carry a margin of about 9 points either way, at 95% confidence. [Established] These answers are a convenience sample, so no margin says how far they are from VSU's students as a whole; 100 is a floor for reading results at all, not a sign that they represent VSU. [Proposed]
 
 - **How often.** The share of valid answers that say a problem happened several times or often. Answers of "Doesn't apply to me", and skipped answers, stay in the count, since D-038 counts all respondents. [Established] (D-109) Beside that share, every result reports how many respondents the problem applies to and the share among them, and that second share guides which later module comes first (Q-48). [Established] (D-109)
 - **How much it matters.** Among those answers, more than half must rate the problem moderate or serious; a missing rating counts as neither. [Proposed]
@@ -144,8 +150,8 @@ Housing would not earn a pitch slide, but its 45% among those it applies to woul
 The site accepts every answer, and these rules, fixed before any answer is read, decide at analysis which ones count: [Established] (D-111)
 
 - Exact copies of one record, sent within ten minutes of each other, count once.
-- A record with fewer than 7 of the 13 problems answered counts toward the number of responses, but not toward the bars.
-- A record finished in under a third of the median time is set aside. The page does not yet record when someone starts, so it needs that one field, which holds no personal data.
+- A record with fewer than 8 of the 15 problems answered counts toward the number of responses, but not toward the bars.
+- A record finished in under a third of the median time, counted from when the respondent agreed to take part, is set aside. That start time holds no personal data.
 - A story that shows its writer is under 18 removes the whole record (D-094).
 
 ### Which hypothesis each item bears on
@@ -154,14 +160,18 @@ D-085 asks every survey item to name the hypothesis it bears on. [Established] T
 
 | Survey item | What it asks | Bears on |
 | --- | --- | --- |
+| The gate | The consent statement: a current Main Campus student, 18 or older, who agrees to take part | Who takes part (D-094, D-113) |
 | Where you wake up | Where the respondent lives during the semester | Breakdowns; P-19, P-22 |
-| Your pass | Year, college, organization role, and scholarship | Breakdowns only |
+| Your pass | Year, faculty, organization role, scholarship, and whether they are the first in their family to go to college | Breakdowns; P-09 for the last, which also gives a rough check of the sample: VSU counts 47.9% of the Main Campus's first-year students in 2026 as first-generation college students (E-020) |
 | Where news reaches you | The channels used for VSU matters, and the main one | P-01, P-03 |
+| Mobile data | Weekly spending on mobile data, in bands; how much of it goes to schoolwork; how they get online during class hours | P-15, P-18, P-19 (Q-28) |
 | The office errand | What they did the last time they needed an office they hadn't dealt with | P-02, P-03 |
 | Scene a | Needing several visits or messages to find the right office | P-02 |
 | Scene b | A wrong answer about a school process from other students | P-03 |
+| Scene n | Not finding an answer someone had already given, in a group chat or a post | P-10 |
 | Scene c | Not easily reaching a faculty or staff member outside class | P-04 |
 | Scene d | Missing, or learning late about, an official notice | P-01 |
+| Scene o | Not being able to tell whether a post about a VSU matter was official | P-06 |
 | Scene e | No clear, current guide to a process | P-07, P-11 |
 | Scene f | Missing an event by hearing about it too late | P-01, P-05 |
 | Scene g | Missing a scholarship or financial-aid opportunity | P-05 |
@@ -171,16 +181,19 @@ D-085 asks every survey item to name the hypothesis it bears on. [Established] T
 | Scene k | Not finding a part-time job, an assistantship, or an OJT host | P-05 |
 | Scene l | Not knowing how to reach a graduate for advice | P-05 |
 | Scene m | Wanting food or supplies but not being able to go get them | Hop-It's demand (P-14) |
-| Where your time goes | Places on a campus map, and why | The digital twin's first step (P-13); Hop-It's demand (P-14) |
-| Ten coins | Which problems to fix first | Priorities among the network's use cases (Q-02) |
+| Places that gave trouble | Up to three places on a campus map that were hard to find, closed, or not the right place, and what went wrong | The digital twin's first step (P-13); P-02 |
+| Ten coins | Which problems to fix first | Priorities among the network's use cases (Q-02); which later module comes first (Q-48) |
 | Trust | How far a classmate's answer in a student group can be trusted | P-03 |
-| Posting | Whether they have posted anonymously, and how they would post | Q-16 (D-046) |
+| Posting | Whether they have posted anonymously, and how they would post: under their real name, a made-up name other members can't link to them, or no name at all | Q-16; whether students accept the accountable pseudonyms of D-065 |
 | Draws and deterrents | What would draw them to a VSU network, or keep them away | Q-46; P-15 for mobile data |
 | Your story | The last time one of the problems happened | Context for the bars |
+| A comment | Anything the respondent wants to tell the researcher | Questions and concerns about the survey itself |
+
+Scenes keep their letters, so results stay comparable; the two added in scenes-v2, n and o, are shown after b and d. [Established]
 
 ### What the survey cannot answer
 
-Q-28, how much students spend on mobile data and where they connect on campus, has no item yet, though Chapter 2's case for the intranet now rests partly on it. [Established] Three short items would cover it: weekly spending on mobile data, in bands; how much of it goes to schoolwork; and whether, on campus, they get online through campus Wi-Fi, their own data, or both. [Proposed] (P-15, P-18, P-19) Other hypotheses rest on other methods: P-06 on the Facebook study; P-09, P-10, P-12, and P-20 on the interviews; P-16 and P-17 on VSU ICT's figures; and P-19 also on the signal walk (Q-29). [Proposed]
+Q-28, how much students spend on mobile data and where they connect on campus, now has three items: weekly spending, in bands; how much of it goes to schoolwork; and how they get online during class hours. [Established] (D-112) They cannot say where on campus the signal fails; that rests on the signal walk (Q-29). [Established] P-06 and P-10 now have scenes of their own, and P-06 also rests on the Facebook study; P-09, P-12, and P-20 rest on the interviews, P-09 with a breakdown by first-generation students; and P-16 and P-17 rest on VSU ICT's figures. [Proposed]
 
 ### The interviews
 
