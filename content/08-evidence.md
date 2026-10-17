@@ -79,28 +79,30 @@ How to count a problem that applies only to some students (Q-57) was settled on 
 
 ## The survey protocol, proposed
 
-This is the protocol D-086 requires, set out for the owner to confirm. Every rule in it is fixed before any answer is read. [Proposed] (D-086) The survey opens only once the research permission is granted, and ethics clearance too if VSU requires it, and Q-53 stays open until the owner confirms this protocol. [Established] (D-083, D-090) This protocol follows the survey's second version, scenes-v2, and changes with it, item by item. [Established] (D-112) The survey is in English, since its respondents may speak mainly Tagalog or Waray, or be exchange students. [Established] (D-112) A story may be written in English, Filipino, Bisaya, or Waray. [Proposed]
+This is the protocol D-086 requires, set out for the owner to confirm. Every rule in it is fixed before any answer is read. [Proposed] (D-086) The survey opens only once the research permission is granted, and ethics clearance too if VSU requires it, and Q-53 stays open until the owner confirms this protocol. [Established] (D-083, D-090) This protocol follows the survey's second version, scenes-v2, and changes with it, item by item. [Established] (D-112) The survey is called VSUrvey. [Proposed] (D-115) The survey is in English, since its respondents may speak mainly Tagalog or Waray, or be exchange students. [Established] (D-112) A story may be written in English, Filipino, Bisaya, or Waray. [Proposed]
 
 ### Who takes part
 
-Respondents are current VSU Main Campus students aged 18 and over, who confirm both on the consent screen. [Established] (D-094) Before that screen, the page asks for the birth month and year, keeps them on the respondent's device, and sends only whether the respondent is 18 or older; for someone under 18, the survey ends there and nothing is sent. [Proposed] (D-113) How students are invited, and through which channels, is agreed with OVPSAS when permission is granted. [Unresolved] Those who answer are a convenience sample, so the results describe them, not every student. [Established] Leaving out students under 18 drops some first-year students, whose problems may differ, so the results say nothing about them. [Established] (D-094)
+Respondents are current VSU Main Campus students aged 18 and over, who confirm both on the consent screen. [Established] (D-094) The page opens on a guard post: the gate stays shut until the respondent ticks that statement, and there is no separate age question. [Established] (D-113) How students are invited, and through which channels, is agreed with OVPSAS when permission is granted. [Unresolved] Those who answer are a convenience sample, so the results describe them, not every student. [Established] Leaving out students under 18 drops some first-year students, whose problems may differ, so the results say nothing about them. [Established] (D-094)
 
 ### What the consent screen says
 
-The consent screen says what the answers are for, where they are kept and who can open them, how long they are kept, that a sent answer cannot be taken back, and where to ask questions; the respondent agrees before any survey question is asked, and only the age check comes first. [Established] (D-110, D-111, D-112) Its wording, reworked with the site on 17 October 2026, awaits the owner's check: [Proposed] (Q-53)
+The first screen says what the survey is about, that it is independent and not an official VSU survey, and how long it might take. The gate after it lists where the answers are kept and who can open them, how long they are kept, that a sent answer cannot be taken back, who runs the survey, and where to ask questions; the respondent ticks the consent statement before any question is asked. [Established] (D-110, D-111, D-113) Their wording, reworked with the site on 17 October 2026, awaits the owner's check: [Proposed] (Q-53)
 
-> **Consent screen.** This survey is run by Leo M. Subingsubing, a VSU alumnus, for Project CAMPUS, an independent proposal. It is not an official VSU survey. It takes about ten minutes, and your answers help show which campus problems are common and serious. Skip any question you like, and stop whenever you want. Your answers carry no name, so please don't name anyone in them either. They are kept in a private Google Sheet that only the researcher can open, except that VSU's Research Ethics Board, if it reviews this survey, may check them to confirm the results and must keep them confidential. No result is shared for a group of fewer than 10 people. Answers are deleted one academic year after the survey closes; only totals are kept. Because no name is attached, an answer can't be taken back once it is sent. Questions go to Leo at his phone number, shown on the screen, or leave a comment at the end of the survey. I'm a current VSU Main Campus student, I'm 18 or older, and I agree to take part.
+> **First screen.** VSUrvey. Short scenes from a day on campus. Tap what's true for you. This survey asks about student life and VSU's services, for Project CAMPUS, an independent proposal by a VSU alumnus. It is not an official VSU survey. Your answers carry no name, so please don't name anyone in them. This might take 5–10 minutes.
 
-The screen says the answers carry no name rather than that they are anonymous, because year, faculty, and the other details could together point to one person in a small group; the floor of 10 keeps published results from singling anyone out. [Proposed] (D-110) The ten minutes is an estimate, to be timed on the first run-throughs. [Unresolved]
+> **The gate.** Skip any question or stop whenever you want. Your answers carry no name. They go to a private Google Sheet only the researcher opens; VSU's Research Ethics Board, if it reviews this survey, may check them in confidence. No result is shared for a group under 10 people. Answers are deleted one academic year after the survey closes; only totals are kept. With no name attached, a sent answer can't be taken back. Run by Leo M. Subingsubing for Project CAMPUS. Questions: his phone number, shown on the screen, or a comment at the end. I'm a current VSU Main Campus student, I'm 18 or older, and I agree to take part.
 
-The screen gives the author's phone number, so anyone who wants a reply can get one, and the survey ends with an optional comment box for anyone who would rather stay anonymous; comments are kept and deleted with the answers. [Established] (D-110)
+Both screens say the answers carry no name rather than that they are anonymous, because year, faculty, and the other details could together point to one person in a small group; the floor of 10 keeps published results from singling anyone out. [Proposed] (D-110) The 5 to 10 minutes is an estimate, to be timed on the first run-throughs. [Unresolved]
+
+The gate gives the author's phone number, so anyone who wants a reply can get one, and the survey ends with an optional comment box for anyone who would rather stay anonymous; comments are kept and deleted with the answers. [Established] (D-110)
 
 ### What is collected, and what is not
 
 The page sends only these answers, with the time the respondent agreed to take part and the time the answers were sent: [Established] (D-112)
 
 - Where the respondent lives during the semester; their year, faculty, and organization role; and whether they hold a scholarship and whether they are the first in their family to go to college, each with a choice not to say.
-- That they are 18 or older, worked out on their device from a birth month and year that are never sent (D-113).
+- Their consent, which confirms that they are a current Main Campus student aged 18 or older (D-113).
 - Where VSU news reaches them and the one they rely on most; what they spend on mobile data in a usual week, how much of it goes to schoolwork, and how they get online during class hours.
 - What they did the last time they needed an office they hadn't dealt with.
 - How often each of 15 problems happened to them in the past 12 months at VSU, and how much it mattered.
@@ -158,7 +160,7 @@ D-085 asks every survey item to name the hypothesis it bears on. [Established] T
 
 | Survey item | What it asks | Bears on |
 | --- | --- | --- |
-| Age check | Whether the respondent is 18 or older, from a birth month and year kept on the device | Who takes part (D-094, D-113) |
+| The gate | The consent statement: a current Main Campus student, 18 or older, who agrees to take part | Who takes part (D-094, D-113) |
 | Where you wake up | Where the respondent lives during the semester | Breakdowns; P-19, P-22 |
 | Your pass | Year, faculty, organization role, scholarship, and whether they are the first in their family to go to college | Breakdowns; P-09 for the last, which also gives a rough check of the sample: VSU counts 47.9% of the Main Campus's first-year students in 2026 as first-generation college students (E-020) |
 | Where news reaches you | The channels used for VSU matters, and the main one | P-01, P-03 |
