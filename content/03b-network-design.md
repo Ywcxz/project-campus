@@ -270,6 +270,31 @@ Dcard's posting under a verified university affiliation without a name is the te
 
 A simpler version, anonymous to other members and verified to VSU, protects a member from peers but not from the institution: if VSU can see who wrote a criticism of VSU, the anonymity protects least where it is needed most. [Proposed] So the link between a nickname and a member would be stored so that no single person can open it: one key held by the student council and one by VSU's data protection officer, or by people they name, so that both must agree. [Proposed] An identity would be revealed only for named violations, such as threats, harassment, impersonation, or sexual content involving a minor, or under legal process, and never for criticizing the university. Every reveal would be logged and reported, in aggregate, each semester. [Proposed] Which sections get pseudonyms follows the Facebook study's H4, on the topics people already post about anonymously far more than others. [Established] (D-048, D-050)
 
+## Concerns: one record per concern
+
+The owner's reading of student interviews is that concerns do get raised and acknowledged, but students can't see what became of one raised before, so it is raised again, gets the same reply, and starts from zero. [Unresolved] (P-23) In the owner's view, this is also why open channels for concerns don't last: asking the same thing again only brings the same answer. [Proposed] The concerns community, owned by the student council and OVPSAS, gives each concern one record that stays, so an office answers once and every repeat points to that answer. [Proposed] (D-118)
+
+1. **Raising.** A student posts a concern, under their name or a pseudonym (D-065). Others mark that it affects them too. A post that repeats an open concern is linked to it, and its support counts there. [Proposed]
+2. **Forwarding.** The student council, which moderates the community, writes up a concern that draws enough support and forwards it to the office responsible. The support needed grows with the size of the community. The council may also forward a serious concern that few have marked, since a concern of a small faculty, or of students with disabilities, may never draw many. [Proposed]
+3. **Status.** Every forwarded concern shows where it stands, with dates: received, acknowledged, answered, fixed, or closed with a reason. An office may decline to act, but it says why, and a concern left at acknowledged visibly ages. [Proposed]
+4. **Who speaks.** The council posts updates in its own name, such as "Forwarded to OVPSAS on 3 November". Only the office's own account posts the office's answer, labelled official, so moderators never answer for an office. [Proposed] (D-066)
+
+Three rules sit around it. [Proposed]
+
+- **Who sees whom.** Offices see what is posted and how many marked it, never who marked it, and never who stands behind a pseudonym.
+- **Personal cases go elsewhere.** A missing grade or a document request goes to the office or VSU's helpdesk, not to the concerns community (D-064).
+- **Concerns about the council.** These go to OVPSAS or the network council, so the council never judges a concern about itself.
+
+| Question | Answer |
+| --- | --- |
+| What problem? | P-23: concerns don't add up, and students can't see what became of one raised before [Unresolved] |
+| Who needs it? | Students first; the student council, which carries concerns to offices; and offices, which answer once instead of many times [Proposed] |
+| What evidence? | None from VSU yet. [Unresolved] The survey's scene p and its question on what students want back test it. [Proposed] (D-117) |
+| Relation to existing systems? | VSU runs a helpdesk and publishes a Citizen's Charter of its services ([Chapter 3](03-social-network.md)); personal requests stay with them and with the offices (D-064). [Established] Whether VSU has a channel for collective concerns, and how the council carries concerns to offices today, is not recorded here. [Unresolved] |
+| Stage? | Later, with student voice ([Chapter 3.1](03a-use-cases.md)); it depends on the speech rules (Q-16) and an office's commitment (D-068) [Proposed] |
+| Privacy, governance, and cost? | Pseudonyms under D-065, and supporters never shown; the council's time each week, and an office's time to acknowledge and answer [Proposed] |
+| How could it be disproved? | Few respondents report a concern that went nowhere (scene p); or, in a pilot, offices don't acknowledge within the agreed time, or students keep reposting instead of following the record [Proposed] |
+
 ## Rules and moderation
 
 ### Three jobs, kept apart
@@ -389,7 +414,7 @@ The outgoing president nominates the new officers, the adviser approves, and own
 
 ### 6. A concern about water in a dormitory
 
-In the concerns community, a student writes under a pseudonym that a dormitory has had no water for three days. Others mark "same issue". The post is within the rules, so the moderators leave it alone; whether it needs a response is the housing office's question, not theirs. A student council representative raises it with the office, which replies in the thread as official, posts a repair date, and later marks it fixed. The student's identity is never revealed. [Proposed]
+In the concerns community, a student writes under a pseudonym that a dormitory has had no water for three days. Others mark "same issue", and a later post about it is linked to the first. The post is within the rules, so the moderators leave it alone; whether it needs a response is the housing office's question, not theirs. A student council representative raises it with the office, which replies in the thread as official, posts a repair date, and later marks it fixed. The student's identity is never revealed. [Proposed]
 
 ### 7. A consultation
 
