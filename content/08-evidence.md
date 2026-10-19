@@ -104,7 +104,7 @@ The page sends only these answers, with the time the respondent agreed to take p
 
 - Where the respondent lives during the semester; their year, faculty, and organization role; and whether they hold a scholarship and whether they are the first in their family to go to college, each with a choice not to say.
 - Their consent, which confirms that they are a current Main Campus student aged 18 or older (D-113).
-- Which networks their SIMs are on; what kind of load they buy, and which apps it covers if it covers only some; what they spend on load in one week of classes, and how much of that week's data goes to schoolwork; and how they get online on campus during class hours and where they stay (D-116).
+- Which networks their SIMs are on, up to two; what kind of load they buy, a postpaid plan included, and which apps it covers if it covers only some; what they spend on load in one week of classes, and how much of that week's data goes to schoolwork; where their mobile data gets a usable signal; and how they get online on campus during class hours and where they stay (D-116, D-120).
 - For four kinds of VSU news, where they usually hear it first: class suspensions and emergencies; deadlines such as clearance, submissions, or payment; events and activities; and scholarships, part-time jobs, and other opportunities (D-119).
 - What they did the last time they needed an office they hadn't dealt with; how they last tried to reach a teacher or staff member outside class, and whether they got what they needed; and what they did the last time they had a concern about a campus service (D-119).
 - Where they last asked first about a subject or a school process (D-119).
@@ -165,15 +165,16 @@ D-085 asks every survey item to name the hypothesis it bears on. [Established] T
 | --- | --- | --- |
 | The gate | The consent statement: a current Main Campus student, 18 or older, who agrees to take part | Who takes part (D-094, D-113) |
 | Where you wake up | Where the respondent lives during the semester | Breakdowns; P-19, P-22 |
-| Your pass | Year, faculty, organization role, scholarship, and whether they are the first in their family to go to college | Breakdowns; P-09 for the last, which also gives a rough check of the sample: VSU counts 47.9% of the Main Campus's first-year students in 2026 as first-generation college students (E-020) |
-| Networks | Which networks their SIMs are on, or none | Where signal fails, by network (Q-29); breakdowns |
-| Kind of load | Data for any site or app, data for certain apps only and which apps, calls and texts, or none | P-15: whether students' load reaches a site that isn't one of those apps |
-| Spending on load | What they spend in one week of classes, in bands, counting about a quarter of a monthly promo | P-18 (Q-28) |
+| Your form | Year, faculty, organization role, scholarship, and whether they are the first in their family to go to college | Breakdowns; P-09 for the last, which also gives a rough check of the sample: VSU counts 47.9% of the Main Campus's first-year students in 2026 as first-generation college students (E-020) |
+| Networks | Which networks their SIMs are on, up to two, or none | Where signal fails, by network (Q-29); breakdowns |
+| Kind of load | Data for any site or app, data for certain apps only and which apps, calls and texts, a postpaid plan, or none | P-15: whether students' load reaches a site that isn't one of those apps |
+| Spending on load | What they spend in one week of classes, in bands, counting about a quarter of a monthly promo or plan; not asked of those who buy no load | P-18 (Q-28) |
 | Schoolwork's share | How much of that week's data goes to schoolwork, from almost none to almost all | P-18 (Q-28) |
-| Getting online | How they get online on campus during class hours, and where they stay | P-19, P-15 (Q-28) |
+| Signal | Where their mobile data gets a usable signal: on campus and where they stay, on campus only, where they stay only, or neither | P-19 (Q-29) |
+| Getting online | How they get online on campus during class hours, and where they stay: mobile data, Wi-Fi, piso Wi-Fi, pocket Wi-Fi, or usually not at all, all that apply | P-19, P-15 (Q-28) |
 | Heard first | For four kinds of news (class suspensions and emergencies; deadlines such as clearance, submissions, or payment; events and activities; scholarships, part-time jobs, and other opportunities), the channel where it usually reaches them first, or too late or never; one list of channels for all four, with official and student-run sources apart. Deadlines take in class submissions as well as office ones | P-06 and P-20 for suspensions and emergencies; P-01 for deadlines; P-01 and P-05 for events; P-05 for scholarships and jobs |
-| Scene o | Not being able to tell whether a post about a VSU matter was official | P-06 |
 | Scene d | Missing, or learning late about, an official notice | P-01 |
+| Scene o | Not being able to tell whether a post about a VSU matter was official | P-06 |
 | Scene f | Missing an event by hearing about it too late | P-01, P-05 |
 | Scene g | Missing a scholarship or financial-aid opportunity | P-05 |
 | Scene k | Not finding a part-time job, an assistantship, or an OJT host | P-05 |
@@ -202,11 +203,11 @@ D-085 asks every survey item to name the hypothesis it bears on. [Established] T
 | What they want back | What they would most want after raising a concern on the network: that it was received, an answer, a fix or a reason it can't be fixed, or only to be heard | P-23; Q-63; the concerns design (D-118) |
 | A comment | Anything the respondent wants to tell the researcher | Questions and concerns about the survey itself |
 
-Scenes keep their letters, so results stay comparable. [Established] In scenes-v3 the questions on communication are grouped into four parts by direction, and each scene sits in its part, right after the question it goes with: Hearing from VSU (o after suspensions, d after deadlines, f after events, g and k after opportunities), Reaching VSU (a after the office errand, then e, c after reaching a teacher, p after the concern question), Students and alumni (b and n after asking first, then h and l), and Campus life (i, j, m), which holds the scenes on the network's later modules. A question and the scenes after it count as one item in the part's numbering. [Proposed] (D-119) The channel list names kinds of channels, never a community-run page (D-044). [Established]
+Scenes keep their letters, so results stay comparable. [Established] In scenes-v3 the questions on communication are grouped into four parts by direction, and each scene sits in its part: Hearing from VSU (the four channel questions, then scenes d, o, f, g, and k), Reaching VSU (a after the office errand, then e, c after reaching a teacher, p after the concern question), Students and alumni (b and n after asking first, then h and l), and Campus life (i, j, m), which holds the scenes on the network's later modules. Outside Hearing from VSU, each scene follows the question it goes with, and a question and the scenes after it count as one item in the part's numbering. [Proposed] (D-119) The channel list names kinds of channels, never a community-run page (D-044). [Established]
 
 ### What the survey cannot answer
 
-Q-28, how much students spend on mobile data and where they connect on campus, now has six items: the networks their SIMs are on, the kind of load they buy, what they spend in one week, the share that goes to schoolwork, and how they get online on campus and where they stay. [Established] (D-116) They are estimates in bands: a web page can't read a phone's data use, and phones count data by app, not by purpose, so even exact figures would not split schoolwork from the rest. [Established] (D-116) They cannot say where on campus the signal fails; that rests on the signal walk (Q-29). [Established] P-06, P-10, and P-23 now have scenes of their own, and P-06 also rests on the Facebook study; P-09, P-12, and P-20 rest on the interviews, P-09 with a breakdown by first-generation students; and P-16 and P-17 rest on VSU ICT's figures. [Proposed]
+Q-28, how much students spend on mobile data and where they connect on campus, now has seven items: the networks their SIMs are on, the kind of load they buy, what they spend in one week, the share that goes to schoolwork, where their mobile data gets a usable signal, and how they get online on campus and where they stay. [Proposed] (D-120) They are estimates in bands: a web page can't read a phone's data use, and phones count data by app, not by purpose, so even exact figures would not split schoolwork from the rest. [Established] (D-116) They cannot say where on campus the signal fails, only whether it holds on campus and where students stay; where it fails rests on the signal walk (Q-29). [Established] P-06, P-10, and P-23 now have scenes of their own, and P-06 also rests on the Facebook study; P-09, P-12, and P-20 rest on the interviews, P-09 with a breakdown by first-generation students; and P-16 and P-17 rest on VSU ICT's figures. [Proposed]
 
 ### The interviews
 
