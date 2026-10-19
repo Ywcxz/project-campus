@@ -109,9 +109,8 @@ The page sends only these answers, with the time the respondent agreed to take p
 - For five kinds of VSU news, where they usually hear it first: class suspensions and emergencies; documents to submit, such as for clearance; events and activities; scholarships, part-time jobs, and other opportunities; and announcements from their faculty, department, or organization (D-119).
 - What they did the last time they needed an office they hadn't dealt with; how they last tried to reach a teacher or staff member outside class, and whether they got what they needed; and what they did the last time they had a concern about a campus service (D-119).
 - Where they last asked first about a subject or a school process (D-119).
-- How often each of 16 problems happened to them since the school year started in August, and how much it mattered (D-122).
-- Up to three places on a campus map that gave them trouble, and what went wrong at each.
-- Which problems they would fix first, how far they trust answers in student groups, whether they have ever posted anonymously, what group chats and Facebook do well for VSU matters (D-119), how they would post, and what they would most want back after raising a concern (D-117).
+- How often each of 15 problems happened to them since the start of the semester, and how much it mattered (D-122, D-123).
+- Which of the 15 problems they would fix first (D-123), how far they trust answers in student groups, whether they have ever posted anonymously, what group chats and Facebook do well for VSU matters (D-119), how they would post, and what they would most want back after raising a concern (D-117).
 - What would draw them to a VSU network, or keep them away.
 - An optional story and whether it may be quoted, and an optional comment for the researcher (D-110).
 - Whether the answer was sent in the survey's test mode.
@@ -130,7 +129,7 @@ Individual answers, stories included, are deleted one academic year after the su
 
 ### How the D-038 bars are computed
 
-The bars are judged for each of the 16 problems on its own, once there are at least 100 valid answers; below that, a problem's result reads not enough data. [Established] (D-110) With 100 answers from a random sample, an observed share of 30% would carry a margin of about 9 points either way, at 95% confidence. [Established] These answers are a convenience sample, so no margin says how far they are from VSU's students as a whole; 100 is a floor for reading results at all, not a sign that they represent VSU. [Proposed]
+The bars are judged for each of the 15 problems on its own, once there are at least 100 valid answers; below that, a problem's result reads not enough data. [Established] (D-110) With 100 answers from a random sample, an observed share of 30% would carry a margin of about 9 points either way, at 95% confidence. [Established] These answers are a convenience sample, so no margin says how far they are from VSU's students as a whole; 100 is a floor for reading results at all, not a sign that they represent VSU. [Proposed]
 
 - **How often.** The share of valid answers that say a problem happened several times or often. Answers of "Doesn't apply to me", and skipped answers, stay in the count, since D-038 counts all respondents. [Established] (D-109) Beside that share, every result reports how many respondents the problem applies to and the share among them, and that second share guides which later module comes first (Q-48). [Established] (D-109)
 - **How much it matters.** Among those answers, more than half must rate the problem moderate or serious; a missing rating counts as neither. [Proposed]
@@ -154,7 +153,7 @@ Housing would not earn a pitch slide, but its 45% among those it applies to woul
 The site accepts every answer, and these rules, fixed before any answer is read, decide at analysis which ones count: [Established] (D-111)
 
 - Exact copies of one record, sent within ten minutes of each other, count once.
-- A record with fewer than 8 of the 16 problems answered counts toward the number of responses, but not toward the bars.
+- A record with fewer than 8 of the 15 problems answered counts toward the number of responses, but not toward the bars. (D-123)
 - A record finished in under a third of the median time, counted from when the respondent agreed to take part, is set aside. That start time holds no personal data.
 - A story that shows its writer is under 18 removes the whole record (D-094).
 
@@ -175,7 +174,7 @@ D-085 asks every survey item to name the hypothesis it bears on. [Established] T
 | Signal | Where their mobile data gets a usable signal: on campus and where they stay, on campus only, where they stay only, or neither | P-19 (Q-29) |
 | Getting online | How they get online on campus during class hours, and where they stay: mobile data, Wi-Fi, piso Wi-Fi, pocket Wi-Fi, or usually not at all, all that apply | P-19, P-15 (Q-28) |
 | Wi-Fi spending | What they spend on Wi-Fi in one week of classes (piso Wi-Fi, pocket Wi-Fi load, a share of a Wi-Fi bill), in the same bands as load | P-18 (Q-28) |
-| Heard first | For five kinds of news (class suspensions and emergencies; documents to submit, such as for clearance; events and activities; scholarships, part-time jobs, and other opportunities; announcements from their faculty, department, or organization), the channel where it usually reaches them first, or too late or never; one list of channels for all five, with official and student-run sources apart | P-06 and P-20 for suspensions and emergencies; P-01 for documents and announcements; P-01 and P-05 for events; P-05 for scholarships and jobs |
+| Heard first | For five kinds of news (class suspensions and emergencies; documents to submit, such as for clearance; events open to everyone, such as a blood drive or free snacks; scholarships, part-time jobs, and other opportunities; meetings or announcements from their faculty, department, or organization), the channel where it usually reaches them first, or too late or never; one list of channels for all five, with official and student-run sources apart | P-06 and P-20 for suspensions and emergencies; P-01 for documents and announcements; P-01 and P-05 for events; P-05 for scholarships and jobs |
 | Scene d | Missing, or learning late about, an official notice | P-01 |
 | Scene o | Not being able to tell whether a post about a VSU matter was official | P-06 |
 | Scene f | Missing an event by hearing about it too late | P-01, P-05 |
@@ -193,24 +192,22 @@ D-085 asks every survey item to name the hypothesis it bears on. [Established] T
 | Scene n | Not finding an answer someone had already given, in a group chat or a post | P-10 |
 | Trust | How far a classmate's answer in a student group can be trusted | P-03 |
 | Posting | Whether they have posted anonymously, and how they would post: under their real name, a made-up name other members can't link to them, or no name at all | Q-16; whether students accept the accountable pseudonyms of D-065 |
-| Scene h | An organization losing files or know-how when officers changed | P-08 |
-| Scene l | Not knowing how to reach a graduate for advice | P-05 |
-| Scene i | Trouble finding housing or a dormmate | P-22 |
+| Scene l | Not knowing how to reach a senior, a graduating student, or a graduate for advice | P-05 |
+| Scene i | Trouble finding housing or a boardmate; starts at Doesn't apply for those who live with family and commute | P-22 |
 | Scene j | Being scammed, or nearly, when buying or selling | P-21 |
 | Scene m | Wanting food or supplies but not being able to go get them | Hop-It's demand (P-14) |
-| Places that gave trouble | Up to three places on a campus map that were hard to find, closed, or not the right place, and what went wrong | The digital twin's first step (P-13); P-02 |
-| Ten coins | Which problems to fix first | Priorities among the network's use cases (Q-02); which later module comes first (Q-48) |
+| Ten coins | Which problems to fix first, with a jar for each of the 15 | Priorities among the network's use cases (Q-02); which later module comes first (Q-48) |
 | Your story | The last time one of the problems happened | Context for the bars |
 | What works well | What group chats and Facebook do well for VSU matters | What the network must match (Q-46); P-15 for load promos |
 | Draws and deterrents | What would draw them to a VSU network, or keep them away | Q-46; P-15 for mobile data |
 | What they want back | What they would most want after raising a concern on the network: that it was received, an answer, a fix or a reason it can't be fixed, or only to be heard | P-23; Q-63; the concerns design (D-118) |
 | A comment | Anything the respondent wants to tell the researcher | Questions and concerns about the survey itself |
 
-Scenes keep their letters, so results stay comparable. [Established] In scenes-v3 the questions on communication are grouped into four parts by direction, and each scene sits in its part: Hearing from VSU (the five channel questions, then scenes d, o, f, g, and k), Reaching VSU (a after the office errand, then e, c after reaching a teacher, p after the concern question), Students and alumni (b and n after asking first, then h and l), and Campus life (i, j, m), which holds the scenes on the network's later modules. Outside Hearing from VSU, each scene follows the question it goes with, and a question and the scenes after it count as one item in the part's numbering. [Proposed] (D-119) The channel list names kinds of channels, never a community-run page (D-044). [Established]
+Scenes keep their letters, so results stay comparable. [Established] In scenes-v3 the questions on communication are grouped into four parts by direction, and each scene sits in its part: Hearing from VSU (the five channel questions, then scenes d, o, f, g, and k), Reaching VSU (a after the office errand, then e, c after reaching a teacher, p after the concern question), Students and alumni (b and n after asking first, then l), and Campus life (i, j, m), which holds the scenes on the network's later modules. Outside Hearing from VSU, each scene follows the question it goes with, and a question and the scenes after it count as one item in the part's numbering. [Proposed] (D-119) The channel list names kinds of channels, never a community-run page (D-044). [Established]
 
 ### What the survey cannot answer
 
-Q-28, how much students spend on mobile data and where they connect on campus, now has eight items: the networks their SIMs are on, the kind of load they buy, what they spend in one week, the share that goes to schoolwork, where their mobile data gets a usable signal, how they get online on campus and where they stay, and what they spend on Wi-Fi in one week. [Proposed] (D-120) They are estimates in bands: a web page can't read a phone's data use, and phones count data by app, not by purpose, so even exact figures would not split schoolwork from the rest. [Established] (D-116) They cannot say where on campus the signal fails, only whether it holds on campus and where students stay; where it fails rests on the signal walk (Q-29). [Established] P-06, P-10, and P-23 now have scenes of their own, and P-06 also rests on the Facebook study; P-09, P-12, and P-20 rest on the interviews, P-09 with a breakdown by first-generation students; and P-16 and P-17 rest on VSU ICT's figures. [Proposed]
+Q-28, how much students spend on mobile data and where they connect on campus, now has eight items: the networks their SIMs are on, the kind of load they buy, what they spend in one week, the share that goes to schoolwork, where their mobile data gets a usable signal, how they get online on campus and where they stay, and what they spend on Wi-Fi in one week. [Proposed] (D-120) They are estimates in bands: a web page can't read a phone's data use, and phones count data by app, not by purpose, so even exact figures would not split schoolwork from the rest. [Established] (D-116) They cannot say where on campus the signal fails, only whether it holds on campus and where students stay; where it fails rests on the signal walk (Q-29). [Established] P-06, P-10, and P-23 now have scenes of their own, and P-06 also rests on the Facebook study; P-08, P-09, P-12, and P-20 rest on the interviews, P-08 since scene h left the survey (D-123), P-09 with a breakdown by first-generation students; P-16 and P-17 rest on VSU ICT's figures; and P-13 waits for the campus map's rework (D-123). [Proposed]
 
 ### The interviews
 
