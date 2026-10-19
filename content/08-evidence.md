@@ -104,7 +104,7 @@ The page sends only these answers, with the time the respondent agreed to take p
 
 - Where the respondent lives during the semester; their year, faculty, and organization role; and whether they hold a scholarship and whether they are the first in their family to go to college, each with a choice not to say.
 - Their consent, which confirms that they are a current Main Campus student aged 18 or older (D-113).
-- Where VSU news reaches them and the one they rely on most.
+- Where they get news about VSU, and where they usually hear four kinds of it first: class suspensions and emergencies, office deadlines such as enrollment, events and activities, and scholarships and other opportunities (D-119).
 - Which networks their SIMs are on; what kind of load they buy, and which apps it covers if it covers only some; what they spend on load in one week of classes, and how much of that week's data goes to schoolwork; and how they get online on campus during class hours and where they stay (D-116).
 - What they did the last time they needed an office they hadn't dealt with.
 - How often each of 16 problems happened to them in the past 12 months at VSU, and how much it mattered.
@@ -165,7 +165,8 @@ D-085 asks every survey item to name the hypothesis it bears on. [Established] T
 | The gate | The consent statement: a current Main Campus student, 18 or older, who agrees to take part | Who takes part (D-094, D-113) |
 | Where you wake up | Where the respondent lives during the semester | Breakdowns; P-19, P-22 |
 | Your pass | Year, faculty, organization role, scholarship, and whether they are the first in their family to go to college | Breakdowns; P-09 for the last, which also gives a rough check of the sample: VSU counts 47.9% of the Main Campus's first-year students in 2026 as first-generation college students (E-020) |
-| Where news reaches you | The channels used for VSU matters, and the main one | P-01, P-03 |
+| VSU news | The channels where the respondent gets news about VSU | P-01, P-03 |
+| Heard first | For four kinds of news, the channel where it usually reaches them first, or too late or never: class suspensions and emergencies; office deadlines; events; scholarships and other opportunities | P-06 and P-20 for suspensions and emergencies; P-01 for deadlines; P-01 and P-05 for events; P-05 for scholarships (D-119) |
 | Networks | Which networks their SIMs are on, or none | Where signal fails, by network (Q-29); breakdowns |
 | Kind of load | Data for any site or app, data for certain apps only and which apps, calls and texts, or none | P-15: whether students' load reaches a site that isn't one of those apps |
 | Spending on load | What they spend in one week of classes, in bands, counting about a quarter of a monthly promo | P-18 (Q-28) |
@@ -205,7 +206,7 @@ Q-28, how much students spend on mobile data and where they connect on campus, n
 
 ### The interviews
 
-D-038 counts 12 student interviews; the students sign up on the volunteer form and are all aged 18 and over. [Established] (D-038, D-039, D-094) Each hears what the interview is for, how the notes are kept, and that they may stop at any time, and agrees before it starts. [Proposed] Notes stay outside this repository. [Established] (D-086) They carry a number, never a name. [Proposed] An audio recording is made only if the student agrees, and is deleted once the notes are written. [Proposed] The interview guide is part of the field research kit, outside this repository. [Established]
+D-038 counts 12 student interviews; the students sign up on the volunteer form and are all aged 18 and over. [Established] (D-038, D-039, D-094) Each hears what the interview is for, how the notes are kept, and that they may stop at any time, and agrees before it starts. [Proposed] Notes stay outside this repository. [Established] (D-086) They carry a number, never a name. [Proposed] An audio recording is made only if the student agrees, and is deleted once the notes are written. [Proposed] The interview guide is part of the field research kit, outside this repository. [Established] The interviews also ask which channel students trust for each kind of VSU news, and whether they wait for an official source to confirm what they heard elsewhere, which the survey no longer asks. [Proposed] (Q-64, D-119)
 
 ### If something goes wrong
 
