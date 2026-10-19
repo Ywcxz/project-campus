@@ -104,12 +104,13 @@ The page sends only these answers, with the time the respondent agreed to take p
 
 - Where the respondent lives during the semester; their year, faculty, and organization role; and whether they hold a scholarship and whether they are the first in their family to go to college, each with a choice not to say.
 - Their consent, which confirms that they are a current Main Campus student aged 18 or older (D-113).
-- Where they get news about VSU, and where they usually hear four kinds of it first: class suspensions and emergencies, office deadlines such as enrollment, events and activities, and scholarships and other opportunities (D-119).
 - Which networks their SIMs are on; what kind of load they buy, and which apps it covers if it covers only some; what they spend on load in one week of classes, and how much of that week's data goes to schoolwork; and how they get online on campus during class hours and where they stay (D-116).
-- What they did the last time they needed an office they hadn't dealt with.
+- For four kinds of VSU news, where they usually hear it first: class suspensions and emergencies, office deadlines such as enrollment, events and activities, and scholarships and other opportunities (D-119).
+- What they did the last time they needed an office they hadn't dealt with; how they last tried to reach a teacher or staff member outside class, and whether they got what they needed; and what they did the last time they had a concern about a campus service (D-119).
+- Where they last asked first about a subject or a school process (D-119).
 - How often each of 16 problems happened to them in the past 12 months at VSU, and how much it mattered.
 - Up to three places on a campus map that gave them trouble, and what went wrong at each.
-- Which problems they would fix first, how far they trust answers in student groups, whether they have ever posted anonymously, how they would post, and what they would most want back after raising a concern (D-117).
+- Which problems they would fix first, how far they trust answers in student groups, whether they have ever posted anonymously, what group chats and Facebook do well for VSU matters (D-119), how they would post, and what they would most want back after raising a concern (D-117).
 - What would draw them to a VSU network, or keep them away.
 - An optional story and whether it may be quoted, and an optional comment for the researcher (D-110).
 - Whether the answer was sent in the survey's test mode.
@@ -165,40 +166,43 @@ D-085 asks every survey item to name the hypothesis it bears on. [Established] T
 | The gate | The consent statement: a current Main Campus student, 18 or older, who agrees to take part | Who takes part (D-094, D-113) |
 | Where you wake up | Where the respondent lives during the semester | Breakdowns; P-19, P-22 |
 | Your pass | Year, faculty, organization role, scholarship, and whether they are the first in their family to go to college | Breakdowns; P-09 for the last, which also gives a rough check of the sample: VSU counts 47.9% of the Main Campus's first-year students in 2026 as first-generation college students (E-020) |
-| VSU news | The channels where the respondent gets news about VSU | P-01, P-03 |
-| Heard first | For four kinds of news, the channel where it usually reaches them first, or too late or never: class suspensions and emergencies; office deadlines; events; scholarships and other opportunities | P-06 and P-20 for suspensions and emergencies; P-01 for deadlines; P-01 and P-05 for events; P-05 for scholarships (D-119) |
 | Networks | Which networks their SIMs are on, or none | Where signal fails, by network (Q-29); breakdowns |
 | Kind of load | Data for any site or app, data for certain apps only and which apps, calls and texts, or none | P-15: whether students' load reaches a site that isn't one of those apps |
 | Spending on load | What they spend in one week of classes, in bands, counting about a quarter of a monthly promo | P-18 (Q-28) |
 | Schoolwork's share | How much of that week's data goes to schoolwork, from almost none to almost all | P-18 (Q-28) |
 | Getting online | How they get online on campus during class hours, and where they stay | P-19, P-15 (Q-28) |
-| The office errand | What they did the last time they needed an office they hadn't dealt with | P-02, P-03 |
-| Scene a | Needing several visits or messages to find the right office | P-02 |
-| Scene b | A wrong answer about a school process from other students | P-03 |
-| Scene n | Not finding an answer someone had already given, in a group chat or a post | P-10 |
-| Scene c | Not easily reaching a faculty or staff member outside class | P-04 |
+| Heard first | For four kinds of news (class suspensions and emergencies; office deadlines such as enrollment; events and activities; scholarships and other opportunities), the channel where it usually reaches them first, or too late or never; one list of channels for all four, with official and student-run sources apart | P-06 and P-20 for suspensions and emergencies; P-01 for deadlines; P-01 and P-05 for events; P-05 for scholarships |
 | Scene d | Missing, or learning late about, an official notice | P-01 |
 | Scene o | Not being able to tell whether a post about a VSU matter was official | P-06 |
-| Scene p | Raising a concern with an office or the university and never learning what happened to it | P-23 |
-| Scene e | No clear, current guide to a process | P-07, P-11 |
 | Scene f | Missing an event by hearing about it too late | P-01, P-05 |
 | Scene g | Missing a scholarship or financial-aid opportunity | P-05 |
+| The office errand | What they did the last time they needed an office they hadn't dealt with | P-02, P-03 |
+| Scene a | Needing several visits or messages to find the right office | P-02 |
+| Scene e | No clear, current guide to a process | P-07, P-11 |
+| Scene c | Not easily reaching a faculty or staff member outside class | P-04 |
+| Reaching a teacher | How they last tried to reach a teacher or staff member outside class, and whether they got what they needed | P-04 |
+| Scene p | Raising a concern with an office or the university and never learning what happened to it | P-23 |
+| A concern | What they did the last time they had a concern about a campus service: told the office, a teacher, or the student council or an org; used a suggestion box or feedback form; raised it at a forum or dialogue; posted online; only talked with friends; or kept it to themselves | P-23; how concerns travel today, for the concerns design (D-118) |
+| Asking first | Where they last asked first about a subject or a school process | P-03, P-10 |
+| Scene b | A wrong answer about a school process from other students | P-03 |
+| Scene n | Not finding an answer someone had already given, in a group chat or a post | P-10 |
+| Trust | How far a classmate's answer in a student group can be trusted | P-03 |
+| Posting | Whether they have posted anonymously, and how they would post: under their real name, a made-up name other members can't link to them, or no name at all | Q-16; whether students accept the accountable pseudonyms of D-065 |
 | Scene h | An organization losing files or know-how when officers changed | P-08 |
-| Scene i | Trouble finding housing or a dormmate | P-22 |
-| Scene j | Being scammed, or nearly, when buying or selling | P-21 |
 | Scene k | Not finding a part-time job, an assistantship, or an OJT host | P-05 |
 | Scene l | Not knowing how to reach a graduate for advice | P-05 |
+| Scene i | Trouble finding housing or a dormmate | P-22 |
+| Scene j | Being scammed, or nearly, when buying or selling | P-21 |
 | Scene m | Wanting food or supplies but not being able to go get them | Hop-It's demand (P-14) |
 | Places that gave trouble | Up to three places on a campus map that were hard to find, closed, or not the right place, and what went wrong | The digital twin's first step (P-13); P-02 |
 | Ten coins | Which problems to fix first | Priorities among the network's use cases (Q-02); which later module comes first (Q-48) |
-| Trust | How far a classmate's answer in a student group can be trusted | P-03 |
-| Posting | Whether they have posted anonymously, and how they would post: under their real name, a made-up name other members can't link to them, or no name at all | Q-16; whether students accept the accountable pseudonyms of D-065 |
-| What they want back | What they would most want after raising a concern on the network: that it was received, an answer, a fix or a reason it can't be fixed, or only to be heard | P-23; Q-63; the concerns design (D-118) |
-| Draws and deterrents | What would draw them to a VSU network, or keep them away | Q-46; P-15 for mobile data |
 | Your story | The last time one of the problems happened | Context for the bars |
+| What works well | What group chats and Facebook do well for VSU matters | What the network must match (Q-46); P-15 for load promos |
+| Draws and deterrents | What would draw them to a VSU network, or keep them away | Q-46; P-15 for mobile data |
+| What they want back | What they would most want after raising a concern on the network: that it was received, an answer, a fix or a reason it can't be fixed, or only to be heard | P-23; Q-63; the concerns design (D-118) |
 | A comment | Anything the respondent wants to tell the researcher | Questions and concerns about the survey itself |
 
-Scenes keep their letters, so results stay comparable; the three added in scenes-v2, n, o, and p, are shown after b, d, and o. [Established]
+Scenes keep their letters, so results stay comparable. [Established] In scenes-v3 the questions on communication are grouped into four parts by direction, and each scene sits in its part: Hearing from VSU (d, o, f, g), Reaching VSU (a, e, c, p), Students and alumni (b, n, h, k, l), and Campus life (i, j, m), which holds the scenes on the network's later modules. [Proposed] (D-119) The channel list names kinds of channels, never a community-run page (D-044). [Established]
 
 ### What the survey cannot answer
 
