@@ -92,9 +92,9 @@ The first screen says what the survey is about, that it is independent and not a
 
 > **First screen.** VSUrvey: Student Life and Services. This survey asks about student life and VSU's services: which campus problems are common, and how serious they are. It is for Project CAMPUS, an independent proposal by a VSU alumnus, and it is not an official VSU survey. In line with the Data Privacy Act of 2012 (Republic Act No. 10173), your answers carry no name, are used only for this study, and are kept confidential. Please don't name anyone in them. Thank you for your time. Project CAMPUS. This might take 5–10 minutes.
 
-> **The gate.** Skip any question or stop whenever you want. Your answers carry no name. They go to a private Google Sheet only the researcher opens; VSU's Research Ethics Board, if it reviews this survey, may check them in confidence. No result is shared for a group under 10 people. Answers are deleted one academic year after the survey closes; only totals are kept. With no name attached, a sent answer can't be taken back. Run by Leo M. Subingsubing for Project CAMPUS. Questions: his phone number, shown on the screen, or a comment at the end. I'm a current VSU Main Campus student, I'm 18 or older, and I agree to take part.
+> **The gate.** Decline any question, by skipping it or picking Prefer not to say, or stop whenever you want. Your answers carry no name. They go to a private Google Sheet only the researcher opens; VSU's Research Ethics Board, if it reviews this survey, may check them in confidence. No result is shared for a group under 10 people. Answers are deleted one academic year after the survey closes; only totals are kept. With no name attached, a sent answer can't be taken back. Run by Leo M. Subingsubing for Project CAMPUS. Questions: his phone number, shown on the screen, or a comment at the end. I'm a current VSU Main Campus student, I'm 18 or older, and I agree to take part.
 
-Both screens say the answers carry no name rather than that they are anonymous, because year, faculty, and the other details could together point to one person in a small group; the floor of 10 keeps published results from singling anyone out. [Proposed] (D-110) The 5 to 10 minutes is an estimate, to be timed on the first run-throughs. [Unresolved]
+Both screens say the answers carry no name rather than that they are anonymous, because year, faculty, and the other details could together point to one person in a small group; the floor of 10 keeps published results from singling anyone out. [Proposed] (D-110) The 5 to 10 minutes is an estimate, to be timed on the first run-throughs and then stated from their median and their 90th percentile, not the fastest time. [Unresolved]
 
 The gate gives the author's phone number, so anyone who wants a reply can get one, and the survey ends with an optional comment box for anyone who would rather stay anonymous; comments are kept and deleted with the answers. [Established] (D-110)
 
@@ -102,21 +102,23 @@ The gate gives the author's phone number, so anyone who wants a reply can get on
 
 The page sends only these answers, with the time the respondent agreed to take part and the time the answers were sent: [Established] (D-112)
 
-- Where the respondent lives during the semester; their year, faculty, and organization role; and whether they hold a scholarship and whether they are the first in their family to go to college, each with a choice not to say.
+- Where the respondent lives during the semester, and how they mostly get to their classes (D-121).
+- Their year, faculty, and how involved they are in student organizations; whether they hold a scholarship; whether they studied at another college or university before VSU; and whether they are the first in their family to go to college. These must be answered, but each can be declined with Prefer not to say (D-121).
 - Their consent, which confirms that they are a current Main Campus student aged 18 or older (D-113).
-- Where VSU news reaches them and the one they rely on most.
-- Which networks their SIMs are on; what kind of load they buy, and which apps it covers if it covers only some; what they spend on load in one week of classes, and how much of that week's data goes to schoolwork; and how they get online on campus during class hours and where they stay (D-116).
-- What they did the last time they needed an office they hadn't dealt with.
-- How often each of 16 problems happened to them in the past 12 months at VSU, and how much it mattered.
-- Up to three places on a campus map that gave them trouble, and what went wrong at each.
-- Which problems they would fix first, how far they trust answers in student groups, whether they have ever posted anonymously, how they would post, and what they would most want back after raising a concern (D-117).
+- Which networks their SIMs are on, up to two; what kind of load they buy, a postpaid plan included, and which apps it covers if it covers only some; what they spend on load in one week of classes, and how much of that week's data goes to schoolwork; where they can use mobile data well enough to browse or use school apps; how they get online on campus during class hours and where they stay; and what they spend on Wi-Fi in one week (D-116, D-120).
+- For five kinds of VSU news, where they usually hear it first: class suspensions and emergencies; documents to submit, such as for clearance; events and activities; scholarships, part-time jobs, and other opportunities; and announcements from their faculty, department, or organization (D-119).
+- What they did the last time they needed an office they hadn't dealt with; how they last tried to reach a teacher or staff member outside class, and whether they got what they needed; and what they did the last time they had a concern about a campus service (D-119).
+- Where they last asked first about a subject or a school process (D-119).
+- How often each of 15 problems happened to them since the start of the semester, and how much it mattered (D-122, D-123).
+- Which of the 15 problems they would fix first (D-123), how far they trust answers in student groups, whether they have ever posted anonymously, what group chats and Facebook do well for VSU matters (D-119), how they would post, and what they would most want back after raising a concern (D-117).
 - What would draw them to a VSU network, or keep them away.
-- An optional story and whether it may be quoted, and an optional comment for the researcher (D-110).
+- An optional story and whether short parts of it may be quoted without the writer's name, and an optional comment for the researcher (D-110).
+- The order in which the news channels were shown to them, and whether their housing answer was left as picked for them (D-119, D-123).
 - Whether the answer was sent in the survey's test mode.
 
 It asks for no name, student number, email address, or phone number. [Established] The script that receives the answers and writes them to the sheet is published with the survey, so anyone can check that it keeps nothing more. [Proposed]
 
-Year, faculty, and scholarship status are details of a person's education, which the Data Privacy Act counts as sensitive personal information. [Established] (E-041) Whether a respondent is the first in their family to go to college is treated the same way. [Proposed] The answers carry no names, but combined, such details could point to one person in a small program. [Proposed] So faculty is a fixed list rather than free text. [Established] (D-112) Names and identifying details are removed from stories and comments before anything is quoted or summarized. [Proposed] No result is published for a group of fewer than 10 respondents, counting combinations such as one faculty's first-year students who live off campus. [Established] (D-110) A story is quoted only if its writer allowed it, and only in short passages that identify no one; otherwise it is paraphrased. [Proposed]
+Year, faculty, scholarship status, and whether a respondent studied elsewhere before VSU are details of a person's education, which the Data Privacy Act counts as sensitive personal information. [Established] (E-041) Each can be declined with Prefer not to say. [Proposed] (D-121) Whether a respondent is the first in their family to go to college is treated the same way. [Proposed] The answers carry no names, but combined, such details could point to one person in a small program. [Proposed] So faculty is a fixed list rather than free text. [Established] (D-112) Names and identifying details are removed from stories and comments before anything is quoted or summarized. [Proposed] No result is published for a group of fewer than 10 respondents, counting combinations such as one faculty's first-year students who live off campus. [Established] The floor is a minimum, not a guarantee: a result above it is still held back if it could point to one person. [Proposed] (D-110) A story is quoted only if its writer allowed it, and only in short passages that identify no one; otherwise it is paraphrased. [Proposed]
 
 ### Where answers are kept, and who sees them
 
@@ -128,13 +130,15 @@ Individual answers, stories included, are deleted one academic year after the su
 
 ### How the D-038 bars are computed
 
-The bars are judged for each of the 16 problems on its own, once there are at least 100 valid answers; below that, a problem's result reads not enough data. [Established] (D-110) With 100 answers from a random sample, an observed share of 30% would carry a margin of about 9 points either way, at 95% confidence. [Established] These answers are a convenience sample, so no margin says how far they are from VSU's students as a whole; 100 is a floor for reading results at all, not a sign that they represent VSU. [Proposed]
+The bars are judged for each of the 15 problems on its own, once there are at least 100 valid answers; below that, a problem's result reads not enough data. [Established] (D-110) With 100 answers from a random sample, an observed share of 30% would carry a margin of about 9 points either way, at 95% confidence. [Established] These answers are a convenience sample, so no margin says how far they are from VSU's students as a whole; 100 is a floor for reading results at all, not a sign that they represent VSU. [Proposed]
 
 - **How often.** The share of valid answers that say a problem happened several times or often. Answers of "Doesn't apply to me", and skipped answers, stay in the count, since D-038 counts all respondents. [Established] (D-109) Beside that share, every result reports how many respondents the problem applies to and the share among them, and that second share guides which later module comes first (Q-48). [Established] (D-109)
 - **How much it matters.** Among those answers, more than half must rate the problem moderate or serious; a missing rating counts as neither. [Proposed]
 - **Interviews.** At least 4 of the 12 interviews must describe a specific past incident: something the student went through or saw, placed in time, not an opinion or a story about someone else. [Proposed] The author codes every interview from the notes, then recodes three, chosen at random, some weeks later to check consistency, as the Facebook study does with its notes (D-049). [Proposed]
 
 A problem earns a pitch slide only if it clears all three. [Established] (D-038)
+
+The survey gives three kinds of evidence, and the analysis keeps them apart. [Proposed] Experienced problems, the scenes' how often and how much, show whether a problem exists and how much it costs students; only they count toward the bars. Priorities, the ten coins, show what respondents want fixed first, including problems they have not met themselves, so they are reported separately and never stand in for how often or how much. Possible solutions, the network idea questions, show what might draw students to a network or keep them away; they do not show that a network would solve any problem. A wanted feature does not prove a common problem, and a common problem does not prove that CAMPUS is the answer. [Proposed]
 
 For example, with made-up numbers: say 200 valid answers come in, and 80 mark the housing scene "Doesn't apply to me". Of the other 120, 54 say it happened several times or often, and 33 of those 54 rate it moderate or serious.
 
@@ -152,7 +156,7 @@ Housing would not earn a pitch slide, but its 45% among those it applies to woul
 The site accepts every answer, and these rules, fixed before any answer is read, decide at analysis which ones count: [Established] (D-111)
 
 - Exact copies of one record, sent within ten minutes of each other, count once.
-- A record with fewer than 8 of the 16 problems answered counts toward the number of responses, but not toward the bars.
+- A record with fewer than 8 of the 15 problems answered counts toward the number of responses, but not toward the bars. (D-123)
 - A record finished in under a third of the median time, counted from when the respondent agreed to take part, is set aside. That start time holds no personal data.
 - A story that shows its writer is under 18 removes the whole record (D-094).
 
@@ -163,49 +167,54 @@ D-085 asks every survey item to name the hypothesis it bears on. [Established] T
 | Survey item | What it asks | Bears on |
 | --- | --- | --- |
 | The gate | The consent statement: a current Main Campus student, 18 or older, who agrees to take part | Who takes part (D-094, D-113) |
-| Where you wake up | Where the respondent lives during the semester | Breakdowns; P-19, P-22 |
-| Your pass | Year, faculty, organization role, scholarship, and whether they are the first in their family to go to college | Breakdowns; P-09 for the last, which also gives a rough check of the sample: VSU counts 47.9% of the Main Campus's first-year students in 2026 as first-generation college students (E-020) |
-| Where news reaches you | The channels used for VSU matters, and the main one | P-01, P-03 |
-| Networks | Which networks their SIMs are on, or none | Where signal fails, by network (Q-29); breakdowns |
-| Kind of load | Data for any site or app, data for certain apps only and which apps, calls and texts, or none | P-15: whether students' load reaches a site that isn't one of those apps |
-| Spending on load | What they spend in one week of classes, in bands, counting about a quarter of a monthly promo | P-18 (Q-28) |
+| Where you wake up | Where the respondent lives during the semester, a relative's or friend's house included | Breakdowns; P-19, P-22 |
+| Getting to class | How they mostly get to their classes: walking, a bicycle, their own motorcycle or car, habal-habal or tricycle, jeepney or multicab, or a ride | Breakdowns; Hop-It's demand (P-14) |
+| Your form | Year, faculty, how involved they are in student organizations, scholarship, whether they studied at another college or university before VSU, and whether they are the first in their family to go to college; each required, with Prefer not to say | Breakdowns; P-09 for the last, which also gives a rough check of the sample: VSU counts 47.9% of the Main Campus's first-year students in 2026 as first-generation college students (E-020) |
+| Networks | Which networks their SIMs are on (Smart, TNT, Globe, TM, GOMO, DITO), up to two, or no SIM | Where signal fails, by network (Q-29); breakdowns |
+| Kind of load | Data for any site or app, data for certain apps only and which apps, calls and texts, a postpaid plan, or none | P-15: whether students' load reaches a site that isn't one of those apps |
+| Spending on load | What they spend in one week of classes, in bands, counting about a quarter of a monthly promo or plan; not asked of those who buy no load | P-18 (Q-28) |
 | Schoolwork's share | How much of that week's data goes to schoolwork, from almost none to almost all | P-18 (Q-28) |
-| Getting online | How they get online on campus during class hours, and where they stay | P-19, P-15 (Q-28) |
-| The office errand | What they did the last time they needed an office they hadn't dealt with | P-02, P-03 |
-| Scene a | Needing several visits or messages to find the right office | P-02 |
-| Scene b | A wrong answer about a school process from other students | P-03 |
-| Scene n | Not finding an answer someone had already given, in a group chat or a post | P-10 |
-| Scene c | Not easily reaching a faculty or staff member outside class | P-04 |
+| Usable data | Where they can use mobile data well enough to browse or use school apps: on campus and where they stay, on campus only, where they stay only, or neither | P-19 (Q-29) |
+| Getting online | How they get online on campus during class hours, and where they stay: mobile data, Wi-Fi, piso Wi-Fi, pocket Wi-Fi, or usually not at all, all that apply | P-19, P-15 (Q-28) |
+| Wi-Fi spending | What they spend on Wi-Fi in one week of classes (piso Wi-Fi, pocket Wi-Fi load, a share of a Wi-Fi bill), in the same bands as load; pocket Wi-Fi load is counted here only | P-18 (Q-28) |
+| Heard first | For five kinds of news (class suspensions and emergencies; documents to submit, such as for clearance; events open to everyone, such as a blood drive or free snacks; scholarships, part-time jobs, and other opportunities; meetings or announcements from their faculty, department, or organization), the channel where it usually reaches them first, or usually too late, or not at all; one list of channels for all five, with official and student-run sources apart | P-06 and P-20 for suspensions and emergencies; P-01 for documents and announcements; P-01 and P-05 for events; P-05 for scholarships and jobs |
 | Scene d | Missing, or learning late about, an official notice | P-01 |
 | Scene o | Not being able to tell whether a post about a VSU matter was official | P-06 |
-| Scene p | Raising a concern with an office or the university and never learning what happened to it | P-23 |
-| Scene e | No clear, current guide to a process | P-07, P-11 |
 | Scene f | Missing an event by hearing about it too late | P-01, P-05 |
 | Scene g | Missing a scholarship or financial-aid opportunity | P-05 |
-| Scene h | An organization losing files or know-how when officers changed | P-08 |
-| Scene i | Trouble finding housing or a dormmate | P-22 |
-| Scene j | Being scammed, or nearly, when buying or selling | P-21 |
 | Scene k | Not finding a part-time job, an assistantship, or an OJT host | P-05 |
-| Scene l | Not knowing how to reach a graduate for advice | P-05 |
-| Scene m | Wanting food or supplies but not being able to go get them | Hop-It's demand (P-14) |
-| Places that gave trouble | Up to three places on a campus map that were hard to find, closed, or not the right place, and what went wrong | The digital twin's first step (P-13); P-02 |
-| Ten coins | Which problems to fix first | Priorities among the network's use cases (Q-02); which later module comes first (Q-48) |
+| The office errand | What they did the last time they needed an office they hadn't dealt with | P-02, P-03 |
+| Scene a | Needing several visits or messages to find the right office | P-02 |
+| Scene e | No clear, current guide to a process | P-07, P-11 |
+| Reaching a teacher | How they last tried to reach a teacher or staff member outside class, and whether they got what they needed | P-04 |
+| Scene c | Not easily reaching a faculty or staff member outside class | P-04 |
+| A concern | What they did the last time they had a concern about a campus service: told the office, a teacher, or the student council or an org; used a suggestion box or feedback form; raised it at a forum or dialogue; posted online; only talked with friends; or kept it to themselves | P-23; how concerns travel today, for the concerns design (D-118) |
+| Scene p | Raising a concern with an office or the university and never learning what happened to it | P-23 |
+| Asking first | Where they last asked first about a subject or a school process | P-03, P-10 |
+| Scene b | A wrong answer about a school process from other students | P-03 |
+| Scene n | Not finding an answer someone had already given, in a group chat or a post | P-10 |
 | Trust | How far a classmate's answer in a student group can be trusted | P-03 |
 | Posting | Whether they have posted anonymously, and how they would post: under their real name, a made-up name other members can't link to them, or no name at all | Q-16; whether students accept the accountable pseudonyms of D-065 |
-| What they want back | What they would most want after raising a concern on the network: that it was received, an answer, a fix or a reason it can't be fixed, or only to be heard | P-23; Q-63; the concerns design (D-118) |
-| Draws and deterrents | What would draw them to a VSU network, or keep them away | Q-46; P-15 for mobile data |
+| Scene l | Not knowing how to reach a senior, a graduating student, or a graduate for advice | P-05 |
+| Scene i | Trouble finding housing or a boardmate; starts at Doesn't apply for those who live with family and commute, marked as picked for them, and recorded as such until they change it | P-22 |
+| Scene j | Being scammed, or nearly, when buying or selling | P-21 |
+| Scene m | Wanting food or supplies but not being able to go get them | Hop-It's demand (P-14) |
+| Ten coins | Which problems to fix first, with a jar for each of the 15 | Priorities among the network's use cases (Q-02); which later module comes first (Q-48) |
 | Your story | The last time one of the problems happened | Context for the bars |
+| What works well | What group chats and Facebook do well for VSU matters | What the network must match (Q-46); P-15 for load promos |
+| Draws and deterrents | What would draw them to a VSU network, or keep them away | Q-46; P-15 for mobile data |
+| What they want back | What they would most want after raising a concern on the network: that it was received, an answer, a fix or a reason it can't be fixed, or only to be heard | P-23; Q-63; the concerns design (D-118) |
 | A comment | Anything the respondent wants to tell the researcher | Questions and concerns about the survey itself |
 
-Scenes keep their letters, so results stay comparable; the three added in scenes-v2, n, o, and p, are shown after b, d, and o. [Established]
+Scenes keep their letters, so results stay comparable. [Established] In scenes-v3 the questions on communication are grouped into four parts by direction, and each scene sits in its part: Hearing from VSU (the five channel questions, then scenes d, o, f, g, and k), Reaching VSU (a after the office errand, then e, c after reaching a teacher, p after the concern question), Students and alumni (b and n after asking first, then l), and Campus life (i, j, m), which holds the scenes on the network's later modules. Outside Hearing from VSU, each scene follows the question it goes with, and a question and the scenes after it count as one item in the part's numbering. [Proposed] (D-119) The channel list names kinds of channels, never a community-run page (D-044). [Established]
 
 ### What the survey cannot answer
 
-Q-28, how much students spend on mobile data and where they connect on campus, now has six items: the networks their SIMs are on, the kind of load they buy, what they spend in one week, the share that goes to schoolwork, and how they get online on campus and where they stay. [Established] (D-116) They are estimates in bands: a web page can't read a phone's data use, and phones count data by app, not by purpose, so even exact figures would not split schoolwork from the rest. [Established] (D-116) They cannot say where on campus the signal fails; that rests on the signal walk (Q-29). [Established] P-06, P-10, and P-23 now have scenes of their own, and P-06 also rests on the Facebook study; P-09, P-12, and P-20 rest on the interviews, P-09 with a breakdown by first-generation students; and P-16 and P-17 rest on VSU ICT's figures. [Proposed]
+Q-28, how much students spend on mobile data and where they connect on campus, now has eight items: the networks their SIMs are on, the kind of load they buy, what they spend in one week, the share that goes to schoolwork, where they can use mobile data well enough to browse or use school apps, how they get online on campus and where they stay, and what they spend on Wi-Fi in one week. [Proposed] (D-120) They are estimates in bands: a web page can't read a phone's data use, and phones count data by app, not by purpose, so even exact figures would not split schoolwork from the rest. [Established] (D-116) They cannot say where on campus the signal fails, only whether it holds on campus and where students stay; where it fails rests on the signal walk (Q-29). [Established] P-06, P-10, and P-23 now have scenes of their own, and P-06 also rests on the Facebook study; P-08, P-09, P-12, and P-20 rest on the interviews, P-08 since scene h left the survey (D-123), P-09 with a breakdown by first-generation students; P-16 and P-17 rest on VSU ICT's figures; and P-13 waits for the campus map's rework (D-123). [Proposed]
 
 ### The interviews
 
-D-038 counts 12 student interviews; the students sign up on the volunteer form and are all aged 18 and over. [Established] (D-038, D-039, D-094) Each hears what the interview is for, how the notes are kept, and that they may stop at any time, and agrees before it starts. [Proposed] Notes stay outside this repository. [Established] (D-086) They carry a number, never a name. [Proposed] An audio recording is made only if the student agrees, and is deleted once the notes are written. [Proposed] The interview guide is part of the field research kit, outside this repository. [Established]
+D-038 counts 12 student interviews; the students sign up on the volunteer form and are all aged 18 and over. [Established] (D-038, D-039, D-094) Each hears what the interview is for, how the notes are kept, and that they may stop at any time, and agrees before it starts. [Proposed] Notes stay outside this repository. [Established] (D-086) They carry a number, never a name. [Proposed] An audio recording is made only if the student agrees, and is deleted once the notes are written. [Proposed] The interview guide is part of the field research kit, outside this repository. [Established] The interviews also ask which channel students trust for each kind of VSU news, and whether they wait for an official source to confirm what they heard elsewhere, which the survey no longer asks. [Proposed] (Q-64, D-119)
 
 ### If something goes wrong
 
