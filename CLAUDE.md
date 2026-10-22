@@ -38,3 +38,4 @@ cd tests && npm install && npm test
 - The owner checks visuals himself. Verify with the render test, not screenshots.
 - If the "Name guard" check fails, a line you added names someone on the owner's private list. Remove the line it points to; the check never shows the name.
 - Work on a branch and open a pull request; the owner merges.
+- Name your branch `claude/` plus a short topic, such as `claude/evidence-links`. ChatGPT's branches start with `chatgpt/`, so each pull request shows who made it (D-131).
