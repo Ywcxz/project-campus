@@ -131,7 +131,7 @@ Individual answers, comments included, are deleted one academic year after the s
 
 ### How the D-038 bars are computed
 
-The bars are judged for each of the 15 problems on its own, once there are at least 100 valid answers; below that, a problem's result reads not enough data. [Established] (D-110) With 100 answers from a random sample, an observed share of 30% would carry a margin of about 9 points either way, at 95% confidence. [Established] These answers are a convenience sample, so no margin says how far they are from VSU's students as a whole; 100 is a floor for reading results at all, not a sign that they represent VSU. [Proposed]
+The bars are judged for each problem a scene asks about, on its own (C-09), once there are at least 100 valid answers; below that, a problem's result reads not enough data. [Established] (D-110) With 100 answers from a random sample, an observed share of 30% would carry a margin of about 9 points either way, at 95% confidence. [Established] These answers are a convenience sample, so no margin says how far they are from VSU's students as a whole; 100 is a floor for reading results at all, not a sign that they represent VSU. [Proposed]
 
 - **How often.** The share of valid answers that say a problem happened several times or often. Answers of "Doesn't apply to me", and skipped answers, stay in the count, since D-038 counts all respondents. [Established] (D-109) Beside that share, every result reports how many respondents the problem applies to and the share among them, and that second share guides which later module comes first (Q-48). [Established] (D-109)
 - **How much it matters.** Among those answers, more than half must rate the problem moderate or serious; a missing rating counts as neither. [Proposed]
