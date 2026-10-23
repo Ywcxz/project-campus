@@ -289,11 +289,11 @@ Three rules sit around it. [Proposed]
 | --- | --- |
 | What problem? | P-23: concerns don't add up, and students can't see what became of one raised before [Unresolved] |
 | Who needs it? | Students first; the student council, which carries concerns to offices; and offices, which answer once instead of many times [Proposed] |
-| What evidence? | None from VSU yet. [Unresolved] The survey's scene p and its question on what students want back test it. [Proposed] (D-117) |
+| What evidence? | None from VSU yet. [Unresolved] The survey's question on hearing back about a raised concern, and its question on what students want back, test it. [Established] (D-117, D-132) |
 | Relation to existing systems? | VSU runs a helpdesk and publishes a Citizen's Charter of its services ([Chapter 3](03-social-network.md)); personal requests stay with them and with the offices (D-064). [Established] Whether VSU has a channel for collective concerns, and how the council carries concerns to offices today, is not recorded here. [Unresolved] |
 | Stage? | Later, with student voice ([Chapter 3.1](03a-use-cases.md)); it depends on the speech rules (Q-16) and an office's commitment (D-068) [Proposed] |
 | Privacy, governance, and cost? | Pseudonyms under D-065, and supporters never shown; the council's time each week, and an office's time to acknowledge and answer [Proposed] |
-| How could it be disproved? | Few respondents report a concern that went nowhere (scene p); or, in a pilot, offices don't acknowledge within the agreed time, or students keep reposting instead of following the record [Proposed] |
+| How could it be disproved? | Few respondents report never hearing back about a concern they raised (D-132); or, in a pilot, offices don't acknowledge within the agreed time, or students keep reposting instead of following the record [Proposed] |
 
 ## Rules and moderation
 
