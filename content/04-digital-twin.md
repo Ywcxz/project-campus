@@ -22,7 +22,7 @@ The Main Campus has 61.6 hectares of grounds and 188 buildings ([Chapter 2](02-i
 
 Each step stands on its own, and none commits VSU to the next. [Proposed]
 
-1. **Places and the way there.** Buildings, rooms, offices, laboratories, dormitories, the VSU Market, gates, and landmarks, with the names people actually use, and walking directions between them with landmarks rather than only a line on a map. Stored on the phone, so it works with weak signal ([Chapter 2](02-intranet.md)). [Proposed]
+1. **Places and the way there.** Buildings, rooms, offices, laboratories, dormitories, the VSU Market, gates, and landmarks, with the names people actually use, and walking directions between them with landmarks rather than only a line on a map. Stored on the phone, so it works with weak signal ([Chapter 2](02-intranet.md)). [Proposed] These are the same places the network uses: a building or landmark that has a place on the network has its location here, and the twin and the network keep one list of places rather than two ([Chapter 3.2](03b-network-design.md)). [Proposed] (D-144)
 2. **Where to go for what.** A person starts from a question, such as replacing a lost ID or requesting a transcript, and gets the office, its room and the way there, its hours, what to bring, and the official system to use if there is one, each citing the Citizen's Charter or the office with the date it was last confirmed. [Proposed] The network's "reach the right office" use case would point here ([Chapter 3.1](03a-use-cases.md)). [Proposed]
 3. **VSU's spatial data.** The GIS inventory's layers, if VSU shares them. [Unresolved] (Q-49)
 4. **Status offices already keep.** Room bookings, outages, and maintenance, linked where VSU permits. [Proposed]
@@ -36,9 +36,9 @@ Three-dimensional models, simulation, and live sensor dashboards wait until the 
 
 ### The spatial interface
 
-The author's longer-term idea is a way into the network itself: browsing CAMPUS by place as well as by list, so that a building shows what its communities post there, such as notices, questions, and events. [Proposed] (P-05, P-13) The familiar list would remain for anyone who prefers it. [Proposed]
+The author's longer-term idea is a way into the network itself: browsing CAMPUS by place as well as by list, so that a building shows what is posted in its own place and in the places located there, such as notices, questions, and events. [Proposed] (P-05, P-13) The familiar list would remain for anyone who prefers it. [Proposed]
 
-It stays research only, behind the first step. [Established] (D-093) It needs step 1's places and the network's communities before it has anything to show, it would cost far more to build and keep current than a list, and nothing yet shows that finding things by place beats a list or search for campus tasks. [Proposed] It maps places and what is posted about them, never people. [Established] (D-093)
+It stays research only, behind the first step. [Established] (D-093) It needs step 1's places and the network's places with their locations before it has anything to show, it would cost far more to build and keep current than a list, and nothing yet shows that finding things by place beats a list or search for campus tasks. [Proposed] It maps places and what is posted about them, never people. [Established] (D-093)
 
 It would be disproved if people in a test find what they need faster, and with fewer mistakes, in a list than on the map, or if they use the map only in their first weeks on campus. [Proposed]
 

@@ -14,7 +14,7 @@ As of October 2026, no office below has reached any stage of the milestone ladde
 | --- | --- | --- | --- |
 | OVPSAS | Student welfare, development, and institutional programs; created as VSU's fifth vice presidency in 2020 | Sponsorship, a liaison, and the first office commitments | What students gain, what it costs OVPSAS, and the risks |
 | Student services, guidance, scholarships, housing, and organizations | They answer the questions | Office accounts and agreed answer times | How much staff time, and who answers |
-| Vice President for Academic Affairs | Faculty-facing parts, such as consultations | Norms for faculty, and any academic communities | Faculty workload, and overlap with VSUEE |
+| Vice President for Academic Affairs | Faculty-facing parts, such as consultations | Norms for faculty, and any subject and research places | Faculty workload, and overlap with VSUEE |
 | VSU ICT | Sign-in, security, and later hosting | Permission for VSU sign-in, and a technical contact | Security, maintenance, and overlap with DIGITS |
 | Data protection officer | Privacy impact assessment, registration, and the two-key process | A review before any real users | What data, for what purpose, and for how long |
 | The office for official information and the website | Official notices and the website's feeds | Permission to carry the feeds, and agreement on how offices post | Accuracy, branding, and duplication |
@@ -36,7 +36,7 @@ CHED's policies on student affairs and services, CMO No. 9, s. 2013, group the s
 | Career and job placement | Openings and the jobs fair in one place | Part-time jobs; OJT and internships |
 | Economic enterprise development | A marketplace and service listings among members | Marketplace; student services and gigs |
 | Student handbook development | Rules for online spaces written with students, and guides to the handbook | Governance |
-| Student activities, organizations, and leadership | Organization communities with handover, and events that keep their materials | Organizations; events |
+| Student activities, organizations, and leadership | Organization places with handover, and events that keep their materials | Organizations; events |
 | Student council | Council communities, town halls, polls, and petitions | Town halls; student voice |
 | Student discipline | Moderation that hands serious cases to VSU's own processes | Governance |
 | Student publication | Hosting student media's work, never editing it | Student writing and video |
@@ -108,7 +108,7 @@ Every row is a proposal. [Proposed] The comparison group would be run on Faceboo
 | Why not just use Facebook? | Students would keep Facebook for life beyond the campus. For campus tasks the network adds verified membership, visible authority, answers that are kept and dated, records that last, and rules VSU's community writes, and the pilot tests whether that matters against a well-run Facebook group. | [Chapter 3](03-social-network.md) |
 | Why not just use Messenger group chats? | Keep them for coordinating. They bury answers within days, so each batch asks again; the network keeps the answers and links into the chats. | [Chapter 3](03-social-network.md) |
 | Isn't this a complaints platform? | No. It is where questions get answered and knowledge is kept. Concerns are one part of it: moderators keep the rules, and offices decide what needs a response. | [Chapter 3.2](03b-network-design.md) |
-| Who will write the guides, and keep them current? | Seniors, officers, and alumni in a guide sprint before launch; offices that confirm them; and a review by each community every semester. | [Chapter 3.2](03b-network-design.md) |
+| Who will write the guides, and keep them current? | Seniors, officers, and alumni in a guide sprint before launch; offices that confirm them; and a review by each place every semester. | [Chapter 3.2](03b-network-design.md) |
 | Isn't this OneVSU's job? | Possibly in part. CAMPUS asks first what OneVSU will cover and designs to complement it, and VSU decides the relationship. | [Chapter 3.3](03c-network-fit.md) |
 | Who moderates? | Moderators from each community, trained network moderators, and a council with students on it, with VSU's offices handling cases beyond the rules. | [Chapter 3.2](03b-network-design.md) |
 | Will VSU be liable for what students post? | A host has duties under several laws, and a prompt notice-and-action process is how a host meets them; a legal review comes before any real users. | [Chapter 3.3](03c-network-fit.md) |

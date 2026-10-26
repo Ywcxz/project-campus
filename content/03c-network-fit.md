@@ -44,9 +44,9 @@ The network depends on seventeen concepts. The table compares each with the clos
 | Questions answered in public and confirmed by offices | Helpdesk tickets, which are private | Partly | Public, searchable answers that an office stands behind |
 | Questions routed to the people who know | The phone directory for offices, and graduate faculty pages listing research interests | Partly | A way to send a question to the members who chose its topic, and to see existing answers first |
 | Students reaching staff and faculty across roles | Email, messages inside VSUEE courses, and a staff-only chat | Partly | A student-facing way to reach offices and faculty outside one's own courses |
-| Spaces shaped like VSU's units, places, and organizations | Website pages for units, and a list of organizations | Partly | Communities where units and organizations meet their people, each with an owner |
+| Places shaped like VSU's units, buildings, and organizations | Website pages for units, and a list of organizations | Partly | Places where units and organizations meet their people, each with stewards |
 | Knowledge that lasts beyond each batch | Website pages, and The Amaranth's archive | No | A memory for guides and answers that outlast each batch |
-| Organizations with members, events, records, and handover | Recognition by student services, and the public list | Partly | Organization spaces that keep their records when officers change |
+| Organizations with members, events, records, and handover | Recognition by student services, and the public list | Partly | Organization places that keep their records when officers change |
 | Events and opportunities in one place, kept afterward | The website calendar, announcements, job postings, and scholarship pages | Partly | One place, with reminders, for what concerns each member, and events that keep their materials |
 | Trade among verified members | Nothing at VSU | No | A marketplace where every seller is a verified member, as a later module of the network ([Chapter 3.5](03e-marketplace.md)) |
 | Rules for online community spaces, with appeal | The student handbook, whose online provisions are not public | Unknown | Rules for community spaces, written with the community (Q-37) |
@@ -72,7 +72,7 @@ Nothing here moves a system or changes its authority. Each system's owner decide
 | Website and official Facebook page | The network reads the public feeds | Possibly a habit of posting each notice once, in the place that feeds the others | VSU's public face; Facebook stays for the public, alumni, and applicants |
 | WAIS | Advisories shown in official spaces | Permission to read its JSON | The advisory system and its planned app |
 | Output Messenger | None | Nothing | Staff chat |
-| Student services and other offices | Office accounts and official spaces | Staff time to answer and confirm, the largest change | Their services and authority |
+| Student services and other offices | Office accounts and their own places | Staff time to answer and confirm, the largest change | Their services and authority |
 | Anti-Sexual Harassment Office and student discipline | Reports routed to them | Reports arriving from the network | Their processes |
 | Data protection officer | A privacy impact assessment and registration | A new system to assess and register | VSU's privacy program |
 | VSU ICT | Possibly hosting, later | Servers, patches, backups, and monitoring, if VSU hosts it ([Chapter 2](02-intranet.md)) | The campus network |
@@ -141,7 +141,7 @@ The Third SOUA describes DIGITS as connecting the university's separate systems,
 
 ### Technical
 
-Every component exists as open-source software that universities already run: forums such as Discourse, which marks accepted answers in its core; chat servers such as Matrix; sign-in through OpenID Connect; and push notifications from web apps on Android and on iPhones since iOS 16.4. [Established] What would be new is VSU-specific rather than technically novel: labels and states that travel with posts, a permanent page for each notice, communities tied to a registry of VSU's units, routing by declared topics, a retention schedule, and the two-key store for pseudonyms. [Proposed] Each needs careful work; none needs research. [Proposed]
+Every component exists as open-source software that universities already run: forums such as Discourse, which marks accepted answers in its core; chat servers such as Matrix; sign-in through OpenID Connect; and push notifications from web apps on Android and on iPhones since iOS 16.4. [Established] What would be new is VSU-specific rather than technically novel: labels and states that travel with posts, a permanent page for each notice, places tied to a registry of VSU's units, routing by declared topics, a retention schedule, and the two-key store for pseudonyms. [Proposed] Each needs careful work; none needs research. [Proposed]
 
 ### Cost
 
@@ -177,7 +177,7 @@ None of these blocks a pilot. Together they mean the network needs a legal revie
 
 Facebook's network effects are the largest risk ([Chapter 11](11-risks.md)). [Established] They are stronger at VSU than where Facebook Campus failed, because Facebook remains nearly universal in the Philippines. [Proposed] The precedents point both ways: Facebook itself, Everytime, Dcard, and Fizz show students joining campus networks in large numbers when those networks serve them daily, while Facebook Campus, Workplace, and community@brighton show what happens when they do not, or when their owner stops caring. [Established] VSU's own rollout of Google accounts shows that giving people an account is not the same as their using it. [Established]
 
-Research on starting online communities offers tested tactics: a clear and limited scope, tools useful to one person before the community is large, staff who contribute when members have not yet, new spaces only when existing ones are busy, and visible activity. [Established] (Resnick, Konstan, and Chen, 2012) For the network that means a pilot dense in one community; notices, deadlines, an office directory, and guides that are useful from the first day; offices as contributors of last resort; and few communities at first. [Proposed]
+Research on starting online communities offers tested tactics: a clear and limited scope, tools useful to one person before the community is large, staff who contribute when members have not yet, new places and boards only when existing ones are busy, and visible activity. [Established] (Resnick, Konstan, and Chen, 2012) For the network that means a pilot dense in one community; notices, deadlines, an office directory, and guides that are useful from the first day; offices as contributors of last resort; and few communities at first. [Proposed]
 
 Memory changes the arithmetic of a pilot. A kept answer is worth most in the years after it is given, when later batches find it, so one semester shows the least of what the network would be worth. [Proposed] The pilot therefore seeds its memory before launch, with official information and guides from a short guide sprint, and measures reuse directly: how often members find an existing answer instead of asking, and how often kept answers are read again. [Established] (D-070)
 

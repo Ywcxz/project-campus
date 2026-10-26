@@ -2,7 +2,7 @@
 
 *Verified listings for boarding houses and rentals near campus*
 
-Housing lists boarding houses and rentals near the Main Campus for students who live off campus. University dormitories are not part of it: they stay with VSU's own housing information and the network's dormitory communities. [Established] (D-098) An earlier housing site was retired, and that decision stands; this entry returns to the same need as a later module of the network. [Established] (D-028, D-098)
+Housing lists boarding houses and rentals near the Main Campus for students who live off campus. University dormitories are not part of it: they stay with VSU's own housing information and the network's dormitory places. [Established] (D-098) An earlier housing site was retired, and that decision stands; this entry returns to the same need as a later module of the network. [Established] (D-028, D-098)
 
 ## At a glance
 
@@ -26,7 +26,7 @@ Housing lists boarding houses and rentals near the Main Campus for students who 
 
 ## How it links to the network
 
-Housing shares the network's verified membership, so reviews come only from VSU people who rented there. [Proposed] Landlords are not members; how they are verified is open. [Unresolved] The network's dormitory communities would point to Housing for students moving off campus. [Proposed]
+Housing shares the network's verified membership, so reviews come only from VSU people who rented there. [Proposed] Landlords are not members; how they are verified is open. [Unresolved] The network's dormitory places would point to Housing for students moving off campus. [Proposed]
 
 ## Open questions
 
