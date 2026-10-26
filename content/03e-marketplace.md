@@ -26,7 +26,7 @@ The marketplace is a place for VSU's students and employees to buy and sell from
 
 ## How it links to the network
 
-The marketplace shares the network's verified membership and its moderators, so one account and one set of rules cover both. [Proposed] The network links into it from the communities where trading comes up, such as a dormitory, a subject's book exchange, or a graduating batch. [Proposed] Deliveries between buyer and seller could be handed to Hop-It later, once Hop-It runs. [Proposed]
+The marketplace shares the network's verified membership and its moderators, so one account and one set of rules cover both. [Proposed] The network links into it from the places where trading comes up, such as a dormitory, a subject's book exchange, or a graduating batch. [Proposed] Deliveries between buyer and seller could be handed to Hop-It later, once Hop-It runs. [Proposed]
 
 ## Open questions
 
