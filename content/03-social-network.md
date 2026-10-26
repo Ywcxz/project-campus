@@ -27,7 +27,7 @@ The case for the network runs in five steps, each a hypothesis to test. [Propose
 1. VSU's community life already happens on a social network, mostly Facebook and Messenger, which almost every Filipino internet user uses: 94.9% of those aged 16 and over had used Facebook in the past month, according to the Digital 2026 report ([Chapter 10](10-related-work.md)). [Established]
 2. That network was built for other purposes. Advertising brought in about 97.6% of Meta's revenue in 2025, its feeds are ranked to hold attention, and its group chats are built for conversation in the moment. [Established] It knows nothing of VSU's roles, offices, or rules.
 3. Many of campus life's problems are problems of routing and memory: a question that should reach the person who can answer it, a notice that should reach the students it concerns and stay checkable, an answer that should carry the authority of whoever gave it and still be there next year. [Proposed]
-4. A network shaped like the university, with verified members, visible roles, communities for real VSU units, labels on every post, and a memory that knows its age, could do those jobs better than a general platform. [Proposed]
+4. A network shaped like the university, with verified members, visible roles, places for real VSU units, labels on every post, and a memory that knows its age, could do those jobs better than a general platform. [Proposed]
 5. People will move only for jobs it does clearly better, so the network should aim to win a few specific jobs, judged by the knowledge it moves rather than the attention it holds. [Proposed] (D-061)
 
 Steps 1 and 3 need VSU evidence from the survey, the interviews, and the Facebook study ([Chapter 8.1](08a-facebook-study.md)). [Unresolved] Step 5 is what keeps the network from becoming a smaller copy of Facebook. [Proposed]
@@ -133,9 +133,9 @@ In one sense the network is social media: people post, reply, join groups, and m
 | Purpose | Keep people engaged so that advertising can be sold; ads brought in about 97.6% of Meta's revenue in 2025 [Established] | Help people get campus tasks done, counted in questions answered, answers reused, notices received in time, and exchanges completed [Established] (D-061) |
 | Who belongs | Anyone; a VSU group can admit strangers without screening [Established] | Verified VSU members, and guests only by invitation [Proposed] |
 | Who you are | A personal profile, or an anonymous post where a group allows it [Established] | Your name and VSU role by default, with accountable pseudonyms in chosen sections [Established] (D-046, D-065) |
-| Who runs a space | Whoever created a group or chat, who may be impossible to identify [Established] | A named owner tied to a real VSU unit, place, recognized organization, or subject [Established] (D-062) |
+| Who runs a space | Whoever created a group or chat, who may be impossible to identify [Established] | Stewards, for a term, of a place tied to a real VSU unit, building, recognized organization, or subject [Established] (D-062, D-144) |
 | Who writes the rules | Meta's standards plus each group's own administrators [Established] | Rules written with VSU's community, with notice, reasons, and appeal [Proposed] (D-066) |
-| What you see first | A feed ranked to predict engagement [Established] | Unread official notices, then questions in topics you help with and new posts in your communities, in time order, ending when you are caught up, with no hidden scores [Proposed] (D-061) |
+| What you see first | A feed ranked to predict engagement [Established] | Unread official notices, then questions in topics you help with and new posts in your places, in time order, ending when you are caught up, with no hidden scores [Proposed] (D-061) |
 | Who you hear from | Whoever is in the group, or online at the moment [Proposed] | Members who chose to help with the topic, and the office responsible [Established] (D-071) |
 | How long things last | Posts sink in a feed, and chat messages are buried within days [Proposed] | Knowledge kept, dated, and marked when superseded; conversation fades on a published schedule [Established] (D-070) |
 | Whether something is official | A verified page, whose authority is lost once a post is copied or screenshotted [Proposed] | A label on every post, and a permanent page for each official notice showing whether it is current [Established] (D-063) |
@@ -155,7 +155,7 @@ Much campus coordination runs on Messenger group chats, and 90.6% of Philippine 
 
 | What campus knowledge needs | In a group chat | On the network |
 | --- | --- | --- |
-| An owner that outlasts any one person | Whoever started the chat, who may graduate, leave, or delete it | A community tied to a real VSU unit or recognized organization (D-062) |
+| A steward that outlasts any one person | Whoever started the chat, who may graduate, leave, or delete it | A place tied to a real VSU unit or recognized organization, stewarded for a term and handed on (D-062, D-144) |
 | Answers that can be found later | Buried under newer messages within days | Kept, searchable, and shown before the same question is asked again (D-070, D-071) |
 | A way to tell which answer is right | Every reply looks the same | Names, roles, and an office's confirmation (D-063) |
 | Knowledge that knows its age | No way to mark an answer outdated, so old screenshots keep circulating | Current, updated, superseded, or archived, with the academic year it applies to (D-063) |
@@ -192,14 +192,14 @@ One lesson reverses. Campus launched in the United States as young people were l
 [Chapter 3.2](03b-network-design.md) sets out the design in full. Ten principles shape it, each a proposal. [Proposed]
 
 1. **Knowledge moved, not attention held.** No engagement ranking, no hidden scores, no public counts, and a home that ends. Success is counted in questions answered and answers reused. (D-061)
-2. **Communities shaped like the university.** Each belongs to a real faculty, department, office, organization, council, dormitory, place, or subject, or to a topic its members start, and has a named owner; inside it are spaces for notices, questions, guides, events, and discussion. (D-062, refining D-034)
+2. **Places shaped like the university.** Each is tied to a real office, faculty, department, organization, council, service, subject, dormitory, building, or large event, or to an interest its members start; places sit side by side, each with stewards who look after it for a term, and inside each are boards for notices, questions, guides, events, and discussion. (D-062, D-144, refining D-034)
 3. **Routed to the people who know.** Questions go to members who chose to help with a topic and to the office responsible, and answers that already exist come first. (D-071)
 4. **Authority you can see.** Every post carries its information type, only offices post as official, and notices and answers show whether they are current or superseded, and for which academic year. (D-063)
 5. **Remember knowledge, let conversation fade.** Answers, guides, and notices stay and keep helping later batches; discussion, listings, and messages fade on a published schedule. (D-070)
 6. **Identified by default, safe to speak.** Names and roles by default, and pseudonymous sections where the evidence calls for them, with identities revealed only through a process students share in. (D-046, D-065)
 7. **Hand off, don't duplicate.** VSU's systems keep their work, and group chats keep the talk of the moment; the network links into both. (D-064, D-074)
 8. **Governed as a commons.** Rules written with the community, protecting speech on student welfare and public matters, with moderation kept apart from institutional response, and with notice, reasons, appeal, and sanctions that rise step by step. (D-066)
-9. **Recognition without vanity.** Helping is recognized through confirmed answers and community roles, never through public scores, and knowledge flow is measured for each community, not for each person. (D-072)
+9. **Recognition without vanity.** Helping is recognized through confirmed answers and roles a place gives, never through public scores, and knowledge flow is measured for each place, not for each person. (D-072)
 10. **Light on data and phones.** An installable web app, text first, with notices and guides readable offline ([Chapter 2](02-intranet.md)).
 
 Behind all ten is one lesson from networks that institutions have run: a network that becomes one more official channel loses its members, so organizations, councils, and interests need as much room as offices ([Chapter 3.3](03c-network-fit.md)). [Proposed]
@@ -215,8 +215,8 @@ VSU's own principles point the same way. In January 2025 VSU set out its guiding
           ▲ links and hand-offs         │ official feeds, with permission
           │                             ▼
    ┌──────────────────────── the network ─────────────────────────┐
-   │ communities shaped like VSU, each with a named owner:        │
-   │   notices · questions · guides · events · discussion         │
+   │ places shaped like VSU, each looked after by stewards,       │
+   │ boards: notices · questions · guides · events · discussion   │
    │ questions routed to helpers and to the office responsible    │
    │ knowledge labelled, dated, and kept; conversation fades      │
    └──────────────────────────────────────────────────────────────┘
@@ -227,9 +227,9 @@ VSU's own principles point the same way. In January 2025 VSU set out its guiding
 
 Three scenes show the idea; [Chapter 3.2](03b-network-design.md) has more. [Proposed]
 
-- **A 4:30 a.m. suspension.** A typhoon signal is raised overnight, and under VSU's guidelines a suspension must be announced by 4:30 a.m. [Established] On the network, the authorized office posts it once in the university's official space, labelled official. It reaches every member as an urgent notification, the only kind that passes through quiet hours, and its permanent page shows that it is current. Shared into a group chat, it arrives as a card linking back to that page; a later correction updates the same page instead of starting a new rumor; and a post saying the suspension has been extended carries the unverified label until the office says so. [Proposed]
+- **A 4:30 a.m. suspension.** A typhoon signal is raised overnight, and under VSU's guidelines a suspension must be announced by 4:30 a.m. [Established] On the network, the authorized office posts it once in the university's official place, labelled official. It reaches every member as an urgent notification, the only kind that passes through quiet hours, and its permanent page shows that it is current. Shared into a group chat, it arrives as a card linking back to that page; a later correction updates the same page instead of starting a new rumor; and a post saying the suspension has been extended carries the unverified label until the office says so. [Proposed]
 - **A question every batch asks.** A first-generation student wants to know where a scholarship stipend is claimed. Before her question posts, the network shows the answer a third-year student gave last semester, confirmed by the scholarship office for this academic year, with a note of the one step that changed. She doesn't need to ask, and the student who answered sees, privately, that the answer has now helped someone again. [Proposed]
-- **Who knows about this?** A second-year student wants to learn GIS for a thesis idea. She asks in the GIS topic community and chooses answers from students and faculty. Two seniors who chose GIS as a topic they help with reply with the courses they took, and a faculty member who listed GIS among her topics points her to the community where VSU's GIS researchers post their open events. The route follows only what members chose to share. [Proposed]
+- **Who knows about this?** A second-year student wants to learn GIS for a thesis idea. She asks in the GIS interest place and chooses answers from students and faculty. Two seniors who chose GIS as a topic they help with reply with the courses they took, and a faculty member who listed GIS among her topics points her to the place where VSU's GIS researchers post their open events. The route follows only what members chose to share. [Proposed]
 
 ## How it fits VSU's systems
 
