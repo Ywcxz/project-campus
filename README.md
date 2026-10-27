@@ -15,7 +15,7 @@ CAMPUS (Connecting All Members, Places, and University Services) is a proposal f
 ## Sources of truth
 
 - **This repository** is the master document. A decision counts once it is in [the decision register](content/13-decisions.md).
-- **What people read** (the concept note, the documentary site, and the pitch deck) is built from this repository and points back to it (D-082).
+- **What people read** (the concept note and the interactive site, which is also the pitch) is built from this repository and points back to it (D-082).
 - **Hop-It** is governed by its Alpha PRD v1.0 and Functional Specification v1.0, which this repository summarizes but does not yet contain.
 - **Stakeholder records** are kept in a private log outside this repository, by design (D-030).
 

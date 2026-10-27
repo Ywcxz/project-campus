@@ -53,7 +53,7 @@ Each test's measure and pass mark would be fixed before it runs, as the survey's
 
 Every row is a proposal. [Proposed] Test 2 checks request collapsing, which HTTP's caching standard allows (E-046); test 1 checks that the cache can keep serving its last copy when the origin is unreachable, as RFC 5861 allows; test 4 checks the phone's outbox, which local-first software depends on (Kleppmann et al., 2019); and test 5 checks the order and the random delays of [Chapter 2.1](02a-emergencies.md). [Proposed] Test 6 puts a number on the network's "text first" promise ([Chapter 3.2](03b-network-design.md)), which the survey's answers on spending (Q-28) can then be set against. [Proposed]
 
-Each test can also be shown as a scene on the documentary site: the uplink cut at ten in the morning on a class day, a suspension announced by 4:30 a.m. and read by thousands, a report written in a dormitory with no signal, and the morning the link comes back after a typhoon. [Proposed]
+Each test can also be shown as a scene on the interactive site: the uplink cut at ten in the morning on a class day, a suspension announced by 4:30 a.m. and read by thousands, a report written in a dormitory with no signal, and the morning the link comes back after a typhoon. [Proposed]
 
 ## What the results would change
 

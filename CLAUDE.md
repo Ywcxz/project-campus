@@ -1,6 +1,6 @@
 # Project CAMPUS: notes for Claude
 
-This repository is the master document for Project CAMPUS (Connecting All Members, Places, and University Services), an independent proposal for Visayas State University by one alumnus. It is the reference layer: the concept note, the documentary site, and the pitch deck are built from it (D-082). A decision counts only once it is a row in `content/13-decisions.md`.
+This repository is the master document for Project CAMPUS (Connecting All Members, Places, and University Services), an independent proposal for Visayas State University by one alumnus. It is the reference layer: the concept note and the interactive site, which is also the pitch, are built from it (D-082, D-151). A decision counts only once it is a row in `content/13-decisions.md`.
 
 ## Before you edit
 

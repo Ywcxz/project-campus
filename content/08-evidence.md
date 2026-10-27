@@ -32,7 +32,7 @@ CAMPUS has not yet shown, with VSU evidence, that the problems it addresses exis
 | P-22 | Finding a boarding house or rental near campus runs on word of mouth and group posts; listings go stale, and students can't easily compare vacancy, price, house rules, or safety | Housing | [Unresolved] |
 | P-23 | Concerns students raise don't add up: each is raised and answered from zero, and students can't see what became of it the last time | Network | [Unresolved] |
 
-Each hypothesis keeps its number for good, so survey items, interview prompts, study results, and pitch slides can name the problem they bear on, and every result traces back to one. [Established] (D-085) P-21 and P-22 come from the module entries in [Chapter 3.5](03e-marketplace.md) and [Chapter 3.6](03f-housing.md). [Established] P-23 comes from the owner's reading of two vox pops that The Amaranth, VSU's student media, published around the Third SOUA (E-055, E-056). [Established] Only two of the eleven students quoted speak to it directly, and the students were chosen by the publication, so the vox pops prompt the hypothesis but do not show how common the problem is. [Established]
+Each hypothesis keeps its number for good, so survey items, interview prompts, study results, and the interactive site's scenes can name the problem they bear on, and every result traces back to one. [Established] (D-085) P-21 and P-22 come from the module entries in [Chapter 3.5](03e-marketplace.md) and [Chapter 3.6](03f-housing.md). [Established] P-23 comes from the owner's reading of two vox pops that The Amaranth, VSU's student media, published around the Third SOUA (E-055, E-056). [Established] Only two of the eleven students quoted speak to it directly, and the students were chosen by the publication, so the vox pops prompt the hypothesis but do not show how common the problem is. [Established]
 
 Several of these, especially the network rows, come from the author's own observations as an alumnus. That makes them community knowledge: the right questions to test first, not evidence. [Established] The network's wider list of 29 candidate problems is in [Chapter 3.1](03a-use-cases.md).
 
@@ -150,7 +150,7 @@ Each problem is asked about since the respondent started at VSU, which the first
 
 - **Interviews.** At least 4 of the 12 interviews must describe a specific past incident: something the student went through or saw, placed in time, not an opinion or a story about someone else. [Established] (D-038) The author codes every interview from the notes, then recodes three, chosen at random, some weeks later to check consistency, as the Facebook study does with its notes (D-049). [Proposed]
 
-A problem earns a pitch slide only if it clears both the survey's bar and the interviews'. [Established] (D-038, D-132)
+A problem is shown as Established only if it clears both the survey's bar and the interviews'. [Established] (D-038, D-132, D-151)
 
 The survey gives three kinds of evidence, and the analysis keeps them apart. [Proposed] Experienced problems, from the problem questions, show whether a problem has happened to students; only they count toward the bars. Priorities, 25 coins across 18 campus concerns, show which concerns respondents want to get more attention, including ones they have not met themselves and ones outside CAMPUS's scope; they are reported by each jar's reach and weight, never added up into one share for CAMPUS, and never stand in for experienced problems (D-134). Possible solutions, the network idea questions, show what might draw students to a network or keep them away; they do not show that a network would solve any problem. A wanted feature does not prove a common problem, and a common problem does not prove that CAMPUS is the answer. [Proposed]
 
@@ -172,7 +172,7 @@ For example, with made-up numbers: say 200 valid answers come in, and 150 were a
 | The problem, among everyone: the bar | 54 of 200 | 27%, below the 30% bar |
 | The problem, among those asked | 54 of 150 | 36% |
 
-Housing would not earn a pitch slide, but its 36% among those asked would count when choosing which later module comes first. [Established] (D-038, D-109)
+Housing would not be shown as Established, but its 36% among those asked would count when choosing which later module comes first. [Established] (D-038, D-109)
 
 ### Screening out junk answers
 

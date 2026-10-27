@@ -8,7 +8,7 @@ The network is proposed as VSU's own alternative to Facebook for campus life (D-
 
 - The network's problem hypotheses about Facebook come from the author's own observations as an alumnus, which makes them community knowledge, not evidence ([Chapter 8](08-evidence.md)). [Established]
 - Interviews and the survey record what people say they do. This study records what is publicly visible. Each can check the other. [Proposed]
-- What it finds can sharpen interview probes, and it can supply the documentary site and the pitch with real VSU patterns, described without identifying anyone. [Proposed]
+- What it finds can sharpen interview probes, and it can supply the interactive site, which is the pitch, with real VSU patterns, described without identifying anyone. [Proposed]
 
 ## Scope and conduct
 
@@ -82,7 +82,7 @@ In newspaper content analysis, Riffe, Aust, and Lacy found that samples stratifi
 - **What happens in private.** Private groups and chats are invisible to this study. A problem that doesn't appear in public channels may still exist. [Established]
 - **Reasons.** It records what people do, not why. [Established]
 - **What was removed.** Posts deleted or hidden before a tally are missed, and counts keep changing after it. [Established]
-- **How many people a problem affects.** Activity in public groups is not a measure of the student body; the survey measures prevalence. This study alone cannot put a problem on a pitch slide, and the D-038 bars stay as they are. [Established]
+- **How many people a problem affects.** Activity in public groups is not a measure of the student body; the survey measures prevalence. This study alone cannot make a problem Established, and the D-038 bars stay as they are. [Established]
 - **A second opinion.** One person codes everything. The working definitions limit drift, and a random tenth of the field notes is recoded some weeks later to show how consistent the coding is. [Established] (D-049)
 
 ## How it could be proved wrong
@@ -105,7 +105,7 @@ Rules for what leaves the workbook. [Established] (D-044)
 - The workbook stays private, outside this repository, as the stakeholder log does (D-030).
 - This chapter gains a findings section with counts and rates by kind of channel.
 - Official VSU pages may be named. Community-run pages and groups, their admins, and their members are not.
-- Examples in the documentary site and the pitch are paraphrased composites, never quotes, screenshots, or links.
+- Examples on the interactive site are paraphrased composites, never quotes, screenshots, or links.
 - Findings enter the evidence register in [Chapter 8](08-evidence.md), typed by the kind of channel observed: official or community knowledge.
 
 ## Status, October 2026
