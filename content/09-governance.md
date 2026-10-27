@@ -50,7 +50,7 @@ Collect only what a feature needs, use it only for that purpose, limit who can a
 
 - Who owns code, documents, and designs depends on who made them and on any later agreements, and it is never assumed. [Established] (v0.1 §15.28)
 - Git history records authorship and dates, which gives any future collaboration a clear starting point. [Established]
-- The project's repositories are openly licensed: code under the MIT License, and writing and pictures under CC BY 4.0, © 2026 Leo M. Subingsubing. VSU's names and marks, and material by others that the project quotes or cites, are not covered. [Proposed] (D-159)
+- The project's repositories are openly licensed: code under the MIT License, and writing and pictures under CC BY 4.0, © 2026 Leo M. Subingsubing. VSU's names and marks, and material by others that the project quotes or cites, are not covered. [Established] (D-159)
 - Sensitive institutional information is never sent to third-party services, AI tools included, without authorization. [Established] (v0.1 §15.31)
 
 ## When to stop
