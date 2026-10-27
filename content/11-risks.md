@@ -49,4 +49,4 @@ Stop or fundamentally redefine a direction if (v0.1 §16.55):
 6. the resources needed exceed the value; or
 7. a better-supported approach emerges.
 
-The full v0.1 risk analysis, with more than 40 risks, is in the [archive](https://github.com/Ywcxz/project-campus/blob/main/archive/v0.1/campus-rd-blueprint-v0.1.md) (§16).
+The full v0.1 risk analysis, with more than 40 risks, is in the [archive](https://github.com/Ywcxz/projectcampus-docs/blob/main/archive/v0.1/campus-rd-blueprint-v0.1.md) (§16).

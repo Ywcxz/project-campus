@@ -314,7 +314,7 @@ Confidence follows one rubric. **High:** a primary record, or a peer-reviewed st
 
 Two entries have no check date. E-002's paper could not be read, and checking it turned up the wrong authors (C-03). E-031 links a Meta site, which no automated tool opens (D-041), so the owner checks it by hand.
 
-Field evidence will be added as it is gathered. The v0.1 research-question bank, about 65 questions, is in the [archive](https://github.com/Ywcxz/project-campus/blob/main/archive/v0.1/campus-rd-blueprint-v0.1.md) (§5 and §18.4); many of those questions were written for the retired v0.1 prototype.
+Field evidence will be added as it is gathered. The v0.1 research-question bank, about 65 questions, is in the [archive](https://github.com/Ywcxz/projectcampus-docs/blob/main/archive/v0.1/campus-rd-blueprint-v0.1.md) (§5 and §18.4); many of those questions were written for the retired v0.1 prototype.
 
 ## What cuts the other way
 
