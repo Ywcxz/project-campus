@@ -150,7 +150,7 @@ Each problem is asked about since the respondent started at VSU, which the first
 
 - **Interviews.** At least 4 of the 12 interviews must describe a specific past incident: something the student went through or saw, placed in time, not an opinion or a story about someone else. [Established] (D-038) The author codes every interview from the notes, then recodes three, chosen at random, some weeks later to check consistency, as the Facebook study does with its notes (D-049). [Proposed]
 
-A problem is shown as Established only if it clears both the survey's bar and the interviews'. [Established] (D-038, D-132) [Proposed] (D-151)
+A problem is shown as Established only if it clears both the survey's bar and the interviews'. [Established] (D-038, D-132, D-151)
 
 The survey gives three kinds of evidence, and the analysis keeps them apart. [Proposed] Experienced problems, from the problem questions, show whether a problem has happened to students; only they count toward the bars. Priorities, 25 coins across 18 campus concerns, show which concerns respondents want to get more attention, including ones they have not met themselves and ones outside CAMPUS's scope; they are reported by each jar's reach and weight, never added up into one share for CAMPUS, and never stand in for experienced problems (D-134). Possible solutions, the network idea questions, show what might draw students to a network or keep them away; they do not show that a network would solve any problem. A wanted feature does not prove a common problem, and a common problem does not prove that CAMPUS is the answer. [Proposed]
 
