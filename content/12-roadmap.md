@@ -51,7 +51,7 @@ Work moves through environments in order, so a prototype is never mistaken for a
 
 ## Resources
 
-One person, no team, and no budget estimate yet. v0.1's resource model and budget framework are in the [archive](https://github.com/Ywcxz/project-campus/blob/main/archive/v0.1/campus-rd-blueprint-v0.1.md) (§13 and §14) for when a pilot is being planned. [Established]
+One person, no team, and no budget estimate yet. v0.1's resource model and budget framework are in the [archive](https://github.com/Ywcxz/projectcampus-docs/blob/main/archive/v0.1/campus-rd-blueprint-v0.1.md) (§13 and §14) for when a pilot is being planned. [Established]
 
 ## Change control
 

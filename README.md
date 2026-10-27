@@ -22,7 +22,7 @@ CAMPUS (Connecting All Members, Places, and University Services) is a proposal f
 ## Repository layout
 
 ```
-project-campus/
+projectcampus-docs/
 ├── index.html            cover page
 ├── <slug>.html           25 chapter pages, identical except for their head metadata; each renders its Markdown file
 ├── document.html         every chapter on one page, for reading through or printing

@@ -33,7 +33,7 @@ function citedPages() {
     let host = "";
     try { host = new URL(u).hostname; } catch { return false; }
     if (META.test(host)) return false;
-    return !(host === "github.com" && /\/ywcxz\/project-campus\b/i.test(u)); // this repository
+    return !(host === "github.com" && /\/ywcxz\/(project-campus|projectcampus-docs)\b/i.test(u)); // this repository
   }).sort();
 }
 
