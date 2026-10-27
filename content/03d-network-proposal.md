@@ -75,7 +75,7 @@ Each ask is a separate step and needs its own evidence. The first is a research 
 | Step | The ask | Evidence brought | What VSU gives | Ladder stage |
 | --- | --- | --- | --- | --- |
 | 1 | Permission to run the student survey and the interviews | The survey site, and how the survey and the interviews handle data ([Chapter 8](08-evidence.md)) | Written permission, and a campus ID or pass for the author if VSU requires one | None: a research permission ([Chapter 12](12-roadmap.md), D-090) |
-| 2 | Interest in CAMPUS, asked separately | This document and the documentary site | A follow-up | Recognition, then interest |
+| 2 | Interest in CAMPUS, asked separately | This document and the interactive site | A follow-up | Recognition, then interest |
 | 3 | One office's commitment to answer students within an agreed time, on a channel it already uses | Survey and interview findings that clear the D-038 bars | Staff time for a set period | Alignment |
 | 4 | Permission for a one-semester pilot in one community | The results of step 3, and the pilot proposal below | Written permission naming the scope | Permission to prototype |
 | 5 | Running the pilot | Weekly measures against thresholds fixed in advance | Participation, a liaison, and a moderation owner | Pilot |
@@ -129,12 +129,12 @@ Every row is a proposal. [Proposed] The comparison group would be run on Faceboo
 - **Beside DIGITS, not inside or above it.** The network complements VSU's systems from the community side. Whether and how it relates to DIGITS is VSU's decision. [Established] (D-017)
 - **Seniors and offices as winners, not only students.** An office that answers a question once in public, and a senior whose guide keeps helping after she graduates, gain as much as the student who asks. [Proposed]
 
-## The story for the slides
+## The story for the pitch
 
-The pitch slides come after field research ([Chapter 12](12-roadmap.md)). A possible sequence, each slide a proposal: [Proposed]
+The pitch is the interactive site, presented in person: once with the concept note, and again after field research with findings in place ([Chapter 12](12-roadmap.md); D-151). A possible sequence for its offices path, each scene a proposal: [Proposed]
 
 1. **A morning at VSU.** The 4:30 a.m. suspension and the first-year student's question, told from the student's side.
-2. **What students told us.** Only problems that clear the D-038 bars, each with an interview quote, a survey number, and a real example. (D-036)
+2. **What students told us.** Problems that clear the D-038 bars, shown as Established, each with an interview quote, a survey number, and a real example; before field research, the hypotheses, tagged as such. (D-151)
 3. **Where VSU's conversation lives.** The Facebook study's counts by kind of channel, with no community group named. (D-044)
 4. **Every batch starts over.** Only if the interviews and the survey support it: the same questions asked year after year, and answers lost within days. (D-038)
 5. **What VSU already has.** Its systems, shown with respect, and the gap between them.
@@ -144,7 +144,7 @@ The pitch slides come after field research ([Chapter 12](12-roadmap.md)). A poss
 9. **The ask.** One office's commitment, then one semester.
 10. **Who is behind it.** The network prototype's working software (D-099), the field research, and the decision register.
 
-The framing should be cultivation rather than construction: a community network is not installed but grown, with its members, in ground prepared for it. [Proposed] The builders of an institution-run network that outlasted its predecessor drew the same conclusion in 2010, calling gardening a better metaphor than architecture because the system keeps changing as people use it. [Established] Which image the slides use is still open. [Unresolved]
+The framing should be cultivation rather than construction: a community network is not installed but grown, with its members, in ground prepared for it. [Proposed] The builders of an institution-run network that outlasted its predecessor drew the same conclusion in 2010, calling gardening a better metaphor than architecture because the system keeps changing as people use it. [Established] Which image the site uses is still open. [Unresolved]
 
 ## What not to claim
 

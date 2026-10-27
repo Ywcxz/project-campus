@@ -56,7 +56,7 @@ What makes the three worth more than a group chat is memory. In a chat, a good a
 
 ## Why VSU needs it
 
-These are the reasons the author expects field research to confirm, each with the first public signals behind it. None is VSU field evidence yet, and each must clear the D-038 bars before it appears on a pitch slide. [Established] (D-036, D-038)
+These are the reasons the author expects field research to confirm, each with the first public signals behind it. None is VSU field evidence yet, and each must clear the D-038 bars before it is shown as Established, here or on the interactive site. [Established] (D-038) [Proposed] (D-151)
 
 ### The student–institution gap
 
