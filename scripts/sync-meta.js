@@ -10,7 +10,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const SITE = "https://project-campus-gilt.vercel.app";
+const SITE = "https://docs.projectcampus.org";
 const ROOT = path.resolve(__dirname, "..");
 const chapters = JSON.parse(fs.readFileSync(path.join(ROOT, "data/chapters.json"), "utf8"));
 

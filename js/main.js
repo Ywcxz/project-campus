@@ -626,7 +626,7 @@ function initPageToc() {
 
 /* ── Printing ─────────────────────────────────────────────────── */
 
-const SITE = "project-campus-gilt.vercel.app";
+const SITE = "docs.projectcampus.org";
 const printSource = (path) =>
   `<p class="print-only print-source">From the Project CAMPUS master document, version 0.2: ${SITE}/${path}. An independent proposal, not officially affiliated with Visayas State University.</p>`;
 
