@@ -87,3 +87,7 @@ Push to GitHub and Vercel redeploys (framework preset "Other", no build command)
 - **Field cards,** the dashed and slightly rotated boxes, hold principles and notes like pinned index cards from field research.
 
 Not officially affiliated with Visayas State University.
+
+## Licence
+
+Code is under the [MIT License](LICENSE). Writing and pictures are under [CC BY 4.0](LICENSE-CONTENT.md), which says which files are which. Copyright © 2026 Leo M. Subingsubing (D-159).
