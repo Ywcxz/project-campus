@@ -29,20 +29,20 @@ Member ──is──► VSU role    student · faculty · staff · alumni, late
    └──helps with──► Topic   chosen by the member; questions are routed by it
 ```
 
-These are concepts to test, not a database schema. [Proposed] The model is relational from the first version, so that people, places, knowledge, and events can be linked as they appear, while features that depend on those links, such as finding expertise across the whole university, come later. [Established] (D-075) It follows the channel model the network starts from (D-034) and the relational domains of [Chapter 1](01-campus.md). [Established]
+These are concepts to test, not a database schema. [Proposed] The model is relational from the first version, so that people, places, knowledge, and events can be linked as they appear, while features that depend on those links, such as finding expertise across the whole university, come later. [Established] (D-075) It follows the channel model the network starts from (D-034) and the relational domains of [Chapter 1](01-campus.md). [Established] (D-034; [Chapter 1](01-campus.md))
 
 ## Members and roles
 
 ### Who can join
 
-Membership would follow VSU accounts. Since 2023, VSU has given every student, faculty member, and employee a university Google account on the vsu.edu.ph domain, with more than 16,000 Google and Microsoft licenses ready across its five campuses and its Integrated High School that year. [Established] Signing in with those accounts would prove membership without a new password, if VSU allows it. [Unresolved] (Q-06) VSU already limits two student-facing services to its accounts: VSUEE offers Google sign-in with them, and WAIS is open only to VSU account holders. [Established]
+Membership would follow VSU accounts. Since 2023, VSU has given every student, faculty member, and employee a university Google account on the vsu.edu.ph domain, with more than 16,000 Google and Microsoft licenses ready across its five campuses and its Integrated High School that year. [Established] (VSU, 22 August 2023) Signing in with those accounts would prove membership without a new password, if VSU allows it. [Unresolved] (Q-06) VSU already limits two student-facing services to its accounts: VSUEE offers Google sign-in with them, and WAIS is open only to VSU account holders. [Established] (E-005; E-026)
 
 Four details of VSU's accounts shape the design. [Proposed]
 
-- **Timing.** Student accounts are issued after the late enrollment period. [Established] New students need another way in during their first weeks, such as a temporary pass tied to their enrollment, or a pilot has to start after accounts are issued. [Proposed] (Q-38)
-- **Names.** Student accounts are named after school ID numbers by default. [Established] The network would show a name each member chooses and never display an ID number. [Proposed]
-- **High school students.** Integrated High School students also hold VSU accounts. [Established] The first pilot admits college members aged 18 and over, as the survey does. [Established] (D-069, D-094)
-- **Graduation.** Accounts can be revoked on non-enrollment or graduation. [Established] Alumni would need a separate path, added later. [Established] (D-073, Q-45)
+- **Timing.** Student accounts are issued after the late enrollment period. [Established] (E-022) New students need another way in during their first weeks, such as a temporary pass tied to their enrollment, or a pilot has to start after accounts are issued. [Proposed] (Q-38)
+- **Names.** Student accounts are named after school ID numbers by default. [Established] (E-022) The network would show a name each member chooses and never display an ID number. [Proposed]
+- **High school students.** Integrated High School students also hold VSU accounts. [Established] (E-022) The first pilot admits college members aged 18 and over, as the survey does. [Established] (D-069, D-094)
+- **Graduation.** Accounts can be revoked on non-enrollment or graduation. [Established] (E-022) Alumni would need a separate path, added later. [Established] (D-073, Q-45)
 
 ### Roles
 
@@ -56,7 +56,7 @@ Four details of VSU's accounts shape the design. [Proposed]
 | Alumni, later | Graduates, verified separately | Mentoring and question sessions |
 | Guest, later | Applicants and parents, by invitation or through a public section | Chosen public boards only (D-073) |
 
-Program and year are education details, which the Data Privacy Act counts as sensitive personal information; processing them needs the member's consent or another basis the Act allows. [Established] Showing them should be each member's choice. [Proposed] Where role details come from is open: VSU's records with VSU's permission, verification by units and organizations, or a member's own statement marked as unverified. [Unresolved] (Q-39)
+Program and year are education details, which the Data Privacy Act counts as sensitive personal information; processing them needs the member's consent or another basis the Act allows. [Established] (E-041) Showing them should be each member's choice. [Proposed] Where role details come from is open: VSU's records with VSU's permission, verification by units and organizations, or a member's own statement marked as unverified. [Unresolved] (Q-39)
 
 ### Roles in a place
 
@@ -73,7 +73,7 @@ No VSU role gives authority in a place by default. A faculty member is not a pla
 
 ## Places: the network shaped like VSU
 
-A place is the network's unit: anywhere VSU's people gather around something real at VSU, whether an office, a department, an organization, a subject, a dormitory, a building, or an interest its members share. Each has stewards who look after it for a term, a membership rule, and its own boards. Places exist because the thing they serve exists, not because someone started a chat: the scholarships place exists because scholarships do, and it outlives every student who joins it. [Established] (D-062, D-144) VSU's 2025 case, in which a lost-and-found group's creator said he had been removed and the only visible administrator appeared to be a dummy account, shows what happens when a community belongs to whoever controls it ([Chapter 3](03-social-network.md)). [Established]
+A place is the network's unit: anywhere VSU's people gather around something real at VSU, whether an office, a department, an organization, a subject, a dormitory, a building, or an interest its members share. Each has stewards who look after it for a term, a membership rule, and its own boards. Places exist because the thing they serve exists, not because someone started a chat: the scholarships place exists because scholarships do, and it outlives every student who joins it. [Established] (D-062, D-144) VSU's 2025 case, in which a lost-and-found group's creator said he had been removed and the only visible administrator appeared to be a dummy account, shows what happens when a community belongs to whoever controls it. [Established] (E-023; [Chapter 3](03-social-network.md))
 
 Places are the P in CAMPUS, and the word is meant literally where it can be: a physical place on the network, such as a building or the VSU Market, is the same place on the digital twin's map ([Chapter 4](04-digital-twin.md)), with its location attached. [Proposed] (D-144) Many of VSU's organizations have no office of their own, so a place on the network may be the only home that outlasts their officers. [Proposed]
 
@@ -93,7 +93,7 @@ Places are the P in CAMPUS, and the word is meant literally where it can be: a p
 | Concerns | Problems with services or facilities | The student council and OVPSAS, jointly | Students | The council |
 | Hometown, later | Students from the same province or town | The members who start it | Anyone from there | Its stewards |
 
-The examples come from VSU's public pages. [Established] Which places a pilot opens depends on the community it serves (Q-34). [Proposed] Course sections are not places: their materials, classes, and grades stay in VSUEE, and the subject place holds what outlasts a semester. [Established] (D-064) Most events are not places either: an event belongs to the place that holds it, on its events board, and only a large event that recurs every year gets a place of its own, so that the network does not fill with empty places. [Proposed] (D-144)
+The examples come from VSU's public pages. [Established] (VSU, n.d.-a; VSU, n.d.-b; E-027) Which places a pilot opens depends on the community it serves (Q-34). [Proposed] Course sections are not places: their materials, classes, and grades stay in VSUEE, and the subject place holds what outlasts a semester. [Established] (D-064) Most events are not places either: an event belongs to the place that holds it, on its events board, and only a large event that recurs every year gets a place of its own, so that the network does not fill with empty places. [Proposed] (D-144)
 
 ### Places side by side
 
@@ -120,13 +120,13 @@ A steward looks after a place on behalf of the people it serves, for a term, and
 
 ### Three rules that keep places healthy
 
-- **Structure follows VSU.** VSU replaced its colleges with faculties in January 2025, after its 2022–23 list of organizations was made. [Established] The list of units should come from VSU and change when VSU's structure does, not be kept by CAMPUS. [Established] (D-062)
+- **Structure follows VSU.** VSU replaced its colleges with faculties in January 2025, after its 2022–23 list of organizations was made. [Established] (VSU, 16 January 2025; E-027) The list of units should come from VSU and change when VSU's structure does, not be kept by CAMPUS. [Established] (D-062)
 - **Every place has a steward.** A place whose stewards leave without successors is archived, readable but closed, so that it cannot drift into something else, as a lost-and-found group on Facebook did. [Proposed]
 - **Places and boards open when people need them.** Research on starting online communities advises splitting a community into sections only after it becomes active, because many empty sections make it look dead. [Established] (Resnick, Konstan, and Chen, 2012) A pilot starts with few places and adds them on demand. [Proposed]
 
 ## Who can see what
 
-Connected does not mean public ([Chapter 9](09-governance.md)). [Established] Every board has one of five visibility levels, and the level is shown on the board. [Proposed]
+Connected does not mean public. [Established] ([Chapter 9](09-governance.md)) Every board has one of five visibility levels, and the level is shown on the board. [Proposed]
 
 | Level | Who sees it | For |
 | --- | --- | --- |
@@ -182,7 +182,7 @@ Each guide is reviewed by its place at the start of each semester, and an answer
 
 ### Answers someone stands behind
 
-The patterns come from Stack Exchange's accepted answers and Piazza's instructor-endorsed answers ([Chapter 10](10-related-work.md)). [Established] Discourse, an open-source forum, already lets a topic's owner and staff mark a reply as the solution in chosen categories. [Established] On the network, members answer under a name and role, or a pseudonym where the section allows; an office confirms one answer or posts its own; and the confirmed answer is dated and kept, and new questions like it are pointed to it. [Proposed] A confirmation is only as good as the office behind it, which is why an office's commitment comes before any pilot. [Established] (D-068)
+The patterns come from Stack Exchange's accepted answers and Piazza's instructor-endorsed answers. [Established] ([Chapter 10](10-related-work.md)) Discourse, an open-source forum, already lets a topic's owner and staff mark a reply as the solution in chosen categories. [Established] (Discourse, n.d.) On the network, members answer under a name and role, or a pseudonym where the section allows; an office confirms one answer or posts its own; and the confirmed answer is dated and kept, and new questions like it are pointed to it. [Proposed] A confirmation is only as good as the office behind it, which is why an office's commitment comes before any pilot. [Established] (D-068)
 
 ## Asking: routing questions to people who know
 
@@ -200,14 +200,14 @@ a member writes a question
   ──► the best answer is confirmed, dated, and kept
 ```
 
-- **Existing answers first.** Before a question posts, the network shows answers that already exist, as Stack Overflow does when it closes an accidental duplicate with a link to the original; it keeps differently worded versions as signposts, because people phrase the same problem in different ways. [Established] Showing answers first spares helpers the fatigue of answering the same question every year. [Proposed]
+- **Existing answers first.** Before a question posts, the network shows answers that already exist, as Stack Overflow does when it closes an accidental duplicate with a link to the original; it keeps differently worded versions as signposts, because people phrase the same problem in different ways. [Established] (E-039) Showing answers first spares helpers the fatigue of answering the same question every year. [Proposed]
 - **Helpers who chose the topic.** Members opt in to help with topics, such as scholarships, a program, a dormitory, a subject, or a research area, and only questions on those topics reach them. [Proposed] Research on online communities found that members contributed more when reminded that their contributions were unique, and when given specific, challenging goals. [Established] (Ling et al., 2005) A question that reaches a few helpers, each told why it came to them, uses that finding; a question broadcast to everyone does the opposite. [Proposed]
 - **Whom to ask.** The asker chooses whether answers should come from students, faculty, an office, or, later, alumni. A question about a scholarship requirement goes to the office as well as to students who have applied; a question about which electives seniors enjoyed goes to students. [Proposed]
 - **Escalation.** A question unanswered after a set time, or one only an office can settle, moves to the office responsible, whose response time is part of its commitment (D-068). [Proposed]
 - **Fair load.** No helper receives more than a set number of routed questions a week, routed questions rotate among helpers, and faculty receive questions only in the topics they opened and within their consultation norms. [Proposed]
 - **Nothing inferred.** Routing uses only the topics members declare and the places they join. The network never infers what someone knows from what they read, never scores posts to raise or lower their reach, and never ranks people. [Established] (D-061, D-071)
 
-VSU already lists its graduate faculty by department, with each one's specialization and research interest. [Established] Faculty who choose to could bring those topics into the network, which would make "who in VSU knows about this?" answerable without building a separate expertise directory. [Proposed]
+VSU already lists its graduate faculty by department, with each one's specialization and research interest. [Established] (E-040) Faculty who choose to could bring those topics into the network, which would make "who in VSU knows about this?" answerable without building a separate expertise directory. [Proposed]
 
 ## Memory: what stays and what fades
 
@@ -221,7 +221,7 @@ The network remembers knowledge and lets conversation fade. [Established] (D-070
 | Private | Messages and consultations | Deleted after a set period unless both sides keep them | Yes |
 | Sensitive | Pseudonymous concerns, and anything handed to a VSU office | Under D-065 and the office's own process | Under those rules |
 
-The periods are open. [Unresolved] (Q-43) The Data Privacy Act sets their limits: personal information may be kept only as long as the purpose it was collected for requires, and a member may have personal information blocked or removed when it is outdated, false, unlawfully obtained, or no longer necessary. [Established] A guide written by a student who later graduates is knowledge VSU has a reason to keep; her first-year question about a personal problem is not. [Proposed]
+The periods are open. [Unresolved] (Q-43) The Data Privacy Act sets their limits: personal information may be kept only as long as the purpose it was collected for requires, and a member may have personal information blocked or removed when it is outdated, false, unlawfully obtained, or no longer necessary. [Established] (Republic Act No. 10173, 2012) A guide written by a student who later graduates is knowledge VSU has a reason to keep; her first-year question about a personal problem is not. [Proposed]
 
 Who owns what members contribute is also open. Guides that many members edit need terms that let others keep editing them after their first author leaves, and that let VSU keep them if it takes the network over. [Unresolved] (Q-44)
 
@@ -234,12 +234,12 @@ A memory starts empty, and an empty network looks dead. [Proposed] Before a pilo
 A knowledge community lives on its helpers, the seeders in the author's torrent analogy: when no one shares, everyone who asks gets nothing. [Proposed] The design question is how to recognize helpers without turning help into a contest. [Established] (D-072)
 
 - **No public scores.** No reputation points, levels, rankings, or meters of how much a member asks against how much they answer. [Proposed] Public metrics steer behavior toward the metric: on Stack Overflow, users increased exactly the activity a badge rewarded as they neared it, and returned to their usual level once they had earned it. [Established] (Anderson et al., 2013) A public asking-versus-answering meter would also single out the members who mostly ask, often the first-year and first-generation students the network most needs to hear from. [Proposed]
-- **No price on asking.** Brainly's homework network has students earn points by answering and spend them to ask. [Established] That suits a homework market; on a campus network, asking must always be free. [Proposed]
+- **No price on asking.** Brainly's homework network has students earn points by answering and spend them to ask. [Established] (E-038) That suits a homework market; on a campus network, asking must always be free. [Proposed]
 - **What members see.** Each member sees their own contributions privately, such as how many of their answers were confirmed and how often they were reused, and may choose to show a short line about it on their profile. [Proposed]
 - **What places give.** A place can recognize helpers with named roles, such as peer guide, given by its stewards and shown on their posts, and offices can thank helpers whose answers they confirm. [Proposed]
 - **The swarm, not the peer.** The network measures knowledge flow for each place, not each person: the share of questions answered and confirmed, how often answers are reused, how many helpers carry the load, and how long questions wait. These are the pilot's health measures (D-067). [Proposed]
 
-Ranking or classifying members by their activity could also count as profiling, and the National Privacy Commission requires every system that involves profiling or automated decision-making to be registered. [Established] Recognizing helpers without profiling them keeps the network clear of that question. [Proposed]
+Ranking or classifying members by their activity could also count as profiling, and the National Privacy Commission requires every system that involves profiling or automated decision-making to be registered. [Established] (National Privacy Commission, 2022) Recognizing helpers without profiling them keeps the network clear of that question. [Proposed]
 
 ## What people see: a home that ends
 
@@ -261,7 +261,7 @@ No post is ranked by predicted engagement or by any hidden score, and there are 
 | Personal | Replies to the member, messages, routed questions, and confirmations of their answers | At once, outside quiet hours |
 | Everything else | New posts, events, and listings | A daily digest the member can turn off |
 
-Quiet hours, overnight by default, protect rest, a reason a Philippine college gave in 2026 when it moved announcements out of group chats. [Established] Urgent notices pass through because VSU's guidelines require typhoon suspensions to be announced by 4:30 a.m. [Established] Each office gets a small, published allowance of urgent notices each semester, so that urgent keeps its meaning. [Proposed]
+Quiet hours, overnight by default, protect rest, a reason a Philippine college gave in 2026 when it moved announcements out of group chats. [Established] (VMC, 2026) Urgent notices pass through because VSU's guidelines require typhoon suspensions to be announced by 4:30 a.m. [Established] (E-025) Each office gets a small, published allowance of urgent notices each semester, so that urgent keeps its meaning. [Proposed]
 
 ## Messages, group chats, and real-time chat
 
@@ -269,7 +269,7 @@ Members can message each other and form small group conversations. Norms differ 
 
 Group chats stay where they are. The network does not try to move real-time coordination off Messenger, where nearly everyone already is. [Established] (D-074) Instead, every notice, answer, guide, and event has a share card that can be posted into any chat and links back to the current version, so a chat that passes on a notice also passes on the way to check it. [Proposed]
 
-Real-time chat inside the network waits until a pilot shows people want it there. [Established] (D-074, Q-04) If it comes, Matrix is the candidate: an open protocol that TU Dresden and LMU Munich run for their students and staff. [Established] Its cost grows with use. Element's sizing guide, for servers without federation, puts up to 500 users at one core and about 1 GiB of memory for the Synapse server plus one core and 4 GiB for its database, and 2,501 to 10,000 users at ten cores and about 8 GiB plus four cores and 16 GiB, with the database growing by about 0.6 GB per active user each year. [Established]
+Real-time chat inside the network waits until a pilot shows people want it there. [Established] (D-074, Q-04) If it comes, Matrix is the candidate: an open protocol that TU Dresden and LMU Munich run for their students and staff. [Established] ([Chapter 10](10-related-work.md)) Its cost grows with use. Element's sizing guide, for servers without federation, puts up to 500 users at one core and about 1 GiB of memory for the Synapse server plus one core and 4 GiB for its database, and 2,501 to 10,000 users at ten cores and about 8 GiB plus four cores and 16 GiB, with the database growing by about 0.6 GB per active user each year. [Established] (Element, n.d.)
 
 Private messages stay private: moderators cannot read them. A member who reports a message shares that message with the moderators, and anything more needs legal process. [Proposed] Whether to encrypt messages end to end, which also limits what a host can detect and act on, is a question for the legal review. [Unresolved] (Q-36)
 
@@ -294,7 +294,7 @@ Participation is identified by default, and some sections may allow anonymous or
 | Pseudonym | A stable nickname that other members cannot link to the member | The link, under two keys | Concerns about the university; personal problems |
 | Fully anonymous | Nothing | Nothing | Not offered |
 
-Dcard's posting under a verified university affiliation without a name is the tested precedent for the role-only option ([Chapter 10](10-related-work.md)). [Established] Full anonymity is not offered, because no one could act on threats, harassment, or exploitation, as Yik Yak's history and the 2025 case at VSU show. [Established] (D-065)
+Dcard's posting under a verified university affiliation without a name is the tested precedent for the role-only option. [Established] ([Chapter 10](10-related-work.md)) Full anonymity is not offered, because no one could act on threats, harassment, or exploitation, as Yik Yak's history and the 2025 case at VSU show. [Established] (D-065)
 
 A simpler version, anonymous to other members and verified to VSU, protects a member from peers but not from the institution: if VSU can see who wrote a criticism of VSU, the anonymity protects least where it is needed most. [Proposed] So the link between a nickname and a member would be stored so that no single person can open it: one key held by the student council and one by VSU's data protection officer, or by people they name, so that both must agree. [Proposed] An identity would be revealed only for named violations, such as threats, harassment, impersonation, or sexual content involving a minor, or under legal process, and never for criticizing the university. Every reveal would be logged and reported, in aggregate, each semester. [Proposed] Which sections get pseudonyms follows the Facebook study's H4, on the topics people already post about anonymously far more than others. [Established] (D-048, D-050)
 
@@ -318,7 +318,7 @@ Three rules sit around it. [Proposed]
 | What problem? | P-23: concerns don't add up, and students can't see what became of one raised before [Unresolved] |
 | Who needs it? | Students first; the student council, which carries concerns to offices; and offices, which answer once instead of many times [Proposed] |
 | What evidence? | None from VSU yet. [Unresolved] The survey's question on hearing back about a raised concern, and its question on what students want back, test it. [Established] (D-117, D-132) |
-| Relation to existing systems? | VSU runs a helpdesk and publishes a Citizen's Charter of its services ([Chapter 3](03-social-network.md)); personal requests stay with them and with the offices (D-064). [Established] Whether VSU has a channel for collective concerns, and how the council carries concerns to offices today, is not recorded here. [Unresolved] |
+| Relation to existing systems? | VSU runs a helpdesk and publishes a Citizen's Charter of its services; personal requests stay with them and with the offices. [Established] (E-004; D-064; [Chapter 3](03-social-network.md)) Whether VSU has a channel for collective concerns, and how the council carries concerns to offices today, is not recorded here. [Unresolved] |
 | Stage? | Later, with student voice ([Chapter 3.1](03a-use-cases.md)); it depends on the speech rules (Q-16) and an office's commitment (D-068) [Proposed] |
 | Privacy, governance, and cost? | Pseudonyms under D-065, and supporters never shown; the council's time each week, and an office's time to acknowledge and answer [Proposed] |
 | How could it be disproved? | Few respondents report never hearing back about a concern they raised (D-132); or, in a pilot, offices don't acknowledge within the agreed time, or students keep reposting instead of following the record [Proposed] |
@@ -354,11 +354,11 @@ Ostrom found that commons which lasted shared a set of design principles. [Estab
 
 ### The speech standard
 
-The rules start from the standard the Supreme Court applied to campus speech in Malabanan v. Ramento: students keep their freedom of speech on campus, discussion of matters affecting their welfare or the public interest is protected, and only conduct that materially disrupts classwork, causes substantial disorder, or invades the rights of others may be restricted, with penalties proportionate to the offense. [Established] On the network, that means criticism of the university, its offices, and its officials stays up, while harassment, threats, doxxing, impersonation, scams, false claims to be official, and sexual content involving minors come down. [Established] (D-066) Claims about official matters that an office has not confirmed are labelled unverified rather than removed; removal is kept for impersonating an office and for claims that put people in danger, such as a false evacuation instruction. [Proposed]
+The rules start from the standard the Supreme Court applied to campus speech in Malabanan v. Ramento: students keep their freedom of speech on campus, discussion of matters affecting their welfare or the public interest is protected, and only conduct that materially disrupts classwork, causes substantial disorder, or invades the rights of others may be restricted, with penalties proportionate to the offense. [Established] (Malabanan v. Ramento, 1984) On the network, that means criticism of the university, its offices, and its officials stays up, while harassment, threats, doxxing, impersonation, scams, false claims to be official, and sexual content involving minors come down. [Established] (D-066) Claims about official matters that an office has not confirmed are labelled unverified rather than removed; removal is kept for impersonating an office and for claims that put people in danger, such as a false evacuation instruction. [Proposed]
 
 ### Process
 
-The Santa Clara Principles on transparency and accountability in content moderation set out the process the network would adopt: rules published together with examples, notice to the member naming the rule and the reason, an appeal heard by someone not involved in the first decision, and regular reports with numbers. [Established] They also ask platforms to tell users when the state was involved in an action. [Established] On a network run by a state university, that principle applies with special force: when VSU's administration, rather than a community moderator, asks for an action, the notice should say so. [Established] (D-066)
+The Santa Clara Principles on transparency and accountability in content moderation set out the process the network would adopt: rules published together with examples, notice to the member naming the rule and the reason, an appeal heard by someone not involved in the first decision, and regular reports with numbers. [Established] (Santa Clara Principles, n.d.) They also ask platforms to tell users when the state was involved in an action. [Established] (Santa Clara Principles, n.d.) On a network run by a state university, that principle applies with special force: when VSU's administration, rather than a community moderator, asks for an action, the notice should say so. [Established] (D-066)
 
 ### Layers
 
@@ -370,9 +370,9 @@ The Santa Clara Principles on transparency and accountability in content moderat
 | VSU processes | The Anti-Sexual Harassment Office, student discipline, and the Legal Office | Cases beyond the network's rules |
 | Outside authorities | The police and other agencies | Crimes, under legal process |
 
-The Safe Spaces Act requires schools to act promptly on gender-based sexual harassment, online harassment included, when they know or reasonably should know of it, and to refer cases to a committee on decorum and investigation. [Established] A VSU-run network would route such reports to VSU's Anti-Sexual Harassment Office, whose public page explains how to file complaints but does not mention online harassment. [Established] How the network's reports reach that office, and how fast, is part of the legal review. [Unresolved] (Q-36)
+The Safe Spaces Act requires schools to act promptly on gender-based sexual harassment, online harassment included, when they know or reasonably should know of it, and to refer cases to a committee on decorum and investigation. [Established] (Republic Act No. 11313, 2019) A VSU-run network would route such reports to VSU's Anti-Sexual Harassment Office, whose public page explains how to file complaints but does not mention online harassment. [Established] (VSU, n.d.-c) How the network's reports reach that office, and how fast, is part of the legal review. [Unresolved] (Q-36)
 
-How much moderation the network needs is unknown, so a pilot would measure reports per hundred members each week and how long each takes. [Proposed] SURF's experience suggests identified membership keeps the load low: its Mastodon pilot for Dutch education institutions needed little intervention, partly because institutional logins make users accountable. [Established]
+How much moderation the network needs is unknown, so a pilot would measure reports per hundred members each week and how long each takes. [Proposed] SURF's experience suggests identified membership keeps the load low: its Mastodon pilot for Dutch education institutions needed little intervention, partly because institutional logins make users accountable. [Established] (E-033)
 
 ## Beyond current members
 
@@ -386,10 +386,10 @@ Out of scope are minors from outside VSU and the general public. [Proposed] A kn
 
 ## Phones, data, and language
 
-- **An installable web app first.** Android accounted for about 87% of mobile web page views in the Philippines in September 2026, and iPhones have received push notifications from web apps added to the home screen since iOS 16.4 in 2023. [Established] One web app can therefore reach almost every phone without app store approval. [Proposed]
+- **An installable web app first.** Android accounted for about 87% of mobile web page views in the Philippines in September 2026, and iPhones have received push notifications from web apps added to the home screen since iOS 16.4 in 2023. [Established] (StatCounter, September 2026; WebKit, 16 February 2023) One web app can therefore reach almost every phone without app store approval. [Proposed]
 - **Text first.** Compressed images, no autoplay video, and only what changed fetched at each sync, so daily use costs little mobile data. [Proposed] How little is for a pilot to measure. [Unresolved]
 - **Readable offline.** Notices, guides, and saved events stay on the phone, the device ring of [Chapter 2](02-intranet.md). [Proposed] (D-034)
-- **Languages.** Members write in any language. The interface would start in English and Filipino and add Cebuano and Waray if the survey shows people want them. [Proposed] (Q-41) VSU's own barangay, Pangasugan, is among the few places where a further language, Baybayanon, is spoken. [Established]
+- **Languages.** Members write in any language. The interface would start in English and Filipino and add Cebuano and Waray if the survey shows people want them. [Proposed] (Q-41) VSU's own barangay, Pangasugan, is among the few places where a further language, Baybayanon, is spoken. [Established] (Baybay language, n.d.)
 - **Accessibility.** Scalable text, enough contrast, and support for screen readers, aiming at the Web Content Accessibility Guidelines, in line with the services for students with special needs that CHED lists among student affairs services. [Proposed]
 
 ## What runs underneath
@@ -411,10 +411,10 @@ and announcements; WAIS                       document tracker, VSUEE,
 
 - **Data model.** People, roles, places with their locations, boards, posts, topics, and events, with the links between them, stored from the first version so that later features can build on them. [Established] (D-075)
 - **Sign-in.** For a pilot, members can prove membership with a one-time code sent to their VSU email address, which needs no integration with VSU's systems. Single sign-on through OpenID Connect with VSU's Google accounts, limited to the vsu.edu.ph domain, or with VSU's own identity system, would come later with VSU ICT's agreement. [Proposed] (Q-06)
-- **Official feeds.** VSU's website already publishes RSS feeds of its news and its announcements. [Established] The network could carry them into the university's official place with their source shown, and could show WAIS advisories, which WAIS already generates as JSON, if VSU's disaster risk management office agrees. [Proposed] (Q-40)
+- **Official feeds.** VSU's website already publishes RSS feeds of its news and its announcements. [Established] (E-024; VSU, n.d.-d) The network could carry them into the university's official place with their source shown, and could show WAIS advisories, which WAIS already generates as JSON, if VSU's disaster risk management office agrees. [Proposed] (Q-40)
 - **Sync.** The channel model's tiers: official notices within about a minute, other boards on a slower cycle, and archives only when opened. [Established] (D-034)
 - **Build.** Two paths are open. One composes open-source parts, such as a forum engine like Discourse and, if needed, a Matrix server, behind a thin VSU layer for roles, places, labels, states, and routing. The other builds the network from scratch on the stack Hop-It's PRD names. [Proposed] (Q-33) The first is faster and better tested; the second fits the labels, states, and routing more closely and shows more of what the project can build. Either way, everything runs in containers VSU could host later, with no dependence on one cloud's proprietary services ([Chapter 2](02-intranet.md)). [Proposed]
-- **Security.** Encrypted connections and storage, a log of every moderator and administrator action, regular backups, and a breach process run with VSU's data protection officer. [Proposed] VSU's own privacy training in 2021 put the guiding rule simply: don't collect what you can't protect. [Established]
+- **Security.** Encrypted connections and storage, a log of every moderator and administrator action, regular backups, and a breach process run with VSU's data protection officer. [Proposed] VSU's own privacy training in 2021 put the guiding rule simply: don't collect what you can't protect. [Established] (VSU, 24 February 2021)
 
 ## Scenes
 
@@ -422,7 +422,7 @@ These show how the parts would work together. Each is a proposal, and each can b
 
 ### 1. A 4:30 a.m. suspension
 
-A typhoon signal is raised overnight. Under VSU's guidelines, collegiate classes are suspended automatically at Signal No. 3, and typhoon suspensions must be announced by 4:30 a.m. [Established] The authorized office posts the suspension once, in the university's official place. It goes out as an urgent notification, the only kind that passes through quiet hours, and appears at the top of every member's home with the WAIS advisory attached. Students share it into their group chats as a card carrying its short link. When the office extends the suspension at noon, it updates the same notice, and the page shows both versions. A post claiming the suspension covers the following week stays labelled unverified until the office speaks. Classes moving to asynchronous mode, as VSU's guidelines provide, are announced in VSUEE, and the network links there. [Proposed]
+A typhoon signal is raised overnight. Under VSU's guidelines, collegiate classes are suspended automatically at Signal No. 3, and typhoon suspensions must be announced by 4:30 a.m. [Established] (E-025; VSU, n.d.-d) The authorized office posts the suspension once, in the university's official place. It goes out as an urgent notification, the only kind that passes through quiet hours, and appears at the top of every member's home with the WAIS advisory attached. Students share it into their group chats as a card carrying its short link. When the office extends the suspension at noon, it updates the same notice, and the page shows both versions. A post claiming the suspension covers the following week stays labelled unverified until the office speaks. Classes moving to asynchronous mode, as VSU's guidelines provide, are announced in VSUEE, and the network links there. [Proposed]
 
 ### 2. The first week
 
@@ -454,7 +454,7 @@ A graduating student lists a lab gown for verified members, suggests the library
 
 ### 9. When the colleges became faculties
 
-Suppose the network had existed in January 2025, when VSU replaced its colleges with faculties. [Established] Every guide and confirmed answer that named a college would have been flagged for review in its place. Owners would have updated each one with a note of what changed, old names would have pointed to the new ones, and a student searching for a former college's name would still have found the right page. In the spaces VSU's people use today, nothing marks such posts as out of date. [Proposed]
+Suppose the network had existed in January 2025, when VSU replaced its colleges with faculties. [Established] (VSU, 16 January 2025) Every guide and confirmed answer that named a college would have been flagged for review in its place. Owners would have updated each one with a note of what changed, old names would have pointed to the new ones, and a student searching for a former college's name would still have found the right page. In the spaces VSU's people use today, nothing marks such posts as out of date. [Proposed]
 
 ## What stays out of a first version
 
@@ -480,22 +480,35 @@ Anything the evidence does not call for. [Established] (principle 5) In particul
 
 ## Sources
 
-Checked on 8 and 9 October 2026. The source type follows each entry ([Chapter 9](09-governance.md)).
+Checked on 8 and 9 October 2026; every entry cited for a claim was checked again on 28 October 2026. Each entry starts with the author and date a citation names, and ends with its source type ([Chapter 9](09-governance.md)). Facts already in the [evidence register](08-evidence.md) are cited by their E- number instead.
 
-- Visayas State University. [All VSU students and staff to get Microsoft and Google licenses](https://www.vsu.edu.ph/articles/news/2394-all-vsu-students-and-staff-to-get-microsoft-google-licenses), 22 August 2023; [VSU rolls out 9,245 free Google Workspace accounts to students in Main Campus](https://www.vsu.edu.ph/articles/news/2255-vsu-rolls-out-9-245-free-google-workspace-accounts-to-all-students-in-main-campus), 4 October 2022; [VSU implements new vision, mission, organizational structures](https://www.vsu.edu.ph/articles/news/2666-vsu-implements-new-vision-mission-organizational-structures), 16 January 2025; [VSU UDRMO unveils WAIS](https://www.vsu.edu.ph/articles/news/3011-vsu-udrmo-unveils-wais-strengthens-climate-resilience-efforts), 9 July 2026; [Accredited Organizations](https://www.vsu.edu.ph/students/accredited-organizations), school year 2022–23; [Main Campus faculties](https://www.vsu.edu.ph/academe/main-campus); [Graduate faculty of the Department of Food Science and Technology](https://www.vsu.edu.ph/21-content-main/informational/1611-graduate-faculty-of-dept-of-food-science-and-technology), an example of VSU's graduate faculty pages; [Student Services](https://www.vsu.edu.ph/vsu/1156-student-services); [Frequently asked questions on sexual harassment](https://www.vsu.edu.ph/vsu/1356-anti-sexual-harassment); [News feed](https://www.vsu.edu.ph/articles/news?format=feed&type=rss) and [announcements feed](https://www.vsu.edu.ph/articles/bulletin?format=feed&type=rss); [University Policies](https://www.vsu.edu.ph/about/university-policies), including BOR Resolution No. 162, s. 2024, on suspending classes and work, and BOR Resolution No. 100, s. 2025, on raising and selling animals; [VSU commits to data privacy and protection](https://www.vsu.edu.ph/articles/news/1919-vsu-commits-to-data-privacy-and-protection), 24 February 2021. Official.
-- [Republic Act No. 10173, Data Privacy Act of 2012](https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html), Sections 3(l), 11(e), 13, and 16(e); [Republic Act No. 11313, Safe Spaces Act](https://lawphil.net/statutes/repacts/ra2019/ra_11313_2019.html), Sections 12, 21, and 22; National Privacy Commission, [Circular No. 2022-04](https://privacy.gov.ph/wp-content/uploads/2023/05/Circular-2022-04.pdf), Section 5. Official.
+- VSU. [VSU commits to data privacy and protection](https://www.vsu.edu.ph/articles/news/1919-vsu-commits-to-data-privacy-and-protection), 24 February 2021. Official.
+- VSU. [VSU rolls out 9,245 free Google Workspace accounts to students in Main Campus](https://www.vsu.edu.ph/articles/news/2255-vsu-rolls-out-9-245-free-google-workspace-accounts-to-all-students-in-main-campus), 4 October 2022. Official.
+- VSU. [All VSU students and staff to get Microsoft and Google licenses](https://www.vsu.edu.ph/articles/news/2394-all-vsu-students-and-staff-to-get-microsoft-google-licenses), 22 August 2023. Official.
+- VSU. [VSU implements new vision, mission, organizational structures](https://www.vsu.edu.ph/articles/news/2666-vsu-implements-new-vision-mission-organizational-structures), 16 January 2025. Official.
+- VSU. [VSU UDRMO unveils WAIS](https://www.vsu.edu.ph/articles/news/3011-vsu-udrmo-unveils-wais-strengthens-climate-resilience-efforts), 9 July 2026. Official.
+- VSU. [Main Campus faculties](https://www.vsu.edu.ph/academe/main-campus), n.d.-a. Official.
+- VSU. [Student Services](https://www.vsu.edu.ph/vsu/1156-student-services), n.d.-b. Official.
+- VSU. [Frequently asked questions on sexual harassment](https://www.vsu.edu.ph/vsu/1356-anti-sexual-harassment), the Anti-Sexual Harassment Office's page, n.d.-c. Official.
+- VSU. [University Policies](https://www.vsu.edu.ph/about/university-policies), n.d.-d, including BOR Resolution No. 162, s. 2024, on suspending classes and work, and BOR Resolution No. 100, s. 2025, on raising and selling animals. Official.
+- VSU. [Accredited Organizations](https://www.vsu.edu.ph/students/accredited-organizations), school year 2022–23. Official.
+- VSU. [Graduate faculty of the Department of Food Science and Technology](https://www.vsu.edu.ph/21-content-main/informational/1611-graduate-faculty-of-dept-of-food-science-and-technology), an example of VSU's graduate faculty pages. Official.
+- VSU. [News feed](https://www.vsu.edu.ph/articles/news?format=feed&type=rss) and [announcements feed](https://www.vsu.edu.ph/articles/bulletin?format=feed&type=rss). Official.
+- Republic Act No. 10173. [Data Privacy Act of 2012](https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html), 2012, Sections 3(l), 11(e), 13, and 16(e). Official.
+- Republic Act No. 11313. [Safe Spaces Act](https://lawphil.net/statutes/repacts/ra2019/ra_11313_2019.html), 2019, Sections 12, 21, and 22. Official.
+- National Privacy Commission. [Circular No. 2022-04](https://privacy.gov.ph/wp-content/uploads/2023/05/Circular-2022-04.pdf), 2022, Section 5. Official.
 - [Malabanan v. Ramento, G.R. No. L-62270](https://chanrobles.com/scdecisions/jurisprudence1984/may1984/gr_l62270_1984.php), 21 May 1984. Official, jurisprudence.
-- [The Santa Clara Principles on Transparency and Accountability in Content Moderation](https://santaclaraprinciples.org/), version 2.0. External.
+- Santa Clara Principles. [The Santa Clara Principles on Transparency and Accountability in Content Moderation](https://santaclaraprinciples.org/), version 2.0, n.d. External.
 - Ostrom, E. (1990). *Governing the Commons*, Table 3.1. Cambridge University Press. [doi:10.1017/CBO9780511807763](https://doi.org/10.1017/CBO9780511807763). Scholarly.
 - Resnick, P., Konstan, J., and Chen, Y. Starting new online communities. In R. E. Kraut and P. Resnick, *Building Successful Online Communities: Evidence-Based Social Design*, MIT Press, 2012; design claims summarized on the [HCL Connections wiki](https://ds-infolib.hcltechsw.com/ldd/lcwiki.nsf/dx/Starting_a_new_online_community). Scholarly.
 - Ling, K., Beenen, G., Ludford, P., Wang, X., Chang, K., Cosley, D., Frankowski, D., Terveen, L., Rashid, A. M., Resnick, P., and Kraut, R. (2005). Using social psychology to motivate contributions to online communities. *Journal of Computer-Mediated Communication*, 10(4). [doi:10.1111/j.1083-6101.2005.tb00273.x](https://doi.org/10.1111/j.1083-6101.2005.tb00273.x). First reported in Beenen, G., and others, [CSCW 2004](https://presnick.people.si.umich.edu/papers/cscw04) (C-04). Scholarly.
 - Anderson, A., Huttenlocher, D., Kleinberg, J., and Leskovec, J. (2013). [Steering user behavior with badges](https://archives.iw3c2.org/www2013/proceedings/p95.pdf). *WWW 2013*, 95–106. [doi:10.1145/2488388.2488398](https://doi.org/10.1145/2488388.2488398). Scholarly.
 - Stack Overflow. [Handling duplicate questions](https://stackoverflow.blog/2009/04/29/handling-duplicate-questions/), 29 April 2009. External, vendor.
 - [Poland-based social learning network rolls out PH site](https://newsbytes.ph/2014/04/21/poland-based-social-learning-network-rolls-out-ph-site/), NewsBytes.PH, 21 April 2014, on Brainly. External.
-- Element. [ESS sizing](https://ems-docs.element.io/books/element-server-suite-documentation-lts-2310/page/ess-sizing/revisions/3404), Element Server Suite documentation, LTS 23.10. External, vendor.
-- Discourse. [discourse-solved](https://github.com/discourse/discourse-solved), now bundled into Discourse core. External, vendor.
-- [Mobile operating system market share in the Philippines](https://gs.statcounter.com/os-market-share/mobile/philippines), StatCounter, September 2026. External.
+- Element. [ESS sizing](https://ems-docs.element.io/books/element-server-suite-documentation-lts-2310/page/ess-sizing/revisions/3404), Element Server Suite documentation, LTS 23.10, n.d. External, vendor.
+- Discourse. [discourse-solved](https://github.com/discourse/discourse-solved), now bundled into Discourse core, n.d. External, vendor.
+- StatCounter. [Mobile operating system market share in the Philippines](https://gs.statcounter.com/os-market-share/mobile/philippines), September 2026. External.
 - WebKit. [Web Push for Web Apps on iOS and iPadOS](https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/), 16 February 2023. External, vendor.
 - [Beyond X: how universities in the Netherlands are building alternatives to big tech](https://www.blogs.unicamp.br/geict/?p=891), GEICT, Unicamp, 18 March 2026, an interview with SURF. External.
 - Villagers Montessori College. [Memo No. 6, s. 2026, on official communication channels](https://vmc.edu.ph/wp-content/uploads/2026/07/VMC-Memo-6-s.-26-Official-Communication-channel.pdf), 15 June 2026. External, from another college.
-- [Baybay language](https://en.wikipedia.org/wiki/Baybay_language), Wikipedia. External.
+- Baybay language. [Baybay language](https://en.wikipedia.org/wiki/Baybay_language), Wikipedia, n.d. External.

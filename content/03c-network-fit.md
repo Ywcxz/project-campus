@@ -2,9 +2,9 @@
 
 *What VSU already has, what is missing, what would change, and whether it can be done*
 
-The network has to fit a university that already runs many systems and plans more under DIGITS. This chapter takes stock of them from public sources, measures what is missing against the concepts the network depends on, sets out what would change for each system, draws lessons from similar systems, and judges whether the network is feasible. The real answers about VSU's systems sit with their owners. [Established]
+The network has to fit a university that already runs many systems and plans more under DIGITS. This chapter takes stock of them from public sources, measures what is missing against the concepts the network depends on, sets out what would change for each system, draws lessons from similar systems, and judges whether the network is feasible. The real answers about VSU's systems sit with their owners. [Established] (D-004)
 
-> **In short.** VSU already has much of what the network would build on: an account for every member, a learning system with a mobile app, a helpdesk, a document tracker, public feeds of its news and announcements, pages listing its graduate faculty's research interests, and an advisory system. [Established] Measured against seventeen concepts, its systems cover none fully for students, thirteen in part, and three not at all, with one unknown. [Proposed] What is missing is a community space, a memory that keeps what is learned, and the connections between the pieces. The network would change little for any existing system, it is technically easy and cheap to pilot, and its real costs are people, legal duties, a memory that takes years to pay off, and winning students over. [Proposed]
+> **In short.** VSU already has much of what the network would build on: an account for every member, a learning system with a mobile app, a helpdesk, a document tracker, public feeds of its news and announcements, pages listing its graduate faculty's research interests, and an advisory system. [Established] (E-021; E-005; VSU, 29 July 2022; E-004; E-024; E-040; E-026) Measured against seventeen concepts, its systems cover none fully for students, thirteen in part, and three not at all, with one unknown. [Proposed] What is missing is a community space, a memory that keeps what is learned, and the connections between the pieces. The network would change little for any existing system, it is technically easy and cheap to pilot, and its real costs are people, legal duties, a memory that takes years to pay off, and winning students over. [Proposed]
 
 ## What VSU already has
 
@@ -29,7 +29,7 @@ The network has to fit a university that already runs many systems and plans mor
 | The Amaranth | VSU's student media | Hosted, never edited, under the Campus Journalism Act ([Chapter 3.1](03a-use-cases.md)) | VSU Students page |
 | Plans in the Third SOUA | Regular listening sessions, digitized customer feedback for ISO 9001, an accommodation management system, and DIGITS's OneVSU Mobile and Portal | Student voice, notices, and possibly much more (Q-18) | Third SOUA |
 
-Every row is drawn from VSU's public pages and news. [Established] Who owns each system inside VSU, and how much it is used, cannot be seen from outside. [Unresolved] (Q-10)
+Every row is drawn from VSU's public pages and news. [Established] (E-021; E-022; E-004; E-005; E-024; E-026; E-040; VSU, 29 July 2022) Who owns each system inside VSU, and how much it is used, cannot be seen from outside. [Unresolved] (Q-10)
 
 ## What is missing
 
@@ -84,16 +84,16 @@ One more system is not VSU's but changes least of all: the group chats where bat
 
 ### Signing in
 
-VSU's account practices settle much of the identity design, and leave four questions. [Established]
+VSU's account practices settle much of the identity design, and leave four questions. [Established] (E-022; VSU, 22 August 2023)
 
-- Student Google accounts use the vsu.edu.ph domain, and Microsoft accounts use 365.vsu.edu.ph with the same username. [Established] Either could serve for single sign-on through OpenID Connect, limited to VSU's domain, without a new password; a pilot can instead send a one-time code to a member's VSU email address, which needs no integration. [Proposed] Which form of sign-on, if any, VSU allows is its decision. [Unresolved] (Q-06)
+- Student Google accounts use the vsu.edu.ph domain, and Microsoft accounts use 365.vsu.edu.ph with the same username. [Established] (VSU, 22 August 2023) Either could serve for single sign-on through OpenID Connect, limited to VSU's domain, without a new password; a pilot can instead send a one-time code to a member's VSU email address, which needs no integration. [Proposed] Which form of sign-on, if any, VSU allows is its decision. [Unresolved] (Q-06)
 - Accounts are issued after the late enrollment period, which leaves new students without one in their first weeks. [Established] (Q-38)
-- Student usernames are school ID numbers by default. [Established] The network must never display them. [Proposed]
-- Integrated High School students also hold accounts, so sign-in alone cannot tell a college student from a high school student. [Established] Roles must come from somewhere else (Q-39). [Proposed] The first pilot admits college members aged 18 and over. [Established] (D-069)
+- Student usernames are school ID numbers by default. [Established] (E-022) The network must never display them. [Proposed]
+- Integrated High School students also hold accounts, so sign-in alone cannot tell a college student from a high school student. [Established] (E-022) Roles must come from somewhere else (Q-39). [Proposed] The first pilot admits college members aged 18 and over. [Established] (D-069)
 
 ### What the network would own, and what it would only point to
 
-This extends the own-or-reference rule of [Chapter 7](07-vsu-context.md). [Established]
+This extends the own-or-reference rule of Chapter 7. [Established] ([Chapter 7](07-vsu-context.md))
 
 | Data | The network's role | Where the authority lies |
 | --- | --- | --- |
@@ -110,7 +110,7 @@ This extends the own-or-reference rule of [Chapter 7](07-vsu-context.md). [Estab
 
 ## DIGITS and OneVSU
 
-The Third SOUA describes DIGITS as connecting the university's separate systems, offices, and processes so that information moves more efficiently, and OneVSU as a simpler point of access to university services and information. [Established] The network shares those aims from the community side. Whether OneVSU will carry notices, office directories, or questions and answers for students is not known, and the answer decides how much of the network's first version still stands. [Unresolved] (Q-18) Of the six relationships v0.1 listed, the network fits most naturally as a complementary layer, or as a test of ideas before institutional scale; VSU decides. [Proposed] (D-017) The practical rule is to ask what OneVSU will cover before the pitch, then design to complement it. [Proposed]
+The Third SOUA describes DIGITS as connecting the university's separate systems, offices, and processes so that information moves more efficiently, and OneVSU as a simpler point of access to university services and information. [Established] (E-003; VSU, 18 September 2026) The network shares those aims from the community side. Whether OneVSU will carry notices, office directories, or questions and answers for students is not known, and the answer decides how much of the network's first version still stands. [Unresolved] (Q-18) Of the six relationships v0.1 listed, the network fits most naturally as a complementary layer, or as a test of ideas before institutional scale; VSU decides. [Proposed] (D-017) The practical rule is to ask what OneVSU will cover before the pitch, then design to complement it. [Proposed]
 
 ## Lessons from similar systems
 
@@ -118,34 +118,34 @@ The Third SOUA describes DIGITS as connecting the university's separate systems,
 
 | Precedent | What happened | Design response |
 | --- | --- | --- |
-| Thefacebook at Harvard, 2004 | Opened to one university first; more than half its undergraduates joined within a month, before it spread school by school [Established] | Start dense in one community, not thin across the campus |
-| Facebook Campus, 2020 to 2022 | A college-only section that Meta closed, saying Groups served students best; it launched as US teenagers were leaving Facebook, whose use among them fell from 71% in 2014–15 to 32% in 2022 [Established] | Campus-only membership is not enough, and at VSU, where nearly everyone uses Facebook, the incumbent is stronger still; the network must do tasks better |
+| Thefacebook at Harvard, 2004 | Opened to one university first; more than half its undergraduates joined within a month, before it spread school by school [Established] (History of Facebook, n.d.) | Start dense in one community, not thin across the campus |
+| Facebook Campus, 2020 to 2022 | A college-only section that Meta closed, saying Groups served students best; it launched as US teenagers were leaving Facebook, whose use among them fell from 71% in 2014–15 to 32% in 2022 [Established] (E-006; E-035) | Campus-only membership is not enough, and at VSU, where nearly everyone uses Facebook, the incumbent is stronger still; the network must do tasks better |
 | Messenger group chats | Where campus coordination happens, by the author's observation; answers given there are buried within days [Unresolved] | Complement them as the memory they lack, and link into them with share cards (D-074) |
-| Stack Overflow | Closes accidental duplicate questions with a link to the original, and keeps differently worded ones as signposts [Established] | Show existing answers before a question posts (D-071) |
-| Brainly, with a Philippine site since 2014 | Students earn points by answering and spend them to ask, with rankings and volunteer moderators [Established] | Never put a price on asking; no public scores (D-072) |
-| Stack Overflow badges | Users increased the activity a badge rewarded as they neared it, then returned to their usual level [Established] | Public metrics steer behavior toward the metric; recognize helpers without them (D-072) |
-| Everytime, South Korea | Verified boards for each university, plus timetables used daily [Established] | Be useful to one person before being social: notices, deadlines, an office directory, guides |
-| Fizz, United States | Almost all undergraduates at one college within months, by its founders' account, with reports of bullying and misinformation [Established] | Demand for campus talk is real; pair it with identity and moderation |
-| Yik Yak, United States | Unlimited anonymity brought harm that colleges could not stop, and bans on campus Wi-Fi failed [Established] | No full anonymity; govern behavior, not the pipe |
-| community@brighton, United Kingdom | An Elgg network that grew to tens of thousands of users, became more of an institutional channel, lost members' sense of ownership, and declined after years of neglect [Established] | Give members room and ownership, and keep someone caring for it |
-| Athabasca University's Landing, Canada | Its builders took Brighton's lessons and called gardening a better metaphor than architecture [Established] | Grow the network with its members, and expect it to change |
-| Mastodon at Innsbruck and SURF | University-run servers with institutional sign-in; SURF's needed little moderation, partly because logins made users accountable [Established] | Identified by default |
-| Matrix at TU Dresden and LMU Munich | Universities run their own chat for students and staff [Established] | Matrix is the candidate if chat is tested (Q-04) |
-| Workplace from Meta | Closed in 2026 as Meta's priorities changed [Established] | Open components VSU could host; no single-vendor dependence |
-| Discord Student Hubs | Hubs unlocked by a school email, not affiliated with or run by the school [Established] | Verification without governance is not the model |
-| Iskomunidad, UP Diliman | A community wiki hosted by UP Diliman's Interactive Learning Center, with 3,722 articles and 6,268 registered users in 2026 [Established] | A Philippine university can host community knowledge for years |
-| USC AppDate, De La Salle Araneta University | Built after an online grievance desk fell out of use [Established] | A concerns channel dies without answers; office commitment comes first |
-| VSU's Google Workspace rollout, 2022 | 9,245 Main Campus students received accounts; about 17% were active a day later [Established] | An account is not adoption; plan onboarding and measure it |
+| Stack Overflow | Closes accidental duplicate questions with a link to the original, and keeps differently worded ones as signposts [Established] (E-039) | Show existing answers before a question posts (D-071) |
+| Brainly, with a Philippine site since 2014 | Students earn points by answering and spend them to ask, with rankings and volunteer moderators [Established] (E-038) | Never put a price on asking; no public scores (D-072) |
+| Stack Overflow badges | Users increased the activity a badge rewarded as they neared it, then returned to their usual level [Established] (E-037) | Public metrics steer behavior toward the metric; recognize helpers without them (D-072) |
+| Everytime, South Korea | Verified boards for each university, plus timetables used daily [Established] ([Chapter 10](10-related-work.md)) | Be useful to one person before being social: notices, deadlines, an office directory, guides |
+| Fizz, United States | Almost all undergraduates at one college within months, by its founders' account, with reports of bullying and misinformation [Established] (E-034) | Demand for campus talk is real; pair it with identity and moderation |
+| Yik Yak, United States | Unlimited anonymity brought harm that colleges could not stop, and bans on campus Wi-Fi failed [Established] (E-007; [Chapter 10](10-related-work.md)) | No full anonymity; govern behavior, not the pipe |
+| community@brighton, United Kingdom | An Elgg network that grew to tens of thousands of users, became more of an institutional channel, lost members' sense of ownership, and declined after years of neglect [Established] (E-032) | Give members room and ownership, and keep someone caring for it |
+| Athabasca University's Landing, Canada | Its builders took Brighton's lessons and called gardening a better metaphor than architecture [Established] (Athabasca University's Landing, n.d.) | Grow the network with its members, and expect it to change |
+| Mastodon at Innsbruck and SURF | University-run servers with institutional sign-in; SURF's needed little moderation, partly because logins made users accountable [Established] (University of Innsbruck, 8 April 2024; E-033) | Identified by default |
+| Matrix at TU Dresden and LMU Munich | Universities run their own chat for students and staff [Established] ([Chapter 10](10-related-work.md)) | Matrix is the candidate if chat is tested (Q-04) |
+| Workplace from Meta | Closed in 2026 as Meta's priorities changed [Established] ([Chapter 10](10-related-work.md)) | Open components VSU could host; no single-vendor dependence |
+| Discord Student Hubs | Hubs unlocked by a school email, not affiliated with or run by the school [Established] (Discord, 16 November 2023) | Verification without governance is not the model |
+| Iskomunidad, UP Diliman | A community wiki hosted by UP Diliman's Interactive Learning Center, with about 3,700 articles and 6,300 registered users in October 2026 [Established] (UP Diliman Interactive Learning Center, n.d.) | A Philippine university can host community knowledge for years |
+| USC AppDate, De La Salle Araneta University | Built after an online grievance desk fell out of use [Established] ([Chapter 10](10-related-work.md)) | A concerns channel dies without answers; office commitment comes first |
+| VSU's Google Workspace rollout, 2022 | 9,245 Main Campus students received accounts; about 17% were active a day later [Established] (E-021) | An account is not adoption; plan onboarding and measure it |
 
 ## Is it feasible?
 
 ### Technical
 
-Every component exists as open-source software that universities already run: forums such as Discourse, which marks accepted answers in its core; chat servers such as Matrix; sign-in through OpenID Connect; and push notifications from web apps on Android and on iPhones since iOS 16.4. [Established] What would be new is VSU-specific rather than technically novel: labels and states that travel with posts, a permanent page for each notice, places tied to a registry of VSU's units, routing by declared topics, a retention schedule, and the two-key store for pseudonyms. [Proposed] Each needs careful work; none needs research. [Proposed]
+Every component exists as open-source software that universities already run: forums such as Discourse, which marks accepted answers in its core; chat servers such as Matrix; sign-in through OpenID Connect; and push notifications from web apps on Android and on iPhones since iOS 16.4. [Established] (Discourse, n.d.; [Chapter 3.2](03b-network-design.md); [Chapter 10](10-related-work.md)) What would be new is VSU-specific rather than technically novel: labels and states that travel with posts, a permanent page for each notice, places tied to a registry of VSU's units, routing by declared topics, a retention schedule, and the two-key store for pseudonyms. [Proposed] Each needs careful work; none needs research. [Proposed]
 
 ### Cost
 
-All prices are vendors' published prices in US dollars, checked in October 2026. [Established] The estimates around them are the author's. [Proposed]
+All prices are vendors' published prices in US dollars, checked in October 2026. [Established] (Discourse, n.d.; DigitalOcean, n.d.; Element, n.d.) The estimates around them are the author's. [Proposed]
 
 | Item | Pilot: one community, a few hundred members, one semester | Campus-wide: about 10,000 members | Note |
 | --- | --- | --- | --- |
@@ -155,27 +155,27 @@ All prices are vendors' published prices in US dollars, checked in October 2026.
 | Sign-in | VSU accounts, with no added license | The same | Needs VSU's permission (Q-06) |
 | People | The author's time, one office's answering time, and volunteer moderators | A coordinator, moderators, office time, and ICT time | The main cost, not yet measured |
 
-For scale, VSU spent more than ₱4 million on Google and Microsoft subscriptions for 2023, renewed each year, and about ₱1.5 million on Google licenses alone in 2022. [Established] The network's servers would cost a small fraction of that; its people would not. [Proposed] A pilot measures their time in minutes per week, by office and by moderator, so that a campus-wide budget rests on numbers. [Proposed]
+For scale, VSU spent more than ₱4 million on Google and Microsoft subscriptions for 2023, renewed each year, and about ₱1.5 million on Google licenses alone in 2022. [Established] (VSU, 22 August 2023; VSU, 4 October 2022) The network's servers would cost a small fraction of that; its people would not. [Proposed] A pilot measures their time in minutes per week, by office and by moderator, so that a campus-wide budget rests on numbers. [Proposed]
 
 ### Law and policy
 
 | Law or rule | What it means for a VSU-run network | Status |
 | --- | --- | --- |
-| Data Privacy Act of 2012 | Education details, such as program and year, are sensitive personal information; processing them needs consent or another basis the Act allows; personal information may be kept only as long as its purpose requires; and members may have outdated, false, or no longer necessary information blocked or removed | [Established] The network keeps knowledge and lets conversation fade (D-070) [Proposed] |
-| NPC Circular 2022-04 | Controllers that process sensitive personal information of 1,000 or more people must register each data processing system, public online and mobile apps included, within 20 days of its start, and renew each year; any system involving profiling or automated decision-making must be registered in all cases | [Established] The network neither scores nor ranks its members (D-061, D-072) [Proposed] |
-| VSU's privacy program | In a 2021 workshop, VSU's offices drafted privacy impact assessments for new projects and systems; VSU's privacy notice names a data protection officer who reports to the President | [Established] A new network would need its own assessment [Proposed] |
-| Safe Spaces Act | Schools must act on gender-based sexual harassment, online included, when they know or should know of it; heads who fail to act can be fined | [Established] |
+| Data Privacy Act of 2012 | Education details, such as program and year, are sensitive personal information; processing them needs consent or another basis the Act allows; personal information may be kept only as long as its purpose requires; and members may have outdated, false, or no longer necessary information blocked or removed | [Established] (Republic Act No. 10173, 2012) The network keeps knowledge and lets conversation fade (D-070) [Proposed] |
+| NPC Circular 2022-04 | Controllers that process sensitive personal information of 1,000 or more people must register each data processing system, public online and mobile apps included, within 20 days of its start, and renew each year; any system involving profiling or automated decision-making must be registered in all cases | [Established] (National Privacy Commission, 2022) The network neither scores nor ranks its members (D-061, D-072) [Proposed] |
+| VSU's privacy program | In a 2021 workshop, VSU's offices drafted privacy impact assessments for new projects and systems; VSU's privacy notice provides for a data protection officer who reports to the President | [Established] (VSU, 24 February 2021; VSU, n.d.-d; C-12) A new network would need its own assessment [Proposed] |
+| Safe Spaces Act | Schools must act on gender-based sexual harassment, online included, when they know or should know of it; heads who fail to act can be fined | [Established] (Republic Act No. 11313, 2019) |
 | Anti-OSAEC and Anti-CSAEM Act of 2022 | Platforms that let people communicate are internet intermediaries with duties: terms that prohibit child sexual abuse material, removal within 24 hours of notice, keeping certain data for set periods, and reporting | Whether a VSU-run network counts is for legal review [Unresolved] |
-| Electronic Commerce Act of 2000, Section 30 | A service provider that merely gives access is not liable for others' content if it lacks actual knowledge of its unlawfulness and gains nothing from it | [Established] A prompt notice-and-action process protects the host [Proposed] |
+| Electronic Commerce Act of 2000, Section 30 | A service provider that merely gives access is not liable for others' content if it lacks actual knowledge of its unlawfulness and gains nothing from it | [Established] (Republic Act No. 8792, 2000) A prompt notice-and-action process protects the host [Proposed] |
 | Cybercrime Prevention Act of 2012 | Service providers must keep traffic data for set periods ([Chapter 2](02-intranet.md)) | Whether it covers the network is for legal review [Unresolved] |
-| Campus Journalism Act of 1991 | Student publications keep their editorial independence | [Established] |
-| Malabanan v. Ramento, 1984 | Students keep their freedom of speech on campus, within reasonable limits | [Established] |
+| Campus Journalism Act of 1991 | Student publications keep their editorial independence | [Established] (Republic Act No. 7079, 1991) |
+| Malabanan v. Ramento, 1984 | Students keep their freedom of speech on campus, within reasonable limits | [Established] (Malabanan v. Ramento, 1984) |
 
 None of these blocks a pilot. Together they mean the network needs a legal review, a privacy impact assessment with VSU's data protection officer, and a notice-and-action process before it has real users. [Proposed] (Q-36)
 
 ### Adoption
 
-Facebook's network effects are the largest risk ([Chapter 11](11-risks.md)). [Established] They are stronger at VSU than where Facebook Campus failed, because Facebook remains nearly universal in the Philippines. [Proposed] The precedents point both ways: Facebook itself, Everytime, Dcard, and Fizz show students joining campus networks in large numbers when those networks serve them daily, while Facebook Campus, Workplace, and community@brighton show what happens when they do not, or when their owner stops caring. [Established] VSU's own rollout of Google accounts shows that giving people an account is not the same as their using it. [Established]
+Facebook's network effects are the largest risk. [Established] ([Chapter 11](11-risks.md)) They are stronger at VSU than where Facebook Campus failed, because Facebook remains nearly universal in the Philippines. [Proposed] The precedents point both ways: Facebook itself, Everytime, Dcard, and Fizz show students joining campus networks in large numbers when those networks serve them daily, while Facebook Campus, Workplace, and community@brighton show what happens when they do not, or when their owner stops caring. [Established] (History of Facebook, n.d.; E-034; E-006; E-032; [Chapter 10](10-related-work.md)) VSU's own rollout of Google accounts shows that giving people an account is not the same as their using it. [Established] (E-021)
 
 Research on starting online communities offers tested tactics: a clear and limited scope, tools useful to one person before the community is large, staff who contribute when members have not yet, new places and boards only when existing ones are busy, and visible activity. [Established] (Resnick, Konstan, and Chen, 2012) For the network that means a pilot dense in one community; notices, deadlines, an office directory, and guides that are useful from the first day; offices as contributors of last resort; and few communities at first. [Proposed]
 
@@ -185,7 +185,7 @@ Helpers are the other half. Routing can pile questions on the few people everyon
 
 ### Capacity and continuity
 
-One person can build and run a prototype for a pilot; one person cannot moderate and operate a network for 10,000 people. [Proposed] Workplace's closure shows that a platform can disappear when its owner's priorities change, and community@brighton shows that a network can fade when no one keeps caring for it. [Established] The network is therefore built from open components, documented as it goes, and every pilot ends in one of two ways: VSU takes ownership, or the network closes on a set date after members receive their posts and the data is deleted or handed to VSU. [Proposed]
+One person can build and run a prototype for a pilot; one person cannot moderate and operate a network for 10,000 people. [Proposed] Workplace's closure shows that a platform can disappear when its owner's priorities change, and community@brighton shows that a network can fade when no one keeps caring for it. [Established] (E-032; [Chapter 10](10-related-work.md)) The network is therefore built from open components, documented as it goes, and every pilot ends in one of two ways: VSU takes ownership, or the network closes on a set date after members receive their posts and the data is deleted or handed to VSU. [Proposed]
 
 ### Verdict
 
@@ -221,23 +221,40 @@ The network is feasible as a bounded pilot with one committed office, a seeded m
 
 ## Sources
 
-Checked on 8 and 9 October 2026. The source type follows each entry ([Chapter 9](09-governance.md)).
+Checked on 8 and 9 October 2026; every entry cited for a claim was checked again on 28 October 2026. Each entry starts with the author and date a citation names, and ends with its source type ([Chapter 9](09-governance.md)). Facts already in the [evidence register](08-evidence.md) are cited by their E- number instead.
 
-- Visayas State University. [VSU rolls out 9,245 free Google Workspace accounts to students in Main Campus](https://www.vsu.edu.ph/articles/news/2255-vsu-rolls-out-9-245-free-google-workspace-accounts-to-all-students-in-main-campus), 4 October 2022; [All VSU students and staff to get Microsoft and Google licenses](https://www.vsu.edu.ph/articles/news/2394-all-vsu-students-and-staff-to-get-microsoft-google-licenses), 22 August 2023; [VSU e-Learning app now available](https://www.vsu.edu.ph/articles/news/2225-vsu-e-learning-app-now-available-for-viscans-via-google-play-and-app-store), 29 July 2022; [VSU UDRMO unveils WAIS](https://www.vsu.edu.ph/articles/news/3011-vsu-udrmo-unveils-wais-strengthens-climate-resilience-efforts), 9 July 2026; [Students](https://www.vsu.edu.ph/students); [Student Services](https://www.vsu.edu.ph/vsu/1156-student-services); [Frequently asked questions on sexual harassment](https://www.vsu.edu.ph/vsu/1356-anti-sexual-harassment); [Accredited Organizations](https://www.vsu.edu.ph/students/accredited-organizations); [General Privacy Notice](https://vsu.edu.ph/privacy); [VSU commits to data privacy and protection](https://www.vsu.edu.ph/articles/news/1919-vsu-commits-to-data-privacy-and-protection), 24 February 2021; [Third State of the University Address](https://www.vsu.edu.ph/articles/news/3045-3rd-state-of-the-university-address), 18 September 2026; [News feed](https://www.vsu.edu.ph/articles/news?format=feed&type=rss) and [announcements feed](https://www.vsu.edu.ph/articles/bulletin?format=feed&type=rss); [Graduate faculty of the Department of Food Science and Technology](https://www.vsu.edu.ph/21-content-main/informational/1611-graduate-faculty-of-dept-of-food-science-and-technology), an example of VSU's graduate faculty pages. Official.
-- [Republic Act No. 10173, Data Privacy Act of 2012](https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html), Sections 3(l), 11(e), 13, and 16(e); [Republic Act No. 11313, Safe Spaces Act](https://lawphil.net/statutes/repacts/ra2019/ra_11313_2019.html); [Republic Act No. 11930, Anti-OSAEC and Anti-CSAEM Act](https://lawphil.net/statutes/repacts/ra2022/ra_11930_2022.html), Sections 3 and 9; [Republic Act No. 8792, Electronic Commerce Act of 2000](https://lawphil.net/statutes/repacts/ra2000/ra_8792_2000.html), Section 30; National Privacy Commission, [Circular No. 2022-04](https://privacy.gov.ph/wp-content/uploads/2023/05/Circular-2022-04.pdf), on registration of data processing systems, Sections 5 and 7. Official.
+- VSU. [VSU commits to data privacy and protection](https://www.vsu.edu.ph/articles/news/1919-vsu-commits-to-data-privacy-and-protection), 24 February 2021. Official.
+- VSU. [VSU e-Learning app now available](https://www.vsu.edu.ph/articles/news/2225-vsu-e-learning-app-now-available-for-viscans-via-google-play-and-app-store), 29 July 2022. Official.
+- VSU. [VSU rolls out 9,245 free Google Workspace accounts to students in Main Campus](https://www.vsu.edu.ph/articles/news/2255-vsu-rolls-out-9-245-free-google-workspace-accounts-to-all-students-in-main-campus), 4 October 2022. Official.
+- VSU. [All VSU students and staff to get Microsoft and Google licenses](https://www.vsu.edu.ph/articles/news/2394-all-vsu-students-and-staff-to-get-microsoft-google-licenses), 22 August 2023. Official.
+- VSU. [VSU UDRMO unveils WAIS](https://www.vsu.edu.ph/articles/news/3011-vsu-udrmo-unveils-wais-strengthens-climate-resilience-efforts), 9 July 2026. Official.
+- VSU. [Third State of the University Address](https://www.vsu.edu.ph/articles/news/3045-3rd-state-of-the-university-address), 18 September 2026. Official.
+- VSU. [Students](https://www.vsu.edu.ph/students), n.d.-a. Official.
+- VSU. [Student Services](https://www.vsu.edu.ph/vsu/1156-student-services), n.d.-b. Official.
+- VSU. [Frequently asked questions on sexual harassment](https://www.vsu.edu.ph/vsu/1356-anti-sexual-harassment), n.d.-c. Official.
+- VSU. [General Privacy Notice](https://vsu.edu.ph/privacy), n.d.-d. Official.
+- VSU. [Accredited Organizations](https://www.vsu.edu.ph/students/accredited-organizations), school year 2022–23. Official.
+- VSU. [News feed](https://www.vsu.edu.ph/articles/news?format=feed&type=rss) and [announcements feed](https://www.vsu.edu.ph/articles/bulletin?format=feed&type=rss). Official.
+- VSU. [Graduate faculty of the Department of Food Science and Technology](https://www.vsu.edu.ph/21-content-main/informational/1611-graduate-faculty-of-dept-of-food-science-and-technology), an example of VSU's graduate faculty pages. Official.
+- Republic Act No. 7079. [Campus Journalism Act of 1991](https://lawphil.net/statutes/repacts/ra1991/ra_7079_1991.html), 1991, Section 4. Official.
+- Republic Act No. 8792. [Electronic Commerce Act of 2000](https://lawphil.net/statutes/repacts/ra2000/ra_8792_2000.html), 2000, Section 30. Official.
+- Republic Act No. 10173. [Data Privacy Act of 2012](https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html), 2012, Sections 3(l), 11(e), 13, and 16(e). Official.
+- Republic Act No. 11313. [Safe Spaces Act](https://lawphil.net/statutes/repacts/ra2019/ra_11313_2019.html), 2019, Sections 21 to 23. Official.
+- Republic Act No. 11930. [Anti-OSAEC and Anti-CSAEM Act](https://lawphil.net/statutes/repacts/ra2022/ra_11930_2022.html), 2022, Sections 3 and 9. Official.
+- National Privacy Commission. [Circular No. 2022-04](https://privacy.gov.ph/wp-content/uploads/2023/05/Circular-2022-04.pdf), 2022, on registration of data processing systems, Sections 5, 7, and 14. Official.
 - [Malabanan v. Ramento, G.R. No. L-62270](https://chanrobles.com/scdecisions/jurisprudence1984/may1984/gr_l62270_1984.php), 21 May 1984. Official, jurisprudence.
-- [History of Facebook](https://en.wikipedia.org/wiki/History_of_Facebook), Wikipedia. External.
+- History of Facebook. [History of Facebook](https://en.wikipedia.org/wiki/History_of_Facebook), Wikipedia, n.d. External.
 - Pew Research Center. [Teens, Social Media and Technology 2022](https://www.pewresearch.org/internet/2022/08/10/teens-social-media-and-technology-2022/), 10 August 2022. External, research.
 - Stack Overflow. [Handling duplicate questions](https://stackoverflow.blog/2009/04/29/handling-duplicate-questions/), 29 April 2009. External, vendor.
-- [Poland-based social learning network rolls out PH site](https://newsbytes.ph/2014/04/21/poland-based-social-learning-network-rolls-out-ph-site/), NewsBytes.PH, 21 April 2014, on Brainly. External.
+- NewsBytes.PH. [Poland-based social learning network rolls out PH site](https://newsbytes.ph/2014/04/21/poland-based-social-learning-network-rolls-out-ph-site/), 21 April 2014, on Brainly. External.
 - Anderson, A., Huttenlocher, D., Kleinberg, J., and Leskovec, J. (2013). [Steering user behavior with badges](https://archives.iw3c2.org/www2013/proceedings/p95.pdf). *WWW 2013*, 95–106. Scholarly.
-- Athabasca University's Landing. [RIP community@brighton](https://landing.athabascau.ca/bookmarks/view/974991/rip-communitybrighton) and [Ownership, structures and behaviours](https://landing.athabascau.ca/blog/view/10516/ownership-structures-and-behaviours), about 2010. External, practitioner accounts.
+- Athabasca University's Landing. [RIP community@brighton](https://landing.athabascau.ca/bookmarks/view/974991/rip-communitybrighton) and [Ownership, structures and behaviours](https://landing.athabascau.ca/blog/view/10516/ownership-structures-and-behaviours), about 2010, n.d. External, practitioner accounts.
 - University of Innsbruck. [Mastodon for all university employees](https://www.uibk.ac.at/en/newsroom/2024/mastodon-for-all-university-employees/), 8 April 2024. External, from another university.
-- [Beyond X: how universities in the Netherlands are building alternatives to big tech](https://www.blogs.unicamp.br/geict/?p=891), GEICT, Unicamp, 18 March 2026. External.
+- GEICT. [Beyond X: how universities in the Netherlands are building alternatives to big tech](https://www.blogs.unicamp.br/geict/?p=891), Unicamp, 18 March 2026. External.
 - Discord. [Student Hubs guidelines](https://support.discord.com/hc/articles/4407546283031), updated 16 November 2023. External, vendor.
-- [Fizz takes hold of campus, users share mixed reactions](https://thedartmouth.com/article/2022/10/fizz-takes-hold-of-campus-users-share-mixed-reactions), The Dartmouth, 25 October 2022. External, student press.
-- UP Diliman Interactive Learning Center. [Iskomunidad](https://iskomunidad.upd.edu.ph/index.php/Main_Page). Official, from UP Diliman.
-- Discourse. [Pricing](https://www.discourse.org/pricing); [cloud install guide](https://github.com/discourse/discourse/blob/main/docs/INSTALL-cloud.md); [discourse-solved](https://github.com/discourse/discourse-solved). External, vendor.
-- Element. [ESS sizing](https://ems-docs.element.io/books/element-server-suite-documentation-lts-2310/page/ess-sizing/revisions/3404), LTS 23.10. External, vendor.
-- DigitalOcean. [Droplet pricing](https://www.digitalocean.com/pricing/droplets). External, vendor.
+- The Dartmouth. [Fizz takes hold of campus, users share mixed reactions](https://thedartmouth.com/article/2022/10/fizz-takes-hold-of-campus-users-share-mixed-reactions), 25 October 2022. External, student press.
+- UP Diliman Interactive Learning Center. [Iskomunidad](https://iskomunidad.upd.edu.ph/index.php/Main_Page), with its [statistics page](https://iskomunidad.upd.edu.ph/index.php/Special:Statistics), n.d. Official, from UP Diliman.
+- Discourse. [Pricing](https://www.discourse.org/pricing); [cloud install guide](https://github.com/discourse/discourse/blob/main/docs/INSTALL-cloud.md); [discourse-solved](https://github.com/discourse/discourse-solved), n.d. External, vendor.
+- Element. [ESS sizing](https://ems-docs.element.io/books/element-server-suite-documentation-lts-2310/page/ess-sizing/revisions/3404), LTS 23.10, n.d. External, vendor.
+- DigitalOcean. [Droplet pricing](https://www.digitalocean.com/pricing/droplets), n.d. External, vendor.
 - Resnick, P., Konstan, J., and Chen, Y. Starting new online communities. In R. E. Kraut and P. Resnick, *Building Successful Online Communities: Evidence-Based Social Design*, MIT Press, 2012, as summarized on the [HCL Connections wiki](https://ds-infolib.hcltechsw.com/ldd/lcwiki.nsf/dx/Starting_a_new_online_community). Scholarly.
