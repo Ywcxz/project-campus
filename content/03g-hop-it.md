@@ -8,7 +8,7 @@ Hop-It is a campus delivery experiment in which customers accept a scheduled del
 
 The idea starts from VSU's layout. The Main Campus has an upper and a lower campus. Some lower-campus dorms are roughly a five-minute walk from the VSU market, the fast food center is far from parts of upper campus even by motorcycle, and busy students, faculty, and staff often have no one to send. [Unresolved] These are the author's observations as an alumnus, not measurements.
 
-The name comes from the Bisaya *hapit*, as in *magpahapit ko sa tindahan*: asking someone to drop by the store for you on their way. [Established] (Wiktionary, n.d.)
+The name comes from the Bisaya *hapit*, as in *magpahapit ko sa tindahan*: asking someone to drop by the store for you on their way. Its Tagalog counterpart is *pasabay*. The name also reads as "hop it": a rider hops items from place to place, stopping at several locations, or for several items at one location, so that one run serves everyone it carries for. [Established] (D-164; Wiktionary, n.d.)
 
 ## At a glance
 
