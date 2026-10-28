@@ -98,10 +98,12 @@ function cellCountSep(line) {
   pRows.forEach((r, n) => check(r[0] === `P-${String(n + 1).padStart(2, "0")}`, `${r[0]}: problem hypotheses are numbered in order`));
 
   // D-162: in each converted chapter, every Established claim cites its source.
-  // A claim listed in PENDING is one the owner has yet to source or retag;
-  // the list may only shrink.
+  // D-163: a claim the owner has approved as common knowledge needs none. Only
+  // the owner adds to COMMON_KNOWLEDGE, never anything about VSU, a number, a
+  // date, or what someone said or did.
   const CITED_CHAPTERS = ["content/02-intranet.md", "content/02a-emergencies.md", "content/02b-campus-network.md", "content/02c-ring-tests.md"];
-  const PENDING = [
+  const COMMON_KNOWLEDGE = [
+    // Chapter 2, approved 28 October 2026
     "no internet provider carries that traffic.",
     "each request crosses to the provider's servers and back",
     "Data held under the providers' terms, in their data centers",
@@ -111,7 +113,7 @@ function cellCountSep(line) {
     const body = read(f).split(/^## Sources\s*$/m)[0];
     const bare = [...body.matchAll(/\[Established\](?! ?\()/g)]
       .map((m) => body.slice(Math.max(0, m.index - 90), m.index).split("\n").pop().trim())
-      .filter((before) => !PENDING.some((p) => before.endsWith(p)));
+      .filter((before) => !COMMON_KNOWLEDGE.some((p) => before.endsWith(p)));
     check(bare.length === 0, `${f}: every Established claim cites its source (D-162)${bare.length ? `; first without: "…${bare[0].slice(-70)}"` : ""}`);
   }
 
