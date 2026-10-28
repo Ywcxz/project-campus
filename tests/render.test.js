@@ -100,10 +100,9 @@ function cellCountSep(line) {
   // D-162: in each converted chapter, every Established claim cites its source.
   // A claim listed in PENDING is one the owner has yet to source or retag;
   // the list may only shrink.
-  const CITED_CHAPTERS = ["content/02-intranet.md"];
+  const CITED_CHAPTERS = ["content/02-intranet.md", "content/02a-emergencies.md", "content/02b-campus-network.md", "content/02c-ring-tests.md"];
   const PENDING = [
     "no internet provider carries that traffic.",
-    "which saves time rather than bandwidth.",
     "each request crosses to the provider's servers and back",
     "Data held under the providers' terms, in their data centers",
     "the campus loses access to it when its link fails",
