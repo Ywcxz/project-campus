@@ -101,22 +101,22 @@ function cellCountSep(line) {
   // D-163: a claim the owner has approved as common knowledge needs none. Only
   // the owner adds to COMMON_KNOWLEDGE, never anything about VSU, a number, a
   // date, or what someone said or did.
-  const CITED_CHAPTERS = ["content/02-intranet.md", "content/02a-emergencies.md", "content/02b-campus-network.md", "content/02c-ring-tests.md", "content/03-social-network.md", "content/03a-use-cases.md"];
+  const CITED_CHAPTERS = ["content/02-intranet.md", "content/02a-emergencies.md", "content/02b-campus-network.md", "content/02c-ring-tests.md", "content/03-social-network.md", "content/03a-use-cases.md", "content/03b-network-design.md", "content/03c-network-fit.md"];
   const COMMON_KNOWLEDGE = [
     // Chapter 2, approved 28 October 2026
     "no internet provider carries that traffic.",
     "each request crosses to the provider's servers and back",
     "Data held under the providers' terms, in their data centers",
     "the campus loses access to it when its link fails",
-  ];
-  // Claims Claude has put to the owner as common knowledge, awaiting his answer.
-  // He either moves each to COMMON_KNOWLEDGE or has it sourced or retagged.
-  const AWAITING_OWNER = [
-    // Chapter 3, put to the owner 28 October 2026: general facts about Facebook
+    // Chapter 3, approved 28 October 2026: general facts about Facebook
     "Meta's standards plus each group's own administrators",
     "Reactions, follower counts, and shares, public by default",
     "Held under Meta's terms, out of VSU's reach",
     "and offers mature apps for video and messaging.",
+  ];
+  // Claims Claude has put to the owner as common knowledge, awaiting his answer.
+  // He either moves each to COMMON_KNOWLEDGE or has it sourced or retagged.
+  const AWAITING_OWNER = [
   ];
   for (const f of CITED_CHAPTERS) {
     const body = read(f).split(/^## Sources\s*$/m)[0];
