@@ -49,10 +49,16 @@ Collect only what a feature needs, use it only for that purpose, limit who can a
 ## Ownership and licensing
 
 - Who owns code, documents, and designs depends on who made them and on any later agreements, and it is never assumed. [Established] (v0.1 §15.28)
-- Git history records authorship and dates, which gives any future collaboration a clear starting point. [Established]
+- Git history records authorship and dates, which gives any future collaboration a clear starting point. [Established] (Chacon and Straub, 2014)
 - The project's repositories are openly licensed: code under the MIT License, and writing and pictures under CC BY 4.0, © 2026 Leo M. Subingsubing. VSU's names and marks, and material by others that the project quotes or cites, are not covered. [Established] (D-159)
 - Sensitive institutional information is never sent to third-party services, AI tools included, without authorization. [Established] (v0.1 §15.31)
 
 ## When to stop
 
 No product moves to wider use if data authority is unclear, permissions can't be enforced, sensitive relationships are exposed, provenance can't be shown, official and community content can't be told apart, security risks aren't controlled, responsibilities are undefined, or privacy risks outweigh the benefit. [Established] (v0.1 §15.42)
+
+## Sources
+
+Checked on 28 October 2026. Each entry starts with the author and date a citation names, and ends with its source type.
+
+- Chacon, S., and Straub, B. (2014). [Pro Git, Viewing the Commit History](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History), 2nd edition. Apress. External, reference.
