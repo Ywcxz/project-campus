@@ -97,6 +97,25 @@ function cellCountSep(line) {
   check(pRows.length >= 20, `problem hypotheses carry IDs (${pRows.length})`);
   pRows.forEach((r, n) => check(r[0] === `P-${String(n + 1).padStart(2, "0")}`, `${r[0]}: problem hypotheses are numbered in order`));
 
+  // D-162: in each converted chapter, every Established claim cites its source.
+  // A claim listed in PENDING is one the owner has yet to source or retag;
+  // the list may only shrink.
+  const CITED_CHAPTERS = ["content/02-intranet.md"];
+  const PENDING = [
+    "no internet provider carries that traffic.",
+    "which saves time rather than bandwidth.",
+    "each request crosses to the provider's servers and back",
+    "Data held under the providers' terms, in their data centers",
+    "the campus loses access to it when its link fails",
+  ];
+  for (const f of CITED_CHAPTERS) {
+    const body = read(f).split(/^## Sources\s*$/m)[0];
+    const bare = [...body.matchAll(/\[Established\](?! ?\()/g)]
+      .map((m) => body.slice(Math.max(0, m.index - 90), m.index).split("\n").pop().trim())
+      .filter((before) => !PENDING.some((p) => before.endsWith(p)));
+    check(bare.length === 0, `${f}: every Established claim cites its source (D-162)${bare.length ? `; first without: "…${bare[0].slice(-70)}"` : ""}`);
+  }
+
   // The retired expansion of the name (D-040) appears only in the archive and
   // in the register row that retired it.
   const RETIRED = /Connected Academic Matrix/i;

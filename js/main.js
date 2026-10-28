@@ -281,16 +281,23 @@ function extractCites(text, cites, sups) {
   return out + text.slice(last);
 }
 
-// An author-year citation, such as "Ostrom, 1990", resolves to its entry in
-// the chapter's Sources list when one entry names that author and year.
+// An author-date citation resolves to its entry in the chapter's Sources
+// list: "Ostrom, 1990", "VSU, 30 May 2023", or "VSU Computer Center, n.d.".
+// An entry that starts with the author wins over one that only names it, and
+// a full date must match exactly, so a citation never lands on a guess.
 function matchSource(raw, sources) {
-  const m = raw.match(/^(.+?),\s*(?:s\.\s*)?(\d{4})[a-z]?$/) || raw.match(/^(.+?\bet al\.?)$/);
+  const m = raw.match(/^(.+?),\s*(?:s\.\s*)?((?:\d{1,2}\s+)?(?:[A-Z][a-z]+\s+)?\d{4}[a-z]?|n\.d\.)$/) || raw.match(/^(.+?\bet al\.?)$/);
   if (!m) return null;
   const author = m[1].replace(/\s*\bet al\.?$/, "").split(/\s+and\s+|,\s*/)[0].trim().toLowerCase();
   if (author.length < 3) return null;
-  const year = m[2];
-  const hits = sources.filter((line) => line.toLowerCase().includes(author) && (!year || line.includes(year)));
-  return hits.length === 1 || (year && hits.length) ? hits[0] : null;
+  const date = m[2] || "";
+  const lead = (line) => line.replace(/^[[*\s]+/, "").toLowerCase();
+  const starts = sources.filter((line) => lead(line).startsWith(`${author}.`) || lead(line).startsWith(`${author},`));
+  const pool = starts.length ? starts : sources.filter((line) => line.toLowerCase().includes(author));
+  if (!date) return pool.length === 1 ? pool[0] : null;
+  const exact = pool.filter((line) => line.includes(date));
+  if (exact.length) return exact[0];
+  return /^\d{4}[a-z]?$/.test(date) ? pool.find((line) => line.includes(date.slice(0, 4))) || null : null;
 }
 
 const stripTags = (text) => text.replace(TAG_PATTERN, "$1");
@@ -415,10 +422,20 @@ function renderMarkdown(source, linkMap = {}, cites = null) {
       const rows = [];
       while (i < lines.length && lines[i].includes("|") && !/^\s*$/.test(lines[i])) rows.push(splitRow(lines[i++]));
       const th = head.map((cell) => `<th>${inline(cell)}</th>`).join("");
+      // A Source column's cell written as a citation, "(VSU, 30 May 2023)",
+      // becomes numbered references like any other citation.
+      const sourceCol = head.map((cell) => /^sources?$/i.test(cell.trim()));
+      const cellHTML = (cell, k) => {
+        const c = cell.trim();
+        if (cites && sourceCol[k] && /^\(.+\)$/.test(c) && citeItems(c.slice(1, -1)).length) {
+          return citeHTML(citeItems(c.slice(1, -1)), cites).replace('class="cite"', 'class="cite cite-cell"');
+        }
+        return inline(cell);
+      };
       const body = rows
         .map((row) => {
           const id = REF_ROW.test(row[0] || "") ? ` id="${row[0].toLowerCase()}"` : "";
-          return `<tr${id}>${head.map((_, k) => `<td>${inline(row[k] || "")}</td>`).join("")}</tr>`;
+          return `<tr${id}>${head.map((_, k) => `<td>${cellHTML(row[k] || "", k)}</td>`).join("")}</tr>`;
         })
         .join("");
       const wide = head.length >= 4 ? ' class="wide"' : "";
