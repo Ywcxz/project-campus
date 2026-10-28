@@ -282,11 +282,12 @@ function extractCites(text, cites, sups) {
 }
 
 // An author-date citation resolves to its entry in the chapter's Sources
-// list: "Ostrom, 1990", "VSU, 30 May 2023", or "VSU Computer Center, n.d.".
+// list: "Ostrom, 1990", "VSU, 30 May 2023", or "VSU Computer Center, n.d.";
+// two undated pages by one author are told apart as "n.d.-a" and "n.d.-b".
 // An entry that starts with the author wins over one that only names it, and
 // a full date must match exactly, so a citation never lands on a guess.
 function matchSource(raw, sources) {
-  const m = raw.match(/^(.+?),\s*(?:s\.\s*)?((?:\d{1,2}\s+)?(?:[A-Z][a-z]+\s+)?\d{4}[a-z]?|n\.d\.)$/) || raw.match(/^(.+?\bet al\.?)$/);
+  const m = raw.match(/^(.+?),\s*(?:s\.\s*)?((?:\d{1,2}\s+)?(?:[A-Z][a-z]+\s+)?\d{4}[a-z]?|n\.d\.(?:-[a-z])?)$/) || raw.match(/^(.+?\bet al\.?)$/);
   if (!m) return null;
   const author = m[1].replace(/\s*\bet al\.?$/, "").split(/\s+and\s+|,\s*/)[0].trim().toLowerCase();
   if (author.length < 3) return null;

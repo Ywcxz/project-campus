@@ -2,7 +2,7 @@
 
 *A bench test the author can run alone, and a campus test VSU ICT could run later*
 
-Every claim about what the campus ring would do is a hypothesis until something measures it. [Established] Some of it can only be measured on VSU's own network, which needs VSU ICT's agreement. [Established] The mechanisms themselves can be tested on a bench, by the author alone, with the author's own equipment, synthetic data, and no VSU systems or people: whether services keep working when the uplink is cut, whether one copy can serve many, and whether phones catch up after an outage without knocking the service over. [Proposed] (D-088)
+Every claim about what the campus ring would do is a hypothesis until something measures it. [Established] ([Overview](00-overview.md)) Some of it can only be measured on VSU's own network, which needs VSU ICT's agreement. [Established] ([Chapter 2](02-intranet.md)) The mechanisms themselves can be tested on a bench, by the author alone, with the author's own equipment, synthetic data, and no VSU systems or people: whether services keep working when the uplink is cut, whether one copy can serve many, and whether phones catch up after an outage without knocking the service over. [Proposed] (D-088)
 
 > **In short.** Seven tests, each with its measure and its pass mark fixed before it runs. The bench can show that the design works and put numbers on it; it cannot show VSU's traffic, its crowded rooms, or whether anyone would use the result. Results are published with the scripts that produced them, so anyone can run them again. [Proposed]
 
@@ -13,7 +13,7 @@ Every claim about what the campus ring would do is a hypothesis until something 
 | What does it test? | Whether the campus ring's mechanisms work: island mode, one copy serving many, notice delivery, posting while offline, catching up after an outage, data use, and running on battery. [Proposed] |
 | What does it need? | A small server, a Wi-Fi access point, a few phones, and scripts that act like hundreds of phones, all the author's own, with synthetic content only. Nothing from VSU. [Proposed] (D-014) |
 | What can it show? | That the design works in a lab, with numbers: requests, bytes, seconds, megabytes, and hours. [Proposed] |
-| What can't it show? | VSU's traffic, Wi-Fi capacity in VSU's crowded rooms, how often VSU's links fail, or whether people would use any of it. Those need Stage 0's measurements with VSU ICT ([Chapter 2](02-intranet.md)) and the field research of [Chapter 8](08-evidence.md). [Established] |
+| What can't it show? | VSU's traffic, Wi-Fi capacity in VSU's crowded rooms, how often VSU's links fail, or whether people would use any of it. Those need Stage 0's measurements with VSU ICT and the field research of Chapter 8. [Established] ([Chapter 2](02-intranet.md); [Chapter 8](08-evidence.md)) |
 | When? | After the concept note goes to OVPSAS, so it never delays the survey; when exactly is the owner's call. [Proposed] (D-088) |
 | How could it fail? | A mechanism the design depends on fails even in a lab, which would narrow the direction before anyone at VSU is asked for anything. [Proposed] |
 
@@ -64,11 +64,11 @@ Each test can also be shown as a scene on the interactive site: the uplink cut a
 
 ## Publishing the results
 
-Each result enters [Chapter 8](08-evidence.md) as an E- row, with the scripts, the settings, and the raw numbers published so that anyone can run the test again. [Proposed] Until someone else does, a result is a primary account no one has checked independently, which Chapter 8's rubric rates Medium. [Established] A bench result says what happened on the bench, and is never presented as a result for VSU. [Proposed]
+Each result enters [Chapter 8](08-evidence.md) as an E- row, with the scripts, the settings, and the raw numbers published so that anyone can run the test again. [Proposed] Until someone else does, a result is a primary account no one has checked independently, which Chapter 8's rubric rates Medium. [Established] ([Chapter 8](08-evidence.md)) A bench result says what happened on the bench, and is never presented as a result for VSU. [Proposed]
 
 ## The campus test, later
 
-On VSU's own network, the same tests would run with VSU ICT's agreement and a small group of volunteers, alongside Stage 0's measurements of traffic, outages, and hosting. [Proposed] That would be permission to prototype on the ladder of [Chapter 12](12-roadmap.md). [Established] It would need a consent text, a privacy notice, and review by VSU's data protection officer before anyone takes part. [Proposed] Nothing here is asked of VSU before the concept note's two asks. [Established] (D-083)
+On VSU's own network, the same tests would run with VSU ICT's agreement and a small group of volunteers, alongside Stage 0's measurements of traffic, outages, and hosting. [Proposed] That would be permission to prototype on the ladder of Chapter 12. [Established] ([Chapter 12](12-roadmap.md)) It would need a consent text, a privacy notice, and review by VSU's data protection officer before anyone takes part. [Proposed] Nothing here is asked of VSU before the concept note's two asks. [Established] (D-083)
 
 ## Student research
 
@@ -84,9 +84,11 @@ VSU named networking research and experimentation among the aims of its IPv6 wor
 
 ## Sources
 
-Checked on 9 October 2026. The source type follows each entry ([Chapter 9](09-governance.md)).
+Checked on 9 October 2026. Each entry starts with the author and date a citation names, and ends with its source type ([Chapter 9](09-governance.md)).
 
-- IETF. [RFC 9111: HTTP Caching](https://rfc-editor.org/rfc/rfc9111.html), June 2022, Section 4; [RFC 5861: HTTP Cache-Control Extensions for Stale Content](https://rfc-editor.org/rfc/rfc5861.html), May 2010, Section 4. External, standards.
+- IETF. [RFC 5861: HTTP Cache-Control Extensions for Stale Content](https://rfc-editor.org/rfc/rfc5861.html), May 2010, Section 4. External, standard.
+- IETF. [RFC 9111: HTTP Caching](https://rfc-editor.org/rfc/rfc9111.html), June 2022, Section 4. External, standard.
 - Brooker, M. [Exponential Backoff And Jitter](https://aws.amazon.com/blogs//architecture/exponential-backoff-and-jitter/), AWS Architecture Blog, 4 March 2015. External, vendor.
-- Visayas State University. [VSU is first university in Eastern Visayas to become IPv6 ready](https://www.vsu.edu.ph/articles/news/2534-vsu-is-first-university-in-eastern-visayas-to-become-ipv6-ready), 15 May 2024; [VSU installs hybrid solar power system to strengthen ICT resilience](https://www.vsu.edu.ph/articles/news/3007-vsu-installs-hybrid-solar-power-system-to-strengthen-ict-resilience), 30 June 2026. Official.
+- VSU. [VSU is first university in Eastern Visayas to become IPv6 ready](https://www.vsu.edu.ph/articles/news/2534-vsu-is-first-university-in-eastern-visayas-to-become-ipv6-ready), 15 May 2024. Official.
+- VSU. [VSU installs hybrid solar power system to strengthen ICT resilience](https://www.vsu.edu.ph/articles/news/3007-vsu-installs-hybrid-solar-power-system-to-strengthen-ict-resilience), 30 June 2026. Official.
 - Kleppmann, M., Wiggins, A., van Hardenberg, P., and McGranaghan, M. (2019). Local-first software: you own your data, in spite of the cloud. *Onward! 2019*, 154–178. [doi:10.1145/3359591.3359737](https://doi.org/10.1145/3359591.3359737). Scholarly.
