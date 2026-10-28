@@ -83,8 +83,8 @@ Push to GitHub and Vercel redeploys (framework preset "Other", no build command)
 - **Printing.** Printing any page, or saving it as a PDF, gives a plain light copy: no sidebar or glows, chapters on new pages, outside web addresses written out, and a line naming the source and saying the proposal is independent. `document.html` puts every chapter on one page for printing the whole document at once; the cover and the sidebar link to it.
 - **References preview.** Every D-, Q-, C-, E-, and P- number in a chapter links to its row in the decision register or the evidence chapter, and shows that row on hover or keyboard focus; evidence rows show their confidence too. The row you land on is highlighted.
 - **Link previews.** Each page carries its own title and description for Messenger, Facebook, and search engines, with one shared card image (`img/og-card.png`). If an old preview sticks after a change, Facebook's Sharing Debugger refreshes it.
-- **Claim tags are stamps.** They show one letter: E, Established, solid sea-blue; P, Proposed, gold; and U, Unresolved, with a dashed border, so a reader can scan a page's evidence at a glance. The full word shows on hover and stays in the page for copying and screen readers.
-- **Citations are numbered, thesis style.** A source in brackets right after a tag shows as a superscript number, and each chapter ends with its numbered references (see `content/README.md`).
+- **Claim tags are stamps.** Established is solid sea-blue, Proposed is gold, and Unresolved has a dashed border, so a reader can scan a page's evidence at a glance.
+- **Citations are numbered, thesis style.** A source in brackets right after a tag shows as a superscript number against the claim's last word, before the stamp, and each chapter ends with its numbered references (see `content/README.md`).
 - **Field cards,** the dashed and slightly rotated boxes, hold principles and notes like pinned index cards from field research.
 
 Not officially affiliated with Visayas State University.

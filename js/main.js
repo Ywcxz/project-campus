@@ -194,22 +194,15 @@ function renderChapterNav(chapters) {
 const CLAIM_TAGS = ["Established", "Proposed", "Unresolved", "Deferred", "Superseded", "Rejected", "Investigating", "Under review"];
 const TAG_PATTERN = new RegExp(`\\[(${CLAIM_TAGS.join("|")})\\](?!\\()`, "g");
 
-// The three claim tags show as one-letter stamps; the full word stays in
-// the page for hover, copying, and screen readers.
-const TAG_SHORT = { Established: "E", Proposed: "P", Unresolved: "U" };
-
 function stampHTML(tag) {
-  const cls = `tag tag-${tag.toLowerCase().replace(/\s+/g, "-")}`;
-  const short = TAG_SHORT[tag];
-  return short
-    ? `<span class="${cls}" data-short="${short}" title="${tag}"><span class="tag-word">${tag}</span></span>`
-    : `<span class="${cls}">${tag}</span>`;
+  return `<span class="tag tag-${tag.toLowerCase().replace(/\s+/g, "-")}">${tag}</span>`;
 }
 
 /* ── Citations ────────────────────────────────────────────────
    A citation in brackets right after a claim tag, as in
    "… [Proposed] (D-065; Ostrom, 1990)", shows as a superscript
-   number, thesis style, and the chapter ends with its references
+   number, thesis style, against the claim's last word and before
+   its stamp, and the chapter ends with its references
    numbered in the order they are first cited. A source cited twice
    keeps its first number. The Markdown itself does not change.
    ──────────────────────────────────────────────────────────── */
@@ -257,7 +250,7 @@ function citeHTML(items, cites) {
 }
 
 // Takes each citation out of the raw text before it is escaped, leaving a
-// placeholder that renderInline swaps for the superscript at the end.
+// placeholder before the tag that renderInline swaps for the superscript.
 function extractCites(text, cites, sups) {
   if (!cites) return text;
   const re = new RegExp(TAG_PATTERN.source, "g");
@@ -279,7 +272,9 @@ function extractCites(text, cites, sups) {
     const items = citeItems(text.slice(open + 1, close));
     if (!items.length) continue;
     sups.push(citeHTML(items, cites));
-    out += text.slice(last, end) + `\u0001${sups.length - 1}\u0001`;
+    const before = text.slice(last, m.index);
+    const claim = before.replace(/\s+$/, "");
+    out += `${claim}\u0001${sups.length - 1}\u0001${before.slice(claim.length)}${m[0]}`;
     last = close + 1;
     re.lastIndex = last;
   }
@@ -683,8 +678,8 @@ function groupClaims(root) {
       group.push(node);
       const tag = node.nodeType === 1 && (node.matches(".tag") ? node : node.querySelector(".tag"));
       if (!tag) continue;
-      // Its citation, a superscript or text in brackets right after the tag,
-      // belongs to the claim.
+      // A citation in brackets right after the tag belongs to the claim.
+      // (A numbered citation sits before the tag, inside the claim already.)
       let j = i + 1;
       if (nodes[j] && nodes[j].nodeType === 1 && nodes[j].matches("sup.cite")) {
         group.push(nodes[j]);
@@ -735,7 +730,7 @@ function initLens(root, after) {
   bar.setAttribute("aria-label", "Evidence view: highlight claims by their tag");
   bar.innerHTML = `<span class="claims-lens-label">Evidence view</span>
     <button type="button" data-lens="" aria-pressed="true">All</button>${LENS_KINDS.filter((k) => counts[k])
-      .map((k) => `<button type="button" data-lens="${k}" aria-pressed="false"><span class="lens-key lens-key-${k}" aria-hidden="true">${TAG_SHORT[label[k]]}</span>${label[k]} <span class="n">${counts[k]}</span></button>`)
+      .map((k) => `<button type="button" data-lens="${k}" aria-pressed="false">${label[k]} <span class="n">${counts[k]}</span></button>`)
       .join("")}`;
   after.after(bar);
   const apply = (value) => {

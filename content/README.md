@@ -36,7 +36,7 @@ Link between chapters by file name, as in `[Hop-It](03g-hop-it.md)`. The site re
 
 ## Claim tags
 
-Write `[Established]`, `[Proposed]`, or `[Unresolved]` after a claim. The site shows them as one-letter stamps, E, P, and U, with the full word on hover. The decision register also uses `[Deferred]`, `[Superseded]`, `[Rejected]`, `[Investigating]`, and `[Under review]`, which show in full.
+Write `[Established]`, `[Proposed]`, or `[Unresolved]` after a claim. The site shows them as stamps. The decision register also uses `[Deferred]`, `[Superseded]`, `[Rejected]`, `[Investigating]`, and `[Under review]`.
 
 - **Established:** supported by documents, completed work, or a recorded decision.
 - **Proposed:** a design idea or hypothesis not yet validated.
@@ -44,7 +44,7 @@ Write `[Established]`, `[Proposed]`, or `[Unresolved]` after a claim. The site s
 
 ## Citations
 
-Put a claim's source in brackets right after its tag, as in `[Established] (D-098, D-099)` or `[Proposed] (Ostrom, 1990; E-023)`. The site shows it as a superscript number, thesis style, and ends the chapter with a numbered References list, in the order sources are first cited. A source cited again keeps its first number. Separate sources with semicolons; a list of IDs can use commas.
+Put a claim's source in brackets right after its tag, as in `[Established] (D-098, D-099)` or `[Proposed] (Ostrom, 1990; E-023)`. The site shows it as a superscript number, thesis style, against the claim's last word and before its stamp, and ends the chapter with a numbered References list, in the order sources are first cited. A source cited again keeps its first number. Separate sources with semicolons; a list of IDs can use commas.
 
 - A register ID (D-, Q-, C-, E-, P-) becomes a reference to its row, with the row's text, and for evidence its source link.
 - An author and year, such as `Ostrom, 1990`, becomes the matching entry in the chapter's `## Sources` list, if one entry names that author and year. Otherwise it is listed as written.

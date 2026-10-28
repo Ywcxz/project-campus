@@ -570,21 +570,13 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 .tag-proposed { color: var(--brass); border-color: var(--brass); background: var(--brass-bg); }
 .tag-unresolved { border-style: dashed; border-color: var(--ink-3); }
 .tag-deferred, .tag-superseded, .tag-rejected, .tag-investigating, .tag-under-review { color: var(--ink-3); }
-/* Established, Proposed, and Unresolved show one letter; the word stays in
-   the page, hidden, for copying and screen readers. */
-.tag[data-short] { padding: 0 4px; min-width: 1.6em; text-align: center; cursor: help; }
-.tag[data-short]::before { content: attr(data-short); content: attr(data-short) / ""; }
-.tag-word {
-  position: absolute; width: 1px; height: 1px; overflow: hidden;
-  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
-}
 
 /* ── CITATIONS AND REFERENCES ─────────────────────────────── */
 /* A superscript number after a tag, thesis style, pointing to the
    chapter's numbered references. */
 .chapter sup.cite {
   font-family: var(--font-mono); font-size: 10px; line-height: 0; color: var(--ink-3);
-  vertical-align: super; margin-left: 2px; white-space: nowrap; font-variant-numeric: tabular-nums;
+  vertical-align: super; margin: 0 1px 0 1px; white-space: nowrap; font-variant-numeric: tabular-nums;
 }
 .chapter sup.cite a.cite-link { color: var(--brass); border-bottom: none; padding: 0 1px; }
 .chapter sup.cite a.cite-link:hover { color: var(--green); text-decoration: underline; }
@@ -606,15 +598,6 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 .chapter a.ref-back:hover { color: var(--green); }
 .chapter ol.references li:target { background: var(--brass-bg); box-shadow: inset 3px 0 0 var(--brass); padding-left: 8px; }
 
-/* The stamp letters, as a key on the evidence view's buttons. */
-.lens-key {
-  display: inline-block; font-family: var(--font-mono); font-size: 10px; font-weight: 500; line-height: 1.55;
-  min-width: 1.6em; text-align: center; border: 1px solid var(--rule-2); border-radius: 3px;
-  padding: 0 3px; margin-right: 6px; vertical-align: 1px;
-}
-.lens-key-established { color: var(--sea); border-color: var(--sea); background: var(--sea-bg); }
-.lens-key-proposed { color: var(--brass); border-color: var(--brass); background: var(--brass-bg); }
-.lens-key-unresolved { border-style: dashed; border-color: var(--ink-3); color: var(--ink-2); }
 
 /* ── REFERENCES: D-061, Q-36, C-01, E-010 ─────────────────── */
 /* A dotted underline marks a reference that previews on hover. */

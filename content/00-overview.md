@@ -29,13 +29,13 @@ The first approach to OVPSAS, the Office of the Vice President for Student Affai
 
 ## How to read this document
 
-Every significant claim carries one of three tags, shown as a one-letter stamp:
+Every significant claim carries one of three tags:
 
-- [Established] Established: supported by documents, completed work, or a recorded decision.
-- [Proposed] Proposed: a design idea or hypothesis that has not been validated.
-- [Unresolved] Unresolved: an open question, or a claim nobody has verified yet.
+- [Established] means supported by documents, completed work, or a recorded decision.
+- [Proposed] means a design idea or hypothesis that has not been validated.
+- [Unresolved] means an open question, or a claim nobody has verified yet.
 
-A small number after a stamp, as in a thesis, points to the claim's source in the numbered References at the end of the chapter. A claim with no number rests on the text around it or on the chapter's Sources.
+A small raised number at the end of a claim, just before its tag, as in a thesis, points to the claim's source in the numbered References at the end of the chapter. A claim with no number rests on the text around it or on the chapter's Sources.
 
 Sources are kept apart by type as well: official information, community knowledge, opinion, unverified information, scholarly work, and external sources ([Chapter 9](09-governance.md)). The evidence behind the main claims is listed in the [evidence register](08-evidence.md), each item linked to its source, rated for confidence, and dated when its source is checked. Decisions are recorded in one place, the [decision register](13-decisions.md). A decision made in a conversation or a draft counts only once it is entered there.
 
