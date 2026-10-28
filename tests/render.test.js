@@ -185,6 +185,9 @@ function cellCountSep(line) {
       check(href !== "#", `${label} link "${a.textContent.trim()}" has a usable target`);
       check(targetExists(href), `${label} link target exists: ${href}`);
     });
+    article.querySelectorAll("a.ref, .references .ref-body a").forEach((a) => {
+      check(a.getAttribute("href").startsWith("#") || a.target === "_blank", `${label} reference link ${a.textContent} opens in a new tab`);
+    });
     article.querySelectorAll("a.ref").forEach((a) => {
       refLinks++;
       const [file, hash] = a.getAttribute("href").split("#");
@@ -196,6 +199,7 @@ function cellCountSep(line) {
     // references, and no citation is left in brackets after a tag.
     article.querySelectorAll("a.cite-link").forEach((a) => {
       check(Boolean(d.getElementById(a.dataset.entry)), `${label} citation ${a.textContent} has a reference`);
+      check(a.getAttribute("href").startsWith("#") || a.target === "_blank", `${label} citation ${a.textContent} opens in a new tab`);
       const entry = d.getElementById(a.dataset.entry);
       const out = entry && entry.querySelector(".ref-body a[href^='http']:not(.ref)");
       if (out && !/^[DQCP]-/.test(entry.dataset.id || "")) check(a.getAttribute("href") === out.getAttribute("href") && a.target === "_blank", `${label} citation ${a.textContent} opens its web source`);

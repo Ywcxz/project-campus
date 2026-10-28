@@ -560,7 +560,9 @@ function linkifyRefs(root, index, here) {
       frag.append(text.slice(last, at));
       const a = document.createElement("a");
       a.className = "ref";
-      a.href = `${here === "*" || ref.page === `${here}.html` ? "" : ref.page}#${id.toLowerCase()}`;
+      const elsewhere = !(here === "*" || ref.page === `${here}.html`);
+      a.href = `${elsewhere ? ref.page : ""}#${id.toLowerCase()}`;
+      if (elsewhere) { a.target = "_blank"; a.rel = "noopener"; }
       a.dataset.ref = id;
       a.textContent = id;
       frag.append(a);
@@ -594,7 +596,14 @@ function fillReferences(root, index, linkMap) {
 // A number opens what it cites: the page itself for a web source, the row for
 // a decision, question, or correction, and the chapter for a chapter. Only a
 // source with no link, such as a v0.1 section, goes to the References list.
+// Anything that leaves the page opens in a new tab, so the reader keeps their
+// place; a jump within the page stays in it.
 function pointCites(root) {
+  root.querySelectorAll(".references .ref-body a[href]").forEach((a) => {
+    if (a.getAttribute("href").startsWith("#")) return;
+    a.target = "_blank";
+    a.rel = "noopener";
+  });
   root.querySelectorAll("a.cite-link").forEach((a) => {
     const li = document.getElementById(a.dataset.entry);
     const body = li && li.querySelector(".ref-body");
@@ -606,15 +615,18 @@ function pointCites(root) {
       : body.querySelector("a:not(.ref)[href^='http']") || body.querySelector("a:not(.ref)");
     if (!target) return;
     a.setAttribute("href", target.getAttribute("href"));
-    if (/^https?:/i.test(target.getAttribute("href"))) {
+    a.classList.remove("cite-out");
+    if (!a.getAttribute("href").startsWith("#")) {
       a.target = "_blank";
       a.rel = "noopener";
+    }
+    if (/^https?:/i.test(target.getAttribute("href"))) {
       let host = "";
       try { host = new URL(target.href).hostname.replace(/^www\./, ""); } catch (err) { /* keep the plain label */ }
       a.setAttribute("aria-label", `Reference ${a.dataset.cite}, opens ${host || "the source"} in a new tab`);
       a.classList.add("cite-out");
     } else {
-      a.setAttribute("aria-label", `Reference ${a.dataset.cite}, opens ${isRow ? id : "the cited chapter"}`);
+      a.setAttribute("aria-label", `Reference ${a.dataset.cite}, opens ${isRow ? id : "the cited chapter"}${a.target ? " in a new tab" : ""}`);
     }
   });
 }
