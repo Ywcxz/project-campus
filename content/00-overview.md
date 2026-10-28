@@ -2,14 +2,14 @@
 
 *What CAMPUS is, where it stands, and how to read this document*
 
-CAMPUS (Connecting All Members, Places, and University Services) is a proposal for a different approach to digital transformation at Visayas State University. It imagines a digital layer over the physical university that connects people, organizations, knowledge, places, services, and opportunities, designed around VSU's own culture, values, policies, geography, and people. It is not a commercial product and not a plan for Philippine higher education in general. [Established]
+CAMPUS (Connecting All Members, Places, and University Services) is a proposal for a different approach to digital transformation at Visayas State University. It imagines a digital layer over the physical university that connects people, organizations, knowledge, places, services, and opportunities, designed around VSU's own culture, values, policies, geography, and people. It is not a commercial product and not a plan for Philippine higher education in general. [Established] (D-001; D-029)
 
 ## Where it stands, October 2026
 
-- CAMPUS is an independent project led full-time by one person, Leo M. Subingsubing, a VSU Main Campus alumnus, as a passion project. There is no team, partner, or institutional collaboration. [Established]
-- No VSU office has reviewed, endorsed, approved, funded, or adopted CAMPUS. When this document refers to VSU's plans, systems, or goals, it implies none of these. [Established]
-- CAMPUS proposes one product, the social/academic network, with the campus intranet as its long-term infrastructure; a small prototype of the network, on made-up data, is the first build. [Established] (D-098, D-099) Hop-It, now a later module of the network, keeps its Alpha PRD and functional specification of late September 2026. [Established]
-- No field research has been run yet, so every problem CAMPUS addresses is still a hypothesis. [Established]
+- CAMPUS is an independent project led full-time by one person, Leo M. Subingsubing, a VSU Main Campus alumnus, as a passion project. There is no team, partner, or institutional collaboration. [Established] (D-001)
+- No VSU office has reviewed, endorsed, approved, funded, or adopted CAMPUS. When this document refers to VSU's plans, systems, or goals, it implies none of these. [Established] (D-016; [Chapter 12](12-roadmap.md))
+- CAMPUS proposes one product, the social/academic network, with the campus intranet as its long-term infrastructure; a small prototype of the network, on made-up data, is the first build. [Established] (D-098, D-099) Hop-It, now a later module of the network, keeps its Alpha PRD and functional specification of late September 2026. [Established] (D-027; D-098)
+- No field research has been run yet, so every problem CAMPUS addresses is still a hypothesis. [Established] (D-083; D-114)
 
 ## The structure
 
