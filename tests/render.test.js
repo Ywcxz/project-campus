@@ -195,7 +195,10 @@ function cellCountSep(line) {
     // Citations: every superscript number points to an entry in the chapter's
     // references, and no citation is left in brackets after a tag.
     article.querySelectorAll("a.cite-link").forEach((a) => {
-      check(Boolean(d.getElementById(a.getAttribute("href").slice(1))), `${label} citation ${a.textContent} has a reference`);
+      check(Boolean(d.getElementById(a.dataset.entry)), `${label} citation ${a.textContent} has a reference`);
+      const entry = d.getElementById(a.dataset.entry);
+      const out = entry && entry.querySelector(".ref-body a[href^='http']:not(.ref)");
+      if (out && !/^[DQCP]-/.test(entry.dataset.id || "")) check(a.getAttribute("href") === out.getAttribute("href") && a.target === "_blank", `${label} citation ${a.textContent} opens its web source`);
     });
     article.querySelectorAll(".references li").forEach((li) => {
       check(Boolean(d.getElementById(li.querySelector(".ref-back").getAttribute("href").slice(1))), `${label} reference ${li.id} links back to its citation`);

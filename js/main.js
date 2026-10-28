@@ -244,7 +244,7 @@ function citeHTML(items, cites) {
       cites.list.push({ n, raw });
     }
     const id = first ? ` id="${cites.base}cite-${n}"` : "";
-    return `<a class="cite-link" href="#${cites.base}ref-${n}"${id} data-cite="${n}" aria-label="Reference ${n}">${n}</a>`;
+    return `<a class="cite-link" href="#${cites.base}ref-${n}"${id} data-cite="${n}" data-entry="${cites.base}ref-${n}" aria-label="Reference ${n}">${n}</a>`;
   });
   return `<sup class="cite">[${nums.join(", ")}]</sup>`;
 }
@@ -591,6 +591,34 @@ function fillReferences(root, index, linkMap) {
   });
 }
 
+// A number opens what it cites: the page itself for a web source, the row for
+// a decision, question, or correction, and the chapter for a chapter. Only a
+// source with no link, such as a v0.1 section, goes to the References list.
+function pointCites(root) {
+  root.querySelectorAll("a.cite-link").forEach((a) => {
+    const li = document.getElementById(a.dataset.entry);
+    const body = li && li.querySelector(".ref-body");
+    if (!body) return;
+    const id = li.dataset.id || "";
+    const isRow = /^[DQCP]-/.test(id);
+    const target = isRow
+      ? body.querySelector("a.ref")
+      : body.querySelector("a:not(.ref)[href^='http']") || body.querySelector("a:not(.ref)");
+    if (!target) return;
+    a.setAttribute("href", target.getAttribute("href"));
+    if (/^https?:/i.test(target.getAttribute("href"))) {
+      a.target = "_blank";
+      a.rel = "noopener";
+      let host = "";
+      try { host = new URL(target.href).hostname.replace(/^www\./, ""); } catch (err) { /* keep the plain label */ }
+      a.setAttribute("aria-label", `Reference ${a.dataset.cite}, opens ${host || "the source"} in a new tab`);
+      a.classList.add("cite-out");
+    } else {
+      a.setAttribute("aria-label", `Reference ${a.dataset.cite}, opens ${isRow ? id : "the cited chapter"}`);
+    }
+  });
+}
+
 function refPreviewHTML(ref, linkMap) {
   const plain = ref.text.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
   const short = plain.length > 300 ? `${plain.slice(0, 300).replace(/\s+\S*$/, "")}…` : plain;
@@ -624,7 +652,7 @@ function initRefPreviews(root, index, linkMap) {
   const show = (a) => {
     let html = "";
     if (a.matches(".cite-link")) {
-      const li = document.getElementById(a.getAttribute("href").slice(1));
+      const li = document.getElementById(a.dataset.entry);
       const body = li && li.querySelector(".ref-body");
       if (body) html = `<div class="ref-preview-head"><span class="ref-preview-id">[${escapeHtml(a.dataset.cite)}]</span><span class="ref-preview-kind">Reference</span></div><p class="ref-preview-text">${body.innerHTML}</p>`;
     } else if (index[a.dataset.ref]) {
@@ -864,6 +892,7 @@ async function renderAll(el, chapters) {
   const index = await refs;
   fillReferences(el, index, linkMap);
   linkifyRefs(el, index, "*");
+  pointCites(el);
   initRefPreviews(el, index, linkMap);
   groupClaims(el);
   initLens(el, el.querySelector(".doc-howto"));
@@ -903,6 +932,7 @@ async function renderChapter(chapters) {
     const index = await refs;
     fillReferences(el, index, linkMap);
     linkifyRefs(el, index, ch.slug);
+    pointCites(el);
     initRefPreviews(el, index, linkMap);
     groupClaims(el);
     initLens(el, el.querySelector(".subtitle"));

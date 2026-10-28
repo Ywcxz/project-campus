@@ -44,7 +44,7 @@ Write `[Established]`, `[Proposed]`, or `[Unresolved]` after a claim. The site s
 
 ## Citations
 
-Put a claim's source in brackets right after its tag, as in `[Established] (D-098, D-099)` or `[Proposed] (Ostrom, 1990; E-023)`. The site shows it as a superscript number, thesis style, against the claim's last word and before its stamp, and ends the chapter with a numbered References list, in the order sources are first cited. A source cited again keeps its first number. Separate sources with semicolons; a list of IDs can use commas.
+Put a claim's source in brackets right after its tag, as in `[Established] (D-098, D-099)` or `[Proposed] (Ostrom, 1990; E-023)`. The site shows it as a superscript number, thesis style, against the claim's last word and before its stamp, and ends the chapter with a numbered References list, in the order sources are first cited. Clicking a number opens what it cites: the page itself for a web source, including an evidence row's source, the row for a decision, question, or correction, and the chapter for a chapter. Only a source with no link, such as a v0.1 section, goes to its entry in the References list. Hovering shows the full reference first. A source cited again keeps its first number. Separate sources with semicolons; a list of IDs can use commas.
 
 - A register ID (D-, Q-, C-, E-, P-) becomes a reference to its row, with the row's text, and for evidence its source link.
 - An author and year, such as `Ostrom, 1990`, becomes the matching entry in the chapter's `## Sources` list, if one entry names that author and year. Otherwise it is listed as written.
