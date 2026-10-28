@@ -27,7 +27,7 @@ As of October 2026, no office below has reached any stage of the milestone ladde
 
 ## OVPSAS's own mandate
 
-CHED's policies on student affairs and services, CMO No. 9, s. 2013, group the services into student welfare, student development, and institutional student programs, and VSU's accreditation evidence lists its basic services under those three groups. [Established] The network maps onto most of them. That is the strongest case for OVPSAS to sponsor it: the network would be a way to deliver services OVPSAS already provides, not a new mandate. [Proposed]
+CHED's policies on student affairs and services, CMO No. 9, s. 2013, group the services into student welfare, student development, and institutional student programs, and VSU's accreditation evidence lists its basic services under those three groups. [Established] (E-028) The network maps onto most of them. That is the strongest case for OVPSAS to sponsor it: the network would be a way to deliver services OVPSAS already provides, not a new mandate. [Proposed]
 
 | Student affairs service | Where the network would help | Use case in [Chapter 3.1](03a-use-cases.md) |
 | --- | --- | --- |
@@ -52,7 +52,7 @@ CHED's policies on student affairs and services, CMO No. 9, s. 2013, group the s
 | Culture, arts, and sports | Team and group communities, and schedules | Sports; organizations |
 | Social and community involvement | Topic communities across faculties | Topic communities |
 
-The Third SOUA points the same way. It names guidance, career placement, scholarships, housing, and organization support among VSU's student services, plans regular listening sessions with students, and says student support should also make the campus a place where students feel comfortable asking for help. [Established]
+The Third SOUA points the same way. It names guidance, career placement, scholarships, housing, and organization support among VSU's student services, plans regular listening sessions with students, and says student support should also make the campus a place where students feel comfortable asking for help. [Established] (VSU, 18 September 2026)
 
 ## What VSU gains, and what it gives
 
@@ -144,14 +144,14 @@ The pitch is the interactive site, presented in person: once with the concept no
 9. **The ask.** One office's commitment, then one semester.
 10. **Who is behind it.** The network prototype's working software (D-099), the field research, and the decision register.
 
-The framing should be cultivation rather than construction: a community network is not installed but grown, with its members, in ground prepared for it. [Proposed] The builders of an institution-run network that outlasted its predecessor drew the same conclusion in 2010, calling gardening a better metaphor than architecture because the system keeps changing as people use it. [Established] Which image the site uses is still open. [Unresolved]
+The framing should be cultivation rather than construction: a community network is not installed but grown, with its members, in ground prepared for it. [Proposed] The builders of an institution-run network that outlasted its predecessor drew the same conclusion in 2010, calling gardening a better metaphor than architecture because the system keeps changing as people use it. [Established] (Athabasca University's Landing, March 2010) Which image the site uses is still open. [Unresolved]
 
 ## What not to claim
 
 - That students want the network, before the survey and the interviews say so. [Established] (project rule 7)
-- That any VSU office supports, endorses, or has reviewed CAMPUS, beyond what the milestone ladder records. [Established]
-- Anything about DIGITS's architecture, status, or plans beyond the Third SOUA. [Established]
-- Savings of money or time, before a pilot measures them. [Established]
+- That any VSU office supports, endorses, or has reviewed CAMPUS, beyond what the milestone ladder records. [Established] (D-090; [Chapter 12](12-roadmap.md))
+- Anything about DIGITS's architecture, status, or plans beyond the Third SOUA. [Established] (D-017)
+- Savings of money or time, before a pilot measures them. [Established] (D-067; project rule 1)
 - That the network would end harassment or misinformation. It would give VSU and its community better ways to respond. [Proposed]
 - That it would replace group chats or Facebook. It complements chats, and competes with Facebook only for campus tasks. [Established] (D-074)
 - That it is a platform for VSU's operations. It is a community layer beside them. [Proposed] Its relation to DIGITS is VSU's to decide. [Established] (D-017)
@@ -170,8 +170,12 @@ The framing should be cultivation rather than construction: a community network 
 
 ## Sources
 
-Checked on 8 and 9 October 2026. The source type follows each entry ([Chapter 9](09-governance.md)).
+Checked on 8 and 9 October 2026; the Third SOUA was checked again on 28 October 2026. Each entry starts with the author and date a citation names, and ends with its source type ([Chapter 9](09-governance.md)). Facts already in the [evidence register](08-evidence.md) are cited by their E- number instead.
 
 - Commission on Higher Education. [CMO No. 09, s. 2013, Enhanced Policies and Guidelines on Student Affairs and Services](https://legacy.ched.gov.ph/wp-content/uploads/2017/10/CMO-No.09-s2013.pdf), listed on [CHED's 2013 memorandum orders](https://legacy.ched.gov.ph/2013-ched-memorandum-orders/). Official. The scanned order could not be read as text; its grouping of services is taken from VSU's accreditation page below.
-- Visayas State University. [Area IV: Support to Students, supporting documents](https://aaccup-2021-04.vsu.edu.ph/programs/bsme/bsme-area-iv-supporting-documents), AACCUP accreditation, 2021; [Fifth VP, campus chancellors in VSU's new org structure](https://www.vsu.edu.ph/articles/news/1746-fifth-vp-campus-chancellors-in-vsu-s-new-org-structure), 10 January 2020; [Third State of the University Address](https://www.vsu.edu.ph/articles/news/3045-3rd-state-of-the-university-address), 18 September 2026; [Student Services](https://www.vsu.edu.ph/vsu/1156-student-services); [Accredited Organizations](https://www.vsu.edu.ph/students/accredited-organizations). Official.
+- VSU. [Fifth VP, campus chancellors in VSU's new org structure](https://www.vsu.edu.ph/articles/news/1746-fifth-vp-campus-chancellors-in-vsu-s-new-org-structure), 10 January 2020. Official.
+- VSU. [Area IV: Support to Students, supporting documents](https://aaccup-2021-04.vsu.edu.ph/programs/bsme/bsme-area-iv-supporting-documents), AACCUP accreditation, 2021. Official.
+- VSU. [Third State of the University Address](https://www.vsu.edu.ph/articles/news/3045-3rd-state-of-the-university-address), 18 September 2026. Official.
+- VSU. [Student Services](https://www.vsu.edu.ph/vsu/1156-student-services), n.d. Official.
+- VSU. [Accredited Organizations](https://www.vsu.edu.ph/students/accredited-organizations), school year 2022–23. Official.
 - Athabasca University's Landing. [Ownership, structures and behaviours](https://landing.athabascau.ca/blog/view/10516/ownership-structures-and-behaviours), about March 2010. External, practitioner account.
