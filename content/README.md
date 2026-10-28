@@ -42,6 +42,16 @@ Write `[Established]`, `[Proposed]`, or `[Unresolved]` after a claim. The site s
 - **Proposed:** a design idea or hypothesis not yet validated.
 - **Unresolved:** an open question or an unverified claim.
 
+## Citations
+
+Put a claim's source in brackets right after its tag, as in `[Established] (D-098, D-099)` or `[Proposed] (Ostrom, 1990; E-023)`. The site shows it as a superscript number, thesis style, against the claim's last word and before its stamp, and ends the chapter with a numbered References list, in the order sources are first cited. A source cited again keeps its first number. Separate sources with semicolons; a list of IDs can use commas.
+
+- A register ID (D-, Q-, C-, E-, P-) becomes a reference to its row, with the row's text, and for evidence its source link.
+- An author and year, such as `Ostrom, 1990`, becomes the matching entry in the chapter's `## Sources` list, if one entry names that author and year. Otherwise it is listed as written.
+- Anything else, such as a link, a chapter link, or `v0.1 §15.4`, is listed as written.
+
+A source written before the tag, as in `([Chapter 3](03-social-network.md)). [Established]`, stays in the text and is not numbered.
+
 Source types are tracked separately from tags: official, community knowledge, opinion, unverified, scholarly, and external. See Chapter 9.
 
 ## Privacy

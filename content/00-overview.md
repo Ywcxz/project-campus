@@ -35,6 +35,8 @@ Every significant claim carries one of three tags:
 - [Proposed] means a design idea or hypothesis that has not been validated.
 - [Unresolved] means an open question, or a claim nobody has verified yet.
 
+A small raised number at the end of a claim, just before its tag, as in a thesis, points to the claim's source in the numbered References at the end of the chapter. A claim with no number rests on the text around it or on the chapter's Sources.
+
 Sources are kept apart by type as well: official information, community knowledge, opinion, unverified information, scholarly work, and external sources ([Chapter 9](09-governance.md)). The evidence behind the main claims is listed in the [evidence register](08-evidence.md), each item linked to its source, rated for confidence, and dated when its source is checked. Decisions are recorded in one place, the [decision register](13-decisions.md). A decision made in a conversation or a draft counts only once it is entered there.
 
 ## What changed from v0.1

@@ -173,6 +173,17 @@ function cellCountSep(line) {
       check(REF_IDS.has(id), `${label} reference ${a.textContent} points to a row that exists`);
       check((file || `${ch.slug}.html`) === REF_IDS.get(id), `${label} reference ${a.textContent} points to the right page`);
     });
+    // Citations: every superscript number points to an entry in the chapter's
+    // references, and no citation is left in brackets after a tag.
+    article.querySelectorAll("a.cite-link").forEach((a) => {
+      check(Boolean(d.getElementById(a.getAttribute("href").slice(1))), `${label} citation ${a.textContent} has a reference`);
+    });
+    article.querySelectorAll(".references li").forEach((li) => {
+      check(Boolean(d.getElementById(li.querySelector(".ref-back").getAttribute("href").slice(1))), `${label} reference ${li.id} links back to its citation`);
+      if (li.dataset.id && REF_IDS.has(li.dataset.id.toLowerCase())) check(Boolean(li.querySelector(".ref-detail")), `${label} reference ${li.dataset.id} shows its row`);
+    });
+    const leftover = [...article.querySelectorAll(":is(p, li, td) .tag")].filter((t) => /^\s*\(/.test(t.nextSibling?.nodeValue || "") || t.nextElementSibling?.matches("sup.cite"));
+    check(leftover.length === 0, `${label} every citation after a tag is numbered${leftover.length ? ` (first: ${leftover[0].parentElement.textContent.slice(0, 60)})` : ""}`);
     // Evidence view: every stamp in running text closes a claim of its own kind.
     const stamps = [...article.querySelectorAll(":is(p, li, td) .tag")];
     check(stamps.every((t) => t.closest(".claim")?.dataset.claim === t.className.replace(/^tag tag-/, "")), `${label} every claim tag closes a claim of its kind`);
@@ -249,6 +260,12 @@ function cellCountSep(line) {
   check(md("[x](javascript:alert(1))").includes('href="#"'), "renderer blocks javascript: links");
   check(md("[Hop-It](05a-hop-it.md)", { "05a-hop-it.md": "hop-it.html" }).includes('href="hop-it.html"'), "renderer rewrites chapter links");
   check(md("A claim. [Proposed]").includes('class="tag tag-proposed"'), "renderer turns tags into stamps");
+  const cited = md("One. [Proposed] (D-061; Ostrom, 1990) Two. [Established] (D-061, D-062)\n\n## Sources\n\n- Ostrom, E. (1990). *Governing the Commons*.", {}, unit.window.newCites());
+  check(/<sup class="cite">\[<a class="cite-link" href="#ref-1" id="cite-1"[^>]*>1<\/a>, <a[^>]*>2<\/a>\]<\/sup>/.test(cited), "citations become superscript numbers");
+  check(/href="#ref-1" data-cite="1"[^>]*>1<\/a>, <a class="cite-link" href="#ref-3"/.test(cited), "a source cited again keeps its number");
+  check(cited.includes('<ol class="references">') && cited.includes("Governing the Commons"), "references list resolves author-year citations to Sources");
+  check(!/\(D-061/.test(cited), "citations leave no brackets behind");
+  check(/One\.<sup class="cite">.*?<\/sup> <span class="tag tag-proposed">/.test(cited), "the number sits against the claim, before its stamp");
   check(md("> **Note.** Text").includes('class="field-card"'), "renderer makes field cards");
   check(md("# T\n\n*Sub*").includes('class="subtitle"'), "renderer detects the subtitle");
   check(md("| a | b |\n| --- | --- |\n| 1 | 2 |").includes("<td>1</td>"), "renderer builds tables");

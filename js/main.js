@@ -194,6 +194,122 @@ function renderChapterNav(chapters) {
 const CLAIM_TAGS = ["Established", "Proposed", "Unresolved", "Deferred", "Superseded", "Rejected", "Investigating", "Under review"];
 const TAG_PATTERN = new RegExp(`\\[(${CLAIM_TAGS.join("|")})\\](?!\\()`, "g");
 
+function stampHTML(tag) {
+  return `<span class="tag tag-${tag.toLowerCase().replace(/\s+/g, "-")}">${tag}</span>`;
+}
+
+/* ── Citations ────────────────────────────────────────────────
+   A citation in brackets right after a claim tag, as in
+   "… [Proposed] (D-065; Ostrom, 1990)", shows as a superscript
+   number, thesis style, against the claim's last word and before
+   its stamp, and the chapter ends with its references
+   numbered in the order they are first cited. A source cited twice
+   keeps its first number. The Markdown itself does not change.
+   ──────────────────────────────────────────────────────────── */
+
+const ID = "[DQCEP]-\\d{2,3}";
+const ID_LIST = new RegExp(`^${ID}(?: to ${ID})?(?:\\s*,\\s*${ID}(?: to ${ID})?)+$`);
+const ID_ONLY = new RegExp(`^${ID}$`);
+
+function newCites(base = "") {
+  return { base, list: [], keys: new Map(), sources: [] };
+}
+
+// Splits on a separator outside brackets and parentheses.
+function splitTop(text, sep) {
+  const parts = [];
+  let depth = 0;
+  let last = 0;
+  for (let k = 0; k < text.length; k++) {
+    const ch = text[k];
+    if (ch === "(" || ch === "[") depth++;
+    else if (ch === ")" || ch === "]") depth--;
+    else if (ch === sep && depth === 0) { parts.push(text.slice(last, k)); last = k + 1; }
+  }
+  parts.push(text.slice(last));
+  return parts.map((p) => p.trim()).filter(Boolean);
+}
+
+function citeItems(inner) {
+  return splitTop(inner, ";").flatMap((part) => (ID_LIST.test(part) ? splitTop(part, ",") : [part]));
+}
+
+function citeHTML(items, cites) {
+  const nums = items.map((raw) => {
+    let n = cites.keys.get(raw);
+    const first = !n;
+    if (first) {
+      n = cites.list.length + 1;
+      cites.keys.set(raw, n);
+      cites.list.push({ n, raw });
+    }
+    const id = first ? ` id="${cites.base}cite-${n}"` : "";
+    return `<a class="cite-link" href="#${cites.base}ref-${n}"${id} data-cite="${n}" aria-label="Reference ${n}">${n}</a>`;
+  });
+  return `<sup class="cite">[${nums.join(", ")}]</sup>`;
+}
+
+// Takes each citation out of the raw text before it is escaped, leaving a
+// placeholder before the tag that renderInline swaps for the superscript.
+function extractCites(text, cites, sups) {
+  if (!cites) return text;
+  const re = new RegExp(TAG_PATTERN.source, "g");
+  let out = "";
+  let last = 0;
+  let m;
+  while ((m = re.exec(text))) {
+    const end = m.index + m[0].length;
+    const gap = text.slice(end).match(/^ *\(/);
+    if (!gap) continue;
+    const open = end + gap[0].length - 1;
+    let depth = 0;
+    let close = -1;
+    for (let k = open; k < text.length; k++) {
+      if (text[k] === "(") depth++;
+      if (text[k] === ")" && --depth === 0) { close = k; break; }
+    }
+    if (close === -1) continue;
+    const items = citeItems(text.slice(open + 1, close));
+    if (!items.length) continue;
+    sups.push(citeHTML(items, cites));
+    const before = text.slice(last, m.index);
+    const claim = before.replace(/\s+$/, "");
+    out += `${claim}\u0001${sups.length - 1}\u0001${before.slice(claim.length)}${m[0]}`;
+    last = close + 1;
+    re.lastIndex = last;
+  }
+  return out + text.slice(last);
+}
+
+// An author-year citation, such as "Ostrom, 1990", resolves to its entry in
+// the chapter's Sources list when one entry names that author and year.
+function matchSource(raw, sources) {
+  const m = raw.match(/^(.+?),\s*(?:s\.\s*)?(\d{4})[a-z]?$/) || raw.match(/^(.+?\bet al\.?)$/);
+  if (!m) return null;
+  const author = m[1].replace(/\s*\bet al\.?$/, "").split(/\s+and\s+|,\s*/)[0].trim().toLowerCase();
+  if (author.length < 3) return null;
+  const year = m[2];
+  const hits = sources.filter((line) => line.toLowerCase().includes(author) && (!year || line.includes(year)));
+  return hits.length === 1 || (year && hits.length) ? hits[0] : null;
+}
+
+const stripTags = (text) => text.replace(TAG_PATTERN, "$1");
+
+function referencesHTML(cites, linkMap) {
+  if (!cites || !cites.list.length) return "";
+  const items = cites.list
+    .map(({ n, raw }) => {
+      const source = ID_ONLY.test(raw) ? null : matchSource(raw, cites.sources);
+      const body = source ? renderInline(stripTags(source), linkMap) : renderInline(stripTags(raw), linkMap);
+      const id = ID_ONLY.test(raw) ? ` data-id="${raw}"` : "";
+      return `<li id="${cites.base}ref-${n}"${id}><span class="ref-num">[${n}]</span><span class="ref-body">${body}</span><a class="ref-back" href="#${cites.base}cite-${n}" aria-label="Back to where reference ${n} is first cited">↩</a></li>`;
+    })
+    .join("");
+  return `<h2>References</h2>
+<p class="references-note">The sources cited in this chapter, numbered in the order they are first cited. Decisions and evidence link to their rows in the registers.</p>
+<ol class="references">${items}</ol>`;
+}
+
 function safeHref(raw, linkMap) {
   const href = raw.replace(/&amp;/g, "&").trim();
   const chapterLink = href.match(/^(?:\.\/)?([\w.-]+\.md)(#[\w-]*)?$/);
@@ -209,9 +325,10 @@ function safeHref(raw, linkMap) {
   return "#";
 }
 
-function renderInline(text, linkMap) {
+function renderInline(text, linkMap, cites) {
   const codes = [];
-  let s = escapeHtml(text).replace(/`([^`]+)`/g, (_, code) => {
+  const sups = [];
+  let s = escapeHtml(extractCites(text, cites, sups)).replace(/`([^`]+)`/g, (_, code) => {
     codes.push(code);
     return `\u0000${codes.length - 1}\u0000`;
   });
@@ -220,10 +337,11 @@ function renderInline(text, linkMap) {
     const external = /^https?:/i.test(target);
     return `<a href="${target}"${external ? ' target="_blank" rel="noopener"' : ""}>${label}</a>`;
   });
-  s = s.replace(TAG_PATTERN, (_, tag) => `<span class="tag tag-${tag.toLowerCase().replace(/\s+/g, "-")}">${tag}</span>`);
+  s = s.replace(TAG_PATTERN, (_, tag) => stampHTML(tag));
   s = s.replace(/\*\*([^*]+?)\*\*/g, "<strong>$1</strong>");
   s = s.replace(/(^|[^\w*])\*(?!\s)([^*]+?)\*(?![\w*])/g, "$1<em>$2</em>");
-  return s.replace(/\u0000(\d+)\u0000/g, (_, i) => `<code>${codes[Number(i)]}</code>`);
+  s = s.replace(/\u0000(\d+)\u0000/g, (_, i) => `<code>${codes[Number(i)]}</code>`);
+  return s.replace(/\u0001(\d+)\u0001/g, (_, i) => sups[Number(i)]);
 }
 
 function isTableSeparator(line) {
@@ -249,11 +367,21 @@ function startsBlock(lines, i) {
   );
 }
 
-function renderMarkdown(source, linkMap = {}) {
+function renderMarkdown(source, linkMap = {}, cites = null) {
   const lines = String(source).replace(/\r\n?/g, "\n").split("\n");
   const out = [];
   let i = 0;
   let afterTitle = false;
+  const inline = (text) => renderInline(text, linkMap, cites);
+
+  // The chapter's Sources list, for author-year citations.
+  if (cites) {
+    let inSources = false;
+    lines.forEach((line) => {
+      if (/^##\s/.test(line)) inSources = /^##\s+Sources\s*$/.test(line);
+      else if (inSources && /^\s*-\s+/.test(line)) cites.sources.push(line.replace(/^\s*-\s+/, ""));
+    });
+  }
 
   while (i < lines.length) {
     const line = lines[i];
@@ -273,7 +401,7 @@ function renderMarkdown(source, linkMap = {}) {
     const heading = line.match(/^(#{1,4})\s+(.+?)\s*#*\s*$/);
     if (heading) {
       const level = heading[1].length;
-      out.push(`<h${level}>${renderInline(heading[2], linkMap)}</h${level}>`);
+      out.push(`<h${level}>${inline(heading[2])}</h${level}>`);
       afterTitle = level === 1;
       i++;
       continue;
@@ -286,11 +414,11 @@ function renderMarkdown(source, linkMap = {}) {
       i += 2;
       const rows = [];
       while (i < lines.length && lines[i].includes("|") && !/^\s*$/.test(lines[i])) rows.push(splitRow(lines[i++]));
-      const th = head.map((cell) => `<th>${renderInline(cell, linkMap)}</th>`).join("");
+      const th = head.map((cell) => `<th>${inline(cell)}</th>`).join("");
       const body = rows
         .map((row) => {
           const id = REF_ROW.test(row[0] || "") ? ` id="${row[0].toLowerCase()}"` : "";
-          return `<tr${id}>${head.map((_, k) => `<td>${renderInline(row[k] || "", linkMap)}</td>`).join("")}</tr>`;
+          return `<tr${id}>${head.map((_, k) => `<td>${inline(row[k] || "")}</td>`).join("")}</tr>`;
         })
         .join("");
       const wide = head.length >= 4 ? ' class="wide"' : "";
@@ -306,8 +434,8 @@ function renderMarkdown(source, linkMap = {}) {
       const card = text.match(/^\*\*(.+?)\*\*\s*(.*)$/);
       out.push(
         card
-          ? `<div class="field-card"><span class="field-card-label">${renderInline(card[1].replace(/[.:]\s*$/, ""), linkMap)}</span><p class="field-card-text">${renderInline(card[2], linkMap)}</p></div>`
-          : `<p class="q">${renderInline(text, linkMap)}</p>`
+          ? `<div class="field-card"><span class="field-card-label">${inline(card[1].replace(/[.:]\s*$/, ""))}</span><p class="field-card-text">${inline(card[2])}</p></div>`
+          : `<p class="q">${inline(text)}</p>`
       );
       afterTitle = false;
       continue;
@@ -324,7 +452,7 @@ function renderMarkdown(source, linkMap = {}) {
         break;
       }
       const tag = ordered ? "ol" : "ul";
-      out.push(`<${tag}>${items.map((it) => `<li>${renderInline(it, linkMap)}</li>`).join("")}</${tag}>`);
+      out.push(`<${tag}>${items.map((it) => `<li>${inline(it)}</li>`).join("")}</${tag}>`);
       afterTitle = false;
       continue;
     }
@@ -332,11 +460,11 @@ function renderMarkdown(source, linkMap = {}) {
     const para = [];
     do { para.push(lines[i].trim()); i++; } while (i < lines.length && !startsBlock(lines, i));
     const text = para.join(" ");
-    if (afterTitle && /^\*[^*].*[^*]\*$/.test(text)) out.push(`<p class="subtitle">${renderInline(text.slice(1, -1), linkMap)}</p>`);
-    else out.push(`<p>${renderInline(text, linkMap)}</p>`);
+    if (afterTitle && /^\*[^*].*[^*]\*$/.test(text)) out.push(`<p class="subtitle">${inline(text.slice(1, -1))}</p>`);
+    else out.push(`<p>${inline(text)}</p>`);
     afterTitle = false;
   }
-  return out.join("\n");
+  return out.join("\n") + referencesHTML(cites, linkMap);
 }
 
 /* ── References: D-061, Q-36, C-01, E-010, P-07 ───────────────
@@ -368,7 +496,7 @@ function parseRefRows(source, page) {
     if (letter === "C") status = cells[2] ? `Fixed ${cells[2]}` : "";
     if (letter === "E") status = [cells[2], cells[5] && `${cells[5]} confidence`].filter(Boolean).join(" · ");
     const kind = letter === "D" && /v0\.1/.test(section) ? "Decision carried from v0.1" : REF_KIND[letter];
-    rows[id] = { id, page, kind, text: cells[1] || "", status };
+    rows[id] = { id, page, kind, text: cells[1] || "", status, source: letter === "E" ? cells[3] || "" : "" };
   });
   return rows;
 }
@@ -428,6 +556,24 @@ function linkifyRefs(root, index, here) {
   });
 }
 
+// A reference that is a register row gets the row's kind, status, and text,
+// and for evidence its source, so the list reads like a bibliography.
+function fillReferences(root, index, linkMap) {
+  root.querySelectorAll(".references li[data-id]").forEach((li) => {
+    const ref = index[li.dataset.id];
+    const body = li.querySelector(".ref-body");
+    if (!ref || !body || body.querySelector(".ref-detail")) return;
+    const plain = stripTags(ref.text).replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
+    const short = plain.length > 220 ? `${plain.slice(0, 220).replace(/\s+\S*$/, "")}…` : plain;
+    const meta = [ref.kind, stripTags(ref.status)].filter(Boolean).join(", ");
+    const source = ref.source ? ` Source: ${renderInline(stripTags(ref.source), linkMap)}.` : "";
+    const detail = document.createElement("span");
+    detail.className = "ref-detail";
+    detail.innerHTML = ` <span class="ref-meta">${escapeHtml(meta)}.</span> ${renderInline(short, linkMap)}${source}`;
+    body.append(detail);
+  });
+}
+
 function refPreviewHTML(ref, linkMap) {
   const plain = ref.text.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
   const short = plain.length > 300 ? `${plain.slice(0, 300).replace(/\s+\S*$/, "")}…` : plain;
@@ -438,7 +584,7 @@ function refPreviewHTML(ref, linkMap) {
 }
 
 function initRefPreviews(root, index, linkMap) {
-  if (!root || !Object.keys(index).length) return;
+  if (!root || (!Object.keys(index).length && !root.querySelector(".cite-link"))) return;
   const card = document.createElement("div");
   card.className = "ref-preview";
   card.id = "refPreview";
@@ -459,10 +605,17 @@ function initRefPreviews(root, index, linkMap) {
     card.style.top = `${below + h > window.innerHeight - 8 && r.top - h - 8 > 8 ? r.top - h - 8 : below}px`;
   };
   const show = (a) => {
-    const ref = index[a.dataset.ref];
-    if (!ref) return;
+    let html = "";
+    if (a.matches(".cite-link")) {
+      const li = document.getElementById(a.getAttribute("href").slice(1));
+      const body = li && li.querySelector(".ref-body");
+      if (body) html = `<div class="ref-preview-head"><span class="ref-preview-id">[${escapeHtml(a.dataset.cite)}]</span><span class="ref-preview-kind">Reference</span></div><p class="ref-preview-text">${body.innerHTML}</p>`;
+    } else if (index[a.dataset.ref]) {
+      html = refPreviewHTML(index[a.dataset.ref], linkMap);
+    }
+    if (!html) return;
     current = a;
-    card.innerHTML = refPreviewHTML(ref, linkMap);
+    card.innerHTML = html;
     card.hidden = false;
     place(a);
     a.setAttribute("aria-describedby", "refPreview");
@@ -475,17 +628,17 @@ function initRefPreviews(root, index, linkMap) {
   };
 
   root.addEventListener("mouseover", (e) => {
-    const a = e.target.closest("a.ref");
+    const a = e.target.closest("a.ref, a.cite-link");
     if (!a || a === current) return;
     clearTimeout(timer);
     timer = setTimeout(() => show(a), 120);
   });
   root.addEventListener("mouseout", (e) => {
-    const a = e.target.closest("a.ref");
+    const a = e.target.closest("a.ref, a.cite-link");
     if (a && !a.contains(e.relatedTarget)) hide();
   });
   root.addEventListener("focusin", (e) => {
-    const a = e.target.closest("a.ref");
+    const a = e.target.closest("a.ref, a.cite-link");
     if (a) show(a);
   });
   root.addEventListener("focusout", hide);
@@ -509,7 +662,7 @@ function tagKind(tag) {
 
 function groupClaims(root) {
   root.querySelectorAll("p, li, td").forEach((block) => {
-    if (!block.querySelector(".tag") || block.closest(".claims-lens")) return;
+    if (!block.querySelector(".tag") || block.closest(".claims-lens, .references")) return;
     const nodes = [...block.childNodes];
     let group = [];
     const wrap = (kind) => {
@@ -526,8 +679,12 @@ function groupClaims(root) {
       const tag = node.nodeType === 1 && (node.matches(".tag") ? node : node.querySelector(".tag"));
       if (!tag) continue;
       // A citation in brackets right after the tag belongs to the claim.
+      // (A numbered citation sits before the tag, inside the claim already.)
       let j = i + 1;
-      if (nodes[j] && nodes[j].nodeType === 3 && /^\s*\(/.test(nodes[j].nodeValue)) {
+      if (nodes[j] && nodes[j].nodeType === 1 && nodes[j].matches("sup.cite")) {
+        group.push(nodes[j]);
+        i = j;
+      } else if (nodes[j] && nodes[j].nodeType === 3 && /^\s*\(/.test(nodes[j].nodeValue)) {
         let depth = 0;
         for (; j < nodes.length; j++) {
           const n = nodes[j];
@@ -668,7 +825,7 @@ async function renderAll(el, chapters) {
       const body =
         texts[i] == null
           ? `<h1>${escapeHtml(c.title)}</h1><p class="chapter-error">This chapter couldn't be loaded. It lives in <code>${escapeHtml(c.source || "")}</code> in the repository.</p>`
-          : renderMarkdown(texts[i], linkMap);
+          : renderMarkdown(texts[i], linkMap, newCites(`${c.slug}--`));
       return `<section class="doc-chapter" id="ch-${c.slug}">${eyebrow}${body}</section>`;
     })
     .join("");
@@ -688,6 +845,7 @@ async function renderAll(el, chapters) {
   });
 
   const index = await refs;
+  fillReferences(el, index, linkMap);
   linkifyRefs(el, index, "*");
   initRefPreviews(el, index, linkMap);
   groupClaims(el);
@@ -724,8 +882,9 @@ async function renderChapter(chapters) {
   try {
     const res = await fetch(ch.source);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    el.innerHTML = header + renderMarkdown(await res.text(), linkMap);
+    el.innerHTML = header + renderMarkdown(await res.text(), linkMap, newCites());
     const index = await refs;
+    fillReferences(el, index, linkMap);
     linkifyRefs(el, index, ch.slug);
     initRefPreviews(el, index, linkMap);
     groupClaims(el);

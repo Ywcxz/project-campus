@@ -571,6 +571,34 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 .tag-unresolved { border-style: dashed; border-color: var(--ink-3); }
 .tag-deferred, .tag-superseded, .tag-rejected, .tag-investigating, .tag-under-review { color: var(--ink-3); }
 
+/* ── CITATIONS AND REFERENCES ─────────────────────────────── */
+/* A superscript number after a tag, thesis style, pointing to the
+   chapter's numbered references. */
+.chapter sup.cite {
+  font-family: var(--font-mono); font-size: 10px; line-height: 0; color: var(--ink-3);
+  vertical-align: super; margin: 0 1px 0 1px; white-space: nowrap; font-variant-numeric: tabular-nums;
+}
+.chapter sup.cite a.cite-link { color: var(--brass); border-bottom: none; padding: 0 1px; }
+.chapter sup.cite a.cite-link:hover { color: var(--green); text-decoration: underline; }
+.chapter sup.cite a.cite-link:focus-visible { outline: 2px solid var(--brass); outline-offset: 1px; border-radius: 2px; }
+.chapter [id^="cite-"], .chapter [id*="--cite-"] { scroll-margin-top: 90px; }
+
+.chapter .references-note { font-size: 14px; color: var(--ink-3); }
+.chapter ol.references { list-style: none; padding: 0; margin: 0 0 28px; max-width: 700px; }
+.chapter ol.references li {
+  display: grid; grid-template-columns: 3.2em minmax(0, 1fr) auto; column-gap: 6px;
+  font-size: 14px; line-height: 1.55; padding: 6px 6px 6px 0; margin: 0;
+  border-bottom: 1px solid var(--rule); scroll-margin-top: 80px; border-radius: 3px;
+}
+.chapter ol.references li::before { content: none; }
+.chapter .ref-num { font-family: var(--font-mono); font-size: 12px; color: var(--brass); padding-top: 1px; }
+.chapter .ref-meta { color: var(--ink-3); }
+.chapter .ref-detail { color: var(--ink-2); }
+.chapter a.ref-back { color: var(--ink-3); border-bottom: none; font-size: 13px; padding: 0 2px; }
+.chapter a.ref-back:hover { color: var(--green); }
+.chapter ol.references li:target { background: var(--brass-bg); box-shadow: inset 3px 0 0 var(--brass); padding-left: 8px; }
+
+
 /* ── REFERENCES: D-061, Q-36, C-01, E-010 ─────────────────── */
 /* A dotted underline marks a reference that previews on hover. */
 .chapter a.ref {

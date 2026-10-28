@@ -11,6 +11,7 @@ This repository is the master document for Project CAMPUS (Connecting All Member
 ## Writing rules
 
 - Tag every significant claim [Established], [Proposed], or [Unresolved]. Never turn an assumption into a fact, and never invent details about VSU's systems, people, policies, or numbers.
+- Cite a claim's source in brackets right after its tag, as in `[Established] (D-098; Ostrom, 1990)`. The site numbers it and lists it in the chapter's references.
 - Type every source: official, community knowledge, opinion, unverified, scholarly, or external (Chapter 9).
 - An evidence entry links its source, rates confidence by the rubric in Chapter 8, and gives the date the source was last checked, or a dash. Open the source yourself before you date a check.
 - Keep the milestones distinct: recognition, interest, alignment, permission to prototype, pilot, collaboration, adoption.
