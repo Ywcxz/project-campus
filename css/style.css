@@ -582,6 +582,7 @@ button { font-family: var(--font-body); cursor: pointer; background: none; borde
 .chapter sup.cite a.cite-link:hover { color: var(--green); text-decoration: underline; }
 .chapter sup.cite a.cite-link:focus-visible { outline: 2px solid var(--brass); outline-offset: 1px; border-radius: 2px; }
 .chapter [id^="cite-"], .chapter [id*="--cite-"] { scroll-margin-top: 90px; }
+.chapter td sup.cite-cell { vertical-align: baseline; font-size: 12px; line-height: inherit; margin: 0; }
 
 .chapter .references-note { font-size: 14px; color: var(--ink-3); }
 .chapter ol.references { list-style: none; padding: 0; margin: 0 0 28px; max-width: 700px; }

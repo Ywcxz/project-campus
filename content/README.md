@@ -44,13 +44,17 @@ Write `[Established]`, `[Proposed]`, or `[Unresolved]` after a claim. The site s
 
 ## Citations
 
-Put a claim's source in brackets right after its tag, as in `[Established] (D-098, D-099)` or `[Proposed] (Ostrom, 1990; E-023)`. The site shows it as a superscript number, thesis style, against the claim's last word and before its stamp, and ends the chapter with a numbered References list, in the order sources are first cited. A source cited again keeps its first number. Separate sources with semicolons; a list of IDs can use commas.
+Put a claim's source in brackets right after its tag, as in `[Established] (D-098, D-099)` or `[Proposed] (Ostrom, 1990; E-023)`. The site shows it as a superscript number, thesis style, against the claim's last word and before its stamp, and ends the chapter with a numbered References list, in the order sources are first cited. Clicking a number opens what it cites: the page itself for a web source, including an evidence row's source, the row for a decision, question, or correction, and the chapter for a chapter. Only a source with no link, such as a v0.1 section, goes to its entry in the References list. Anything that leaves the page, a number, a register ID, or a link in the References list, opens in a new tab, so the reader keeps their place. Hovering shows the full reference first. A source cited again keeps its first number. Separate sources with semicolons; a list of IDs can use commas.
 
 - A register ID (D-, Q-, C-, E-, P-) becomes a reference to its row, with the row's text, and for evidence its source link.
 - An author and year, such as `Ostrom, 1990`, becomes the matching entry in the chapter's `## Sources` list, if one entry names that author and year. Otherwise it is listed as written.
 - Anything else, such as a link, a chapter link, or `v0.1 §15.4`, is listed as written.
 
 A source written before the tag, as in `([Chapter 3](03-social-network.md)). [Established]`, stays in the text and is not numbered.
+
+Every `[Established]` claim cites its source (D-162). An `[Unresolved]` claim cites its open question and a `[Proposed]` claim its decision where one exists; an author's own proposal needs none.
+
+In a chapter's `## Sources` list, give each source its own entry, starting with the author and date a citation names: `- VSU. [Title](https://…), 30 May 2023. Official.` Use `n.d.` for an undated page, and the page's subject as its author when it has none, as in `- Kiwix. [Kiwix](https://…), Wikipedia, n.d. External.` A fact already in the evidence register is cited by its E- number instead. A table with a Source column can write each cell as a citation, `(VSU, 30 May 2023; E-010)`, and the site numbers it like the rest.
 
 Source types are tracked separately from tags: official, community knowledge, opinion, unverified, scholarly, and external. See Chapter 9.
 

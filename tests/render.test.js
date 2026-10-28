@@ -97,6 +97,25 @@ function cellCountSep(line) {
   check(pRows.length >= 20, `problem hypotheses carry IDs (${pRows.length})`);
   pRows.forEach((r, n) => check(r[0] === `P-${String(n + 1).padStart(2, "0")}`, `${r[0]}: problem hypotheses are numbered in order`));
 
+  // D-162: in each converted chapter, every Established claim cites its source.
+  // A claim listed in PENDING is one the owner has yet to source or retag;
+  // the list may only shrink.
+  const CITED_CHAPTERS = ["content/02-intranet.md"];
+  const PENDING = [
+    "no internet provider carries that traffic.",
+    "which saves time rather than bandwidth.",
+    "each request crosses to the provider's servers and back",
+    "Data held under the providers' terms, in their data centers",
+    "the campus loses access to it when its link fails",
+  ];
+  for (const f of CITED_CHAPTERS) {
+    const body = read(f).split(/^## Sources\s*$/m)[0];
+    const bare = [...body.matchAll(/\[Established\](?! ?\()/g)]
+      .map((m) => body.slice(Math.max(0, m.index - 90), m.index).split("\n").pop().trim())
+      .filter((before) => !PENDING.some((p) => before.endsWith(p)));
+    check(bare.length === 0, `${f}: every Established claim cites its source (D-162)${bare.length ? `; first without: "…${bare[0].slice(-70)}"` : ""}`);
+  }
+
   // The retired expansion of the name (D-040) appears only in the archive and
   // in the register row that retired it.
   const RETIRED = /Connected Academic Matrix/i;
@@ -166,6 +185,9 @@ function cellCountSep(line) {
       check(href !== "#", `${label} link "${a.textContent.trim()}" has a usable target`);
       check(targetExists(href), `${label} link target exists: ${href}`);
     });
+    article.querySelectorAll("a.ref, .references .ref-body a").forEach((a) => {
+      check(a.getAttribute("href").startsWith("#") || a.target === "_blank", `${label} reference link ${a.textContent} opens in a new tab`);
+    });
     article.querySelectorAll("a.ref").forEach((a) => {
       refLinks++;
       const [file, hash] = a.getAttribute("href").split("#");
@@ -176,7 +198,11 @@ function cellCountSep(line) {
     // Citations: every superscript number points to an entry in the chapter's
     // references, and no citation is left in brackets after a tag.
     article.querySelectorAll("a.cite-link").forEach((a) => {
-      check(Boolean(d.getElementById(a.getAttribute("href").slice(1))), `${label} citation ${a.textContent} has a reference`);
+      check(Boolean(d.getElementById(a.dataset.entry)), `${label} citation ${a.textContent} has a reference`);
+      check(a.getAttribute("href").startsWith("#") || a.target === "_blank", `${label} citation ${a.textContent} opens in a new tab`);
+      const entry = d.getElementById(a.dataset.entry);
+      const out = entry && entry.querySelector(".ref-body a[href^='http']:not(.ref)");
+      if (out && !/^[DQCP]-/.test(entry.dataset.id || "")) check(a.getAttribute("href") === out.getAttribute("href") && a.target === "_blank", `${label} citation ${a.textContent} opens its web source`);
     });
     article.querySelectorAll(".references li").forEach((li) => {
       check(Boolean(d.getElementById(li.querySelector(".ref-back").getAttribute("href").slice(1))), `${label} reference ${li.id} links back to its citation`);

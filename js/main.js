@@ -244,7 +244,7 @@ function citeHTML(items, cites) {
       cites.list.push({ n, raw });
     }
     const id = first ? ` id="${cites.base}cite-${n}"` : "";
-    return `<a class="cite-link" href="#${cites.base}ref-${n}"${id} data-cite="${n}" aria-label="Reference ${n}">${n}</a>`;
+    return `<a class="cite-link" href="#${cites.base}ref-${n}"${id} data-cite="${n}" data-entry="${cites.base}ref-${n}" aria-label="Reference ${n}">${n}</a>`;
   });
   return `<sup class="cite">[${nums.join(", ")}]</sup>`;
 }
@@ -281,16 +281,23 @@ function extractCites(text, cites, sups) {
   return out + text.slice(last);
 }
 
-// An author-year citation, such as "Ostrom, 1990", resolves to its entry in
-// the chapter's Sources list when one entry names that author and year.
+// An author-date citation resolves to its entry in the chapter's Sources
+// list: "Ostrom, 1990", "VSU, 30 May 2023", or "VSU Computer Center, n.d.".
+// An entry that starts with the author wins over one that only names it, and
+// a full date must match exactly, so a citation never lands on a guess.
 function matchSource(raw, sources) {
-  const m = raw.match(/^(.+?),\s*(?:s\.\s*)?(\d{4})[a-z]?$/) || raw.match(/^(.+?\bet al\.?)$/);
+  const m = raw.match(/^(.+?),\s*(?:s\.\s*)?((?:\d{1,2}\s+)?(?:[A-Z][a-z]+\s+)?\d{4}[a-z]?|n\.d\.)$/) || raw.match(/^(.+?\bet al\.?)$/);
   if (!m) return null;
   const author = m[1].replace(/\s*\bet al\.?$/, "").split(/\s+and\s+|,\s*/)[0].trim().toLowerCase();
   if (author.length < 3) return null;
-  const year = m[2];
-  const hits = sources.filter((line) => line.toLowerCase().includes(author) && (!year || line.includes(year)));
-  return hits.length === 1 || (year && hits.length) ? hits[0] : null;
+  const date = m[2] || "";
+  const lead = (line) => line.replace(/^[[*\s]+/, "").toLowerCase();
+  const starts = sources.filter((line) => lead(line).startsWith(`${author}.`) || lead(line).startsWith(`${author},`));
+  const pool = starts.length ? starts : sources.filter((line) => line.toLowerCase().includes(author));
+  if (!date) return pool.length === 1 ? pool[0] : null;
+  const exact = pool.filter((line) => line.includes(date));
+  if (exact.length) return exact[0];
+  return /^\d{4}[a-z]?$/.test(date) ? pool.find((line) => line.includes(date.slice(0, 4))) || null : null;
 }
 
 const stripTags = (text) => text.replace(TAG_PATTERN, "$1");
@@ -415,10 +422,20 @@ function renderMarkdown(source, linkMap = {}, cites = null) {
       const rows = [];
       while (i < lines.length && lines[i].includes("|") && !/^\s*$/.test(lines[i])) rows.push(splitRow(lines[i++]));
       const th = head.map((cell) => `<th>${inline(cell)}</th>`).join("");
+      // A Source column's cell written as a citation, "(VSU, 30 May 2023)",
+      // becomes numbered references like any other citation.
+      const sourceCol = head.map((cell) => /^sources?$/i.test(cell.trim()));
+      const cellHTML = (cell, k) => {
+        const c = cell.trim();
+        if (cites && sourceCol[k] && /^\(.+\)$/.test(c) && citeItems(c.slice(1, -1)).length) {
+          return citeHTML(citeItems(c.slice(1, -1)), cites).replace('class="cite"', 'class="cite cite-cell"');
+        }
+        return inline(cell);
+      };
       const body = rows
         .map((row) => {
           const id = REF_ROW.test(row[0] || "") ? ` id="${row[0].toLowerCase()}"` : "";
-          return `<tr${id}>${head.map((_, k) => `<td>${inline(row[k] || "")}</td>`).join("")}</tr>`;
+          return `<tr${id}>${head.map((_, k) => `<td>${cellHTML(row[k] || "", k)}</td>`).join("")}</tr>`;
         })
         .join("");
       const wide = head.length >= 4 ? ' class="wide"' : "";
@@ -543,7 +560,9 @@ function linkifyRefs(root, index, here) {
       frag.append(text.slice(last, at));
       const a = document.createElement("a");
       a.className = "ref";
-      a.href = `${here === "*" || ref.page === `${here}.html` ? "" : ref.page}#${id.toLowerCase()}`;
+      const elsewhere = !(here === "*" || ref.page === `${here}.html`);
+      a.href = `${elsewhere ? ref.page : ""}#${id.toLowerCase()}`;
+      if (elsewhere) { a.target = "_blank"; a.rel = "noopener"; }
       a.dataset.ref = id;
       a.textContent = id;
       frag.append(a);
@@ -571,6 +590,44 @@ function fillReferences(root, index, linkMap) {
     detail.className = "ref-detail";
     detail.innerHTML = ` <span class="ref-meta">${escapeHtml(meta)}.</span> ${renderInline(short, linkMap)}${source}`;
     body.append(detail);
+  });
+}
+
+// A number opens what it cites: the page itself for a web source, the row for
+// a decision, question, or correction, and the chapter for a chapter. Only a
+// source with no link, such as a v0.1 section, goes to the References list.
+// Anything that leaves the page opens in a new tab, so the reader keeps their
+// place; a jump within the page stays in it.
+function pointCites(root) {
+  root.querySelectorAll(".references .ref-body a[href]").forEach((a) => {
+    if (a.getAttribute("href").startsWith("#")) return;
+    a.target = "_blank";
+    a.rel = "noopener";
+  });
+  root.querySelectorAll("a.cite-link").forEach((a) => {
+    const li = document.getElementById(a.dataset.entry);
+    const body = li && li.querySelector(".ref-body");
+    if (!body) return;
+    const id = li.dataset.id || "";
+    const isRow = /^[DQCP]-/.test(id);
+    const target = isRow
+      ? body.querySelector("a.ref")
+      : body.querySelector("a:not(.ref)[href^='http']") || body.querySelector("a:not(.ref)");
+    if (!target) return;
+    a.setAttribute("href", target.getAttribute("href"));
+    a.classList.remove("cite-out");
+    if (!a.getAttribute("href").startsWith("#")) {
+      a.target = "_blank";
+      a.rel = "noopener";
+    }
+    if (/^https?:/i.test(target.getAttribute("href"))) {
+      let host = "";
+      try { host = new URL(target.href).hostname.replace(/^www\./, ""); } catch (err) { /* keep the plain label */ }
+      a.setAttribute("aria-label", `Reference ${a.dataset.cite}, opens ${host || "the source"} in a new tab`);
+      a.classList.add("cite-out");
+    } else {
+      a.setAttribute("aria-label", `Reference ${a.dataset.cite}, opens ${isRow ? id : "the cited chapter"}${a.target ? " in a new tab" : ""}`);
+    }
   });
 }
 
@@ -607,7 +664,7 @@ function initRefPreviews(root, index, linkMap) {
   const show = (a) => {
     let html = "";
     if (a.matches(".cite-link")) {
-      const li = document.getElementById(a.getAttribute("href").slice(1));
+      const li = document.getElementById(a.dataset.entry);
       const body = li && li.querySelector(".ref-body");
       if (body) html = `<div class="ref-preview-head"><span class="ref-preview-id">[${escapeHtml(a.dataset.cite)}]</span><span class="ref-preview-kind">Reference</span></div><p class="ref-preview-text">${body.innerHTML}</p>`;
     } else if (index[a.dataset.ref]) {
@@ -847,6 +904,7 @@ async function renderAll(el, chapters) {
   const index = await refs;
   fillReferences(el, index, linkMap);
   linkifyRefs(el, index, "*");
+  pointCites(el);
   initRefPreviews(el, index, linkMap);
   groupClaims(el);
   initLens(el, el.querySelector(".doc-howto"));
@@ -886,6 +944,7 @@ async function renderChapter(chapters) {
     const index = await refs;
     fillReferences(el, index, linkMap);
     linkifyRefs(el, index, ch.slug);
+    pointCites(el);
     initRefPreviews(el, index, linkMap);
     groupClaims(el);
     initLens(el, el.querySelector(".subtitle"));
