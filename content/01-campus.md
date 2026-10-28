@@ -6,11 +6,11 @@ CAMPUS proposes a persistent digital layer over VSU that connects people, organi
 
 ## A layer, not a replacement
 
-A university depends on systems that are authoritative for their own data: enrollment and student records, finance, human resources, learning, and the library, among others. CAMPUS does not replace them. Where VSU permits, it links to them, references them, or reads from them, and it never becomes a second system of record. [Established] How that would work technically cannot be assumed until VSU's systems, owners, and policies are understood. [Unresolved]
+A university depends on systems that are authoritative for their own data: enrollment and student records, finance, human resources, learning, and the library, among others. CAMPUS does not replace them. Where VSU permits, it links to them, references them, or reads from them, and it never becomes a second system of record. [Established] (D-004) How that would work technically cannot be assumed until VSU's systems, owners, and policies are understood. [Unresolved]
 
 ## Relationships first
 
-The founding principle is to prioritize relationships and infrastructure over isolated features. [Established] A person connects to a program, courses, instructors, organizations, events, research, facilities, and opportunities. CAMPUS asks whether making those connections visible would make the university easier to navigate than it is when each lives in a separate office, website, or group chat. [Proposed]
+The founding principle is to prioritize relationships and infrastructure over isolated features. [Established] (D-002; D-003) A person connects to a program, courses, instructors, organizations, events, research, facilities, and opportunities. CAMPUS asks whether making those connections visible would make the university easier to navigate than it is when each lives in a separate office, website, or group chat. [Proposed]
 
 | Domain | Examples |
 | --- | --- |
@@ -27,7 +27,7 @@ These are concepts, not a database schema. The real model has to come from resea
 
 ## Context travels with information
 
-Connecting more information without its context also spreads mistakes faster. CAMPUS therefore labels information by type: official, community knowledge, opinion, unverified, scholarly, or external ([Chapter 9](09-governance.md)). [Established] A second rule follows from the first: connected does not mean public. The fact that two things are related does not make the relationship visible to everyone, and visibility is decided separately. [Established]
+Connecting more information without its context also spreads mistakes faster. CAMPUS therefore labels information by type: official, community knowledge, opinion, unverified, scholarly, or external. [Established] ([Chapter 9](09-governance.md)) A second rule follows from the first: connected does not mean public. The fact that two things are related does not make the relationship visible to everyone, and visibility is decided separately. [Established] (D-005; [Chapter 9](09-governance.md))
 
 ## Five design principles
 

@@ -2,7 +2,7 @@
 
 *What could go wrong, and when to stop*
 
-The largest risk is that the problems are smaller than assumed. The second is that one person cannot carry a proposal this broad. Stopping or narrowing a direction is a valid outcome, not a failure. [Established]
+The largest risk is that the problems are smaller than assumed. The second is that one person cannot carry a proposal this broad. Stopping or narrowing a direction is a valid outcome, not a failure. [Established] ([Chapter 8](08-evidence.md))
 
 | Risk | Applies to | What reduces it | Signal to narrow or stop |
 | --- | --- | --- | --- |

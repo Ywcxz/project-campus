@@ -101,7 +101,9 @@ function cellCountSep(line) {
   // D-163: a claim the owner has approved as common knowledge needs none. Only
   // the owner adds to COMMON_KNOWLEDGE, never anything about VSU, a number, a
   // date, or what someone said or did.
-  const CITED_CHAPTERS = ["content/02-intranet.md", "content/02a-emergencies.md", "content/02b-campus-network.md", "content/02c-ring-tests.md", "content/03-social-network.md", "content/03a-use-cases.md", "content/03b-network-design.md", "content/03c-network-fit.md", "content/03d-network-proposal.md", "content/03e-marketplace.md", "content/03f-housing.md", "content/03g-hop-it.md", "content/07-vsu-context.md", "content/08-evidence.md", "content/08a-facebook-study.md", "content/09-governance.md"];
+  // Every chapter but the decision register, whose rows give their basis in a
+  // column of their own (D-162).
+  const CITED_CHAPTERS = chapters.filter((c) => c.slug !== "decisions").map((c) => c.source);
   const COMMON_KNOWLEDGE = [
     // Chapter 2, approved 28 October 2026
     "no internet provider carries that traffic.",
@@ -121,6 +123,8 @@ function cellCountSep(line) {
   for (const f of CITED_CHAPTERS) {
     const body = read(f).split(/^## Sources\s*$/m)[0];
     const bare = [...body.matchAll(/\[Established\](?! ?\()/g)]
+      // The overview's legend defines the tag ("[Established] means …"); it is not a claim.
+      .filter((m) => !body.startsWith(" means ", m.index + m[0].length))
       .map((m) => body.slice(Math.max(0, m.index - 90), m.index).split("\n").pop().trim())
       .filter((before) => ![...COMMON_KNOWLEDGE, ...AWAITING_OWNER].some((p) => before.endsWith(p)));
     check(bare.length === 0, `${f}: every Established claim cites its source (D-162)${bare.length ? `; first without: "…${bare[0].slice(-70)}"` : ""}`);
