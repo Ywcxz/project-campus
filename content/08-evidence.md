@@ -230,6 +230,7 @@ Every survey item names the hypothesis it bears on. [Established] (D-085) The ma
 | Who should be there | Who besides students should be able to join: faculty, office staff, alumni, aspiring students (high school students hoping to study at VSU, and college students hoping to transfer), parents, relatives, or friends, outsiders, or only students. Student orgs and councils aren't asked about, as they are already part of the network (D-168) | P-04; Q-45 for alumni |
 | Who should run it | Whom they would trust most to run it | Trust in who runs the network, for the pitch; read as appeal when prompted |
 | Hosted on campus | If the network ran on campus without mobile data, whether they would use it, and on what terms | P-15, P-18; the case for the campus intranet (D-098) |
+| This survey or a form | On the Send screen, whether they would rather answer a survey like this one, and see more of it, or a plain Google Form, or either (D-169) | How later surveys are built; read as preference after taking this one |
 | What you'd want back | What they would most want after raising a concern on the network | P-23; Q-63; the concerns design (D-118) |
 | A comment | Anything the respondent wants to tell the researcher | Questions and concerns about the survey itself |
 
