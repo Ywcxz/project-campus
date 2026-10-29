@@ -210,6 +210,7 @@ Every survey item names the hypothesis it bears on. [Established] (D-085) The ma
 | Group chats | How many active group chats they are in | P-01: how scattered news is |
 | Official pages | How posts from VSU's official pages reach them | P-01, P-06 |
 | A class change, and the other problem questions | See the table of problem questions above | Their hypotheses, as listed there |
+| How you found out | For those whose class was moved or cancelled, how they found out: from the teacher, a class group chat, a classmate, an official VSU page, an unofficial group, or by getting to an empty room (D-168) | P-01 |
 | Checking a post | For those who couldn't tell whether a post was official, how they checked | P-06, P-20; Q-64, in part |
 | A new office | What they did first when they needed an office new to them | P-02, P-03 |
 | Which office | For those who went to one, what kinds of offices | P-02, P-13: where an office guide would help most |
@@ -226,7 +227,7 @@ Every survey item names the hypothesis it bears on. [Established] (D-085) The ma
 | 25 coins | Which of 18 campus concerns they would like to get more attention, at most 10 coins in one jar, seven of the jars outside CAMPUS's scope, in a random order | Priorities among the network's use cases (Q-02); which later module comes first (Q-48); where CAMPUS's problems rank among students' concerns |
 | What works now | What Messenger GCs and Facebook groups do well for VSU matters | What the network must match (Q-46) |
 | Draws and deterrents | What would draw them to a VSU network, or keep them away | Q-46; P-15 for mobile data |
-| Who should be there | Who besides students should be able to join: faculty, office staff, orgs and councils, alumni, incoming students, parents, relatives, or friends, or only students | P-04; Q-45 for alumni |
+| Who should be there | Who besides students should be able to join: faculty, office staff, alumni, aspiring students (high school students hoping to study at VSU, and college students hoping to transfer), parents, relatives, or friends, outsiders, or only students. Student orgs and councils aren't asked about, as they are already part of the network (D-168) | P-04; Q-45 for alumni |
 | Who should run it | Whom they would trust most to run it | Trust in who runs the network, for the pitch; read as appeal when prompted |
 | Hosted on campus | If the network ran on campus without mobile data, whether they would use it, and on what terms | P-15, P-18; the case for the campus intranet (D-098) |
 | What you'd want back | What they would most want after raising a concern on the network | P-23; Q-63; the concerns design (D-118) |
