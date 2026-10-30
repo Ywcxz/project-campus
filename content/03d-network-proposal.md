@@ -131,18 +131,19 @@ Every row is a proposal. [Proposed] The comparison group would be run on Faceboo
 
 ## The story for the pitch
 
-The pitch is the interactive site, presented in person: once with the concept note, and again after field research with findings in place ([Chapter 12](12-roadmap.md); D-151). A possible sequence for its offices path, each scene a proposal: [Proposed]
+The pitch is the interactive site, presented in person: once with the concept note, and again after field research with findings in place ([Chapter 12](12-roadmap.md); D-151). A possible sequence for its offices path, each scene a proposal; the site's own paths are drawn from it (D-175): [Proposed]
 
 1. **A morning at VSU.** The 4:30 a.m. suspension and the first-year student's question, told from the student's side.
 2. **What students told us.** Problems that clear the D-038 bars, shown as Established, each with an interview quote, a survey number, and a real example; before field research, the hypotheses, tagged as such. (D-151)
 3. **Where VSU's conversation lives.** The Facebook study's counts by kind of channel, with no community group named. (D-044)
-4. **Every batch starts over.** Only if the interviews and the survey support it: the same questions asked year after year, and answers lost within days. (D-038)
-5. **What VSU already has.** Its systems, shown with respect, and the gap between them.
-6. **The network in three jobs, kept by memory.** Reaching the people who know, answers someone stands behind, and talking across roles, and what it will never have.
-7. **How it would be governed.** With the community, by VSU's own principles, with due process, and with moderation kept apart from VSU's responses.
-8. **The test.** The pilot, its comparison, its thresholds, and its stop conditions.
-9. **The ask.** One office's commitment, then one semester.
-10. **Who is behind it.** The network prototype's working software (D-099), the field research, and the decision register.
+4. **Every batch starts over.** The same questions asked year after year, and answers lost within days. It stays on the path, shown as a question with how we'd find out until the interviews and the survey clear the D-038 bars. (D-151; D-175)
+5. **Where concerns go.** At the services offices: a concern raised and answered from zero each time, with no way to see what became of it the last time (P-23), shown as a question until it clears the D-038 bars. (D-151; D-175)
+6. **What VSU already has.** Its systems, shown with respect, and the gap between them.
+7. **The network in three jobs, kept by memory.** Reaching the people who know, answers someone stands behind, and talking across roles, and what it will never have.
+8. **How it would be governed.** With the community, by VSU's own principles, with due process, and with moderation kept apart from VSU's responses.
+9. **The test.** The pilot, its comparison, its thresholds, and its stop conditions.
+10. **The ask.** One office's commitment, then one semester.
+11. **Who is behind it.** The network prototype's working software (D-099), the field research, and the decision register.
 
 The framing should be cultivation rather than construction: a community network is not installed but grown, with its members, in ground prepared for it. [Proposed] The builders of an institution-run network that outlasted its predecessor drew the same conclusion in 2010, calling gardening a better metaphor than architecture because the system keeps changing as people use it. [Established] (Athabasca University's Landing, March 2010) Which image the site uses is still open. [Unresolved]
 
